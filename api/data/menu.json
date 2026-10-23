@@ -19,11 +19,11 @@
           "servings": "4 pessoas",
           "time": "1h 30min",
           "difficulty": "Média",
-          "imageQuery": "beef stew, traditional Portuguese food",
+          "imageQuery": "beef stew",
           "ingredients": [
             {
               "item": "Estufar (Chambão) Novilho Angus",
-              "qty": "1",
+              "qty": "1 kg",
               "price": 13.99,
               "per": "kg",
               "amount": 1,
@@ -32,7 +32,7 @@
             },
             {
               "item": "Cebola",
-              "qty": "2"
+              "qty": "2 unidades"
             },
             {
               "item": "Alho",
@@ -51,43 +51,42 @@
               "qty": "200 ml"
             },
             {
-              "item": "Tomate pelado",
-              "qty": "400 g"
-            },
-            {
               "item": "Batatas",
               "qty": "800 g"
             },
             {
-              "item": "Salsa picada",
+              "item": "Cenoura",
+              "qty": "2 unidades"
+            },
+            {
+              "item": "Salsa",
               "qty": "q.b."
             }
           ],
           "steps": [
-            "Corte o Estufar (Chambão) Novilho Angus em cubos de aproximadamente 3 cm.",
-            "Num tacho grande, aqueça o azeite e refogue a cebola picada e os dentes de alho esmagados até ficarem dourados.",
-            "Adicione a carne e deixe dourar de todos os lados, cerca de 10 minutos.",
-            "Junte as folhas de louro e o vinho tinto, deixando cozinhar até o álcool evaporar, cerca de 5 minutos.",
-            "Adicione o tomate pelado e as batatas cortadas em cubos, misturando bem.",
-            "Cubra com água, tempere com sal e pimenta a gosto e deixe cozinhar em lume brando durante 1 hora, mexendo ocasionalmente.",
-            "Quando a carne estiver tenra e o molho espesso, retire do lume e polvilhe com salsa picada antes de servir.",
-            "Sirva quente, acompanhado de arroz ou pão fresco.",
-            "Dica do chef: Para um sabor ainda mais intenso, deixe o estufado repousar durante algumas horas antes de servir."
+            "Num tacho grande, aqueça o azeite em lume médio e adicione a cebola picada e os dentes de alho picados. Refogue até a cebola ficar translúcida.",
+            "Adicione o Estufar (Chambão) Novilho Angus cortado em cubos e deixe dourar por todos os lados.",
+            "Junte as folhas de louro e o vinho tinto, mexendo bem para soltar os sabores. Deixe cozinhar durante 5 minutos.",
+            "Adicione as batatas cortadas em cubos e as cenouras em rodelas. Cubra com água e tempere com sal e pimenta a gosto.",
+            "Deixe cozinhar em lume brando durante cerca de 1 hora, mexendo ocasionalmente, até a carne estar tenra e os legumes cozidos.",
+            "Retire do lume e polvilhe com salsa picada antes de servir.",
+            "Sirva quente, acompanhado de arroz ou pão.",
+            "Dica do chef: Sirva com um bom pão para aproveitar o molho delicioso!"
           ],
           "slot": 1,
-          "image": "/meals/foto-continente-estufado-de-novilho-angus-14a8de8c.webp",
+          "image": "/meals/foto-continente-estufado-de-novilho-angus-4205302f.webp",
           "imageCredit": {
             "name": "Imagem gerada por IA",
             "url": ""
           }
         },
         {
-          "name": "Medalhões de Controlo Novilho",
-          "description": "Suculentos medalhões de novilho grelhados, perfeitos para um jantar especial. Acompanhados de um molho de ervas frescas, são uma verdadeira delícia.",
+          "name": "Medalhões de Controlo Novilho com Molho de Mostarda",
+          "description": "Suculentos medalhões de novilho grelhados, servidos com um molho de mostarda que realça o sabor da carne. Uma refeição simples, mas cheia de elegância.",
           "servings": "4 pessoas",
           "time": "30 min",
           "difficulty": "Fácil",
-          "imageQuery": "grilled beef medallions, traditional Portuguese food",
+          "imageQuery": "beef medallions",
           "ingredients": [
             {
               "item": "Medalhões de Controlo Novilho",
@@ -99,6 +98,14 @@
               "note": "folheto (lido por IA)"
             },
             {
+              "item": "Mostarda Dijon",
+              "qty": "3 colheres de sopa"
+            },
+            {
+              "item": "Natas",
+              "qty": "200 ml"
+            },
+            {
               "item": "Alho",
               "qty": "2 dentes"
             },
@@ -107,43 +114,31 @@
               "qty": "50 ml"
             },
             {
-              "item": "Alecrim",
-              "qty": "q.b."
-            },
-            {
-              "item": "Tomilho",
-              "qty": "q.b."
-            },
-            {
               "item": "Sal",
-              "qty": "a gosto"
+              "qty": "q.b."
             },
             {
               "item": "Pimenta",
-              "qty": "a gosto"
+              "qty": "q.b."
             },
             {
-              "item": "Batatas",
-              "qty": "800 g"
-            },
-            {
-              "item": "Brócolos",
-              "qty": "400 g"
+              "item": "Salsa",
+              "qty": "q.b."
             }
           ],
           "steps": [
-            "Tempere os medalhões de controlo novilho com sal, pimenta, alho picado, alecrim e tomilho.",
-            "Aqueça uma grelha ou frigideira antiaderente com azeite em lume médio-alto.",
-            "Grelhe os medalhões durante 4-5 minutos de cada lado, ou até atingirem o ponto desejado.",
-            "Enquanto os medalhões grelham, coza as batatas em água com sal até ficarem macias, cerca de 15 minutos.",
-            "Nos últimos 5 minutos, adicione os brócolos à água a ferver para cozer.",
-            "Retire os medalhões da grelha e deixe repousar durante 5 minutos antes de servir.",
-            "Sirva os medalhões com as batatas e brócolos, regados com um fio de azeite.",
-            "Decore com ervas frescas a gosto.",
-            "Dica do chef: Para um toque extra, grelhe os medalhões com um pouco de manteiga e ervas aromáticas."
+            "Tempere os medalhões de controlo novilho com sal e pimenta a gosto.",
+            "Numa frigideira, aqueça o azeite em lume médio-alto e adicione os medalhões. Cozinhe por cerca de 4-5 minutos de cada lado, ou até estarem ao seu gosto.",
+            "Retire os medalhões da frigideira e mantenha-os quentes.",
+            "Na mesma frigideira, adicione os dentes de alho picados e deixe dourar ligeiramente.",
+            "Junte a mostarda Dijon e as natas, mexendo bem para incorporar todos os sabores. Deixe cozinhar durante 2-3 minutos até o molho engrossar.",
+            "Volte a colocar os medalhões na frigideira e envolva-os no molho por 1-2 minutos.",
+            "Retire do lume e polvilhe com salsa picada antes de servir.",
+            "Sirva os medalhões com o molho por cima e acompanhe com o acompanhamento desejado.",
+            "Dica do chef: Acompanhe com puré de batata ou legumes grelhados para uma refeição completa!"
           ],
           "slot": 2,
-          "image": "/meals/foto-continente-medalhoes-de-controlo-novilho-c3aa25f6.webp",
+          "image": "/meals/foto-continente-medalhoes-de-controlo-novilho-com-molho-de-mostarda-7dbc4c55.webp",
           "imageCredit": {
             "name": "Imagem gerada por IA",
             "url": ""
@@ -304,7 +299,9 @@
         "Salada Ibérica com Espinafre e Coentros",
         "Batata Doce Assada com Romã e Amendoim",
         "Estufado de Novilho Angus",
-        "Medalhões de Controlo Novilho"
+        "Medalhões de Controlo Novilho",
+        "Estufado de Novilho Angus",
+        "Medalhões de Controlo Novilho com Molho de Mostarda"
       ],
       "check": {
         "date": "2026-10-23",
@@ -567,7 +564,8 @@
       ],
       "check": {
         "date": "2026-10-23",
-        "result": "sem-novo"
+        "result": "sem-novo",
+        "note": "receitas rejeitadas 3x: promo inválida: 10.99€/kg"
       }
     },
     {
@@ -786,7 +784,8 @@
       ],
       "check": {
         "date": "2026-10-23",
-        "result": "sem-novo"
+        "result": "sem-novo",
+        "note": "receitas rejeitadas 3x: \"Pernil de Porco Assado com Cogumelos\" deve ter 1 ou 2 ingredientes com preço (tem 0)"
       }
     },
     {
@@ -806,12 +805,12 @@
       ],
       "recipes": [
         {
-          "name": "Bifanas à Alentejana",
-          "description": "As bifanas à Alentejana são um prato tradicional português, suculento e cheio de sabor, perfeito para uma refeição reconfortante. A combinação de carne de porco temperada e o toque de alho e louro tornam este prato irresistível.",
+          "name": "Bifanas da Perna de Porco à Alentejana",
+          "description": "Uma deliciosa receita tradicional que combina a suculência das bifanas com o sabor intenso do alho e do vinho, perfeita para um almoço em família.",
           "servings": "4 pessoas",
           "time": "45 min",
-          "difficulty": "Fácil",
-          "imageQuery": "bifanas, traditional Portuguese food",
+          "difficulty": "Média",
+          "imageQuery": "bifanas, alentejo, traditional food",
           "ingredients": [
             {
               "item": "bifanas da perna de porco",
@@ -826,8 +825,12 @@
               "qty": "4 dentes"
             },
             {
-              "item": "folhas de louro",
-              "qty": "2 folhas"
+              "item": "cebola",
+              "qty": "1 unidade"
+            },
+            {
+              "item": "vinho branco",
+              "qty": "200 ml"
             },
             {
               "item": "azeite",
@@ -838,31 +841,30 @@
               "qty": "a gosto"
             },
             {
-              "item": "pimenta preta",
+              "item": "pimenta",
               "qty": "a gosto"
             },
             {
-              "item": "vinho branco",
-              "qty": "100 ml"
+              "item": "folhas de louro",
+              "qty": "2 unidades"
             },
             {
               "item": "salsa picada",
-              "qty": "2 colheres de sopa"
+              "qty": "a gosto"
             }
           ],
           "steps": [
-            "Tempere as bifanas com sal, pimenta, alho picado e as folhas de louro. Deixe marinar por 30 minutos.",
-            "Numa frigideira grande, aqueça o azeite em fogo médio.",
-            "Adicione as bifanas e frite-as durante cerca de 5 minutos de cada lado, até estarem douradas.",
-            "Retire as bifanas da frigideira e reserve.",
-            "Na mesma frigideira, adicione o vinho branco e deixe ferver, raspando o fundo para soltar os sabores.",
-            "Volte a colocar as bifanas na frigideira e cozinhe por mais 10 minutos em fogo baixo, para que absorvam o molho.",
-            "Finalize com salsa picada antes de servir.",
-            "Sirva quente, acompanhado de arroz ou batatas fritas.",
+            "Tempere as bifanas com sal, pimenta e os dentes de alho picados. Deixe marinar por 30 minutos.",
+            "Numa frigideira grande, aqueça o azeite em fogo médio e adicione a cebola cortada em rodelas. Refogue até ficar translúcida.",
+            "Adicione as bifanas à frigideira e frite-as por cerca de 5 minutos de cada lado, até estarem douradas.",
+            "Junte o vinho branco e as folhas de louro, reduzindo o fogo para baixo. Cozinhe por mais 15 minutos, até o molho reduzir.",
+            "Prove e ajuste o tempero, se necessário.",
+            "Retire do fogo e polvilhe com salsa picada antes de servir.",
+            "Sirva as bifanas quentes, acompanhadas de arroz ou batatas fritas.",
             "Dica do chef: Sirva com um bom pão alentejano para aproveitar o molho!"
           ],
           "slot": 1,
-          "image": "/meals/foto-aldi-bifanas-a-alentejana-f366485f.webp",
+          "image": "/meals/foto-aldi-bifanas-da-perna-de-porco-a-alentejana-4ee5d58b.webp",
           "imageCredit": {
             "name": "Imagem gerada por IA",
             "url": ""
@@ -870,15 +872,15 @@
         },
         {
           "name": "Cogumelos Laminados Salteados com Alho",
-          "description": "Um acompanhamento simples e delicioso, os cogumelos laminados salteados com alho são uma explosão de sabor e uma ótima forma de realçar qualquer prato principal.",
+          "description": "Um acompanhamento simples e saboroso, onde os cogumelos laminados ganham destaque com o sabor do alho e da salsa.",
           "servings": "4 pessoas",
           "time": "20 min",
           "difficulty": "Fácil",
-          "imageQuery": "sautéed mushrooms, garlic, side dish",
+          "imageQuery": "mushrooms, garlic, side dish",
           "ingredients": [
             {
               "item": "cogumelos laminados",
-              "qty": "2 un",
+              "qty": "2 unidades",
               "price": 1.24,
               "per": "un",
               "amount": 2,
@@ -894,34 +896,34 @@
               "qty": "30 ml"
             },
             {
+              "item": "salsa picada",
+              "qty": "a gosto"
+            },
+            {
               "item": "sal",
               "qty": "a gosto"
             },
             {
-              "item": "pimenta preta",
+              "item": "pimenta",
               "qty": "a gosto"
             },
             {
-              "item": "salsa picada",
-              "qty": "2 colheres de sopa"
-            },
-            {
               "item": "limão",
-              "qty": "1"
+              "qty": "1 unidade"
             }
           ],
           "steps": [
-            "Aqueça o azeite numa frigideira em fogo médio.",
-            "Adicione o alho picado e refogue por 1-2 minutos até começar a dourar.",
-            "Junte os cogumelos laminados e tempere com sal e pimenta.",
-            "Salteie os cogumelos durante cerca de 5-7 minutos, até estarem macios e dourados.",
-            "Adicione a salsa picada e misture bem.",
-            "Retire do fogo e esprema o sumo de limão por cima antes de servir.",
-            "Sirva como acompanhamento ou como entrada.",
-            "Dica do chef: Experimente adicionar um pouco de vinho branco para um toque extra de sabor!"
+            "Em uma frigideira, aqueça o azeite em fogo médio.",
+            "Adicione os dentes de alho picados e refogue até começarem a dourar.",
+            "Junte os cogumelos laminados e cozinhe por cerca de 5-7 minutos, mexendo ocasionalmente.",
+            "Tempere com sal e pimenta a gosto.",
+            "Retire do fogo e adicione a salsa picada.",
+            "Esprema o sumo de limão por cima antes de servir.",
+            "Sirva quente como acompanhamento ou como entrada.",
+            "Dica do chef: Experimente adicionar um pouco de limão para um toque fresco!"
           ],
           "slot": 2,
-          "image": "/meals/foto-aldi-cogumelos-laminados-salteados-com-alho-339a5b0a.webp",
+          "image": "/meals/foto-aldi-cogumelos-laminados-salteados-com-alho-ed854b0d.webp",
           "imageCredit": {
             "name": "Imagem gerada por IA",
             "url": ""
@@ -974,8 +976,6 @@
         }
       ],
       "history": [
-        "Bifanas de Porco com Cogumelos e Tomate",
-        "Salteado de Curgete com Maçã e Bifanas",
         "Bifanas à Alentejana",
         "Arroz de Tomate e Cogumelos",
         "Bifanas à Alentejana",
@@ -985,6 +985,8 @@
         "Bifanas à Alentejana",
         "Salada de Tomate e Curgete",
         "Bifanas à Alentejana",
+        "Cogumelos Laminados Salteados com Alho",
+        "Bifanas da Perna de Porco à Alentejana",
         "Cogumelos Laminados Salteados com Alho"
       ],
       "check": {
@@ -1179,7 +1181,8 @@
       ],
       "check": {
         "date": "2026-10-23",
-        "result": "sem-folheto"
+        "result": "sem-folheto",
+        "note": "receitas rejeitadas 3x: o produto com preço de \"Lulas à Algarvia\" tem de ser o ingrediente principal e aparecer no nome do prato"
       }
     }
   ]
