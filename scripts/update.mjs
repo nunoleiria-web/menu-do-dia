@@ -74,14 +74,14 @@ function slugDates(slugText) {
   const M = MONTHS.join("|");
   const iso = (y, m, d) => y + "-" + String(m + 1).padStart(2, "0") + "-" + String(d).padStart(2, "0");
   const y = +today.slice(0, 4);
-  let m = slugText.match(new RegExp("de-(\\d{1,2})-(" + M + ")-a-(\\d{1,2})-(" + M + ")"));
+  let m = slugText.match(new RegExp("(\\d{1,2})-(" + M + ")-a-(\\d{1,2})-(" + M + ")"));
   if (m) { const m1 = MONTHS.indexOf(m[2]), m2 = MONTHS.indexOf(m[4]); return { from: iso(y, m1, m[1]), to: iso(m2 < m1 ? y + 1 : y, m2, m[3]) }; }
-  m = slugText.match(new RegExp("de-(\\d{1,2})-a-(\\d{1,2})-(" + M + ")"));
+  m = slugText.match(new RegExp("(\\d{1,2})-a-(\\d{1,2})-(" + M + ")"));
   if (m) { const k = MONTHS.indexOf(m[3]); return { from: iso(y, k, m[1]), to: iso(y, k, m[2]) }; }
   return null;
 }
 
-const NOT_FOOD = /fim-de-semana|madeira|acores|bazar|tecnologia|mobilia|jardim|halloween|decoracao|natal|casa|plantas|ferramentas|figuras|colecion|brinquedo|moda|textil|escritorio|livarno|parkside|eletro|electro|bricolage|viagens|animais|bebe/;
+const NOT_FOOD = /madeira|acores|bazar|tecnologia|mobilia|jardim|halloween|decoracao|natal|casa|plantas|ferramentas|figuras|colecion|brinquedo|moda|textil|escritorio|livarno|parkside|eletro|electro|bricolage|viagens|animais|bebe/;
 const rank = (s) => /frescos/.test(s) ? 0 : /super/.test(s) ? 1 : /contact|mini|aniversario|hiper|folheto-[a-z-]+-promocoes/.test(s) ? 2 : 3;
 
 async function findFlyer(m) {
@@ -94,9 +94,22 @@ async function findFlyer(m) {
     .map((c) => ({ ...c, ...slugDates(c.s) })).filter((c) => c.from && c.to);
   const inForce = cands.filter((c) => c.from <= today && c.to >= today);
   const future = m.to < today ? cands.filter((c) => c.from > today) : [];
-  const pool = (inForce.length ? inForce : future).sort((a, b) => rank(a.s) - rank(b.s) || (a.from < b.from ? 1 : -1));
-  console.log("  candidatos " + m.name + ":", pool.map((c) => c.s).join(" | ") || "nenhum");
-  m.__dbg = "candidatos: " + (pool.map((c) => c.s).join(" | ") || "nenhum (de " + links.length + " links, " + cands.length + " alimentares)");
+  const all = (inForce.length ? inForce : future).sort((a, b) => rank(a.s) - rank(b.s) || (a.from < b.from ? 1 : -1));
+  // Folhetos de fim de semana/complementares (dentro da validade do folheto atual) acrescentam produtos
+  const isSupp = (c) => m.to >= today && c.from > m.from && c.to <= m.to;
+  const known = new Set((m.sources || []).map((x) => x.url));
+  const supp = all.filter((c) => isSupp(c) && !known.has(c.url)).slice(0, 2);
+  const pool = all.filter((c) => !isSupp(c));
+  console.log("  candidatos " + m.name + ":", all.map((c) => c.s).join(" | ") || "nenhum");
+  m.__dbg = "candidatos: " + (all.map((c) => c.s).join(" | ") || "nenhum (de " + links.length + " links, " + cands.length + " alimentares)");
+  if (!pool.length && supp.length) {
+    const merged = new Map(m.promos.map((p) => [p.id, p])), sources = [...(m.sources || [])];
+    for (const c of supp) {
+      try { const got = await readFlyer(m, c); got.promos.forEach((p) => merged.set(p.id, p)); sources.push(got.source); console.log("  " + m.name + ": complemento " + c.s + " (+" + got.promos.length + ")"); }
+      catch (e) { console.warn("  " + c.s + " ignorado:", e.message.slice(0, 120)); }
+    }
+    return sources.length > (m.sources || []).length ? { supplement: true, promos: [...merged.values()], sources } : null;
+  }
   const force = REREAD || m.readVersion !== 2;
   if (!pool.length || pool[0].from < m.from || (pool[0].from === m.from && !force)) return null;
   const pickFrom = pool[0].from;
@@ -158,7 +171,7 @@ async function readFlyer(m, pick) {
     } catch (e) { console.warn("  confirmação falhou (" + e.message.slice(0, 60) + "), a usar leitura sem confirmar"); }
     promos.push(...keep.map((p) => ({ ...p, note: "folheto (lido por IA)" })));
   }
-  if (promos.length < 6) throw new Error("só " + promos.length + " produtos legíveis (mínimo 6)");
+  if (promos.length < 2) throw new Error("só " + promos.length + " produtos legíveis (mínimo 2)");
   console.log("  " + m.name + ": " + promos.length + " produtos lidos de " + imgs.length + " páginas");
   return { promos, source: { title: "Blog 200 — " + title, url: pick.url } };
 }
@@ -220,10 +233,14 @@ for (let i = 0; i < data.markets.length && !PHOTOS_ONLY; i++) {
   try {
     const f = await findFlyer(n);
     if (!f && n.__dbg) console.log("  " + n.__dbg);
-    if (f) {
+    if (f && f.supplement) {
+      Object.assign(n, { sources: f.sources, promos: f.promos, readVersion: 2, check: { date: today, result: "sem-novo" } });
+      console.log(n.name, "-> folheto complementar adicionado; produtos:", n.promos.length);
+    } else if (f) {
       const isNew = f.from !== n.from;
-      Object.assign(n, { from: f.from, to: f.to, flyer: f.flyer, sources: f.sources, promos: f.promos, readVersion: 2, check: { date: today, result: isNew ? "novo" : "sem-novo" } });
-      console.log(n.name, isNew ? "-> folheto novo" : "-> folheto relido", f.from, f.to);
+      const keepOld = !isNew && f.promos.length <= n.promos.length;
+      Object.assign(n, { from: f.from, to: f.to, flyer: f.flyer, sources: f.sources, promos: keepOld ? n.promos : f.promos, readVersion: 2, check: { date: today, result: isNew ? "novo" : "sem-novo" } });
+      console.log(n.name, isNew ? "-> folheto novo" : "-> folheto relido" + (keepOld ? " (sem mais produtos)" : ""), f.from, f.to);
     } else if (n.to >= today) {
       n.check = { date: today, result: "sem-novo" };
       console.log(n.name, "-> sem folheto novo");
