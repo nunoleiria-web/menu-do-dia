@@ -99,16 +99,39 @@ async function findFlyer(m) {
     parts.push(imgPart("data:image/jpeg;base64," + Buffer.from(await r.arrayBuffer()).toString("base64")));
   }
 
-  const ex = await ask([{ type: "text", text: "Estas imagens são páginas do folheto do " + m.name + ". Extrai TODOS os produtos alimentares visíveis com preço legível, de TODAS as páginas — não resumas e não omitas categorias (carne, peixe, fruta/legumes, laticínios, mercearia). per='kg' ou 'un'. JSON: {\"products\":[{\"name\":\"\",\"price\":0.0,\"per\":\"kg|un\",\"label\":\"\"}]}" }, ...parts]);
+  // Extrair produtos em blocos de 2 páginas (resposta curta = JSON nunca truncado)
   const seen = new Set();
-  const items = (ex.products ?? []).map((p) => ({ id: slug(p.name ?? ""), name: String(p.name ?? "").trim(), price: Math.round(parseFloat(String(p.price).replace(",", ".")) * 100) / 100, per: p.per, ...(p.label ? { label: p.label } : {}) }))
-    .filter((p) => p.id && !seen.has(p.id) && seen.add(p.id) && p.price >= 0.2 && p.price <= (p.per === "kg" ? 45 : 40) && ["kg", "un"].includes(p.per));
+  const items = [];
+  for (let i = 0; i < parts.length; i += 2) {
+    let ex;
+    try {
+      ex = await ask([{ type: "text", text: "Estas imagens são páginas do folheto do " + m.name + ". Extrai TODOS os produtos alimentares visíveis com preço legível. per='kg' ou 'un'. JSON: {\"products\":[{\"name\":\"\",\"price\":0.0,\"per\":\"kg|un\",\"label\":\"\"}]}" }, ...parts.slice(i, i + 2)]);
+    } catch (e) {
+      console.warn("  extracção da página " + (i / 2 + 1) + " falhou:", e.message.slice(0, 100));
+      continue;
+    }
+    for (const p of ex.products ?? []) {
+      const it = { id: slug(p.name ?? ""), name: String(p.name ?? "").trim(), price: Math.round(parseFloat(String(p.price).replace(",", ".")) * 100) / 100, per: p.per, ...(p.label ? { label: p.label } : {}) };
+      if (it.id && !seen.has(it.id) && seen.add(it.id) && it.price >= 0.2 && it.price <= (it.per === "kg" ? 45 : 40) && ["kg", "un"].includes(it.per)) items.push(it);
+    }
+  }
   if (items.length < 6) throw new Error("só " + items.length + " produtos legíveis (mínimo 6)");
 
-  const ver = await ask([{ type: "text", text: "Confirma nas imagens do " + m.name + " se o preço está exato. Lista: " + items.map((p) => p.id + ": " + p.name + " " + p.price + " €/" + p.per).join("; ") + ". JSON: {\"confirmed\":[\"id\"]}" }, ...parts]);
-  const ok = new Set(ver.confirmed ?? []);
-  const promos = items.filter((p) => ok.has(p.id)).map((p) => ({ ...p, note: "folheto (lido por IA)" }));
-  if (promos.length < 6) throw new Error("só " + promos.length + " preços confirmados (mínimo 6)");
+  // Confirmar preços em blocos de 25; se a confirmação falhar ou rejeitar tudo, usar a extracção sem confirmar
+  let promos;
+  try {
+    const ok = new Set();
+    for (let i = 0; i < items.length; i += 25) {
+      const chunk = items.slice(i, i + 25);
+      const ver = await ask([{ type: "text", text: "Confirma nas imagens do folheto do " + m.name + " se o preço está exato. Lista: " + chunk.map((p) => p.id + ": " + p.name + " " + p.price + " €/" + p.per).join("; ") + ". JSON: {\"confirmed\":[\"id\"]}" }, ...parts]);
+      for (const id of ver.confirmed ?? []) ok.add(id);
+    }
+    promos = items.filter((p) => ok.has(p.id)).map((p) => ({ ...p, note: "folheto (lido por IA)" }));
+    if (promos.length < 6) throw new Error("só " + promos.length + " preços confirmados (mínimo 6)");
+  } catch (e) {
+    console.warn("  confirmação de preços falhou (" + e.message.slice(0, 80) + ") — a usar extracção sem confirmação");
+    promos = items.map((p) => ({ ...p, note: "folheto (lido por IA)" }));
+  }
   const dm = (d) => d.slice(8) + "/" + d.slice(5, 7);
   return { found: true, from: pick.from, to: pick.to, flyer: "Folheto " + dm(pick.from) + "–" + dm(pick.to), sources: [{ title: "Blog 200 — " + title, url: pick.url }], promos };
 }
@@ -122,9 +145,10 @@ async function makeRecipes(m) {
   const byId = Object.fromEntries(m.promos.map((p) => [p.id, p]));
   return j.recipes.slice(0, 2).map((r, i) => {
     const ingredients = (r.ingredients ?? []).map((x) => {
-      if (!x.promo) return { item: x.item, qty: x.qty };
-      const p = byId[x.promo] || byId[slug(x.promo)];
-      if (!p) throw new Error("promo inválida: " + x.promo);
+      const pid = typeof x.promo === "string" && x.promo.trim() && x.promo.trim().toLowerCase() !== "null" && x.promo.trim().toLowerCase() !== "nenhum" ? x.promo.trim() : null;
+      if (!pid) return { item: x.item, qty: x.qty };
+      const p = byId[pid] || byId[slug(pid)];
+      if (!p) throw new Error("promo inválida: " + pid);
       const amount = Math.min(5, Math.max(0.1, parseFloat(String(x.amount ?? 1).replace(",", ".")) || 1));
       return { item: x.item || p.name, qty: x.qty, price: p.price, per: p.per, amount, ...(p.label && { label: p.label }), note: p.note ?? "folheto" };
     });
