@@ -181,11 +181,11 @@ const NONFOOD = /crisantemo|peperomia|ramo-de|flor|planta|vaso|capsula|detergent
 const CF = process.env.CLOUDFLARE_API_TOKEN && process.env.CLOUDFLARE_ACCOUNT_ID ? { token: process.env.CLOUDFLARE_API_TOKEN, id: process.env.CLOUDFLARE_ACCOUNT_ID } : null;
 
 async function generateCloudflare(m, r) {
-  const prompt = "Professional food photography, overhead 45-degree view, natural light, ceramic plate on wooden table. Authentic " + (r.cuisine || "") + " cuisine dish, complete meal with side: " + (r.original || r.name) + ". Ingredients: " + r.ingredients.slice(0, 8).map((i) => i.item).join(", ") + ". No text, no people, no hands.";
+  const prompt = "Professional food photography, overhead shot, natural daylight, rustic wooden table. " + (r.imgDesc || r.original || r.name) + ". Realistic, appetizing, no text, no people.";
   const model = process.env.CLOUDFLARE_IMAGE_MODEL || "@cf/black-forest-labs/flux-1-schnell";
   const res = await fetch("https://api.cloudflare.com/client/v4/accounts/" + CF.id + "/ai/run/" + model, {
     method: "POST", headers: { authorization: "Bearer " + CF.token, "content-type": "application/json" },
-    body: JSON.stringify({ prompt, steps: 6 }), signal: AbortSignal.timeout(120000)
+    body: JSON.stringify({ prompt, steps: 8 }), signal: AbortSignal.timeout(120000)
   });
   if (!res.ok) throw new Error("Cloudflare " + res.status + ": " + (await res.text()).slice(0, 200));
   const b64 = (await res.json()).result?.image;
@@ -198,7 +198,7 @@ async function generateCloudflare(m, r) {
 }
 
 async function generateImage(m, r) {
-  const prompt = "Professional food photography, 45-degree overhead view, natural light, ceramic plate on wooden table. Authentic " + (r.cuisine || "") + " cuisine dish, complete meal with side: " + (r.original || r.name) + ". Keywords: " + (r.imageQuery || "") + ". Ingredients: " + r.ingredients.slice(0, 8).map((i) => i.item).join(", ") + ". No text, no people, no hands.";
+  const prompt = "Professional food photography, overhead shot, natural daylight, rustic wooden table. " + (r.imgDesc || r.original || r.name) + ". Realistic, appetizing, no text, no people.";
   const res = await fetch("https://api.openai.com/v1/images/generations", {
     method: "POST", headers: { authorization: "Bearer " + OK, "content-type": "application/json" },
     body: JSON.stringify({ model: process.env.OPENAI_IMAGE_MODEL || "gpt-image-1-mini", prompt, size: "1024x1024", quality: process.env.OPENAI_IMAGE_QUALITY || "low", n: 1 }),

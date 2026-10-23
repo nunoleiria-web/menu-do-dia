@@ -305,7 +305,7 @@ const store={get(k,d){try{const v=localStorage.getItem(k);return v==null?d:JSON.
 const today=new Date().toLocaleDateString("en-CA",{timeZone:"Europe/Lisbon"});
 const money=n=>n.toFixed(2).replace(".",",")+" €";
 const asset=p=>p?String(p).replace(/^\//,""):p;
-function tagFull(n,cls="",unit="€/pessoa"){const [i,d]=n.toFixed(2).split(".");return `<span class="tag ${cls}"><b>${i}</b><sup>${d}</sup><em>${esc(unit)}</em></span>`}
+function tagFull(n,cls="",unit="€/pessoa"){const [i,d]=(Math.round(n*10)/10).toFixed(2).split(".");return `<span class="tag ${cls}"><b>~${i}</b><sup>${d}</sup><em>${esc(unit)}</em></span>`}
 const dmy=d=>d.slice(8)+"/"+d.slice(5,7);
 const daysTo=d=>Math.round((new Date(d+"T12:00:00")-new Date(today+"T12:00:00"))/864e5);
 
@@ -397,7 +397,7 @@ function cardHTML({m,r,c}){
     <span class="ph">${imgHTML(r,r.name)}<span class="store"><i class="dot" style="--c:${COLORS[m.name]||"#999"}"></i>${esc(m.name)}</span><span class="tagpos">${tagFull(c.per)}</span></span>
     <span class="cb"><h3>${esc(r.name)}</h3><p>${esc(r.description)}</p>
       <span class="facts"><span class="m">${esc(r.meal)} · ${esc(r.cuisine)}</span><span>${esc(r.time)}</span>${r.veg?`<span>Vegetariano</span>`:""}</span>
-      <span class="main-prod">Folheto: <b>${esc(main)} ${money(c.main)}</b> + despensa ~${money(c.rest)}</span></span></button></div>`;
+      <span class="main-prod">Folheto: <b>${esc(main)} ${money(c.main)}</b> + despensa ~${money(Math.round(c.rest*2)/2)} (estim.)</span></span></button></div>`;
 }
 
 function cmpCard(c){
@@ -493,7 +493,7 @@ function drawSheet(){
         ${priced.map(i=>`<div class="li p"><div>${esc(i.item)}<div class="q">${esc(scaleQty(i.qty,ratio))}</div></div><div class="pp">${money(lineTotal(i,ratio))}<small>${money(+i.price)}/${esc(i.per)}${i.label?" · "+esc(i.label):""}</small></div></div>`).join("")}
         <div class="grp">RESTANTES INGREDIENTES</div>
         ${rest.map(i=>`<div class="li"><span>${esc(i.item)}</span><span class="q">${esc(scaleQty(i.qty,ratio))}</span></div>`).join("")}
-        <div class="break"><div><span>Produto do folheto</span><b>${money(c.main)}</b></div><div><span>Restantes (estimativa)</span><b>~${money(c.rest)}</b></div><div class="t"><span>Total estimado</span><b>${money(c.total)}</b></div><small>A estimativa dos restantes usa preços médios de despensa e não vem do folheto.</small></div>
+        <div class="break"><div><span>Produto do folheto</span><b>${money(c.main)}</b></div><div><span>Restantes (estimativa)</span><b>~${money(c.rest)}</b></div><div class="t"><span>Total aproximado</span><b>~${money(c.total)}</b></div><small>Os restantes ingredientes usam preços médios e a quantidade realmente usada (não o preço da embalagem inteira); o valor é aproximado e não vem do folheto.</small></div>
       </section>
       <section class="steps"><h3>Preparação</h3><ol class="st">${steps}</ol></section>
     </div>
@@ -550,7 +550,7 @@ document.addEventListener("click",e=>{
   if(e.target.matches("dialog")){e.target.close();return}
   if(e.target.closest("#cartBtn")){renderCart();$("#cartDlg").showModal();return}
   if(e.target.closest("#addAll")){addRecipeObj(current.m,current.r,current.servings);return}
-  if(e.target.closest("#shareR")){const {m,r,servings}=current,c=cost(r,servings);share(r.name,`${r.name} — ${m.name}\nTotal estimado: ${money(c.total)} para ${servings} pessoas (${money(c.per)}/pessoa); produto principal ${money(c.main)}\n\nIngredientes:\n${r.ingredients.map(i=>"• "+i.item+" — "+scaleQty(i.qty,c.ratio)).join("\n")}\n\nPreparação:\n${r.steps.map((s,i)=>(i+1)+". "+s).join("\n")}`);return}
+  if(e.target.closest("#shareR")){const {m,r,servings}=current,c=cost(r,servings);share(r.name,`${r.name} — ${m.name}\nTotal aproximado: ~${money(c.total)} para ${servings} pessoas (cerca de ${money(c.per)}/pessoa); produto principal ${money(c.main)}\n\nIngredientes:\n${r.ingredients.map(i=>"• "+i.item+" — "+scaleQty(i.qty,c.ratio)).join("\n")}\n\nPreparação:\n${r.steps.map((s,i)=>(i+1)+". "+s).join("\n")}`);return}
   if(e.target.closest("#shareC")){share("Lista de compras",cartText());return}
   if(e.target.closest("#clearC")){cart=[];saveCart();renderCart();return}
   if(!t)return;

@@ -69,7 +69,8 @@
    "Retire do lume, envolva a batata palha e rectifique o sal só no fim (o bacalhau já salga).",
    "Sirva polvilhado com salsa e azeitonas, com uma salada de alface e tomate ao lado."
   ],
-  "tip": "Junte a batata palha mesmo no fim para se manter estaladiça."
+  "tip": "Junte a batata palha mesmo no fim para se manter estaladiça.",
+  "img": "Bacalhau à Brás, Portuguese shredded salt cod with egg and thin straw fries, black olives and parsley, served on a white plate"
  },
  {
   "id": "bacalhau-natas",
@@ -145,7 +146,8 @@
    "Transfira para uma travessa e leve ao forno 20 a 25 min até gratinar.",
    "Deixe repousar 5 min e sirva com salada verde."
   ],
-  "tip": "Se o molho ficar espesso demais, aligeire com um pouco de leite."
+  "tip": "Se o molho ficar espesso demais, aligeire com um pouco de leite.",
+  "img": "Portuguese bacalhau com natas, golden baked casserole of creamy salt cod and potatoes in a ceramic dish"
  },
  {
   "id": "bacalhau-gomes-sa",
@@ -216,7 +218,8 @@
    "Regue com azeite e leve ao forno 15 min.",
    "Decore com ovo cozido em quartos, azeitonas e salsa picada."
   ],
-  "tip": "Deixe a cebola cozinhar devagar: é ela que dá doçura ao prato."
+  "tip": "Deixe a cebola cozinhar devagar: é ela que dá doçura ao prato.",
+  "img": "Bacalhau à Gomes de Sá, baked salt cod with sliced potatoes, onions, boiled egg and black olives in a ceramic dish"
  },
  {
   "id": "arroz-marisco",
@@ -294,7 +297,8 @@
    "Cozinhe 10 min em lume médio; junte o marisco e cozinhe mais 6 a 8 min até o arroz ficar cremoso.",
    "Retire do lume, junte coentros picados e deixe repousar 3 min antes de servir."
   ],
-  "tip": "Junte o marisco só na segunda metade da cozedura para não ficar duro."
+  "tip": "Junte o marisco só na segunda metade da cozedura para não ficar duro.",
+  "img": "Portuguese seafood rice, wet rice with prawns and mussels and fresh coriander in a pot"
  },
  {
   "id": "polvo-lagareiro",
@@ -360,7 +364,8 @@
    "Asse 25 a 30 min, regando uma vez, até o polvo ficar dourado nas pontas.",
    "Sirva com salsa picada e um fio de azeite do tabuleiro."
   ],
-  "tip": "Não junte sal ao polvo na cozedura: já tem o sal do mar."
+  "tip": "Não junte sal ao polvo na cozedura: já tem o sal do mar.",
+  "img": "Polvo à lagareiro, roasted octopus with olive oil, garlic and small crushed roasted potatoes on a tray"
  },
  {
   "id": "lulas-guisadas",
@@ -434,7 +439,8 @@
    "Junte a batata em cubos e cozinhe mais 15 a 20 min, até estar macia.",
    "Cozinhe o arroz branco à parte (18 min) e sirva as lulas com coentros picados."
   ],
-  "tip": "Não mexa demasiado: as lulas devem ficar com o corte intacto."
+  "tip": "Não mexa demasiado: as lulas devem ficar com o corte intacto.",
+  "img": "Stewed squid rings in tomato sauce with potatoes, served with white rice"
  },
  {
   "id": "sardinha-assada",
@@ -500,7 +506,8 @@
    "Grelhe em lume forte 4 a 5 min de cada lado.",
    "Sirva sobre pão (que absorve o sumo) com a salada de pimentos e a batata."
   ],
-  "tip": "Escolha sardinhas com olhos brilhantes e barriga firme."
+  "tip": "Escolha sardinhas com olhos brilhantes e barriga firme.",
+  "img": "Grilled sardines on a slice of bread with roasted red pepper salad and boiled potatoes"
  },
  {
   "id": "carapau-alimado",
@@ -569,7 +576,8 @@
    "Frite em óleo bem quente 3 a 4 min por lado até ficarem dourados.",
    "Escorra em papel absorvente e sirva com a salada de feijão-frade e tomate."
   ],
-  "tip": "Deixe a salada repousar 15 min para o feijão absorver o tempero."
+  "tip": "Deixe a salada repousar 15 min para o feijão absorver o tempero.",
+  "img": "Fried horse mackerel fish with black-eyed bean salad and tomato salad"
  },
  {
   "id": "caldeirada",
@@ -643,7 +651,8 @@
    "Tape e cozinhe em lume brando 30 a 35 min, sem mexer (só abane a panela).",
    "Sirva sobre pão torrado e polvilhe com coentros."
   ],
-  "tip": "Nunca mexa com colher: abane a panela para não desfazer o peixe."
+  "tip": "Nunca mexa com colher: abane a panela para não desfazer o peixe.",
+  "img": "Portuguese fish stew caldeirada with fish steaks, potatoes, tomato and peppers in a pot, toasted bread"
  },
  {
   "id": "dourada-forno",
@@ -713,7 +722,8 @@
    "Asse 25 a 30 min, regando uma vez, até a carne se desprender da espinha.",
    "Sirva com salsa picada e gomos de limão."
   ],
-  "tip": "Corte a batata fina e uniforme para ficar cozida ao mesmo tempo que o peixe."
+  "tip": "Corte a batata fina e uniforme para ficar cozida ao mesmo tempo que o peixe.",
+  "img": "Whole baked sea bream with sliced potatoes, onions, lemon and parsley in a roasting tray"
  },
  {
   "id": "frango-churrasco",
@@ -782,7 +792,8 @@
    "Prepare a salada de alface e tomate com azeite e sal.",
    "Deixe o frango repousar 5 min e sirva com a batata frita e a salada."
   ],
-  "tip": "Deixe o frango fora do frigorífico 30 min antes de assar para cozinhar de forma uniforme."
+  "tip": "Deixe o frango fora do frigorífico 30 min antes de assar para cozinhar de forma uniforme.",
+  "img": "Portuguese grilled piri-piri chicken with french fries and green salad"
  },
  {
   "id": "arroz-pato",
@@ -846,7 +857,8 @@
    "Transfira para uma travessa, cubra com o restante chouriço em rodelas e leve ao forno a 220 ºC 10 min.",
    "Sirva com gomos de laranja."
   ],
-  "tip": "Guarde o caldo do pato: é o segredo do sabor do arroz."
+  "tip": "Guarde o caldo do pato: é o segredo do sabor do arroz.",
+  "img": "Portuguese duck rice arroz de pato, baked with shredded duck, sliced chouriço and orange slices in a clay dish"
  },
  {
   "id": "bifanas",
@@ -913,7 +925,8 @@
    "Abra os pães, recheie com bifanas e regue com molho.",
    "Sirva com batata frita e mostarda."
   ],
-  "tip": "Corte as bifanas finas (0,5 cm) para ficarem tenras."
+  "tip": "Corte as bifanas finas (0,5 cm) para ficarem tenras.",
+  "img": "Portuguese bifana pork sandwich in a bread roll with sauce, with french fries"
  },
  {
   "id": "porco-alentejana",
@@ -984,7 +997,8 @@
    "Junte as amêijoas, tape e cozinhe 4 min até abrirem; descarte as que ficarem fechadas.",
    "Misture a batata, coentros e sirva com limão."
   ],
-  "tip": "Frite o porco em lume forte para selar o sumo."
+  "tip": "Frite o porco em lume forte para selar o sumo.",
+  "img": "Carne de porco à alentejana, pork cubes with clams, fried potato cubes and coriander"
  },
  {
   "id": "entrecosto-forno",
@@ -1047,7 +1061,8 @@
    "Junte a batata-doce em pedaços e asse mais 30 a 35 min a 200 ºC, até dourar.",
    "Deixe repousar 5 min e sirva com salada verde."
   ],
-  "tip": "A cozedura lenta e tapada é o que o torna macio."
+  "tip": "A cozedura lenta e tapada é o que o torna macio.",
+  "img": "Oven roasted pork ribs with roasted sweet potato wedges and green salad"
  },
  {
   "id": "bife-portuguesa",
@@ -1114,7 +1129,8 @@
    "Estrele os ovos em frigideira antiaderente.",
    "Regue os bifes com o molho, coroe com o ovo e sirva com batata frita e salada."
   ],
-  "tip": "Não pique a carne com o garfo ao virar, para não perder sumo."
+  "tip": "Não pique a carne com o garfo ao virar, para não perder sumo.",
+  "img": "Bife à portuguesa, steak with a fried egg on top, french fries and lettuce salad"
  },
  {
   "id": "estufado-novilho",
@@ -1183,7 +1199,8 @@
    "Junte cenoura e batata em pedaços e cozinhe mais 40 min, até a carne estar tenra.",
    "Rectifique o sal e sirva bem quente."
   ],
-  "tip": "Doure a carne em pequenos lotes para não cozer em vez de dourar."
+  "tip": "Doure a carne em pequenos lotes para não cozer em vez de dourar.",
+  "img": "Beef stew with carrots and potatoes in tomato and red wine sauce in a pot"
  },
  {
   "id": "almondegas",
@@ -1259,7 +1276,8 @@
    "Junte as almôndegas ao molho e cozinhe tapadas em lume brando 20 min.",
    "Sirva com arroz branco cozido (18 min)."
   ],
-  "tip": "Molhe as mãos para modelar as bolinhas sem que se colem."
+  "tip": "Molhe as mãos para modelar as bolinhas sem que se colem.",
+  "img": "Meatballs in tomato sauce served with white rice and parsley"
  },
  {
   "id": "feijoada",
@@ -1326,7 +1344,8 @@
    "Junte o feijão e a couve em tiras; cozinhe mais 20 min em lume brando.",
    "Rectifique o sal e sirva com arroz branco."
   ],
-  "tip": "Cozinhe o arroz à parte para não escurecer o caldo."
+  "tip": "Cozinhe o arroz à parte para não escurecer o caldo.",
+  "img": "Portuguese feijoada, bean stew with chouriço, pork and cabbage, with white rice"
  },
  {
   "id": "grao-espinafres",
@@ -1396,7 +1415,8 @@
    "Abra 4 covas no preparado e escalfe os ovos tapados 4 a 5 min.",
    "Finalize com vinagre e sirva com pão."
   ],
-  "tip": "Esprema levemente metade do grão para engrossar o molho."
+  "tip": "Esprema levemente metade do grão para engrossar o molho.",
+  "img": "Chickpeas with spinach and poached eggs in a rustic pan, with bread"
  },
  {
   "id": "cogumelos-ovo",
@@ -1459,7 +1479,8 @@
    "Estrele os ovos em azeite.",
    "Sirva os cogumelos sobre pão tostado, com o ovo por cima e salada de rúcula."
   ],
-  "tip": "Não lave os cogumelos em água: absorvem-na e não douram."
+  "tip": "Não lave os cogumelos em água: absorvem-na e não douram.",
+  "img": "Sautéed garlic mushrooms on toasted bread with a fried egg and arugula salad"
  },
  {
   "id": "carbonara",
@@ -1523,7 +1544,8 @@
    "Junte a mistura de ovo e mexa depressa, adicionando água da massa até ficar um molho cremoso.",
    "Sirva de imediato, com queijo por cima e salada de rúcula."
   ],
-  "tip": "Fora do lume, o ovo cria creme em vez de ovo mexido."
+  "tip": "Fora do lume, o ovo cria creme em vez de ovo mexido.",
+  "img": "Spaghetti alla carbonara with crispy bacon, egg yolk sauce, pecorino and black pepper in a white bowl"
  },
  {
   "id": "bolonhesa",
@@ -1599,7 +1621,8 @@
    "Cozinhe em lume brando, tapado a meio, 45 min.",
    "Cozinhe o esparguete al dente, envolva no ragù e sirva com parmesão."
   ],
-  "tip": "Quanto mais tempo cozinhar, melhor o sabor do ragù."
+  "tip": "Quanto mais tempo cozinhar, melhor o sabor do ragù.",
+  "img": "Spaghetti bolognese with rich meat ragù and grated parmesan on a plate"
  },
  {
   "id": "lasanha",
@@ -1680,7 +1703,8 @@
    "Leve ao forno 35 a 40 min até dourar.",
    "Deixe repousar 10 min antes de cortar e sirva com salada."
   ],
-  "tip": "O repouso final evita que a lasanha se desfaça."
+  "tip": "O repouso final evita que a lasanha se desfaça.",
+  "img": "Slice of baked meat lasagna with melted cheese and béchamel on a plate with green salad"
  },
  {
   "id": "risotto-cogumelos",
@@ -1751,7 +1775,8 @@
    "Adicione o caldo concha a concha, mexendo, durante 16 a 18 min.",
    "Fora do lume, junte manteiga, parmesão e os cogumelos; deixe repousar 2 min e sirva com salsa."
   ],
-  "tip": "O risotto deve ficar 'ondulante', nunca seco."
+  "tip": "O risotto deve ficar 'ondulante', nunca seco.",
+  "img": "Creamy mushroom risotto with parmesan and parsley in a shallow bowl"
  },
  {
   "id": "frango-parmegiana",
@@ -1824,7 +1849,8 @@
    "Gratine 12 a 15 min.",
    "Cozinhe o esparguete al dente e sirva com o frango e manjericão."
   ],
-  "tip": "Pressione bem o pão ralado para que fique colado."
+  "tip": "Pressione bem o pão ralado para que fique colado.",
+  "img": "Chicken parmigiana, breaded chicken breast with tomato sauce and melted mozzarella, with spaghetti"
  },
  {
   "id": "espadarte-siciliana",
@@ -1892,7 +1918,8 @@
    "Cozinhe o esparguete al dente e envolva em parte do molho.",
    "Sirva o peixe com o molho, a massa e salsa picada."
   ],
-  "tip": "Não cozinhe o peixe em excesso: deve ficar rosado e suculento."
+  "tip": "Não cozinhe o peixe em excesso: deve ficar rosado e suculento.",
+  "img": "Sicilian swordfish steak in tomato, olive and caper sauce with spaghetti"
  },
  {
   "id": "puttanesca",
@@ -1963,7 +1990,8 @@
    "Envolva a massa no molho com um pouco da água de cozedura 1 min.",
    "Sirva com salsa e parmesão."
   ],
-  "tip": "As anchovas dissolvem-se e dão profundidade sem sabor a peixe."
+  "tip": "As anchovas dissolvem-se e dão profundidade sem sabor a peixe.",
+  "img": "Spaghetti alla puttanesca with tomato sauce, black olives, capers and parsley"
  },
  {
   "id": "boeuf-bourguignon",
@@ -2042,7 +2070,8 @@
    "Salteie os cogumelos e as cebolinhas em manteiga e junte nos últimos 20 min.",
    "Cozinhe a batata, faça puré com manteiga e leite e sirva com o estufado."
   ],
-  "tip": "É ainda melhor no dia seguinte: faça com antecedência."
+  "tip": "É ainda melhor no dia seguinte: faça com antecedência.",
+  "img": "Boeuf bourguignon, beef braised in red wine with mushrooms, pearl onions and bacon, with mashed potatoes"
  },
  {
   "id": "coq-au-vin",
@@ -2117,7 +2146,8 @@
    "Junte os cogumelos salteados e cozinhe 10 min.",
    "Cozinhe a batata e sirva com o frango."
   ],
-  "tip": "Use um vinho que beberia: dá todo o sabor ao molho."
+  "tip": "Use um vinho que beberia: dá todo o sabor ao molho.",
+  "img": "Coq au vin, chicken in red wine sauce with mushrooms and bacon, with potatoes"
  },
  {
   "id": "salmao-papillote",
@@ -2183,7 +2213,8 @@
    "Asse 15 a 18 min.",
    "Cozinhe o arroz branco e sirva com o salmão aberto na hora."
   ],
-  "tip": "Feche bem as dobras para o vapor ficar retido."
+  "tip": "Feche bem as dobras para o vapor ficar retido.",
+  "img": "Salmon fillet baked in parchment paper with vegetables and lemon, served with white rice"
  },
  {
   "id": "moules-marinieres",
@@ -2249,7 +2280,8 @@
    "Junte as natas e salsa picada.",
    "Frite as batatas em palitos e sirva com os mexilhões e o caldo."
   ],
-  "tip": "Descarte os mexilhões que não abrirem."
+  "tip": "Descarte os mexilhões que não abrirem.",
+  "img": "Moules marinières, mussels in white wine and parsley sauce in a pot, with french fries"
  },
  {
   "id": "ratatouille",
@@ -2316,7 +2348,8 @@
    "Tape e cozinhe em lume brando 30 min, mexendo ocasionalmente.",
    "Escalfe os ovos por cima nos últimos 5 min e sirva com pão e manjericão."
   ],
-  "tip": "Cozinhe devagar para os legumes ficarem macios mas inteiros."
+  "tip": "Cozinhe devagar para os legumes ficarem macios mas inteiros.",
+  "img": "Ratatouille of eggplant, zucchini, peppers and tomato topped with a poached egg, with bread"
  },
  {
   "id": "paella",
@@ -2389,7 +2422,8 @@
    "Cozinhe 18 min sem mexer, em lume médio.",
    "Deixe repousar 5 min tapado com pano e sirva com limão."
   ],
-  "tip": "Não mexa depois de juntar o caldo: forma-se o socarrat (crosta) no fundo."
+  "tip": "Não mexa depois de juntar o caldo: forma-se o socarrat (crosta) no fundo.",
+  "img": "Chicken paella with saffron rice, green beans and red pepper in a wide paella pan"
  },
  {
   "id": "gambas-ajillo",
@@ -2451,7 +2485,8 @@
    "Polvilhe com salsa e sal.",
    "Sirva com pão e arroz de tomate."
   ],
-  "tip": "Retire do lume logo que fiquem rosados: o camarão cozinha em segundos."
+  "tip": "Retire do lume logo que fiquem rosados: o camarão cozinha em segundos.",
+  "img": "Gambas al ajillo, garlic prawns sizzling in olive oil with chili in a clay dish, with bread"
  },
  {
   "id": "tortilha",
@@ -2505,7 +2540,8 @@
    "Cozinhe 5 min, vire com a ajuda de um prato e cozinhe mais 3 min.",
    "Sirva morna com salada e pão."
   ],
-  "tip": "Deixe a mistura repousar: a batata absorve o ovo e fica mais cremosa."
+  "tip": "Deixe a mistura repousar: a batata absorve o ovo e fica mais cremosa.",
+  "img": "Spanish potato omelette tortilla española cut into wedges with a tomato salad and bread"
  },
  {
   "id": "calamares",
@@ -2573,7 +2609,8 @@
    "Escorra em papel absorvente.",
    "Misture maionese com alho ralado e sirva com limão e batata frita."
   ],
-  "tip": "Frite em pequenas porções para o óleo não arrefecer."
+  "tip": "Frite em pequenas porções para o óleo não arrefecer.",
+  "img": "Fried calamari rings a la romana with lemon wedges, garlic mayonnaise and french fries"
  },
  {
   "id": "pulpo-gallega",
@@ -2627,7 +2664,8 @@
    "Tempere com sal grosso, paprika e muito azeite.",
    "Sirva morno com pão."
   ],
-  "tip": "Aproveite a água de cozedura do polvo para cozer a batata: ganha sabor."
+  "tip": "Aproveite a água de cozedura do polvo para cozer a batata: ganha sabor.",
+  "img": "Pulpo a la gallega, sliced octopus on potato slices with paprika and olive oil on a wooden plate"
  },
  {
   "id": "moussaka",
@@ -2712,7 +2750,8 @@
    "Monte: batata, beringela, ragù, beringela e bechamel com queijo.",
    "Asse a 180 ºC 35 min; deixe repousar 10 min e sirva com salada grega."
   ],
-  "tip": "Assar a beringela evita que absorva muito óleo."
+  "tip": "Assar a beringela evita que absorva muito óleo.",
+  "img": "Slice of Greek moussaka with eggplant, meat sauce and béchamel, with Greek salad"
  },
  {
   "id": "souvlaki",
@@ -2784,7 +2823,8 @@
    "Aqueça as pitas.",
    "Sirva com tomate, cebola roxa e tzatziki."
   ],
-  "tip": "Esprema o pepino ralado para o tzatziki não ficar aguado."
+  "tip": "Esprema o pepino ralado para o tzatziki não ficar aguado.",
+  "img": "Chicken souvlaki skewers with tzatziki and warm pita bread, tomato and red onion"
  },
  {
   "id": "gyros-porco",
@@ -2860,7 +2900,8 @@
    "Recheie com porco, tomate, cebola, batata frita e molho.",
    "Sirva de imediato."
   ],
-  "tip": "Frigideira muito quente: a carne deve dourar, não cozer."
+  "tip": "Frigideira muito quente: a carne deve dourar, não cozer.",
+  "img": "Pork gyros in pita bread with tzatziki, tomato, red onion and french fries"
  },
  {
   "id": "tagine-frango",
@@ -2937,7 +2978,8 @@
    "Junte as azeitonas e rodelas de limão; cozinhe 10 min.",
    "Prepare o cuscuz com água a ferver e azeite; sirva com o frango e coentros."
   ],
-  "tip": "Cozinhe tapado e em lume brando: o frango fica sumarento."
+  "tip": "Cozinhe tapado e em lume brando: o frango fica sumarento.",
+  "img": "Moroccan chicken tagine with olives and preserved lemon in a tagine pot, with couscous"
  },
  {
   "id": "tagine-borrego",
@@ -3008,7 +3050,8 @@
    "Junte ameixas e mel e cozinhe mais 20 min.",
    "Torre as amêndoas, prepare o cuscuz e sirva."
   ],
-  "tip": "O doce das ameixas equilibra a gordura do borrego."
+  "tip": "O doce das ameixas equilibra a gordura do borrego.",
+  "img": "Moroccan lamb tagine with prunes and almonds in a tagine pot, with couscous"
  },
  {
   "id": "cuscuz-grao",
@@ -3077,7 +3120,8 @@
    "Hidrate o cuscuz com água a ferver, tape 5 min e solte com um garfo.",
    "Sirva o estufado sobre o cuscuz com coentros."
   ],
-  "tip": "Solte o cuscuz com um fio de azeite para ficar fofo."
+  "tip": "Solte o cuscuz com um fio de azeite para ficar fofo.",
+  "img": "Couscous with stewed vegetables and chickpeas, carrots, zucchini and cilantro on a plate"
  },
  {
   "id": "chili",
@@ -3154,7 +3198,8 @@
    "Junte o feijão escorrido e cozinhe 10 min.",
    "Cozinhe o arroz e sirva com coentros."
   ],
-  "tip": "Uma colher de cacau ou chocolate negro dá profundidade ao chili."
+  "tip": "Uma colher de cacau ou chocolate negro dá profundidade ao chili.",
+  "img": "Chili con carne with kidney beans served with white rice and cilantro"
  },
  {
   "id": "tacos-porco",
@@ -3229,7 +3274,8 @@
    "Aqueça as tortilhas.",
    "Monte os tacos e sirva com abacate e lima."
   ],
-  "tip": "Doure a carne no fim para ficar crocante."
+  "tip": "Doure a carne no fim para ficar crocante.",
+  "img": "Pulled pork carnitas tacos on corn tortillas with fresh salsa, red onion, cilantro, lime and avocado"
  },
  {
   "id": "quesadillas",
@@ -3301,7 +3347,8 @@
    "Doure em frigideira 2 a 3 min de cada lado.",
    "Corte em triângulos e sirva com guacamole."
   ],
-  "tip": "Frigideira em lume médio: o queijo derrete sem queimar a tortilha."
+  "tip": "Frigideira em lume médio: o queijo derrete sem queimar a tortilha.",
+  "img": "Chicken and cheese quesadillas cut in triangles with guacamole"
  },
  {
   "id": "moqueca",
@@ -3375,7 +3422,8 @@
    "Cozinhe o arroz branco.",
    "Finalize com coentros e sirva com arroz."
   ],
-  "tip": "Não mexa o peixe: abane suavemente a panela."
+  "tip": "Não mexa o peixe: abane suavemente a panela.",
+  "img": "Brazilian fish moqueca stew in coconut milk with peppers and tomato, with white rice and cilantro"
  },
  {
   "id": "strogonoff",
@@ -3450,7 +3498,8 @@
    "Junte as natas em lume brando e aqueça sem ferver, 3 min.",
    "Sirva com arroz e batata palha."
   ],
-  "tip": "Junte as natas fora do lume forte para não talhar."
+  "tip": "Junte as natas fora do lume forte para não talhar.",
+  "img": "Chicken stroganoff in creamy sauce with white rice and straw potato sticks"
  },
  {
   "id": "tikka-masala",
@@ -3533,7 +3582,8 @@
    "Regresse o frango, junte as natas e cozinhe 10 min.",
    "Cozinhe o arroz basmati e sirva com coentros."
   ],
-  "tip": "Quanto mais tempo marinar, mais macio e saboroso fica."
+  "tip": "Quanto mais tempo marinar, mais macio e saboroso fica.",
+  "img": "Chicken tikka masala in creamy orange tomato sauce with basmati rice and cilantro"
  },
  {
   "id": "curry-grao",
@@ -3605,7 +3655,8 @@
    "Adicione os espinafres e cozinhe 2 min.",
    "Sirva com arroz basmati."
   ],
-  "tip": "Esmague parte do grão para engrossar o molho."
+  "tip": "Esmague parte do grão para engrossar o molho.",
+  "img": "Chickpea and spinach curry with basmati rice"
  },
  {
   "id": "dal",
@@ -3683,7 +3734,8 @@
    "Cozinhe o arroz e aqueça o pão.",
    "Sirva com coentros."
   ],
-  "tip": "O tadka final dá o aroma característico do dal."
+  "tip": "O tadka final dá o aroma característico do dal.",
+  "img": "Red lentil dal with basmati rice and naan bread"
  },
  {
   "id": "pad-thai",
@@ -3769,7 +3821,8 @@
    "Faça um canto, mexa os ovos, misture tudo.",
    "Junte rebentos, cebolinho e camarão; sirva com amendoim e lima."
   ],
-  "tip": "Frite em lume muito forte e em pequenas quantidades."
+  "tip": "Frite em lume muito forte e em pequenas quantidades.",
+  "img": "Shrimp pad thai with rice noodles, egg, bean sprouts, crushed peanuts and lime"
  },
  {
   "id": "curry-verde",
@@ -3840,7 +3893,8 @@
    "Tempere com molho de peixe, açúcar e lima.",
    "Sirva com arroz jasmim e manjericão."
   ],
-  "tip": "Ajuste o picante com mais ou menos pasta de caril."
+  "tip": "Ajuste o picante com mais ou menos pasta de caril.",
+  "img": "Thai green chicken curry with vegetables and jasmine rice and basil"
  },
  {
   "id": "frango-agridoce",
@@ -3921,7 +3975,8 @@
    "Cozinhe o arroz, salteie com ovo mexido, soja e cebolinho.",
    "Sirva o frango com arroz."
   ],
-  "tip": "Sirva logo após envolver no molho para manter o crocante."
+  "tip": "Sirva logo após envolver no molho para manter o crocante.",
+  "img": "Sweet and sour crispy chicken with peppers and pineapple, with fried rice"
  },
  {
   "id": "vaca-brocolos",
@@ -3992,7 +4047,8 @@
    "Regresse a carne com molho de ostra, soja e açúcar; salteie 2 min.",
    "Sirva com arroz branco."
   ],
-  "tip": "O wok deve estar muito quente para selar a carne."
+  "tip": "O wok deve estar muito quente para selar a carne.",
+  "img": "Beef and broccoli stir-fry in a glossy sauce with steamed rice"
  },
  {
   "id": "teriyaki-salmao",
@@ -4060,7 +4116,8 @@
    "Cozinhe os brócolos ao vapor 4 min.",
    "Sirva sobre arroz com sésamo."
   ],
-  "tip": "Regue o salmão várias vezes com o molho para ficar brilhante."
+  "tip": "Regue o salmão várias vezes com o molho para ficar brilhante.",
+  "img": "Teriyaki glazed salmon fillet with sushi rice, broccoli and sesame seeds"
  },
  {
   "id": "katsu-porco",
@@ -4133,7 +4190,8 @@
    "Corte o repolho em tiras finíssimas.",
    "Corte o tonkatsu em tiras e sirva com arroz, repolho e molho."
   ],
-  "tip": "O repolho cru fresco equilibra a fritura."
+  "tip": "O repolho cru fresco equilibra a fritura.",
+  "img": "Tonkatsu breaded pork cutlet sliced with shredded cabbage, rice and tonkatsu sauce"
  },
  {
   "id": "bulgogi",
@@ -4213,7 +4271,8 @@
    "Salteie a carne em frigideira muito quente, em duas vezes, 3 min.",
    "Sirva com arroz, pickles, alface (para enrolar) e sésamo."
   ],
-  "tip": "A pera amacia a carne e equilibra o sabor."
+  "tip": "A pera amacia a carne e equilibra o sabor.",
+  "img": "Korean bulgogi beef with steamed rice, cucumber pickles and lettuce leaves"
  },
  {
   "id": "bo-kho",
@@ -4292,7 +4351,8 @@
    "Junte as cenouras em pedaços e cozinhe 30 min.",
    "Sirva com pão, coentros e rodelas de lima."
   ],
-  "tip": "Sirva com pão para molhar o molho."
+  "tip": "Sirva com pão para molhar o molho.",
+  "img": "Vietnamese bò kho beef stew with carrots and star anise in a bowl, with baguette"
  },
  {
   "id": "kebab-frango",
@@ -4367,7 +4427,8 @@
    "Corte tomate e pepino para a salada.",
    "Sirva o kebab com arroz, salada e molho."
   ],
-  "tip": "Marinar mais tempo torna o frango mais tenro."
+  "tip": "Marinar mais tempo torna o frango mais tenro.",
+  "img": "Chicken shish kebab skewers with rice, yogurt sauce and tomato cucumber salad"
  },
  {
   "id": "kafta",
@@ -4439,7 +4500,8 @@
    "Prepare a salada de tomate, pepino e hortelã.",
    "Sirva com hummus."
   ],
-  "tip": "Molhe as mãos para moldar a kafta sem se colar."
+  "tip": "Molhe as mãos para moldar a kafta sem se colar.",
+  "img": "Lebanese kafta meat skewers with hummus, pita bread and tomato cucumber salad"
  },
  {
   "id": "hamburguer",
@@ -4512,7 +4574,8 @@
    "Frite a batata em palitos.",
    "Monte com alface, tomate, cebola, pickles e molhos."
   ],
-  "tip": "Não pressione o hambúrguer na frigideira."
+  "tip": "Não pressione o hambúrguer na frigideira.",
+  "img": "Homemade cheeseburger in a toasted bun with lettuce, tomato and pickles, with french fries"
  },
  {
   "id": "frango-frito",
@@ -4593,7 +4656,8 @@
    "Rale o repolho e a cenoura e misture com maionese.",
    "Sirva o frango com puré e salada."
   ],
-  "tip": "Use termómetro: o óleo deve manter 170 ºC."
+  "tip": "Use termómetro: o óleo deve manter 170 ºC.",
+  "img": "Southern fried chicken pieces with mashed potatoes and coleslaw"
  },
  {
   "id": "mac-cheese",
@@ -4660,7 +4724,8 @@
    "Transfira para travessa, cubra com queijo restante e pão ralado.",
    "Gratine a 200 ºC 15 min e sirva com salada."
   ],
-  "tip": "Misture dois queijos para ter sabor e cremosidade."
+  "tip": "Misture dois queijos para ter sabor e cremosidade.",
+  "img": "Baked macaroni and cheese in a casserole dish with golden cheesy crust and a green salad"
  },
  {
   "id": "pasta-atum",
@@ -4727,7 +4792,8 @@
    "Envolva a massa no molho.",
    "Finalize com salsa."
   ],
-  "tip": "Junte o atum no fim para não secar."
+  "tip": "Junte o atum no fim para não secar.",
+  "img": "Spaghetti with tuna, tomato sauce, capers and parsley on a plate"
  },
  {
   "id": "couve-flor-curry",
@@ -4799,6 +4865,7 @@
    "Cozinhe o arroz basmati.",
    "Sirva com coentros."
   ],
-  "tip": "Assar antes dá sabor tostado e evita que desfaça."
+  "tip": "Assar antes dá sabor tostado e evita que desfaça.",
+  "img": "Roasted cauliflower curry in tomato and coconut sauce with basmati rice and cilantro"
  }
 ]

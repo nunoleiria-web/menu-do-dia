@@ -1,9 +1,61 @@
 // Lógica pura do menu (sem rede nem IA): escolhe receitas da biblioteca a partir das promoções,
 // calcula custos pela quantidade real, monta o plano da semana e compara o mesmo prato entre lojas.
 import { createHash } from "node:crypto";
+import fs from "node:fs";
 
 export const slug = (s) => String(s ?? "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 const rnd = (s) => createHash("sha1").update(s).digest().readUInt32BE(0) / 2 ** 32;
+
+// ---- Estimativa dos restantes ingredientes, a partir de preços médios (scripts/prices.json) ----
+const PRICES = JSON.parse(fs.readFileSync(new URL("./prices.json", import.meta.url), "utf8")).map(([re, v]) => ({ re: new RegExp(re), ...v }));
+const num = (t) => { const f = String(t).match(/^(\d+)\/(\d+)$/); return f ? +f[1] / +f[2] : parseFloat(String(t).replace(",", ".")); };
+
+// Converte "800 g", "2 c. sopa", "3 dentes", "1/2 copo"… numa quantidade: { kg } | { l } | { n (unidades) } | { flat }
+export function parseQty(q) {
+  const t = String(q ?? "").toLowerCase();
+  if (!t.trim() || /a gosto|q\.?b|pitada/.test(t)) return { flat: 0.05 };
+  const m = t.match(/(\d+(?:[.,]\d+)?(?:\/\d+)?|\d+\/\d+)\s*(kg|g|ml|l\b|c\. ?sopa|c\. ?chá|c\. ?cha|copo|chávena|chavena|dentes?|molhos?|ramos?|folhas?|fatias?|prato|latas?)?(?![a-zà-ú])/);
+  if (!m) return /algumas/.test(t) ? { herb: 0.3 } : { flat: 0.3 };
+  const v = num(m[1]), u = m[2] ?? "";
+  if (u === "kg") return { kg: v };
+  if (u === "g") return { kg: v / 1000 };
+  if (u === "l") return { l: v };
+  if (u === "ml") return { l: v / 1000 };
+  if (/c\. ?sopa/.test(u)) return { tbsp: v };
+  if (/c\. ?ch/.test(u)) return { tsp: v };
+  if (u === "copo") return { l: v * 0.2 };
+  if (/ch[aá]vena/.test(u)) return { l: v * 0.25 };
+  if (/^dente/.test(u)) return { n: v, unit: "dente" };
+  if (/^molho/.test(u)) return { herb: v };
+  if (/^ramo/.test(u)) return { herb: v * 0.2 };
+  if (/^folha/.test(u)) return { herb: v * 0.1, leaves: v };
+  if (/^fatia/.test(u)) return { n: v };
+  if (u === "prato") return { n: v };
+  return { n: v };
+}
+
+export function priceItem(item, qty) {
+  const sl = slug(item), pr = PRICES.find((p) => p.re.test(sl)), q = parseQty(qty);
+  if (q.flat != null) return { cost: pr?.herb || pr?.kg >= 20 ? 0.1 : q.flat, known: !!pr };
+  if (!pr) return { cost: 0.4, known: false };
+  if (pr.herb) return { cost: pr.herb * (q.herb ?? (q.tbsp ? 0.3 : q.n ? Math.min(q.n, 1) : 0.3)), known: true };
+  let cost;
+  if (q.kg != null) cost = pr.kg ? q.kg * pr.kg : pr.l ? q.kg * pr.l : pr.un ? (q.kg / (pr.w || 0.15)) * pr.un : 0.4;
+  else if (q.l != null) cost = pr.l ? q.l * pr.l : pr.kg ? q.l * pr.kg : 0.4;
+  else if (q.tbsp != null) cost = (pr.l ?? pr.kg ?? 3) * 0.015 * q.tbsp;
+  else if (q.tsp != null) cost = (pr.l ?? pr.kg ?? 3) * 0.005 * q.tsp;
+  else if (q.leaves != null && pr.un) cost = pr.un * (q.leaves / 10);
+  else if (q.n != null) cost = pr.un ? q.n * pr.un : pr.kg ? q.n * (q.unit === "dente" ? 0.004 : pr.w ?? (pr.kg >= 15 ? 0.003 : 0.15)) * pr.kg : pr.l ? q.n * 0.1 * pr.l : 0.4;
+  else cost = 0.4;
+  return { cost, known: true };
+}
+
+// Custo estimado (para 4 pessoas) dos ingredientes sem preço de folheto, arredondado a 0,05 €
+export function estimateRest(ing) {
+  const total = ing.reduce((s, [item, qty]) => s + priceItem(item, qty).cost, 0);
+  return Math.max(0.5, Math.round(total * 20) / 20);
+}
+
 const round2 = (n) => Math.round(n * 100) / 100;
 
 function addDays(date, n) {
@@ -64,7 +116,8 @@ export function buildRecipe(lib, market, picks, meal, compare) {
     difficulty: lib.d,
     veg: !!lib.veg,
     allergens: lib.al ?? [],
-    est: lib.est,
+    est: lib.ing?.length ? estimateRest(lib.ing) : lib.est,
+    imgDesc: lib.img,
     mainCost,
     ingredients: [...priced, ...rest],
     steps,
