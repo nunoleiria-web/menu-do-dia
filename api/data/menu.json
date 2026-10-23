@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-10-23T21:40:10.191Z",
+ "updatedAt": "2026-10-23T22:11:59.615Z",
  "markets": [
   {
    "name": "Continente",
@@ -29,7 +29,8 @@
       "frutos-secos",
       "gluten"
      ],
-     "est": 5.5,
+     "est": 4.05,
+     "imgDesc": "Moroccan lamb tagine with prunes and almonds in a tagine pot, with couscous",
      "mainCost": 26.99,
      "ingredients": [
       {
@@ -104,7 +105,7 @@
        "total": 26.99
       }
      ],
-     "image": "/meals/lib-tagine-borrego-89a4f9da.webp",
+     "image": "/meals/lib-tagine-borrego-5fbe59b9.webp",
      "imageCredit": {
       "name": "Imagem gerada por IA",
       "url": ""
@@ -126,7 +127,8 @@
       "gluten",
       "lactose"
      ],
-     "est": 4,
+     "est": 8.2,
+     "imgDesc": "Chicken and cheese quesadillas cut in triangles with guacamole",
      "mainCost": 1.49,
      "ingredients": [
       {
@@ -209,7 +211,7 @@
        "total": 3.47
       }
      ],
-     "image": "/meals/lib-quesadillas-88f7b7e5.webp",
+     "image": "/meals/lib-quesadillas-77f896b2.webp",
      "imageCredit": {
       "name": "Imagem gerada por IA",
       "url": ""
@@ -895,7 +897,8 @@
         "frutos-secos",
         "gluten"
        ],
-       "est": 5.5,
+       "est": 4.05,
+       "imgDesc": "Moroccan lamb tagine with prunes and almonds in a tagine pot, with couscous",
        "mainCost": 26.99,
        "ingredients": [
         {
@@ -970,7 +973,7 @@
          "total": 26.99
         }
        ],
-       "image": "/meals/lib-tagine-borrego-89a4f9da.webp",
+       "image": "/meals/lib-tagine-borrego-5fbe59b9.webp",
        "imageCredit": {
         "name": "Imagem gerada por IA",
         "url": ""
@@ -992,7 +995,8 @@
         "gluten",
         "lactose"
        ],
-       "est": 4,
+       "est": 8.2,
+       "imgDesc": "Chicken and cheese quesadillas cut in triangles with guacamole",
        "mainCost": 1.49,
        "ingredients": [
         {
@@ -1075,7 +1079,7 @@
          "total": 3.47
         }
        ],
-       "image": "/meals/lib-quesadillas-88f7b7e5.webp",
+       "image": "/meals/lib-quesadillas-77f896b2.webp",
        "imageCredit": {
         "name": "Imagem gerada por IA",
         "url": ""
@@ -1103,7 +1107,8 @@
         "gluten",
         "ovos"
        ],
-       "est": 5,
+       "est": 7,
+       "imgDesc": "Slice of Greek moussaka with eggplant, meat sauce and béchamel, with Greek salad",
        "mainCost": 3.09,
        "ingredients": [
         {
@@ -1198,7 +1203,7 @@
          "total": 3.09
         }
        ],
-       "image": "/meals/lib-moussaka-7536c602.webp",
+       "image": "/meals/lib-moussaka-8995994f.webp",
        "imageCredit": {
         "name": "Imagem gerada por IA",
         "url": ""
@@ -1217,7 +1222,8 @@
        "difficulty": "Média",
        "veg": false,
        "allergens": [],
-       "est": 4.5,
+       "est": 6.15,
+       "imgDesc": "Chicken paella with saffron rice, green beans and red pepper in a wide paella pan",
        "mainCost": 2.24,
        "ingredients": [
         {
@@ -1304,7 +1310,7 @@
          "total": 5.21
         }
        ],
-       "image": "/meals/lib-paella-0e3ee665.webp",
+       "image": "/meals/lib-paella-e4228fe5.webp",
        "imageCredit": {
         "name": "Imagem gerada por IA",
         "url": ""
@@ -1330,7 +1336,8 @@
        "allergens": [
         "marisco"
        ],
-       "est": 5,
+       "est": 4.15,
+       "imgDesc": "Polvo à lagareiro, roasted octopus with olive oil, garlic and small crushed roasted potatoes on a tray",
        "mainCost": 16.19,
        "ingredients": [
         {
@@ -1385,7 +1392,7 @@
         "Dica do chef: Não junte sal ao polvo na cozedura: já tem o sal do mar."
        ],
        "imageQuery": "Polvo à Lagareiro Portuguesa",
-       "image": "/meals/lib-polvo-lagareiro-027e7026.webp",
+       "image": "/meals/lib-polvo-lagareiro-955e67f1.webp",
        "imageCredit": {
         "name": "Imagem gerada por IA",
         "url": ""
@@ -1408,7 +1415,8 @@
         "lactose",
         "ovos"
        ],
-       "est": 4,
+       "est": 3.95,
+       "imgDesc": "Southern fried chicken pieces with mashed potatoes and coleslaw",
        "mainCost": 2.99,
        "ingredients": [
         {
@@ -1499,7 +1507,7 @@
          "total": 6.95
         }
        ],
-       "image": "/meals/lib-frango-frito-cac25a64.webp",
+       "image": "/meals/lib-frango-frito-11d5d955.webp",
        "imageCredit": {
         "name": "Imagem gerada por IA",
         "url": ""
@@ -1529,7 +1537,8 @@
         "soja",
         "peixe"
        ],
-       "est": 4.5,
+       "est": 4.9,
+       "imgDesc": "Shrimp pad thai with rice noodles, egg, bean sprouts, crushed peanuts and lime",
        "mainCost": 3,
        "ingredients": [
         {
@@ -1623,7 +1632,7 @@
          "total": 3
         }
        ],
-       "image": "/meals/lib-pad-thai-7816bbd3.webp",
+       "image": "/meals/lib-pad-thai-b917ef89.webp",
        "imageCredit": {
         "name": "Imagem gerada por IA",
         "url": ""
@@ -1646,7 +1655,8 @@
         "lactose",
         "ovos"
        ],
-       "est": 4.5,
+       "est": 5.25,
+       "imgDesc": "Slice of baked meat lasagna with melted cheese and béchamel on a plate with green salad",
        "mainCost": 3.09,
        "ingredients": [
         {
@@ -1737,7 +1747,7 @@
          "total": 3.09
         }
        ],
-       "image": "/meals/lib-lasanha-558abc0a.webp",
+       "image": "/meals/lib-lasanha-55cbee1e.webp",
        "imageCredit": {
         "name": "Imagem gerada por IA",
         "url": ""
@@ -1785,7 +1795,8 @@
      "difficulty": "Fácil",
      "veg": false,
      "allergens": [],
-     "est": 4,
+     "est": 4.05,
+     "imgDesc": "Moroccan chicken tagine with olives and preserved lemon in a tagine pot, with couscous",
      "mainCost": 4.79,
      "ingredients": [
       {
@@ -1876,7 +1887,7 @@
        "total": 6.95
       }
      ],
-     "image": "/meals/lib-tagine-frango-c19e9b34.webp",
+     "image": "/meals/lib-tagine-frango-d99a89c6.webp",
      "imageCredit": {
       "name": "Imagem gerada por IA",
       "url": ""
@@ -1897,7 +1908,8 @@
      "allergens": [
       "peixe"
      ],
-     "est": 4.5,
+     "est": 5.15,
+     "imgDesc": "Brazilian fish moqueca stew in coconut milk with peppers and tomato, with white rice and cilantro",
      "mainCost": 3.99,
      "ingredients": [
       {
@@ -1984,7 +1996,7 @@
        "total": 3.99
       }
      ],
-     "image": "/meals/lib-moqueca-96d25628.webp",
+     "image": "/meals/lib-moqueca-7a4391ce.webp",
      "imageCredit": {
       "name": "Imagem gerada por IA",
       "url": ""
@@ -2315,7 +2327,8 @@
        "difficulty": "Fácil",
        "veg": false,
        "allergens": [],
-       "est": 4,
+       "est": 4.05,
+       "imgDesc": "Moroccan chicken tagine with olives and preserved lemon in a tagine pot, with couscous",
        "mainCost": 4.79,
        "ingredients": [
         {
@@ -2406,7 +2419,7 @@
          "total": 6.95
         }
        ],
-       "image": "/meals/lib-tagine-frango-c19e9b34.webp",
+       "image": "/meals/lib-tagine-frango-d99a89c6.webp",
        "imageCredit": {
         "name": "Imagem gerada por IA",
         "url": ""
@@ -2427,7 +2440,8 @@
        "allergens": [
         "peixe"
        ],
-       "est": 4.5,
+       "est": 5.15,
+       "imgDesc": "Brazilian fish moqueca stew in coconut milk with peppers and tomato, with white rice and cilantro",
        "mainCost": 3.99,
        "ingredients": [
         {
@@ -2514,7 +2528,7 @@
          "total": 3.99
         }
        ],
-       "image": "/meals/lib-moqueca-96d25628.webp",
+       "image": "/meals/lib-moqueca-7a4391ce.webp",
        "imageCredit": {
         "name": "Imagem gerada por IA",
         "url": ""
@@ -2542,7 +2556,8 @@
         "gluten",
         "ovos"
        ],
-       "est": 5,
+       "est": 7,
+       "imgDesc": "Slice of Greek moussaka with eggplant, meat sauce and béchamel, with Greek salad",
        "mainCost": 2.69,
        "ingredients": [
         {
@@ -2637,7 +2652,7 @@
          "total": 3.09
         }
        ],
-       "image": "/meals/lib-moussaka-7536c602.webp",
+       "image": "/meals/lib-moussaka-8995994f.webp",
        "imageCredit": {
         "name": "Imagem gerada por IA",
         "url": ""
@@ -2658,7 +2673,8 @@
        "allergens": [
         "gluten"
        ],
-       "est": 5.5,
+       "est": 7.55,
+       "imgDesc": "Coq au vin, chicken in red wine sauce with mushrooms and bacon, with potatoes",
        "mainCost": 4.79,
        "ingredients": [
         {
@@ -2745,7 +2761,7 @@
          "total": 6.95
         }
        ],
-       "image": "/meals/lib-coq-au-vin-77769696.webp",
+       "image": "/meals/lib-coq-au-vin-81cf210e.webp",
        "imageCredit": {
         "name": "Imagem gerada por IA",
         "url": ""
@@ -2773,7 +2789,8 @@
         "lactose",
         "ovos"
        ],
-       "est": 4.5,
+       "est": 5.25,
+       "imgDesc": "Slice of baked meat lasagna with melted cheese and béchamel on a plate with green salad",
        "mainCost": 2.69,
        "ingredients": [
         {
@@ -2864,7 +2881,7 @@
          "total": 3.09
         }
        ],
-       "image": "/meals/lib-lasanha-558abc0a.webp",
+       "image": "/meals/lib-lasanha-55cbee1e.webp",
        "imageCredit": {
         "name": "Imagem gerada por IA",
         "url": ""
@@ -2885,7 +2902,8 @@
        "allergens": [
         "marisco"
        ],
-       "est": 3.5,
+       "est": 4.85,
+       "imgDesc": "Stewed squid rings in tomato sauce with potatoes, served with white rice",
        "mainCost": 7.99,
        "ingredients": [
         {
@@ -2965,7 +2983,7 @@
          "total": 7.99
         }
        ],
-       "image": "/meals/lib-lulas-guisadas-86f49ae0.webp",
+       "image": "/meals/lib-lulas-guisadas-1c97718a.webp",
        "imageCredit": {
         "name": "Imagem gerada por IA",
         "url": ""
@@ -2993,7 +3011,8 @@
         "ovos",
         "gluten"
        ],
-       "est": 4,
+       "est": 3.8,
+       "imgDesc": "Sweet and sour crispy chicken with peppers and pineapple, with fried rice",
        "mainCost": 2.79,
        "ingredients": [
         {
@@ -3084,7 +3103,7 @@
          "total": 4.05
         }
        ],
-       "image": "/meals/lib-frango-agridoce-ca02f159.webp",
+       "image": "/meals/lib-frango-agridoce-59a0d6d2.webp",
        "imageCredit": {
         "name": "Imagem gerada por IA",
         "url": ""
@@ -3107,7 +3126,8 @@
         "soja",
         "gluten"
        ],
-       "est": 3.8,
+       "est": 2.8,
+       "imgDesc": "Teriyaki glazed salmon fillet with sushi rice, broccoli and sesame seeds",
        "mainCost": 4.79,
        "ingredients": [
         {
@@ -3193,7 +3213,7 @@
          "total": 4.79
         }
        ],
-       "image": "/meals/lib-teriyaki-salmao-18cd816f.webp",
+       "image": "/meals/lib-teriyaki-salmao-c734324c.webp",
        "imageCredit": {
         "name": "Imagem gerada por IA",
         "url": ""
@@ -3246,7 +3266,8 @@
       "lactose",
       "ovos"
      ],
-     "est": 4,
+     "est": 3.95,
+     "imgDesc": "Southern fried chicken pieces with mashed potatoes and coleslaw",
      "mainCost": 6.95,
      "ingredients": [
       {
@@ -3336,7 +3357,7 @@
        "total": 6.95
       }
      ],
-     "image": "/meals/lib-frango-frito-cac25a64.webp",
+     "image": "/meals/lib-frango-frito-11d5d955.webp",
      "imageCredit": {
       "name": "Imagem gerada por IA",
       "url": ""
@@ -3357,7 +3378,8 @@
      "allergens": [
       "marisco"
      ],
-     "est": 4,
+     "est": 7.55,
+     "imgDesc": "Carne de porco à alentejana, pork cubes with clams, fried potato cubes and coriander",
      "mainCost": 2.09,
      "ingredients": [
       {
@@ -3446,7 +3468,7 @@
        "total": 3.14
       }
      ],
-     "image": "/meals/lib-porco-alentejana-0d6546d2.webp",
+     "image": "/meals/lib-porco-alentejana-38dc0fd5.webp",
      "imageCredit": {
       "name": "Imagem gerada por IA",
       "url": ""
@@ -3531,7 +3553,8 @@
         "lactose",
         "ovos"
        ],
-       "est": 4,
+       "est": 3.95,
+       "imgDesc": "Southern fried chicken pieces with mashed potatoes and coleslaw",
        "mainCost": 6.95,
        "ingredients": [
         {
@@ -3621,7 +3644,7 @@
          "total": 6.95
         }
        ],
-       "image": "/meals/lib-frango-frito-cac25a64.webp",
+       "image": "/meals/lib-frango-frito-11d5d955.webp",
        "imageCredit": {
         "name": "Imagem gerada por IA",
         "url": ""
@@ -3642,7 +3665,8 @@
        "allergens": [
         "marisco"
        ],
-       "est": 4,
+       "est": 7.55,
+       "imgDesc": "Carne de porco à alentejana, pork cubes with clams, fried potato cubes and coriander",
        "mainCost": 2.09,
        "ingredients": [
         {
@@ -3731,7 +3755,7 @@
          "total": 3.14
         }
        ],
-       "image": "/meals/lib-porco-alentejana-0d6546d2.webp",
+       "image": "/meals/lib-porco-alentejana-38dc0fd5.webp",
        "imageCredit": {
         "name": "Imagem gerada por IA",
         "url": ""
@@ -3758,7 +3782,8 @@
         "lactose",
         "gluten"
        ],
-       "est": 4,
+       "est": 5,
+       "imgDesc": "Chicken souvlaki skewers with tzatziki and warm pita bread, tomato and red onion",
        "mainCost": 4.05,
        "ingredients": [
         {
@@ -3840,7 +3865,7 @@
          "total": 4.05
         }
        ],
-       "image": "/meals/lib-souvlaki-d6313ee0.webp",
+       "image": "/meals/lib-souvlaki-f994b561.webp",
        "imageCredit": {
         "name": "Imagem gerada por IA",
         "url": ""
@@ -3861,7 +3886,8 @@
        "allergens": [
         "gluten"
        ],
-       "est": 4,
+       "est": 8,
+       "imgDesc": "Pulled pork carnitas tacos on corn tortillas with fresh salsa, red onion, cilantro, lime and avocado",
        "mainCost": 2.39,
        "ingredients": [
         {
@@ -3954,7 +3980,7 @@
          "total": 3.59
         }
        ],
-       "image": "/meals/lib-tacos-porco-c77a9159.webp",
+       "image": "/meals/lib-tacos-porco-e717df02.webp",
        "imageCredit": {
         "name": "Imagem gerada por IA",
         "url": ""
@@ -3980,7 +4006,8 @@
        "allergens": [
         "lactose"
        ],
-       "est": 3.8,
+       "est": 4,
+       "imgDesc": "Chicken shish kebab skewers with rice, yogurt sauce and tomato cucumber salad",
        "mainCost": 4.05,
        "ingredients": [
         {
@@ -4066,7 +4093,7 @@
          "total": 4.05
         }
        ],
-       "image": "/meals/lib-kebab-frango-14fdd347.webp",
+       "image": "/meals/lib-kebab-frango-296985c3.webp",
        "imageCredit": {
         "name": "Imagem gerada por IA",
         "url": ""
@@ -4087,7 +4114,8 @@
        "allergens": [
         "lactose"
        ],
-       "est": 4,
+       "est": 6.1,
+       "imgDesc": "Creamy mushroom risotto with parmesan and parsley in a shallow bowl",
        "mainCost": 2.58,
        "ingredients": [
         {
@@ -4163,7 +4191,7 @@
          "total": 2.58
         }
        ],
-       "image": "/meals/lib-risotto-cogumelos-94ea2320.webp",
+       "image": "/meals/lib-risotto-cogumelos-5442d957.webp",
        "imageCredit": {
         "name": "Imagem gerada por IA",
         "url": ""
@@ -4211,7 +4239,8 @@
       "lactose",
       "ovos"
      ],
-     "est": 4.5,
+     "est": 5.25,
+     "imgDesc": "Slice of baked meat lasagna with melted cheese and béchamel on a plate with green salad",
      "mainCost": 2.99,
      "ingredients": [
       {
@@ -4301,7 +4330,7 @@
        "total": 3.09
       }
      ],
-     "image": "/meals/lib-lasanha-558abc0a.webp",
+     "image": "/meals/lib-lasanha-55cbee1e.webp",
      "imageCredit": {
       "name": "Imagem gerada por IA",
       "url": ""
@@ -4322,7 +4351,8 @@
      "allergens": [
       "soja"
      ],
-     "est": 4,
+     "est": 2.85,
+     "imgDesc": "Beef and broccoli stir-fry in a glossy sauce with steamed rice",
      "mainCost": 2.39,
      "ingredients": [
       {
@@ -4397,7 +4427,7 @@
        "total": 8.99
       }
      ],
-     "image": "/meals/lib-vaca-brocolos-7bb7dc27.webp",
+     "image": "/meals/lib-vaca-brocolos-86ba6efe.webp",
      "imageCredit": {
       "name": "Imagem gerada por IA",
       "url": ""
@@ -4818,7 +4848,8 @@
         "lactose",
         "ovos"
        ],
-       "est": 4.5,
+       "est": 5.25,
+       "imgDesc": "Slice of baked meat lasagna with melted cheese and béchamel on a plate with green salad",
        "mainCost": 2.99,
        "ingredients": [
         {
@@ -4908,7 +4939,7 @@
          "total": 3.09
         }
        ],
-       "image": "/meals/lib-lasanha-558abc0a.webp",
+       "image": "/meals/lib-lasanha-55cbee1e.webp",
        "imageCredit": {
         "name": "Imagem gerada por IA",
         "url": ""
@@ -4929,7 +4960,8 @@
        "allergens": [
         "soja"
        ],
-       "est": 4,
+       "est": 2.85,
+       "imgDesc": "Beef and broccoli stir-fry in a glossy sauce with steamed rice",
        "mainCost": 2.39,
        "ingredients": [
         {
@@ -5004,7 +5036,7 @@
          "total": 8.99
         }
        ],
-       "image": "/meals/lib-vaca-brocolos-7bb7dc27.webp",
+       "image": "/meals/lib-vaca-brocolos-86ba6efe.webp",
        "imageCredit": {
         "name": "Imagem gerada por IA",
         "url": ""
@@ -5032,7 +5064,8 @@
         "gluten",
         "ovos"
        ],
-       "est": 5,
+       "est": 7,
+       "imgDesc": "Slice of Greek moussaka with eggplant, meat sauce and béchamel, with Greek salad",
        "mainCost": 2.99,
        "ingredients": [
         {
@@ -5126,7 +5159,7 @@
          "total": 3.09
         }
        ],
-       "image": "/meals/lib-moussaka-7536c602.webp",
+       "image": "/meals/lib-moussaka-8995994f.webp",
        "imageCredit": {
         "name": "Imagem gerada por IA",
         "url": ""
@@ -5145,7 +5178,8 @@
        "difficulty": "Fácil",
        "veg": false,
        "allergens": [],
-       "est": 3.8,
+       "est": 3.35,
+       "imgDesc": "Beef stew with carrots and potatoes in tomato and red wine sauce in a pot",
        "mainCost": 4.99,
        "ingredients": [
         {
@@ -5220,7 +5254,7 @@
          "total": 14.99
         }
        ],
-       "image": "/meals/lib-estufado-novilho-37adccca.webp",
+       "image": "/meals/lib-estufado-novilho-0b437e5a.webp",
        "imageCredit": {
         "name": "Imagem gerada por IA",
         "url": ""
@@ -5246,7 +5280,8 @@
        "allergens": [
         "peixe"
        ],
-       "est": 4.5,
+       "est": 3.65,
+       "imgDesc": "Vietnamese bò kho beef stew with carrots and star anise in a bowl, with baguette",
        "mainCost": 4.99,
        "ingredients": [
         {
@@ -5329,7 +5364,7 @@
          "total": 14.99
         }
        ],
-       "image": "/meals/lib-bo-kho-cd5d72e2.webp",
+       "image": "/meals/lib-bo-kho-e4f2dd5e.webp",
        "imageCredit": {
         "name": "Imagem gerada por IA",
         "url": ""
@@ -5351,7 +5386,8 @@
         "soja",
         "frutos-secos"
        ],
-       "est": 3.5,
+       "est": 3.2,
+       "imgDesc": "Korean bulgogi beef with steamed rice, cucumber pickles and lettuce leaves",
        "mainCost": 2.39,
        "ingredients": [
         {
@@ -5448,7 +5484,7 @@
          "total": 3.09
         }
        ],
-       "image": "/meals/lib-bulgogi-a608a482.webp",
+       "image": "/meals/lib-bulgogi-daf2e1bc.webp",
        "imageCredit": {
         "name": "Imagem gerada por IA",
         "url": ""
@@ -5495,7 +5531,8 @@
       "gluten",
       "lactose"
      ],
-     "est": 3,
+     "est": 2.85,
+     "imgDesc": "Baked macaroni and cheese in a casserole dish with golden cheesy crust and a green salad",
      "mainCost": 1.08,
      "ingredients": [
       {
@@ -5574,7 +5611,7 @@
        "total": 5.59
       }
      ],
-     "image": "/meals/lib-mac-cheese-091a9e14.webp",
+     "image": "/meals/lib-mac-cheese-6cac0e0b.webp",
      "imageCredit": {
       "name": "Imagem gerada por IA",
       "url": ""
@@ -5596,7 +5633,8 @@
       "peixe",
       "marisco"
      ],
-     "est": 4,
+     "est": 5.8,
+     "imgDesc": "Portuguese fish stew caldeirada with fish steaks, potatoes, tomato and peppers in a pot, toasted bread",
      "mainCost": 4.99,
      "ingredients": [
       {
@@ -5682,7 +5720,7 @@
        "total": 4.99
       }
      ],
-     "image": "/meals/lib-caldeirada-f7b838ca.webp",
+     "image": "/meals/lib-caldeirada-2cae390f.webp",
      "imageCredit": {
       "name": "Imagem gerada por IA",
       "url": ""
@@ -5749,7 +5787,8 @@
    ],
    "check": {
     "date": "2026-10-23",
-    "result": "sem-novo"
+    "result": "sem-novo",
+    "note": "poucos produtos (7); candidatos: antevisao-folheto-intermarche-frescos-promocoes-de-22-a-28-outubro-318475"
    },
    "plan": [
     {
@@ -5771,7 +5810,8 @@
         "gluten",
         "lactose"
        ],
-       "est": 3,
+       "est": 2.85,
+       "imgDesc": "Baked macaroni and cheese in a casserole dish with golden cheesy crust and a green salad",
        "mainCost": 1.08,
        "ingredients": [
         {
@@ -5850,7 +5890,7 @@
          "total": 5.59
         }
        ],
-       "image": "/meals/lib-mac-cheese-091a9e14.webp",
+       "image": "/meals/lib-mac-cheese-6cac0e0b.webp",
        "imageCredit": {
         "name": "Imagem gerada por IA",
         "url": ""
@@ -5872,7 +5912,8 @@
         "peixe",
         "marisco"
        ],
-       "est": 4,
+       "est": 5.8,
+       "imgDesc": "Portuguese fish stew caldeirada with fish steaks, potatoes, tomato and peppers in a pot, toasted bread",
        "mainCost": 4.99,
        "ingredients": [
         {
@@ -5958,7 +5999,7 @@
          "total": 4.99
         }
        ],
-       "image": "/meals/lib-caldeirada-f7b838ca.webp",
+       "image": "/meals/lib-caldeirada-2cae390f.webp",
        "imageCredit": {
         "name": "Imagem gerada por IA",
         "url": ""
@@ -5984,7 +6025,8 @@
        "allergens": [
         "peixe"
        ],
-       "est": 4.5,
+       "est": 5.15,
+       "imgDesc": "Brazilian fish moqueca stew in coconut milk with peppers and tomato, with white rice and cilantro",
        "mainCost": 3.99,
        "ingredients": [
         {
@@ -6071,7 +6113,7 @@
          "total": 3.99
         }
        ],
-       "image": "/meals/lib-moqueca-96d25628.webp",
+       "image": "/meals/lib-moqueca-7a4391ce.webp",
        "imageCredit": {
         "name": "Imagem gerada por IA",
         "url": ""
@@ -6094,7 +6136,8 @@
         "gluten",
         "ovos"
        ],
-       "est": 3.5,
+       "est": 4.9,
+       "imgDesc": "Fried calamari rings a la romana with lemon wedges, garlic mayonnaise and french fries",
        "mainCost": 4.19,
        "ingredients": [
         {
@@ -6166,7 +6209,7 @@
          "total": 6.99
         }
        ],
-       "image": "/meals/lib-calamares-a54a472b.webp",
+       "image": "/meals/lib-calamares-cafc751d.webp",
        "imageCredit": {
         "name": "Imagem gerada por IA",
         "url": ""
@@ -6193,7 +6236,8 @@
         "peixe",
         "gluten"
        ],
-       "est": 4.5,
+       "est": 3.45,
+       "imgDesc": "Sicilian swordfish steak in tomato, olive and caper sauce with spaghetti",
        "mainCost": 3.49,
        "ingredients": [
         {
@@ -6272,7 +6316,7 @@
          "total": 5.94
         }
        ],
-       "image": "/meals/lib-espadarte-siciliana-be67e422.webp",
+       "image": "/meals/lib-espadarte-siciliana-8eed7a24.webp",
        "imageCredit": {
         "name": "Imagem gerada por IA",
         "url": ""
@@ -6293,7 +6337,8 @@
        "allergens": [
         "marisco"
        ],
-       "est": 3.5,
+       "est": 4.85,
+       "imgDesc": "Stewed squid rings in tomato sauce with potatoes, served with white rice",
        "mainCost": 4.79,
        "ingredients": [
         {
@@ -6373,7 +6418,7 @@
          "total": 7.99
         }
        ],
-       "image": "/meals/lib-lulas-guisadas-86f49ae0.webp",
+       "image": "/meals/lib-lulas-guisadas-1c97718a.webp",
        "imageCredit": {
         "name": "Imagem gerada por IA",
         "url": ""
@@ -6401,7 +6446,8 @@
         "soja",
         "gluten"
        ],
-       "est": 3.8,
+       "est": 2.8,
+       "imgDesc": "Teriyaki glazed salmon fillet with sushi rice, broccoli and sesame seeds",
        "mainCost": 2.99,
        "ingredients": [
         {
@@ -6487,7 +6533,7 @@
          "total": 4.79
         }
        ],
-       "image": "/meals/lib-teriyaki-salmao-18cd816f.webp",
+       "image": "/meals/lib-teriyaki-salmao-c734324c.webp",
        "imageCredit": {
         "name": "Imagem gerada por IA",
         "url": ""
@@ -6509,7 +6555,8 @@
         "gluten",
         "peixe"
        ],
-       "est": 3,
+       "est": 4.75,
+       "imgDesc": "Spaghetti alla puttanesca with tomato sauce, black olives, capers and parsley",
        "mainCost": 0.85,
        "ingredients": [
         {
@@ -6569,7 +6616,7 @@
         "Dica do chef: As anchovas dissolvem-se e dão profundidade sem sabor a peixe."
        ],
        "imageQuery": "Spaghetti alla Puttanesca Italiana",
-       "image": "/meals/lib-puttanesca-9242cf61.webp",
+       "image": "/meals/lib-puttanesca-6a956011.webp",
        "imageCredit": {
         "name": "Imagem gerada por IA",
         "url": ""
@@ -6597,7 +6644,8 @@
         "soja",
         "gluten"
        ],
-       "est": 3.8,
+       "est": 2.8,
+       "imgDesc": "Teriyaki glazed salmon fillet with sushi rice, broccoli and sesame seeds",
        "mainCost": 2.99,
        "ingredients": [
         {
@@ -6683,7 +6731,7 @@
          "total": 4.79
         }
        ],
-       "image": "/meals/lib-teriyaki-salmao-18cd816f.webp",
+       "image": "/meals/lib-teriyaki-salmao-c734324c.webp",
        "imageCredit": {
         "name": "Imagem gerada por IA",
         "url": ""
@@ -6705,7 +6753,8 @@
         "gluten",
         "lactose"
        ],
-       "est": 3,
+       "est": 2.85,
+       "imgDesc": "Baked macaroni and cheese in a casserole dish with golden cheesy crust and a green salad",
        "mainCost": 1.08,
        "ingredients": [
         {
@@ -6784,7 +6833,7 @@
          "total": 5.59
         }
        ],
-       "image": "/meals/lib-mac-cheese-091a9e14.webp",
+       "image": "/meals/lib-mac-cheese-6cac0e0b.webp",
        "imageCredit": {
         "name": "Imagem gerada por IA",
         "url": ""
@@ -6812,7 +6861,8 @@
         "gluten",
         "ovos"
        ],
-       "est": 3.5,
+       "est": 4.9,
+       "imgDesc": "Fried calamari rings a la romana with lemon wedges, garlic mayonnaise and french fries",
        "mainCost": 4.19,
        "ingredients": [
         {
@@ -6884,7 +6934,7 @@
          "total": 6.99
         }
        ],
-       "image": "/meals/lib-calamares-a54a472b.webp",
+       "image": "/meals/lib-calamares-cafc751d.webp",
        "imageCredit": {
         "name": "Imagem gerada por IA",
         "url": ""
@@ -6905,7 +6955,8 @@
        "allergens": [
         "peixe"
        ],
-       "est": 4.5,
+       "est": 5.15,
+       "imgDesc": "Brazilian fish moqueca stew in coconut milk with peppers and tomato, with white rice and cilantro",
        "mainCost": 3.99,
        "ingredients": [
         {
@@ -6992,7 +7043,7 @@
          "total": 3.99
         }
        ],
-       "image": "/meals/lib-moqueca-96d25628.webp",
+       "image": "/meals/lib-moqueca-7a4391ce.webp",
        "imageCredit": {
         "name": "Imagem gerada por IA",
         "url": ""
@@ -7014,40 +7065,36 @@
   }
  ],
  "images": {
-  "tagine-borrego": "/meals/lib-tagine-borrego-89a4f9da.webp",
-  "quesadillas": "/meals/lib-quesadillas-88f7b7e5.webp",
-  "couve-flor-curry": "/meals/lib-couve-flor-curry-c7b8f7d5.webp",
-  "moqueca": "/meals/lib-moqueca-96d25628.webp",
-  "frango-frito": "/meals/lib-frango-frito-cac25a64.webp",
-  "porco-alentejana": "/meals/lib-porco-alentejana-0d6546d2.webp",
-  "lasanha": "/meals/lib-lasanha-558abc0a.webp",
-  "vaca-brocolos": "/meals/lib-vaca-brocolos-7bb7dc27.webp",
-  "mac-cheese": "/meals/lib-mac-cheese-091a9e14.webp",
-  "caldeirada": "/meals/lib-caldeirada-f7b838ca.webp",
-  "bo-kho": "/meals/lib-bo-kho-cd5d72e2.webp",
-  "moussaka": "/meals/lib-moussaka-7536c602.webp",
-  "paella": "/meals/lib-paella-0e3ee665.webp",
-  "polvo-lagareiro": "/meals/lib-polvo-lagareiro-027e7026.webp",
-  "pad-thai": "/meals/lib-pad-thai-7816bbd3.webp",
-  "dourada-forno": "/meals/lib-dourada-forno-f1af817e.webp",
-  "bulgogi": "/meals/lib-bulgogi-a608a482.webp",
-  "katsu-porco": "/meals/lib-katsu-porco-47eacb11.webp",
-  "tacos-porco": "/meals/lib-tacos-porco-c77a9159.webp",
-  "gyros-porco": "/meals/lib-gyros-porco-ac81f42d.webp",
-  "souvlaki": "/meals/lib-souvlaki-d6313ee0.webp",
-  "kebab-frango": "/meals/lib-kebab-frango-14fdd347.webp",
-  "risotto-cogumelos": "/meals/lib-risotto-cogumelos-94ea2320.webp",
-  "estufado-novilho": "/meals/lib-estufado-novilho-37adccca.webp",
-  "calamares": "/meals/lib-calamares-a54a472b.webp",
-  "espadarte-siciliana": "/meals/lib-espadarte-siciliana-be67e422.webp",
-  "lulas-guisadas": "/meals/lib-lulas-guisadas-86f49ae0.webp",
-  "teriyaki-salmao": "/meals/lib-teriyaki-salmao-18cd816f.webp",
-  "tagine-frango": "/meals/lib-tagine-frango-c19e9b34.webp",
-  "frango-churrasco": "/meals/lib-frango-churrasco-f1a78fbd.webp",
-  "bacalhau-gomes-sa": "/meals/lib-bacalhau-gomes-sa-e5425673.webp",
-  "coq-au-vin": "/meals/lib-coq-au-vin-77769696.webp",
-  "frango-agridoce": "/meals/lib-frango-agridoce-ca02f159.webp",
-  "puttanesca": "/meals/lib-puttanesca-9242cf61.webp"
+  "tagine-borrego": "/meals/lib-tagine-borrego-5fbe59b9.webp",
+  "quesadillas": "/meals/lib-quesadillas-77f896b2.webp",
+  "tagine-frango": "/meals/lib-tagine-frango-d99a89c6.webp",
+  "moqueca": "/meals/lib-moqueca-7a4391ce.webp",
+  "frango-frito": "/meals/lib-frango-frito-11d5d955.webp",
+  "porco-alentejana": "/meals/lib-porco-alentejana-38dc0fd5.webp",
+  "lasanha": "/meals/lib-lasanha-55cbee1e.webp",
+  "vaca-brocolos": "/meals/lib-vaca-brocolos-86ba6efe.webp",
+  "mac-cheese": "/meals/lib-mac-cheese-6cac0e0b.webp",
+  "caldeirada": "/meals/lib-caldeirada-2cae390f.webp",
+  "frango-churrasco": "/meals/lib-frango-churrasco-f65e0e58.webp",
+  "teriyaki-salmao": "/meals/lib-teriyaki-salmao-c734324c.webp",
+  "espadarte-siciliana": "/meals/lib-espadarte-siciliana-8eed7a24.webp",
+  "bacalhau-gomes-sa": "/meals/lib-bacalhau-gomes-sa-e3987517.webp",
+  "moussaka": "/meals/lib-moussaka-8995994f.webp",
+  "paella": "/meals/lib-paella-e4228fe5.webp",
+  "polvo-lagareiro": "/meals/lib-polvo-lagareiro-955e67f1.webp",
+  "pad-thai": "/meals/lib-pad-thai-b917ef89.webp",
+  "coq-au-vin": "/meals/lib-coq-au-vin-81cf210e.webp",
+  "lulas-guisadas": "/meals/lib-lulas-guisadas-1c97718a.webp",
+  "frango-agridoce": "/meals/lib-frango-agridoce-59a0d6d2.webp",
+  "souvlaki": "/meals/lib-souvlaki-f994b561.webp",
+  "tacos-porco": "/meals/lib-tacos-porco-e717df02.webp",
+  "kebab-frango": "/meals/lib-kebab-frango-296985c3.webp",
+  "risotto-cogumelos": "/meals/lib-risotto-cogumelos-5442d957.webp",
+  "estufado-novilho": "/meals/lib-estufado-novilho-0b437e5a.webp",
+  "bo-kho": "/meals/lib-bo-kho-e4f2dd5e.webp",
+  "bulgogi": "/meals/lib-bulgogi-daf2e1bc.webp",
+  "calamares": "/meals/lib-calamares-cafc751d.webp",
+  "puttanesca": "/meals/lib-puttanesca-6a956011.webp"
  },
  "compare": [
   {
@@ -7092,7 +7139,8 @@
     "difficulty": "Fácil",
     "veg": false,
     "allergens": [],
-    "est": 3.5,
+    "est": 5.6,
+    "imgDesc": "Portuguese grilled piri-piri chicken with french fries and green salad",
     "mainCost": 3.98,
     "ingredients": [
      {
@@ -7175,7 +7223,7 @@
       "total": 9.26
      }
     ],
-    "image": "/meals/lib-frango-churrasco-f1a78fbd.webp",
+    "image": "/meals/lib-frango-churrasco-f65e0e58.webp",
     "imageCredit": {
      "name": "Imagem gerada por IA",
      "url": ""
@@ -7235,7 +7283,8 @@
      "soja",
      "gluten"
     ],
-    "est": 3.8,
+    "est": 2.8,
+    "imgDesc": "Teriyaki glazed salmon fillet with sushi rice, broccoli and sesame seeds",
     "mainCost": 1.29,
     "ingredients": [
      {
@@ -7320,7 +7369,7 @@
       "total": 4.79
      }
     ],
-    "image": "/meals/lib-teriyaki-salmao-18cd816f.webp",
+    "image": "/meals/lib-teriyaki-salmao-c734324c.webp",
     "imageCredit": {
      "name": "Imagem gerada por IA",
      "url": ""
@@ -7372,7 +7421,8 @@
      "peixe",
      "gluten"
     ],
-    "est": 4.5,
+    "est": 3.45,
+    "imgDesc": "Sicilian swordfish steak in tomato, olive and caper sauce with spaghetti",
     "mainCost": 1.29,
     "ingredients": [
      {
@@ -7450,7 +7500,7 @@
       "total": 5.94
      }
     ],
-    "image": "/meals/lib-espadarte-siciliana-be67e422.webp",
+    "image": "/meals/lib-espadarte-siciliana-8eed7a24.webp",
     "imageCredit": {
      "name": "Imagem gerada por IA",
      "url": ""
@@ -7495,7 +7545,8 @@
      "peixe",
      "ovos"
     ],
-    "est": 3.8,
+    "est": 5.1,
+    "imgDesc": "Bacalhau à Gomes de Sá, baked salt cod with sliced potatoes, onions, boiled egg and black olives in a ceramic dish",
     "mainCost": 3.29,
     "ingredients": [
      {
@@ -7571,7 +7622,7 @@
       "total": 11.39
      }
     ],
-    "image": "/meals/lib-bacalhau-gomes-sa-e5425673.webp",
+    "image": "/meals/lib-bacalhau-gomes-sa-e3987517.webp",
     "imageCredit": {
      "name": "Imagem gerada por IA",
      "url": ""
