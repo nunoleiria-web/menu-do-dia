@@ -305,7 +305,7 @@ const store={get(k,d){try{const v=localStorage.getItem(k);return v==null?d:JSON.
 const today=new Date().toLocaleDateString("en-CA",{timeZone:"Europe/Lisbon"});
 const money=n=>n.toFixed(2).replace(".",",")+" €";
 const asset=p=>p?String(p).replace(/^\//,""):p;
-function tagFull(n,cls="",unit="€/pessoa"){const [i,d]=(Math.round(n*10)/10).toFixed(2).split(".");return `<span class="tag ${cls}"><b>~${i}</b><sup>${d}</sup><em>${esc(unit)}</em></span>`}
+function tagFull(n,cls="",unit="€/pessoa"){const ap=unit==="€/pessoa",[i,d]=(ap?Math.round(n*10)/10:n).toFixed(2).split(".");return `<span class="tag ${cls}"><b>${ap?"~":""}${i}</b><sup>${d}</sup><em>${esc(unit)}</em></span>`}
 const dmy=d=>d.slice(8)+"/"+d.slice(5,7);
 const daysTo=d=>Math.round((new Date(d+"T12:00:00")-new Date(today+"T12:00:00"))/864e5);
 
