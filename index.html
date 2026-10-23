@@ -316,8 +316,8 @@ function renderHero(){
   $("#hero").innerHTML=`
   <div>
     <div class="date">${esc(d.charAt(0).toUpperCase()+d.slice(1))}</div>
-    <h1>O jantar de hoje, ao preço do folheto.</h1>
-    <p class="lead">${list.length} pratos de ${data.markets.length} supermercados, cada um com o produto principal em promoção e o custo por pessoa.</p>
+    <h1>Almoço e jantar, ao preço do folheto.</h1>
+    <p class="lead">${list.length} refeições completas de cozinhas do mundo, uma para o almoço e outra para o jantar em cada um dos ${data.markets.length} supermercados, com o produto principal ao preço do folheto.</p>
   </div>
   <div class="hero-right">
     ${best?`<button class="best" data-open="${esc(best.m.name)}|${best.m.recipes.indexOf(best.r)}" aria-label="Abrir ${esc(best.r.name)}">
@@ -346,7 +346,7 @@ function cardHTML({m,r,c}){
   return `<button class="card" data-open="${esc(m.name)}|${m.recipes.indexOf(r)}">
     <span class="ph">${imgHTML(r,r.name)}<span class="store"><i class="dot" style="--c:${COLORS[m.name]||"#999"}"></i>${esc(m.name)}</span><span class="tagpos">${tagFull(c.per)}</span></span>
     <span class="cb"><h3>${esc(r.name)}</h3><p>${esc(r.description)}</p>
-      <span class="facts"><span>${esc(r.time)}</span>${r.difficulty?`<span>${esc(r.difficulty)}</span>`:""}<span>${baseServ(r)} pessoas · ${money(c.total)}</span></span>
+      <span class="facts">${r.meal?`<span style="color:var(--cobalt)">${esc(r.meal)}${r.cuisine?" · "+esc(r.cuisine):""}</span>`:""}<span>${esc(r.time)}</span>${r.difficulty?`<span>${esc(r.difficulty)}</span>`:""}<span>${baseServ(r)} pessoas · ${money(c.total)}</span></span>
       <span class="main-prod">Preço do folheto: <b>${esc(main)}</b></span></span></button>`;
 }
 
@@ -389,8 +389,8 @@ function drawSheet(){
   <div class="sheet-img">${imgHTML(r,r.name,true)}${r.image?`<small>Ilustração gerada por IA</small>`:""}</div>
   <div class="sheet-body">
     <div style="display:grid;gap:12px"><span class="pill ${status(m).k}"><i class="dot" style="--c:${COLORS[m.name]||"#999"};margin:0"></i>${esc(m.name)} · ${esc(status(m).t)}</span>
-      <h2>${esc(r.name)}</h2><p class="lead">${esc(r.description)}</p>
-      <div class="kpis"><span class="kpi">Tempo<b>${esc(r.time)}</b></span>${r.difficulty?`<span class="kpi">Dificuldade<b>${esc(r.difficulty)}</b></span>`:""}<span class="kpi">Produto principal<b>${money(c.total)}</b></span>${tagFull(c.per)}</div></div>
+      <h2>${esc(r.name)}</h2>${r.original&&r.original!==r.name?`<div style="color:var(--ink-3);font-weight:600;margin-top:-4px">${esc(r.original)}</div>`:""}<p class="lead">${esc(r.description)}</p>
+      <div class="kpis">${r.meal?`<span class="kpi">Refeição<b>${esc(r.meal)}${r.cuisine?" · "+esc(r.cuisine):""}</b></span>`:""}<span class="kpi">Tempo<b>${esc(r.time)}</b></span>${r.difficulty?`<span class="kpi">Dificuldade<b>${esc(r.difficulty)}</b></span>`:""}<span class="kpi">Produto principal<b>${money(c.total)}</b></span>${tagFull(c.per)}</div></div>
     <div class="cols">
       <section class="ing"><h3>Ingredientes</h3>
         <div class="stepper" role="group" aria-label="Doses"><button data-serv="-1" aria-label="Menos uma pessoa">−</button><span>${servings} pessoas</span><button data-serv="1" aria-label="Mais uma pessoa">+</button></div>

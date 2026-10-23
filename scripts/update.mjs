@@ -163,6 +163,8 @@ async function readFlyer(m, pick) {
   return { promos, source: { title: "Blog 200 — " + title, url: pick.url } };
 }
 
+const CUISINES = ["Portuguesa","Italiana","Francesa","Espanhola","Grega","Marroquina","Mexicana","Brasileira","Indiana","Tailandesa","Chinesa","Japonesa","Coreana","Turca","Libanesa","Americana","Cabo-verdiana","Vietnamita"];
+const pickCuisines = (m) => { const h = createHash("sha1").update(today + m.name).digest(); const a = h[0] % CUISINES.length; let b = h[1] % CUISINES.length; if (b === a) b = (b + 5) % CUISINES.length; return [CUISINES[a], CUISINES[b]]; };
 const DISHES = "Bacalhau à Brás; Bacalhau à Gomes de Sá; Bacalhau com Natas; Arroz de Pato; Polvo à Lagareiro; Caldo Verde; Sopa do Pedreiro; Feijoada; Cozido à Portuguesa; Carne de Porco à Alentejana; Bifanas; Sardinha Assada; Carapau Frito com Batatas; Espetada; Frango de Caril; Frango Assado com Batatas; Arroz de Marisco; Massada de Peixe; Açorda de Marisco; Salada de Polvo; Choco Frito; Lulas à Algarvia; Trinchado; Rojões; Migas; Almôndegas; Estufado de Novilho; Jardineira; Peito de Frango Grelhado; Costeletas de Novilho Grelhadas; Caldeirada; Febras Grelhadas com Arroz; Sopa de Peixe; Grão Estufado com Couve";
 
 const STAR = /tintureira|espadarte|cherne|garoupa|solha|linguado|esparguete|espaguete|hamburguer|picanha|rosbife|bacalhau|polvo|lula|choco|sepia|camarao|gamba|mexilh|ameijoa|amêijoa|salmao|dourada|robalo|pescada|carapau|sardinha|cavala|atum|peixe|filete|tamboril|raia|lingueirao|frango|peru|pato|coelho|porco|suino|vitela|novilho|vaca|boi|borrego|cordeiro|cabrito|entrecosto|costeleta|febra|lombo|bife|perna|pernil|alcatra|acem|carne|salsicha|chourico|linguica|farinheira|morcela|presunto|bacon|toucinho|grao|feijao|lentilha|queijo|cogumelo|arroz|massa/i;
@@ -179,20 +181,21 @@ async function makeRecipes(m) {
   const fmt = (p) => p.id + ": " + p.name + " " + p.price + "€/" + p.per;
   const hist = (m.history || []).join(", ") || "nenhuma";
   const byId = Object.fromEntries(m.promos.map((p) => [p.id, p]));
+  const cz = pickCuisines(m);
   let feedback = "", lastReject = "";
   for (let attempt = 0; attempt < 3; attempt++) {
     const j = await ask(
-      `És um chef português com estrela, autor de livros de cozinha tradicional. Cria 2 receitas para clientes do ${m.name}.\n\n` +
+      `És um chef internacional premiado, autor de livros das grandes cozinhas do mundo. Cria 2 refeições COMPLETAS para clientes do ${m.name}: a receita 1 é um ALMOÇO e a receita 2 é um JANTAR.\n\n` +
       `PRODUTOS-ESTRELA DISPONÍVEIS NO FOLHETO (único sítio onde pode haver preço):\n${stars.map(fmt).join("; ")}\n\n` +
       `REGRAS:\n` +
-      `1) Cada receita nasce de 1 (no máximo 2) produto(s) da lista acima, que são a razão de ser do prato e têm de aparecer no nome (ex.: "Bacalhau com Natas" -> bacalhau). Prefere UMA só estrela; usa duas apenas se forem uma combinação clássica e sensata (ex.: bacalhau e grão, frango e cogumelos) — nunca junta peixe com queijo ou combinações estranhas. Só esses ingredientes levam "promo" (id exato) e "amount" para 4 pessoas (kg se per=kg; unidades se per=un).\n` +
-      `2) O prato é uma receita REAL e reconhecível da cozinha portuguesa (ou internacional clássica), com nome tradicional — sugestões: ${DISHES}. Nada de misturas inventadas.\n` +
-      `3) TODOS os restantes ingredientes (batata, cebola, alho, azeite, ervas, molhos, acompanhamentos, temperos) levam "promo": null e ficam SEM preço. Entre 7 e 12 ingredientes no total, com doses realistas para 4 pessoas (ex.: "800 g", "2 dentes").\n` +
-      `4) 6 a 9 passos em português europeu, com técnica, tempos e temperaturas concretos (ex.: "Forno a 200 ºC durante 25 min"). Inclui a ordem correta e pontos de cozedura. Termina com uma "dica" do chef.\n` +
-      `5) "time" realista (ex.: "45 min"), "difficulty" = Fácil | Média | Difícil.\n` +
-      `6) slot 1 e slot 2 usam estrelas diferentes. Não repitas: ${hist}.\n` +
+      `1) Cozinhas obrigatórias: receita 1 = cozinha ${cz[0]}; receita 2 = cozinha ${cz[1]}. Cada receita é um prato CLÁSSICO e AUTÊNTICO dessa cozinha, que existe mesmo (ex.: Carbonara, Boeuf Bourguignon, Chicken Tikka Masala, Pad Thai, Moussaka, Tagine, Chili con Carne, Feijoada, Bulgogi), adaptado ao produto-estrela. Nada de misturas inventadas.\n` +
+      `2) Cada receita nasce de 1 (no máximo 2) produto(s) da lista acima, que são a razão de ser do prato e têm de aparecer no NOME em português (ex.: "Frango Tikka Masala", "Estufado de Vaca à Borgonhesa", "Lulas à Algarvia"). Prefere UMA só estrela; usa duas apenas numa combinação clássica. Só esses ingredientes levam "promo" (id exato) e "amount" para 4 pessoas (kg se per=kg; unidades se per=un). Se o produto não servir bem à cozinha pedida, escolhe outro produto-estrela.\n` +
+      `3) É uma refeição completa: prato principal + acompanhamento tradicional (arroz, massa, pão, batata, salada, legumes, molho…) incluídos nos ingredientes e nos passos. TODOS os restantes ingredientes levam "promo": null e ficam SEM preço. Entre 9 e 16 ingredientes, com doses realistas para 4 pessoas (ex.: "800 g", "2 dentes").\n` +
+      `4) 7 a 10 passos em português europeu, com técnica, tempos e temperaturas concretos, incluindo o acompanhamento e como empratar. Termina com uma "dica" do chef.\n` +
+      `5) "time" realista (ex.: "45 min"), "difficulty" = Fácil | Média | Difícil, "cuisine" = a cozinha, "meal" = "Almoço" ou "Jantar", "original" = nome original do prato (ex.: "Boeuf Bourguignon").\n` +
+      `6) As duas receitas usam estrelas diferentes. Não repitas: ${hist}.\n` +
       (feedback ? `CORRIGE: ${feedback}\n` : "") +
-      `\nJSON: {"recipes":[{"name":"","slot":1,"description":"1-2 frases apetitosas","servings":"4 pessoas","time":"","difficulty":"","tip":"","imageQuery":"english food keywords","ingredients":[{"item":"","qty":"","promo":"id ou null","amount":1}],"steps":[""]}]}`
+      `\nJSON: {"recipes":[{"name":"","original":"","cuisine":"","meal":"Almoço","slot":1,"description":"1-2 frases apetitosas","servings":"4 pessoas","time":"","difficulty":"","tip":"","imageQuery":"english food keywords","ingredients":[{"item":"","qty":"","promo":"id ou null","amount":1}],"steps":[""]}]}`
     );
     try {
       const out = [];
@@ -222,12 +225,12 @@ async function makeRecipes(m) {
         const nw = words(name);
         const miss = priced.find((x) => !words(x._p.name + " " + x.item).some((w) => nw.some((v) => near(v, w))));
         if (miss) throw new Error(`"${miss._p.name}" leva preço mas não aparece no nome "${name}". Só o(s) produto(s) que dão nome ao prato levam preço; usa "promo": null nos outros. Estrelas disponíveis: ${stars.slice(0, 8).map((p) => p.id).join(", ")}`);
-        if (ings.length < 6) throw new Error(`"${name}" tem poucos ingredientes`);
-        if ((r.steps ?? []).length < 5) throw new Error(`"${name}" tem poucos passos`);
+        if (ings.length < 8) throw new Error(`"${name}" tem poucos ingredientes`);
+        if ((r.steps ?? []).length < 6) throw new Error(`"${name}" tem poucos passos`);
         const steps = r.steps.map((t) => String(t).trim()).filter(Boolean);
         const tip = String(r.tip ?? "").trim();
         if (tip) steps.push("Dica do chef: " + tip.replace(/^dica( do chef)?:\s*/i, ""));
-        out.push({ name, description: String(r.description ?? "").trim(), servings: String(r.servings ?? "4 pessoas"), time: String(r.time ?? ""), ...(r.difficulty ? { difficulty: String(r.difficulty) } : {}), imageQuery: String(r.imageQuery ?? ""), ingredients: ings.map(({ _p, ...x }) => x), steps, slot: out.length + 1 });
+        out.push({ name, description: String(r.description ?? "").trim(), servings: String(r.servings ?? "4 pessoas"), time: String(r.time ?? ""), ...(r.difficulty ? { difficulty: String(r.difficulty) } : {}), cuisine: String(r.cuisine || cz[out.length]), meal: out.length ? "Jantar" : "Almoço", ...(r.original ? { original: String(r.original) } : {}), imageQuery: String(r.imageQuery ?? ""), ingredients: ings.map(({ _p, ...x }) => x), steps, slot: out.length + 1 });
       }
       if (out.length !== 2) throw new Error("foram pedidas 2 receitas");
       if (out[0].name === out[1].name) throw new Error("receitas repetidas");
@@ -245,7 +248,7 @@ async function makeRecipes(m) {
 const CF = process.env.CLOUDFLARE_API_TOKEN && process.env.CLOUDFLARE_ACCOUNT_ID ? { token: process.env.CLOUDFLARE_API_TOKEN, id: process.env.CLOUDFLARE_ACCOUNT_ID } : null;
 
 async function generateCloudflare(m, r) {
-  const prompt = "Professional food photography, overhead 45-degree view, natural light, ceramic plate on wooden table. Portuguese dish: " + r.name + ". Ingredients: " + r.ingredients.map((i) => i.item).join(", ") + ". No text, no people, no hands.";
+  const prompt = "Professional food photography, overhead 45-degree view, natural light, ceramic plate on wooden table. Authentic " + (r.cuisine || "") + " cuisine dish, complete meal with side: " + (r.original || r.name) + ". Ingredients: " + r.ingredients.map((i) => i.item).join(", ") + ". No text, no people, no hands.";
   const model = process.env.CLOUDFLARE_IMAGE_MODEL || "@cf/black-forest-labs/flux-1-schnell";
   const res = await fetch("https://api.cloudflare.com/client/v4/accounts/" + CF.id + "/ai/run/" + model, {
     method: "POST", headers: { authorization: "Bearer " + CF.token, "content-type": "application/json" },
@@ -262,7 +265,7 @@ async function generateCloudflare(m, r) {
 }
 
 async function generateImage(m, r) {
-  const prompt = "Professional food photography, 45-degree overhead view, natural light, ceramic plate on wooden table. Portuguese dish: " + r.name + ". Keywords: " + (r.imageQuery || "") + ". Ingredients: " + r.ingredients.map((i) => i.item).join(", ") + ". No text, no people, no hands.";
+  const prompt = "Professional food photography, 45-degree overhead view, natural light, ceramic plate on wooden table. Authentic " + (r.cuisine || "") + " cuisine dish, complete meal with side: " + (r.original || r.name) + ". Keywords: " + (r.imageQuery || "") + ". Ingredients: " + r.ingredients.map((i) => i.item).join(", ") + ". No text, no people, no hands.";
   const res = await fetch("https://api.openai.com/v1/images/generations", {
     method: "POST", headers: { authorization: "Bearer " + OK, "content-type": "application/json" },
     body: JSON.stringify({ model: process.env.OPENAI_IMAGE_MODEL || "gpt-image-1-mini", prompt, size: "1024x1024", quality: process.env.OPENAI_IMAGE_QUALITY || "low", n: 1 }),
