@@ -1244,7 +1244,7 @@
       document.getElementById('modal-price-per-serving').textContent = metrics.perDoseFormatted;
 
       const creditEl = document.getElementById('modal-photo-credit');
-      creditEl.textContent = recipe.imageCredit?.name ? `Foto: ${recipe.imageCredit.name}` : '';
+      creditEl.textContent = recipe.imageCredit?.name ? (recipe.imageCredit.url ? `Foto: ${recipe.imageCredit.name}` : `${recipe.imageCredit.name} (ilustrativa)`) : '';
 
       // Imagem do modal com fallback
       const modalImg = document.getElementById('modal-img');
