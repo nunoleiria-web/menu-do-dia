@@ -19,11 +19,11 @@
           "servings": "4 pessoas",
           "time": "1h 30min",
           "difficulty": "Média",
-          "imageQuery": "beef stew",
+          "imageQuery": "beef stew, traditional Portuguese food, comfort food",
           "ingredients": [
             {
               "item": "Estufar (Chambão) Novilho Angus",
-              "qty": "1 kg",
+              "qty": "1",
               "price": 13.99,
               "per": "kg",
               "amount": 1,
@@ -32,7 +32,7 @@
             },
             {
               "item": "Cebola",
-              "qty": "2 unidades"
+              "qty": "2"
             },
             {
               "item": "Alho",
@@ -51,12 +51,12 @@
               "qty": "200 ml"
             },
             {
-              "item": "Batatas",
-              "qty": "800 g"
+              "item": "Tomate pelado",
+              "qty": "400 g"
             },
             {
-              "item": "Cenoura",
-              "qty": "2 unidades"
+              "item": "Batatas",
+              "qty": "800 g"
             },
             {
               "item": "Salsa",
@@ -64,17 +64,18 @@
             }
           ],
           "steps": [
-            "Num tacho grande, aqueça o azeite em lume médio e adicione a cebola picada e os dentes de alho picados. Refogue até a cebola ficar translúcida.",
-            "Adicione o Estufar (Chambão) Novilho Angus cortado em cubos e deixe dourar por todos os lados.",
-            "Junte as folhas de louro e o vinho tinto, mexendo bem para soltar os sabores. Deixe cozinhar durante 5 minutos.",
-            "Adicione as batatas cortadas em cubos e as cenouras em rodelas. Cubra com água e tempere com sal e pimenta a gosto.",
-            "Deixe cozinhar em lume brando durante cerca de 1 hora, mexendo ocasionalmente, até a carne estar tenra e os legumes cozidos.",
-            "Retire do lume e polvilhe com salsa picada antes de servir.",
-            "Sirva quente, acompanhado de arroz ou pão.",
-            "Dica do chef: Sirva com um bom pão para aproveitar o molho delicioso!"
+            "Corte o Estufar de Novilho Angus em cubos de cerca de 3 cm e tempere com sal e pimenta.",
+            "Numa panela grande, aqueça o azeite e refogue a cebola picada e os dentes de alho picados até ficarem dourados.",
+            "Adicione a carne e deixe dourar de todos os lados, cerca de 10 minutos.",
+            "Junte as folhas de louro e o vinho tinto, deixando cozinhar até o álcool evaporar, cerca de 5 minutos.",
+            "Adicione o tomate pelado e as batatas cortadas em cubos, mexendo bem para envolver todos os ingredientes.",
+            "Cubra com água, tempere com sal e pimenta a gosto e deixe cozinhar em lume brando durante 1 hora, mexendo ocasionalmente.",
+            "Quando a carne estiver tenra e o molho espesso, retire do lume e polvilhe com salsa picada.",
+            "Sirva quente, acompanhado de arroz branco ou puré de batata.",
+            "Dica do chef: Sirva com arroz branco ou puré de batata para aproveitar o molho delicioso."
           ],
           "slot": 1,
-          "image": "/meals/foto-continente-estufado-de-novilho-angus-4205302f.webp",
+          "image": "/meals/foto-continente-estufado-de-novilho-angus-37cb8560.webp",
           "imageCredit": {
             "name": "Imagem gerada por IA",
             "url": ""
@@ -82,11 +83,11 @@
         },
         {
           "name": "Medalhões de Controlo Novilho com Molho de Mostarda",
-          "description": "Suculentos medalhões de novilho grelhados, servidos com um molho de mostarda que realça o sabor da carne. Uma refeição simples, mas cheia de elegância.",
+          "description": "Suculentos medalhões de novilho grelhados, servidos com um molho de mostarda que realça o sabor da carne. Uma combinação perfeita para um jantar especial.",
           "servings": "4 pessoas",
           "time": "30 min",
           "difficulty": "Fácil",
-          "imageQuery": "beef medallions",
+          "imageQuery": "grilled beef medallions, mustard sauce, gourmet food",
           "ingredients": [
             {
               "item": "Medalhões de Controlo Novilho",
@@ -99,7 +100,7 @@
             },
             {
               "item": "Mostarda Dijon",
-              "qty": "3 colheres de sopa"
+              "qty": "4 colheres de sopa"
             },
             {
               "item": "Natas",
@@ -122,23 +123,27 @@
               "qty": "q.b."
             },
             {
+              "item": "Ervas de Provence",
+              "qty": "q.b."
+            },
+            {
               "item": "Salsa",
               "qty": "q.b."
             }
           ],
           "steps": [
-            "Tempere os medalhões de controlo novilho com sal e pimenta a gosto.",
-            "Numa frigideira, aqueça o azeite em lume médio-alto e adicione os medalhões. Cozinhe por cerca de 4-5 minutos de cada lado, ou até estarem ao seu gosto.",
-            "Retire os medalhões da frigideira e mantenha-os quentes.",
-            "Na mesma frigideira, adicione os dentes de alho picados e deixe dourar ligeiramente.",
-            "Junte a mostarda Dijon e as natas, mexendo bem para incorporar todos os sabores. Deixe cozinhar durante 2-3 minutos até o molho engrossar.",
-            "Volte a colocar os medalhões na frigideira e envolva-os no molho por 1-2 minutos.",
-            "Retire do lume e polvilhe com salsa picada antes de servir.",
-            "Sirva os medalhões com o molho por cima e acompanhe com o acompanhamento desejado.",
-            "Dica do chef: Acompanhe com puré de batata ou legumes grelhados para uma refeição completa!"
+            "Tempere os medalhões de novilho com sal, pimenta e ervas de Provence a gosto.",
+            "Numa frigideira, aqueça o azeite em lume médio-alto e grelhe os medalhões durante 4-5 minutos de cada lado, ou até atingirem o ponto desejado.",
+            "Retire os medalhões da frigideira e mantenha-os aquecidos.",
+            "Na mesma frigideira, adicione os dentes de alho picados e refogue por 1 minuto.",
+            "Junte a mostarda e as natas, mexendo bem até obter um molho homogéneo.",
+            "Deixe cozinhar em lume brando durante 3-4 minutos, ajustando o tempero com sal e pimenta.",
+            "Sirva os medalhões regados com o molho de mostarda e polvilhados com salsa picada.",
+            "Acompanhe com legumes grelhados ou uma salada fresca.",
+            "Dica do chef: Acompanhe com legumes grelhados ou uma salada fresca para um prato equilibrado."
           ],
           "slot": 2,
-          "image": "/meals/foto-continente-medalhoes-de-controlo-novilho-com-molho-de-mostarda-7dbc4c55.webp",
+          "image": "/meals/foto-continente-medalhoes-de-controlo-novilho-com-molho-de-mostarda-c25ed358.webp",
           "imageCredit": {
             "name": "Imagem gerada por IA",
             "url": ""
@@ -300,6 +305,8 @@
         "Batata Doce Assada com Romã e Amendoim",
         "Estufado de Novilho Angus",
         "Medalhões de Controlo Novilho",
+        "Estufado de Novilho Angus",
+        "Medalhões de Controlo Novilho com Molho de Mostarda",
         "Estufado de Novilho Angus",
         "Medalhões de Controlo Novilho com Molho de Mostarda"
       ],
@@ -565,7 +572,7 @@
       "check": {
         "date": "2026-10-23",
         "result": "sem-novo",
-        "note": "receitas rejeitadas 3x: promo inválida: 10.99€/kg"
+        "note": "fetch failed"
       }
     },
     {
@@ -810,7 +817,7 @@
           "servings": "4 pessoas",
           "time": "45 min",
           "difficulty": "Média",
-          "imageQuery": "bifanas, alentejo, traditional food",
+          "imageQuery": "bifanas alentejana",
           "ingredients": [
             {
               "item": "bifanas da perna de porco",
@@ -823,10 +830,6 @@
             {
               "item": "alho",
               "qty": "4 dentes"
-            },
-            {
-              "item": "cebola",
-              "qty": "1 unidade"
             },
             {
               "item": "vinho branco",
@@ -846,25 +849,24 @@
             },
             {
               "item": "folhas de louro",
-              "qty": "2 unidades"
+              "qty": "2"
             },
             {
               "item": "salsa picada",
-              "qty": "a gosto"
+              "qty": "2 colheres de sopa"
             }
           ],
           "steps": [
             "Tempere as bifanas com sal, pimenta e os dentes de alho picados. Deixe marinar por 30 minutos.",
-            "Numa frigideira grande, aqueça o azeite em fogo médio e adicione a cebola cortada em rodelas. Refogue até ficar translúcida.",
-            "Adicione as bifanas à frigideira e frite-as por cerca de 5 minutos de cada lado, até estarem douradas.",
-            "Junte o vinho branco e as folhas de louro, reduzindo o fogo para baixo. Cozinhe por mais 15 minutos, até o molho reduzir.",
-            "Prove e ajuste o tempero, se necessário.",
-            "Retire do fogo e polvilhe com salsa picada antes de servir.",
-            "Sirva as bifanas quentes, acompanhadas de arroz ou batatas fritas.",
+            "Numa frigideira grande, aqueça o azeite em fogo médio e adicione as bifanas. Cozinhe por cerca de 5 minutos de cada lado até ficarem douradas.",
+            "Adicione o vinho branco e as folhas de louro à frigideira. Deixe cozinhar em fogo baixo por mais 10 minutos, até o molho reduzir.",
+            "Retire as bifanas e mantenha-as aquecidas.",
+            "Aumente o fogo e deixe o molho reduzir mais um pouco, ajustando o tempero se necessário.",
+            "Sirva as bifanas regadas com o molho e polvilhadas com salsa picada. Acompanhe com arroz ou batatas fritas.",
             "Dica do chef: Sirva com um bom pão alentejano para aproveitar o molho!"
           ],
           "slot": 1,
-          "image": "/meals/foto-aldi-bifanas-da-perna-de-porco-a-alentejana-4ee5d58b.webp",
+          "image": "/meals/foto-aldi-bifanas-da-perna-de-porco-a-alentejana-34c58948.webp",
           "imageCredit": {
             "name": "Imagem gerada por IA",
             "url": ""
@@ -872,15 +874,15 @@
         },
         {
           "name": "Cogumelos Laminados Salteados com Alho",
-          "description": "Um acompanhamento simples e saboroso, onde os cogumelos laminados ganham destaque com o sabor do alho e da salsa.",
+          "description": "Um acompanhamento simples e saboroso, onde os cogumelos laminados ganham vida com o alho e o azeite, ideal para complementar qualquer prato.",
           "servings": "4 pessoas",
           "time": "20 min",
           "difficulty": "Fácil",
-          "imageQuery": "mushrooms, garlic, side dish",
+          "imageQuery": "salteados cogumelos alho",
           "ingredients": [
             {
               "item": "cogumelos laminados",
-              "qty": "2 unidades",
+              "qty": "2 un",
               "price": 1.24,
               "per": "un",
               "amount": 2,
@@ -896,10 +898,6 @@
               "qty": "30 ml"
             },
             {
-              "item": "salsa picada",
-              "qty": "a gosto"
-            },
-            {
               "item": "sal",
               "qty": "a gosto"
             },
@@ -908,22 +906,25 @@
               "qty": "a gosto"
             },
             {
+              "item": "salsa picada",
+              "qty": "2 colheres de sopa"
+            },
+            {
               "item": "limão",
-              "qty": "1 unidade"
+              "qty": "1"
             }
           ],
           "steps": [
-            "Em uma frigideira, aqueça o azeite em fogo médio.",
-            "Adicione os dentes de alho picados e refogue até começarem a dourar.",
-            "Junte os cogumelos laminados e cozinhe por cerca de 5-7 minutos, mexendo ocasionalmente.",
-            "Tempere com sal e pimenta a gosto.",
-            "Retire do fogo e adicione a salsa picada.",
-            "Esprema o sumo de limão por cima antes de servir.",
-            "Sirva quente como acompanhamento ou como entrada.",
-            "Dica do chef: Experimente adicionar um pouco de limão para um toque fresco!"
+            "Descasque e pique finamente os dentes de alho.",
+            "Numa frigideira, aqueça o azeite em fogo médio e adicione o alho picado. Cozinhe por 1-2 minutos até começar a dourar.",
+            "Adicione os cogumelos laminados à frigideira e tempere com sal e pimenta.",
+            "Cozinhe os cogumelos por cerca de 5-7 minutos, mexendo ocasionalmente, até que estejam macios e dourados.",
+            "Retire do fogo e adicione a salsa picada e o sumo de limão a gosto.",
+            "Misture bem e sirva quente como acompanhamento.",
+            "Dica do chef: Experimente adicionar um pouco de vinho branco para um sabor extra!"
           ],
           "slot": 2,
-          "image": "/meals/foto-aldi-cogumelos-laminados-salteados-com-alho-ed854b0d.webp",
+          "image": "/meals/foto-aldi-cogumelos-laminados-salteados-com-alho-c4fda022.webp",
           "imageCredit": {
             "name": "Imagem gerada por IA",
             "url": ""
@@ -977,14 +978,14 @@
       ],
       "history": [
         "Bifanas à Alentejana",
-        "Arroz de Tomate e Cogumelos",
-        "Bifanas à Alentejana",
         "Salada de Tomate e Curgete",
         "Bifanas à Alentejana",
         "Salada de Tomate e Curgete",
         "Bifanas à Alentejana",
         "Salada de Tomate e Curgete",
         "Bifanas à Alentejana",
+        "Cogumelos Laminados Salteados com Alho",
+        "Bifanas da Perna de Porco à Alentejana",
         "Cogumelos Laminados Salteados com Alho",
         "Bifanas da Perna de Porco à Alentejana",
         "Cogumelos Laminados Salteados com Alho"
@@ -996,126 +997,149 @@
     },
     {
       "name": "Intermarché",
-      "from": "2026-10-15",
-      "to": "2026-10-21",
-      "flyer": "Folheto 15–21 out.",
+      "from": "2026-10-22",
+      "to": "2026-10-28",
+      "flyer": "Folheto 22/10–28/10",
       "sources": [
         {
-          "title": "Blog 200 — Intermarché Frescos 15 a 21 out.",
-          "url": "https://blog200porcento.com/antevisao-folheto-intermarche-frescos-promocoes-de-15-a-21-outubro-318360"
-        },
-        {
-          "title": "Blog 200 — Intermarché Contact 15 a 21 out.",
-          "url": "https://blog200porcento.com/antevisao-folheto-intermarche-contact-promocoes-de-15-a-21-outubro-318345"
+          "title": "Blog 200 — Antevisão Folheto INTERMARCHÉ Frescos Promoções de 22 a 28 outubro",
+          "url": "https://blog200porcento.com/antevisao-folheto-intermarche-frescos-promocoes-de-22-a-28-outubro-318475"
         }
       ],
       "recipes": [
         {
-          "slot": 1,
-          "name": "Carapau frito com batatas cozidas",
-          "description": "Carapau pequeno fresco a 3,49 €/kg com batatas do saco de 5 kg a 3,79 €.",
+          "name": "Lulas à Algarvia com Queijo Flamengo",
+          "description": "Uma deliciosa combinação de lulas limpas grelhadas, temperadas com especiarias e acompanhadas de fatias de queijo flamengo derretido, perfeita para um jantar especial.",
           "servings": "4 pessoas",
-          "time": "35 min",
+          "time": "30 min",
+          "difficulty": "Média",
+          "imageQuery": "grilled squid with cheese",
           "ingredients": [
             {
-              "item": "Carapau pequeno fresco",
+              "item": "lula limpa",
               "qty": "800 g",
-              "price": 3.49,
+              "price": 5.99,
               "per": "kg",
               "amount": 0.8,
-              "note": "folheto"
+              "label": "Emb. 800 g",
+              "note": "folheto (lido por IA)"
             },
             {
-              "item": "Batata branca",
-              "qty": "1 kg",
-              "price": 0.758,
+              "item": "queijo flamengo fatiado",
+              "qty": "200 g",
+              "price": 3.59,
               "per": "kg",
-              "amount": 1,
-              "label": "3,79 €/saco 5 kg",
-              "note": "folheto"
+              "amount": 0.2,
+              "label": "Emb. 500 g",
+              "note": "folheto (lido por IA)"
             },
             {
-              "item": "Óleo alimentar Fula",
-              "qty": "1 L",
-              "price": 1.79,
-              "per": "un",
-              "amount": 1,
-              "label": "1,79 €/L",
-              "note": "folheto"
+              "item": "azeite",
+              "qty": "50 ml"
             },
             {
-              "item": "Farinha",
-              "qty": "4 c. sopa"
+              "item": "alho",
+              "qty": "3 dentes"
             },
             {
-              "item": "Limão",
-              "qty": "1 unid."
+              "item": "limão",
+              "qty": "1 unidade"
             },
             {
-              "item": "Sal",
+              "item": "pimenta preta",
               "qty": "q.b."
+            },
+            {
+              "item": "sal",
+              "qty": "q.b."
+            },
+            {
+              "item": "salsa picada",
+              "qty": "2 colheres de sopa"
             }
           ],
           "steps": [
-            "Coze as batatas com casca em água com sal 20 minutos. Escorre.",
-            "Tempera o carapau com sal e sumo de limão durante 10 minutos e passa por farinha.",
-            "Aquece o óleo a 180 °C e frita o carapau 3 minutos de cada lado até ficar dourado. Serve com as batatas."
+            "Comece por limpar bem as lulas e cortá-las em anéis.",
+            "Num recipiente, misture o azeite, os dentes de alho picados, o sumo de limão, sal e pimenta preta a gosto.",
+            "Adicione as lulas à marinada e deixe repousar durante 15 minutos.",
+            "Aqueça uma grelha em fogo médio-alto e grelhe as lulas durante cerca de 2-3 minutos de cada lado, até ficarem tenras e com marcas de grelha.",
+            "Nos últimos minutos de grelha, coloque as fatias de queijo flamengo sobre as lulas para que derretam levemente.",
+            "Retire as lulas da grelha e polvilhe com salsa picada antes de servir.",
+            "Sirva quente, acompanhado de uma salada fresca ou arroz.",
+            "Finalize com uma rodela de limão para decorar.",
+            "Dica do chef: Para um toque extra, adicione um pouco de pimenta doce ao tempero das lulas."
           ],
-          "imageQuery": "fried fish boiled potatoes",
-          "image": "/meals/foto-intermarche-carapau-frito-com-batatas-cozidas-2a01114a.webp",
+          "slot": 1,
+          "image": "/meals/foto-intermarche-lulas-a-algarvia-com-queijo-flamengo-70de7905.webp",
           "imageCredit": {
             "name": "Imagem gerada por IA",
             "url": ""
           }
         },
         {
-          "slot": 2,
-          "name": "Posta de salmão com batatas e manteiga",
-          "description": "Salmão de viveiro fresco em posta com batatas e manteiga Milhafre (1,99 €).",
-          "servings": "3 pessoas",
-          "time": "35 min",
+          "name": "Queijo Flamengo Fatiado com Lulas Grelhadas",
+          "description": "Uma entrada simples e saborosa, onde o queijo flamengo fatiado se combina com lulas grelhadas, criando um prato leve e delicioso.",
+          "servings": "4 pessoas",
+          "time": "25 min",
+          "difficulty": "Fácil",
+          "imageQuery": "sliced cheese with grilled squid",
           "ingredients": [
             {
-              "item": "Salmão de viveiro em posta",
+              "item": "queijo flamengo fatiado",
+              "qty": "300 g",
+              "price": 3.59,
+              "per": "kg",
+              "amount": 0.3,
+              "label": "Emb. 500 g",
+              "note": "folheto (lido por IA)"
+            },
+            {
+              "item": "lula limpa",
               "qty": "600 g",
-              "price": 11.49,
+              "price": 5.99,
               "per": "kg",
               "amount": 0.6,
-              "note": "folheto: 11,49–11,99 €/kg consoante a fonte"
+              "label": "Emb. 800 g",
+              "note": "folheto (lido por IA)"
             },
             {
-              "item": "Batata branca",
-              "qty": "800 g",
-              "price": 0.758,
-              "per": "kg",
-              "amount": 0.8,
-              "label": "3,79 €/saco 5 kg",
-              "note": "folheto"
+              "item": "azeite",
+              "qty": "40 ml"
             },
             {
-              "item": "Manteiga c/ sal Milhafre",
-              "qty": "1 emb.",
-              "price": 1.99,
-              "per": "un",
-              "amount": 1,
-              "note": "folheto"
+              "item": "alho",
+              "qty": "2 dentes"
             },
             {
-              "item": "Limão",
-              "qty": "1 unid."
-            },
-            {
-              "item": "Sal e pimenta",
+              "item": "sal",
               "qty": "q.b."
+            },
+            {
+              "item": "pimenta",
+              "qty": "q.b."
+            },
+            {
+              "item": "salsa picada",
+              "qty": "2 colheres de sopa"
+            },
+            {
+              "item": "limão",
+              "qty": "1 unidade"
             }
           ],
           "steps": [
-            "Coze as batatas em água com sal 20 minutos.",
-            "Tempera o salmão com sal, pimenta e limão. Grelha numa frigideira antiaderente com 1 c. sopa de manteiga, 5 minutos por lado.",
-            "Serve as batatas com o resto da manteiga e o salmão por cima."
+            "Limpe as lulas e corte-as em anéis.",
+            "Tempere as lulas com azeite, alho picado, sal e pimenta a gosto.",
+            "Aqueça uma grelha em fogo médio e grelhe as lulas durante 3-4 minutos, virando-as até ficarem douradas.",
+            "Num prato, disponha as fatias de queijo flamengo.",
+            "Coloque as lulas grelhadas sobre o queijo e polvilhe com salsa picada.",
+            "Decore com rodelas de limão.",
+            "Sirva imediatamente como entrada ou prato principal leve.",
+            "Acompanhe com uma salada verde fresca.",
+            "Dica do chef: Experimente adicionar um pouco de orégãos ao queijo para um sabor extra."
           ],
-          "imageQuery": "salmon potatoes butter",
-          "image": "/meals/foto-intermarche-posta-de-salmao-com-batatas-e-manteiga-fbfe2be2.webp",
+          "slot": 2,
+          "image": "/meals/foto-intermarche-queijo-flamengo-fatiado-com-lulas-grelhadas-78f2aa7f.webp",
           "imageCredit": {
             "name": "Imagem gerada por IA",
             "url": ""
@@ -1124,65 +1148,117 @@
       ],
       "promos": [
         {
-          "id": "carapau-pequeno-fresco",
-          "name": "Carapau pequeno fresco",
-          "price": 3.49,
-          "per": "kg",
-          "note": "folheto"
-        },
-        {
-          "id": "batata-branca",
-          "name": "Batata branca",
-          "price": 0.758,
-          "per": "kg",
-          "label": "3,79 €/saco 5 kg",
-          "note": "folheto"
-        },
-        {
-          "id": "oleo-alimentar-fula",
-          "name": "Óleo alimentar Fula",
-          "price": 1.79,
-          "per": "un",
-          "label": "1,79 €/L",
-          "note": "folheto"
-        },
-        {
-          "id": "salmao-de-viveiro-em-posta",
-          "name": "Salmão de viveiro em posta",
-          "price": 11.49,
-          "per": "kg",
-          "note": "folheto: 11,49–11,99 €/kg consoante a fonte"
-        },
-        {
-          "id": "manteiga-c-sal-milhafre",
-          "name": "Manteiga c/ sal Milhafre",
+          "id": "crisantemo",
+          "name": "Crisântemo",
           "price": 1.99,
           "per": "un",
-          "note": "folheto"
+          "label": "Planta de interior e exterior",
+          "note": "folheto (lido por IA)"
         },
         {
-          "id": "abacaxi",
-          "name": "Abacaxi",
-          "price": 0.99,
-          "per": "kg",
-          "note": "folheto"
+          "id": "peperomia-mix",
+          "name": "Peperomia Mix",
+          "price": 2.99,
+          "per": "un",
+          "label": "Planta de interior",
+          "note": "folheto (lido por IA)"
         },
         {
-          "id": "pera-rocha",
-          "name": "Pera rocha",
-          "price": 1.59,
+          "id": "crisantemo-multiflora",
+          "name": "Crisântemo/Multiflora",
+          "price": 1.99,
+          "per": "un",
+          "label": "Planta de interior e exterior",
+          "note": "folheto (lido por IA)"
+        },
+        {
+          "id": "molho-de-crisantemos",
+          "name": "Molho de Crisântemos",
+          "price": 3.99,
+          "per": "un",
+          "note": "folheto (lido por IA)"
+        },
+        {
+          "id": "ramo-de-outono",
+          "name": "Ramo de Outono",
+          "price": 4.79,
+          "per": "un",
+          "note": "folheto (lido por IA)"
+        },
+        {
+          "id": "baguete",
+          "name": "Baguete",
+          "price": 0.39,
+          "per": "un",
+          "label": "Unid. 210 g",
+          "note": "folheto (lido por IA)"
+        },
+        {
+          "id": "queijo-flamengo-fatiado-pack-familiar",
+          "name": "Queijo Flamengo Fatiado Pack Familiar",
+          "price": 3.59,
           "per": "kg",
-          "note": "folheto"
+          "label": "Emb. 500 g",
+          "note": "folheto (lido por IA)"
+        },
+        {
+          "id": "bio-iogurte-com-musli",
+          "name": "Bio Iogurte com Musli",
+          "price": 0.79,
+          "per": "un",
+          "label": "Emb. 150 g",
+          "note": "folheto (lido por IA)"
+        },
+        {
+          "id": "lula-limpa",
+          "name": "Lula Limpa",
+          "price": 5.99,
+          "per": "kg",
+          "label": "Emb. 800 g",
+          "note": "folheto (lido por IA)"
+        },
+        {
+          "id": "tintureira-a-posta",
+          "name": "Tintureira à Posta",
+          "price": 4.99,
+          "per": "kg",
+          "label": "Vendida ao kg",
+          "note": "folheto (lido por IA)"
+        },
+        {
+          "id": "esparguete",
+          "name": "Esparguete",
+          "price": 0.85,
+          "per": "un",
+          "label": "Emb. 1 kg",
+          "note": "folheto (lido por IA)"
+        },
+        {
+          "id": "leite-meio-gordo-sem-lactose",
+          "name": "Leite Meio-gordo sem Lactose",
+          "price": 0.95,
+          "per": "un",
+          "label": "Emb. 1 L",
+          "note": "folheto (lido por IA)"
+        },
+        {
+          "id": "capsulas-de-cafe-espresso-ristretto",
+          "name": "Cápsulas de Café Espresso Ristretto",
+          "price": 2.99,
+          "per": "un",
+          "label": "Emb. 16 unid.",
+          "note": "folheto (lido por IA)"
         }
       ],
       "history": [
         "Carapau frito com batatas cozidas",
-        "Posta de salmão com batatas e manteiga"
+        "Posta de salmão com batatas e manteiga",
+        "Lulas à Algarvia com Queijo Flamengo",
+        "Queijo Flamengo Fatiado com Lulas Grelhadas"
       ],
       "check": {
         "date": "2026-10-23",
-        "result": "sem-folheto",
-        "note": "receitas rejeitadas 3x: o produto com preço de \"Lulas à Algarvia\" tem de ser o ingrediente principal e aparecer no nome do prato"
+        "result": "novo"
       }
     }
   ]
