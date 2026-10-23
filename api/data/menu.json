@@ -1,0 +1,1069 @@
+{
+  "updatedAt": "2026-10-22",
+  "markets": [
+    {
+      "name": "Continente",
+      "from": "2026-10-20",
+      "to": "2026-10-26",
+      "flyer": "Folheto 20/10–26/10",
+      "sources": [
+        {
+          "title": "Blog 200 — Antevisão Folheto CONTINENTE Frescos Promoções de 20 a 26 outubro",
+          "url": "https://blog200porcento.com/antevisao-folheto-continente-frescos-promocoes-de-20-a-26-outubro-318471"
+        }
+      ],
+      "recipes": [
+        {
+          "slot": 1,
+          "name": "Salada Ibérica com Espinafre e Coentros",
+          "description": "Uma salada fresca e vibrante, perfeita para os dias quentes, combinando a crocância da Salada Ibérica com o sabor intenso dos coentros.",
+          "servings": "4 pessoas",
+          "time": "15 min",
+          "ingredients": [
+            {
+              "item": "Salada Ibérica",
+              "qty": "200 g",
+              "price": 1.68,
+              "per": "un",
+              "amount": 0.2,
+              "label": "1 embalagem",
+              "note": "folheto (lido por IA)"
+            },
+            {
+              "item": "Espinafre Baby",
+              "qty": "100 g",
+              "price": 1.39,
+              "per": "un",
+              "amount": 0.1,
+              "label": "1 embalagem",
+              "note": "folheto (lido por IA)"
+            },
+            {
+              "item": "Coentros Naturais",
+              "qty": "50 g",
+              "price": 0.98,
+              "per": "un",
+              "amount": 0.05,
+              "label": "1 embalagem",
+              "note": "folheto (lido por IA)"
+            },
+            {
+              "item": "Azeite",
+              "qty": "3 c. sopa"
+            },
+            {
+              "item": "Sal",
+              "qty": "a gosto"
+            }
+          ],
+          "steps": [
+            "Lave bem a Salada Ibérica e o Espinafre Baby e coloque-os numa tigela grande.",
+            "Pique os Coentros Naturais e adicione à tigela.",
+            "Regue com azeite e tempere com sal a gosto.",
+            "Misture tudo delicadamente até que os ingredientes estejam bem combinados.",
+            "Sirva imediatamente como acompanhamento ou prato principal leve."
+          ],
+          "imageQuery": "iberian salad with spinach and coriander"
+        },
+        {
+          "slot": 2,
+          "name": "Batata Doce Assada com Romã e Amendoim",
+          "description": "Uma combinação deliciosa de batata doce assada, romã suculenta e amendoim crocante, perfeita para um acompanhamento nutritivo.",
+          "servings": "4 pessoas",
+          "time": "50 min",
+          "ingredients": [
+            {
+              "item": "Batata Doce Biológica",
+              "qty": "800 g",
+              "price": 2.69,
+              "per": "kg",
+              "amount": 0.8,
+              "label": "1 embalagem",
+              "note": "folheto (lido por IA)"
+            },
+            {
+              "item": "Romã Biológica",
+              "qty": "1 un",
+              "price": 2.99,
+              "per": "un",
+              "amount": 1,
+              "label": "1 embalagem",
+              "note": "folheto (lido por IA)"
+            },
+            {
+              "item": "Amendoim Torrado",
+              "qty": "100 g",
+              "price": 0.95,
+              "per": "kg",
+              "amount": 0.1,
+              "label": "1 embalagem",
+              "note": "folheto (lido por IA)"
+            },
+            {
+              "item": "Azeite",
+              "qty": "2 c. sopa"
+            },
+            {
+              "item": "Sal",
+              "qty": "a gosto"
+            }
+          ],
+          "steps": [
+            "Pré-aqueça o forno a 200°C.",
+            "Descasque e corte a Batata Doce em cubos e coloque-os numa assadeira.",
+            "Regue com azeite e tempere com sal, misturando bem.",
+            "Asse no forno por cerca de 30-35 minutos ou até que estejam douradas e macias.",
+            "Retire do forno, adicione os grãos da Romã e o Amendoim Torrado, misturando delicadamente antes de servir."
+          ],
+          "imageQuery": "roasted sweet potatoes with pomegranate and peanuts",
+          "image": "/meals/foto-continente-batata-doce-assada-com-roma-e-amendoim.webp",
+          "imageCredit": {
+            "name": "Anthony Rahayel",
+            "url": "https://www.pexels.com/photo/delicious-stuffed-sweet-potato-with-feta-and-pomegranate-32127741/"
+          }
+        }
+      ],
+      "promos": [
+        {
+          "id": "coentros-naturais",
+          "name": "Coentros Naturais",
+          "price": 0.98,
+          "per": "un",
+          "label": "1 embalagem",
+          "note": "folheto (lido por IA)"
+        },
+        {
+          "id": "salada-iberica",
+          "name": "Salada Ibérica",
+          "price": 1.68,
+          "per": "un",
+          "label": "1 embalagem",
+          "note": "folheto (lido por IA)"
+        },
+        {
+          "id": "salada-aromatica",
+          "name": "Salada Aromática",
+          "price": 1.68,
+          "per": "un",
+          "label": "1 embalagem",
+          "note": "folheto (lido por IA)"
+        },
+        {
+          "id": "espinafre-baby",
+          "name": "Espinafre Baby",
+          "price": 1.39,
+          "per": "un",
+          "label": "1 embalagem",
+          "note": "folheto (lido por IA)"
+        },
+        {
+          "id": "amendoim-torrado",
+          "name": "Amendoim Torrado",
+          "price": 0.95,
+          "per": "kg",
+          "label": "1 embalagem",
+          "note": "folheto (lido por IA)"
+        },
+        {
+          "id": "ananas-biologicos",
+          "name": "Ananás Biológicos",
+          "price": 11.99,
+          "per": "un",
+          "label": "1 embalagem",
+          "note": "folheto (lido por IA)"
+        },
+        {
+          "id": "roma-biologica",
+          "name": "Romã Biológica",
+          "price": 2.99,
+          "per": "un",
+          "label": "1 embalagem",
+          "note": "folheto (lido por IA)"
+        },
+        {
+          "id": "batata-doce-biologica",
+          "name": "Batata Doce Biológica",
+          "price": 2.69,
+          "per": "kg",
+          "label": "1 embalagem",
+          "note": "folheto (lido por IA)"
+        },
+        {
+          "id": "pera-rocha-dop-oeste",
+          "name": "Pera Rocha DOP Oeste",
+          "price": 1.99,
+          "per": "kg",
+          "label": "1 embalagem",
+          "note": "folheto (lido por IA)"
+        },
+        {
+          "id": "uva-preta-rosada",
+          "name": "Uva Preta Rosada",
+          "price": 1.99,
+          "per": "kg",
+          "label": "1 embalagem",
+          "note": "folheto (lido por IA)"
+        },
+        {
+          "id": "figo",
+          "name": "Figo",
+          "price": 5.9,
+          "per": "kg",
+          "label": "1 embalagem",
+          "note": "folheto (lido por IA)"
+        },
+        {
+          "id": "batata",
+          "name": "Batata",
+          "price": 1.02,
+          "per": "kg",
+          "label": "1 embalagem",
+          "note": "folheto (lido por IA)"
+        },
+        {
+          "id": "cebola-doce",
+          "name": "Cebola Doce",
+          "price": 1.89,
+          "per": "kg",
+          "label": "1 embalagem",
+          "note": "folheto (lido por IA)"
+        },
+        {
+          "id": "tomate",
+          "name": "Tomate",
+          "price": 1.35,
+          "per": "kg",
+          "label": "1 embalagem",
+          "note": "folheto (lido por IA)"
+        },
+        {
+          "id": "estufar-chambao-novilho-angus",
+          "name": "Estufar (Chambão) Novilho Angus",
+          "price": 13.99,
+          "per": "kg",
+          "label": "1 embalagem",
+          "note": "folheto (lido por IA)"
+        },
+        {
+          "id": "medalhoes-de-controlo-novilho",
+          "name": "Medalhões de Controlo Novilho",
+          "price": 14.99,
+          "per": "kg",
+          "label": "1 embalagem",
+          "note": "folheto (lido por IA)"
+        },
+        {
+          "id": "fraldinha-de-novilho",
+          "name": "Fraldinha de Novilho",
+          "price": 18.99,
+          "per": "kg",
+          "label": "1 embalagem",
+          "note": "folheto (lido por IA)"
+        },
+        {
+          "id": "bife-da-pa-de-novilho-angus",
+          "name": "Bife da Pá de Novilho Angus",
+          "price": 15.99,
+          "per": "kg",
+          "label": "1 embalagem",
+          "note": "folheto (lido por IA)"
+        }
+      ],
+      "history": [
+        "Pernas de frango assadas com batata-doce",
+        "Postas de salmão com batata-doce assada",
+        "Salada Ibérica com Espinafre e Coentros",
+        "Batata Doce Assada com Romã e Amendoim",
+        "Salada Ibérica com Espinafre e Coentros",
+        "Batata Doce Assada com Romã e Amendoim"
+      ],
+      "check": {
+        "date": "2026-10-22",
+        "result": "sem-novo"
+      }
+    },
+    {
+      "name": "Pingo Doce",
+      "from": "2026-10-20",
+      "to": "2026-10-26",
+      "flyer": "Folheto 20/10–26/10",
+      "sources": [
+        {
+          "title": "Blog 200 — Antevisão Folheto PINGO DOCE Frescos Promoções de 20 a 26 outubro",
+          "url": "https://blog200porcento.com/antevisao-folheto-pingo-doce-frescos-promocoes-de-20-a-26-outubro-318470"
+        }
+      ],
+      "recipes": [
+        {
+          "slot": 1,
+          "name": "Salada de Laranja e Abacate",
+          "description": "Uma salada fresca e vibrante, perfeita para os dias quentes.",
+          "servings": "4 pessoas",
+          "time": "20 min",
+          "ingredients": [
+            {
+              "item": "Laranja",
+              "qty": "400 g",
+              "price": 1.25,
+              "per": "kg",
+              "amount": 0.4,
+              "note": "folheto (lido por IA)"
+            },
+            {
+              "item": "Abacate Hass",
+              "qty": "200 g",
+              "price": 3.59,
+              "per": "kg",
+              "amount": 0.2,
+              "note": "folheto (lido por IA)"
+            },
+            {
+              "item": "Cebola",
+              "qty": "1 unidade"
+            },
+            {
+              "item": "Azeite",
+              "qty": "3 c. sopa"
+            }
+          ],
+          "steps": [
+            "Descasque e corte as laranjas em gomos.",
+            "Corte o abacate em cubos e a cebola em fatias finas.",
+            "Misture todos os ingredientes numa tigela.",
+            "Regue com azeite e tempere a gosto.",
+            "Sirva imediatamente."
+          ],
+          "imageQuery": "orange avocado salad",
+          "image": "/meals/foto-pingo-doce-salada-de-laranja-e-abacate.webp",
+          "imageCredit": {
+            "name": "Kiro Wang",
+            "url": "https://www.pexels.com/photo/a-salad-on-a-plate-7708515/"
+          }
+        },
+        {
+          "slot": 2,
+          "name": "Purê de Batata Vermelha com Brócolos Bimi",
+          "description": "Um acompanhamento cremoso e nutritivo, ideal para qualquer prato principal.",
+          "servings": "4 pessoas",
+          "time": "30 min",
+          "ingredients": [
+            {
+              "item": "Batata Vermelha",
+              "qty": "600 g",
+              "price": 1.19,
+              "per": "kg",
+              "amount": 0.6,
+              "note": "folheto (lido por IA)"
+            },
+            {
+              "item": "Brócolos Bimi",
+              "qty": "200 g",
+              "price": 1.89,
+              "per": "un",
+              "amount": 0.2,
+              "label": "Emb. 200 g",
+              "note": "folheto (lido por IA)"
+            },
+            {
+              "item": "Azeite",
+              "qty": "2 c. sopa"
+            },
+            {
+              "item": "Sal",
+              "qty": "a gosto"
+            }
+          ],
+          "steps": [
+            "Descasque e corte as batatas em pedaços.",
+            "Coza as batatas em água fervente durante 15 minutos.",
+            "Adicione os brócolos bimi nos últimos 5 minutos de cozedura.",
+            "Escorra e reduza as batatas e os brócolos a purê, adicionando azeite e sal.",
+            "Misture bem e sirva quente."
+          ],
+          "imageQuery": "red potato puree with bimi broccoli"
+        }
+      ],
+      "promos": [
+        {
+          "id": "pera-rocha-do-oeste",
+          "name": "Pera Rocha do Oeste",
+          "price": 1.69,
+          "per": "kg",
+          "note": "folheto (lido por IA)"
+        },
+        {
+          "id": "maca-fuji",
+          "name": "Maçã Fuji",
+          "price": 1.99,
+          "per": "kg",
+          "note": "folheto (lido por IA)"
+        },
+        {
+          "id": "cebola",
+          "name": "Cebola",
+          "price": 0.99,
+          "per": "kg",
+          "note": "folheto (lido por IA)"
+        },
+        {
+          "id": "pepino",
+          "name": "Pepino",
+          "price": 1.49,
+          "per": "kg",
+          "note": "folheto (lido por IA)"
+        },
+        {
+          "id": "batata-vermelha",
+          "name": "Batata Vermelha",
+          "price": 1.19,
+          "per": "kg",
+          "note": "folheto (lido por IA)"
+        },
+        {
+          "id": "couve-flor",
+          "name": "Couve-Flor",
+          "price": 1.99,
+          "per": "kg",
+          "note": "folheto (lido por IA)"
+        },
+        {
+          "id": "brocolos-bimi",
+          "name": "Brócolos Bimi",
+          "price": 1.89,
+          "per": "un",
+          "label": "Emb. 200 g",
+          "note": "folheto (lido por IA)"
+        },
+        {
+          "id": "laranja",
+          "name": "Laranja",
+          "price": 1.25,
+          "per": "kg",
+          "note": "folheto (lido por IA)"
+        },
+        {
+          "id": "marmelo",
+          "name": "Marmelo",
+          "price": 1.99,
+          "per": "kg",
+          "note": "folheto (lido por IA)"
+        },
+        {
+          "id": "manga-pronta-a-comer",
+          "name": "Manga Pronta a Comer",
+          "price": 3.99,
+          "per": "kg",
+          "note": "folheto (lido por IA)"
+        },
+        {
+          "id": "abacate-hass",
+          "name": "Abacate Hass",
+          "price": 3.59,
+          "per": "kg",
+          "note": "folheto (lido por IA)"
+        },
+        {
+          "id": "dourada-grande",
+          "name": "Dourada Grande",
+          "price": 10.99,
+          "per": "kg",
+          "note": "folheto (lido por IA)"
+        },
+        {
+          "id": "lombo-de-porco",
+          "name": "Lombo de Porco",
+          "price": 4.49,
+          "per": "kg",
+          "note": "folheto (lido por IA)"
+        },
+        {
+          "id": "diospero-rijo-persimmon",
+          "name": "Dióspero Rijo Persimmon",
+          "price": 2.49,
+          "per": "kg",
+          "note": "folheto (lido por IA)"
+        }
+      ],
+      "history": [
+        "Frango do campo assado com couve",
+        "Dourada no forno com couve salteada",
+        "Sopa de Couve-Flor e Batata Vermelha",
+        "Salada de Pepino e Maçã Fuji",
+        "Salada Fresca de Pera e Brócolos",
+        "Purê de Batata Vermelha com Cebola",
+        "Salada de Laranja e Abacate",
+        "Purê de Batata Vermelha com Brócolos Bimi"
+      ],
+      "check": {
+        "date": "2026-10-22",
+        "result": "sem-novo"
+      }
+    },
+    {
+      "name": "Lidl",
+      "from": "2026-10-19",
+      "to": "2026-10-25",
+      "flyer": "Folheto 19–25 out.",
+      "sources": [
+        {
+          "title": "Blog 200 — Lidl Frescos da Semana 19 a 25 out.",
+          "url": "https://blog200porcento.com/antevisao-folheto-lidl-frescos-da-semana-promocoes-de-19-a-25-outubro-318406"
+        },
+        {
+          "title": "Poupa Pilim — Folheto Lidl 19 a 25 out.",
+          "url": "https://www.poupapilim.com/folheto-lidl-promocoes-19-a-25-de-outubro/"
+        }
+      ],
+      "recipes": [
+        {
+          "slot": 1,
+          "name": "Pernil de Porco Assado com Cogumelos",
+          "description": "Um suculento pernil de porco assado, acompanhado por cogumelos salteados, perfeito para um almoço em família.",
+          "servings": "4 pessoas",
+          "time": "90 min",
+          "ingredients": [
+            {
+              "item": "Pernil de porco",
+              "qty": "1 kg",
+              "price": 2.99,
+              "per": "kg",
+              "amount": 1,
+              "note": "folheto"
+            },
+            {
+              "item": "Cogumelos",
+              "qty": "250 g",
+              "price": 1.29,
+              "per": "un",
+              "amount": 0.25,
+              "label": "1,29 €/emb. 300 g",
+              "note": "folheto"
+            },
+            {
+              "item": "Azeite",
+              "qty": "3 c. sopa"
+            },
+            {
+              "item": "Alho",
+              "qty": "3 dentes"
+            },
+            {
+              "item": "Sal",
+              "qty": "a gosto"
+            },
+            {
+              "item": "Pimenta",
+              "qty": "a gosto"
+            }
+          ],
+          "steps": [
+            "Pré-aqueça o forno a 180°C.",
+            "Tempere o pernil de porco com sal, pimenta e alho picado. Coloque-o numa assadeira.",
+            "Leve ao forno por 60 minutos, regando ocasionalmente com o próprio molho.",
+            "Enquanto isso, numa frigideira, aqueça o azeite e salteie os cogumelos até ficarem dourados.",
+            "Sirva o pernil fatiado com os cogumelos por cima."
+          ],
+          "imageQuery": "roasted pork with mushrooms",
+          "image": "/meals/foto-lidl-pernil-de-porco-assado-com-cogumelos.webp",
+          "imageCredit": {
+            "name": "Luca Luperto",
+            "url": "https://www.pexels.com/photo/steak-served-in-a-restaurant-17216562/"
+          }
+        },
+        {
+          "slot": 2,
+          "name": "Salada de Frango com Abacate e Tomate",
+          "description": "Uma salada fresca e nutritiva, ideal para dias quentes, combinando peito de frango grelhado, abacate cremoso e tomate suculento.",
+          "servings": "4 pessoas",
+          "time": "30 min",
+          "ingredients": [
+            {
+              "item": "Peito de frango",
+              "qty": "400 g",
+              "price": 5.79,
+              "per": "kg",
+              "amount": 0.4,
+              "note": "folheto c/ Lidl Plus"
+            },
+            {
+              "item": "Abacate",
+              "qty": "1 un",
+              "price": 3.59,
+              "per": "kg",
+              "amount": 1,
+              "note": "folheto"
+            },
+            {
+              "item": "Tomate coração-de-boi",
+              "qty": "300 g",
+              "price": 2.29,
+              "per": "kg",
+              "amount": 0.3,
+              "note": "folheto"
+            },
+            {
+              "item": "Azeite",
+              "qty": "2 c. sopa"
+            },
+            {
+              "item": "Sal",
+              "qty": "a gosto"
+            },
+            {
+              "item": "Limão",
+              "qty": "1 un"
+            }
+          ],
+          "steps": [
+            "Grelhe o peito de frango temperado com sal e azeite por cerca de 15 minutos de cada lado.",
+            "Enquanto o frango está a grelhar, corte o abacate e o tomate em cubos.",
+            "Assim que o frango estiver cozido, deixe arrefecer um pouco e corte em tiras.",
+            "Numa tigela grande, misture o abacate, o tomate e o frango. Regue com azeite e sumo de limão.",
+            "Misture bem e sirva fresca."
+          ],
+          "imageQuery": "chicken avocado salad",
+          "image": "/meals/foto-lidl-salada-de-frango-com-abacate-e-tomate.webp",
+          "imageCredit": {
+            "name": "Rasul Yarichev",
+            "url": "https://www.pexels.com/photo/bowl-of-sliced-fruits-checken-and-chopped-avocado-17597414/"
+          }
+        }
+      ],
+      "promos": [
+        {
+          "id": "pernil-de-porco",
+          "name": "Pernil de porco",
+          "price": 2.99,
+          "per": "kg",
+          "note": "folheto"
+        },
+        {
+          "id": "cogumelos",
+          "name": "Cogumelos",
+          "price": 1.29,
+          "per": "un",
+          "label": "1,29 €/emb. 300 g",
+          "note": "folheto"
+        },
+        {
+          "id": "peito-de-frango",
+          "name": "Peito de frango",
+          "price": 5.79,
+          "per": "kg",
+          "note": "folheto c/ Lidl Plus"
+        },
+        {
+          "id": "abacate",
+          "name": "Abacate",
+          "price": 3.59,
+          "per": "kg",
+          "note": "folheto"
+        },
+        {
+          "id": "tomate-coracao-de-boi",
+          "name": "Tomate coração-de-boi",
+          "price": 2.29,
+          "per": "kg",
+          "note": "folheto"
+        },
+        {
+          "id": "pera-rocha",
+          "name": "Pera rocha",
+          "price": 1.69,
+          "per": "kg",
+          "note": "folheto"
+        },
+        {
+          "id": "abacaxi",
+          "name": "Abacaxi",
+          "price": 1.09,
+          "per": "kg",
+          "note": "folheto"
+        }
+      ],
+      "history": [
+        "Pernil de porco estufado com cogumelos",
+        "Salada morna de frango, abacate e tomate",
+        "Pernil de Porco Estufado com Cogumelos",
+        "Salada de Frango com Abacate e Tomate",
+        "Pernil de Porco Assado com Cogumelos",
+        "Salada de Frango com Abacate e Tomate"
+      ],
+      "check": {
+        "date": "2026-10-22",
+        "result": "sem-novo"
+      }
+    },
+    {
+      "name": "Aldi",
+      "from": "2026-10-19",
+      "to": "2026-10-25",
+      "flyer": "Folheto 19–25 out.",
+      "sources": [
+        {
+          "title": "Blog 200 — Aldi Frescos 19 a 25 out.",
+          "url": "https://blog200porcento.com/antevisao-folheto-aldi-frescos-promocoes-de-19-a-25-outubro-318368"
+        },
+        {
+          "title": "Poupa Pilim — Folheto Aldi 19 a 25 out.",
+          "url": "https://www.poupapilim.com/folheto-aldi-19-a-25-de-outubro/"
+        }
+      ],
+      "recipes": [
+        {
+          "slot": 1,
+          "name": "Bifanas de Porco com Cogumelos e Tomate",
+          "description": "Uma deliciosa combinação de bifanas suculentas, cogumelos laminados e tomate fresco, perfeita para um jantar em família.",
+          "servings": "4 pessoas",
+          "time": "45 min",
+          "ingredients": [
+            {
+              "item": "Bifanas da perna de porco",
+              "qty": "500 g",
+              "price": 4.49,
+              "per": "kg",
+              "amount": 0.5,
+              "note": "folheto"
+            },
+            {
+              "item": "Cogumelos laminados",
+              "qty": "200 g",
+              "price": 1.24,
+              "per": "un",
+              "amount": 0.2,
+              "label": "1,24 €/emb. 250 g",
+              "note": "folheto"
+            },
+            {
+              "item": "Tomate alongado",
+              "qty": "300 g",
+              "price": 1.49,
+              "per": "kg",
+              "amount": 0.3,
+              "note": "folheto"
+            },
+            {
+              "item": "Azeite",
+              "qty": "2 c. sopa"
+            },
+            {
+              "item": "Sal",
+              "qty": "a gosto"
+            },
+            {
+              "item": "Alho",
+              "qty": "2 dentes"
+            }
+          ],
+          "steps": [
+            "1. Numa frigideira, aqueça o azeite e adicione os dentes de alho picados. Deixe dourar por 1-2 minutos.",
+            "2. Adicione as bifanas e cozinhe por cerca de 5 minutos de cada lado, até estarem bem douradas.",
+            "3. Junte os cogumelos laminados e o tomate cortado em cubos. Tempere com sal e cozinhe por mais 10 minutos.",
+            "4. Sirva quente, acompanhado de arroz ou batatas."
+          ],
+          "imageQuery": "pork steaks with mushrooms and tomatoes",
+          "image": "/meals/foto-aldi-bifanas-de-porco-com-cogumelos-e-tomate.webp",
+          "imageCredit": {
+            "name": "Evgeniy Alekseyev",
+            "url": "https://www.pexels.com/photo/raw-meat-on-brown-wooden-chopping-board-7333265/"
+          }
+        },
+        {
+          "slot": 2,
+          "name": "Salteado de Curgete com Maçã e Bifanas",
+          "description": "Um prato leve e saboroso, onde a curgete e a maçã se juntam às bifanas para uma explosão de sabores.",
+          "servings": "4 pessoas",
+          "time": "30 min",
+          "ingredients": [
+            {
+              "item": "Bifanas da perna de porco",
+              "qty": "400 g",
+              "price": 4.49,
+              "per": "kg",
+              "amount": 0.4,
+              "note": "folheto"
+            },
+            {
+              "item": "Curgete",
+              "qty": "300 g",
+              "price": 0.99,
+              "per": "kg",
+              "amount": 0.3,
+              "note": "folheto"
+            },
+            {
+              "item": "Maçã Golden",
+              "qty": "2 unidades",
+              "price": 1.49,
+              "per": "kg",
+              "amount": 0.4,
+              "note": "folheto"
+            },
+            {
+              "item": "Azeite",
+              "qty": "2 c. sopa"
+            },
+            {
+              "item": "Sal",
+              "qty": "a gosto"
+            },
+            {
+              "item": "Cebola",
+              "qty": "1 unidade"
+            }
+          ],
+          "steps": [
+            "1. Corte as bifanas em tiras e tempere com sal. Numa frigideira, aqueça o azeite e adicione a cebola picada.",
+            "2. Quando a cebola estiver translúcida, adicione as bifanas e cozinhe até dourar.",
+            "3. Junte a curgete cortada em rodelas e a maçã em cubos. Cozinhe por mais 5-7 minutos.",
+            "4. Sirva quente, idealmente com uma salada fresca."
+          ],
+          "imageQuery": "zucchini stir fry with pork and apple",
+          "image": "/meals/foto-aldi-salteado-de-curgete-com-maca-e-bifanas.webp",
+          "imageCredit": {
+            "name": "Gu Ko",
+            "url": "https://www.pexels.com/photo/delicious-asian-stir-fry-with-pork-and-vegetables-37297739/"
+          }
+        }
+      ],
+      "promos": [
+        {
+          "id": "bifanas-da-perna-de-porco",
+          "name": "Bifanas da perna de porco",
+          "price": 4.49,
+          "per": "kg",
+          "note": "folheto"
+        },
+        {
+          "id": "cogumelos-laminados",
+          "name": "Cogumelos laminados",
+          "price": 1.24,
+          "per": "un",
+          "label": "1,24 €/emb. 250 g",
+          "note": "folheto"
+        },
+        {
+          "id": "tomate-alongado",
+          "name": "Tomate alongado",
+          "price": 1.49,
+          "per": "kg",
+          "note": "folheto"
+        },
+        {
+          "id": "curgete",
+          "name": "Curgete",
+          "price": 0.99,
+          "per": "kg",
+          "note": "folheto"
+        },
+        {
+          "id": "clementina",
+          "name": "Clementina",
+          "price": 1.69,
+          "per": "kg",
+          "note": "folheto"
+        },
+        {
+          "id": "maca-golden",
+          "name": "Maçã Golden",
+          "price": 1.49,
+          "per": "kg",
+          "note": "folheto"
+        }
+      ],
+      "history": [
+        "Bifanas de porco com cogumelos salteados",
+        "Esparguete de tomate, curgete e cogumelos",
+        "Bifanas de Porco com Cogumelos e Tomate",
+        "Salteado de Curgete com Bifanas e Maçã",
+        "Bifanas de Porco com Cogumelos e Tomate",
+        "Salteado de Curgete com Maçã e Bifanas"
+      ],
+      "check": {
+        "date": "2026-10-22",
+        "result": "sem-novo"
+      }
+    },
+    {
+      "name": "Intermarché",
+      "from": "2026-10-15",
+      "to": "2026-10-21",
+      "flyer": "Folheto 15–21 out.",
+      "sources": [
+        {
+          "title": "Blog 200 — Intermarché Frescos 15 a 21 out.",
+          "url": "https://blog200porcento.com/antevisao-folheto-intermarche-frescos-promocoes-de-15-a-21-outubro-318360"
+        },
+        {
+          "title": "Blog 200 — Intermarché Contact 15 a 21 out.",
+          "url": "https://blog200porcento.com/antevisao-folheto-intermarche-contact-promocoes-de-15-a-21-outubro-318345"
+        }
+      ],
+      "recipes": [
+        {
+          "slot": 1,
+          "name": "Carapau frito com batatas cozidas",
+          "description": "Carapau pequeno fresco a 3,49 €/kg com batatas do saco de 5 kg a 3,79 €.",
+          "servings": "4 pessoas",
+          "time": "35 min",
+          "ingredients": [
+            {
+              "item": "Carapau pequeno fresco",
+              "qty": "800 g",
+              "price": 3.49,
+              "per": "kg",
+              "amount": 0.8,
+              "note": "folheto"
+            },
+            {
+              "item": "Batata branca",
+              "qty": "1 kg",
+              "price": 0.758,
+              "per": "kg",
+              "amount": 1,
+              "label": "3,79 €/saco 5 kg",
+              "note": "folheto"
+            },
+            {
+              "item": "Óleo alimentar Fula",
+              "qty": "1 L",
+              "price": 1.79,
+              "per": "un",
+              "amount": 1,
+              "label": "1,79 €/L",
+              "note": "folheto"
+            },
+            {
+              "item": "Farinha",
+              "qty": "4 c. sopa"
+            },
+            {
+              "item": "Limão",
+              "qty": "1 unid."
+            },
+            {
+              "item": "Sal",
+              "qty": "q.b."
+            }
+          ],
+          "steps": [
+            "Coze as batatas com casca em água com sal 20 minutos. Escorre.",
+            "Tempera o carapau com sal e sumo de limão durante 10 minutos e passa por farinha.",
+            "Aquece o óleo a 180 °C e frita o carapau 3 minutos de cada lado até ficar dourado. Serve com as batatas."
+          ],
+          "imageQuery": "fried fish boiled potatoes"
+        },
+        {
+          "slot": 2,
+          "name": "Posta de salmão com batatas e manteiga",
+          "description": "Salmão de viveiro fresco em posta com batatas e manteiga Milhafre (1,99 €).",
+          "servings": "3 pessoas",
+          "time": "35 min",
+          "ingredients": [
+            {
+              "item": "Salmão de viveiro em posta",
+              "qty": "600 g",
+              "price": 11.49,
+              "per": "kg",
+              "amount": 0.6,
+              "note": "folheto: 11,49–11,99 €/kg consoante a fonte"
+            },
+            {
+              "item": "Batata branca",
+              "qty": "800 g",
+              "price": 0.758,
+              "per": "kg",
+              "amount": 0.8,
+              "label": "3,79 €/saco 5 kg",
+              "note": "folheto"
+            },
+            {
+              "item": "Manteiga c/ sal Milhafre",
+              "qty": "1 emb.",
+              "price": 1.99,
+              "per": "un",
+              "amount": 1,
+              "note": "folheto"
+            },
+            {
+              "item": "Limão",
+              "qty": "1 unid."
+            },
+            {
+              "item": "Sal e pimenta",
+              "qty": "q.b."
+            }
+          ],
+          "steps": [
+            "Coze as batatas em água com sal 20 minutos.",
+            "Tempera o salmão com sal, pimenta e limão. Grelha numa frigideira antiaderente com 1 c. sopa de manteiga, 5 minutos por lado.",
+            "Serve as batatas com o resto da manteiga e o salmão por cima."
+          ],
+          "imageQuery": "salmon potatoes butter",
+          "image": "/meals/foto-intermarche-posta-de-salmao-com-batatas-e-manteiga.webp",
+          "imageCredit": {
+            "name": "Valeria Boltneva",
+            "url": "https://www.pexels.com/photo/meal-on-plate-20182290/"
+          }
+        }
+      ],
+      "promos": [
+        {
+          "id": "carapau-pequeno-fresco",
+          "name": "Carapau pequeno fresco",
+          "price": 3.49,
+          "per": "kg",
+          "note": "folheto"
+        },
+        {
+          "id": "batata-branca",
+          "name": "Batata branca",
+          "price": 0.758,
+          "per": "kg",
+          "label": "3,79 €/saco 5 kg",
+          "note": "folheto"
+        },
+        {
+          "id": "oleo-alimentar-fula",
+          "name": "Óleo alimentar Fula",
+          "price": 1.79,
+          "per": "un",
+          "label": "1,79 €/L",
+          "note": "folheto"
+        },
+        {
+          "id": "salmao-de-viveiro-em-posta",
+          "name": "Salmão de viveiro em posta",
+          "price": 11.49,
+          "per": "kg",
+          "note": "folheto: 11,49–11,99 €/kg consoante a fonte"
+        },
+        {
+          "id": "manteiga-c-sal-milhafre",
+          "name": "Manteiga c/ sal Milhafre",
+          "price": 1.99,
+          "per": "un",
+          "note": "folheto"
+        },
+        {
+          "id": "abacaxi",
+          "name": "Abacaxi",
+          "price": 0.99,
+          "per": "kg",
+          "note": "folheto"
+        },
+        {
+          "id": "pera-rocha",
+          "name": "Pera rocha",
+          "price": 1.59,
+          "per": "kg",
+          "note": "folheto"
+        }
+      ],
+      "history": [
+        "Carapau frito com batatas cozidas",
+        "Posta de salmão com batatas e manteiga"
+      ]
+    }
+  ]
+}

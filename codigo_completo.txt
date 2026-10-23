@@ -1,0 +1,870 @@
+{
+  "name": "menu-do-dia",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && esbuild api/boot.ts --platform=node --bundle --format=esm --outdir=dist --banner:js=\"import { createRequire } from 'module';const require = createRequire(import.meta.url);\"",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "start": "NODE_ENV=production node dist/boot.js",
+    "check": "tsc -b",
+    "format": "prettier --write .",
+    "test": "vitest run",
+    "update:menu": "cd scripts && npm install && cd .. && node scripts/update.mjs"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^5.2.2",
+    "@radix-ui/react-accordion": "^1.2.12",
+    "@radix-ui/react-alert-dialog": "^1.1.15",
+    "@radix-ui/react-aspect-ratio": "^1.1.8",
+    "@radix-ui/react-avatar": "^1.1.11",
+    "@radix-ui/react-checkbox": "^1.3.3",
+    "@radix-ui/react-collapsible": "^1.1.12",
+    "@radix-ui/react-context-menu": "^2.2.16",
+    "@radix-ui/react-dialog": "^1.1.15",
+    "@radix-ui/react-dropdown-menu": "^2.1.16",
+    "@radix-ui/react-hover-card": "^1.1.15",
+    "@radix-ui/react-label": "^2.1.8",
+    "@radix-ui/react-menubar": "^1.1.16",
+    "@radix-ui/react-navigation-menu": "^1.2.14",
+    "@radix-ui/react-popover": "^1.1.15",
+    "@radix-ui/react-progress": "^1.1.8",
+    "@radix-ui/react-radio-group": "^1.3.8",
+    "@radix-ui/react-scroll-area": "^1.2.10",
+    "@radix-ui/react-select": "^2.2.6",
+    "@radix-ui/react-separator": "^1.1.8",
+    "@radix-ui/react-slider": "^1.3.6",
+    "@radix-ui/react-slot": "^1.2.4",
+    "@radix-ui/react-switch": "^1.2.6",
+    "@radix-ui/react-tabs": "^1.1.13",
+    "@radix-ui/react-toggle": "^1.1.10",
+    "@radix-ui/react-toggle-group": "^1.1.11",
+    "@radix-ui/react-tooltip": "^1.2.8",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "cmdk": "^1.1.1",
+    "date-fns": "^4.1.0",
+    "embla-carousel-react": "^8.6.0",
+    "input-otp": "^1.4.2",
+    "lucide-react": "^0.562.0",
+    "next-themes": "^0.4.6",
+    "react": "^19.2.0",
+    "react-day-picker": "^9.13.0",
+    "react-dom": "^19.2.0",
+    "react-router": "^7.6.1",
+    "react-hook-form": "^7.70.0",
+    "react-resizable-panels": "^4.2.2",
+    "recharts": "^2.15.4",
+    "sonner": "^2.0.7",
+    "tailwind-merge": "^3.4.0",
+    "vaul": "^1.1.2",
+    "zod": "^4.3.5",
+    "@tanstack/react-query": "^5.90.16",
+    "@trpc/client": "^11.8.1",
+    "@trpc/react-query": "^11.8.1",
+    "@trpc/server": "^11.8.1",
+    "dotenv": "^17.2.3",
+    "hono": "^4.8.3",
+    "@hono/node-server": "^1.14.3",
+    "superjson": "^2.2.6"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@types/node": "^24.10.1",
+    "@types/react": "^19.2.5",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.1",
+    "autoprefixer": "^10.4.23",
+    "eslint": "^9.39.1",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.4.24",
+    "globals": "^16.5.0",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.19",
+    "tailwindcss-animate": "^1.0.7",
+    "tw-animate-css": "^1.4.0",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.46.4",
+    "vite": "^7.2.4",
+    "@hono/vite-dev-server": "^0.19.0",
+    "esbuild": "^0.27.2",
+    "prettier": "^3.7.4",
+    "vitest": "^4.0.16"
+  }
+}name: Atualizar menu
+on:
+  schedule: [{ cron: "0 6 */2 * *" }]   # de 2 em 2 dias, 06:00 UTC
+  workflow_dispatch:                     # também podes correr à mão
+    inputs:
+      photos_only:
+        description: "Só procurar fotos em falta (não mexe em preços nem receitas)"
+        type: boolean
+        default: false
+permissions:
+  contents: write
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      # Instala só o que o script precisa (a sharp), isolado do projeto do site
+      - run: npm install --no-audit --no-fund
+        working-directory: scripts
+      - run: node scripts/update.mjs
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
+          PHOTOS_ONLY: ${{ inputs.photos_only && '1' || '' }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+      - run: |
+          git config user.name "menu-bot"; git config user.email "menu-bot@users.noreply.github.com"
+          git add api/data public/meals
+          git diff --cached --quiet || (git commit -m "Atualização automática $(date -u +%F)" && git push)
+// Atualiza api/data/menu.json: (1) procura folheto novo, (2) gera receitas novas
+// só com produtos em promoção, (3) escolhe uma foto real (Pexels) para cada receita.
+// Os preços só são aceites se vierem de uma fonte com URL; os custos são calculados no código.
+import fs from "node:fs";
+import path from "node:path";
+
+const { GEMINI_API_KEY: GK, PEXELS_API_KEY: PK } = process.env;
+const PHOTOS_ONLY = !!process.env.PHOTOS_ONLY; // só procura fotos em falta (sem IA)
+if (!GK && !PHOTOS_ONLY) throw new Error("Falta GEMINI_API_KEY");
+// Os nomes de modelo mudam: se der erro "model not found", define a variável GEMINI_MODEL no GitHub.
+const MODEL = process.env.GEMINI_MODEL || "gemini-3.8-flash";
+const FILE = "api/data/menu.json", IMG = "public/meals";
+const data = JSON.parse(fs.readFileSync(FILE, "utf8"));
+const today = new Date().toLocaleDateString("en-CA", { timeZone: "Europe/Lisbon" });
+const slug = (s) => s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+
+// prompt: texto, ou lista de "parts" do Gemini (texto + imagens em base64).
+async function ask(prompt, search = false) {
+  const parts = typeof prompt === "string" ? [{ text: prompt }] : prompt;
+  const body = JSON.stringify({
+    contents: [{ parts }],
+    ...(search ? { tools: [{ google_search: {} }] } : { generationConfig: { responseMimeType: "application/json" } }),
+  });
+  let r;
+  for (let t = 0; t < 3; t++) { // repete se o Gemini estiver sobrecarregado
+    r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent`, {
+      method: "POST", headers: { "x-goog-api-key": GK, "content-type": "application/json" }, body,
+    });
+    if (r.ok || ![429, 500, 503].includes(r.status)) break;
+    await new Promise((ok) => setTimeout(ok, 5000 * (t + 1)));
+  }
+  if (!r.ok) throw new Error(`Gemini ${r.status}: ${(await r.text()).slice(0, 300)}`);
+  const cand = (await r.json()).candidates?.[0];
+  const text = (cand?.content?.parts ?? []).filter((p) => p.text && !p.thought).map((p) => p.text).join("\n");
+  const a = text.indexOf("{"), b = text.lastIndexOf("}");
+  if (a < 0 || b < a) throw new Error("Resposta sem JSON");
+  return JSON.parse(text.slice(a, b + 1));
+}
+
+async function findFlyer(m) {
+  const j = await ask(
+    `Hoje é ${today}. Procura o folheto de promoções do supermercado ${m.name} (Portugal) que comece DEPOIS de ${m.from} ou que já esteja em vigor. Usa sites de antevisão (blog200porcento.com, ocacapromocoes.pt, poupapilim.com) ou o site oficial. Extrai produtos alimentares com preço escrito nessas páginas (mínimo 8; preço por kg ou por unidade/embalagem). NUNCA estimes ou inventes preços; se não encontrares, devolve found=false. Responde APENAS com JSON: {"found":true,"from":"AAAA-MM-DD","to":"AAAA-MM-DD","flyer":"texto curto","sources":[{"title":"","url":""}],"promos":[{"id":"slug-unico","name":"","price":0.0,"per":"kg|un","label":"opcional ex.: 1,29 €/emb. 300 g","note":"opcional"}]}`,
+    true
+  );
+  const ids = new Set((j.promos ?? []).map((p) => p.id));
+  const ok = j.found && j.from > m.from && j.to >= today && j.promos?.length >= 8 && ids.size === j.promos.length &&
+    j.sources?.length && j.sources.every((s) => /^https?:\/\//.test(s.url)) &&
+    j.promos.every((p) => p.id && p.name && p.price > 0 && p.price < 100 && ["kg", "un"].includes(p.per));
+  return ok ? j : null;
+}
+
+async function makeRecipes(m) {
+  const list = m.promos.map((p) => `${p.id}: ${p.name} ${p.price}€/${p.per}`).join("; ");
+  const j = await ask(
+    `Cria 2 receitas portuguesas (PT-PT) para o supermercado ${m.name}, usando PRODUTOS EM PROMOÇÃO desta lista (id: nome preço): ${list}. Cada receita usa pelo menos 2 produtos da lista, indicados com "promo" (id exato) e "amount" (kg se per=kg, unidades se per=un). Os restantes ingredientes são de despensa (sem "promo"). Não repitas: ${m.history.join(", ") || "nenhuma"}. Quantidades realistas, 3 a 5 passos com tempos e temperaturas, segurança alimentar correta. Responde APENAS com JSON: {"recipes":[{"name":"","description":"","servings":"4 pessoas","time":"45 min","imageQuery":"palavras-chave em inglês para procurar uma foto do prato pronto, ex.: fried horse mackerel with boiled potatoes","ingredients":[{"item":"","qty":"","promo":"id","amount":0}],"steps":[""]}]}`
+  );
+  if (!(j.recipes?.length >= 2)) throw new Error("menos de 2 receitas");
+  const byId = Object.fromEntries(m.promos.map((p) => [p.id, p]));
+  return j.recipes.slice(0, 2).map((r, i) => {
+    const ingredients = r.ingredients.map((x) => {
+      if (!x.promo) return { item: x.item, qty: x.qty };
+      const p = byId[x.promo];
+      if (!p || !(x.amount > 0 && x.amount <= 5)) throw new Error(`promo inválida: ${x.promo}`);
+      return { item: x.item || p.name, qty: x.qty, price: p.price, per: p.per, amount: x.amount, ...(p.label && { label: p.label }), note: p.note ?? "folheto" };
+    });
+    if (ingredients.filter((x) => x.price).length < 2 || !(r.steps?.length >= 3)) throw new Error("receita fraca");
+    return { slot: i + 1, name: r.name, description: r.description, servings: r.servings, time: r.time, ingredients, steps: r.steps, imageQuery: String(r.imageQuery ?? r.name) };
+  });
+}
+
+// Foto real (Pexels, licença livre) escolhida SEM IA: só aceita uma foto cuja descrição
+// (alt) contém a maior parte das palavras-chave do prato. Sem correspondência → sem foto.
+const STOP = new Set(["with", "and", "the", "served", "fresh", "dish"]);
+const toks = (t) => (t.toLowerCase().match(/[a-z]+/g) ?? []).filter((w) => w.length > 2 && !STOP.has(w)).map((w) => w.replace(/(es|s)$/, ""));
+async function makeImage(m, r) {
+  if (!PK) return undefined;
+  try {
+    const raw = (r.imageQuery ?? "").split(/\s+/).filter(Boolean), words = toks(r.imageQuery ?? "");
+    if (words.length < 2) throw new Error("sem palavras-chave");
+    const need = Math.max(2, Math.ceil(words.length * 0.6));
+    let best = null, top = 0;
+    for (let n = raw.length; n >= 2 && !best; n--) { // pesquisa completa, depois mais curta
+      const res = await fetch(`https://api.pexels.com/v1/search?query=${encodeURIComponent(raw.slice(0, n).join(" "))}&per_page=15&orientation=landscape`, { headers: { Authorization: PK } });
+      if (!res.ok) throw new Error(`Pexels ${res.status}`);
+      for (const p of (await res.json()).photos ?? []) {
+        const alt = new Set(toks(p.alt ?? ""));
+        const score = words.filter((w) => alt.has(w)).length;
+        if (score >= need && score > top) { best = p; top = score; }
+      }
+    }
+    if (!best) throw new Error("nenhuma foto com descrição correspondente");
+    console.log("  foto escolhida:", best.alt);
+    const img = await fetch(best.src.large);
+    if (!img.ok) throw new Error(`download ${img.status}`);
+    const name = `foto-${slug(m.name)}-${slug(r.name)}.webp`;
+    const sharp = (await import("sharp")).default;
+    await sharp(Buffer.from(await img.arrayBuffer())).resize(900, 900, { fit: "cover" }).webp({ quality: 78 }).toFile(path.join(IMG, name));
+    return { image: `/meals/${name}`, credit: { name: best.photographer, url: best.url } };
+  } catch (e) {
+    console.warn(`  sem foto para "${r.name}":`, e.message);
+    return undefined; // a app mostra um fundo neutro, nunca uma foto errada
+  }
+}
+
+for (let i = 0; i < data.markets.length && !PHOTOS_ONLY; i++) {
+  const n = structuredClone(data.markets[i]); // só substitui se tudo correr bem
+  try {
+    const f = await findFlyer(n);
+    if (f) { Object.assign(n, { from: f.from, to: f.to, flyer: f.flyer, sources: f.sources, promos: f.promos }); console.log(n.name, "→ folheto novo", f.from, f.to); }
+    else console.log(n.name, "→ sem folheto novo; receitas novas com as promoções atuais");
+    const recipes = await makeRecipes(n);
+    n.recipes = recipes;
+    n.history = [...n.history, ...recipes.map((r) => r.name)].slice(-12);
+    data.markets[i] = n;
+  } catch (e) { console.warn(n.name, "→ mantido sem alterações:", e.message); }
+}
+
+// Procura foto para todas as receitas que ainda não têm (também as que falharam antes).
+for (const m of data.markets) for (const r of m.recipes) {
+  if (r.image) continue;
+  const img = await makeImage(m, r);
+  if (img) { r.image = img.image; r.imageCredit = img.credit; }
+}
+
+const used = new Set(data.markets.flatMap((m) => m.recipes.map((r) => r.image && path.basename(r.image))));
+for (const f of fs.readdirSync(IMG)) if (f.startsWith("foto-") && !used.has(f)) fs.unlinkSync(path.join(IMG, f));
+data.updatedAt = today;
+fs.writeFileSync(FILE, JSON.stringify(data, null, 2) + "\n");
+import { createRouter, publicQuery } from "./middleware";
+import { getTodaySuggestions } from "./queries/suggestions";
+
+export const appRouter = createRouter({
+  suggestions: {
+    today: publicQuery.query(() => getTodaySuggestions()),
+  },
+});
+
+export type AppRouter = typeof appRouter;
+import { MARKETS, type Ing } from "../flyer-data";
+
+const eur = (n: number) => `${n.toFixed(2).replace(".", ",")} €`;
+
+/** Data de hoje em Lisboa (AAAA-MM-DD), não em UTC. */
+export function lisbonToday(now = new Date()): string {
+  return now.toLocaleDateString("en-CA", { timeZone: "Europe/Lisbon" });
+}
+
+function cost(i: Ing): number | null {
+  return i.price != null && i.amount != null ? i.price * i.amount : null;
+}
+
+function priceText(i: Ing): string {
+  const c = cost(i);
+  if (c === null) return "despensa";
+  const unit = i.label ?? `${eur(i.price!)}/${i.per}`;
+  return `${unit} → ${eur(c)}`;
+}
+
+export function getTodaySuggestions(today = lisbonToday()) {
+  const meals = MARKETS.flatMap((m, mi) => {
+    const status = today < m.from ? "upcoming" : today > m.to ? "expired" : "active";
+    return m.recipes.map((r) => {
+      const total = r.ingredients.reduce((s, i) => s + (cost(i) ?? 0), 0);
+      return {
+        id: mi * 10 + r.slot, // estável: a lista de compras não fica órfã
+        supermarket: m.name,
+        slot: r.slot,
+        name: r.name,
+        description: r.description,
+        servings: r.servings,
+        time: r.time,
+        ingredients: r.ingredients.map((i) => ({
+          item: i.item,
+          qty: i.qty,
+          price: priceText(i),
+          note: i.note,
+        })),
+        steps: r.steps,
+        image: r.image ?? null,
+        imageCredit: r.imageCredit ?? null,
+        totalCost: `≈ ${eur(total)}`,
+        source: m.flyer,
+        validFrom: m.from,
+        validTo: m.to,
+        status,
+        sources: m.sources,
+      };
+    });
+  });
+  return { day: today, meals };
+}
+import { useEffect, useMemo, useState } from "react";
+import { trpc } from "@/providers/trpc";
+
+const SUPERMARKETS = [
+  { name: "Continente", accent: "#c8102e", note: "Folheto semanal + cupões na app" },
+  { name: "Pingo Doce", accent: "#00793a", note: "Saldo em cartão acumula com o folheto" },
+  { name: "Lidl", accent: "#0050aa", note: "Sem loja online — preços do folheto" },
+  { name: "Aldi", accent: "#0b1e64", note: "Sem cartão: o preço anunciado é o que pagas" },
+  { name: "Intermarché", accent: "#d40000", note: "Descontos em cartão acumuláveis" },
+] as const;
+
+const MEAL_TAG = ["Prato principal", "Alternativa"];
+type Ingredient = { item: string; qty: string; price: string; note?: string };
+type Meal = {
+  id: number;
+  supermarket: string;
+  slot: number;
+  name: string;
+  description: string | null;
+  servings: string | null;
+  time: string | null;
+  ingredients: Ingredient[];
+  steps: string[];
+  totalCost: string;
+  image: string | null;
+  imageCredit: { name: string; url: string } | null;
+  source: string | null;
+  validFrom: string;
+  validTo: string;
+  status: "active" | "upcoming" | "expired";
+  sources: { title: string; url: string }[];
+};
+
+const dm = (iso: string) => iso.slice(8, 10) + "/" + iso.slice(5, 7);
+function validity(m: Meal) {
+  if (m.status === "upcoming") return `Preços válidos a partir de ${dm(m.validFrom)} (até ${dm(m.validTo)})`;
+  if (m.status === "expired") return `Folheto expirado em ${dm(m.validTo)} — preços podem ter mudado`;
+  return `Preços válidos até ${dm(m.validTo)}`;
+}
+
+function parseCost(price: string): number | null {
+  const afterArrow = price.split("→").pop() ?? price;
+  const m = afterArrow.match(/([\d]+[.,][\d]{2})\s*€/);
+  if (!m) return null;
+  return parseFloat(m[1].replace(",", "."));
+}
+
+const eur = (n: number) => `${n.toFixed(2).replace(".", ",")} €`;
+
+function formatDay(day: string) {
+  const d = new Date(day + "T12:00:00");
+  return d.toLocaleDateString("pt-PT", { weekday: "long", day: "numeric", month: "long" });
+}
+
+function greeting() {
+  const h = new Date().getHours();
+  if (h < 12) return "Bom dia";
+  if (h < 19) return "Boa tarde";
+  return "Boa noite";
+}
+
+export default function Home() {
+  const { data, isLoading, isError } = trpc.suggestions.today.useQuery();
+  const [active, setActive] = useState<string>("Continente");
+  const [basket, setBasket] = useState<Set<number>>(() => {
+    try {
+      return new Set<number>(JSON.parse(localStorage.getItem("menudia-basket") ?? "[]"));
+    } catch {
+      return new Set();
+    }
+  });
+  const [checked, setChecked] = useState<Set<string>>(() => {
+    try {
+      return new Set<string>(JSON.parse(localStorage.getItem("menudia-checked") ?? "[]"));
+    } catch {
+      return new Set();
+    }
+  });
+  const [listOpen, setListOpen] = useState(false);
+  const [openMeal, setOpenMeal] = useState<Meal | null>(null);
+
+  useEffect(() => {
+    localStorage.setItem("menudia-basket", JSON.stringify([...basket]));
+  }, [basket]);
+  useEffect(() => {
+    localStorage.setItem("menudia-checked", JSON.stringify([...checked]));
+  }, [checked]);
+
+  const meals = useMemo(
+    () => ((data?.meals ?? []) as Meal[]).filter((m) => m.supermarket === active),
+    [data, active]
+  );
+  const market = SUPERMARKETS.find((s) => s.name === active)!;
+
+  const toggleBasket = (id: number) =>
+    setBasket((prev) => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      return next;
+    });
+
+  const toggleChecked = (key: string) =>
+    setChecked((prev) => {
+      const next = new Set(prev);
+      if (next.has(key)) next.delete(key);
+      else next.add(key);
+      return next;
+    });
+
+  const basketMeals = useMemo(
+    () => ((data?.meals ?? []) as Meal[]).filter((m) => basket.has(m.id)),
+    [data, basket]
+  );
+  useEffect(() => {
+    if (!data?.meals) return;
+    const ids = new Set((data.meals as Meal[]).map((m) => m.id));
+    setBasket((prev) => (prev.size && [...prev].some((id) => !ids.has(id)) ? new Set([...prev].filter((id) => ids.has(id))) : prev));
+  }, [data]);
+
+  const basketTotal = useMemo(
+    () =>
+      basketMeals.reduce(
+        (sum, m) => sum + m.ingredients.reduce((s, ing) => s + (parseCost(ing.price) ?? 0), 0),
+        0
+      ),
+    [basketMeals]
+  );
+  const basketByMarket = useMemo(() => {
+    const map = new Map<string, Meal[]>();
+    for (const m of basketMeals) {
+      const arr = map.get(m.supermarket) ?? [];
+      arr.push(m);
+      map.set(m.supermarket, arr);
+    }
+    return [...map.entries()];
+  }, [basketMeals]);
+
+  useEffect(() => {
+    document.body.style.overflow = openMeal || listOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [openMeal, listOpen]);
+
+  const sheetAccent = openMeal
+    ? SUPERMARKETS.find((s) => s.name === openMeal.supermarket)?.accent ?? "#1d5c3f"
+    : "#1d5c3f";
+
+  return (
+    <div className="min-h-screen pb-28">
+      {/* ─── app bar ─── */}
+      <header className="sticky top-0 z-30 border-b border-[#e9e5dd] bg-white/90 backdrop-blur-md">
+        <div className="mx-auto flex h-14 max-w-2xl items-center justify-between px-4">
+          <div className="flex items-center gap-2.5">
+            <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-[#1d5c3f] font-display text-base font-bold text-white">
+              M
+            </span>
+            <span className="font-display text-lg font-semibold tracking-tight">Menu do Dia</span>
+          </div>
+          <button
+            onClick={() => setListOpen(true)}
+            className="flex shrink-0 items-center gap-2 rounded-full bg-[#1c1a17] px-4 py-2.5 text-[12px] font-medium text-white active:scale-95"
+          >
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
+              <path d="M6 6h15l-1.5 9h-12z" />
+              <path d="M6 6L5 3H2" />
+              <circle cx="9" cy="20" r="1.4" />
+              <circle cx="17" cy="20" r="1.4" />
+            </svg>
+            Lista
+            {basket.size > 0 && (
+              <span className="flex h-5 min-w-5 items-center justify-center rounded-full bg-[#c14e1d] px-1.5 text-[10px] font-semibold leading-none text-white">
+                {basket.size}
+              </span>
+            )}
+          </button>
+        </div>
+      </header>
+
+      <div className="mx-auto max-w-2xl">
+        {/* ─── greeting ─── */}
+        <section className="px-4 pb-2 pt-7">
+          <h1 className="font-display text-[28px] font-semibold leading-tight tracking-tight">
+            {greeting()} 👋
+          </h1>
+          <p className="mt-1 text-[15px] font-light text-[#1c1a17]/60">
+            {data?.day ? formatDay(data.day) : "Hoje"} · preços de folheto verificados
+          </p>
+        </section>
+
+        {/* ─── supermarket segmented control ─── */}
+        <section className="sticky top-14 z-20 -mx-0 bg-[#f6f5f2]/95 px-4 py-3 backdrop-blur-md">
+          <div className="no-scrollbar flex gap-1.5 overflow-x-auto rounded-2xl bg-[#ebe8e1] p-1.5">
+            {SUPERMARKETS.map((s) => {
+              const on = active === s.name;
+              return (
+                <button
+                  key={s.name}
+                  onClick={() => setActive(s.name)}
+                  className={`shrink-0 rounded-xl px-4 py-2.5 text-[13px] font-medium transition-all active:scale-95 ${
+                    on ? "bg-white text-[#1c1a17] shadow-sm" : "text-[#1c1a17]/50"
+                  }`}
+                >
+                  <span
+                    className="mr-1.5 inline-block h-2 w-2 rounded-full align-middle"
+                    style={{ background: s.accent }}
+                  />
+                  {s.name}
+                </button>
+              );
+            })}
+          </div>
+          <p className="mt-2.5 px-1 text-[12px] font-light text-[#1c1a17]/45">{market.note}</p>
+        </section>
+
+        {/* ─── meal cards ─── */}
+        <main className="mt-2 space-y-5 px-4">
+          {isLoading && (
+            <p className="py-24 text-center font-mono-x text-sm text-[#1c1a17]/45">
+              A preparar o menu…
+            </p>
+          )}
+          {isError && (
+            <p className="py-24 text-center text-sm text-[#c8102e]">
+              Não foi possível carregar. Tenta novamente dentro de momentos.
+            </p>
+          )}
+
+          {meals.map((m, i) => {
+            const inBasket = basket.has(m.id);
+            return (
+              <article
+                key={m.id}
+                className="fade-swap card-shadow overflow-hidden rounded-3xl bg-white"
+                style={{ animationDelay: `${i * 90}ms` }}
+              >
+                <button onClick={() => setOpenMeal(m)} className="block w-full text-left">
+                  <div className="relative">
+                    {m.image ? (
+                      <img src={m.image} alt={m.name} className="aspect-[16/10] w-full object-cover" loading="lazy" />
+                    ) : (
+                      <div className="aspect-[16/10] w-full" style={{ background: `${market.accent}1a` }} />
+                    )}
+                    <span className="absolute left-4 top-4 rounded-full bg-white/95 px-3 py-1.5 text-[11px] font-semibold text-[#1c1a17] shadow-sm">
+                      {MEAL_TAG[m.slot - 1] ?? `Sugestão ${m.slot}`}
+                    </span>
+                    <span
+                      className="absolute bottom-4 right-4 rounded-full px-3 py-1.5 text-[12px] font-semibold text-white shadow-sm"
+                      style={{ background: market.accent }}
+                    >
+                      {m.totalCost}
+                    </span>
+                  </div>
+                  <div className="px-5 pb-5 pt-4">
+                    <h2 className="font-display text-[22px] font-semibold leading-tight tracking-tight">
+                      {m.name}
+                    </h2>
+                    <p className="mt-2 line-clamp-2 text-sm font-light leading-relaxed text-[#1c1a17]/60">
+                      {m.description}
+                    </p>
+                    <div className="mt-4 flex flex-wrap items-center gap-2 text-[12px] text-[#1c1a17]/60">
+                      <span className="whitespace-nowrap rounded-full bg-[#f6f5f2] px-3 py-1.5">{m.time}</span>
+                      <span className="whitespace-nowrap rounded-full bg-[#f6f5f2] px-3 py-1.5">{m.servings}</span>
+                      <span className="whitespace-nowrap rounded-full bg-[#f6f5f2] px-3 py-1.5">
+                        {m.ingredients.length} ingredientes
+                      </span>
+                    </div>
+                  </div>
+                </button>
+                <div className="flex gap-2.5 px-5 pb-5">
+                  <button
+                    onClick={() => setOpenMeal(m)}
+                    className="flex-1 rounded-full bg-[#1c1a17] py-3.5 text-[13px] font-medium text-white active:scale-[0.98]"
+                  >
+                    Ver receita
+                  </button>
+                  <button
+                    onClick={() => toggleBasket(m.id)}
+                    className={`flex-1 rounded-full py-3.5 text-[13px] font-medium transition-colors active:scale-[0.98] ${
+                      inBasket
+                        ? "bg-[#e3efe8] text-[#1d5c3f]"
+                        : "border border-[#e9e5dd] text-[#1c1a17]/70"
+                    }`}
+                  >
+                    {inBasket ? "✓ Na lista" : "+ Lista"}
+                  </button>
+                </div>
+              </article>
+            );
+          })}
+
+          {!isLoading && meals.length === 0 && (
+            <p className="py-24 text-center text-sm text-[#1c1a17]/45">
+              Sem sugestões para este supermercado de momento.
+            </p>
+          )}
+
+          <p className="pb-2 pt-1 text-center text-[11px] font-light text-[#1c1a17]/40">
+            {meals[0] ? `${meals[0].source} · ${validity(meals[0])}` : "Folhetos semanais"} · confirma os preços na loja · imagens ilustrativas
+          </p>
+        </main>
+      </div>
+
+      {/* ─── recipe sheet ─── */}
+      {openMeal && (
+        <div className="fixed inset-0 z-40 bg-white">
+          <div className="sheet-up flex h-full flex-col">
+            <div className="relative shrink-0">
+              {openMeal.image ? (
+                <img src={openMeal.image} alt={openMeal.name} className="h-56 w-full object-cover" />
+              ) : (
+                <div className="h-56 w-full" style={{ background: `${sheetAccent}1a` }} />
+              )}
+              <button
+                onClick={() => setOpenMeal(null)}
+                className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full bg-white/95 text-base shadow-md active:scale-95"
+                aria-label="Fechar receita"
+              >
+                ✕
+              </button>
+              <span
+                className="absolute bottom-4 left-4 rounded-full px-3 py-1.5 text-[11px] font-semibold text-white"
+                style={{ background: sheetAccent }}
+              >
+                {openMeal.supermarket}
+              </span>
+              <span className="absolute bottom-4 right-4 rounded-full bg-[#1c1a17]/85 px-3 py-1.5 text-[12px] font-semibold text-white shadow-sm backdrop-blur-sm">
+                {openMeal.totalCost}
+              </span>
+            </div>
+
+            <div className="flex-1 overflow-y-auto px-5 pb-36 pt-6">
+              <h2 className="font-display text-[26px] font-semibold leading-[1.1] tracking-tight">
+                {openMeal.name}
+              </h2>
+              <div className="mt-3 flex flex-wrap items-center gap-2 text-[12px] text-[#1c1a17]/55">
+                <span className="whitespace-nowrap rounded-full bg-[#f6f5f2] px-3 py-1.5">{openMeal.time}</span>
+                <span className="whitespace-nowrap rounded-full bg-[#f6f5f2] px-3 py-1.5">{openMeal.servings}</span>
+              </div>
+              <p className="mt-4 text-[15px] font-light leading-relaxed text-[#1c1a17]/65">
+                {openMeal.description}
+              </p>
+
+              <h3 className="font-display mt-8 text-lg font-semibold tracking-tight">Ingredientes</h3>
+              <ul className="mt-3 divide-y divide-[#e9e5dd] border-y border-[#e9e5dd]">
+                {openMeal.ingredients.map((ing, j) => (
+                  <li key={j} className="py-3.5">
+                    <div className="flex items-baseline justify-between gap-3">
+                      <span className="text-[15px] text-[#1c1a17]/90">
+                        {ing.item}
+                        {ing.note ? (
+                          <span className="ml-2 rounded-full bg-[#c14e1d]/10 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-[#c14e1d]">
+                            {ing.note}
+                          </span>
+                        ) : null}
+                      </span>
+                      <span className="shrink-0 rounded-lg bg-[#f6f5f2] px-2.5 py-1 font-mono-x text-[12px] font-medium">
+                        {ing.qty}
+                      </span>
+                    </div>
+                    <p className="mt-1 font-mono-x text-[11px] text-[#1d5c3f]">{ing.price}</p>
+                  </li>
+                ))}
+              </ul>
+
+              <h3 className="font-display mt-9 text-lg font-semibold tracking-tight">
+                Preparação
+                <span className="ml-2 font-mono-x text-[11px] font-normal text-[#1c1a17]/45">
+                  {openMeal.steps.length} passos
+                </span>
+              </h3>
+              <ol className="mt-4 space-y-6">
+                {openMeal.steps.map((step, k) => (
+                  <li key={k} className="flex gap-4">
+                    <span
+                      className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-[13px] font-semibold text-white"
+                      style={{ background: sheetAccent }}
+                    >
+                      {k + 1}
+                    </span>
+                    <p className="text-[15px] font-light leading-relaxed text-[#1c1a17]/85">
+                      {step}
+                    </p>
+                  </li>
+                ))}
+              </ol>
+
+              <p className="mt-10 border-t border-[#e9e5dd] pt-4 text-[11px] font-light text-[#1c1a17]/40">
+                {openMeal.source} · {validity(openMeal)}
+                {openMeal.imageCredit && (
+                  <a href={openMeal.imageCredit.url} target="_blank" rel="noreferrer" className="mt-1 block underline">
+                    Foto: {openMeal.imageCredit.name} / Pexels
+                  </a>
+                )}
+                {openMeal.sources.map((x) => (
+                  <a key={x.url} href={x.url} target="_blank" rel="noreferrer" className="mt-1 block underline">
+                    {x.title}
+                  </a>
+                ))}
+              </p>
+            </div>
+
+            <div className="absolute inset-x-0 bottom-0 border-t border-[#e9e5dd] bg-white/95 px-5 py-4 backdrop-blur">
+              <button
+                onClick={() => toggleBasket(openMeal.id)}
+                className={`w-full rounded-full py-4 text-[14px] font-semibold transition-colors active:scale-[0.98] ${
+                  basket.has(openMeal.id)
+                    ? "bg-[#e3efe8] text-[#1d5c3f]"
+                    : "bg-[#1c1a17] text-white"
+                }`}
+              >
+                {basket.has(openMeal.id)
+                  ? "✓ Na lista de compras"
+                  : "Adicionar à lista de compras"}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* ─── floating total pill ─── */}
+      {basket.size > 0 && !listOpen && !openMeal && (
+        <div className="fixed inset-x-0 bottom-0 z-30 px-4 pb-5">
+          <button
+            onClick={() => setListOpen(true)}
+            className="pop-in card-shadow mx-auto flex w-full max-w-md items-center justify-between rounded-full bg-[#1d5c3f] px-6 py-4 text-[13px] font-semibold text-white active:scale-[0.98]"
+          >
+            <span>
+              Lista de compras · {basket.size} {basket.size === 1 ? "refeição" : "refeições"}
+            </span>
+            <span>≈ {eur(basketTotal)} →</span>
+          </button>
+        </div>
+      )}
+
+      {/* ─── shopping list sheet ─── */}
+      {listOpen && (
+        <div className="fixed inset-0 z-50 flex flex-col bg-white">
+          <div className="sheet-up flex h-full flex-col">
+            <div className="flex items-center justify-between border-b border-[#e9e5dd] px-5 py-4">
+              <div>
+                <h2 className="font-display text-xl font-semibold tracking-tight">Lista de compras</h2>
+                <p className="mt-0.5 text-[12px] font-light text-[#1c1a17]/50">
+                  {basket.size === 0
+                    ? "Ainda está vazia"
+                    : `${basket.size} ${basket.size === 1 ? "refeição" : "refeições"} · toca nos itens à medida que compras`}
+                </p>
+              </div>
+              <button
+                onClick={() => setListOpen(false)}
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-[#f6f5f2] text-base text-[#1c1a17]/70 active:scale-95"
+                aria-label="Fechar lista"
+              >
+                ✕
+              </button>
+            </div>
+
+            <div className="flex-1 overflow-y-auto px-5 py-4">
+              {basket.size === 0 && (
+                <p className="py-16 text-center text-sm font-light leading-relaxed text-[#1c1a17]/50">
+                  Abre uma receita e toca em<br />“Adicionar à lista de compras”.
+                </p>
+              )}
+
+              {basketByMarket.map(([marketName, ms]) => {
+                const accent =
+                  SUPERMARKETS.find((s) => s.name === marketName)?.accent ?? "#1c1a17";
+                return (
+                  <div key={marketName} className="mt-6 first:mt-0">
+                    <div className="flex items-center gap-2">
+                      <span className="h-2.5 w-2.5 rounded-full" style={{ background: accent }} />
+                      <p className="text-[13px] font-semibold">{marketName}</p>
+                    </div>
+                    <ul className="mt-2 space-y-1">
+                      {ms.flatMap((m) =>
+                        m.ingredients.filter((ing) => parseCost(ing.price) !== null).map((ing, j) => {
+                          const key = `${m.id}-${j}`;
+                          const done = checked.has(key);
+                          const cost = parseCost(ing.price);
+                          return (
+                            <li key={key}>
+                              <button
+                                onClick={() => toggleChecked(key)}
+                                className="flex w-full items-center gap-3 rounded-xl px-2 py-3 text-left active:bg-[#f6f5f2]"
+                              >
+                                <span
+                                  className={`flex h-[22px] w-[22px] shrink-0 items-center justify-center rounded-full border-2 transition-colors ${
+                                    done
+                                      ? "border-[#1d5c3f] bg-[#1d5c3f] text-white"
+                                      : "border-[#1c1a17]/25"
+                                  }`}
+                                >
+                                  {done && "✓"}
+                                </span>
+                                <span
+                                  className={`flex-1 text-[14px] transition-colors ${
+                                    done
+                                      ? "text-[#1c1a17]/35 line-through"
+                                      : "text-[#1c1a17]/85"
+                                  }`}
+                                >
+                                  {ing.item}
+                                  <span className="ml-2 font-mono-x text-[11px] text-[#1c1a17]/40">
+                                    {ing.qty}
+                                  </span>
+                                </span>
+                                <span
+                                  className={`shrink-0 font-mono-x text-[11px] ${
+                                    done ? "text-[#1c1a17]/30" : "text-[#1d5c3f]"
+                                  }`}
+                                >
+                                  {cost !== null ? `~${eur(cost)}` : "—"}
+                                </span>
+                              </button>
+                            </li>
+                          );
+                        })
+                      )}
+                    </ul>
+                  </div>
+                );
+              })}
+            </div>
+
+            {basket.size > 0 && (
+              <div className="border-t border-[#e9e5dd] bg-white px-5 py-5">
+                <div className="flex items-center justify-between">
+                  <span className="text-[13px] font-medium text-[#1c1a17]/60">Total estimado</span>
+                  <span className="font-display text-3xl font-semibold tracking-tight">
+                    ≈ {eur(basketTotal)}
+                  </span>
+                </div>
+                <p className="mt-1.5 text-[11px] font-light text-[#1c1a17]/45">
+                  Ingredientes de despensa não incluídos. Confirma os preços na loja.
+                </p>
+                <button
+                  onClick={() => {
+                    setBasket(new Set());
+                    setChecked(new Set());
+                  }}
+                  className="mt-4 w-full rounded-full border border-[#e9e5dd] py-3.5 text-[12px] font-medium text-[#1c1a17]/60 active:scale-[0.98]"
+                >
+                  Esvaziar lista
+                </button>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}

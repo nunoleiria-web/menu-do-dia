@@ -1,0 +1,1857 @@
+<!DOCTYPE html>
+<html lang="pt-PT" class="h-full scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu do Dia — Receitas Económicas com Promoções de Supermercado</title>
+  <!-- Google Fonts Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    .backdrop-blur-md { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+    @keyframes pulse-ring {
+      0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+      70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
+      100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+    }
+    .timer-pulse { animation: pulse-ring 2s infinite; }
+  </style>
+</head>
+<body class="bg-stone-50 dark:bg-stone-950 text-stone-900 dark:text-stone-100 font-sans antialiased min-h-screen flex flex-col selection:bg-emerald-500 selection:text-white transition-colors duration-200">
+
+  <!-- ==================== CABEÇALHO (HEADER) ==================== -->
+  <header class="sticky top-0 z-30 bg-white/90 dark:bg-stone-900/90 backdrop-blur-md border-b border-stone-200/80 dark:border-stone-800 transition-colors">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-2">
+      <!-- Logótipo -->
+      <a href="#" id="logo-reset" class="flex items-center gap-3 group focus:outline-none rounded-xl">
+        <div id="brand-logo-box" class="w-10 h-10 rounded-xl bg-emerald-600 text-white flex items-center justify-center font-black text-xl shadow-sm group-hover:scale-105 transition-all">
+          M
+        </div>
+        <div class="flex flex-col">
+          <div class="flex items-center gap-2">
+            <span class="font-extrabold text-stone-900 dark:text-white tracking-tight leading-none text-base sm:text-lg">Menu do Dia</span>
+            <span class="hidden sm:inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800">
+              PT
+            </span>
+          </div>
+          <span class="text-[11px] text-stone-500 dark:text-stone-400 font-medium mt-0.5">Poupa nos folhetos da semana</span>
+        </div>
+      </a>
+
+      <!-- Ações do Header -->
+      <div class="flex items-center gap-2 sm:gap-3">
+        <!-- Alternador de Modo Escuro / Claro -->
+        <button id="theme-toggle-btn" class="w-10 h-10 rounded-xl border border-stone-200 dark:border-stone-700 bg-stone-100/70 dark:bg-stone-800 hover:bg-stone-200 dark:hover:bg-stone-700 text-stone-700 dark:text-stone-200 flex items-center justify-center transition-all active:scale-95" title="Alternar tema claro/escuro" aria-label="Alternar tema">
+          <i id="theme-icon" class="ph-bold ph-moon text-lg"></i>
+        </button>
+
+        <!-- Botão Lista de Compras -->
+        <button id="open-cart-btn" class="relative inline-flex items-center gap-2 px-3.5 sm:px-4 py-2.5 rounded-xl bg-stone-900 dark:bg-emerald-600 hover:bg-stone-800 dark:hover:bg-emerald-500 active:scale-95 text-white font-semibold text-xs sm:text-sm transition-all shadow-sm">
+          <i class="ph-bold ph-shopping-cart-simple text-base"></i>
+          <span>Lista</span>
+          <span id="cart-badge-count" class="inline-flex items-center justify-center min-w-[20px] h-5 px-1.5 text-xs font-extrabold leading-none text-stone-950 bg-emerald-400 dark:bg-white rounded-full">
+            0
+          </span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== CONTEÚDO PRINCIPAL ==================== -->
+  <main class="flex-1 max-w-6xl w-full mx-auto px-4 sm:px-6 py-6 sm:py-9">
+
+    <!-- Secção de Saudação & Controlo Global de Doses -->
+    <section class="mb-7 flex flex-col lg:flex-row lg:items-end justify-between gap-5">
+      <div>
+        <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-emerald-700 dark:text-emerald-400 mb-2 bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200/70 dark:border-emerald-800/60 px-3 py-1 rounded-full">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          <span id="current-date-label">quinta-feira, 22 de outubro</span>
+        </div>
+        <h1 class="text-2xl sm:text-4xl font-extrabold text-stone-900 dark:text-white tracking-tight leading-tight" id="greeting-title">
+          Boa tarde, o que vais cozinhar hoje?
+        </h1>
+        <p class="mt-1.5 text-stone-600 dark:text-stone-400 text-sm sm:text-base max-w-2xl leading-relaxed">
+          Receitas feitas com os produtos em promoção de cada supermercado, com o preço real calculado ao cêntimo.
+        </p>
+      </div>
+
+      <!-- Ajustador Global de Pessoas / Doses -->
+      <div class="bg-white dark:bg-stone-900 border border-stone-200/90 dark:border-stone-800 rounded-2xl p-3 sm:px-4 sm:py-3 flex items-center justify-between sm:justify-start gap-4 shadow-xs self-start lg:self-auto w-full sm:w-auto">
+        <div class="flex items-center gap-2.5">
+          <div class="w-9 h-9 rounded-xl bg-stone-100 dark:bg-stone-800 text-stone-700 dark:text-stone-300 flex items-center justify-center">
+            <i class="ph-bold ph-users text-lg"></i>
+          </div>
+          <div>
+            <span class="block text-[11px] font-bold uppercase tracking-wider text-stone-400 dark:text-stone-500">Para quantas pessoas?</span>
+            <span id="global-servings-label" class="text-xs font-semibold text-stone-700 dark:text-stone-300">Dose original da receita</span>
+          </div>
+        </div>
+        <div class="flex items-center gap-1.5 bg-stone-100 dark:bg-stone-800 p-1 rounded-xl">
+          <button id="scale-down-btn" class="w-7 h-7 rounded-lg hover:bg-white dark:hover:bg-stone-700 text-stone-700 dark:text-stone-200 flex items-center justify-center font-bold transition-colors disabled:opacity-40" title="Menos pessoas">
+            <i class="ph-bold ph-minus text-xs"></i>
+          </button>
+          <span id="global-servings-val" class="min-w-[42px] text-center font-extrabold text-xs sm:text-sm text-stone-900 dark:text-white">Auto</span>
+          <button id="scale-up-btn" class="w-7 h-7 rounded-lg hover:bg-white dark:hover:bg-stone-700 text-stone-700 dark:text-stone-200 flex items-center justify-center font-bold transition-colors" title="Mais pessoas">
+            <i class="ph-bold ph-plus text-xs"></i>
+          </button>
+          <button id="scale-reset-btn" class="hidden px-2 h-7 rounded-lg bg-stone-200 dark:bg-stone-700 text-[10px] font-bold text-stone-700 dark:text-stone-200 hover:bg-stone-300 transition-colors" title="Repor doses originais">
+            Repor
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seletor de Supermercados + Comparador "Todos / Mais Baratos" -->
+    <section class="mb-6">
+      <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+        <span class="text-xs font-bold uppercase tracking-wider text-stone-500 dark:text-stone-400">Seleciona o supermercado ou compara</span>
+        <!-- Barra de estado do folheto -->
+        <div id="flyer-status-pill" class="inline-flex items-center gap-2 text-xs font-semibold px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800/80">
+          <span id="flyer-status-dot" class="w-2 h-2 rounded-full bg-emerald-500"></span>
+          <span id="flyer-badge-text">Folheto em vigor</span>
+        </div>
+      </div>
+
+      <!-- Barra deslizante para telemóvel e desktop -->
+      <div id="markets-nav" class="flex gap-2 overflow-x-auto no-scrollbar py-1 -mx-4 px-4 sm:mx-0 sm:px-0">
+        <!-- Gerado via JavaScript -->
+      </div>
+    </section>
+
+    <!-- Cabeçalho da Grelha de Receitas & Ordenação -->
+    <section>
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-5">
+        <div class="flex items-center gap-2.5">
+          <div id="market-accent-bar" class="w-2 h-6 rounded-full bg-red-600 transition-colors"></div>
+          <h2 class="text-lg sm:text-xl font-extrabold text-stone-900 dark:text-white tracking-tight" id="section-market-title">
+            Sugestões do Intermarché
+          </h2>
+          <span id="recipes-count-badge" class="text-xs font-bold px-2.5 py-0.5 rounded-full bg-stone-200/80 dark:bg-stone-800 text-stone-700 dark:text-stone-300">
+            2 pratos
+          </span>
+        </div>
+
+        <!-- Opções de Ordenação (Visível especialmente no modo Todos/Comparador) -->
+        <div class="flex items-center gap-2 self-start sm:self-auto">
+          <label for="sort-select" class="text-xs font-semibold text-stone-500 dark:text-stone-400">Ordenar por:</label>
+          <select id="sort-select" class="bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 text-stone-800 dark:text-stone-200 text-xs font-bold rounded-xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500 cursor-pointer">
+            <option value="default">Recomendação do Dia</option>
+            <option value="dose_asc">Mais Barato por Dose (€/pessoa)</option>
+            <option value="total_asc">Menor Preço Total (€)</option>
+            <option value="time_asc">Mais Rápido (Tempo)</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Contentor das Receitas -->
+      <div id="recipes-container" class="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
+        <!-- Renderizado dinamicamente via JS -->
+      </div>
+    </section>
+
+    <!-- ==================== SECÇÃO: TODAS AS PROMOÇÕES DO FOLHETO ==================== -->
+    <section id="flyer-promos-section" class="mt-10 bg-white dark:bg-stone-900 rounded-3xl border border-stone-200/90 dark:border-stone-800 shadow-xs overflow-hidden transition-all">
+      <div class="p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-stone-100 dark:border-stone-800/80">
+        <div class="flex items-start sm:items-center gap-3.5">
+          <div id="promo-box-icon" class="w-11 h-11 rounded-2xl bg-emerald-50 dark:bg-emerald-950/80 text-emerald-600 dark:text-emerald-400 flex items-center justify-center flex-shrink-0 border border-emerald-200/60 dark:border-emerald-800/60">
+            <i class="ph-bold ph-tag text-xl"></i>
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <h3 class="text-base sm:text-lg font-extrabold text-stone-900 dark:text-white" id="promos-drawer-title">
+                Todos os Produtos em Promoção no Folheto
+              </h3>
+              <span id="promos-total-pill" class="px-2.5 py-0.5 text-xs font-extrabold rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300">
+                0 itens
+              </span>
+            </div>
+            <p class="text-xs text-stone-500 dark:text-stone-400 mt-0.5">
+              Adiciona produtos avulso diretamente do folheto para a tua lista de compras desta semana.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <div class="relative flex-1 sm:w-56">
+            <i class="ph-bold ph-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-stone-400 text-sm"></i>
+            <input 
+              type="text" 
+              id="promo-search-input" 
+              placeholder="Procurar no folheto (ex: salmão)..." 
+              class="w-full pl-8 pr-3 py-2 bg-stone-100 dark:bg-stone-800 border border-transparent focus:border-emerald-500 rounded-xl text-xs font-medium text-stone-900 dark:text-white placeholder-stone-400 focus:outline-none transition-all"
+            >
+          </div>
+          <button id="toggle-promos-btn" class="px-3.5 py-2 rounded-xl bg-stone-100 dark:bg-stone-800 hover:bg-stone-200 dark:hover:bg-stone-700 text-stone-700 dark:text-stone-200 text-xs font-bold flex items-center gap-1.5 transition-colors flex-shrink-0">
+            <span id="toggle-promos-text">Mostrar</span>
+            <i id="toggle-promos-icon" class="ph-bold ph-caret-down transition-transform duration-200"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Grelha de Produtos do Folheto (Expansível) -->
+      <div id="promos-grid-wrapper" class="hidden p-5 sm:p-6 bg-stone-50/50 dark:bg-stone-950/40">
+        <div id="promos-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+          <!-- Gerado via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== RODAPÉ E FONTES VERIFICADAS ==================== -->
+    <footer class="mt-10 pt-6 border-t border-stone-200/80 dark:border-stone-800 text-xs text-stone-500 dark:text-stone-400">
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+        <div class="flex flex-wrap items-center gap-x-2 gap-y-1" id="footer-flyer-meta">
+          <!-- Atualizado dinamicamente consoante o supermercado -->
+        </div>
+        <div class="flex items-center gap-3 self-end sm:self-auto">
+          <span class="inline-flex items-center gap-1.5 text-stone-500 dark:text-stone-400">
+            <i class="ph-fill ph-check-circle text-emerald-500"></i>
+            Preços confirmados na loja
+          </span>
+          <span>·</span>
+          <a href="https://www.pexels.com" target="_blank" rel="noopener" class="hover:text-stone-800 dark:hover:text-stone-200 underline decoration-stone-300 dark:decoration-stone-700">
+            Fotos: Pexels
+          </a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- ==================== WIDGET FLUTUANTE DE TEMPORIZADOR DE COZINHA ==================== -->
+  <div id="floating-timer" class="fixed bottom-5 left-5 z-40 hidden bg-stone-900 dark:bg-stone-800 text-white rounded-2xl p-3.5 shadow-2xl border border-stone-700 flex items-center gap-3.5 transition-all">
+    <div id="timer-ring-indicator" class="w-10 h-10 rounded-xl bg-emerald-600 text-white flex items-center justify-center font-bold text-lg timer-pulse">
+      <i class="ph-bold ph-timer"></i>
+    </div>
+    <div class="pr-1">
+      <span id="timer-step-label" class="block text-[10px] uppercase tracking-wider text-stone-400 font-bold max-w-[150px] truncate">Temporizador de Cozinha</span>
+      <span id="timer-countdown-display" class="text-xl font-black font-mono tracking-tight text-emerald-400">00:00</span>
+    </div>
+    <div class="flex items-center gap-1 border-l border-stone-700 pl-3">
+      <button id="timer-pause-btn" class="w-8 h-8 rounded-lg hover:bg-stone-700 flex items-center justify-center text-stone-200" title="Pausar/Retomar">
+        <i id="timer-pause-icon" class="ph-bold ph-pause"></i>
+      </button>
+      <button id="timer-add-min-btn" class="px-2 h-8 rounded-lg hover:bg-stone-700 text-[11px] font-bold text-stone-300" title="Mais 1 minuto">
+        +1m
+      </button>
+      <button id="timer-close-btn" class="w-8 h-8 rounded-lg hover:bg-red-950/60 hover:text-red-400 flex items-center justify-center text-stone-400" title="Cancelar temporizador">
+        <i class="ph-bold ph-x"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- ==================== MODAL DE DETALHES DA RECEITA (MODO MÃOS NA MASSA) ==================== -->
+  <div id="recipe-modal" class="fixed inset-0 z-50 hidden transition-opacity duration-300" role="dialog" aria-modal="true">
+    <!-- Backdrop -->
+    <div id="recipe-modal-backdrop" class="fixed inset-0 bg-stone-950/70 backdrop-blur-md"></div>
+
+    <div class="fixed inset-0 z-10 overflow-y-auto p-2 sm:p-6 flex items-center justify-center">
+      <div class="relative w-full max-w-2xl bg-white dark:bg-stone-900 rounded-3xl shadow-2xl overflow-hidden border border-stone-200 dark:border-stone-800 my-auto">
+        
+        <!-- Topo da Imagem no Modal -->
+        <div class="relative h-56 sm:h-72 w-full bg-stone-200 dark:bg-stone-800">
+          <img id="modal-img" src="" alt="" class="w-full h-full object-cover">
+          <div id="modal-img-fallback" class="w-full h-full hidden flex-col items-center justify-center bg-gradient-to-br from-stone-100 to-stone-200 dark:from-stone-800 dark:to-stone-900 text-stone-400">
+            <i class="ph-duotone ph-cooking-pot text-6xl text-emerald-600/70"></i>
+            <span class="text-xs font-semibold text-stone-500 dark:text-stone-400 mt-2">Sugestão do Chef</span>
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-stone-950/90 via-stone-950/35 to-transparent"></div>
+          
+          <!-- Botão Fechar -->
+          <button id="close-modal-btn" class="absolute top-4 right-4 w-10 h-10 rounded-full bg-black/55 text-white hover:bg-black/80 flex items-center justify-center transition-colors backdrop-blur-xs">
+            <i class="ph-bold ph-x text-lg"></i>
+          </button>
+
+          <!-- Badges de Topo -->
+          <div class="absolute top-4 left-4 flex flex-wrap gap-2">
+            <span id="modal-badge-slot" class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-600 text-white shadow-sm">
+              Prato Principal
+            </span>
+            <span id="modal-badge-market" class="px-3 py-1 rounded-full text-xs font-bold bg-white/95 text-stone-900 shadow-sm">
+              Supermercado
+            </span>
+          </div>
+
+          <!-- Título Sobre a Imagem -->
+          <div class="absolute bottom-4 left-5 right-5 text-white">
+            <h3 id="modal-title" class="text-xl sm:text-2xl font-extrabold leading-tight"></h3>
+            <p id="modal-photo-credit" class="text-[11px] text-stone-300 mt-1 opacity-80"></p>
+          </div>
+        </div>
+
+        <!-- Corpo do Modal com Scroll -->
+        <div class="p-5 sm:p-7 max-h-[62vh] overflow-y-auto space-y-6">
+          
+          <!-- Painel de Métricas + Ajustador de Doses no Modal -->
+          <div class="grid grid-cols-3 gap-2 p-3.5 bg-stone-50 dark:bg-stone-800/60 rounded-2xl border border-stone-200/80 dark:border-stone-700/70 text-center items-center">
+            <div class="flex flex-col">
+              <span class="text-[10px] sm:text-[11px] uppercase tracking-wider text-stone-500 dark:text-stone-400 font-bold">Custo Receita</span>
+              <span id="modal-total-price" class="text-lg sm:text-xl font-black text-stone-900 dark:text-white mt-0.5">0,00 €</span>
+              <span id="modal-price-per-serving" class="text-[11px] text-emerald-600 dark:text-emerald-400 font-bold">0,00 €/dose</span>
+            </div>
+            <div class="flex flex-col border-x border-stone-200 dark:border-stone-700 px-1">
+              <span class="text-[10px] sm:text-[11px] uppercase tracking-wider text-stone-500 dark:text-stone-400 font-bold">Tempo</span>
+              <span id="modal-time" class="text-base sm:text-xl font-black text-stone-900 dark:text-white mt-0.5">35 min</span>
+              <span class="text-[11px] text-stone-500 dark:text-stone-400 font-medium">confecção</span>
+            </div>
+            <!-- Ajustador Interativo de Doses Dentro do Modal -->
+            <div class="flex flex-col items-center">
+              <span class="text-[10px] sm:text-[11px] uppercase tracking-wider text-stone-500 dark:text-stone-400 font-bold mb-1">Doses</span>
+              <div class="inline-flex items-center gap-1.5 bg-white dark:bg-stone-900 px-2 py-1 rounded-xl border border-stone-200 dark:border-stone-700">
+                <button id="modal-servings-minus" class="w-6 h-6 rounded-lg hover:bg-stone-100 dark:hover:bg-stone-800 text-stone-700 dark:text-stone-200 flex items-center justify-center font-bold">
+                  <i class="ph-bold ph-minus text-[10px]"></i>
+                </button>
+                <span id="modal-servings" class="min-w-[24px] text-sm sm:text-base font-black text-stone-900 dark:text-white">4</span>
+                <button id="modal-servings-plus" class="w-6 h-6 rounded-lg hover:bg-stone-100 dark:hover:bg-stone-800 text-stone-700 dark:text-stone-200 flex items-center justify-center font-bold">
+                  <i class="ph-bold ph-plus text-[10px]"></i>
+                </button>
+              </div>
+              <span class="text-[10px] text-stone-400 mt-0.5">pessoas</span>
+            </div>
+          </div>
+
+          <!-- Descrição da Receita -->
+          <p id="modal-desc" class="text-stone-600 dark:text-stone-300 text-sm leading-relaxed"></p>
+
+          <!-- Ingredientes: Folheto vs Despensa -->
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <h4 class="font-extrabold text-stone-900 dark:text-white text-base flex items-center gap-2">
+                <i class="ph-bold ph-basket text-emerald-600 dark:text-emerald-400"></i>
+                Ingredientes
+              </h4>
+              <span class="text-[11px] text-stone-400 dark:text-stone-500">Quantidades ajustadas às doses</span>
+            </div>
+
+            <!-- Em Promoção no Folheto -->
+            <div class="mb-4">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-[11px] font-extrabold text-emerald-800 dark:text-emerald-300 uppercase tracking-wider bg-emerald-100/80 dark:bg-emerald-950 px-2.5 py-0.5 rounded-md">
+                  Produtos em Promoção no Folheto
+                </span>
+                <span class="text-[11px] font-semibold text-stone-400">Subtotal calculado</span>
+              </div>
+              <div id="modal-promo-ingredients" class="space-y-2"></div>
+            </div>
+
+            <!-- Despensa de Casa -->
+            <div>
+              <span class="text-[11px] font-bold text-stone-600 dark:text-stone-400 uppercase tracking-wider bg-stone-100 dark:bg-stone-800 px-2.5 py-0.5 rounded-md mb-2 inline-block">
+                Básicos de Despensa (Sem custo extra)
+              </span>
+              <div id="modal-pantry-ingredients" class="grid grid-cols-1 sm:grid-cols-2 gap-1.5 mt-1 text-xs sm:text-sm text-stone-600 dark:text-stone-300"></div>
+            </div>
+          </div>
+
+          <!-- Modo Mãos na Massa: Passos com Deteção de Temporizador -->
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <h4 class="font-extrabold text-stone-900 dark:text-white text-base flex items-center gap-2">
+                <i class="ph-bold ph-cooking-pot text-emerald-600 dark:text-emerald-400"></i>
+                Preparação Passo a Passo
+              </h4>
+              <span class="text-xs text-stone-500 dark:text-stone-400 font-medium">Clica num passo para riscar</span>
+            </div>
+            <div id="modal-steps-container" class="space-y-3"></div>
+          </div>
+        </div>
+
+        <!-- Rodapé do Modal -->
+        <div class="p-4 sm:p-5 bg-stone-50 dark:bg-stone-950/80 border-t border-stone-200 dark:border-stone-800 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <button id="modal-close-footer-btn" class="w-full sm:w-auto px-5 py-2.5 rounded-xl border border-stone-300 dark:border-stone-700 hover:bg-stone-100 dark:hover:bg-stone-800 text-stone-700 dark:text-stone-300 font-bold text-xs sm:text-sm transition-colors">
+            Voltar ao Menu
+          </button>
+          <button id="modal-add-cart-action-btn" class="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-stone-900 dark:bg-emerald-600 hover:bg-stone-800 dark:hover:bg-emerald-500 text-white font-bold text-xs sm:text-sm transition-all flex items-center justify-center gap-2 shadow-sm">
+            <i class="ph-bold ph-shopping-cart-simple"></i>
+            Adicionar Ingredientes à Lista
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== GAVETA LATERAL DA LISTA DE COMPRAS ==================== -->
+  <div id="cart-drawer" class="fixed inset-0 z-50 pointer-events-none transition-all duration-300">
+    <!-- Backdrop -->
+    <div id="cart-backdrop" class="fixed inset-0 bg-stone-950/50 backdrop-blur-xs opacity-0 transition-opacity pointer-events-none"></div>
+
+    <div id="cart-panel" class="fixed top-0 right-0 h-full w-full max-w-md bg-white dark:bg-stone-900 shadow-2xl flex flex-col transform translate-x-full transition-transform duration-300 pointer-events-auto border-l border-stone-200 dark:border-stone-800">
+      
+      <!-- Topo da Gaveta -->
+      <div class="p-4 sm:p-5 border-b border-stone-200 dark:border-stone-800 flex items-center justify-between bg-stone-50 dark:bg-stone-950/60">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-xl bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-400 flex items-center justify-center font-bold">
+            <i class="ph-bold ph-shopping-bag text-lg"></i>
+          </div>
+          <div>
+            <h3 class="font-extrabold text-stone-900 dark:text-white text-base leading-none">Lista de Compras</h3>
+            <span id="cart-count-subtitle" class="text-xs text-stone-500 dark:text-stone-400 font-medium mt-0.5 block">0 artigos na lista</span>
+          </div>
+        </div>
+        <button id="close-cart-btn" class="w-9 h-9 rounded-full hover:bg-stone-200/80 dark:hover:bg-stone-800 flex items-center justify-center text-stone-500 dark:text-stone-400 transition-colors">
+          <i class="ph-bold ph-x text-lg"></i>
+        </button>
+      </div>
+
+      <!-- Barra de Filtro: Incluir Despensa ou Só Promoções -->
+      <div class="px-4 py-2.5 bg-stone-100/70 dark:bg-stone-800/50 border-b border-stone-200/70 dark:border-stone-800 flex items-center justify-between text-xs">
+        <span class="font-semibold text-stone-600 dark:text-stone-300">Mostrar itens básicos de despensa</span>
+        <label class="relative inline-flex items-center cursor-pointer">
+          <input type="checkbox" id="toggle-pantry-cart" class="sr-only peer" checked>
+          <div class="w-9 h-5 bg-stone-300 dark:bg-stone-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-stone-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-emerald-600"></div>
+        </label>
+      </div>
+
+      <!-- Lista de Artigos Agrupada por Supermercado -->
+      <div id="cart-items-container" class="flex-1 overflow-y-auto p-4 space-y-5">
+        <!-- Renderizado via JS -->
+      </div>
+
+      <!-- Rodapé da Gaveta com Totais + Partilha WhatsApp -->
+      <div class="p-4 sm:p-5 border-t border-stone-200 dark:border-stone-800 bg-stone-50 dark:bg-stone-950/90 space-y-3">
+        <div class="flex items-baseline justify-between">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-wider text-stone-500 dark:text-stone-400 block">Total estimado em promoção</span>
+            <span class="text-[11px] text-stone-400 dark:text-stone-500">Calculado para as doses escolhidas</span>
+          </div>
+          <span id="cart-total-price" class="text-2xl font-black text-stone-900 dark:text-white">0,00 €</span>
+        </div>
+
+        <div class="grid grid-cols-2 gap-2 pt-1">
+          <button id="whatsapp-share-btn" class="px-3.5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold transition-all flex items-center justify-center gap-1.5 shadow-xs">
+            <i class="ph-bold ph-whatsapp-logo text-base"></i>
+            Enviar WhatsApp
+          </button>
+          <button id="copy-cart-btn" class="px-3.5 py-2.5 rounded-xl bg-stone-900 dark:bg-stone-800 hover:bg-stone-800 dark:hover:bg-stone-700 text-white text-xs font-bold transition-all flex items-center justify-center gap-1.5">
+            <i class="ph-bold ph-copy text-base"></i>
+            Copiar Lista
+          </button>
+        </div>
+        <button id="clear-cart-btn" class="w-full py-2 rounded-xl text-stone-500 hover:text-red-600 dark:text-stone-400 dark:hover:text-red-400 text-xs font-semibold transition-colors">
+          Limpar todos os itens
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Toast de Feedback -->
+  <div id="toast" class="fixed bottom-5 right-5 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none bg-stone-900 dark:bg-white text-white dark:text-stone-900 px-4 py-3 rounded-2xl shadow-xl flex items-center gap-3 text-xs sm:text-sm font-bold border border-stone-800 dark:border-stone-200">
+    <i class="ph-fill ph-check-circle text-emerald-400 dark:text-emerald-600 text-lg"></i>
+    <span id="toast-message">Adicionado à lista!</span>
+  </div>
+
+  <!-- ==================== LÓGICA DA APLICAÇÃO (JAVASCRIPT) ==================== -->
+  <script>
+    // Configuração visual por supermercado (Cores oficiais e estilos de destaque)
+    const MARKET_STYLES = {
+      "Continente": {
+        dot: "bg-red-600",
+        activeBg: "bg-red-600 text-white ring-red-600",
+        bar: "bg-red-600",
+        badge: "bg-red-50 dark:bg-red-950/70 text-red-700 dark:text-red-300 border-red-200 dark:border-red-800"
+      },
+      "Pingo Doce": {
+        dot: "bg-emerald-600",
+        activeBg: "bg-emerald-600 text-white ring-emerald-600",
+        bar: "bg-emerald-600",
+        badge: "bg-emerald-50 dark:bg-emerald-950/70 text-emerald-700 dark:text-emerald-300 border-emerald-200 dark:border-emerald-800"
+      },
+      "Lidl": {
+        dot: "bg-blue-600",
+        activeBg: "bg-blue-600 text-white ring-blue-600",
+        bar: "bg-blue-600",
+        badge: "bg-blue-50 dark:bg-blue-950/70 text-blue-700 dark:text-blue-300 border-blue-200 dark:border-blue-800"
+      },
+      "Aldi": {
+        dot: "bg-sky-700",
+        activeBg: "bg-sky-700 text-white ring-sky-700",
+        bar: "bg-sky-700",
+        badge: "bg-sky-50 dark:bg-sky-950/70 text-sky-700 dark:text-sky-300 border-sky-200 dark:border-sky-800"
+      },
+      "Intermarché": {
+        dot: "bg-red-600",
+        activeBg: "bg-red-600 text-white ring-red-600",
+        bar: "bg-red-600",
+        badge: "bg-red-50 dark:bg-red-950/70 text-red-700 dark:text-red-300 border-red-200 dark:border-red-800"
+      }
+    };
+
+    // Dados completos de fallback compatíveis com a estrutura de `api/data/menu.json`
+    // Inclui os pratos exatos da imagem do utilizador no Intermarché e todos os outros supermercados
+    const FALLBACK_MENU_DATA = {
+      updatedAt: "2026-10-22",
+      markets: [
+        {
+          name: "Continente",
+          from: "2026-10-20",
+          to: "2026-10-26",
+          flyer: "Folheto 20–26 out.",
+          sources: [{ title: "Blog 200 — Antevisão Folheto Continente Frescos", url: "https://blog200porcento.com/tag/continente" }],
+          promos: [
+            { id: "frango-do-campo", name: "Frango do Campo inteiro", price: 3.49, per: "kg", note: "folheto" },
+            { id: "batata-doce", name: "Batata-doce vermelha", price: 1.29, per: "kg", note: "folheto" },
+            { id: "pescada-fresca", name: "Pescada fresca para filetes", price: 7.49, per: "kg", note: "folheto" },
+            { id: "tomate-maduro", name: "Tomate maduro cacho", price: 1.49, per: "kg", note: "folheto" },
+            { id: "ovos-solo-m", name: "Ovos de Solo classe M (dúzia)", price: 2.19, per: "un", label: "2,19 €/dúzia", note: "folheto" },
+            { id: "banana-importada", name: "Banana importada", price: 1.19, per: "kg", note: "folheto" },
+            { id: "queijo-flamengo", name: "Queijo Flamengo fatiado Terra Nostra", price: 1.89, per: "un", label: "1,89 €/emb. 200g", note: "folheto" },
+            { id: "couve-coracao", name: "Couve Coração inteira", price: 0.99, per: "kg", note: "folheto" }
+          ],
+          recipes: [
+            {
+              slot: 1,
+              name: "Frango do Campo Assado no Forno com Batata-Doce e Alecrim",
+              description: "Frango do campo inteiro a 3,49 €/kg assado lentamente com alho e ervas, acompanhado por batata-doce a 1,29 €/kg.",
+              servings: "4 pessoas",
+              time: "50 min",
+              image: "https://images.pexels.com/photos/2338407/pexels-photo-2338407.jpeg?auto=compress&cs=tinysrgb&w=900",
+              imageCredit: { name: "Engin Akyurt", url: "https://www.pexels.com" },
+              ingredients: [
+                { item: "Frango do Campo inteiro", qty: "1,2 kg", price: 3.49, per: "kg", amount: 1.2, label: "3,49 €/kg" },
+                { item: "Batata-doce vermelha", qty: "800 g", price: 1.29, per: "kg", amount: 0.8, label: "1,29 €/kg" },
+                { item: "Dentes de alho esmagados", qty: "4 dentes" },
+                { item: "Azeite virgem extra e alecrim", qty: "3 c. sopa" },
+                { item: "Sal marinho e pimentão-doce", qty: "q.b." }
+              ],
+              steps: [
+                "Pré-aquece o forno a 190 ºC durante 10 minutos.",
+                "Barra o frango do campo com uma pasta feita de alho esmagado, pimentão-doce, sal, sumo de limão e azeite.",
+                "Descasca ou lava bem a batata-doce, corta em gomos médios e dispõe à volta do frango na assadeira.",
+                "Leva ao forno a assar durante 45 minutos, regando a meio do tempo com o molho do tabuleiro.",
+                "Retira do forno e deixa repousar 5 minutos antes de trinchar para manter toda a suculência."
+              ]
+            },
+            {
+              slot: 2,
+              name: "Filetes de Pescada Dourados com Arroz de Tomate Malandrinho",
+              description: "Pescada fresca a 7,49 €/kg servida com um reconfortante arroz de tomate maduro nacional (1,49 €/kg) e coentros.",
+              servings: "4 pessoas",
+              time: "35 min",
+              image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=900",
+              imageCredit: { name: "Ella Olsson", url: "https://www.pexels.com" },
+              ingredients: [
+                { item: "Pescada fresca para filetes", qty: "700 g", price: 7.49, per: "kg", amount: 0.7, label: "7,49 €/kg" },
+                { item: "Tomate maduro cacho", qty: "600 g", price: 1.49, per: "kg", amount: 0.6, label: "1,49 €/kg" },
+                { item: "Arroz carolino", qty: "300 g" },
+                { item: "Cebola e 2 dentes de alho", qty: "1 unid." },
+                { item: "Coentros frescos e azeite", qty: "q.b." }
+              ],
+              steps: [
+                "Tempera os filetes de pescada com sal, alho picado e umas gotas de limão durante 15 minutos.",
+                "Faz um refogado num tacho com azeite, cebola picada e o tomate maduro em cubos pequenos durante 8 minutos.",
+                "Junta a água a ferver (3 chávenas para 1 de arroz) e coze o arroz carolino em lume brando por 14 minutos.",
+                "Cora os filetes de pescada numa frigideira antiaderente com um fio de azeite durante 4 minutos de cada lado.",
+                "Polvilha o arroz malandrinho com coentros frescos picados e serve de imediato."
+              ]
+            }
+          ]
+        },
+        {
+          name: "Pingo Doce",
+          from: "2026-10-20",
+          to: "2026-10-26",
+          flyer: "Folheto 20–26 out.",
+          sources: [{ title: "Blog 200 — Antevisão Folheto Pingo Doce Frescos", url: "https://blog200porcento.com/tag/pingo+doce" }],
+          promos: [
+            { id: "bifes-peru", name: "Bifes de peru frescos", price: 6.29, per: "kg", note: "folheto" },
+            { id: "cogumelos-marron", name: "Cogumelos frescos Marron", price: 1.49, per: "un", label: "1,49 €/emb. 250g", note: "folheto" },
+            { id: "dourada-fresca", name: "Dourada fresca de mar", price: 5.99, per: "kg", note: "folheto" },
+            { id: "brocolos", name: "Brócolos frescos", price: 1.39, per: "kg", note: "folheto" },
+            { id: "cenoura-nacional", name: "Cenoura nacional", price: 0.85, per: "kg", note: "folheto" },
+            { id: "maca-alcobaca", name: "Maçã de Alcobaça IGP", price: 1.49, per: "kg", note: "folheto" }
+          ],
+          recipes: [
+            {
+              slot: 1,
+              name: "Bifinhos de Peru Salteados com Cogumelos Frescos e Ervas",
+              description: "Bifes de peru tenros a 6,29 €/kg salteados com cogumelos Marron frescos (1,49 €/emb.) e molho ligeiro de alho.",
+              servings: "4 pessoas",
+              time: "25 min",
+              image: "https://images.pexels.com/photos/616354/pexels-photo-616354.jpeg?auto=compress&cs=tinysrgb&w=900",
+              imageCredit: { name: "Lisa Fotios", url: "https://www.pexels.com" },
+              ingredients: [
+                { item: "Bifes de peru frescos", qty: "600 g", price: 6.29, per: "kg", amount: 0.6, label: "6,29 €/kg" },
+                { item: "Cogumelos frescos Marron", qty: "250 g", price: 1.49, per: "un", amount: 1, label: "1,49 €/emb. 250g" },
+                { item: "Arroz agulha para acompanhar", qty: "300 g" },
+                { item: "Alho laminado e salsa fresca", qty: "3 dentes" },
+                { item: "Azeite, sal e pimenta preta", qty: "q.b." }
+              ],
+              steps: [
+                "Corta os bifes de peru em tiras largas e tempera com sal, pimenta e alho laminado.",
+                "Salteia a carne numa frigideira larga bem quente com azeite durante 5 minutos até ganhar cor dourada. Reserva.",
+                "Na mesma frigideira, junta os cogumelos Marron fatiados e cozinha durante 6 minutos até libertarem os sucos.",
+                "Volta a juntar o peru aos cogumelos, envolve em lume brando durante 2 minutos e polvilha com salsa picada."
+              ]
+            },
+            {
+              slot: 2,
+              name: "Dourada no Forno com Brócolos e Cenoura Assada",
+              description: "Dourada fresca a 5,99 €/kg assada com brócolos (1,39 €/kg) e cenoura nacional crocante (0,85 €/kg).",
+              servings: "3 pessoas",
+              time: "40 min",
+              image: "https://images.pexels.com/photos/262959/pexels-photo-262959.jpeg?auto=compress&cs=tinysrgb&w=900",
+              imageCredit: { name: "Dana Tentis", url: "https://www.pexels.com" },
+              ingredients: [
+                { item: "Dourada fresca de mar", qty: "800 g", price: 5.99, per: "kg", amount: 0.8, label: "5,99 €/kg" },
+                { item: "Brócolos frescos", qty: "400 g", price: 1.39, per: "kg", amount: 0.4, label: "1,39 €/kg" },
+                { item: "Cenoura nacional", qty: "300 g", price: 0.85, per: "kg", amount: 0.3, label: "0,85 €/kg" },
+                { item: "Cebola roxa e azeite virgem", qty: "1 unid." },
+                { item: "Sal marinho e rodelas de limão", qty: "q.b." }
+              ],
+              steps: [
+                "Pré-aquece o forno a 200 ºC e dispõe a cebola e as cenouras cortadas em palitos no fundo de um tabuleiro.",
+                "Dá dois golpes no lombo das douradas, tempera com sal marinho e coloca-as sobre a cama de legumes.",
+                "Asse no forno durante 20 minutos.",
+                "Adiciona os raminhos de brócolos regados com um fio de azeite ao tabuleiro e deixa assar mais 10 minutos até ficarem tenros."
+              ]
+            }
+          ]
+        },
+        {
+          name: "Lidl",
+          from: "2026-10-20",
+          to: "2026-10-26",
+          flyer: "Folheto 20–26 out.",
+          sources: [{ title: "Blog 200 — Folheto Lidl Frescos", url: "https://blog200porcento.com/tag/lidl" }],
+          promos: [
+            { id: "pernil-porco", name: "Pernil de porco fresco", price: 3.69, per: "kg", note: "folheto" },
+            { id: "batata-assada", name: "Batata branca para assar", price: 0.95, per: "kg", note: "folheto" },
+            { id: "grao-bico", name: "Grão-de-bico cozido Freshona", price: 0.75, per: "un", label: "0,75 €/frasco 540g", note: "folheto" },
+            { id: "espinafres-folha", name: "Espinafres frescos em folha", price: 0.99, per: "un", label: "0,99 €/emb. 200g", note: "folheto" },
+            { id: "peito-frango", name: "Peito de frango XXL", price: 5.49, per: "kg", note: "folheto" },
+            { id: "pera-rocha", name: "Pêra Rocha do Oeste", price: 1.39, per: "kg", note: "folheto" }
+          ],
+          recipes: [
+            {
+              slot: 1,
+              name: "Pernil de Porco Assado Lento com Batatinhas Douradas",
+              description: "Pernil de porco suculento a 3,69 €/kg marinado em alho e louro com batatas assadas no forno a 0,95 €/kg.",
+              servings: "5 pessoas",
+              time: "60 min",
+              image: "https://images.pexels.com/photos/769289/pexels-photo-769289.jpeg?auto=compress&cs=tinysrgb&w=900",
+              imageCredit: { name: "Malidate Van", url: "https://www.pexels.com" },
+              ingredients: [
+                { item: "Pernil de porco fresco", qty: "1,2 kg", price: 3.69, per: "kg", amount: 1.2, label: "3,69 €/kg" },
+                { item: "Batata branca para assar", qty: "1 kg", price: 0.95, per: "kg", amount: 1.0, label: "0,95 €/kg" },
+                { item: "Dentes de alho e 2 folhas de louro", qty: "5 dentes" },
+                { item: "Colorau, sal grosso e azeite", qty: "2 c. sopa" }
+              ],
+              steps: [
+                "Esfrega o pernil de porco com os alhos esmagados, colorau, sal grosso, louro e azeite.",
+                "Coloca num tabuleiro com as batatas cortadas em quartos à volta e leva ao forno a 190 ºC durante 45 minutos.",
+                "Vira as batatas e rega a carne com os sucos do fundo; aumenta para 210 ºC durante os últimos 15 minutos para tostar."
+              ]
+            },
+            {
+              slot: 2,
+              name: "Estufado Rápido de Grão-de-Bico com Espinafres e Ovos Escalfados",
+              description: "Refeição super económica com grão-de-bico (0,75 €) e folhas de espinafres frescas (0,99 €/emb.) num molho rico de tomate e alho.",
+              servings: "4 pessoas",
+              time: "20 min",
+              image: "https://images.pexels.com/photos/674574/pexels-photo-674574.jpeg?auto=compress&cs=tinysrgb&w=900",
+              imageCredit: { name: "Cats Coming", url: "https://www.pexels.com" },
+              ingredients: [
+                { item: "Grão-de-bico cozido Freshona", qty: "2 frascos", price: 0.75, per: "un", amount: 2, label: "0,75 €/frasco" },
+                { item: "Espinafres frescos em folha", qty: "200 g", price: 0.99, per: "un", amount: 1, label: "0,99 €/emb." },
+                { item: "Cebola, alho e polpa de tomate", qty: "4 c. sopa" },
+                { item: "Azeite e cominhos em pó", qty: "1 c. chá" }
+              ],
+              steps: [
+                "Refoga a cebola e o alho em azeite durante 4 minutos com uma pitada de cominhos.",
+                "Adiciona a polpa de tomate e o grão-de-bico escorrido; deixa apurar em lume médio durante 10 minutos.",
+                "Envolve as folhas de espinafres frescos durante 3 minutos até murcharem no caldo quente e serve."
+              ]
+            }
+          ]
+        },
+        {
+          name: "Aldi",
+          from: "2026-10-20",
+          to: "2026-10-26",
+          flyer: "Folheto 20–26 out.",
+          sources: [{ title: "Blog 200 — Folheto Aldi Frescos", url: "https://blog200porcento.com/tag/aldi" }],
+          promos: [
+            { id: "costeletas-porco", name: "Costeletas do cachaço de porco", price: 4.19, per: "kg", note: "folheto" },
+            { id: "maca-golden", name: "Maçã Golden nacional", price: 1.19, per: "kg", note: "folheto" },
+            { id: "couve-flor", name: "Couve-flor fresca inteira", price: 1.29, per: "kg", note: "folheto" },
+            { id: "batata-vermelha", name: "Batata vermelha para cozer", price: 0.89, per: "kg", note: "folheto" },
+            { id: "abobora-menina", name: "Abóbora Menina em pedaços", price: 0.99, per: "kg", note: "folheto" },
+            { id: "iogurte-grego", name: "Iogurte Grego Natural (pack 4)", price: 1.35, per: "un", label: "1,35 €/pack", note: "folheto" }
+          ],
+          recipes: [
+            {
+              slot: 1,
+              name: "Costeletas de Porco Douradas com Maçã Golden Caramelizada",
+              description: "Costeletas do cachaço a 4,19 €/kg salteadas na frigideira com gomos de maçã Golden nacional (1,19 €/kg) e tomilho.",
+              servings: "4 pessoas",
+              time: "25 min",
+              image: "https://images.pexels.com/photos/323682/pexels-photo-323682.jpeg?auto=compress&cs=tinysrgb&w=900",
+              imageCredit: { name: "Chevanon Photography", url: "https://www.pexels.com" },
+              ingredients: [
+                { item: "Costeletas do cachaço de porco", qty: "800 g", price: 4.19, per: "kg", amount: 0.8, label: "4,19 €/kg" },
+                { item: "Maçã Golden nacional", qty: "500 g", price: 1.19, per: "kg", amount: 0.5, label: "1,19 €/kg" },
+                { item: "Dentes de alho e tomilho seco", qty: "3 dentes" },
+                { item: "Azeite, sal e pimenta preta", qty: "q.b." }
+              ],
+              steps: [
+                "Tempera as costeletas com sal, pimenta, alho esmagado e tomilho.",
+                "Grelha a carne numa frigideira quente com um fio de azeite durante 5 minutos de cada lado até dourar.",
+                "Retira a carne e, na mesma frigideira, salteia a maçã Golden cortada em fatias grossas durante 4 minutos até caramelizar.",
+                "Serve as costeletas cobertas com a maçã dourada e o molho da frigideira."
+              ]
+            },
+            {
+              slot: 2,
+              name: "Sopa Cremosa de Couve-Flor e Batata Vermelha com Azeite",
+              description: "Creme aveludado e reconfortante com couve-flor fresca (1,29 €/kg) e batata vermelha (0,89 €/kg).",
+              servings: "5 pessoas",
+              time: "30 min",
+              image: "https://images.pexels.com/photos/539451/pexels-photo-539451.jpeg?auto=compress&cs=tinysrgb&w=900",
+              imageCredit: { name: "foodie factor", url: "https://www.pexels.com" },
+              ingredients: [
+                { item: "Couve-flor fresca inteira", qty: "800 g", price: 1.29, per: "kg", amount: 0.8, label: "1,29 €/kg" },
+                { item: "Batata vermelha para cozer", qty: "600 g", price: 0.89, per: "kg", amount: 0.6, label: "0,89 €/kg" },
+                { item: "Cebola grande e 2 dentes de alho", qty: "1 unid." },
+                { item: "Azeite virgem extra e noz-moscada", qty: "2 c. sopa" }
+              ],
+              steps: [
+                "Numa panela, refoga a cebola e o alho picados em azeite durante 5 minutos sem deixar queimar.",
+                "Adiciona a batata vermelha em cubos e os raminhos de couve-flor lavados; cobre com água quente e sal.",
+                "Deixa cozer com a panela tapada durante 20 minutos até os legumes estarem muito macios.",
+                "Tritura tudo com a varinha mágica até obter um creme sedoso e finaliza com um fio de azeite cru."
+              ]
+            }
+          ]
+        },
+        {
+          name: "Intermarché",
+          from: "2026-10-15",
+          to: "2026-10-21",
+          flyer: "Folheto 15–21 out.",
+          sources: [{ title: "Blog 200 — Folheto Intermarché Frescos", url: "https://blog200porcento.com/tag/intermarch%C3%A9" }],
+          promos: [
+            { id: "carapau-pequeno", name: "Carapau pequeno fresco", price: 3.49, per: "kg", note: "folheto" },
+            { id: "batata-saco-5kg", name: "Batata de conservação (saco 5 kg)", price: 0.37, per: "kg", label: "3,79 €/saco 5kg", note: "folheto" },
+            { id: "salmao-posta", name: "Salmão de viveiro fresco em posta", price: 11.90, per: "kg", note: "folheto" },
+            { id: "manteiga-milhafre", name: "Manteiga dos Açores Milhafre", price: 1.99, per: "un", label: "1,99 €/unid.", note: "folheto" },
+            { id: "brocolos-inter", name: "Brócolos frescos", price: 1.49, per: "kg", note: "folheto" },
+            { id: "laranja-algarve", name: "Laranja do Algarve", price: 1.29, per: "kg", note: "folheto" }
+          ],
+          recipes: [
+            {
+              slot: 1,
+              name: "Carapau frito com batatas cozidas",
+              description: "Carapau pequeno fresco a 3,49 €/kg com batatas do saco de 5 kg a 3,79 €.",
+              servings: "4 pessoas",
+              time: "35 min",
+              image: "https://images.pexels.com/photos/8969237/pexels-photo-8969237.jpeg?auto=compress&cs=tinysrgb&w=900",
+              imageCredit: { name: "Pexels Chef", url: "https://www.pexels.com" },
+              ingredients: [
+                { item: "Carapau pequeno fresco", qty: "1,0 kg", price: 3.49, per: "kg", amount: 1.0, label: "3,49 €/kg" },
+                { item: "Batatas (do saco de 5 kg a 3,79 €)", qty: "1,2 kg", price: 1.85, per: "un", amount: 1, label: "1,85 € (fração saco)" },
+                { item: "Farinha de milho ou trigo para fritar", qty: "80 g" },
+                { item: "Dentes de alho, salsa e vinagre (Molho Vilão)", qty: "q.b." },
+                { item: "Óleo para fritar e azeite", qty: "q.b." }
+              ],
+              steps: [
+                "Limpa os carapaus pequenos e tempera com sal marinho durante 15 minutos.",
+                "Lava e descasca as batatas, cortando-as ao meio. Coze em água com sal durante 20 minutos.",
+                "Passa os carapaus por farinha, sacode o excesso e frita em óleo bem quente durante 4 minutos de cada lado até ficarem dourados e estaladiços.",
+                "Prepara o molho vilão picando o alho e a salsa com azeite e um toque de vinagre, regando o peixe na hora de servir."
+              ]
+            },
+            {
+              slot: 2,
+              name: "Posta de salmão com batatas e manteiga",
+              description: "Salmão de viveiro fresco em posta com batatas e manteiga Milhafre (1,99 €).",
+              servings: "3 pessoas",
+              time: "35 min",
+              image: "https://images.pexels.com/photos/46239/salmon-dish-food-meal-46239.jpeg?auto=compress&cs=tinysrgb&w=900",
+              imageCredit: { name: "Pixabay / Pexels", url: "https://www.pexels.com" },
+              ingredients: [
+                { item: "Salmão de viveiro fresco em posta", qty: "500 g", price: 11.30, per: "kg", amount: 0.5, label: "11,30 €/kg" },
+                { item: "Manteiga Milhafre dos Açores", qty: "1 emb.", price: 1.99, per: "un", amount: 1, label: "1,99 €/unid." },
+                { item: "Batatas e brócolos para acompanhar", qty: "800 g", price: 1.85, per: "un", amount: 1, label: "1,85 €" },
+                { item: "Cebola roxa, alho e sumo de limão", qty: "q.b." },
+                { item: "Sal marinho e pimenta preta", qty: "q.b." }
+              ],
+              steps: [
+                "Coze as batatas e os raminhos de brócolos em água temperada com sal durante 15 minutos até ficarem tenros.",
+                "Seca bem as postas de salmão e tempera com sal e pimenta preta moída na hora.",
+                "Numa frigideira antiaderente bem quente, grelha o salmão durante 4 minutos de cada lado.",
+                "Junta uma colher generosa de manteiga Milhafre e sumo de limão na frigideira durante 1 minuto para envolver o salmão e as batatas."
+              ]
+            }
+          ]
+        }
+      ]
+    };
+
+    // Estado Global da Aplicação
+    let appData = FALLBACK_MENU_DATA;
+    let selectedTab = "Intermarché"; // Pode ser o nome de um supermercado ou "ALL" (Todos / Mais Baratos)
+    let customServings = null;       // null = usa a dose original da receita; número (1..8) = escala todas as receitas
+    let sortMode = "default";
+    let showPromosGrid = false;
+    let promoSearchQuery = "";
+
+    // Persistência LocalStorage
+    let cart = JSON.parse(localStorage.getItem('menu_dia_cart_v2') || '[]');
+    let completedSteps = JSON.parse(localStorage.getItem('menu_dia_steps_v2') || '{}');
+    let includePantryInCart = JSON.parse(localStorage.getItem('menu_dia_pantry_toggle') ?? 'true');
+
+    // Estado do Modal e Temporizador
+    let currentModalContext = null; // { recipe, marketName, activeServings }
+    let timerInterval = null;
+    let timerSecondsLeft = 0;
+    let timerPaused = false;
+
+    // Utilitário: Data de hoje em formato YYYY-MM-DD (Fuso horário de Lisboa)
+    const todayISO = new Date().toLocaleDateString("en-CA", { timeZone: "Europe/Lisbon" });
+
+    // ==================== INICIALIZAÇÃO E TEMA ESCURO ====================
+    function initTheme() {
+      const savedTheme = localStorage.getItem('menu_dia_theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const isDark = savedTheme === 'dark' || (!savedTheme && prefersDark);
+      document.documentElement.classList.toggle('dark', isDark);
+      updateThemeIcon(isDark);
+    }
+
+    function updateThemeIcon(isDark) {
+      const icon = document.getElementById('theme-icon');
+      icon.className = isDark ? 'ph-bold ph-sun text-lg text-amber-400' : 'ph-bold ph-moon text-lg';
+    }
+
+    function toggleTheme() {
+      const isDark = document.documentElement.classList.toggle('dark');
+      localStorage.setItem('menu_dia_theme', isDark ? 'dark' : 'light');
+      updateThemeIcon(isDark);
+    }
+
+    // Saudação dinâmica e data em PT-PT
+    function setupGreetingAndDate() {
+      const now = new Date();
+      const dateStr = now.toLocaleDateString('pt-PT', { weekday: 'long', day: 'numeric', month: 'long' });
+      document.getElementById('current-date-label').textContent = dateStr;
+
+      const hour = now.getHours();
+      let greeting = "Boa tarde, o que vais cozinhar hoje?";
+      if (hour >= 5 && hour < 12) greeting = "Bom dia, o que vais cozinhar hoje?";
+      else if (hour >= 20 || hour < 5) greeting = "Boa noite, o que vais cozinhar hoje?";
+      document.getElementById('greeting-title').textContent = greeting;
+    }
+
+    // Tenta carregar `/api/data/menu.json` se existir no servidor; caso contrário mantém o fallback
+    async function loadExternalMenuJson() {
+      try {
+        const res = await fetch('api/data/menu.json', { cache: 'no-store' });
+        if (res.ok) {
+          const json = await res.json();
+          if (json && Array.isArray(json.markets) && json.markets.length > 0) {
+            appData = json;
+            // Seleciona o primeiro supermercado com receitas válidas
+            selectedTab = appData.markets[0].name;
+          }
+        }
+      } catch (_) {
+        // Mantém FALLBACK_MENU_DATA silenciosamente em modo preview
+      }
+      renderAll();
+    }
+
+    // ==================== CÁLCULOS DE CUSTO E ESCALA DE DOSES ====================
+    function getBaseServings(recipe) {
+      const match = String(recipe.servings || "4").match(/\d+/);
+      return match ? Math.max(1, parseInt(match[0], 10)) : 4;
+    }
+
+    function calculateRecipeMetrics(recipe, targetServings = null) {
+      const baseServings = getBaseServings(recipe);
+      const activeServings = targetServings || customServings || baseServings;
+      const ratio = activeServings / baseServings;
+
+      let baseTotal = 0;
+      recipe.ingredients.forEach(ing => {
+        if (ing.price) {
+          baseTotal += Number(ing.price) * Number(ing.amount || 1);
+        }
+      });
+
+      const scaledTotal = baseTotal * ratio;
+      const perDose = activeServings > 0 ? (scaledTotal / activeServings) : 0;
+
+      // Extrair minutos para ordenação
+      const minMatch = String(recipe.time || "35").match(/\d+/);
+      const minutes = minMatch ? parseInt(minMatch[0], 10) : 35;
+
+      return {
+        baseServings,
+        activeServings,
+        ratio,
+        totalNum: scaledTotal,
+        perDoseNum: perDose,
+        totalFormatted: scaledTotal.toFixed(2).replace('.', ',') + ' €',
+        perDoseFormatted: perDose.toFixed(2).replace('.', ',') + ' €/dose',
+        minutes
+      };
+    }
+
+    // Escala quantidades textuais (ex: "800 g" -> "400 g" quando ratio = 0.5)
+    function scaleQtyText(qtyStr, ratio) {
+      if (!qtyStr || Math.abs(ratio - 1) < 0.01) return qtyStr;
+      return String(qtyStr).replace(/(\d+(?:[.,]\d+)?)/g, (match) => {
+        const val = parseFloat(match.replace(',', '.')) * ratio;
+        if (val >= 10) return Math.round(val).toString();
+        const rounded = Math.round(val * 10) / 10;
+        return String(rounded).replace('.', ',');
+      });
+    }
+
+    // ==================== RENDERIZAÇÃO DE NAVEGAÇÃO E ESTADO DO FOLHETO ====================
+    function renderMarketsNav() {
+      const nav = document.getElementById('markets-nav');
+      nav.innerHTML = '';
+
+      // 1. Botão Comparador "Todos / Mais Baratos"
+      const isAll = selectedTab === "ALL";
+      const allBtn = document.createElement('button');
+      allBtn.className = `flex-shrink-0 inline-flex items-center gap-2 px-4 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all ${
+        isAll
+          ? 'bg-stone-900 dark:bg-white text-white dark:text-stone-950 shadow-md scale-[1.02]'
+          : 'bg-white dark:bg-stone-900 hover:bg-stone-100 dark:hover:bg-stone-800 text-stone-700 dark:text-stone-300 border border-stone-200/90 dark:border-stone-800'
+      }`;
+      allBtn.innerHTML = `
+        <i class="ph-bold ph-ranking text-amber-500 text-sm"></i>
+        <span>Todos os Supermercados</span>
+      `;
+      allBtn.onclick = () => {
+        selectedTab = "ALL";
+        renderAll();
+      };
+      nav.appendChild(allBtn);
+
+      // 2. Pills de cada Supermercado (fiel ao estilo limpo da captura de ecrã)
+      appData.markets.forEach(market => {
+        const isSelected = selectedTab === market.name;
+        const style = MARKET_STYLES[market.name] || MARKET_STYLES["Continente"];
+        const btn = document.createElement('button');
+
+        btn.className = `flex-shrink-0 inline-flex items-center gap-2 px-4 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all ${
+          isSelected
+            ? `${style.activeBg} shadow-md scale-[1.02]`
+            : 'bg-white dark:bg-stone-900 hover:bg-stone-100 dark:hover:bg-stone-800 text-stone-700 dark:text-stone-300 border border-stone-200/90 dark:border-stone-800'
+        }`;
+
+        btn.innerHTML = `
+          <span class="w-2.5 h-2.5 rounded-full ${isSelected ? 'bg-white' : style.dot}"></span>
+          <span>${market.name}</span>
+        `;
+
+        btn.onclick = () => {
+          selectedTab = market.name;
+          renderAll();
+        };
+        nav.appendChild(btn);
+      });
+    }
+
+    function updateFlyerStatusHeader() {
+      const statusPill = document.getElementById('flyer-status-pill');
+      const statusDot = document.getElementById('flyer-status-dot');
+      const badgeText = document.getElementById('flyer-badge-text');
+      const footerMeta = document.getElementById('footer-flyer-meta');
+      const accentBar = document.getElementById('market-accent-bar');
+      const logoBox = document.getElementById('brand-logo-box');
+
+      if (selectedTab === "ALL") {
+        accentBar.className = "w-2 h-6 rounded-full bg-emerald-600";
+        logoBox.className = "w-10 h-10 rounded-xl bg-emerald-600 text-white flex items-center justify-center font-black text-xl shadow-sm transition-colors";
+        statusPill.className = "inline-flex items-center gap-2 text-xs font-semibold px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800";
+        statusDot.className = "w-2 h-2 rounded-full bg-emerald-500";
+        badgeText.textContent = `${appData.markets.length} supermercados comparados`;
+        footerMeta.innerHTML = `<span>Comparador global de folhetos semanais · Confirma sempre os preços na loja</span>`;
+        return;
+      }
+
+      const market = appData.markets.find(m => m.name === selectedTab) || appData.markets[0];
+      const style = MARKET_STYLES[market.name] || MARKET_STYLES["Continente"];
+      accentBar.className = `w-2 h-6 rounded-full ${style.bar} transition-colors`;
+
+      const isExpired = market.to && market.to < todayISO;
+      const dmTo = market.to ? `${market.to.slice(8, 10)}/${market.to.slice(5, 7)}` : "";
+
+      if (isExpired) {
+        statusPill.className = "inline-flex items-center gap-2 text-xs font-semibold px-3 py-1 rounded-full bg-amber-50 dark:bg-amber-950/80 text-amber-800 dark:text-amber-300 border border-amber-200 dark:border-amber-800";
+        statusDot.className = "w-2 h-2 rounded-full bg-amber-500";
+        badgeText.textContent = `${market.flyer || 'Folheto'} · Expirado em ${dmTo} (aguarda novo)`;
+      } else {
+        statusPill.className = "inline-flex items-center gap-2 text-xs font-semibold px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800";
+        statusDot.className = "w-2 h-2 rounded-full bg-emerald-500";
+        badgeText.textContent = `${market.flyer || 'Folheto em vigor'} · Válido até ${dmTo}`;
+      }
+
+      const sourceLink = market.sources?.[0]?.url
+        ? `<a href="${market.sources[0].url}" target="_blank" rel="noopener" class="underline hover:text-stone-800 dark:hover:text-stone-200">${market.flyer || 'Ver fonte do folheto'}</a>`
+        : `<span>${market.flyer || 'Folheto semanal'}</span>`;
+
+      footerMeta.innerHTML = `
+        ${sourceLink}
+        <span>·</span>
+        <span class="${isExpired ? 'text-amber-600 dark:text-amber-400 font-medium' : ''}">
+          ${isExpired ? `Folheto expirado em ${dmTo} — preços podem ter mudado` : `Folheto válido até ${dmTo}`}
+        </span>
+      `;
+    }
+
+    // ==================== RENDERIZAÇÃO DOS CARTÕES DE RECEITAS ====================
+    function renderRecipes() {
+      const container = document.getElementById('recipes-container');
+      const titleEl = document.getElementById('section-market-title');
+      const countBadge = document.getElementById('recipes-count-badge');
+      container.innerHTML = '';
+
+      // Recolher lista de receitas a exibir
+      let list = [];
+      if (selectedTab === "ALL") {
+        titleEl.textContent = "Todas as Receitas da Semana";
+        appData.markets.forEach(m => {
+          (m.recipes || []).forEach(r => {
+            list.push({ recipe: r, market: m });
+          });
+        });
+      } else {
+        const market = appData.markets.find(m => m.name === selectedTab) || appData.markets[0];
+        titleEl.textContent = `Menu ${market.name}`;
+        (market.recipes || []).forEach(r => {
+          list.push({ recipe: r, market });
+        });
+      }
+
+      // Ordenar receitas conforme seleção
+      list.sort((a, b) => {
+        const ma = calculateRecipeMetrics(a.recipe);
+        const mb = calculateRecipeMetrics(b.recipe);
+        if (sortMode === 'dose_asc') return ma.perDoseNum - mb.perDoseNum;
+        if (sortMode === 'total_asc') return ma.totalNum - mb.totalNum;
+        if (sortMode === 'time_asc') return ma.minutes - mb.minutes;
+        return (a.recipe.slot || 1) - (b.recipe.slot || 1);
+      });
+
+      countBadge.textContent = `${list.length} ${list.length === 1 ? 'prato' : 'pratos'}`;
+
+      list.forEach(({ recipe, market }) => {
+        const metrics = calculateRecipeMetrics(recipe);
+        const isMain = recipe.slot === 1;
+        const mStyle = MARKET_STYLES[market.name] || MARKET_STYLES["Continente"];
+        const promoIngredients = recipe.ingredients.filter(x => x.price);
+
+        const card = document.createElement('article');
+        card.className = "group bg-white dark:bg-stone-900 rounded-3xl border border-stone-200/90 dark:border-stone-800 shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden";
+
+        card.innerHTML = `
+          <!-- Barra superior de cor do supermercado -->
+          <div class="h-1.5 w-full ${mStyle.bar}"></div>
+
+          <!-- Imagem com proporção 16:10 e fallback elegante -->
+          <div class="relative w-full aspect-[16/10] bg-stone-100 dark:bg-stone-800 overflow-hidden cursor-pointer open-modal-trigger">
+            <img 
+              src="${recipe.image || ''}" 
+              alt="${recipe.name}" 
+              loading="lazy"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ${recipe.image ? '' : 'hidden'}"
+              onerror="this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden');"
+            />
+            <!-- Fallback visual rico se não houver foto ou falhar -->
+            <div class="${recipe.image ? 'hidden' : ''} w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-stone-100 via-stone-50 to-stone-200 dark:from-stone-800 dark:via-stone-900 dark:to-stone-800 p-6 text-center">
+              <div class="w-14 h-14 rounded-2xl bg-white dark:bg-stone-700/80 shadow-xs flex items-center justify-center mb-2.5">
+                <i class="ph-duotone ph-ForkKnife text-3xl text-emerald-600 dark:text-emerald-400"></i>
+              </div>
+              <span class="text-xs font-bold text-stone-600 dark:text-stone-300">${market.name} · ${isMain ? 'Prato Principal' : 'Alternativa'}</span>
+              <span class="text-[11px] text-stone-400 dark:text-stone-500 mt-0.5">Receita económica verificada</span>
+            </div>
+
+            <!-- Etiquetas superiores na imagem -->
+            <div class="absolute top-3.5 left-3.5 flex flex-wrap items-center gap-1.5">
+              <span class="px-3 py-1 rounded-full text-[11px] font-bold tracking-tight shadow-sm ${
+                isMain 
+                  ? 'bg-stone-900/90 text-white backdrop-blur-xs' 
+                  : 'bg-white/95 text-stone-800 backdrop-blur-xs'
+              }">
+                ${isMain ? 'Prato principal' : 'Alternativa'}
+              </span>
+              ${selectedTab === "ALL" ? `
+                <span class="px-2.5 py-1 rounded-full text-[11px] font-extrabold ${mStyle.activeBg} shadow-sm">
+                  ${market.name}
+                </span>
+              ` : ''}
+            </div>
+
+            <!-- Etiqueta de Tempo -->
+            <div class="absolute bottom-3 right-3 bg-stone-950/75 backdrop-blur-xs text-white px-2.5 py-1 rounded-xl text-xs font-semibold flex items-center gap-1.5">
+              <i class="ph-bold ph-clock text-emerald-400"></i>
+              <span>${recipe.time}</span>
+            </div>
+          </div>
+
+          <!-- Conteúdo do Cartão (Fiel à hierarquia limpa do Menu do Dia) -->
+          <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <!-- Cabeçalho: Categoria + Título à esquerda | Preço grande + Pessoas à direita -->
+              <div class="flex items-start justify-between gap-4">
+                <div class="flex-1">
+                  <span class="text-xs font-semibold text-stone-400 dark:text-stone-500 block mb-0.5">
+                    ${isMain ? 'Prato principal' : 'Alternativa'} · ${market.name}
+                  </span>
+                  <h3 class="text-lg sm:text-xl font-extrabold text-stone-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors leading-snug cursor-pointer open-modal-trigger">
+                    ${recipe.name}
+                  </h3>
+                </div>
+
+                <div class="text-right flex-shrink-0">
+                  <span class="text-2xl sm:text-[26px] font-black text-stone-900 dark:text-white tracking-tight leading-none block">
+                    ${metrics.totalFormatted}
+                  </span>
+                  <span class="text-xs font-medium text-stone-400 dark:text-stone-500 block mt-1">
+                    ${metrics.activeServings} pessoas (${metrics.perDoseFormatted})
+                  </span>
+                </div>
+              </div>
+
+              <!-- Descrição com os preços dos produtos em promoção -->
+              <p class="text-xs sm:text-sm text-stone-500 dark:text-stone-400 mt-2.5 leading-relaxed">
+                ${recipe.description}
+              </p>
+
+              <!-- Tags rápidas dos produtos em promoção usados -->
+              <div class="mt-4 flex flex-wrap gap-1.5">
+                ${promoIngredients.map(p => `
+                  <span class="inline-flex items-center gap-1.5 text-[11px] bg-stone-100 dark:bg-stone-800/90 text-stone-700 dark:text-stone-300 px-2.5 py-1 rounded-lg font-medium border border-stone-200/60 dark:border-stone-700/60">
+                    <span class="w-1.5 h-1.5 rounded-full ${mStyle.dot}"></span>
+                    <span class="truncate max-w-[165px]">${p.item}</span>
+                    <strong class="font-bold text-stone-900 dark:text-white">${p.label || (Number(p.price).toFixed(2).replace('.', ',') + ' €/' + (p.per || 'un'))}</strong>
+                  </span>
+                `).join('')}
+              </div>
+            </div>
+
+            <!-- Botões Inferiores: "Ver receita" (Pílula escura) + "Adicionar à lista" -->
+            <div class="mt-6 pt-4 border-t border-stone-100 dark:border-stone-800/80 flex items-center gap-3">
+              <button class="open-modal-trigger flex-1 py-3 px-5 rounded-full bg-stone-900 dark:bg-emerald-600 hover:bg-stone-800 dark:hover:bg-emerald-500 text-white font-bold text-xs sm:text-sm transition-all active:scale-95 shadow-xs text-center">
+                Ver receita
+              </button>
+              <button class="quick-add-cart-btn flex-1 py-3 px-4 rounded-full hover:bg-stone-100 dark:hover:bg-stone-800 text-stone-700 dark:text-stone-300 font-bold text-xs sm:text-sm transition-all active:scale-95 text-center border border-transparent hover:border-stone-200 dark:hover:border-stone-700">
+                Adicionar à lista
+              </button>
+            </div>
+          </div>
+        `;
+
+        // Eventos nos elementos do cartão
+        card.querySelectorAll('.open-modal-trigger').forEach(el => {
+          el.addEventListener('click', () => openRecipeModal(recipe, market.name));
+        });
+
+        card.querySelector('.quick-add-cart-btn').addEventListener('click', () => {
+          addRecipeToCart(recipe, market.name, metrics.ratio);
+        });
+
+        container.appendChild(card);
+      });
+    }
+
+    // ==================== SECÇÃO: TODAS AS PROMOÇÕES DO FOLHETO ====================
+    function renderFlyerPromos() {
+      const section = document.getElementById('flyer-promos-section');
+      const titleEl = document.getElementById('promos-drawer-title');
+      const countPill = document.getElementById('promos-total-pill');
+      const grid = document.getElementById('promos-grid');
+
+      // Reunir promoções do supermercado selecionado ou de todos
+      let promosList = [];
+      if (selectedTab === "ALL") {
+        titleEl.textContent = "Todos os Produtos em Promoção nos Folhetos";
+        appData.markets.forEach(m => {
+          (m.promos || []).forEach(p => promosList.push({ ...p, marketName: m.name }));
+        });
+      } else {
+        const market = appData.markets.find(m => m.name === selectedTab) || appData.markets[0];
+        titleEl.textContent = `Produtos em Promoção no Folheto ${market.name}`;
+        (market.promos || []).forEach(p => promosList.push({ ...p, marketName: market.name }));
+      }
+
+      // Filtrar por pesquisa
+      const q = promoSearchQuery.trim().toLowerCase();
+      const filtered = q
+        ? promosList.filter(p => p.name.toLowerCase().includes(q) || p.marketName.toLowerCase().includes(q))
+        : promosList;
+
+      countPill.textContent = `${filtered.length} ${filtered.length === 1 ? 'item' : 'itens'}`;
+      grid.innerHTML = '';
+
+      if (filtered.length === 0) {
+        grid.innerHTML = `
+          <div class="col-span-full py-6 text-center text-xs text-stone-400">
+            Nenhum produto em promoção encontrado para "${promoSearchQuery}".
+          </div>
+        `;
+        return;
+      }
+
+      filtered.forEach(promo => {
+        const mStyle = MARKET_STYLES[promo.marketName] || MARKET_STYLES["Continente"];
+        const priceLabel = promo.label || `${Number(promo.price).toFixed(2).replace('.', ',')} €/${promo.per || 'un'}`;
+
+        const itemCard = document.createElement('div');
+        itemCard.className = "flex items-center justify-between p-3 rounded-2xl bg-white dark:bg-stone-900 border border-stone-200/80 dark:border-stone-800 hover:border-emerald-500/60 transition-all shadow-2xs";
+
+        itemCard.innerHTML = `
+          <div class="min-w-0 pr-2">
+            <div class="flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full ${mStyle.dot} flex-shrink-0"></span>
+              <span class="text-xs sm:text-sm font-bold text-stone-900 dark:text-white truncate">${promo.name}</span>
+            </div>
+            <div class="flex items-center gap-2 mt-1">
+              <span class="text-xs font-extrabold text-emerald-700 dark:text-emerald-400">${priceLabel}</span>
+              <span class="text-[10px] text-stone-400 font-medium">${promo.marketName}</span>
+            </div>
+          </div>
+          <button class="add-single-promo-btn flex-shrink-0 w-8 h-8 rounded-xl bg-stone-100 dark:bg-stone-800 hover:bg-emerald-600 hover:text-white text-stone-700 dark:text-stone-200 flex items-center justify-center transition-colors" title="Adicionar à lista de compras">
+            <i class="ph-bold ph-plus text-sm"></i>
+          </button>
+        `;
+
+        itemCard.querySelector('.add-single-promo-btn').addEventListener('click', () => {
+          addSinglePromoToCart(promo);
+        });
+
+        grid.appendChild(itemCard);
+      });
+    }
+
+    // ==================== MODAL DE RECEITA & TEMPORIZADOR INTEGRADO ====================
+    function openRecipeModal(recipe, marketName, overrideServings = null) {
+      const baseServings = getBaseServings(recipe);
+      const activeServings = overrideServings || customServings || baseServings;
+      currentModalContext = { recipe, marketName, activeServings };
+
+      const metrics = calculateRecipeMetrics(recipe, activeServings);
+
+      document.getElementById('modal-title').textContent = recipe.name;
+      document.getElementById('modal-badge-slot').textContent = recipe.slot === 1 ? 'Prato Principal' : 'Alternativa';
+      document.getElementById('modal-badge-market').textContent = marketName;
+      document.getElementById('modal-desc').textContent = recipe.description;
+      document.getElementById('modal-time').textContent = recipe.time;
+      document.getElementById('modal-servings').textContent = activeServings;
+      document.getElementById('modal-total-price').textContent = metrics.totalFormatted;
+      document.getElementById('modal-price-per-serving').textContent = metrics.perDoseFormatted;
+
+      const creditEl = document.getElementById('modal-photo-credit');
+      creditEl.textContent = recipe.imageCredit?.name ? `Foto: ${recipe.imageCredit.name} (Pexels)` : '';
+
+      // Imagem do modal com fallback
+      const modalImg = document.getElementById('modal-img');
+      const fallback = document.getElementById('modal-img-fallback');
+      if (recipe.image) {
+        modalImg.classList.remove('hidden');
+        fallback.classList.add('hidden');
+        modalImg.src = recipe.image;
+        modalImg.onerror = () => {
+          modalImg.classList.add('hidden');
+          fallback.classList.remove('hidden');
+        };
+      } else {
+        modalImg.classList.add('hidden');
+        fallback.classList.remove('hidden');
+      }
+
+      // Renderizar Ingredientes com quantidades escaladas
+      const promoContainer = document.getElementById('modal-promo-ingredients');
+      const pantryContainer = document.getElementById('modal-pantry-ingredients');
+      promoContainer.innerHTML = '';
+      pantryContainer.innerHTML = '';
+
+      recipe.ingredients.forEach(ing => {
+        const scaledQty = scaleQtyText(ing.qty, metrics.ratio);
+        if (ing.price) {
+          const itemCost = (Number(ing.price) * Number(ing.amount || 1) * metrics.ratio).toFixed(2).replace('.', ',') + ' €';
+          const row = document.createElement('div');
+          row.className = 'flex items-center justify-between p-3 rounded-xl bg-emerald-50/70 dark:bg-emerald-950/40 border border-emerald-200/70 dark:border-emerald-800/60 text-xs sm:text-sm';
+          row.innerHTML = `
+            <div class="flex items-center gap-2.5">
+              <span class="w-2 h-2 rounded-full bg-emerald-600"></span>
+              <span class="font-bold text-stone-900 dark:text-white">${ing.item}</span>
+              <span class="text-stone-500 dark:text-stone-400 font-semibold">(${scaledQty})</span>
+            </div>
+            <div class="text-right">
+              <span class="font-extrabold text-emerald-800 dark:text-emerald-300 bg-white dark:bg-stone-900 px-2.5 py-0.5 rounded-lg border border-emerald-200 dark:border-emerald-800 text-xs">
+                ${itemCost}
+              </span>
+            </div>
+          `;
+          promoContainer.appendChild(row);
+        } else {
+          const row = document.createElement('div');
+          row.className = 'flex items-center gap-2 py-1 px-2 rounded-lg bg-stone-50 dark:bg-stone-800/40';
+          row.innerHTML = `
+            <span class="w-1.5 h-1.5 rounded-full bg-stone-400"></span>
+            <span class="text-stone-700 dark:text-stone-300 font-medium">${ing.item}</span>
+            <span class="text-stone-400 dark:text-stone-500 text-xs">(${scaledQty})</span>
+          `;
+          pantryContainer.appendChild(row);
+        }
+      });
+
+      // Renderizar Passos com deteção automática de minutos para Temporizador
+      const stepsContainer = document.getElementById('modal-steps-container');
+      stepsContainer.innerHTML = '';
+
+      recipe.steps.forEach((stepText, idx) => {
+        const stepKey = `${marketName}_${recipe.name}_${idx}`;
+        const isDone = !!completedSteps[stepKey];
+
+        // Detetar expressões como "15 min", "20 minutos", "45 a 50 minutos"
+        const timeMatch = stepText.match(/(\d+)\s*(?:a\s*(\d+)\s*)?(?:minuto|minutos|min\b)/i);
+        const detectedMinutes = timeMatch ? parseInt(timeMatch[2] || timeMatch[1], 10) : null;
+
+        const stepWrapper = document.createElement('div');
+        stepWrapper.className = `p-3.5 rounded-2xl border transition-all ${
+          isDone 
+            ? 'bg-stone-100/70 dark:bg-stone-800/30 border-stone-200 dark:border-stone-800 opacity-60' 
+            : 'bg-stone-50 dark:bg-stone-800/60 border-stone-200/80 dark:border-stone-700/70 hover:border-emerald-500/50'
+        }`;
+
+        stepWrapper.innerHTML = `
+          <div class="flex items-start gap-3 cursor-pointer step-toggle-area select-none">
+            <input type="checkbox" class="mt-1 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-stone-300 cursor-pointer" ${isDone ? 'checked' : ''}>
+            <div class="flex-1 text-xs sm:text-sm text-stone-700 dark:text-stone-200 leading-relaxed ${isDone ? 'line-through' : ''}">
+              <strong class="font-extrabold text-stone-900 dark:text-white mr-1">Passo ${idx + 1}.</strong>
+              <span>${stepText}</span>
+            </div>
+          </div>
+          ${detectedMinutes ? `
+            <div class="mt-2.5 pl-7 flex items-center">
+              <button class="start-step-timer-btn inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-emerald-100 dark:bg-emerald-950 hover:bg-emerald-600 hover:text-white text-emerald-800 dark:text-emerald-300 text-xs font-bold transition-colors border border-emerald-200 dark:border-emerald-800">
+                <i class="ph-bold ph-timer"></i>
+                <span>Iniciar temporizador (${detectedMinutes} min)</span>
+              </button>
+            </div>
+          ` : ''}
+        `;
+
+        const toggleArea = stepWrapper.querySelector('.step-toggle-area');
+        toggleArea.addEventListener('click', () => {
+          completedSteps[stepKey] = !completedSteps[stepKey];
+          localStorage.setItem('menu_dia_steps_v2', JSON.stringify(completedSteps));
+          openRecipeModal(recipe, marketName, activeServings);
+        });
+
+        if (detectedMinutes) {
+          stepWrapper.querySelector('.start-step-timer-btn').addEventListener('click', (e) => {
+            e.stopPropagation();
+            startKitchenTimer(detectedMinutes * 60, `${recipe.name} (Passo ${idx + 1})`);
+          });
+        }
+
+        stepsContainer.appendChild(stepWrapper);
+      });
+
+      document.getElementById('recipe-modal').classList.remove('hidden');
+      document.body.classList.add('overflow-hidden');
+    }
+
+    function closeRecipeModal() {
+      document.getElementById('recipe-modal').classList.add('hidden');
+      document.body.classList.remove('overflow-hidden');
+    }
+
+    // ==================== TEMPORIZADOR FLUTUANTE COM ALERTA SONORO ====================
+    function playTimerBeep() {
+      try {
+        const ctx = new (window.AudioContext || window.webkitAudioContext)();
+        [0, 0.25, 0.5].forEach(delay => {
+          const osc = ctx.createOscillator();
+          const gain = ctx.createGain();
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(880, ctx.currentTime + delay);
+          gain.gain.setValueAtTime(0.25, ctx.currentTime + delay);
+          gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + delay + 0.2);
+          osc.connect(gain);
+          gain.connect(ctx.destination);
+          osc.start(ctx.currentTime + delay);
+          osc.stop(ctx.currentTime + delay + 0.2);
+        });
+      } catch (_) {}
+    }
+
+    function updateTimerDisplay() {
+      const mins = Math.floor(timerSecondsLeft / 60);
+      const secs = timerSecondsLeft % 60;
+      document.getElementById('timer-countdown-display').textContent =
+        `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+    }
+
+    function startKitchenTimer(seconds, label) {
+      clearInterval(timerInterval);
+      timerSecondsLeft = seconds;
+      timerPaused = false;
+
+      document.getElementById('timer-step-label').textContent = label || 'Temporizador';
+      document.getElementById('floating-timer').classList.remove('hidden');
+      document.getElementById('timer-pause-icon').className = 'ph-bold ph-pause';
+      updateTimerDisplay();
+      showToast(`Temporizador iniciado: ${Math.round(seconds / 60)} min`);
+
+      timerInterval = setInterval(() => {
+        if (timerPaused) return;
+        timerSecondsLeft--;
+        updateTimerDisplay();
+
+        if (timerSecondsLeft <= 0) {
+          clearInterval(timerInterval);
+          playTimerBeep();
+          showToast(`⏰ Tempo esgotado: ${label}!`);
+        }
+      }, 1000);
+    }
+
+    // ==================== GESTÃO DA LISTA DE COMPRAS ====================
+    function saveCart() {
+      localStorage.setItem('menu_dia_cart_v2', JSON.stringify(cart));
+      const visibleItems = includePantryInCart ? cart : cart.filter(x => x.isPromo);
+      document.getElementById('cart-badge-count').textContent = visibleItems.length;
+      document.getElementById('cart-count-subtitle').textContent =
+        `${visibleItems.length} ${visibleItems.length === 1 ? 'artigo adicionado' : 'artigos adicionados'}`;
+    }
+
+    function addRecipeToCart(recipe, marketName, ratio = 1) {
+      recipe.ingredients.forEach(ing => {
+        const scaledQty = scaleQtyText(ing.qty, ratio);
+        const itemPrice = ing.price ? (Number(ing.price) * Number(ing.amount || 1) * ratio) : 0;
+
+        cart.push({
+          id: 'item_' + Date.now() + '_' + Math.random().toString(36).slice(2, 7),
+          item: ing.item,
+          qty: scaledQty,
+          price: itemPrice,
+          label: ing.label || null,
+          isPromo: !!ing.price,
+          marketName,
+          recipeName: recipe.name,
+          checked: false
+        });
+      });
+
+      saveCart();
+      renderCartItems();
+      showToast(`Ingredientes de "${recipe.name}" adicionados!`);
+    }
+
+    function addSinglePromoToCart(promo) {
+      cart.push({
+        id: 'promo_' + Date.now() + '_' + Math.random().toString(36).slice(2, 7),
+        item: promo.name,
+        qty: `1 ${promo.per || 'un'}`,
+        price: Number(promo.price) || 0,
+        label: promo.label || `${Number(promo.price).toFixed(2).replace('.', ',')} €/${promo.per || 'un'}`,
+        isPromo: true,
+        marketName: promo.marketName,
+        recipeName: 'Produto avulso do folheto',
+        checked: false
+      });
+
+      saveCart();
+      renderCartItems();
+      showToast(`"${promo.name}" adicionado à lista!`);
+    }
+
+    function renderCartItems() {
+      const container = document.getElementById('cart-items-container');
+      const totalEl = document.getElementById('cart-total-price');
+      container.innerHTML = '';
+
+      const filteredCart = includePantryInCart ? cart : cart.filter(i => i.isPromo);
+
+      if (filteredCart.length === 0) {
+        container.innerHTML = `
+          <div class="h-64 flex flex-col items-center justify-center text-center p-6 text-stone-400">
+            <i class="ph-duotone ph-shopping-cart text-6xl text-stone-300 dark:text-stone-700 mb-3"></i>
+            <p class="font-bold text-stone-700 dark:text-stone-300 text-sm">A tua lista de compras está vazia</p>
+            <p class="text-xs text-stone-500 dark:text-stone-400 mt-1 max-w-xs">
+              Adiciona receitas completas ou produtos individuais em promoção no folheto.
+            </p>
+          </div>
+        `;
+        totalEl.textContent = '0,00 €';
+        return;
+      }
+
+      // Agrupar por Supermercado
+      const byMarket = {};
+      filteredCart.forEach(item => {
+        if (!byMarket[item.marketName]) byMarket[item.marketName] = [];
+        byMarket[item.marketName].push(item);
+      });
+
+      let grandTotal = 0;
+
+      Object.keys(byMarket).forEach(mName => {
+        const items = byMarket[mName];
+        const mStyle = MARKET_STYLES[mName] || MARKET_STYLES["Continente"];
+        const marketSubtotal = items.reduce((acc, x) => acc + (x.price || 0), 0);
+        grandTotal += marketSubtotal;
+
+        const groupBlock = document.createElement('div');
+        groupBlock.className = 'space-y-2';
+        groupBlock.innerHTML = `
+          <div class="flex items-center justify-between pb-1.5 border-b border-stone-200 dark:border-stone-800">
+            <div class="flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full ${mStyle.dot}"></span>
+              <span class="text-xs font-extrabold uppercase tracking-wider text-stone-800 dark:text-stone-200">${mName}</span>
+            </div>
+            <span class="text-xs font-bold text-emerald-700 dark:text-emerald-400">
+              Subtotal: ${marketSubtotal.toFixed(2).replace('.', ',')} €
+            </span>
+          </div>
+        `;
+
+        const listWrap = document.createElement('div');
+        listWrap.className = 'space-y-2';
+
+        items.forEach(item => {
+          const row = document.createElement('div');
+          row.className = `flex items-center justify-between p-3 rounded-2xl border transition-all ${
+            item.checked
+              ? 'bg-stone-100/60 dark:bg-stone-800/30 border-stone-200 dark:border-stone-800 opacity-55'
+              : 'bg-white dark:bg-stone-800/80 border-stone-200/80 dark:border-stone-700/70 shadow-2xs'
+          }`;
+
+          row.innerHTML = `
+            <div class="flex items-center gap-3 flex-1 min-w-0 pr-2">
+              <input type="checkbox" class="w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-stone-300 cursor-pointer item-check" ${item.checked ? 'checked' : ''}>
+              <div class="min-w-0">
+                <span class="block text-xs sm:text-sm font-bold text-stone-900 dark:text-white truncate ${item.checked ? 'line-through' : ''}">
+                  ${item.item}
+                </span>
+                <div class="flex flex-wrap items-center gap-1.5 text-[11px] text-stone-500 dark:text-stone-400">
+                  <span>${item.qty}</span>
+                  ${item.label ? `<span class="text-emerald-700 dark:text-emerald-400 font-semibold">· ${item.label}</span>` : '<span>· Despensa</span>'}
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center gap-2 flex-shrink-0">
+              ${item.price > 0 ? `<span class="text-xs font-extrabold text-stone-900 dark:text-white">${item.price.toFixed(2).replace('.', ',')} €</span>` : ''}
+              <button class="text-stone-400 hover:text-red-500 p-1 remove-btn" title="Remover">
+                <i class="ph-bold ph-trash text-sm"></i>
+              </button>
+            </div>
+          `;
+
+          row.querySelector('.item-check').addEventListener('change', (e) => {
+            item.checked = e.target.checked;
+            saveCart();
+            renderCartItems();
+          });
+
+          row.querySelector('.remove-btn').addEventListener('click', () => {
+            cart = cart.filter(x => x.id !== item.id);
+            saveCart();
+            renderCartItems();
+          });
+
+          listWrap.appendChild(row);
+        });
+
+        groupBlock.appendChild(listWrap);
+        container.appendChild(groupBlock);
+      });
+
+      totalEl.textContent = grandTotal.toFixed(2).replace('.', ',') + ' €';
+    }
+
+    function buildFormattedCartText() {
+      const filteredCart = includePantryInCart ? cart : cart.filter(i => i.isPromo);
+      if (filteredCart.length === 0) return '';
+
+      let text = "🛒 *MENU DO DIA — LISTA DE COMPRAS*\n\n";
+      const byMarket = {};
+      filteredCart.forEach(item => {
+        if (!byMarket[item.marketName]) byMarket[item.marketName] = [];
+        byMarket[item.marketName].push(item);
+      });
+
+      let total = 0;
+      Object.keys(byMarket).forEach(m => {
+        text += `📍 *${m}*\n`;
+        byMarket[m].forEach(i => {
+          total += i.price || 0;
+          const priceStr = i.price > 0 ? ` — ${i.price.toFixed(2).replace('.', ',')} €` : '';
+          text += `${i.checked ? '✅' : '⬜'} ${i.item} (${i.qty})${priceStr}\n`;
+        });
+        text += '\n';
+      });
+      text += `💰 *Total Estimado:* ${total.toFixed(2).replace('.', ',')} €`;
+      return text;
+    }
+
+    // ==================== NOTIFICAÇÕES TOAST ====================
+    let toastTimeout = null;
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      document.getElementById('toast-message').textContent = message;
+      toast.classList.remove('translate-y-20', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+      clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => {
+        toast.classList.remove('translate-y-0', 'opacity-100');
+        toast.classList.add('translate-y-20', 'opacity-0');
+      }, 2600);
+    }
+
+    // ==================== RENDERIZAÇÃO GLOBAL ====================
+    function renderAll() {
+      renderMarketsNav();
+      updateFlyerStatusHeader();
+      renderRecipes();
+      renderFlyerPromos();
+      saveCart();
+    }
+
+    // ==================== EVENT LISTENERS ====================
+    function setupEvents() {
+      // Tema Claro/Escuro
+      document.getElementById('theme-toggle-btn').addEventListener('click', toggleTheme);
+
+      // Reset no Logótipo
+      document.getElementById('logo-reset').addEventListener('click', (e) => {
+        e.preventDefault();
+        selectedTab = appData.markets[0]?.name || "Intermarché";
+        customServings = null;
+        updateGlobalServingsUI();
+        renderAll();
+      });
+
+      // Controlo Global de Doses (1 a 8 pessoas)
+      function updateGlobalServingsUI() {
+        const valEl = document.getElementById('global-servings-val');
+        const labelEl = document.getElementById('global-servings-label');
+        const resetBtn = document.getElementById('scale-reset-btn');
+
+        if (customServings === null) {
+          valEl.textContent = "Auto";
+          labelEl.textContent = "Dose original da receita";
+          resetBtn.classList.add('hidden');
+        } else {
+          valEl.textContent = `${customServings} p.`;
+          labelEl.textContent = `Recalculado para ${customServings} ${customServings === 1 ? 'pessoa' : 'pessoas'}`;
+          resetBtn.classList.remove('hidden');
+        }
+      }
+
+      document.getElementById('scale-down-btn').addEventListener('click', () => {
+        const current = customServings || 4;
+        customServings = Math.max(1, current - 1);
+        updateGlobalServingsUI();
+        renderRecipes();
+      });
+
+      document.getElementById('scale-up-btn').addEventListener('click', () => {
+        const current = customServings || 4;
+        customServings = Math.min(8, current + 1);
+        updateGlobalServingsUI();
+        renderRecipes();
+      });
+
+      document.getElementById('scale-reset-btn').addEventListener('click', () => {
+        customServings = null;
+        updateGlobalServingsUI();
+        renderRecipes();
+      });
+
+      // Ordenação
+      document.getElementById('sort-select').addEventListener('change', (e) => {
+        sortMode = e.target.value;
+        renderRecipes();
+      });
+
+      // Expansão e Pesquisa de Todas as Promoções do Folheto
+      const togglePromosBtn = document.getElementById('toggle-promos-btn');
+      const promosWrapper = document.getElementById('promos-grid-wrapper');
+      const togglePromosText = document.getElementById('toggle-promos-text');
+      const togglePromosIcon = document.getElementById('toggle-promos-icon');
+
+      function setPromosOpen(open) {
+        showPromosGrid = open;
+        promosWrapper.classList.toggle('hidden', !open);
+        togglePromosText.textContent = open ? 'Ocultar' : 'Mostrar';
+        togglePromosIcon.classList.toggle('rotate-180', open);
+      }
+
+      togglePromosBtn.addEventListener('click', () => setPromosOpen(!showPromosGrid));
+
+      document.getElementById('promo-search-input').addEventListener('input', (e) => {
+        promoSearchQuery = e.target.value;
+        if (!showPromosGrid && promoSearchQuery.trim().length > 0) {
+          setPromosOpen(true);
+        }
+        renderFlyerPromos();
+      });
+
+      // Controlos de Doses dentro do Modal
+      document.getElementById('modal-servings-minus').addEventListener('click', () => {
+        if (!currentModalContext) return;
+        const next = Math.max(1, currentModalContext.activeServings - 1);
+        openRecipeModal(currentModalContext.recipe, currentModalContext.marketName, next);
+      });
+
+      document.getElementById('modal-servings-plus').addEventListener('click', () => {
+        if (!currentModalContext) return;
+        const next = Math.min(10, currentModalContext.activeServings + 1);
+        openRecipeModal(currentModalContext.recipe, currentModalContext.marketName, next);
+      });
+
+      // Fechar Modal de Receita
+      document.getElementById('close-modal-btn').addEventListener('click', closeRecipeModal);
+      document.getElementById('modal-close-footer-btn').addEventListener('click', closeRecipeModal);
+      document.getElementById('recipe-modal-backdrop').addEventListener('click', closeRecipeModal);
+
+      document.getElementById('modal-add-cart-action-btn').addEventListener('click', () => {
+        if (!currentModalContext) return;
+        const metrics = calculateRecipeMetrics(currentModalContext.recipe, currentModalContext.activeServings);
+        addRecipeToCart(currentModalContext.recipe, currentModalContext.marketName, metrics.ratio);
+        closeRecipeModal();
+      });
+
+      // Controlos do Temporizador Flutuante
+      document.getElementById('timer-pause-btn').addEventListener('click', () => {
+        timerPaused = !timerPaused;
+        document.getElementById('timer-pause-icon').className = timerPaused ? 'ph-bold ph-play' : 'ph-bold ph-pause';
+      });
+
+      document.getElementById('timer-add-min-btn').addEventListener('click', () => {
+        timerSecondsLeft += 60;
+        updateTimerDisplay();
+      });
+
+      document.getElementById('timer-close-btn').addEventListener('click', () => {
+        clearInterval(timerInterval);
+        document.getElementById('floating-timer').classList.add('hidden');
+      });
+
+      // Gaveta da Lista de Compras
+      const cartDrawer = document.getElementById('cart-drawer');
+      const cartBackdrop = document.getElementById('cart-backdrop');
+      const cartPanel = document.getElementById('cart-panel');
+
+      function openCartDrawer() {
+        cartDrawer.classList.remove('pointer-events-none');
+        cartBackdrop.classList.remove('pointer-events-none', 'opacity-0');
+        cartBackdrop.classList.add('opacity-100');
+        cartPanel.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+        renderCartItems();
+      }
+
+      function closeCartDrawer() {
+        cartBackdrop.classList.remove('opacity-100');
+        cartBackdrop.classList.add('opacity-0');
+        cartPanel.classList.add('translate-x-full');
+        setTimeout(() => {
+          cartDrawer.classList.add('pointer-events-none');
+          cartBackdrop.classList.add('pointer-events-none');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+
+      document.getElementById('open-cart-btn').addEventListener('click', openCartDrawer);
+      document.getElementById('close-cart-btn').addEventListener('click', closeCartDrawer);
+      cartBackdrop.addEventListener('click', closeCartDrawer);
+
+      // Toggle Despensa na Lista de Compras
+      const pantryToggle = document.getElementById('toggle-pantry-cart');
+      pantryToggle.checked = includePantryInCart;
+      pantryToggle.addEventListener('change', (e) => {
+        includePantryInCart = e.target.checked;
+        localStorage.setItem('menu_dia_pantry_toggle', JSON.stringify(includePantryInCart));
+        saveCart();
+        renderCartItems();
+      });
+
+      // Copiar Lista Formatada
+      document.getElementById('copy-cart-btn').addEventListener('click', () => {
+        const text = buildFormattedCartText();
+        if (!text) {
+          showToast('A lista está vazia!');
+          return;
+        }
+        const area = document.createElement('textarea');
+        area.value = text;
+        document.body.appendChild(area);
+        area.select();
+        try {
+          document.execCommand('copy');
+          showToast('Lista copiada para a área de transferência!');
+        } catch (_) {
+          showToast('Erro ao copiar lista.');
+        }
+        document.body.removeChild(area);
+      });
+
+      // Partilhar no WhatsApp
+      document.getElementById('whatsapp-share-btn').addEventListener('click', () => {
+        const text = buildFormattedCartText();
+        if (!text) {
+          showToast('Adiciona itens antes de partilhar!');
+          return;
+        }
+        const url = `https://wa.me/?text=${encodeURIComponent(text)}`;
+        window.open(url, '_blank', 'noopener');
+      });
+
+      // Limpar Lista
+      document.getElementById('clear-cart-btn').addEventListener('click', () => {
+        if (cart.length === 0) return;
+        cart = [];
+        saveCart();
+        renderCartItems();
+        showToast('Lista de compras limpa');
+      });
+
+      // Fechar modais com tecla Escape
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          closeRecipeModal();
+          closeCartDrawer();
+        }
+      });
+    }
+
+    // Arranque da Aplicação
+    window.addEventListener('DOMContentLoaded', () => {
+      initTheme();
+      setupGreetingAndDate();
+      setupEvents();
+      loadExternalMenuJson();
+    });
+  </script>
+</body>
+</html>
