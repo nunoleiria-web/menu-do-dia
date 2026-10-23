@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-22",
+  "updatedAt": "2026-10-23",
   "markets": [
     {
       "name": "Continente",
@@ -63,7 +63,12 @@
             "Misture tudo delicadamente até que os ingredientes estejam bem combinados.",
             "Sirva imediatamente como acompanhamento ou prato principal leve."
           ],
-          "imageQuery": "iberian salad with spinach and coriander"
+          "imageQuery": "iberian salad with spinach and coriander",
+          "image": "/meals/foto-continente-salada-iberica-com-espinafre-e-coentros-909f22b1.webp",
+          "imageCredit": {
+            "name": "Imagem gerada por IA",
+            "url": ""
+          }
         },
         {
           "slot": 2,
@@ -116,10 +121,10 @@
             "Retire do forno, adicione os grãos da Romã e o Amendoim Torrado, misturando delicadamente antes de servir."
           ],
           "imageQuery": "roasted sweet potatoes with pomegranate and peanuts",
-          "image": "/meals/foto-continente-batata-doce-assada-com-roma-e-amendoim.webp",
+          "image": "/meals/foto-continente-batata-doce-assada-com-roma-e-amendoim-16eb733e.webp",
           "imageCredit": {
-            "name": "Anthony Rahayel",
-            "url": "https://www.pexels.com/photo/delicious-stuffed-sweet-potato-with-feta-and-pomegranate-32127741/"
+            "name": "Imagem gerada por IA",
+            "url": ""
           }
         }
       ],
@@ -334,10 +339,10 @@
             "Sirva imediatamente."
           ],
           "imageQuery": "orange avocado salad",
-          "image": "/meals/foto-pingo-doce-salada-de-laranja-e-abacate.webp",
+          "image": "/meals/foto-pingo-doce-salada-de-laranja-e-abacate-34390831.webp",
           "imageCredit": {
-            "name": "Kiro Wang",
-            "url": "https://www.pexels.com/photo/a-salad-on-a-plate-7708515/"
+            "name": "Imagem gerada por IA",
+            "url": ""
           }
         },
         {
@@ -380,7 +385,12 @@
             "Escorra e reduza as batatas e os brócolos a purê, adicionando azeite e sal.",
             "Misture bem e sirva quente."
           ],
-          "imageQuery": "red potato puree with bimi broccoli"
+          "imageQuery": "red potato puree with bimi broccoli",
+          "image": "/meals/foto-pingo-doce-pure-de-batata-vermelha-com-brocolos-bimi-19708f7a.webp",
+          "imageCredit": {
+            "name": "Imagem gerada por IA",
+            "url": ""
+          }
         }
       ],
       "promos": [
@@ -564,10 +574,10 @@
             "Sirva o pernil fatiado com os cogumelos por cima."
           ],
           "imageQuery": "roasted pork with mushrooms",
-          "image": "/meals/foto-lidl-pernil-de-porco-assado-com-cogumelos.webp",
+          "image": "/meals/foto-lidl-pernil-de-porco-assado-com-cogumelos-74be0bdc.webp",
           "imageCredit": {
-            "name": "Luca Luperto",
-            "url": "https://www.pexels.com/photo/steak-served-in-a-restaurant-17216562/"
+            "name": "Imagem gerada por IA",
+            "url": ""
           }
         },
         {
@@ -622,10 +632,10 @@
             "Misture bem e sirva fresca."
           ],
           "imageQuery": "chicken avocado salad",
-          "image": "/meals/foto-lidl-salada-de-frango-com-abacate-e-tomate.webp",
+          "image": "/meals/foto-lidl-salada-de-frango-com-abacate-e-tomate-e4265081.webp",
           "imageCredit": {
-            "name": "Rasul Yarichev",
-            "url": "https://www.pexels.com/photo/bowl-of-sliced-fruits-checken-and-chopped-avocado-17597414/"
+            "name": "Imagem gerada por IA",
+            "url": ""
           }
         }
       ],
@@ -762,10 +772,10 @@
             "4. Sirva quente, acompanhado de arroz ou batatas."
           ],
           "imageQuery": "pork steaks with mushrooms and tomatoes",
-          "image": "/meals/foto-aldi-bifanas-de-porco-com-cogumelos-e-tomate.webp",
+          "image": "/meals/foto-aldi-bifanas-de-porco-com-cogumelos-e-tomate-0a0612ad.webp",
           "imageCredit": {
-            "name": "Evgeniy Alekseyev",
-            "url": "https://www.pexels.com/photo/raw-meat-on-brown-wooden-chopping-board-7333265/"
+            "name": "Imagem gerada por IA",
+            "url": ""
           }
         },
         {
@@ -819,10 +829,10 @@
             "4. Sirva quente, idealmente com uma salada fresca."
           ],
           "imageQuery": "zucchini stir fry with pork and apple",
-          "image": "/meals/foto-aldi-salteado-de-curgete-com-maca-e-bifanas.webp",
+          "image": "/meals/foto-aldi-salteado-de-curgete-com-maca-e-bifanas-26160ba2.webp",
           "imageCredit": {
-            "name": "Gu Ko",
-            "url": "https://www.pexels.com/photo/delicious-asian-stir-fry-with-pork-and-vegetables-37297739/"
+            "name": "Imagem gerada por IA",
+            "url": ""
           }
         }
       ],
@@ -951,7 +961,12 @@
             "Tempera o carapau com sal e sumo de limão durante 10 minutos e passa por farinha.",
             "Aquece o óleo a 180 °C e frita o carapau 3 minutos de cada lado até ficar dourado. Serve com as batatas."
           ],
-          "imageQuery": "fried fish boiled potatoes"
+          "imageQuery": "fried fish boiled potatoes",
+          "image": "/meals/foto-intermarche-carapau-frito-com-batatas-cozidas-550e71cf.webp",
+          "imageCredit": {
+            "name": "Imagem gerada por IA",
+            "url": ""
+          }
         },
         {
           "slot": 2,
@@ -1000,10 +1015,10 @@
             "Serve as batatas com o resto da manteiga e o salmão por cima."
           ],
           "imageQuery": "salmon potatoes butter",
-          "image": "/meals/foto-intermarche-posta-de-salmao-com-batatas-e-manteiga.webp",
+          "image": "/meals/foto-intermarche-posta-de-salmao-com-batatas-e-manteiga-1a8eac0a.webp",
           "imageCredit": {
-            "name": "Valeria Boltneva",
-            "url": "https://www.pexels.com/photo/meal-on-plate-20182290/"
+            "name": "Imagem gerada por IA",
+            "url": ""
           }
         }
       ],
