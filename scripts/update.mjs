@@ -151,10 +151,10 @@ async function readFlyer(m, pick) {
     if (!items.length) continue;
     let keep = items;
     try {
-      const ver = await ask([{ type: "text", text: "Confirma nestas páginas do folheto do " + m.name + " se o preço está exato. Lista: " + items.map((p) => p.id + ": " + p.name + " " + p.price + " €/" + p.per).join("; ") + ". JSON: {\"confirmed\":[\"id\"]}" }, ...block]);
-      const ok = new Set(ver.confirmed ?? []);
-      const confirmed = items.filter((p) => ok.has(p.id));
-      if (confirmed.length) keep = confirmed;
+      const ver = await ask([{ type: "text", text: "Confere nestas páginas do folheto do " + m.name + " os produtos e preços desta lista: " + items.map((p) => p.id + ": " + p.name + " " + p.price + " €/" + p.per).join("; ") + ". Indica só os que estão ERRADOS: em 'remove' os que não existem no folheto, em 'fix' os que existem com outro preço (com o preço certo). Se estiver tudo certo, devolve listas vazias. JSON: {\"remove\":[\"id\"],\"fix\":[{\"id\":\"\",\"price\":0.0}]}" }, ...block]);
+      const rm = new Set(ver.remove ?? []);
+      const fx = new Map((ver.fix ?? []).map((f) => [f.id, Math.round(parseFloat(String(f.price).replace(",", ".")) * 100) / 100]));
+      keep = items.filter((p) => !rm.has(p.id)).map((p) => (fx.has(p.id) && fx.get(p.id) >= 0.2 ? { ...p, price: fx.get(p.id) } : p));
     } catch (e) { console.warn("  confirmação falhou (" + e.message.slice(0, 60) + "), a usar leitura sem confirmar"); }
     promos.push(...keep.map((p) => ({ ...p, note: "folheto (lido por IA)" })));
   }
@@ -220,7 +220,6 @@ for (let i = 0; i < data.markets.length && !PHOTOS_ONLY; i++) {
   try {
     const f = await findFlyer(n);
     if (!f && n.__dbg) console.log("  " + n.__dbg);
-    delete n.__dbg;
     if (f) {
       const isNew = f.from !== n.from;
       Object.assign(n, { from: f.from, to: f.to, flyer: f.flyer, sources: f.sources, promos: f.promos, readVersion: 2, check: { date: today, result: isNew ? "novo" : "sem-novo" } });
@@ -228,9 +227,11 @@ for (let i = 0; i < data.markets.length && !PHOTOS_ONLY; i++) {
     } else if (n.to >= today) {
       n.check = { date: today, result: "sem-novo" };
       console.log(n.name, "-> sem folheto novo");
+      if (n.promos.length < 15 && n.__dbg) n.check.note = "poucos produtos (" + n.promos.length + "); " + n.__dbg;
     } else {
       n.check = { date: today, result: "sem-folheto" };
     }
+    delete n.__dbg;
     data.markets[i] = n;
   } catch (e) {
     failed++;
