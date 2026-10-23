@@ -15,20 +15,27 @@
       "recipes": [
         {
           "name": "Estufado de Novilho Angus",
-          "description": "Um prato reconfortante e cheio de sabor, onde a carne de novilho Angus é lentamente cozinhada com legumes frescos e especiarias, resultando numa refeição suculenta e aromática.",
+          "description": "Um prato reconfortante e aromático, perfeito para um almoço em família. O Estufado de Novilho Angus é cozinhado lentamente com especiarias e legumes frescos, resultando numa combinação deliciosa e suculenta.",
           "servings": "4 pessoas",
-          "time": "1h 30min",
+          "time": "2 horas",
           "difficulty": "Média",
-          "imageQuery": "beef stew, traditional Portuguese food, rustic style",
+          "cuisine": "Vietnamita",
+          "meal": "Almoço",
+          "original": "Bò Kho",
+          "imageQuery": "vietnamese food",
           "ingredients": [
             {
               "item": "Estufar (Chambão) Novilho Angus",
-              "qty": "1.2 kg",
+              "qty": "800 g",
               "price": 13.99,
               "per": "kg",
               "amount": 1,
               "label": "1 embalagem",
               "note": "folheto (lido por IA)"
+            },
+            {
+              "item": "Cenouras",
+              "qty": "4 unidades"
             },
             {
               "item": "Cebola",
@@ -39,112 +46,126 @@
               "qty": "4 dentes"
             },
             {
-              "item": "Cenoura",
-              "qty": "3 unidades"
+              "item": "Gengibre fresco",
+              "qty": "30 g"
             },
             {
-              "item": "Batata",
-              "qty": "800 g"
+              "item": "Caldo de carne",
+              "qty": "1 litro"
             },
             {
-              "item": "Tomate pelado",
-              "qty": "400 g"
+              "item": "Molho de soja",
+              "qty": "4 colheres de sopa"
             },
             {
-              "item": "Azeite",
-              "qty": "50 ml"
+              "item": "Açúcar mascavo",
+              "qty": "2 colheres de sopa"
             },
             {
-              "item": "Louro",
-              "qty": "2 folhas"
+              "item": "Folhas de manjericão",
+              "qty": "1 molho"
             },
             {
-              "item": "Sal",
-              "qty": "a gosto"
+              "item": "Pimenta fresca",
+              "qty": "1 unidade"
             },
             {
-              "item": "Pimenta",
-              "qty": "a gosto"
-            },
-            {
-              "item": "Vinho tinto",
-              "qty": "200 ml"
+              "item": "Pão francês",
+              "qty": "4 unidades"
             }
           ],
           "steps": [
-            "Num tacho grande, aqueça o azeite em lume médio e adicione a cebola picada e os dentes de alho esmagados. Refogue até a cebola ficar translúcida.",
-            "Adicione a carne de novilho Angus cortada em cubos e deixe dourar de todos os lados, cerca de 10 minutos.",
-            "Junte as cenouras cortadas em rodelas e as batatas cortadas em cubos, mexendo bem para envolver os ingredientes.",
-            "Adicione o tomate pelado, as folhas de louro, o vinho tinto, sal e pimenta a gosto. Misture tudo.",
-            "Cubra o tacho e deixe cozinhar em lume brando durante 1 hora, mexendo ocasionalmente.",
-            "Se necessário, adicione um pouco de água para não secar. O estufado deve ficar com um molho espesso e saboroso.",
-            "Quando a carne estiver tenra e os legumes cozidos, retire do lume e deixe repousar por 10 minutos antes de servir.",
-            "Dica do chef: Para um sabor ainda mais intenso, deixe a carne marinar durante algumas horas antes de cozinhar."
+            "Corte o Estufar de Novilho Angus em cubos de aproximadamente 3 cm e tempere com sal e pimenta.",
+            "Numa panela grande, aqueça um pouco de óleo e doure a carne em fogo alto, cerca de 5 minutos. Retire e reserve.",
+            "Na mesma panela, adicione a cebola picada, o alho picado e o gengibre ralado. Refogue até a cebola ficar translúcida.",
+            "Adicione as cenouras cortadas em rodelas e refogue por mais 5 minutos.",
+            "Volte a carne para a panela e adicione o caldo de carne, o molho de soja e o açúcar mascavo. Misture bem.",
+            "Deixe cozinhar em fogo baixo, com a panela tapada, por cerca de 1h30, mexendo ocasionalmente.",
+            "Quando a carne estiver macia, adicione as folhas de manjericão e a pimenta fresca cortada.",
+            "Cozinhe por mais 5 minutos e ajuste o tempero se necessário.",
+            "Sirva o estufado quente, acompanhado de pão francês para mergulhar no molho.",
+            "Dica do chef: Sirva com pão francês para aproveitar o molho delicioso!"
           ],
           "slot": 1,
-          "image": "/meals/foto-continente-estufado-de-novilho-angus-e559c00b.webp",
+          "image": "/meals/foto-continente-estufado-de-novilho-angus-d8d57abb.webp",
           "imageCredit": {
             "name": "Imagem gerada por IA",
             "url": ""
           }
         },
         {
-          "name": "Medalhões de Controlo Novilho com Molho de Mostarda",
-          "description": "Suculentos medalhões de novilho grelhados, servidos com um molho cremoso de mostarda que realça o sabor da carne, perfeito para um jantar especial.",
+          "name": "Fraldinha de Novilho com Pimentos e Arroz",
+          "description": "Uma refeição vibrante e cheia de sabor, onde a Fraldinha de Novilho é grelhada e servida com pimentos coloridos e arroz, perfeita para um jantar descontraído.",
           "servings": "4 pessoas",
-          "time": "30 min",
+          "time": "45 min",
           "difficulty": "Fácil",
-          "imageQuery": "grilled beef medallions, mustard sauce, elegant presentation",
+          "cuisine": "Espanhola",
+          "meal": "Jantar",
+          "original": "Fajitas",
+          "imageQuery": "spanish food",
           "ingredients": [
             {
-              "item": "Medalhões de Controlo Novilho",
+              "item": "Fraldinha de Novilho",
               "qty": "800 g",
-              "price": 14.99,
+              "price": 18.99,
               "per": "kg",
               "amount": 1,
               "label": "1 embalagem",
               "note": "folheto (lido por IA)"
             },
             {
-              "item": "Mostarda Dijon",
-              "qty": "4 colheres de sopa"
+              "item": "Pimentos vermelhos",
+              "qty": "2 unidades"
             },
             {
-              "item": "Natas",
-              "qty": "200 ml"
+              "item": "Pimentos verdes",
+              "qty": "2 unidades"
+            },
+            {
+              "item": "Cebola",
+              "qty": "1 unidade"
             },
             {
               "item": "Alho",
               "qty": "2 dentes"
             },
             {
-              "item": "Azeite",
-              "qty": "50 ml"
+              "item": "Cominho em pó",
+              "qty": "1 colher de chá"
             },
             {
-              "item": "Sal",
-              "qty": "a gosto"
+              "item": "Paprika",
+              "qty": "1 colher de chá"
             },
             {
-              "item": "Pimenta",
-              "qty": "a gosto"
+              "item": "Arroz",
+              "qty": "300 g"
             },
             {
-              "item": "Ervas aromáticas (tomilho ou alecrim)",
-              "qty": "a gosto"
+              "item": "Caldo de legumes",
+              "qty": "600 ml"
+            },
+            {
+              "item": "Coentros frescos",
+              "qty": "1 molho"
+            },
+            {
+              "item": "Limão",
+              "qty": "1 unidade"
             }
           ],
           "steps": [
-            "Tempere os medalhões de novilho com sal, pimenta e ervas aromáticas a gosto. Deixe marinar por 10 minutos.",
-            "Aqueça uma grelha ou frigideira com azeite em lume alto. Adicione os medalhões e grelhe por cerca de 4-5 minutos de cada lado, ou até estarem ao ponto desejado.",
-            "Retire os medalhões da grelha e deixe repousar enquanto prepara o molho.",
-            "Na mesma frigideira, adicione os dentes de alho picados e refogue por 1 minuto.",
-            "Junte a mostarda Dijon e as natas, mexendo bem até obter um molho homogéneo. Cozinhe por 2-3 minutos em lume brando.",
-            "Sirva os medalhões com o molho de mostarda por cima e decore com ervas frescas.",
-            "Dica do chef: Acompanhe com puré de batata ou legumes grelhados para uma refeição completa."
+            "Corte a Fraldinha de Novilho em tiras finas e tempere com sal, pimenta, cominho e paprika.",
+            "Numa frigideira grande, aqueça um pouco de azeite e grelhe a carne em fogo alto por cerca de 5-7 minutos, até dourar. Retire e reserve.",
+            "Na mesma frigideira, adicione a cebola e os pimentos cortados em tiras. Refogue até os legumes estarem macios, cerca de 5-6 minutos.",
+            "Enquanto isso, coza o arroz em água com o caldo de legumes, seguindo as instruções da embalagem.",
+            "Misture a carne grelhada com os legumes na frigideira e adicione os coentros picados.",
+            "Ajuste o tempero e deixe cozinhar por mais 2 minutos.",
+            "Sirva a mistura de carne e legumes sobre uma cama de arroz, decorando com fatias de limão.",
+            "Dica do chef: Experimente adicionar guacamole para um toque extra!"
           ],
           "slot": 2,
-          "image": "/meals/foto-continente-medalhoes-de-controlo-novilho-com-molho-de-mostarda-ba406c97.webp",
+          "image": "/meals/foto-continente-fraldinha-de-novilho-com-pimentos-e-arroz-ca9c388b.webp",
           "imageCredit": {
             "name": "Imagem gerada por IA",
             "url": ""
@@ -309,7 +330,7 @@
         "Estufado de Novilho Angus",
         "Medalhões de Controlo Novilho com Molho de Mostarda",
         "Estufado de Novilho Angus",
-        "Medalhões de Controlo Novilho com Molho de Mostarda"
+        "Fraldinha de Novilho com Pimentos e Arroz"
       ],
       "check": {
         "date": "2026-10-23",
@@ -329,133 +350,152 @@
       ],
       "recipes": [
         {
-          "name": "Dourada à Brás",
-          "description": "Uma deliciosa combinação de dourada suculenta com batatas fritas e ovos, perfeita para um jantar especial. Este prato é uma verdadeira iguaria da cozinha portuguesa que vai conquistar todos à mesa.",
+          "name": "Dourada à Coreana com Arroz de Gergelim",
+          "description": "Uma deliciosa dourada grelhada, marinada em sabores intensos da Coreia, acompanhada por um arroz de gergelim crocante. Uma explosão de sabores que vai encantar o seu paladar!",
           "servings": "4 pessoas",
           "time": "45 min",
           "difficulty": "Média",
-          "imageQuery": "dourada, batatas, ovos, prato português",
+          "cuisine": "Coreana",
+          "meal": "Almoço",
+          "original": "Dae-gu-gui",
+          "imageQuery": "Korean grilled fish with sesame rice",
           "ingredients": [
             {
               "item": "Dourada Grande",
-              "qty": "800 g",
+              "qty": "1.2 kg",
               "price": 10.99,
               "per": "kg",
               "amount": 1,
               "note": "folheto (lido por IA)"
             },
             {
-              "item": "Batatas fritas",
-              "qty": "400 g"
+              "item": "Arroz",
+              "qty": "300 g"
             },
             {
-              "item": "Ovos",
-              "qty": "4 unidades"
+              "item": "Molho de soja",
+              "qty": "4 colheres de sopa"
             },
             {
-              "item": "Cebola",
-              "qty": "1 unidade"
+              "item": "Gengibre fresco",
+              "qty": "2 cm"
             },
             {
               "item": "Alho",
-              "qty": "2 dentes"
+              "qty": "3 dentes"
             },
             {
-              "item": "Azeite",
-              "qty": "50 ml"
+              "item": "Cebolinho",
+              "qty": "4 hastes"
             },
             {
-              "item": "Salsa picada",
+              "item": "Óleo de gergelim",
               "qty": "2 colheres de sopa"
+            },
+            {
+              "item": "Sementes de gergelim",
+              "qty": "2 colheres de sopa"
+            },
+            {
+              "item": "Pimenta vermelha em flocos",
+              "qty": "1 colher de chá"
             },
             {
               "item": "Sal",
               "qty": "a gosto"
-            },
-            {
-              "item": "Pimenta",
-              "qty": "a gosto"
             }
           ],
           "steps": [
-            "Comece por limpar a dourada, retirando as escamas e as vísceras. Corte-a em filetes e tempere com sal e pimenta a gosto.",
-            "Numa frigideira grande, aqueça o azeite e adicione a cebola picada e os dentes de alho picados. Refogue até que a cebola fique translúcida.",
-            "Adicione os filetes de dourada à frigideira e cozinhe por cerca de 5 minutos de cada lado, até que estejam dourados e cozinhados.",
-            "Retire a dourada da frigideira e desfie-a em pedaços pequenos, descartando a pele e as espinhas.",
-            "Na mesma frigideira, adicione as batatas fritas e misture bem com a cebola e o alho.",
-            "Bata os ovos numa tigela e despeje sobre as batatas e a dourada desfiada. Mexa rapidamente para que os ovos envolvam todos os ingredientes.",
-            "Cozinhe em lume brando, mexendo sempre, até que os ovos estejam cozinhados, mas ainda cremosos.",
-            "Finalize com salsa picada e sirva quente.",
-            "Dica do chef: Para um toque extra, adicione azeitonas pretas no final da preparação."
+            "1. Comece por limpar a dourada, retirando as escamas e as vísceras. Faça cortes diagonais na pele para ajudar a marinar.",
+            "2. Prepare a marinada misturando o molho de soja, o gengibre ralado, o alho picado, o óleo de gergelim e a pimenta vermelha em flocos.",
+            "3. Coloque a dourada na marinada e deixe-a a marinar por 30 minutos.",
+            "4. Enquanto a dourada marinha, coza o arroz em água com uma pitada de sal, seguindo as instruções da embalagem.",
+            "5. Após 30 minutos, aqueça uma grelha ou uma frigideira antiaderente em lume médio-alto.",
+            "6. Grelhe a dourada por cerca de 5-7 minutos de cada lado, até que a pele esteja crocante e o peixe cozido.",
+            "7. Enquanto o peixe grelha, adicione as sementes de gergelim ao arroz cozido e misture bem.",
+            "8. Sirva a dourada grelhada sobre uma cama de arroz de gergelim, decorando com cebolinho picado.",
+            "9. Finalize com um fio de molho de soja por cima do peixe antes de servir.",
+            "10. Aproveite esta refeição deliciosa e saudável!",
+            "Dica do chef: Para um toque extra, adicione sementes de gergelim tostadas por cima do arroz antes de servir."
           ],
           "slot": 1,
-          "image": "/meals/foto-pingo-doce-dourada-a-bras-ebbbc4d8.webp",
+          "image": "/meals/foto-pingo-doce-dourada-a-coreana-com-arroz-de-gergelim-dec2d96a.webp",
           "imageCredit": {
             "name": "Imagem gerada por IA",
             "url": ""
           }
         },
         {
-          "name": "Lombo de Porco com Alho e Ervas",
-          "description": "Um prato suculento e aromático, onde o lombo de porco é marinado com alho e ervas frescas, perfeito para um almoço em família.",
+          "name": "Lombo de Porco à Turca com Bulgur e Iogurte",
+          "description": "Um suculento lombo de porco assado, temperado com especiarias turcas, servido com bulgur aromático e um refrescante molho de iogurte. Uma combinação perfeita para um jantar especial!",
           "servings": "4 pessoas",
-          "time": "60 min",
-          "difficulty": "Fácil",
-          "imageQuery": "lombo de porco, alho, ervas, prato português",
+          "time": "1h 15 min",
+          "difficulty": "Média",
+          "cuisine": "Turca",
+          "meal": "Jantar",
+          "original": "Kuzu Tandir",
+          "imageQuery": "Turkish pork loin with bulgur and yogurt sauce",
           "ingredients": [
             {
               "item": "Lombo de Porco",
-              "qty": "800 g",
+              "qty": "1 kg",
               "price": 4.49,
               "per": "kg",
               "amount": 1,
               "note": "folheto (lido por IA)"
             },
             {
+              "item": "Bulgur",
+              "qty": "250 g"
+            },
+            {
+              "item": "Iogurte natural",
+              "qty": "200 g"
+            },
+            {
               "item": "Alho",
-              "qty": "4 dentes"
+              "qty": "2 dentes"
             },
             {
-              "item": "Azeite",
-              "qty": "50 ml"
+              "item": "Cominho em pó",
+              "qty": "1 colher de chá"
             },
             {
-              "item": "Alecrim fresco",
-              "qty": "2 ramos"
-            },
-            {
-              "item": "Tomilho fresco",
-              "qty": "2 ramos"
+              "item": "Páprica doce",
+              "qty": "1 colher de chá"
             },
             {
               "item": "Sal",
               "qty": "a gosto"
             },
             {
-              "item": "Pimenta",
+              "item": "Pimenta preta",
               "qty": "a gosto"
             },
             {
-              "item": "Limão",
-              "qty": "1 unidade"
+              "item": "Azeite",
+              "qty": "2 colheres de sopa"
             },
             {
-              "item": "Cebola",
-              "qty": "1 unidade"
+              "item": "Salsa fresca",
+              "qty": "2 colheres de sopa"
             }
           ],
           "steps": [
-            "Comece por temperar o lombo de porco com sal, pimenta, alho picado, alecrim e tomilho. Regue com azeite e sumo de limão. Deixe marinar por pelo menos 30 minutos.",
-            "Pré-aqueça o forno a 180 ºC.",
-            "Coloque o lombo de porco numa assadeira e adicione a cebola cortada em rodelas ao redor.",
-            "Leve ao forno e asse durante cerca de 40-50 minutos, virando o lombo a meio do tempo para que cozinhe uniformemente.",
-            "Verifique se o lombo está bem cozinhado, deve atingir uma temperatura interna de 70 ºC.",
-            "Retire do forno e deixe descansar por 10 minutos antes de fatiar.",
-            "Sirva com os sucos da assadeira e acompanhe com arroz ou batatas assadas.",
-            "Dica do chef: Acompanhe com arroz branco ou batatas assadas para uma refeição completa."
+            "1. Tempere o lombo de porco com sal, pimenta, cominho e páprica. Deixe marinar por 30 minutos.",
+            "2. Pré-aqueça o forno a 180°C.",
+            "3. Numa frigideira, aqueça o azeite e sele o lombo de porco por todos os lados até dourar.",
+            "4. Transfira o lombo para uma assadeira e leve ao forno por cerca de 45 minutos, ou até que esteja bem cozido.",
+            "5. Enquanto o lombo assa, coza o bulgur em água a ferver com uma pitada de sal, seguindo as instruções da embalagem.",
+            "6. Para o molho de iogurte, misture o iogurte natural com o alho picado e salsa picada. Tempere com sal e pimenta a gosto.",
+            "7. Após 45 minutos, retire o lombo do forno e deixe descansar por 10 minutos antes de fatiar.",
+            "8. Sirva o lombo fatiado sobre uma cama de bulgur, acompanhado do molho de iogurte.",
+            "9. Decore com salsa fresca picada antes de servir.",
+            "10. Desfrute deste prato turco cheio de sabor e tradição!",
+            "Dica do chef: Experimente adicionar hortelã fresca ao molho de iogurte para um sabor ainda mais refrescante."
           ],
           "slot": 2,
-          "image": "/meals/foto-pingo-doce-lombo-de-porco-com-alho-e-ervas-fbe3d520.webp",
+          "image": "/meals/foto-pingo-doce-lombo-de-porco-a-turca-com-bulgur-e-iogurte-6b20649e.webp",
           "imageCredit": {
             "name": "Imagem gerada por IA",
             "url": ""
@@ -557,8 +597,6 @@
         }
       ],
       "history": [
-        "Bacalhau à Brás",
-        "Arroz de Marisco",
         "Carne de Porco à Alentejana",
         "Caldeirada de Peixe",
         "Dourada no Forno com Batatas e Ervas",
@@ -568,7 +606,9 @@
         "Dourada no Forno com Batatas e Ervas",
         "Lombo de Porco com Alho e Ervas",
         "Dourada à Brás",
-        "Lombo de Porco com Alho e Ervas"
+        "Lombo de Porco com Alho e Ervas",
+        "Dourada à Coreana com Arroz de Gergelim",
+        "Lombo de Porco à Turca com Bulgur e Iogurte"
       ],
       "check": {
         "date": "2026-10-23",
@@ -592,133 +632,158 @@
       ],
       "recipes": [
         {
-          "name": "Pernil de Porco Estufado",
-          "description": "Um prato reconfortante e cheio de sabor, ideal para um almoço em família. O pernil de porco é cozinhado lentamente, tornando-se tenro e suculento, acompanhado por um molho rico e aromático.",
+          "name": "Estufado de Pernil de Porco à Francesa",
+          "description": "Um prato clássico francês que combina a suculência do pernil de porco com um molho rico e aromático, perfeito para um almoço reconfortante.",
           "servings": "4 pessoas",
-          "time": "2h",
+          "time": "2 horas",
           "difficulty": "Média",
-          "imageQuery": "pork stew, traditional Portuguese food",
+          "cuisine": "Francesa",
+          "meal": "Almoço",
+          "original": "Boeuf Bourguignon",
+          "imageQuery": "french food, pork stew, rustic dish",
           "ingredients": [
             {
               "item": "pernil de porco",
-              "qty": "1.2",
+              "qty": "800 g",
               "price": 2.99,
               "per": "kg",
               "amount": 1,
               "note": "folheto"
             },
             {
+              "item": "cenouras",
+              "qty": "4"
+            },
+            {
               "item": "cebola",
               "qty": "2"
             },
             {
-              "item": "dentes de alho",
-              "qty": "4"
+              "item": "alho",
+              "qty": "4 dentes"
             },
             {
-              "item": "azeite",
-              "qty": "50 ml"
+              "item": "vinho tinto",
+              "qty": "500 ml"
             },
             {
-              "item": "vinho branco",
-              "qty": "200 ml"
+              "item": "caldo de carne",
+              "qty": "500 ml"
+            },
+            {
+              "item": "tomilho fresco",
+              "qty": "2 ramos"
             },
             {
               "item": "louro",
-              "qty": "2"
+              "qty": "2 folhas"
             },
             {
-              "item": "sal",
+              "item": "azeite",
+              "qty": "3 colheres de sopa"
+            },
+            {
+              "item": "sal e pimenta",
               "qty": "a gosto"
-            },
-            {
-              "item": "pimenta",
-              "qty": "a gosto"
-            },
-            {
-              "item": "água",
-              "qty": "500 ml"
             }
           ],
           "steps": [
-            "Corte o pernil de porco em pedaços grandes e tempere com sal e pimenta a gosto.",
-            "Numa panela grande, aqueça o azeite e doure os pedaços de pernil de todos os lados.",
-            "Retire o pernil da panela e, na mesma gordura, adicione a cebola picada e os dentes de alho picados, refogando até ficarem dourados.",
-            "Junte o pernil novamente à panela, adicione o vinho branco e deixe evaporar por 5 minutos.",
-            "Adicione as folhas de louro e a água, tapando a panela e deixando cozinhar em lume brando durante 1h30.",
-            "Verifique a cozedura do pernil, que deve estar tenro e desfiar facilmente.",
-            "Se necessário, adicione mais água durante o cozimento para não secar.",
-            "Sirva quente, acompanhado de arroz ou puré de batata.",
-            "Dica do chef: Para um sabor ainda mais intenso, deixe marinar o pernil de um dia para o outro com os temperos."
+            "Corte o pernil de porco em cubos de cerca de 3 cm e tempere com sal e pimenta.",
+            "Numa panela grande, aqueça o azeite em fogo médio-alto e doure os cubos de pernil por todos os lados. Retire e reserve.",
+            "Na mesma panela, adicione a cebola picada e o alho picado, refogando até ficarem macios.",
+            "Adicione as cenouras cortadas em rodelas e refogue por mais 5 minutos.",
+            "Devolva o pernil à panela e adicione o vinho tinto, deixando ferver para evaporar o álcool.",
+            "Adicione o caldo de carne, o tomilho e as folhas de louro. Reduza o fogo e cozinhe em lume brando durante 1h30, mexendo ocasionalmente.",
+            "Verifique o tempero e ajuste com mais sal e pimenta, se necessário.",
+            "Sirva o estufado quente, acompanhado de puré de batata ou pão rústico para aproveitar o molho.",
+            "Decore com um ramo de tomilho fresco antes de servir.",
+            "Dica do chef: Para um sabor ainda mais profundo, deixe o estufado repousar durante a noite antes de servir."
           ],
           "slot": 1,
-          "image": "/meals/foto-lidl-pernil-de-porco-estufado-399ce8fd.webp",
+          "image": "/meals/foto-lidl-estufado-de-pernil-de-porco-a-francesa-274fcd2a.webp",
           "imageCredit": {
             "name": "Imagem gerada por IA",
             "url": ""
           }
         },
         {
-          "name": "Peito de Frango Grelhado com Tomate Coração de Boi",
-          "description": "Uma receita leve e fresca, perfeita para os dias quentes. O peito de frango grelhado é servido com tomates coração de boi, que trazem um sabor doce e suculento ao prato.",
+          "name": "Tagine de Frango com Cogumelos",
+          "description": "Uma deliciosa tagine que combina o sabor do frango com a textura dos cogumelos, envoltos em especiarias aromáticas, perfeita para um jantar exótico.",
           "servings": "4 pessoas",
-          "time": "30 min",
-          "difficulty": "Fácil",
-          "imageQuery": "grilled chicken with tomatoes, healthy meal",
+          "time": "1 hora",
+          "difficulty": "Média",
+          "cuisine": "Marroquina",
+          "meal": "Jantar",
+          "original": "Tagine de Poulet aux Champignons",
+          "imageQuery": "moroccan food, chicken tagine, exotic dish",
           "ingredients": [
             {
               "item": "peito de frango",
-              "qty": "800",
+              "qty": "600 g",
               "price": 5.79,
               "per": "kg",
               "amount": 1,
               "note": "folheto c/ Lidl Plus"
             },
             {
-              "item": "tomate coração de boi",
-              "qty": "4",
-              "price": 2.29,
-              "per": "kg",
+              "item": "cogumelos",
+              "qty": "300 g",
+              "price": 1.29,
+              "per": "un",
               "amount": 1,
+              "label": "1,29 €/emb. 300 g",
               "note": "folheto"
             },
             {
-              "item": "azeite",
-              "qty": "30 ml"
+              "item": "cebola",
+              "qty": "1"
             },
             {
-              "item": "sal",
-              "qty": "a gosto"
+              "item": "alho",
+              "qty": "2 dentes"
             },
             {
-              "item": "pimenta",
-              "qty": "a gosto"
+              "item": "cenoura",
+              "qty": "1"
             },
             {
-              "item": "alho em pó",
+              "item": "cominho",
               "qty": "1 colher de chá"
             },
             {
-              "item": "salsa picada",
-              "qty": "2 colheres de sopa"
+              "item": "cúrcuma",
+              "qty": "1 colher de chá"
             },
             {
-              "item": "limão",
-              "qty": "1"
+              "item": "canela em pó",
+              "qty": "1/2 colher de chá"
+            },
+            {
+              "item": "azeite",
+              "qty": "3 colheres de sopa"
+            },
+            {
+              "item": "sal e pimenta",
+              "qty": "a gosto"
+            },
+            {
+              "item": "coentros frescos",
+              "qty": "a gosto"
             }
           ],
           "steps": [
-            "Tempere os peitos de frango com sal, pimenta e alho em pó. Deixe marinar por 10 minutos.",
-            "Aqueça uma grelha ou frigideira antiaderente em lume médio-alto e adicione um fio de azeite.",
-            "Grelhe os peitos de frango durante cerca de 6-7 minutos de cada lado, ou até estarem bem cozinhados e dourados.",
-            "Enquanto o frango cozinha, corte os tomates coração de boi em rodelas e tempere com sal, pimenta e um fio de azeite.",
-            "Retire o frango da grelha e deixe descansar por 5 minutos antes de fatiar.",
-            "Sirva o peito de frango fatiado com as rodelas de tomate ao lado, polvilhado com salsa picada e um pouco de sumo de limão.",
-            "Acompanhe com uma salada verde fresca.",
-            "Dica do chef: Para um toque extra, adicione manjericão fresco picado sobre os tomates antes de servir."
+            "Corte o peito de frango em cubos e tempere com sal, pimenta, cominho, cúrcuma e canela.",
+            "Numa tagine ou panela funda, aqueça o azeite em fogo médio e adicione a cebola picada e o alho picado, refogando até ficarem macios.",
+            "Adicione o frango e cozinhe até dourar ligeiramente.",
+            "Junte os cogumelos fatiados e a cenoura cortada em rodelas, mexendo bem.",
+            "Adicione um pouco de água (cerca de 100 ml) e tampe a panela, deixando cozinhar em lume brando durante 30 minutos.",
+            "Verifique se o frango está cozido e os legumes macios. Ajuste o tempero se necessário.",
+            "Sirva a tagine quente, polvilhada com coentros frescos picados.",
+            "Acompanhe com cuscuz ou pão marroquino para absorver os sabores.",
+            "Dica do chef: Sirva com cuscuz para uma refeição completa e ainda mais saborosa."
           ],
           "slot": 2,
-          "image": "/meals/foto-lidl-peito-de-frango-grelhado-com-tomate-coracao-de-boi-9a32f874.webp",
+          "image": "/meals/foto-lidl-tagine-de-frango-com-cogumelos-47e4584e.webp",
           "imageCredit": {
             "name": "Imagem gerada por IA",
             "url": ""
@@ -778,8 +843,6 @@
         }
       ],
       "history": [
-        "Carne de Porco à Alentejana",
-        "Peito de Frango Grelhado com Salada de Tomate e Abacate",
         "Pernil de Porco Assado com Tomate Coração de Boi",
         "Peito de Frango Grelhado com Cogumelos Salteados",
         "Pernil de Porco Assado com Abacaxi",
@@ -789,12 +852,13 @@
         "Pernil de Porco Assado com Cogumelos",
         "Peito de Frango Grelhado com Tomate Coração de Boi",
         "Pernil de Porco Estufado",
-        "Peito de Frango Grelhado com Tomate Coração de Boi"
+        "Peito de Frango Grelhado com Tomate Coração de Boi",
+        "Estufado de Pernil de Porco à Francesa",
+        "Tagine de Frango com Cogumelos"
       ],
       "check": {
         "date": "2026-10-23",
-        "result": "sem-novo",
-        "note": "receitas rejeitadas 3x: \"Pernil de Porco Assado com Cogumelos\" deve ter 1 ou 2 ingredientes com preço (tem 0). Usa exatamente estes ids no campo promo: pernil-de-porco, cogumelos, peito-de-frango, tomate-coracao-de-boi"
+        "result": "sem-novo"
       }
     },
     {
@@ -995,7 +1059,8 @@
       ],
       "check": {
         "date": "2026-10-23",
-        "result": "sem-novo"
+        "result": "sem-novo",
+        "note": "receitas rejeitadas 3x: \"Cogumelos laminados\" leva preço mas não aparece no nome \"Bifanas da Perna de Porco à Coreana\". Só o(s) produto(s) que dão nome ao prato levam preço; usa \"promo\": null nos outros. Estrelas disponíveis: bifanas-da-perna-de-porco, cogumelos-laminados"
       }
     },
     {
@@ -1011,79 +1076,23 @@
       ],
       "recipes": [
         {
-          "name": "Lulas à Algarvia",
-          "description": "As lulas à Algarvia são um prato típico do sul de Portugal, onde o sabor do mar se encontra com a simplicidade dos ingredientes frescos. Uma combinação perfeita de texturas e sabores que vai deliciar todos à mesa.",
+          "name": "Lulas à Portuguesa com Esparguete",
+          "description": "Uma deliciosa combinação de lulas frescas com um molho rico e aromático, servidas sobre esparguete al dente. Uma refeição leve e cheia de sabor, perfeita para um almoço em família.",
           "servings": "4 pessoas",
-          "time": "30 min",
-          "difficulty": "Fácil",
-          "imageQuery": "lulas grelhadas, prato português, comida tradicional",
+          "time": "45 min",
+          "difficulty": "Média",
+          "cuisine": "Portuguesa",
+          "meal": "Almoço",
+          "original": "Lulas à Portuguesa",
+          "imageQuery": "portuguese food lulas esparguete",
           "ingredients": [
             {
               "item": "lula limpa",
               "qty": "800 g",
               "price": 5.99,
               "per": "kg",
-              "amount": 1,
+              "amount": 0.8,
               "label": "Emb. 800 g",
-              "note": "folheto (lido por IA)"
-            },
-            {
-              "item": "alho",
-              "qty": "4 dentes"
-            },
-            {
-              "item": "azeite",
-              "qty": "50 ml"
-            },
-            {
-              "item": "salsa fresca",
-              "qty": "1 molho"
-            },
-            {
-              "item": "limão",
-              "qty": "1"
-            },
-            {
-              "item": "sal",
-              "qty": "a gosto"
-            },
-            {
-              "item": "pimenta",
-              "qty": "a gosto"
-            }
-          ],
-          "steps": [
-            "Comece por limpar bem as lulas, retirando as vísceras e a pele. Lave-as em água corrente e reserve.",
-            "Num recipiente, coloque as lulas e tempere com sal, pimenta, 2 dentes de alho picados, e um fio de azeite. Deixe marinar durante 15 minutos.",
-            "Aqueça uma grelha ou uma frigideira antiaderente em lume médio-alto.",
-            "Coloque as lulas na grelha e cozinhe durante cerca de 3-4 minutos de cada lado, até ficarem douradas e tenras.",
-            "Enquanto as lulas grelham, prepare um molho com o restante alho picado, salsa picada e sumo de limão.",
-            "Retire as lulas da grelha e sirva-as quentes, regadas com o molho de alho e salsa.",
-            "Acompanhe com arroz ou batatas e uma fatia de limão para decorar.",
-            "Dica do chef: Sirva com uma salada fresca para equilibrar os sabores do prato."
-          ],
-          "slot": 1,
-          "image": "/meals/foto-intermarche-lulas-a-algarvia-11841f97.webp",
-          "imageCredit": {
-            "name": "Imagem gerada por IA",
-            "url": ""
-          }
-        },
-        {
-          "name": "Esparguete com Tintureira à Posta",
-          "description": "Um prato reconfortante que combina a suavidade do esparguete com a riqueza da tintureira, perfeito para um almoço em família.",
-          "servings": "4 pessoas",
-          "time": "45 min",
-          "difficulty": "Média",
-          "imageQuery": "esparguete com peixe, prato português, comida caseira",
-          "ingredients": [
-            {
-              "item": "tintureira à posta",
-              "qty": "600 g",
-              "price": 4.99,
-              "per": "kg",
-              "amount": 1,
-              "label": "Vendida ao kg",
               "note": "folheto (lido por IA)"
             },
             {
@@ -1091,25 +1100,25 @@
               "qty": "320 g",
               "price": 0.85,
               "per": "un",
-              "amount": 1,
+              "amount": 4,
               "label": "Emb. 1 kg",
               "note": "folheto (lido por IA)"
             },
             {
               "item": "cebola",
-              "qty": "1"
+              "qty": "1 unidade"
             },
             {
-              "item": "alho",
-              "qty": "3 dentes"
-            },
-            {
-              "item": "azeite",
-              "qty": "60 ml"
+              "item": "dente de alho",
+              "qty": "2 dentes"
             },
             {
               "item": "tomate pelado",
               "qty": "400 g"
+            },
+            {
+              "item": "azeite",
+              "qty": "50 ml"
             },
             {
               "item": "sal",
@@ -1120,22 +1129,98 @@
               "qty": "a gosto"
             },
             {
-              "item": "manjericão fresco",
-              "qty": "1 molho"
+              "item": "salsa fresca",
+              "qty": "a gosto"
+            },
+            {
+              "item": "limão",
+              "qty": "1 unidade"
             }
           ],
           "steps": [
-            "Comece por cozer o esparguete em água salgada, seguindo as instruções da embalagem, até ficar al dente. Escorra e reserve.",
-            "Enquanto o esparguete coze, aqueça o azeite numa frigideira grande e adicione a cebola picada e os dentes de alho picados. Refogue até a cebola ficar translúcida.",
-            "Adicione a tintureira à posta à frigideira e cozinhe por cerca de 5 minutos de cada lado, até que esteja bem cozinhada e dourada.",
-            "Junte o tomate pelado à frigideira, tempere com sal e pimenta, e deixe cozinhar em lume brando durante 10 minutos, até o molho engrossar.",
-            "Misture o esparguete cozido ao molho de tintureira, envolvendo bem para que o esparguete absorva os sabores.",
-            "Finalize com manjericão fresco picado e ajuste os temperos a gosto.",
-            "Sirva quente, decorado com folhas de manjericão e um fio de azeite.",
-            "Dica do chef: Para um toque extra, adicione queijo parmesão ralado na hora de servir."
+            "Coza o esparguete em água salgada a ferver durante cerca de 8-10 minutos ou até ficar al dente. Escorra e reserve.",
+            "Enquanto isso, limpe as lulas e corte-as em anéis.",
+            "Numa frigideira grande, aqueça o azeite em fogo médio e adicione a cebola picada. Refogue até ficar translúcida, cerca de 5 minutos.",
+            "Adicione o alho picado e refogue por mais 1 minuto, até que libere o seu aroma.",
+            "Junte as lulas à frigideira e cozinhe por cerca de 3-4 minutos, mexendo ocasionalmente, até que fiquem opacas.",
+            "Adicione o tomate pelado, tempere com sal e pimenta e deixe cozinhar em fogo baixo durante 10 minutos, até o molho engrossar.",
+            "Misture o esparguete cozido ao molho de lulas e envolva bem para que o esparguete absorva os sabores.",
+            "Sirva o esparguete com lulas em pratos fundos, decorando com salsa fresca picada e uma rodela de limão ao lado.",
+            "Aproveite a refeição quente e desfrute do sabor do mar!",
+            "Dica do chef: Para um toque extra, adicione um pouco de coentros frescos picados antes de servir."
+          ],
+          "slot": 1,
+          "image": "/meals/foto-intermarche-lulas-a-portuguesa-com-esparguete-e623fb46.webp",
+          "imageCredit": {
+            "name": "Imagem gerada por IA",
+            "url": ""
+          }
+        },
+        {
+          "name": "Tintureira à Posta com Batatas a Murro",
+          "description": "Um prato clássico da cozinha espanhola, onde a tintureira é grelhada até ficar suculenta e acompanhada de batatas a murro, uma combinação perfeita para um jantar reconfortante.",
+          "servings": "4 pessoas",
+          "time": "50 min",
+          "difficulty": "Média",
+          "cuisine": "Espanhola",
+          "meal": "Jantar",
+          "original": "Tintureira à Posta",
+          "imageQuery": "spanish food tintureira batatas",
+          "ingredients": [
+            {
+              "item": "tintureira à posta",
+              "qty": "800 g",
+              "price": 4.99,
+              "per": "kg",
+              "amount": 0.8,
+              "label": "Vendida ao kg",
+              "note": "folheto (lido por IA)"
+            },
+            {
+              "item": "batatas",
+              "qty": "800 g"
+            },
+            {
+              "item": "azeite",
+              "qty": "50 ml"
+            },
+            {
+              "item": "sal",
+              "qty": "a gosto"
+            },
+            {
+              "item": "pimenta",
+              "qty": "a gosto"
+            },
+            {
+              "item": "alho",
+              "qty": "2 dentes"
+            },
+            {
+              "item": "salsa fresca",
+              "qty": "a gosto"
+            },
+            {
+              "item": "limão",
+              "qty": "1 unidade"
+            },
+            {
+              "item": "pimentão doce",
+              "qty": "a gosto"
+            }
+          ],
+          "steps": [
+            "Coza as batatas com casca em água salgada até ficarem macias, cerca de 20-25 minutos. Escorra e reserve.",
+            "Enquanto isso, tempere as postas de tintureira com sal, pimenta e um pouco de pimentão doce.",
+            "Numa grelha ou frigideira, aqueça um pouco de azeite e grelhe as postas de tintureira por cerca de 4-5 minutos de cada lado, até ficarem douradas e cozidas.",
+            "Retire as batatas da água, dê um murro em cada uma para as abrir ligeiramente e regue com azeite, sal e alho picado.",
+            "Coloque as batatas num tabuleiro e leve ao forno a 200°C por cerca de 10 minutos, até ficarem crocantes.",
+            "Sirva as postas de tintureira ao lado das batatas a murro, decorando com salsa fresca picada e uma rodela de limão.",
+            "Desfrute do seu jantar com um bom vinho tinto espanhol!",
+            "Dica do chef: Para um sabor extra, grelhe a tintureira com um pouco de pimentão doce."
           ],
           "slot": 2,
-          "image": "/meals/foto-intermarche-esparguete-com-tintureira-a-posta-cc34b248.webp",
+          "image": "/meals/foto-intermarche-tintureira-a-posta-com-batatas-a-murro-d8de93d9.webp",
           "imageCredit": {
             "name": "Imagem gerada por IA",
             "url": ""
@@ -1208,7 +1293,9 @@
         "Lula Limpa Grelhada com Esparguete",
         "Tintureira à Posta com Queijo Flamengo",
         "Lulas à Algarvia",
-        "Esparguete com Tintureira à Posta"
+        "Esparguete com Tintureira à Posta",
+        "Lulas à Portuguesa com Esparguete",
+        "Tintureira à Posta com Batatas a Murro"
       ],
       "check": {
         "date": "2026-10-23",
