@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-10-23T21:32:32.144Z",
+ "updatedAt": "2026-10-23T21:36:53.469Z",
  "markets": [
   {
    "name": "Continente",
@@ -38,8 +38,8 @@
        "price": 26.99,
        "per": "kg",
        "amount": 1,
-       "note": "folheto: Alcatra de Borrego (Embalada)",
-       "promoId": "alcatra-de-borrego-embalada"
+       "note": "folheto: Alcatra de Borrego",
+       "promoId": "alcatra-de-borrego"
       },
       {
        "item": "Cuscuz",
@@ -213,7 +213,7 @@
     {
      "id": "salada-aromatica",
      "name": "Salada Aromática",
-     "price": 1.68,
+     "price": 1.61,
      "per": "kg",
      "label": "Sobre PPR",
      "note": "folheto (lido por IA)"
@@ -293,7 +293,7 @@
     {
      "id": "bifanas-de-porco",
      "name": "Bifanas de Porco",
-     "price": 4.99,
+     "price": 4.49,
      "per": "kg",
      "label": "Sobre PPR",
      "note": "folheto (lido por IA)"
@@ -327,7 +327,7 @@
      "name": "Bacalhau Seco Inteiro",
      "price": 20.99,
      "per": "kg",
-     "label": "Apenas",
+     "label": "Desde",
      "note": "folheto (lido por IA)"
     },
     {
@@ -347,8 +347,8 @@
      "note": "folheto (lido por IA)"
     },
     {
-     "id": "calibrado-de-bacalhau-mgc",
-     "name": "Calibrado de Bacalhau MGC",
+     "id": "calibrachoa-de-bacalhau",
+     "name": "Calibrachoa de Bacalhau",
      "price": 5.49,
      "per": "kg",
      "label": "Apenas",
@@ -387,6 +387,14 @@
      "note": "folheto (lido por IA)"
     },
     {
+     "id": "salmao-inteiro",
+     "name": "Salmão Inteiro",
+     "price": 8.99,
+     "per": "kg",
+     "label": "Apenas",
+     "note": "folheto (lido por IA)"
+    },
+    {
      "id": "robalo-medio",
      "name": "Robalo Médio",
      "price": 10.99,
@@ -411,8 +419,8 @@
      "note": "folheto (lido por IA)"
     },
     {
-     "id": "fillete-de-dourada-robalo",
-     "name": "Fillete de Dourada/Robalo",
+     "id": "file-de-dourada-robalo",
+     "name": "Filé de Dourada/Robalo",
      "price": 2.99,
      "per": "kg",
      "label": "Apenas",
@@ -436,7 +444,7 @@
     {
      "id": "posta-garoupa-continente",
      "name": "Posta garoupa Continente",
-     "price": 14.99,
+     "price": 9.25,
      "per": "kg",
      "note": "folheto (lido por IA)"
     },
@@ -497,9 +505,58 @@
      "note": "folheto (lido por IA)"
     },
     {
+     "id": "salmao-ultracongelado",
+     "name": "Salmão ultracongelado",
+     "price": 25,
+     "per": "kg",
+     "note": "folheto (lido por IA)"
+    },
+    {
      "id": "fish-burgers",
      "name": "Fish burgers",
      "price": 40,
+     "per": "kg",
+     "note": "folheto (lido por IA)"
+    },
+    {
+     "id": "camarao-tigre-selagem-grande-20-30",
+     "name": "Camarão Tigre Selagem Grande 20/30",
+     "price": 8.9,
+     "per": "kg",
+     "note": "folheto (lido por IA)"
+    },
+    {
+     "id": "miolo-de-camarao-60-80",
+     "name": "Miolo de Camarão 60/80",
+     "price": 5.99,
+     "per": "kg",
+     "note": "folheto (lido por IA)"
+    },
+    {
+     "id": "camarao-40-60",
+     "name": "Camarão 40/60",
+     "price": 8.49,
+     "per": "kg",
+     "note": "folheto (lido por IA)"
+    },
+    {
+     "id": "miolo-de-gambao-ultra-congelado",
+     "name": "Miolo de Gambão Ultra Congelado",
+     "price": 6.99,
+     "per": "kg",
+     "note": "folheto (lido por IA)"
+    },
+    {
+     "id": "camarao-40-60-pescanova",
+     "name": "Camarão 40/60 Pescanova",
+     "price": 6.49,
+     "per": "kg",
+     "note": "folheto (lido por IA)"
+    },
+    {
+     "id": "ameijoa-vintena-c-casca",
+     "name": "Amêijoa Vintena C/ Casca",
+     "price": 2.9,
      "per": "kg",
      "note": "folheto (lido por IA)"
     },
@@ -518,23 +575,16 @@
      "note": "folheto (lido por IA)"
     },
     {
-     "id": "papaya-de-aviao-nativa",
-     "name": "Papaya de Avião Nativa",
-     "price": 3.99,
-     "per": "kg",
-     "note": "folheto (lido por IA)"
-    },
-    {
      "id": "figo",
      "name": "Figo",
-     "price": 5.9,
+     "price": 5.99,
      "per": "kg",
      "note": "folheto (lido por IA)"
     },
     {
-     "id": "mirtilo",
-     "name": "Mirtilo",
-     "price": 18.96,
+     "id": "melao-galia-inteira",
+     "name": "Melão Gália Inteira",
+     "price": 6.99,
      "per": "kg",
      "note": "folheto (lido por IA)"
     },
@@ -546,16 +596,9 @@
      "note": "folheto (lido por IA)"
     },
     {
-     "id": "batata-s-especifico",
-     "name": "Batata S/ Específico",
-     "price": 1.02,
-     "per": "kg",
-     "note": "folheto (lido por IA)"
-    },
-    {
-     "id": "cebola-doce-continent",
-     "name": "Cebola Doce Continent",
-     "price": 1.89,
+     "id": "abobora-s-sementes",
+     "name": "Abóbora S/ Sementes",
+     "price": 2.39,
      "per": "kg",
      "note": "folheto (lido por IA)"
     },
@@ -567,15 +610,22 @@
      "note": "folheto (lido por IA)"
     },
     {
-     "id": "tomate-cereja-continent",
-     "name": "Tomate Cereja Continent",
+     "id": "tomate-mini-coracao",
+     "name": "Tomate Mini Coração",
      "price": 1.69,
      "per": "kg",
      "note": "folheto (lido por IA)"
     },
     {
-     "id": "fraldinha-de-boi-embalada",
-     "name": "Fraldinha de Boi (Embalada)",
+     "id": "medalhoes-de-controlo-novilho",
+     "name": "Medalhões de Controlo Novilho",
+     "price": 14.99,
+     "per": "kg",
+     "note": "folheto (lido por IA)"
+    },
+    {
+     "id": "fraldinha-de-boi",
+     "name": "Fraldinha de Boi",
      "price": 18.99,
      "per": "kg",
      "note": "folheto (lido por IA)"
@@ -583,7 +633,7 @@
     {
      "id": "vazio-alto-liso-de-novilho-angus",
      "name": "Vazio Alto Liso de Novilho Angus",
-     "price": 15.99,
+     "price": 18.99,
      "per": "kg",
      "note": "folheto (lido por IA)"
     },
@@ -602,72 +652,72 @@
      "note": "folheto (lido por IA)"
     },
     {
-     "id": "vazio-de-boi-do-algarve-do-sul-congelado",
-     "name": "Vazio de Boi do Algarve do Sul (Congelado)",
+     "id": "vazio-de-boi-do-algarve",
+     "name": "Vazio de Boi do Algarve",
      "price": 19.99,
      "per": "kg",
      "note": "folheto (lido por IA)"
     },
     {
-     "id": "entrecote-de-boi-do-algarve-do-sul-congelado",
-     "name": "Entrecôte de Boi do Algarve do Sul (Congelado)",
+     "id": "entrecote-de-boi-do-algarve",
+     "name": "Entrecôte de Boi do Algarve",
      "price": 19.99,
      "per": "kg",
      "note": "folheto (lido por IA)"
     },
     {
-     "id": "alcatra-de-borrego-embalada",
-     "name": "Alcatra de Borrego (Embalada)",
+     "id": "alcatra-de-borrego",
+     "name": "Alcatra de Borrego",
      "price": 26.99,
      "per": "kg",
      "note": "folheto (lido por IA)"
     },
     {
-     "id": "costeletas-mistas-de-porco-embalada",
-     "name": "Costeletas Mistas de Porco (Embalada)",
+     "id": "costeletas-mistas-de-porco",
+     "name": "Costeletas Mistas de Porco",
      "price": 4.99,
      "per": "kg",
      "note": "folheto (lido por IA)"
     },
     {
-     "id": "pernil-de-porco-continent",
-     "name": "Pernil de Porco Continent",
+     "id": "pernil-de-porco",
+     "name": "Pernil de Porco",
      "price": 3.49,
      "per": "kg",
      "note": "folheto (lido por IA)"
     },
     {
-     "id": "coelho-inteiro-embalado",
-     "name": "Coelho Inteiro (Embalado)",
+     "id": "coelho-inteiro",
+     "name": "Coelho Inteiro",
      "price": 6.99,
      "per": "kg",
      "note": "folheto (lido por IA)"
     },
     {
-     "id": "hamburguer-c-queijo-e-ervas-embalado",
-     "name": "Hambúrguer c/ Queijo e Ervas (Embalado)",
+     "id": "hamburguer-c-queijo-e-ervas",
+     "name": "Hambúrguer c/ Queijo e Ervas",
      "price": 5.59,
      "per": "un",
      "note": "folheto (lido por IA)"
     },
     {
-     "id": "cachaco-de-porco-para-assar-s-osso",
-     "name": "Cachaço de Porco para Assar S/ Osso",
+     "id": "cachaco-de-porco-para-assar",
+     "name": "Cachaço de Porco para Assar",
      "price": 5.29,
      "per": "kg",
      "note": "folheto (lido por IA)"
     },
     {
-     "id": "lombo-de-porco-s-osso",
-     "name": "Lombo de Porco S/ Osso",
+     "id": "lombo-de-porco-c-osso",
+     "name": "Lombo de Porco c/ Osso",
      "price": 5.29,
      "per": "kg",
      "note": "folheto (lido por IA)"
     },
     {
-     "id": "pa-de-porco-c-osso",
-     "name": "Pá de Porco c/ Osso",
-     "price": 4.49,
+     "id": "entrecosto-de-porco",
+     "name": "Entrecosto de Porco",
+     "price": 6.29,
      "per": "kg",
      "note": "folheto (lido por IA)"
     },
@@ -679,15 +729,15 @@
      "note": "folheto (lido por IA)"
     },
     {
-     "id": "lombinhos-de-porco-embalado",
-     "name": "Lombinhos de Porco (Embalado)",
+     "id": "lombinhos-de-porco",
+     "name": "Lombinhos de Porco",
      "price": 6.99,
      "per": "kg",
      "note": "folheto (lido por IA)"
     },
     {
-     "id": "bochechas-de-porco-embalado",
-     "name": "Bochechas de Porco (Embalado)",
+     "id": "bochechas-de-porco",
+     "name": "Bochechas de Porco",
      "price": 8.49,
      "per": "kg",
      "note": "folheto (lido por IA)"
@@ -709,6 +759,14 @@
      "note": "folheto (lido por IA)"
     },
     {
+     "id": "peito-de-frango-continente",
+     "name": "Peito de Frango Continente",
+     "price": 4.99,
+     "per": "kg",
+     "label": "Apenas",
+     "note": "folheto (lido por IA)"
+    },
+    {
      "id": "perna-de-peru-continente",
      "name": "Perna de Peru Continente",
      "price": 4.99,
@@ -720,6 +778,14 @@
      "id": "pato-inteiro-fresco",
      "name": "Pato inteiro fresco",
      "price": 4.49,
+     "per": "kg",
+     "label": "Apenas",
+     "note": "folheto (lido por IA)"
+    },
+    {
+     "id": "coxas-de-frango-desossadas",
+     "name": "Coxas de Frango Desossadas",
+     "price": 6.59,
      "per": "kg",
      "label": "Apenas",
      "note": "folheto (lido por IA)"
@@ -741,19 +807,11 @@
      "note": "folheto (lido por IA)"
     },
     {
-     "id": "hamburguer-de-frango",
-     "name": "Hambúrguer de Frango",
-     "price": 9.89,
-     "per": "un",
-     "label": "10% Sobre",
-     "note": "folheto (lido por IA)"
-    },
-    {
-     "id": "hamburguer-de-porco",
-     "name": "Hambúrguer de Porco",
-     "price": 9.89,
-     "per": "un",
-     "label": "10% Sobre",
+     "id": "coxas-de-frango-congeladas",
+     "name": "Coxas de Frango Congeladas",
+     "price": 3.49,
+     "per": "kg",
+     "label": "Apenas",
      "note": "folheto (lido por IA)"
     },
     {
@@ -765,8 +823,8 @@
      "note": "folheto (lido por IA)"
     },
     {
-     "id": "carne-picada-de-aves",
-     "name": "Carne Picada de Aves",
+     "id": "carne-picada-de-porco",
+     "name": "Carne Picada de Porco",
      "price": 3.09,
      "per": "un",
      "label": "10% Sobre",
@@ -823,8 +881,8 @@
          "price": 26.99,
          "per": "kg",
          "amount": 1,
-         "note": "folheto: Alcatra de Borrego (Embalada)",
-         "promoId": "alcatra-de-borrego-embalada"
+         "note": "folheto: Alcatra de Borrego",
+         "promoId": "alcatra-de-borrego"
         },
         {
          "item": "Cuscuz",
@@ -1009,8 +1067,8 @@
          "per": "un",
          "amount": 1,
          "label": "10% Sobre",
-         "note": "folheto: Carne Picada de Aves",
-         "promoId": "carne-picada-de-aves"
+         "note": "folheto: Carne Picada de Porco",
+         "promoId": "carne-picada-de-porco"
         },
         {
          "item": "Beringela",
@@ -1081,7 +1139,7 @@
         },
         {
          "market": "Continente",
-         "product": "Carne Picada de Aves",
+         "product": "Carne Picada de Porco",
          "price": 3.09,
          "per": "un",
          "total": 3.09
@@ -1405,17 +1463,16 @@
         "peixe"
        ],
        "est": 4.5,
-       "mainCost": 6,
+       "mainCost": 3,
        "ingredients": [
         {
          "item": "Camarão",
          "qty": "500 g",
-         "price": 11.99,
+         "price": 5.99,
          "per": "kg",
          "amount": 0.5,
-         "label": "Apenas",
-         "note": "folheto: Camarão",
-         "promoId": "camarao"
+         "note": "folheto: Miolo de Camarão 60/80",
+         "promoId": "miolo-de-camarao-60-80"
         },
         {
          "item": "Noodles de arroz",
@@ -1478,20 +1535,25 @@
        "imageQuery": "ผัดไทย (Pad Thai) Tailandesa",
        "compare": [
         {
-         "market": "Aldi",
-         "product": "Miolo de Camarão 80/100",
+         "market": "Continente",
+         "product": "Miolo de Camarão 60/80",
          "price": 5.99,
          "per": "kg",
          "total": 3
         },
         {
-         "market": "Continente",
-         "product": "Camarão",
-         "price": 11.99,
+         "market": "Aldi",
+         "product": "Miolo de Camarão 80/100",
+         "price": 5.99,
          "per": "kg",
-         "total": 6
+         "total": 3
         }
-       ]
+       ],
+       "image": "/meals/lib-pad-thai-7816bbd3.webp",
+       "imageCredit": {
+        "name": "Imagem gerada por IA",
+        "url": ""
+       }
       },
       {
        "id": "lasanha",
@@ -1520,8 +1582,8 @@
          "per": "un",
          "amount": 1,
          "label": "10% Sobre",
-         "note": "folheto: Carne Picada de Aves",
-         "promoId": "carne-picada-de-aves"
+         "note": "folheto: Carne Picada de Porco",
+         "promoId": "carne-picada-de-porco"
         },
         {
          "item": "Folhas de lasanha",
@@ -1588,7 +1650,7 @@
         },
         {
          "market": "Continente",
-         "product": "Carne Picada de Aves",
+         "product": "Carne Picada de Porco",
          "price": 3.09,
          "per": "un",
          "total": 3.09
@@ -1702,6 +1764,22 @@
       "Dica do chef: Assar antes dá sabor tostado e evita que desfaça."
      ],
      "imageQuery": "Gobi Masala Indiana",
+     "compare": [
+      {
+       "market": "Pingo Doce",
+       "product": "Brócolos Bimi",
+       "price": 1.89,
+       "per": "un",
+       "total": 1.89
+      },
+      {
+       "market": "Continente",
+       "product": "Abóbora S/ Sementes",
+       "price": 2.39,
+       "per": "kg",
+       "total": 2.39
+      }
+     ],
      "image": "/meals/lib-couve-flor-curry-c7b8f7d5.webp",
      "imageCredit": {
       "name": "Imagem gerada por IA",
@@ -1789,7 +1867,7 @@
      "compare": [
       {
        "market": "Continente",
-       "product": "Fillete de Dourada/Robalo",
+       "product": "Filé de Dourada/Robalo",
        "price": 2.99,
        "per": "kg",
        "total": 2.39
@@ -1912,7 +1990,8 @@
    ],
    "check": {
     "date": "2026-10-23",
-    "result": "sem-novo"
+    "result": "sem-novo",
+    "note": "poucos produtos (13); candidatos: nenhum (de 13 links, 0 alimentares)"
    },
    "plan": [
     {
@@ -1995,6 +2074,22 @@
         "Dica do chef: Assar antes dá sabor tostado e evita que desfaça."
        ],
        "imageQuery": "Gobi Masala Indiana",
+       "compare": [
+        {
+         "market": "Pingo Doce",
+         "product": "Brócolos Bimi",
+         "price": 1.89,
+         "per": "un",
+         "total": 1.89
+        },
+        {
+         "market": "Continente",
+         "product": "Abóbora S/ Sementes",
+         "price": 2.39,
+         "per": "kg",
+         "total": 2.39
+        }
+       ],
        "image": "/meals/lib-couve-flor-curry-c7b8f7d5.webp",
        "imageCredit": {
         "name": "Imagem gerada por IA",
@@ -2082,7 +2177,7 @@
        "compare": [
         {
          "market": "Continente",
-         "product": "Fillete de Dourada/Robalo",
+         "product": "Filé de Dourada/Robalo",
          "price": 2.99,
          "per": "kg",
          "total": 2.39
@@ -2190,7 +2285,7 @@
        "compare": [
         {
          "market": "Continente",
-         "product": "Fillete de Dourada/Robalo",
+         "product": "Filé de Dourada/Robalo",
          "price": 2.99,
          "per": "kg",
          "total": 3.59
@@ -2202,7 +2297,12 @@
          "per": "kg",
          "total": 13.19
         }
-       ]
+       ],
+       "image": "/meals/lib-dourada-forno-f1af817e.webp",
+       "imageCredit": {
+        "name": "Imagem gerada por IA",
+        "url": ""
+       }
       },
       {
        "id": "bulgogi",
@@ -2296,13 +2396,6 @@
          "total": 1.79
         },
         {
-         "market": "Continente",
-         "product": "Pernil de Porco Continent",
-         "price": 3.49,
-         "per": "kg",
-         "total": 2.09
-        },
-        {
          "market": "Aldi",
          "product": "Bife do Diantreido dos Açores",
          "price": 3.99,
@@ -2315,8 +2408,20 @@
          "price": 4.49,
          "per": "kg",
          "total": 2.69
+        },
+        {
+         "market": "Continente",
+         "product": "Carne Picada de Porco",
+         "price": 3.09,
+         "per": "un",
+         "total": 3.09
         }
-       ]
+       ],
+       "image": "/meals/lib-bulgogi-a608a482.webp",
+       "imageCredit": {
+        "name": "Imagem gerada por IA",
+        "url": ""
+       }
       }
      ]
     },
@@ -2408,13 +2513,6 @@
          "total": 1.79
         },
         {
-         "market": "Continente",
-         "product": "Pernil de Porco Continent",
-         "price": 3.49,
-         "per": "kg",
-         "total": 2.09
-        },
-        {
          "market": "Pingo Doce",
          "product": "Lombo de Porco",
          "price": 4.49,
@@ -2427,8 +2525,20 @@
          "price": 4.49,
          "per": "kg",
          "total": 2.69
+        },
+        {
+         "market": "Continente",
+         "product": "Carne Picada de Porco",
+         "price": 3.09,
+         "per": "un",
+         "total": 3.09
         }
-       ]
+       ],
+       "image": "/meals/lib-katsu-porco-47eacb11.webp",
+       "imageCredit": {
+        "name": "Imagem gerada por IA",
+        "url": ""
+       }
       },
       {
        "id": "caldeirada",
@@ -2511,7 +2621,7 @@
        "compare": [
         {
          "market": "Continente",
-         "product": "Fillete de Dourada/Robalo",
+         "product": "Filé de Dourada/Robalo",
          "price": 2.99,
          "per": "kg",
          "total": 2.99
@@ -2630,10 +2740,10 @@
         },
         {
          "market": "Continente",
-         "product": "Pernil de Porco Continent",
-         "price": 3.49,
-         "per": "kg",
-         "total": 2.79
+         "product": "Carne Picada de Porco",
+         "price": 3.09,
+         "per": "un",
+         "total": 3.09
         },
         {
          "market": "Pingo Doce",
@@ -2649,7 +2759,12 @@
          "per": "kg",
          "total": 3.59
         }
-       ]
+       ],
+       "image": "/meals/lib-tacos-porco-c77a9159.webp",
+       "imageCredit": {
+        "name": "Imagem gerada por IA",
+        "url": ""
+       }
       },
       {
        "id": "gyros-porco",
@@ -2740,10 +2855,10 @@
         },
         {
          "market": "Continente",
-         "product": "Pernil de Porco Continent",
-         "price": 3.49,
-         "per": "kg",
-         "total": 2.44
+         "product": "Carne Picada de Porco",
+         "price": 3.09,
+         "per": "un",
+         "total": 3.09
         },
         {
          "market": "Pingo Doce",
@@ -2759,7 +2874,12 @@
          "per": "kg",
          "total": 3.14
         }
-       ]
+       ],
+       "image": "/meals/lib-gyros-porco-ac81f42d.webp",
+       "imageCredit": {
+        "name": "Imagem gerada por IA",
+        "url": ""
+       }
       }
      ]
     }
@@ -2980,10 +3100,10 @@
       },
       {
        "market": "Continente",
-       "product": "Pernil de Porco Continent",
-       "price": 3.49,
-       "per": "kg",
-       "total": 2.44
+       "product": "Carne Picada de Porco",
+       "price": 3.09,
+       "per": "un",
+       "total": 3.09
       },
       {
        "market": "Pingo Doce",
@@ -3061,7 +3181,8 @@
    ],
    "check": {
     "date": "2026-10-23",
-    "result": "sem-novo"
+    "result": "sem-novo",
+    "note": "poucos produtos (7); candidatos: nenhum (de 11 links, 1 alimentares)"
    },
    "plan": [
     {
@@ -3257,10 +3378,10 @@
         },
         {
          "market": "Continente",
-         "product": "Pernil de Porco Continent",
-         "price": 3.49,
-         "per": "kg",
-         "total": 2.44
+         "product": "Carne Picada de Porco",
+         "price": 3.09,
+         "per": "un",
+         "total": 3.09
         },
         {
          "market": "Pingo Doce",
@@ -3378,7 +3499,12 @@
          "per": "kg",
          "total": 4.05
         }
-       ]
+       ],
+       "image": "/meals/lib-souvlaki-d6313ee0.webp",
+       "imageCredit": {
+        "name": "Imagem gerada por IA",
+        "url": ""
+       }
       },
       {
        "id": "tacos-porco",
@@ -3468,10 +3594,10 @@
         },
         {
          "market": "Continente",
-         "product": "Pernil de Porco Continent",
-         "price": 3.49,
-         "per": "kg",
-         "total": 2.79
+         "product": "Carne Picada de Porco",
+         "price": 3.09,
+         "per": "un",
+         "total": 3.09
         },
         {
          "market": "Pingo Doce",
@@ -3487,7 +3613,12 @@
          "per": "kg",
          "total": 3.59
         }
-       ]
+       ],
+       "image": "/meals/lib-tacos-porco-c77a9159.webp",
+       "imageCredit": {
+        "name": "Imagem gerada por IA",
+        "url": ""
+       }
       }
      ]
     },
@@ -3587,7 +3718,12 @@
          "per": "kg",
          "total": 4.05
         }
-       ]
+       ],
+       "image": "/meals/lib-kebab-frango-14fdd347.webp",
+       "imageCredit": {
+        "name": "Imagem gerada por IA",
+        "url": ""
+       }
       },
       {
        "id": "risotto-cogumelos",
@@ -3679,7 +3815,12 @@
          "per": "un",
          "total": 2.58
         }
-       ]
+       ],
+       "image": "/meals/lib-risotto-cogumelos-94ea2320.webp",
+       "imageCredit": {
+        "name": "Imagem gerada por IA",
+        "url": ""
+       }
       }
      ]
     }
@@ -3800,7 +3941,7 @@
       },
       {
        "market": "Continente",
-       "product": "Carne Picada de Aves",
+       "product": "Carne Picada de Porco",
        "price": 3.09,
        "per": "un",
        "total": 3.09
@@ -3896,10 +4037,10 @@
       },
       {
        "market": "Continente",
-       "product": "Vazio Alto Liso de Novilho Angus",
-       "price": 15.99,
+       "product": "Medalhões de Controlo Novilho",
+       "price": 14.99,
        "per": "kg",
-       "total": 9.59
+       "total": 8.99
       }
      ],
      "image": "/meals/lib-vaca-brocolos-7bb7dc27.webp",
@@ -3922,7 +4063,7 @@
      "name": "Dióspiro",
      "price": 2.39,
      "per": "kg",
-     "label": "embalado",
+     "label": "1kg embalagem",
      "note": "folheto (lido por IA)"
     },
     {
@@ -3930,7 +4071,7 @@
      "name": "Mix de Maçã e Pera",
      "price": 2.49,
      "per": "kg",
-     "label": "embalado",
+     "label": "2 KG",
      "note": "folheto (lido por IA)"
     },
     {
@@ -3945,7 +4086,7 @@
      "name": "Cogumelos Laminados",
      "price": 1.24,
      "per": "kg",
-     "label": "embalado",
+     "label": "250g embalagem",
      "note": "folheto (lido por IA)"
     },
     {
@@ -3959,6 +4100,13 @@
      "id": "banana",
      "name": "Banana",
      "price": 0.99,
+     "per": "kg",
+     "note": "folheto (lido por IA)"
+    },
+    {
+     "id": "maca-golden",
+     "name": "Maçã Golden",
+     "price": 1.49,
      "per": "kg",
      "note": "folheto (lido por IA)"
     },
@@ -4030,7 +4178,7 @@
      "name": "Muslitos do Mar",
      "price": 1.29,
      "per": "kg",
-     "label": "Golden Seafood",
+     "label": "250g embalagem (kg = 5.16)",
      "note": "folheto (lido por IA)"
     },
     {
@@ -4038,7 +4186,7 @@
      "name": "Miolo de Camarão 80/100",
      "price": 5.99,
      "per": "kg",
-     "label": "Pescanova",
+     "label": "350g embalagem (kg = 17.11)",
      "note": "folheto (lido por IA)"
     },
     {
@@ -4046,7 +4194,7 @@
      "name": "Peito de Pato",
      "price": 15.99,
      "per": "kg",
-     "label": "Quinta da Marinha",
+     "label": "kg",
      "note": "folheto (lido por IA)"
     },
     {
@@ -4054,7 +4202,7 @@
      "name": "Presunto Reserva",
      "price": 2.79,
      "per": "un",
-     "label": "Damata",
+     "label": "70g unidade (kg = 39.86)",
      "note": "folheto (lido por IA)"
     },
     {
@@ -4062,7 +4210,7 @@
      "name": "Salpicão da Guarda",
      "price": 2.99,
      "per": "un",
-     "label": "Fumeiros da Guarda",
+     "label": "270g unidade (kg = 11.07)",
      "note": "folheto (lido por IA)"
     },
     {
@@ -4070,7 +4218,7 @@
      "name": "Chouriço de Cura Natural",
      "price": 2.39,
      "per": "un",
-     "label": "Fumeiros Serra da Estrela",
+     "label": "188g unidade (kg = 13.28)",
      "note": "folheto (lido por IA)"
     },
     {
@@ -4078,7 +4226,7 @@
      "name": "Queijo Flamengo em Fatias",
      "price": 4.39,
      "per": "un",
-     "label": "Limiano",
+     "label": "Pack de 2 x 200g (kg = 10.98)",
      "note": "folheto (lido por IA)"
     },
     {
@@ -4086,7 +4234,6 @@
      "name": "Queijo de Azeitão DOP",
      "price": 6.89,
      "per": "un",
-     "label": "Simões",
      "note": "folheto (lido por IA)"
     },
     {
@@ -4094,15 +4241,36 @@
      "name": "Queijo de Serpa DOP",
      "price": 5.99,
      "per": "un",
-     "label": "Queijaria Pacheco",
      "note": "folheto (lido por IA)"
     },
     {
      "id": "hamburgueres-de-tremoco",
-     "name": "Hambúrgueres de Tremoco",
+     "name": "Hambúrgueres de Tremoço",
      "price": 2.49,
      "per": "un",
-     "label": "Tremoceira",
+     "label": "Sortido: pimento vermelho (kg = 12.45)",
+     "note": "folheto (lido por IA)"
+    },
+    {
+     "id": "azeite-virgem-extra",
+     "name": "Azeite Virgem Extra",
+     "price": 4.49,
+     "per": "un",
+     "label": "500 ml unidade",
+     "note": "folheto (lido por IA)"
+    },
+    {
+     "id": "beijinhos-de-pombal",
+     "name": "Beijinhos de Pombal",
+     "price": 2.69,
+     "per": "un",
+     "note": "folheto (lido por IA)"
+    },
+    {
+     "id": "pasteis-de-feijao",
+     "name": "Pastéis de Feijão",
+     "price": 2.69,
+     "per": "kg",
      "note": "folheto (lido por IA)"
     },
     {
@@ -4120,6 +4288,13 @@
      "note": "folheto (lido por IA)"
     },
     {
+     "id": "leite-meio-gordo",
+     "name": "Leite Meio-gordo",
+     "price": 0.87,
+     "per": "un",
+     "note": "folheto (lido por IA)"
+    },
+    {
      "id": "manteiga-com-sal",
      "name": "Manteiga com Sal",
      "price": 2.19,
@@ -4130,7 +4305,7 @@
      "id": "creme-vegetal",
      "name": "Creme Vegetal",
      "price": 1.43,
-     "per": "kg",
+     "per": "un",
      "note": "folheto (lido por IA)"
     },
     {
@@ -4154,6 +4329,13 @@
      "price": 2.49,
      "per": "kg",
      "label": "500g embalagem",
+     "note": "folheto (lido por IA)"
+    },
+    {
+     "id": "coco-biologico",
+     "name": "Coco Biológico",
+     "price": 1.89,
+     "per": "un",
      "note": "folheto (lido por IA)"
     },
     {
@@ -4189,6 +4371,7 @@
      "name": "Pato Desfiado com Bacon e Chouriço",
      "price": 2,
      "per": "un",
+     "label": "50%* 2 un.",
      "note": "folheto (lido por IA)"
     },
     {
@@ -4234,10 +4417,17 @@
      "note": "folheto (lido por IA)"
     },
     {
+     "id": "ravioli",
+     "name": "Ravioli",
+     "price": 4.49,
+     "per": "kg",
+     "note": "folheto (lido por IA)"
+    },
+    {
      "id": "guisado-de-carne-de-vaca",
      "name": "Guisado de Carne de Vaca",
      "price": 4.99,
-     "per": "un",
+     "per": "kg",
      "note": "folheto (lido por IA)"
     },
     {
@@ -4351,7 +4541,7 @@
         },
         {
          "market": "Continente",
-         "product": "Carne Picada de Aves",
+         "product": "Carne Picada de Porco",
          "price": 3.09,
          "per": "un",
          "total": 3.09
@@ -4447,10 +4637,10 @@
         },
         {
          "market": "Continente",
-         "product": "Vazio Alto Liso de Novilho Angus",
-         "price": 15.99,
+         "product": "Medalhões de Controlo Novilho",
+         "price": 14.99,
          "per": "kg",
-         "total": 9.59
+         "total": 8.99
         }
        ],
        "image": "/meals/lib-vaca-brocolos-7bb7dc27.webp",
@@ -4562,7 +4752,7 @@
         },
         {
          "market": "Continente",
-         "product": "Carne Picada de Aves",
+         "product": "Carne Picada de Porco",
          "price": 3.09,
          "per": "un",
          "total": 3.09
@@ -4594,7 +4784,7 @@
          "item": "Carne de vaca para estufar",
          "qty": "1 kg",
          "price": 4.99,
-         "per": "un",
+         "per": "kg",
          "amount": 1,
          "note": "folheto: Guisado de Carne de Vaca",
          "promoId": "guisado-de-carne-de-vaca"
@@ -4651,17 +4841,22 @@
          "market": "Aldi",
          "product": "Guisado de Carne de Vaca",
          "price": 4.99,
-         "per": "un",
+         "per": "kg",
          "total": 4.99
         },
         {
          "market": "Continente",
-         "product": "Vazio Alto Liso de Novilho Angus",
-         "price": 15.99,
+         "product": "Medalhões de Controlo Novilho",
+         "price": 14.99,
          "per": "kg",
-         "total": 15.99
+         "total": 14.99
         }
-       ]
+       ],
+       "image": "/meals/lib-estufado-novilho-37adccca.webp",
+       "imageCredit": {
+        "name": "Imagem gerada por IA",
+        "url": ""
+       }
       }
      ]
     },
@@ -4690,7 +4885,7 @@
          "item": "Vaca para estufar",
          "qty": "1 kg",
          "price": 4.99,
-         "per": "un",
+         "per": "kg",
          "amount": 1,
          "note": "folheto: Guisado de Carne de Vaca",
          "promoId": "guisado-de-carne-de-vaca"
@@ -4755,15 +4950,15 @@
          "market": "Aldi",
          "product": "Guisado de Carne de Vaca",
          "price": 4.99,
-         "per": "un",
+         "per": "kg",
          "total": 4.99
         },
         {
          "market": "Continente",
-         "product": "Vazio Alto Liso de Novilho Angus",
-         "price": 15.99,
+         "product": "Medalhões de Controlo Novilho",
+         "price": 14.99,
          "per": "kg",
-         "total": 15.99
+         "total": 14.99
         }
        ],
        "image": "/meals/lib-bo-kho-cd5d72e2.webp",
@@ -4864,13 +5059,6 @@
          "total": 1.79
         },
         {
-         "market": "Continente",
-         "product": "Pernil de Porco Continent",
-         "price": 3.49,
-         "per": "kg",
-         "total": 2.09
-        },
-        {
          "market": "Aldi",
          "product": "Bife do Diantreido dos Açores",
          "price": 3.99,
@@ -4883,8 +5071,20 @@
          "price": 4.49,
          "per": "kg",
          "total": 2.69
+        },
+        {
+         "market": "Continente",
+         "product": "Carne Picada de Porco",
+         "price": 3.09,
+         "per": "un",
+         "total": 3.09
         }
-       ]
+       ],
+       "image": "/meals/lib-bulgogi-a608a482.webp",
+       "imageCredit": {
+        "name": "Imagem gerada por IA",
+        "url": ""
+       }
       }
      ]
     }
@@ -5000,7 +5200,7 @@
       },
       {
        "market": "Continente",
-       "product": "Hambúrguer c/ Queijo e Ervas (Embalado)",
+       "product": "Hambúrguer c/ Queijo e Ervas",
        "price": 5.59,
        "per": "un",
        "total": 5.59
@@ -5094,7 +5294,7 @@
      "compare": [
       {
        "market": "Continente",
-       "product": "Fillete de Dourada/Robalo",
+       "product": "Filé de Dourada/Robalo",
        "price": 2.99,
        "per": "kg",
        "total": 2.99
@@ -5277,7 +5477,7 @@
         },
         {
          "market": "Continente",
-         "product": "Hambúrguer c/ Queijo e Ervas (Embalado)",
+         "product": "Hambúrguer c/ Queijo e Ervas",
          "price": 5.59,
          "per": "un",
          "total": 5.59
@@ -5371,7 +5571,7 @@
        "compare": [
         {
          "market": "Continente",
-         "product": "Fillete de Dourada/Robalo",
+         "product": "Filé de Dourada/Robalo",
          "price": 2.99,
          "per": "kg",
          "total": 2.99
@@ -5484,7 +5684,7 @@
        "compare": [
         {
          "market": "Continente",
-         "product": "Fillete de Dourada/Robalo",
+         "product": "Filé de Dourada/Robalo",
          "price": 2.99,
          "per": "kg",
          "total": 2.39
@@ -5582,7 +5782,12 @@
         "Misture maionese com alho ralado e sirva com limão e batata frita.",
         "Dica do chef: Frite em pequenas porções para o óleo não arrefecer."
        ],
-       "imageQuery": "Calamares a la Romana Espanhola"
+       "imageQuery": "Calamares a la Romana Espanhola",
+       "image": "/meals/lib-calamares-a54a472b.webp",
+       "imageCredit": {
+        "name": "Imagem gerada por IA",
+        "url": ""
+       }
       }
      ]
     },
@@ -5676,7 +5881,12 @@
          "per": "kg",
          "total": 3.49
         }
-       ]
+       ],
+       "image": "/meals/lib-espadarte-siciliana-be67e422.webp",
+       "imageCredit": {
+        "name": "Imagem gerada por IA",
+        "url": ""
+       }
       },
       {
        "id": "lulas-guisadas",
@@ -5756,7 +5966,12 @@
         "Cozinhe o arroz branco à parte (18 min) e sirva as lulas com coentros picados.",
         "Dica do chef: Não mexa demasiado: as lulas devem ficar com o corte intacto."
        ],
-       "imageQuery": "Lulas Guisadas Portuguesa"
+       "imageQuery": "Lulas Guisadas Portuguesa",
+       "image": "/meals/lib-lulas-guisadas-86f49ae0.webp",
+       "imageCredit": {
+        "name": "Imagem gerada por IA",
+        "url": ""
+       }
       }
      ]
     },
@@ -5858,7 +6073,12 @@
          "per": "kg",
          "total": 2.99
         }
-       ]
+       ],
+       "image": "/meals/lib-teriyaki-salmao-18cd816f.webp",
+       "imageCredit": {
+        "name": "Imagem gerada por IA",
+        "url": ""
+       }
       },
       {
        "id": "puttanesca",
@@ -6037,7 +6257,12 @@
          "per": "kg",
          "total": 2.99
         }
-       ]
+       ],
+       "image": "/meals/lib-teriyaki-salmao-18cd816f.webp",
+       "imageCredit": {
+        "name": "Imagem gerada por IA",
+        "url": ""
+       }
       },
       {
        "id": "mac-cheese",
@@ -6128,7 +6353,7 @@
         },
         {
          "market": "Continente",
-         "product": "Hambúrguer c/ Queijo e Ervas (Embalado)",
+         "product": "Hambúrguer c/ Queijo e Ervas",
          "price": 5.59,
          "per": "un",
          "total": 5.59
@@ -6217,7 +6442,12 @@
         "Misture maionese com alho ralado e sirva com limão e batata frita.",
         "Dica do chef: Frite em pequenas porções para o óleo não arrefecer."
        ],
-       "imageQuery": "Calamares a la Romana Espanhola"
+       "imageQuery": "Calamares a la Romana Espanhola",
+       "image": "/meals/lib-calamares-a54a472b.webp",
+       "imageCredit": {
+        "name": "Imagem gerada por IA",
+        "url": ""
+       }
       },
       {
        "id": "moqueca",
@@ -6301,7 +6531,7 @@
        "compare": [
         {
          "market": "Continente",
-         "product": "Fillete de Dourada/Robalo",
+         "product": "Filé de Dourada/Robalo",
          "price": 2.99,
          "per": "kg",
          "total": 2.39
@@ -6355,7 +6585,21 @@
   "bo-kho": "/meals/lib-bo-kho-cd5d72e2.webp",
   "moussaka": "/meals/lib-moussaka-7536c602.webp",
   "paella": "/meals/lib-paella-0e3ee665.webp",
-  "polvo-lagareiro": "/meals/lib-polvo-lagareiro-027e7026.webp"
+  "polvo-lagareiro": "/meals/lib-polvo-lagareiro-027e7026.webp",
+  "pad-thai": "/meals/lib-pad-thai-7816bbd3.webp",
+  "dourada-forno": "/meals/lib-dourada-forno-f1af817e.webp",
+  "bulgogi": "/meals/lib-bulgogi-a608a482.webp",
+  "katsu-porco": "/meals/lib-katsu-porco-47eacb11.webp",
+  "tacos-porco": "/meals/lib-tacos-porco-c77a9159.webp",
+  "gyros-porco": "/meals/lib-gyros-porco-ac81f42d.webp",
+  "souvlaki": "/meals/lib-souvlaki-d6313ee0.webp",
+  "kebab-frango": "/meals/lib-kebab-frango-14fdd347.webp",
+  "risotto-cogumelos": "/meals/lib-risotto-cogumelos-94ea2320.webp",
+  "estufado-novilho": "/meals/lib-estufado-novilho-37adccca.webp",
+  "calamares": "/meals/lib-calamares-a54a472b.webp",
+  "espadarte-siciliana": "/meals/lib-espadarte-siciliana-be67e422.webp",
+  "lulas-guisadas": "/meals/lib-lulas-guisadas-86f49ae0.webp",
+  "teriyaki-salmao": "/meals/lib-teriyaki-salmao-18cd816f.webp"
  },
  "compare": [
   {
@@ -6366,7 +6610,7 @@
    "rows": [
     {
      "market": "Continente",
-     "product": "Fillete de Dourada/Robalo",
+     "product": "Filé de Dourada/Robalo",
      "price": 2.99,
      "per": "kg",
      "total": 2.39
@@ -6412,8 +6656,8 @@
       "per": "kg",
       "amount": 0.8,
       "label": "Apenas",
-      "note": "folheto: Fillete de Dourada/Robalo",
-      "promoId": "fillete-de-dourada-robalo"
+      "note": "folheto: Filé de Dourada/Robalo",
+      "promoId": "file-de-dourada-robalo"
      },
      {
       "item": "Arroz branco",
@@ -6469,7 +6713,7 @@
     "compare": [
      {
       "market": "Continente",
-      "product": "Fillete de Dourada/Robalo",
+      "product": "Filé de Dourada/Robalo",
       "price": 2.99,
       "per": "kg",
       "total": 2.39
@@ -6504,7 +6748,7 @@
    "rows": [
     {
      "market": "Continente",
-     "product": "Fillete de Dourada/Robalo",
+     "product": "Filé de Dourada/Robalo",
      "price": 2.99,
      "per": "kg",
      "total": 2.99
@@ -6551,8 +6795,8 @@
       "per": "kg",
       "amount": 1,
       "label": "Apenas",
-      "note": "folheto: Fillete de Dourada/Robalo",
-      "promoId": "fillete-de-dourada-robalo"
+      "note": "folheto: Filé de Dourada/Robalo",
+      "promoId": "file-de-dourada-robalo"
      },
      {
       "item": "Batata",
@@ -6607,7 +6851,7 @@
     "compare": [
      {
       "market": "Continente",
-      "product": "Fillete de Dourada/Robalo",
+      "product": "Filé de Dourada/Robalo",
       "price": 2.99,
       "per": "kg",
       "total": 2.99
@@ -6644,15 +6888,15 @@
      "market": "Aldi",
      "product": "Guisado de Carne de Vaca",
      "price": 4.99,
-     "per": "un",
+     "per": "kg",
      "total": 4.99
     },
     {
      "market": "Continente",
-     "product": "Vazio Alto Liso de Novilho Angus",
-     "price": 15.99,
+     "product": "Medalhões de Controlo Novilho",
+     "price": 14.99,
      "per": "kg",
-     "total": 15.99
+     "total": 14.99
     }
    ],
    "market": "Aldi",
@@ -6678,7 +6922,7 @@
       "item": "Vaca para estufar",
       "qty": "1 kg",
       "price": 4.99,
-      "per": "un",
+      "per": "kg",
       "amount": 1,
       "note": "folheto: Guisado de Carne de Vaca",
       "promoId": "guisado-de-carne-de-vaca"
@@ -6743,15 +6987,15 @@
       "market": "Aldi",
       "product": "Guisado de Carne de Vaca",
       "price": 4.99,
-      "per": "un",
+      "per": "kg",
       "total": 4.99
      },
      {
       "market": "Continente",
-      "product": "Vazio Alto Liso de Novilho Angus",
-      "price": 15.99,
+      "product": "Medalhões de Controlo Novilho",
+      "price": 14.99,
       "per": "kg",
-      "total": 15.99
+      "total": 14.99
      }
     ],
     "image": "/meals/lib-bo-kho-cd5d72e2.webp",
@@ -6783,7 +7027,7 @@
     },
     {
      "market": "Continente",
-     "product": "Hambúrguer c/ Queijo e Ervas (Embalado)",
+     "product": "Hambúrguer c/ Queijo e Ervas",
      "price": 5.59,
      "per": "un",
      "total": 5.59
@@ -6879,7 +7123,7 @@
      },
      {
       "market": "Continente",
-      "product": "Hambúrguer c/ Queijo e Ervas (Embalado)",
+      "product": "Hambúrguer c/ Queijo e Ervas",
       "price": 5.59,
       "per": "un",
       "total": 5.59
