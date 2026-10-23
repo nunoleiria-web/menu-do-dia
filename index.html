@@ -1,1835 +1,492 @@
-<!DOCTYPE html>
-<html lang="pt-PT" class="h-full scroll-smooth">
+<!doctype html>
+<html lang="pt-PT">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Menu do Dia — Receitas Económicas com Promoções de Supermercado</title>
-  <!-- Google Fonts Inter -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Phosphor Icons -->
-  <script src="https://unpkg.com/@phosphor-icons/web"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['Inter', 'sans-serif'],
-          }
-        }
-      }
-    }
-  </script>
-  <style>
-    .no-scrollbar::-webkit-scrollbar { display: none; }
-    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-    .backdrop-blur-md { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
-    @keyframes pulse-ring {
-      0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
-      70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
-      100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
-    }
-    .timer-pulse { animation: pulse-ring 2s infinite; }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Menu do Dia</title>
+<meta name="description" content="O jantar de hoje com preços reais dos folhetos do Continente, Pingo Doce, Lidl, Aldi e Intermarché. Receitas, custo por pessoa e lista de compras.">
+<meta name="theme-color" content="#FAFAF7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0E1626" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232340C8'/%3E%3Cpath d='M18 40h28M22 40c0-8 5-13 10-13s10 5 10 13M32 22v5' stroke='%23FFD23F' stroke-width='4' stroke-linecap='round' fill='none'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#FAFAF7; --card:#FFFFFF; --ink:#0E1626; --ink-2:#4A5568; --ink-3:#7B8494;
+  --line:#E4E5E0; --wash:#F0F1EC; --cobalt:#2340C8; --cobalt-ink:#FFFFFF; --cobalt-soft:#E7EBFB;
+  --tag:#FFD23F; --tag-ink:#1A1400; --good:#177245; --good-soft:#E3F3EA; --warn:#9A5B00; --warn-soft:#FFF1D6; --bad:#B3261E; --bad-soft:#FCE8E6;
+  --shadow:0 1px 2px rgba(14,22,38,.06),0 8px 24px -12px rgba(14,22,38,.18);
+  --r:18px; --display:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif; --body:"Figtree",ui-sans-serif,system-ui,sans-serif;
+}
+:root[data-theme="dark"]{
+  --paper:#0E1626; --card:#162036; --ink:#F2F4F8; --ink-2:#B4BDCD; --ink-3:#8793A8;
+  --line:#26324A; --wash:#1B2740; --cobalt:#6C86FF; --cobalt-ink:#0B1230; --cobalt-soft:#1D2A57;
+  --good:#5AD08D; --good-soft:#143826; --warn:#F2B650; --warn-soft:#3A2C0D; --bad:#FF8F86; --bad-soft:#40201E;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 28px -12px rgba(0,0,0,.6);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#0E1626; --card:#162036; --ink:#F2F4F8; --ink-2:#B4BDCD; --ink-3:#8793A8;
+    --line:#26324A; --wash:#1B2740; --cobalt:#6C86FF; --cobalt-ink:#0B1230; --cobalt-soft:#1D2A57;
+    --good:#5AD08D; --good-soft:#143826; --warn:#F2B650; --warn-soft:#3A2C0D; --bad:#FF8F86; --bad-soft:#40201E;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 28px -12px rgba(0,0,0,.6);
+  }
+}
+*{box-sizing:border-box;margin:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font:400 16px/1.55 var(--body);-webkit-font-smoothing:antialiased;min-height:100dvh}
+body:has(dialog[open]){overflow:hidden}
+button{font:inherit;color:inherit;cursor:pointer;background:none;border:0}
+img{display:block;max-width:100%}
+a{color:var(--cobalt)}
+:focus-visible{outline:3px solid var(--cobalt);outline-offset:2px;border-radius:8px}
+.wrap{width:min(1180px,100% - 32px);margin-inline:auto}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+h1,h2,h3{font-family:var(--display);line-height:1.08;letter-spacing:-.02em;text-wrap:balance}
+
+/* header */
+.top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:12px;height:62px}
+.brand{display:flex;align-items:center;gap:10px;font:800 21px/1 var(--display);letter-spacing:-.03em;text-decoration:none;color:var(--ink)}
+.brand i{width:34px;height:34px;border-radius:10px;background:var(--cobalt);display:grid;place-items:center}
+.brand svg{width:22px;height:22px}
+.sp{flex:1}
+.ibtn{position:relative;height:42px;min-width:42px;padding:0 12px;border-radius:999px;border:1px solid var(--line);background:var(--card);display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:600;font-size:14px}
+.ibtn:hover{border-color:var(--ink-3)}
+.ibtn svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.count{position:absolute;top:-5px;right:-3px;min-width:20px;height:20px;border-radius:999px;background:var(--tag);color:var(--tag-ink);font:700 12px/20px var(--body);text-align:center;padding:0 5px}
+
+/* hero */
+.hero{padding:34px 0 10px}
+.hero-grid{display:grid;gap:22px}
+.date{color:var(--ink-2);font-weight:600;font-size:15px}
+.hero h1{font-size:clamp(34px,6.2vw,64px);font-weight:800;margin:6px 0 12px;max-width:15ch}
+.hero p.lead{color:var(--ink-2);max-width:52ch;font-size:17px}
+.best{position:relative;border-radius:26px;overflow:hidden;background:var(--ink);color:#fff;min-height:340px;display:flex;align-items:flex-end;box-shadow:var(--shadow);text-align:left;width:100%;isolation:isolate}
+.best img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.best::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(8,12,22,.88) 8%,rgba(8,12,22,.1) 62%);z-index:-1}
+.best .in{padding:22px;display:grid;gap:8px;width:100%}
+.best h2{font-size:clamp(24px,3.4vw,34px);font-weight:800}
+.best .meta{display:flex;gap:10px;flex-wrap:wrap;font-size:14px;opacity:.92}
+.best .badge{position:absolute;top:16px;left:16px;background:rgba(255,255,255,.94);color:#0E1626;font-weight:700;font-size:13px;border-radius:999px;padding:5px 12px}
+.best .tagpos{position:absolute;top:12px;right:14px}
+
+/* the price tag */
+.tag{display:inline-flex;align-items:flex-start;gap:1px;background:var(--tag);color:var(--tag-ink);padding:6px 11px 6px 14px;border-radius:6px 12px 12px 6px;position:relative;font-family:var(--display);font-weight:800;line-height:1;box-shadow:0 2px 0 rgba(0,0,0,.16)}
+.tag::before{content:"";position:absolute;left:5px;top:50%;width:5px;height:5px;margin-top:-2.5px;border-radius:50%;background:rgba(26,20,0,.35)}
+.tag b{font-size:28px;letter-spacing:-.04em;padding-left:4px}
+.tag sup{font-size:14px;margin-top:2px;letter-spacing:0}
+.tag em{font:700 11px/1 var(--body);font-style:normal;align-self:flex-end;margin:0 0 3px 4px;opacity:.75}
+.tag.sm b{font-size:20px}.tag.sm sup{font-size:11px}.tag.sm{padding:5px 9px 5px 12px}
+
+/* compare */
+.compare{background:var(--card);border:1px solid var(--line);border-radius:26px;padding:20px;display:grid;gap:12px;align-content:start}
+.compare h2{font-size:20px;font-weight:700}
+.compare small{color:var(--ink-3);font-size:13px}
+.row{display:grid;grid-template-columns:118px 1fr auto;white-space:nowrap;gap:10px;align-items:center;font-size:14px;font-weight:600;width:100%;text-align:left;padding:4px;border-radius:10px}
+.row:hover{background:var(--wash)}
+.bar{height:10px;border-radius:99px;background:var(--wash);overflow:hidden}
+.bar span{display:block;height:100%;border-radius:99px;background:var(--c,var(--cobalt))}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--c);margin-right:7px}
+
+/* store nav */
+.stores{position:sticky;top:62px;z-index:15;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(12px);padding:12px 0;margin-top:18px;border-bottom:1px solid var(--line)}
+.chips{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding:2px 0}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;display:inline-flex;align-items:center;gap:8px;padding:9px 15px;border-radius:999px;border:1px solid var(--line);background:var(--card);font-weight:600;font-size:14.5px;white-space:nowrap}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.chip .st{width:8px;height:8px;border-radius:50%;background:var(--ink-3)}
+.st.novo{background:#22B573}.st.sem-novo{background:#E8A317}.st.expirado{background:#E5483D}
+
+/* sections */
+main{padding-bottom:70px}
+#app{scroll-margin-top:130px}
+.sec{margin-top:34px}
+.sec-h{display:flex;align-items:end;gap:14px;flex-wrap:wrap;margin-bottom:16px}
+.sec-h h2{font-size:clamp(24px,3.4vw,32px);font-weight:800}
+.sec-h .sp{flex:1}
+select.sort{height:40px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);padding:0 14px;font:600 14px var(--body)}
+
+/* status banner */
+.banner{display:flex;gap:14px;align-items:flex-start;border-radius:var(--r);padding:16px 18px;border:1px solid transparent;margin-bottom:20px}
+.banner.novo{background:var(--good-soft);border-color:color-mix(in srgb,var(--good) 30%,transparent)}
+.banner.sem-novo{background:var(--warn-soft);border-color:color-mix(in srgb,var(--warn) 30%,transparent)}
+.banner.expirado{background:var(--bad-soft);border-color:color-mix(in srgb,var(--bad) 30%,transparent)}
+.banner b{display:block;font:700 17px/1.2 var(--display)}
+.banner p{font-size:14.5px;color:var(--ink-2);margin-top:3px}
+.banner .ic{width:30px;height:30px;border-radius:50%;flex:none;display:grid;place-items:center;color:#fff;font-weight:800}
+.banner.novo .ic{background:var(--good)}.banner.sem-novo .ic{background:#D9920F}.banner.expirado .ic{background:var(--bad)}
+.banner.novo b{color:var(--good)}.banner.sem-novo b{color:var(--warn)}.banner.expirado b{color:var(--bad)}
+.mini-status{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(230px,1fr))}
+.mini{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px;text-align:left;display:grid;gap:4px}
+.mini:hover{border-color:var(--ink-3)}
+.mini b{font:700 17px var(--display)}
+.mini span{font-size:13.5px;color:var(--ink-2)}
+.pill{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:700;padding:3px 10px;border-radius:99px;width:fit-content}
+.pill.novo{background:var(--good-soft);color:var(--good)}.pill.sem-novo{background:var(--warn-soft);color:var(--warn)}.pill.expirado{background:var(--bad-soft);color:var(--bad)}
+
+/* cards */
+.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fill,minmax(285px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden;display:flex;flex-direction:column;text-align:left;box-shadow:var(--shadow);transition:transform .2s,border-color .2s}
+.card:hover{transform:translateY(-3px);border-color:var(--ink-3)}
+.ph{position:relative;aspect-ratio:4/3;background:var(--wash);overflow:hidden}
+.ph img{width:100%;height:100%;object-fit:cover}
+.ph .tagpos{position:absolute;left:12px;bottom:12px}
+.ph .store{position:absolute;top:12px;left:12px;background:rgba(255,255,255,.95);color:#0E1626;font-weight:700;font-size:12.5px;padding:4px 11px;border-radius:99px;display:flex;align-items:center}
+.noimg{width:100%;height:100%;display:grid;place-items:center;font:800 54px var(--display);color:var(--ink-3);background:repeating-linear-gradient(45deg,var(--wash),var(--wash) 14px,var(--paper) 14px,var(--paper) 28px)}
+.cb{padding:16px 18px 18px;display:grid;gap:8px;flex:1;align-content:start}
+.cb h3{font-size:21px;font-weight:700}
+.cb p{font-size:14.5px;color:var(--ink-2);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.facts{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13.5px;color:var(--ink-3);font-weight:600;margin-top:2px}
+.main-prod{font-size:13px;color:var(--ink-2);background:var(--wash);border-radius:10px;padding:7px 10px}
+.main-prod b{color:var(--ink)}
+
+/* promos */
+.search{width:100%;max-width:340px;height:42px;border-radius:99px;border:1px solid var(--line);background:var(--card);color:var(--ink);padding:0 16px;font:500 15px var(--body)}
+.promos{display:grid;gap:10px;grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
+.pr{display:flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px 12px}
+.pr .n{flex:1;font-weight:600;font-size:14.5px;line-height:1.3}
+.pr .n small{display:block;color:var(--ink-3);font-weight:500;font-size:12.5px}
+.add{width:34px;height:34px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;font-size:20px;line-height:1;flex:none}
+.add:hover{background:var(--cobalt);color:var(--cobalt-ink);border-color:var(--cobalt)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:46px;padding:0 20px;border-radius:99px;font-weight:700;background:var(--cobalt);color:var(--cobalt-ink)}
+.btn:hover{filter:brightness(1.08)}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.btn.ghost:hover{border-color:var(--ink-3)}
+.btn.sm{height:38px;padding:0 15px;font-size:14px}
+
+/* how */
+.how{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-top:40px}
+.how div{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px}
+.how h3{font-size:18px;margin-bottom:6px}
+.how p{font-size:14.5px;color:var(--ink-2)}
+footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--ink-3);font-size:13.5px}
+
+/* dialogs */
+dialog{border:0;padding:0;background:var(--paper);color:var(--ink);max-width:none;max-height:none}
+dialog::backdrop{background:rgba(8,12,22,.6);backdrop-filter:blur(3px)}
+.sheet{width:min(1040px,100vw);height:100dvh;margin:0 auto;overflow:auto;overscroll-behavior:contain}
+@media(min-width:900px){.sheet{height:min(92dvh,900px);margin:auto;border-radius:28px;box-shadow:0 30px 80px -20px rgba(0,0,0,.5)}}
+.sheet-hd{position:sticky;top:0;z-index:5;display:flex;justify-content:space-between;padding:12px 14px;pointer-events:none}
+.sheet-hd button{pointer-events:auto;background:color-mix(in srgb,var(--card) 92%,transparent);backdrop-filter:blur(8px);box-shadow:var(--shadow)}
+.sheet-img{margin-top:-66px;height:min(44vh,360px);background:var(--wash);position:relative}
+.sheet-img img{width:100%;height:100%;object-fit:cover}
+.sheet-img small{position:absolute;right:12px;bottom:10px;color:#fff;background:rgba(0,0,0,.5);padding:2px 9px;border-radius:99px;font-size:11.5px}
+.sheet-body{padding:24px clamp(18px,4vw,40px) 120px;display:grid;gap:28px}
+.sheet-body h2{font-size:clamp(28px,4.5vw,44px);font-weight:800}
+.sheet-body .lead{color:var(--ink-2);font-size:16.5px;max-width:62ch}
+.kpis{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:9px 14px;font-size:13px;color:var(--ink-3);font-weight:600}
+.kpi b{display:block;color:var(--ink);font:700 17px var(--display)}
+.cols{display:grid;gap:30px}
+@media(min-width:900px){.cols{grid-template-columns:minmax(0,5fr) minmax(0,6fr)}}
+.stepper{display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:99px;background:var(--card)}
+.stepper button{width:40px;height:40px;font-size:20px;font-weight:700}
+.stepper span{min-width:92px;text-align:center;font-weight:700;font-size:14.5px}
+.ing h3,.steps h3{font-size:22px;margin:0 0 10px}
+.grp{font-size:13px;font-weight:700;color:var(--ink-3);margin:16px 0 6px}
+.li{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+.li .q{color:var(--ink-3);font-size:14px}
+.li.p{background:var(--cobalt-soft);margin:0 -12px;padding:11px 12px;border-radius:12px;border-bottom:0;margin-bottom:6px}
+.li.p .pp{text-align:right;font-weight:700;white-space:nowrap}
+.li.p .pp small{display:block;color:var(--ink-2);font-weight:500;font-size:12.5px}
+.note{font-size:13.5px;color:var(--ink-2);background:var(--wash);border-radius:12px;padding:10px 12px;margin-top:12px}
+ol.st{list-style:none;padding:0;display:grid;gap:12px;counter-reset:s}
+ol.st li{counter-increment:s;display:grid;grid-template-columns:34px 1fr;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px;cursor:pointer}
+ol.st li::before{content:counter(s);width:34px;height:34px;border-radius:50%;background:var(--wash);display:grid;place-items:center;font:800 15px var(--display)}
+ol.st li.done{opacity:.55}
+ol.st li.done::before{content:"✓";background:var(--good);color:#fff}
+ol.st li.done .tx{text-decoration:line-through}
+ol.st li.tip{background:var(--tag);color:var(--tag-ink);border-color:transparent}
+ol.st li.tip::before{content:"★";background:rgba(26,20,0,.12)}
+ol.st .tm{margin-top:8px}
+.tbtn{font-size:13px;font-weight:700;border-radius:99px;padding:5px 12px;background:var(--cobalt-soft);color:var(--cobalt)}
+.dock{position:sticky;bottom:0;z-index:5;display:flex;gap:10px;justify-content:center;padding:14px;background:linear-gradient(to top,var(--paper) 60%,transparent)}
+.timer{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);z-index:100;background:var(--ink);color:var(--paper);border-radius:99px;padding:8px 10px 8px 20px;display:flex;align-items:center;gap:12px;font-weight:700;box-shadow:0 14px 40px -10px rgba(0,0,0,.5)}
+.timer output{font:800 22px var(--display);font-variant-numeric:tabular-nums}
+.timer button{background:var(--paper);color:var(--ink);border-radius:99px;padding:6px 14px;font-weight:700;font-size:13px}
+[hidden]{display:none!important}
+
+/* cart */
+.drawer{width:min(460px,100vw);height:100dvh;margin:0 0 0 auto;display:flex;flex-direction:column}
+.drawer-hd{display:flex;align-items:center;gap:10px;padding:16px 18px;border-bottom:1px solid var(--line)}
+.drawer-hd h2{font-size:24px;font-weight:800;flex:1}
+.drawer-body{flex:1;overflow:auto;padding:6px 18px 18px}
+.cg h3{font-size:16px;margin:18px 0 4px;display:flex;align-items:center}
+.ci{display:flex;gap:12px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line)}
+.ci input{width:22px;height:22px;accent-color:var(--cobalt);flex:none}
+.ci .n{flex:1;font-size:15px;line-height:1.3}
+.ci .n small{display:block;color:var(--ink-3);font-size:12.5px}
+.ci.off .n{text-decoration:line-through;opacity:.5}
+.ci .pc{font-weight:700;font-size:14.5px;white-space:nowrap}
+.rm{color:var(--ink-3);width:30px;height:30px;font-size:18px;border-radius:50%}
+.rm:hover{background:var(--wash);color:var(--bad)}
+.drawer-ft{padding:14px 18px calc(14px + env(safe-area-inset-bottom));border-top:1px solid var(--line);display:grid;gap:12px;background:var(--card)}
+.tot{display:flex;justify-content:space-between;align-items:baseline;font-weight:600}
+.tot b{font:800 28px var(--display)}
+.switch{display:flex;gap:10px;align-items:center;font-size:14px;color:var(--ink-2)}
+.switch input{width:18px;height:18px;accent-color:var(--cobalt)}
+.empty{text-align:center;color:var(--ink-2);padding:50px 20px}
+.empty b{display:block;font:700 20px var(--display);color:var(--ink);margin-bottom:6px}
+.toast{position:fixed;left:50%;bottom:22px;transform:translate(-50%,30px);opacity:0;pointer-events:none;background:var(--ink);color:var(--paper);padding:11px 20px;border-radius:99px;font-weight:600;font-size:14.5px;z-index:200;transition:.25s}
+.toast.on{transform:translate(-50%,0);opacity:1}
+.err{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:30px;text-align:center;margin:30px 0}
+
+@media(min-width:960px){.hero-grid{grid-template-columns:1.1fr 1fr;align-items:center}.hero-right{display:grid;gap:18px}}
+@media(max-width:560px){.row{grid-template-columns:112px 1fr auto}.hero{padding-top:24px}.best{min-height:300px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+@media print{.top,.stores,.dock,.timer,.toast{display:none!important}}
+</style>
 </head>
-<body class="bg-stone-50 dark:bg-stone-950 text-stone-900 dark:text-stone-100 font-sans antialiased min-h-screen flex flex-col selection:bg-emerald-500 selection:text-white transition-colors duration-200">
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="#" aria-label="Menu do Dia"><i><svg viewBox="0 0 64 64" fill="none" stroke="#FFD23F" stroke-width="5" stroke-linecap="round"><path d="M12 42h40M18 42c0-10 6-16 14-16s14 6 14 16M32 20v6"/></svg></i>Menu do Dia</a>
+  <div class="sp"></div>
+  <button class="ibtn" id="theme" aria-label="Alternar modo escuro"><svg viewBox="0 0 24 24"><path d="M21 13.2A8.5 8.5 0 1 1 10.8 3a6.8 6.8 0 0 0 10.2 10.2z"/></svg></button>
+  <button class="ibtn" id="cartBtn" aria-label="Abrir lista de compras"><svg viewBox="0 0 24 24"><path d="M3 4h2.5l2.2 11h10.6l2-8H6.2"/><circle cx="9" cy="19.5" r="1.3"/><circle cx="17" cy="19.5" r="1.3"/></svg><span>Lista</span><span class="count" id="count" hidden>0</span></button>
+</div></header>
 
-  <!-- ==================== CABEÇALHO (HEADER) ==================== -->
-  <header class="sticky top-0 z-30 bg-white/90 dark:bg-stone-900/90 backdrop-blur-md border-b border-stone-200/80 dark:border-stone-800 transition-colors">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-2">
-      <!-- Logótipo -->
-      <a href="#" id="logo-reset" class="flex items-center gap-3 group focus:outline-none rounded-xl">
-        <div id="brand-logo-box" class="w-10 h-10 rounded-xl bg-emerald-600 text-white flex items-center justify-center font-black text-xl shadow-sm group-hover:scale-105 transition-all">
-          M
-        </div>
-        <div class="flex flex-col">
-          <div class="flex items-center gap-2">
-            <span class="font-extrabold text-stone-900 dark:text-white tracking-tight leading-none text-base sm:text-lg">Menu do Dia</span>
-            <span class="hidden sm:inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800">
-              PT
-            </span>
-          </div>
-          <span class="text-[11px] text-stone-500 dark:text-stone-400 font-medium mt-0.5">Poupa nos folhetos da semana</span>
-        </div>
-      </a>
+<main>
+  <section class="hero"><div class="wrap hero-grid" id="hero"></div></section>
+  <nav class="stores" aria-label="Supermercados"><div class="wrap"><div class="chips" id="chips"></div></div></nav>
+  <div class="wrap" id="app"><div class="err" id="loading">A carregar o menu…</div></div>
 
-      <!-- Ações do Header -->
-      <div class="flex items-center gap-2 sm:gap-3">
-        <!-- Alternador de Modo Escuro / Claro -->
-        <button id="theme-toggle-btn" class="w-10 h-10 rounded-xl border border-stone-200 dark:border-stone-700 bg-stone-100/70 dark:bg-stone-800 hover:bg-stone-200 dark:hover:bg-stone-700 text-stone-700 dark:text-stone-200 flex items-center justify-center transition-all active:scale-95" title="Alternar tema claro/escuro" aria-label="Alternar tema">
-          <i id="theme-icon" class="ph-bold ph-moon text-lg"></i>
-        </button>
-
-        <!-- Botão Lista de Compras -->
-        <button id="open-cart-btn" class="relative inline-flex items-center gap-2 px-3.5 sm:px-4 py-2.5 rounded-xl bg-stone-900 dark:bg-emerald-600 hover:bg-stone-800 dark:hover:bg-emerald-500 active:scale-95 text-white font-semibold text-xs sm:text-sm transition-all shadow-sm">
-          <i class="ph-bold ph-shopping-cart-simple text-base"></i>
-          <span>Lista</span>
-          <span id="cart-badge-count" class="inline-flex items-center justify-center min-w-[20px] h-5 px-1.5 text-xs font-extrabold leading-none text-stone-950 bg-emerald-400 dark:bg-white rounded-full">
-            0
-          </span>
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <!-- ==================== CONTEÚDO PRINCIPAL ==================== -->
-  <main class="flex-1 max-w-6xl w-full mx-auto px-4 sm:px-6 py-6 sm:py-9">
-
-    <!-- Secção de Saudação & Controlo Global de Doses -->
-    <section class="mb-7 flex flex-col lg:flex-row lg:items-end justify-between gap-5">
-      <div>
-        <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-emerald-700 dark:text-emerald-400 mb-2 bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200/70 dark:border-emerald-800/60 px-3 py-1 rounded-full">
-          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-          <span id="current-date-label">quinta-feira, 22 de outubro</span>
-        </div>
-        <h1 class="text-2xl sm:text-4xl font-extrabold text-stone-900 dark:text-white tracking-tight leading-tight" id="greeting-title">
-          Boa tarde, o que vais cozinhar hoje?
-        </h1>
-        <p class="mt-1.5 text-stone-600 dark:text-stone-400 text-sm sm:text-base max-w-2xl leading-relaxed">
-          Receitas feitas com os produtos em promoção de cada supermercado, com o preço real calculado ao cêntimo.
-        </p>
-      </div>
-
-      <!-- Ajustador Global de Pessoas / Doses -->
-      <div class="bg-white dark:bg-stone-900 border border-stone-200/90 dark:border-stone-800 rounded-2xl p-3 sm:px-4 sm:py-3 flex items-center justify-between sm:justify-start gap-4 shadow-xs self-start lg:self-auto w-full sm:w-auto">
-        <div class="flex items-center gap-2.5">
-          <div class="w-9 h-9 rounded-xl bg-stone-100 dark:bg-stone-800 text-stone-700 dark:text-stone-300 flex items-center justify-center">
-            <i class="ph-bold ph-users text-lg"></i>
-          </div>
-          <div>
-            <span class="block text-[11px] font-bold uppercase tracking-wider text-stone-400 dark:text-stone-500">Para quantas pessoas?</span>
-            <span id="global-servings-label" class="text-xs font-semibold text-stone-700 dark:text-stone-300">Dose original da receita</span>
-          </div>
-        </div>
-        <div class="flex items-center gap-1.5 bg-stone-100 dark:bg-stone-800 p-1 rounded-xl">
-          <button id="scale-down-btn" class="w-7 h-7 rounded-lg hover:bg-white dark:hover:bg-stone-700 text-stone-700 dark:text-stone-200 flex items-center justify-center font-bold transition-colors disabled:opacity-40" title="Menos pessoas">
-            <i class="ph-bold ph-minus text-xs"></i>
-          </button>
-          <span id="global-servings-val" class="min-w-[42px] text-center font-extrabold text-xs sm:text-sm text-stone-900 dark:text-white">Auto</span>
-          <button id="scale-up-btn" class="w-7 h-7 rounded-lg hover:bg-white dark:hover:bg-stone-700 text-stone-700 dark:text-stone-200 flex items-center justify-center font-bold transition-colors" title="Mais pessoas">
-            <i class="ph-bold ph-plus text-xs"></i>
-          </button>
-          <button id="scale-reset-btn" class="hidden px-2 h-7 rounded-lg bg-stone-200 dark:bg-stone-700 text-[10px] font-bold text-stone-700 dark:text-stone-200 hover:bg-stone-300 transition-colors" title="Repor doses originais">
-            Repor
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <!-- Seletor de Supermercados + Comparador "Todos / Mais Baratos" -->
-    <section class="mb-6">
-      <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
-        <span class="text-xs font-bold uppercase tracking-wider text-stone-500 dark:text-stone-400">Seleciona o supermercado ou compara</span>
-        <!-- Barra de estado do folheto -->
-        <div id="flyer-status-pill" class="inline-flex items-center gap-2 text-xs font-semibold px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800/80">
-          <span id="flyer-status-dot" class="w-2 h-2 rounded-full bg-emerald-500"></span>
-          <span id="flyer-badge-text">Folheto em vigor</span>
-        </div>
-      </div>
-
-      <!-- Barra deslizante para telemóvel e desktop -->
-      <div id="markets-nav" class="flex gap-2 overflow-x-auto no-scrollbar py-1 -mx-4 px-4 sm:mx-0 sm:px-0">
-        <!-- Gerado via JavaScript -->
-      </div>
-    </section>
-
-    <!-- Cabeçalho da Grelha de Receitas & Ordenação -->
-    <section>
-      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-5">
-        <div class="flex items-center gap-2.5">
-          <div id="market-accent-bar" class="w-2 h-6 rounded-full bg-red-600 transition-colors"></div>
-          <h2 class="text-lg sm:text-xl font-extrabold text-stone-900 dark:text-white tracking-tight" id="section-market-title">
-            Sugestões do Intermarché
-          </h2>
-          <span id="recipes-count-badge" class="text-xs font-bold px-2.5 py-0.5 rounded-full bg-stone-200/80 dark:bg-stone-800 text-stone-700 dark:text-stone-300">
-            2 pratos
-          </span>
-        </div>
-
-        <!-- Opções de Ordenação (Visível especialmente no modo Todos/Comparador) -->
-        <div class="flex items-center gap-2 self-start sm:self-auto">
-          <label for="sort-select" class="text-xs font-semibold text-stone-500 dark:text-stone-400">Ordenar por:</label>
-          <select id="sort-select" class="bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 text-stone-800 dark:text-stone-200 text-xs font-bold rounded-xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500 cursor-pointer">
-            <option value="default">Recomendação do Dia</option>
-            <option value="dose_asc">Mais Barato por Dose (€/pessoa)</option>
-            <option value="total_asc">Menor Preço Total (€)</option>
-            <option value="time_asc">Mais Rápido (Tempo)</option>
-          </select>
-        </div>
-      </div>
-
-      <!-- Contentor das Receitas -->
-      <div id="recipes-container" class="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
-        <!-- Renderizado dinamicamente via JS -->
-      </div>
-    </section>
-
-    <!-- ==================== SECÇÃO: TODAS AS PROMOÇÕES DO FOLHETO ==================== -->
-    <section id="flyer-promos-section" class="mt-10 bg-white dark:bg-stone-900 rounded-3xl border border-stone-200/90 dark:border-stone-800 shadow-xs overflow-hidden transition-all">
-      <div class="p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-stone-100 dark:border-stone-800/80">
-        <div class="flex items-start sm:items-center gap-3.5">
-          <div id="promo-box-icon" class="w-11 h-11 rounded-2xl bg-emerald-50 dark:bg-emerald-950/80 text-emerald-600 dark:text-emerald-400 flex items-center justify-center flex-shrink-0 border border-emerald-200/60 dark:border-emerald-800/60">
-            <i class="ph-bold ph-tag text-xl"></i>
-          </div>
-          <div>
-            <div class="flex items-center gap-2">
-              <h3 class="text-base sm:text-lg font-extrabold text-stone-900 dark:text-white" id="promos-drawer-title">
-                Todos os Produtos em Promoção no Folheto
-              </h3>
-              <span id="promos-total-pill" class="px-2.5 py-0.5 text-xs font-extrabold rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300">
-                0 itens
-              </span>
-            </div>
-            <p class="text-xs text-stone-500 dark:text-stone-400 mt-0.5">
-              Adiciona produtos avulso diretamente do folheto para a tua lista de compras desta semana.
-            </p>
-          </div>
-        </div>
-
-        <div class="flex items-center gap-2">
-          <div class="relative flex-1 sm:w-56">
-            <i class="ph-bold ph-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-stone-400 text-sm"></i>
-            <input 
-              type="text" 
-              id="promo-search-input" 
-              placeholder="Procurar no folheto (ex: salmão)..." 
-              class="w-full pl-8 pr-3 py-2 bg-stone-100 dark:bg-stone-800 border border-transparent focus:border-emerald-500 rounded-xl text-xs font-medium text-stone-900 dark:text-white placeholder-stone-400 focus:outline-none transition-all"
-            >
-          </div>
-          <button id="toggle-promos-btn" class="px-3.5 py-2 rounded-xl bg-stone-100 dark:bg-stone-800 hover:bg-stone-200 dark:hover:bg-stone-700 text-stone-700 dark:text-stone-200 text-xs font-bold flex items-center gap-1.5 transition-colors flex-shrink-0">
-            <span id="toggle-promos-text">Mostrar</span>
-            <i id="toggle-promos-icon" class="ph-bold ph-caret-down transition-transform duration-200"></i>
-          </button>
-        </div>
-      </div>
-
-      <!-- Grelha de Produtos do Folheto (Expansível) -->
-      <div id="promos-grid-wrapper" class="hidden p-5 sm:p-6 bg-stone-50/50 dark:bg-stone-950/40">
-        <div id="promos-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-          <!-- Gerado via JS -->
-        </div>
-      </div>
-    </section>
-
-    <!-- ==================== RODAPÉ E FONTES VERIFICADAS ==================== -->
-    <footer class="mt-10 pt-6 border-t border-stone-200/80 dark:border-stone-800 text-xs text-stone-500 dark:text-stone-400">
-      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-        <div class="flex flex-wrap items-center gap-x-2 gap-y-1" id="footer-flyer-meta">
-          <!-- Atualizado dinamicamente consoante o supermercado -->
-        </div>
-        <div class="flex items-center gap-3 self-end sm:self-auto">
-          <span class="inline-flex items-center gap-1.5 text-stone-500 dark:text-stone-400">
-            <i class="ph-fill ph-check-circle text-emerald-500"></i>
-            Preços confirmados na loja
-          </span>
-          <span>·</span>
-          <span>Fotos geradas por IA</span>
-        </div>
-      </div>
-    </footer>
-  </main>
-
-  <!-- ==================== WIDGET FLUTUANTE DE TEMPORIZADOR DE COZINHA ==================== -->
-  <div id="floating-timer" class="fixed bottom-5 left-5 z-40 hidden bg-stone-900 dark:bg-stone-800 text-white rounded-2xl p-3.5 shadow-2xl border border-stone-700 flex items-center gap-3.5 transition-all">
-    <div id="timer-ring-indicator" class="w-10 h-10 rounded-xl bg-emerald-600 text-white flex items-center justify-center font-bold text-lg timer-pulse">
-      <i class="ph-bold ph-timer"></i>
-    </div>
-    <div class="pr-1">
-      <span id="timer-step-label" class="block text-[10px] uppercase tracking-wider text-stone-400 font-bold max-w-[150px] truncate">Temporizador de Cozinha</span>
-      <span id="timer-countdown-display" class="text-xl font-black font-mono tracking-tight text-emerald-400">00:00</span>
-    </div>
-    <div class="flex items-center gap-1 border-l border-stone-700 pl-3">
-      <button id="timer-pause-btn" class="w-8 h-8 rounded-lg hover:bg-stone-700 flex items-center justify-center text-stone-200" title="Pausar/Retomar">
-        <i id="timer-pause-icon" class="ph-bold ph-pause"></i>
-      </button>
-      <button id="timer-add-min-btn" class="px-2 h-8 rounded-lg hover:bg-stone-700 text-[11px] font-bold text-stone-300" title="Mais 1 minuto">
-        +1m
-      </button>
-      <button id="timer-close-btn" class="w-8 h-8 rounded-lg hover:bg-red-950/60 hover:text-red-400 flex items-center justify-center text-stone-400" title="Cancelar temporizador">
-        <i class="ph-bold ph-x"></i>
-      </button>
+  <div class="wrap">
+    <div class="how" id="how">
+      <div><h3>Folhetos lidos todos os dias</h3><p>Às 05:00 verificamos se cada supermercado tem folheto novo. Se tiver, os preços são atualizados; se não, mantêm-se os da semana.</p></div>
+      <div><h3>O produto principal tem preço</h3><p>Cada receita nasce de um produto em promoção. Só esse tem o preço do folheto; o resto (temperos, legumes, gorduras) é o que costuma haver em casa.</p></div>
+      <div><h3>Fotos ilustrativas</h3><p>As imagens são geradas por IA a partir do nome do prato e dos ingredientes. Servem de inspiração e podem diferir do resultado final.</p></div>
     </div>
   </div>
+</main>
+<footer><div class="wrap" id="foot"></div></footer>
 
-  <!-- ==================== MODAL DE DETALHES DA RECEITA (MODO MÃOS NA MASSA) ==================== -->
-  <div id="recipe-modal" class="fixed inset-0 z-50 hidden transition-opacity duration-300" role="dialog" aria-modal="true">
-    <!-- Backdrop -->
-    <div id="recipe-modal-backdrop" class="fixed inset-0 bg-stone-950/70 backdrop-blur-md"></div>
+<dialog id="recipeDlg" aria-label="Receita"><div class="sheet" id="sheet"></div></dialog>
+<dialog id="cartDlg" aria-label="Lista de compras"><div class="drawer" id="drawer"></div></dialog>
+<div class="timer" id="timer" hidden><span id="tLabel">Temporizador</span><output id="tOut">00:00</output><button id="tStop">Parar</button></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-    <div class="fixed inset-0 z-10 overflow-y-auto p-2 sm:p-6 flex items-center justify-center">
-      <div class="relative w-full max-w-2xl bg-white dark:bg-stone-900 rounded-3xl shadow-2xl overflow-hidden border border-stone-200 dark:border-stone-800 my-auto">
-        
-        <!-- Topo da Imagem no Modal -->
-        <div class="relative h-56 sm:h-72 w-full bg-stone-200 dark:bg-stone-800">
-          <img id="modal-img" src="" alt="" class="w-full h-full object-cover">
-          <div id="modal-img-fallback" class="w-full h-full hidden flex-col items-center justify-center bg-gradient-to-br from-stone-100 to-stone-200 dark:from-stone-800 dark:to-stone-900 text-stone-400">
-            <i class="ph-duotone ph-cooking-pot text-6xl text-emerald-600/70"></i>
-            <span class="text-xs font-semibold text-stone-500 dark:text-stone-400 mt-2">Sugestão do Chef</span>
-          </div>
-          <div class="absolute inset-0 bg-gradient-to-t from-stone-950/90 via-stone-950/35 to-transparent"></div>
-          
-          <!-- Botão Fechar -->
-          <button id="close-modal-btn" class="absolute top-4 right-4 w-10 h-10 rounded-full bg-black/55 text-white hover:bg-black/80 flex items-center justify-center transition-colors backdrop-blur-xs">
-            <i class="ph-bold ph-x text-lg"></i>
-          </button>
+<script>
+"use strict";
+const COLORS={"Continente":"#E2231A","Pingo Doce":"#0A9A48","Lidl":"#0A5BC4","Aldi":"#12A9E0","Intermarché":"#F08A00"};
+const $=(s,r=document)=>r.querySelector(s);
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const store={get(k,d){try{const v=localStorage.getItem(k);return v==null?d:JSON.parse(v)}catch{return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch{}}};
+const today=new Date().toLocaleDateString("en-CA",{timeZone:"Europe/Lisbon"});
+const money=n=>n.toFixed(2).replace(".",",")+" €";
+function tagHTML(n,cls="",unit=""){const [i,d]=n.toFixed(2).split(".");return `<span class="tag ${cls}"><b>${i}</b><sup>${d}</sup>${unit?`<em>${esc(unit)}</em>`:"€"}</span>`}
+function tagFull(n,cls="",unit="€/pessoa"){const [i,d]=n.toFixed(2).split(".");return `<span class="tag ${cls}"><b>${i}</b><sup>${d}</sup><em>${esc(unit)}</em></span>`}
+const dmy=d=>d.slice(8)+"/"+d.slice(5,7);
+const daysTo=d=>Math.round((new Date(d+"T12:00:00")-new Date(today+"T12:00:00"))/864e5);
 
-          <!-- Badges de Topo -->
-          <div class="absolute top-4 left-4 flex flex-wrap gap-2">
-            <span id="modal-badge-slot" class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-600 text-white shadow-sm">
-              Prato Principal
-            </span>
-            <span id="modal-badge-market" class="px-3 py-1 rounded-full text-xs font-bold bg-white/95 text-stone-900 shadow-sm">
-              Supermercado
-            </span>
-          </div>
+let data=null, tab=store.get("md_tab","ALL"), sort=store.get("md_sort","price");
+let cart=store.get("md_cart",[]), done=store.get("md_done",{}), pantry=store.get("md_pantry",true);
+let current=null; // {market, recipe, servings}
 
-          <!-- Título Sobre a Imagem -->
-          <div class="absolute bottom-4 left-5 right-5 text-white">
-            <h3 id="modal-title" class="text-xl sm:text-2xl font-extrabold leading-tight"></h3>
-            <p id="modal-photo-credit" class="text-[11px] text-stone-300 mt-1 opacity-80"></p>
-          </div>
-        </div>
+/* ---------- theme ---------- */
+function applyTheme(t){if(t)document.documentElement.dataset.theme=t}
+applyTheme(store.get("md_theme",null));
+$("#theme").onclick=()=>{const dark=document.documentElement.dataset.theme?document.documentElement.dataset.theme==="dark":matchMedia("(prefers-color-scheme:dark)").matches;const t=dark?"light":"dark";applyTheme(t);store.set("md_theme",t)};
 
-        <!-- Corpo do Modal com Scroll -->
-        <div class="p-5 sm:p-7 max-h-[62vh] overflow-y-auto space-y-6">
-          
-          <!-- Painel de Métricas + Ajustador de Doses no Modal -->
-          <div class="grid grid-cols-3 gap-2 p-3.5 bg-stone-50 dark:bg-stone-800/60 rounded-2xl border border-stone-200/80 dark:border-stone-700/70 text-center items-center">
-            <div class="flex flex-col">
-              <span class="text-[10px] sm:text-[11px] uppercase tracking-wider text-stone-500 dark:text-stone-400 font-bold">Custo Receita</span>
-              <span id="modal-total-price" class="text-lg sm:text-xl font-black text-stone-900 dark:text-white mt-0.5">0,00 €</span>
-              <span id="modal-price-per-serving" class="text-[11px] text-emerald-600 dark:text-emerald-400 font-bold">0,00 €/dose</span>
-            </div>
-            <div class="flex flex-col border-x border-stone-200 dark:border-stone-700 px-1">
-              <span class="text-[10px] sm:text-[11px] uppercase tracking-wider text-stone-500 dark:text-stone-400 font-bold">Tempo</span>
-              <span id="modal-time" class="text-base sm:text-xl font-black text-stone-900 dark:text-white mt-0.5">35 min</span>
-              <span class="text-[11px] text-stone-500 dark:text-stone-400 font-medium">confecção</span>
-            </div>
-            <!-- Ajustador Interativo de Doses Dentro do Modal -->
-            <div class="flex flex-col items-center">
-              <span class="text-[10px] sm:text-[11px] uppercase tracking-wider text-stone-500 dark:text-stone-400 font-bold mb-1">Doses</span>
-              <div class="inline-flex items-center gap-1.5 bg-white dark:bg-stone-900 px-2 py-1 rounded-xl border border-stone-200 dark:border-stone-700">
-                <button id="modal-servings-minus" class="w-6 h-6 rounded-lg hover:bg-stone-100 dark:hover:bg-stone-800 text-stone-700 dark:text-stone-200 flex items-center justify-center font-bold">
-                  <i class="ph-bold ph-minus text-[10px]"></i>
-                </button>
-                <span id="modal-servings" class="min-w-[24px] text-sm sm:text-base font-black text-stone-900 dark:text-white">4</span>
-                <button id="modal-servings-plus" class="w-6 h-6 rounded-lg hover:bg-stone-100 dark:hover:bg-stone-800 text-stone-700 dark:text-stone-200 flex items-center justify-center font-bold">
-                  <i class="ph-bold ph-plus text-[10px]"></i>
-                </button>
-              </div>
-              <span class="text-[10px] text-stone-400 mt-0.5">pessoas</span>
-            </div>
-          </div>
+/* ---------- data helpers ---------- */
+function baseServ(r){const m=String(r.servings||"4").match(/\d+/);return m?Math.max(1,+m[0]):4}
+function minutes(r){const t=String(r.time||"");let m=0;const h=t.match(/(\d+)\s*h/i);if(h)m+=60*h[1];const mi=t.match(/(\d+)\s*min/i);if(mi)m+=+mi[1];if(!m){const n=t.match(/\d+/);m=n?+n[0]:40}return m}
+function lineTotal(i,ratio=1){return (+i.price||0)*(+i.amount||1)*ratio}
+function cost(r,serv){const b=baseServ(r),ratio=(serv||b)/b;const total=r.ingredients.filter(i=>i.price).reduce((s,i)=>s+lineTotal(i,ratio),0);return{total,per:total/(serv||b),ratio}}
+function scaleQty(q,ratio){if(!q||Math.abs(ratio-1)<.01)return q||"";return String(q).replace(/(\d+(?:[.,]\d+)?)/g,m=>{const v=parseFloat(m.replace(",","."))*ratio;return v>=10?String(Math.round(v)):String(Math.round(v*10)/10).replace(".",",")})}
+function status(m){
+  if(m.to<today)return{k:"expirado",t:"Folheto expirado",d:`O folheto de ${dmy(m.from)} a ${dmy(m.to)} já terminou e ainda não há outro válido. Os preços podem estar desatualizados.`};
+  if(m.check&&m.check.date===today&&m.check.result==="novo")return{k:"novo",t:"Folheto novo hoje",d:`Atualizámos os preços com o folheto de ${dmy(m.from)} a ${dmy(m.to)}.`};
+  const left=daysTo(m.to);
+  return{k:"sem-novo",t:"Sem folheto novo",d:`Mantemos o folheto de ${dmy(m.from)} a ${dmy(m.to)} (${left<=0?"termina hoje":left===1?"termina amanhã":"termina em "+left+" dias"}). As receitas foram renovadas com as promoções em vigor.`};
+}
+function all(){return data.markets.flatMap(m=>m.recipes.map(r=>({m,r,c:cost(r)})))}
+function sorted(list){const a=[...list];if(sort==="price")a.sort((x,y)=>x.c.per-y.c.per);else if(sort==="time")a.sort((x,y)=>minutes(x.r)-minutes(y.r));return a}
+function imgHTML(r,alt,eager){return r.image?`<img src="${esc(r.image)}" alt="${esc(alt)}" ${eager?"":'loading="lazy"'} width="900" height="900" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'noimg',textContent:'${esc(r.name.charAt(0))}'}))">`:`<div class="noimg">${esc(r.name.charAt(0))}</div>`}
 
-          <!-- Descrição da Receita -->
-          <p id="modal-desc" class="text-stone-600 dark:text-stone-300 text-sm leading-relaxed"></p>
+/* ---------- render ---------- */
+function render(){renderHero();renderChips();renderApp();renderCart();renderFoot()}
 
-          <!-- Ingredientes: Folheto vs Despensa -->
-          <div>
-            <div class="flex items-center justify-between mb-3">
-              <h4 class="font-extrabold text-stone-900 dark:text-white text-base flex items-center gap-2">
-                <i class="ph-bold ph-basket text-emerald-600 dark:text-emerald-400"></i>
-                Ingredientes
-              </h4>
-              <span class="text-[11px] text-stone-400 dark:text-stone-500">Quantidades ajustadas às doses</span>
-            </div>
+function renderHero(){
+  const d=new Date().toLocaleDateString("pt-PT",{weekday:"long",day:"numeric",month:"long",timeZone:"Europe/Lisbon"});
+  const list=all(),best=[...list].sort((a,b)=>a.c.per-b.c.per)[0];
+  const stores=data.markets.map(m=>({m,min:Math.min(...m.recipes.map(r=>cost(r).per))})).sort((a,b)=>a.min-b.min);
+  const max=Math.max(...stores.map(s=>s.min));
+  $("#hero").innerHTML=`
+  <div>
+    <div class="date">${esc(d.charAt(0).toUpperCase()+d.slice(1))}</div>
+    <h1>O jantar de hoje, ao preço do folheto.</h1>
+    <p class="lead">${list.length} pratos de ${data.markets.length} supermercados, cada um com o produto principal em promoção e o custo por pessoa.</p>
+  </div>
+  <div class="hero-right">
+    ${best?`<button class="best" data-open="${esc(best.m.name)}|${best.m.recipes.indexOf(best.r)}" aria-label="Abrir ${esc(best.r.name)}">
+      ${best.r.image?`<img src="${esc(best.r.image)}" alt="" onerror="this.remove()">`:""}
+      <span class="badge">Mais barato hoje · ${esc(best.m.name)}</span>
+      <span class="tagpos">${tagFull(best.c.per)}</span>
+      <span class="in"><h2>${esc(best.r.name)}</h2><span class="meta"><span>${esc(best.r.time)}</span><span>${esc(best.r.difficulty||"")}</span><span>${baseServ(best.r)} pessoas</span></span></span>
+    </button>`:""}
+    <div class="compare"><h2>Custo por pessoa, por loja</h2><small>O prato mais barato de cada supermercado (só o produto principal).</small>
+      ${stores.map(s=>`<button class="row" data-tab="${esc(s.m.name)}" style="--c:${COLORS[s.m.name]||"var(--cobalt)"}"><span><i class="dot"></i>${esc(s.m.name)}</span><span class="bar"><span style="width:${Math.max(12,s.min/max*100)}%"></span></span><span>${money(s.min)}</span></button>`).join("")}
+    </div>
+  </div>`;
+}
 
-            <!-- Em Promoção no Folheto -->
-            <div class="mb-4">
-              <div class="flex items-center justify-between mb-2">
-                <span class="text-[11px] font-extrabold text-emerald-800 dark:text-emerald-300 uppercase tracking-wider bg-emerald-100/80 dark:bg-emerald-950 px-2.5 py-0.5 rounded-md">
-                  Produtos em Promoção no Folheto
-                </span>
-                <span class="text-[11px] font-semibold text-stone-400">Subtotal calculado</span>
-              </div>
-              <div id="modal-promo-ingredients" class="space-y-2"></div>
-            </div>
+function renderChips(){
+  const c=$("#chips");
+  c.innerHTML=`<button class="chip" aria-pressed="${tab==="ALL"}" data-tab="ALL">Todas as lojas</button>`+data.markets.map(m=>{const s=status(m);return `<button class="chip" aria-pressed="${tab===m.name}" data-tab="${esc(m.name)}"><span class="st ${s.k}" title="${esc(s.t)}"></span>${esc(m.name)}</button>`}).join("");
+}
 
-            <!-- Despensa de Casa -->
-            <div>
-              <span class="text-[11px] font-bold text-stone-600 dark:text-stone-400 uppercase tracking-wider bg-stone-100 dark:bg-stone-800 px-2.5 py-0.5 rounded-md mb-2 inline-block">
-                Básicos de Despensa (Sem custo extra)
-              </span>
-              <div id="modal-pantry-ingredients" class="grid grid-cols-1 sm:grid-cols-2 gap-1.5 mt-1 text-xs sm:text-sm text-stone-600 dark:text-stone-300"></div>
-            </div>
-          </div>
+function statusBanner(m){const s=status(m);const ic={novo:"✓","sem-novo":"•",expirado:"!"}[s.k];
+  const src=(m.sources||[])[0];
+  return `<div class="banner ${s.k}"><span class="ic">${ic}</span><div><b>${esc(s.t)} · ${esc(m.name)}</b><p>${esc(s.d)}${src?` <a href="${esc(src.url)}" target="_blank" rel="noopener">Ver folheto</a>`:""}</p></div></div>`}
 
-          <!-- Modo Mãos na Massa: Passos com Deteção de Temporizador -->
-          <div>
-            <div class="flex items-center justify-between mb-3">
-              <h4 class="font-extrabold text-stone-900 dark:text-white text-base flex items-center gap-2">
-                <i class="ph-bold ph-cooking-pot text-emerald-600 dark:text-emerald-400"></i>
-                Preparação Passo a Passo
-              </h4>
-              <span class="text-xs text-stone-500 dark:text-stone-400 font-medium">Clica num passo para riscar</span>
-            </div>
-            <div id="modal-steps-container" class="space-y-3"></div>
-          </div>
-        </div>
+function cardHTML({m,r,c}){
+  const main=r.ingredients.filter(i=>i.price).map(i=>i.item).join(" + ");
+  return `<button class="card" data-open="${esc(m.name)}|${m.recipes.indexOf(r)}">
+    <span class="ph">${imgHTML(r,r.name)}<span class="store"><i class="dot" style="--c:${COLORS[m.name]||"#999"}"></i>${esc(m.name)}</span><span class="tagpos">${tagFull(c.per)}</span></span>
+    <span class="cb"><h3>${esc(r.name)}</h3><p>${esc(r.description)}</p>
+      <span class="facts"><span>${esc(r.time)}</span>${r.difficulty?`<span>${esc(r.difficulty)}</span>`:""}<span>${baseServ(r)} pessoas · ${money(c.total)}</span></span>
+      <span class="main-prod">Preço do folheto: <b>${esc(main)}</b></span></span></button>`;
+}
 
-        <!-- Rodapé do Modal -->
-        <div class="p-4 sm:p-5 bg-stone-50 dark:bg-stone-950/80 border-t border-stone-200 dark:border-stone-800 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <button id="modal-close-footer-btn" class="w-full sm:w-auto px-5 py-2.5 rounded-xl border border-stone-300 dark:border-stone-700 hover:bg-stone-100 dark:hover:bg-stone-800 text-stone-700 dark:text-stone-300 font-bold text-xs sm:text-sm transition-colors">
-            Voltar ao Menu
-          </button>
-          <button id="modal-add-cart-action-btn" class="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-stone-900 dark:bg-emerald-600 hover:bg-stone-800 dark:hover:bg-emerald-500 text-white font-bold text-xs sm:text-sm transition-all flex items-center justify-center gap-2 shadow-sm">
-            <i class="ph-bold ph-shopping-cart-simple"></i>
-            Adicionar Ingredientes à Lista
-          </button>
-        </div>
+function renderApp(){
+  const app=$("#app");let h="";
+  if(tab==="ALL"){
+    h+=`<div class="sec"><div class="sec-h"><h2>Pratos de hoje</h2><span class="sp"></span><label class="sr" for="sort">Ordenar</label><select class="sort" id="sort"><option value="price">Mais barato</option><option value="time">Mais rápido</option><option value="store">Por loja</option></select></div><div class="grid">${sorted(all()).map(cardHTML).join("")}</div></div>`;
+    h+=`<div class="sec"><div class="sec-h"><h2>Estado dos folhetos</h2></div><div class="mini-status">${data.markets.map(m=>{const s=status(m);return `<button class="mini" data-tab="${esc(m.name)}"><span class="pill ${s.k}">${esc(s.t)}</span><b>${esc(m.name)}</b><span>Válido de ${dmy(m.from)} a ${dmy(m.to)} · ${m.promos.length} produtos lidos</span></button>`}).join("")}</div></div>`;
+  }else{
+    const m=data.markets.find(x=>x.name===tab);
+    h+=`<div class="sec">${statusBanner(m)}<div class="sec-h"><h2>Receitas ${esc(m.name)}</h2><span class="sp"></span><span style="color:var(--ink-3);font-weight:600;font-size:14px">Folheto ${dmy(m.from)}–${dmy(m.to)}</span></div><div class="grid">${m.recipes.map(r=>cardHTML({m,r,c:cost(r)})).join("")}</div></div>`;
+    h+=`<div class="sec"><div class="sec-h"><h2>Promoções do folheto</h2><span class="sp"></span><input class="search" id="q" type="search" placeholder="Procurar produto…" aria-label="Procurar produto"></div><div class="promos" id="promos"></div></div>`;
+  }
+  app.innerHTML=h;
+  const s=$("#sort");if(s){s.value=sort;s.onchange=()=>{sort=s.value;store.set("md_sort",sort);renderApp()}}
+  if(tab!=="ALL"){const m=data.markets.find(x=>x.name===tab);const draw=()=>{const q=($("#q").value||"").toLowerCase();$("#promos").innerHTML=m.promos.filter(p=>p.name.toLowerCase().includes(q)).map(p=>`<div class="pr"><div class="n">${esc(p.name)}<small>${esc(p.label||"")}</small></div>${tagHTML(+p.price,"sm","/"+p.per)}<button class="add" data-promo="${esc(p.id)}" aria-label="Adicionar ${esc(p.name)} à lista">+</button></div>`).join("")||`<div class="empty">Sem resultados.</div>`};$("#q").oninput=draw;draw()}
+}
 
-      </div>
+function renderFoot(){
+  const u=data.updatedAt?new Date(data.updatedAt).toLocaleString("pt-PT",{dateStyle:"long",timeStyle:"short",timeZone:"Europe/Lisbon"}):"";
+  $("#foot").innerHTML=`<p>Preços lidos dos folhetos publicados no Blog 200 e arredondados; confirma sempre na loja. ${u?`Última atualização: ${esc(u)}.`:""}</p><p>Marcas e supermercados pertencem aos respetivos donos. Imagens geradas por IA, meramente ilustrativas.</p>`;
+}
+
+/* ---------- recipe sheet ---------- */
+function openRecipe(mName,idx){
+  const m=data.markets.find(x=>x.name===mName),r=m.recipes[idx];
+  current={m,r,idx,servings:baseServ(r)};drawSheet();$("#recipeDlg").showModal();$("#sheet").scrollTop=0;
+}
+function drawSheet(){
+  const {m,r,servings}=current,c=cost(r,servings),ratio=c.ratio;
+  const priced=r.ingredients.filter(i=>i.price),rest=r.ingredients.filter(i=>!i.price);
+  const key=m.name+"|"+r.name,dn=done[key]||{};
+  const steps=r.steps.map((t,i)=>{
+    const tip=/^dica do chef:/i.test(t);
+    const tm=!tip&&(String(t).match(/(\d+)(?:\s*(?:a|–|-)\s*\d+)?\s*(minutos?|min\b|horas?|h\b)/i));
+    let secs=0;if(tm){secs=+tm[1]*(/^h/i.test(tm[2])?3600:60)}
+    return `<li data-step="${i}" class="${dn[i]?"done":""} ${tip?"tip":""}"><div><div class="tx">${esc(tip?t.replace(/^dica do chef:\s*/i,"Dica do chef: "):t)}</div>${secs?`<div class="tm"><button class="tbtn" data-timer="${secs}" data-label="${esc(r.name)}">⏱ ${tm[1]} ${/^h/i.test(tm[2])?"h":"min"}</button></div>`:""}</div></li>`}).join("");
+  $("#sheet").innerHTML=`
+  <div class="sheet-hd"><button class="ibtn" data-close aria-label="Fechar"><svg viewBox="0 0 24 24"><path d="M5 5l14 14M19 5L5 19"/></svg></button><button class="ibtn" id="shareR" aria-label="Partilhar receita"><svg viewBox="0 0 24 24"><path d="M12 15V4M8 8l4-4 4 4M5 13v6h14v-6"/></svg></button></div>
+  <div class="sheet-img">${imgHTML(r,r.name,true)}${r.image?`<small>Ilustração gerada por IA</small>`:""}</div>
+  <div class="sheet-body">
+    <div style="display:grid;gap:12px"><span class="pill ${status(m).k}"><i class="dot" style="--c:${COLORS[m.name]||"#999"};margin:0"></i>${esc(m.name)} · ${esc(status(m).t)}</span>
+      <h2>${esc(r.name)}</h2><p class="lead">${esc(r.description)}</p>
+      <div class="kpis"><span class="kpi">Tempo<b>${esc(r.time)}</b></span>${r.difficulty?`<span class="kpi">Dificuldade<b>${esc(r.difficulty)}</b></span>`:""}<span class="kpi">Produto principal<b>${money(c.total)}</b></span>${tagFull(c.per)}</div></div>
+    <div class="cols">
+      <section class="ing"><h3>Ingredientes</h3>
+        <div class="stepper" role="group" aria-label="Doses"><button data-serv="-1" aria-label="Menos uma pessoa">−</button><span>${servings} pessoas</span><button data-serv="1" aria-label="Mais uma pessoa">+</button></div>
+        <div class="grp">COM PREÇO NO FOLHETO</div>
+        ${priced.map(i=>`<div class="li p"><div>${esc(i.item)}<div class="q">${esc(scaleQty(i.qty,ratio))}</div></div><div class="pp">${money(lineTotal(i,ratio))}<small>${money(+i.price)}/${esc(i.per)}${i.label?" · "+esc(i.label):""}</small></div></div>`).join("")}
+        <div class="grp">RESTANTES INGREDIENTES (SEM PREÇO)</div>
+        ${rest.map(i=>`<div class="li"><span>${esc(i.item)}</span><span class="q">${esc(scaleQty(i.qty,ratio))}</span></div>`).join("")}
+        <p class="note">O preço refere-se só ao produto principal. Os restantes ingredientes não estão incluídos no custo.</p>
+      </section>
+      <section class="steps"><h3>Preparação</h3><ol class="st">${steps}</ol></section>
     </div>
   </div>
-
-  <!-- ==================== GAVETA LATERAL DA LISTA DE COMPRAS ==================== -->
-  <div id="cart-drawer" class="fixed inset-0 z-50 pointer-events-none transition-all duration-300">
-    <!-- Backdrop -->
-    <div id="cart-backdrop" class="fixed inset-0 bg-stone-950/50 backdrop-blur-xs opacity-0 transition-opacity pointer-events-none"></div>
-
-    <div id="cart-panel" class="fixed top-0 right-0 h-full w-full max-w-md bg-white dark:bg-stone-900 shadow-2xl flex flex-col transform translate-x-full transition-transform duration-300 pointer-events-auto border-l border-stone-200 dark:border-stone-800">
-      
-      <!-- Topo da Gaveta -->
-      <div class="p-4 sm:p-5 border-b border-stone-200 dark:border-stone-800 flex items-center justify-between bg-stone-50 dark:bg-stone-950/60">
-        <div class="flex items-center gap-3">
-          <div class="w-9 h-9 rounded-xl bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-400 flex items-center justify-center font-bold">
-            <i class="ph-bold ph-shopping-bag text-lg"></i>
-          </div>
-          <div>
-            <h3 class="font-extrabold text-stone-900 dark:text-white text-base leading-none">Lista de Compras</h3>
-            <span id="cart-count-subtitle" class="text-xs text-stone-500 dark:text-stone-400 font-medium mt-0.5 block">0 artigos na lista</span>
-          </div>
-        </div>
-        <button id="close-cart-btn" class="w-9 h-9 rounded-full hover:bg-stone-200/80 dark:hover:bg-stone-800 flex items-center justify-center text-stone-500 dark:text-stone-400 transition-colors">
-          <i class="ph-bold ph-x text-lg"></i>
-        </button>
-      </div>
-
-      <!-- Barra de Filtro: Incluir Despensa ou Só Promoções -->
-      <div class="px-4 py-2.5 bg-stone-100/70 dark:bg-stone-800/50 border-b border-stone-200/70 dark:border-stone-800 flex items-center justify-between text-xs">
-        <span class="font-semibold text-stone-600 dark:text-stone-300">Mostrar itens básicos de despensa</span>
-        <label class="relative inline-flex items-center cursor-pointer">
-          <input type="checkbox" id="toggle-pantry-cart" class="sr-only peer" checked>
-          <div class="w-9 h-5 bg-stone-300 dark:bg-stone-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-stone-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-emerald-600"></div>
-        </label>
-      </div>
-
-      <!-- Lista de Artigos Agrupada por Supermercado -->
-      <div id="cart-items-container" class="flex-1 overflow-y-auto p-4 space-y-5">
-        <!-- Renderizado via JS -->
-      </div>
-
-      <!-- Rodapé da Gaveta com Totais + Partilha WhatsApp -->
-      <div class="p-4 sm:p-5 border-t border-stone-200 dark:border-stone-800 bg-stone-50 dark:bg-stone-950/90 space-y-3">
-        <div class="flex items-baseline justify-between">
-          <div>
-            <span class="text-xs font-bold uppercase tracking-wider text-stone-500 dark:text-stone-400 block">Total estimado em promoção</span>
-            <span class="text-[11px] text-stone-400 dark:text-stone-500">Calculado para as doses escolhidas</span>
-          </div>
-          <span id="cart-total-price" class="text-2xl font-black text-stone-900 dark:text-white">0,00 €</span>
-        </div>
-
-        <div class="grid grid-cols-2 gap-2 pt-1">
-          <button id="whatsapp-share-btn" class="px-3.5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold transition-all flex items-center justify-center gap-1.5 shadow-xs">
-            <i class="ph-bold ph-whatsapp-logo text-base"></i>
-            Enviar WhatsApp
-          </button>
-          <button id="copy-cart-btn" class="px-3.5 py-2.5 rounded-xl bg-stone-900 dark:bg-stone-800 hover:bg-stone-800 dark:hover:bg-stone-700 text-white text-xs font-bold transition-all flex items-center justify-center gap-1.5">
-            <i class="ph-bold ph-copy text-base"></i>
-            Copiar Lista
-          </button>
-        </div>
-        <button id="clear-cart-btn" class="w-full py-2 rounded-xl text-stone-500 hover:text-red-600 dark:text-stone-400 dark:hover:text-red-400 text-xs font-semibold transition-colors">
-          Limpar todos os itens
-        </button>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- Toast de Feedback -->
-  <div id="toast" class="fixed bottom-5 right-5 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none bg-stone-900 dark:bg-white text-white dark:text-stone-900 px-4 py-3 rounded-2xl shadow-xl flex items-center gap-3 text-xs sm:text-sm font-bold border border-stone-800 dark:border-stone-200">
-    <i class="ph-fill ph-check-circle text-emerald-400 dark:text-emerald-600 text-lg"></i>
-    <span id="toast-message">Adicionado à lista!</span>
-  </div>
-
-  <!-- ==================== LÓGICA DA APLICAÇÃO (JAVASCRIPT) ==================== -->
-  <script>
-    // Configuração visual por supermercado (Cores oficiais e estilos de destaque)
-    const MARKET_STYLES = {
-      "Continente": {
-        dot: "bg-red-600",
-        activeBg: "bg-red-600 text-white ring-red-600",
-        bar: "bg-red-600",
-        badge: "bg-red-50 dark:bg-red-950/70 text-red-700 dark:text-red-300 border-red-200 dark:border-red-800"
-      },
-      "Pingo Doce": {
-        dot: "bg-emerald-600",
-        activeBg: "bg-emerald-600 text-white ring-emerald-600",
-        bar: "bg-emerald-600",
-        badge: "bg-emerald-50 dark:bg-emerald-950/70 text-emerald-700 dark:text-emerald-300 border-emerald-200 dark:border-emerald-800"
-      },
-      "Lidl": {
-        dot: "bg-blue-600",
-        activeBg: "bg-blue-600 text-white ring-blue-600",
-        bar: "bg-blue-600",
-        badge: "bg-blue-50 dark:bg-blue-950/70 text-blue-700 dark:text-blue-300 border-blue-200 dark:border-blue-800"
-      },
-      "Aldi": {
-        dot: "bg-sky-700",
-        activeBg: "bg-sky-700 text-white ring-sky-700",
-        bar: "bg-sky-700",
-        badge: "bg-sky-50 dark:bg-sky-950/70 text-sky-700 dark:text-sky-300 border-sky-200 dark:border-sky-800"
-      },
-      "Intermarché": {
-        dot: "bg-red-600",
-        activeBg: "bg-red-600 text-white ring-red-600",
-        bar: "bg-red-600",
-        badge: "bg-red-50 dark:bg-red-950/70 text-red-700 dark:text-red-300 border-red-200 dark:border-red-800"
-      }
-    };
-
-    // Dados completos de fallback compatíveis com a estrutura de `api/data/menu.json`
-    // Inclui os pratos exatos da imagem do utilizador no Intermarché e todos os outros supermercados
-    const FALLBACK_MENU_DATA = {
-      updatedAt: "2026-10-22",
-      markets: [
-        {
-          name: "Continente",
-          from: "2026-10-20",
-          to: "2026-10-26",
-          flyer: "Folheto 20–26 out.",
-          sources: [{ title: "Blog 200 — Antevisão Folheto Continente Frescos", url: "https://blog200porcento.com/tag/continente" }],
-          promos: [
-            { id: "frango-do-campo", name: "Frango do Campo inteiro", price: 3.49, per: "kg", note: "folheto" },
-            { id: "batata-doce", name: "Batata-doce vermelha", price: 1.29, per: "kg", note: "folheto" },
-            { id: "pescada-fresca", name: "Pescada fresca para filetes", price: 7.49, per: "kg", note: "folheto" },
-            { id: "tomate-maduro", name: "Tomate maduro cacho", price: 1.49, per: "kg", note: "folheto" },
-            { id: "ovos-solo-m", name: "Ovos de Solo classe M (dúzia)", price: 2.19, per: "un", label: "2,19 €/dúzia", note: "folheto" },
-            { id: "banana-importada", name: "Banana importada", price: 1.19, per: "kg", note: "folheto" },
-            { id: "queijo-flamengo", name: "Queijo Flamengo fatiado Terra Nostra", price: 1.89, per: "un", label: "1,89 €/emb. 200g", note: "folheto" },
-            { id: "couve-coracao", name: "Couve Coração inteira", price: 0.99, per: "kg", note: "folheto" }
-          ],
-          recipes: [
-            {
-              slot: 1,
-              name: "Frango do Campo Assado no Forno com Batata-Doce e Alecrim",
-              description: "Frango do campo inteiro a 3,49 €/kg assado lentamente com alho e ervas, acompanhado por batata-doce a 1,29 €/kg.",
-              servings: "4 pessoas",
-              time: "50 min",
-              ingredients: [
-                { item: "Frango do Campo inteiro", qty: "1,2 kg", price: 3.49, per: "kg", amount: 1.2, label: "3,49 €/kg" },
-                { item: "Batata-doce vermelha", qty: "800 g", price: 1.29, per: "kg", amount: 0.8, label: "1,29 €/kg" },
-                { item: "Dentes de alho esmagados", qty: "4 dentes" },
-                { item: "Azeite virgem extra e alecrim", qty: "3 c. sopa" },
-                { item: "Sal marinho e pimentão-doce", qty: "q.b." }
-              ],
-              steps: [
-                "Pré-aquece o forno a 190 ºC durante 10 minutos.",
-                "Barra o frango do campo com uma pasta feita de alho esmagado, pimentão-doce, sal, sumo de limão e azeite.",
-                "Descasca ou lava bem a batata-doce, corta em gomos médios e dispõe à volta do frango na assadeira.",
-                "Leva ao forno a assar durante 45 minutos, regando a meio do tempo com o molho do tabuleiro.",
-                "Retira do forno e deixa repousar 5 minutos antes de trinchar para manter toda a suculência."
-              ]
-            },
-            {
-              slot: 2,
-              name: "Filetes de Pescada Dourados com Arroz de Tomate Malandrinho",
-              description: "Pescada fresca a 7,49 €/kg servida com um reconfortante arroz de tomate maduro nacional (1,49 €/kg) e coentros.",
-              servings: "4 pessoas",
-              time: "35 min",
-              ingredients: [
-                { item: "Pescada fresca para filetes", qty: "700 g", price: 7.49, per: "kg", amount: 0.7, label: "7,49 €/kg" },
-                { item: "Tomate maduro cacho", qty: "600 g", price: 1.49, per: "kg", amount: 0.6, label: "1,49 €/kg" },
-                { item: "Arroz carolino", qty: "300 g" },
-                { item: "Cebola e 2 dentes de alho", qty: "1 unid." },
-                { item: "Coentros frescos e azeite", qty: "q.b." }
-              ],
-              steps: [
-                "Tempera os filetes de pescada com sal, alho picado e umas gotas de limão durante 15 minutos.",
-                "Faz um refogado num tacho com azeite, cebola picada e o tomate maduro em cubos pequenos durante 8 minutos.",
-                "Junta a água a ferver (3 chávenas para 1 de arroz) e coze o arroz carolino em lume brando por 14 minutos.",
-                "Cora os filetes de pescada numa frigideira antiaderente com um fio de azeite durante 4 minutos de cada lado.",
-                "Polvilha o arroz malandrinho com coentros frescos picados e serve de imediato."
-              ]
-            }
-          ]
-        },
-        {
-          name: "Pingo Doce",
-          from: "2026-10-20",
-          to: "2026-10-26",
-          flyer: "Folheto 20–26 out.",
-          sources: [{ title: "Blog 200 — Antevisão Folheto Pingo Doce Frescos", url: "https://blog200porcento.com/tag/pingo+doce" }],
-          promos: [
-            { id: "bifes-peru", name: "Bifes de peru frescos", price: 6.29, per: "kg", note: "folheto" },
-            { id: "cogumelos-marron", name: "Cogumelos frescos Marron", price: 1.49, per: "un", label: "1,49 €/emb. 250g", note: "folheto" },
-            { id: "dourada-fresca", name: "Dourada fresca de mar", price: 5.99, per: "kg", note: "folheto" },
-            { id: "brocolos", name: "Brócolos frescos", price: 1.39, per: "kg", note: "folheto" },
-            { id: "cenoura-nacional", name: "Cenoura nacional", price: 0.85, per: "kg", note: "folheto" },
-            { id: "maca-alcobaca", name: "Maçã de Alcobaça IGP", price: 1.49, per: "kg", note: "folheto" }
-          ],
-          recipes: [
-            {
-              slot: 1,
-              name: "Bifinhos de Peru Salteados com Cogumelos Frescos e Ervas",
-              description: "Bifes de peru tenros a 6,29 €/kg salteados com cogumelos Marron frescos (1,49 €/emb.) e molho ligeiro de alho.",
-              servings: "4 pessoas",
-              time: "25 min",
-              ingredients: [
-                { item: "Bifes de peru frescos", qty: "600 g", price: 6.29, per: "kg", amount: 0.6, label: "6,29 €/kg" },
-                { item: "Cogumelos frescos Marron", qty: "250 g", price: 1.49, per: "un", amount: 1, label: "1,49 €/emb. 250g" },
-                { item: "Arroz agulha para acompanhar", qty: "300 g" },
-                { item: "Alho laminado e salsa fresca", qty: "3 dentes" },
-                { item: "Azeite, sal e pimenta preta", qty: "q.b." }
-              ],
-              steps: [
-                "Corta os bifes de peru em tiras largas e tempera com sal, pimenta e alho laminado.",
-                "Salteia a carne numa frigideira larga bem quente com azeite durante 5 minutos até ganhar cor dourada. Reserva.",
-                "Na mesma frigideira, junta os cogumelos Marron fatiados e cozinha durante 6 minutos até libertarem os sucos.",
-                "Volta a juntar o peru aos cogumelos, envolve em lume brando durante 2 minutos e polvilha com salsa picada."
-              ]
-            },
-            {
-              slot: 2,
-              name: "Dourada no Forno com Brócolos e Cenoura Assada",
-              description: "Dourada fresca a 5,99 €/kg assada com brócolos (1,39 €/kg) e cenoura nacional crocante (0,85 €/kg).",
-              servings: "3 pessoas",
-              time: "40 min",
-              ingredients: [
-                { item: "Dourada fresca de mar", qty: "800 g", price: 5.99, per: "kg", amount: 0.8, label: "5,99 €/kg" },
-                { item: "Brócolos frescos", qty: "400 g", price: 1.39, per: "kg", amount: 0.4, label: "1,39 €/kg" },
-                { item: "Cenoura nacional", qty: "300 g", price: 0.85, per: "kg", amount: 0.3, label: "0,85 €/kg" },
-                { item: "Cebola roxa e azeite virgem", qty: "1 unid." },
-                { item: "Sal marinho e rodelas de limão", qty: "q.b." }
-              ],
-              steps: [
-                "Pré-aquece o forno a 200 ºC e dispõe a cebola e as cenouras cortadas em palitos no fundo de um tabuleiro.",
-                "Dá dois golpes no lombo das douradas, tempera com sal marinho e coloca-as sobre a cama de legumes.",
-                "Asse no forno durante 20 minutos.",
-                "Adiciona os raminhos de brócolos regados com um fio de azeite ao tabuleiro e deixa assar mais 10 minutos até ficarem tenros."
-              ]
-            }
-          ]
-        },
-        {
-          name: "Lidl",
-          from: "2026-10-20",
-          to: "2026-10-26",
-          flyer: "Folheto 20–26 out.",
-          sources: [{ title: "Blog 200 — Folheto Lidl Frescos", url: "https://blog200porcento.com/tag/lidl" }],
-          promos: [
-            { id: "pernil-porco", name: "Pernil de porco fresco", price: 3.69, per: "kg", note: "folheto" },
-            { id: "batata-assada", name: "Batata branca para assar", price: 0.95, per: "kg", note: "folheto" },
-            { id: "grao-bico", name: "Grão-de-bico cozido Freshona", price: 0.75, per: "un", label: "0,75 €/frasco 540g", note: "folheto" },
-            { id: "espinafres-folha", name: "Espinafres frescos em folha", price: 0.99, per: "un", label: "0,99 €/emb. 200g", note: "folheto" },
-            { id: "peito-frango", name: "Peito de frango XXL", price: 5.49, per: "kg", note: "folheto" },
-            { id: "pera-rocha", name: "Pêra Rocha do Oeste", price: 1.39, per: "kg", note: "folheto" }
-          ],
-          recipes: [
-            {
-              slot: 1,
-              name: "Pernil de Porco Assado Lento com Batatinhas Douradas",
-              description: "Pernil de porco suculento a 3,69 €/kg marinado em alho e louro com batatas assadas no forno a 0,95 €/kg.",
-              servings: "5 pessoas",
-              time: "60 min",
-              ingredients: [
-                { item: "Pernil de porco fresco", qty: "1,2 kg", price: 3.69, per: "kg", amount: 1.2, label: "3,69 €/kg" },
-                { item: "Batata branca para assar", qty: "1 kg", price: 0.95, per: "kg", amount: 1.0, label: "0,95 €/kg" },
-                { item: "Dentes de alho e 2 folhas de louro", qty: "5 dentes" },
-                { item: "Colorau, sal grosso e azeite", qty: "2 c. sopa" }
-              ],
-              steps: [
-                "Esfrega o pernil de porco com os alhos esmagados, colorau, sal grosso, louro e azeite.",
-                "Coloca num tabuleiro com as batatas cortadas em quartos à volta e leva ao forno a 190 ºC durante 45 minutos.",
-                "Vira as batatas e rega a carne com os sucos do fundo; aumenta para 210 ºC durante os últimos 15 minutos para tostar."
-              ]
-            },
-            {
-              slot: 2,
-              name: "Estufado Rápido de Grão-de-Bico com Espinafres e Ovos Escalfados",
-              description: "Refeição super económica com grão-de-bico (0,75 €) e folhas de espinafres frescas (0,99 €/emb.) num molho rico de tomate e alho.",
-              servings: "4 pessoas",
-              time: "20 min",
-              ingredients: [
-                { item: "Grão-de-bico cozido Freshona", qty: "2 frascos", price: 0.75, per: "un", amount: 2, label: "0,75 €/frasco" },
-                { item: "Espinafres frescos em folha", qty: "200 g", price: 0.99, per: "un", amount: 1, label: "0,99 €/emb." },
-                { item: "Cebola, alho e polpa de tomate", qty: "4 c. sopa" },
-                { item: "Azeite e cominhos em pó", qty: "1 c. chá" }
-              ],
-              steps: [
-                "Refoga a cebola e o alho em azeite durante 4 minutos com uma pitada de cominhos.",
-                "Adiciona a polpa de tomate e o grão-de-bico escorrido; deixa apurar em lume médio durante 10 minutos.",
-                "Envolve as folhas de espinafres frescos durante 3 minutos até murcharem no caldo quente e serve."
-              ]
-            }
-          ]
-        },
-        {
-          name: "Aldi",
-          from: "2026-10-20",
-          to: "2026-10-26",
-          flyer: "Folheto 20–26 out.",
-          sources: [{ title: "Blog 200 — Folheto Aldi Frescos", url: "https://blog200porcento.com/tag/aldi" }],
-          promos: [
-            { id: "costeletas-porco", name: "Costeletas do cachaço de porco", price: 4.19, per: "kg", note: "folheto" },
-            { id: "maca-golden", name: "Maçã Golden nacional", price: 1.19, per: "kg", note: "folheto" },
-            { id: "couve-flor", name: "Couve-flor fresca inteira", price: 1.29, per: "kg", note: "folheto" },
-            { id: "batata-vermelha", name: "Batata vermelha para cozer", price: 0.89, per: "kg", note: "folheto" },
-            { id: "abobora-menina", name: "Abóbora Menina em pedaços", price: 0.99, per: "kg", note: "folheto" },
-            { id: "iogurte-grego", name: "Iogurte Grego Natural (pack 4)", price: 1.35, per: "un", label: "1,35 €/pack", note: "folheto" }
-          ],
-          recipes: [
-            {
-              slot: 1,
-              name: "Costeletas de Porco Douradas com Maçã Golden Caramelizada",
-              description: "Costeletas do cachaço a 4,19 €/kg salteadas na frigideira com gomos de maçã Golden nacional (1,19 €/kg) e tomilho.",
-              servings: "4 pessoas",
-              time: "25 min",
-              ingredients: [
-                { item: "Costeletas do cachaço de porco", qty: "800 g", price: 4.19, per: "kg", amount: 0.8, label: "4,19 €/kg" },
-                { item: "Maçã Golden nacional", qty: "500 g", price: 1.19, per: "kg", amount: 0.5, label: "1,19 €/kg" },
-                { item: "Dentes de alho e tomilho seco", qty: "3 dentes" },
-                { item: "Azeite, sal e pimenta preta", qty: "q.b." }
-              ],
-              steps: [
-                "Tempera as costeletas com sal, pimenta, alho esmagado e tomilho.",
-                "Grelha a carne numa frigideira quente com um fio de azeite durante 5 minutos de cada lado até dourar.",
-                "Retira a carne e, na mesma frigideira, salteia a maçã Golden cortada em fatias grossas durante 4 minutos até caramelizar.",
-                "Serve as costeletas cobertas com a maçã dourada e o molho da frigideira."
-              ]
-            },
-            {
-              slot: 2,
-              name: "Sopa Cremosa de Couve-Flor e Batata Vermelha com Azeite",
-              description: "Creme aveludado e reconfortante com couve-flor fresca (1,29 €/kg) e batata vermelha (0,89 €/kg).",
-              servings: "5 pessoas",
-              time: "30 min",
-              ingredients: [
-                { item: "Couve-flor fresca inteira", qty: "800 g", price: 1.29, per: "kg", amount: 0.8, label: "1,29 €/kg" },
-                { item: "Batata vermelha para cozer", qty: "600 g", price: 0.89, per: "kg", amount: 0.6, label: "0,89 €/kg" },
-                { item: "Cebola grande e 2 dentes de alho", qty: "1 unid." },
-                { item: "Azeite virgem extra e noz-moscada", qty: "2 c. sopa" }
-              ],
-              steps: [
-                "Numa panela, refoga a cebola e o alho picados em azeite durante 5 minutos sem deixar queimar.",
-                "Adiciona a batata vermelha em cubos e os raminhos de couve-flor lavados; cobre com água quente e sal.",
-                "Deixa cozer com a panela tapada durante 20 minutos até os legumes estarem muito macios.",
-                "Tritura tudo com a varinha mágica até obter um creme sedoso e finaliza com um fio de azeite cru."
-              ]
-            }
-          ]
-        },
-        {
-          name: "Intermarché",
-          from: "2026-10-15",
-          to: "2026-10-21",
-          flyer: "Folheto 15–21 out.",
-          sources: [{ title: "Blog 200 — Folheto Intermarché Frescos", url: "https://blog200porcento.com/tag/intermarch%C3%A9" }],
-          promos: [
-            { id: "carapau-pequeno", name: "Carapau pequeno fresco", price: 3.49, per: "kg", note: "folheto" },
-            { id: "batata-saco-5kg", name: "Batata de conservação (saco 5 kg)", price: 0.37, per: "kg", label: "3,79 €/saco 5kg", note: "folheto" },
-            { id: "salmao-posta", name: "Salmão de viveiro fresco em posta", price: 11.90, per: "kg", note: "folheto" },
-            { id: "manteiga-milhafre", name: "Manteiga dos Açores Milhafre", price: 1.99, per: "un", label: "1,99 €/unid.", note: "folheto" },
-            { id: "brocolos-inter", name: "Brócolos frescos", price: 1.49, per: "kg", note: "folheto" },
-            { id: "laranja-algarve", name: "Laranja do Algarve", price: 1.29, per: "kg", note: "folheto" }
-          ],
-          recipes: [
-            {
-              slot: 1,
-              name: "Carapau frito com batatas cozidas",
-              description: "Carapau pequeno fresco a 3,49 €/kg com batatas do saco de 5 kg a 3,79 €.",
-              servings: "4 pessoas",
-              time: "35 min",
-              ingredients: [
-                { item: "Carapau pequeno fresco", qty: "1,0 kg", price: 3.49, per: "kg", amount: 1.0, label: "3,49 €/kg" },
-                { item: "Batatas (do saco de 5 kg a 3,79 €)", qty: "1,2 kg", price: 1.85, per: "un", amount: 1, label: "1,85 € (fração saco)" },
-                { item: "Farinha de milho ou trigo para fritar", qty: "80 g" },
-                { item: "Dentes de alho, salsa e vinagre (Molho Vilão)", qty: "q.b." },
-                { item: "Óleo para fritar e azeite", qty: "q.b." }
-              ],
-              steps: [
-                "Limpa os carapaus pequenos e tempera com sal marinho durante 15 minutos.",
-                "Lava e descasca as batatas, cortando-as ao meio. Coze em água com sal durante 20 minutos.",
-                "Passa os carapaus por farinha, sacode o excesso e frita em óleo bem quente durante 4 minutos de cada lado até ficarem dourados e estaladiços.",
-                "Prepara o molho vilão picando o alho e a salsa com azeite e um toque de vinagre, regando o peixe na hora de servir."
-              ]
-            },
-            {
-              slot: 2,
-              name: "Posta de salmão com batatas e manteiga",
-              description: "Salmão de viveiro fresco em posta com batatas e manteiga Milhafre (1,99 €).",
-              servings: "3 pessoas",
-              time: "35 min",
-              ingredients: [
-                { item: "Salmão de viveiro fresco em posta", qty: "500 g", price: 11.30, per: "kg", amount: 0.5, label: "11,30 €/kg" },
-                { item: "Manteiga Milhafre dos Açores", qty: "1 emb.", price: 1.99, per: "un", amount: 1, label: "1,99 €/unid." },
-                { item: "Batatas e brócolos para acompanhar", qty: "800 g", price: 1.85, per: "un", amount: 1, label: "1,85 €" },
-                { item: "Cebola roxa, alho e sumo de limão", qty: "q.b." },
-                { item: "Sal marinho e pimenta preta", qty: "q.b." }
-              ],
-              steps: [
-                "Coze as batatas e os raminhos de brócolos em água temperada com sal durante 15 minutos até ficarem tenros.",
-                "Seca bem as postas de salmão e tempera com sal e pimenta preta moída na hora.",
-                "Numa frigideira antiaderente bem quente, grelha o salmão durante 4 minutos de cada lado.",
-                "Junta uma colher generosa de manteiga Milhafre e sumo de limão na frigideira durante 1 minuto para envolver o salmão e as batatas."
-              ]
-            }
-          ]
-        }
-      ]
-    };
-
-    // Estado Global da Aplicação
-    let appData = FALLBACK_MENU_DATA;
-    let selectedTab = "Intermarché"; // Pode ser o nome de um supermercado ou "ALL" (Todos / Mais Baratos)
-    let customServings = null;       // null = usa a dose original da receita; número (1..8) = escala todas as receitas
-    let sortMode = "default";
-    let showPromosGrid = false;
-    let promoSearchQuery = "";
-
-    // Persistência LocalStorage
-    let cart = JSON.parse(localStorage.getItem('menu_dia_cart_v2') || '[]');
-    let completedSteps = JSON.parse(localStorage.getItem('menu_dia_steps_v2') || '{}');
-    let includePantryInCart = JSON.parse(localStorage.getItem('menu_dia_pantry_toggle') ?? 'true');
-
-    // Estado do Modal e Temporizador
-    let currentModalContext = null; // { recipe, marketName, activeServings }
-    let timerInterval = null;
-    let timerSecondsLeft = 0;
-    let timerPaused = false;
-
-    // Utilitário: Data de hoje em formato YYYY-MM-DD (Fuso horário de Lisboa)
-    const todayISO = new Date().toLocaleDateString("en-CA", { timeZone: "Europe/Lisbon" });
-
-    // ==================== INICIALIZAÇÃO E TEMA ESCURO ====================
-    function initTheme() {
-      const savedTheme = localStorage.getItem('menu_dia_theme');
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      const isDark = savedTheme === 'dark' || (!savedTheme && prefersDark);
-      document.documentElement.classList.toggle('dark', isDark);
-      updateThemeIcon(isDark);
-    }
-
-    function updateThemeIcon(isDark) {
-      const icon = document.getElementById('theme-icon');
-      icon.className = isDark ? 'ph-bold ph-sun text-lg text-amber-400' : 'ph-bold ph-moon text-lg';
-    }
-
-    function toggleTheme() {
-      const isDark = document.documentElement.classList.toggle('dark');
-      localStorage.setItem('menu_dia_theme', isDark ? 'dark' : 'light');
-      updateThemeIcon(isDark);
-    }
-
-    // Saudação dinâmica e data em PT-PT
-    function setupGreetingAndDate() {
-      const now = new Date();
-      const dateStr = now.toLocaleDateString('pt-PT', { weekday: 'long', day: 'numeric', month: 'long' });
-      document.getElementById('current-date-label').textContent = dateStr;
-
-      const hour = now.getHours();
-      let greeting = "Boa tarde, o que vais cozinhar hoje?";
-      if (hour >= 5 && hour < 12) greeting = "Bom dia, o que vais cozinhar hoje?";
-      else if (hour >= 20 || hour < 5) greeting = "Boa noite, o que vais cozinhar hoje?";
-      document.getElementById('greeting-title').textContent = greeting;
-    }
-
-    // Tenta carregar `/api/data/menu.json` se existir no servidor; caso contrário mantém o fallback
-    async function loadExternalMenuJson() {
-      try {
-        const res = await fetch('api/data/menu.json', { cache: 'no-store' });
-        if (res.ok) {
-          const json = await res.json();
-          if (json && Array.isArray(json.markets) && json.markets.length > 0) {
-            appData = json;
-            // Seleciona o primeiro supermercado com receitas válidas
-            selectedTab = appData.markets[0].name;
-          }
-        }
-      } catch (_) {
-        // Mantém FALLBACK_MENU_DATA silenciosamente em modo preview
-      }
-      renderAll();
-    }
-
-    // ==================== CÁLCULOS DE CUSTO E ESCALA DE DOSES ====================
-    function getBaseServings(recipe) {
-      const match = String(recipe.servings || "4").match(/\d+/);
-      return match ? Math.max(1, parseInt(match[0], 10)) : 4;
-    }
-
-    function calculateRecipeMetrics(recipe, targetServings = null) {
-      const baseServings = getBaseServings(recipe);
-      const activeServings = targetServings || customServings || baseServings;
-      const ratio = activeServings / baseServings;
-
-      let baseTotal = 0;
-      recipe.ingredients.forEach(ing => {
-        if (ing.price) {
-          baseTotal += Number(ing.price) * Number(ing.amount || 1);
-        }
-      });
-
-      const scaledTotal = baseTotal * ratio;
-      const perDose = activeServings > 0 ? (scaledTotal / activeServings) : 0;
-
-      // Extrair minutos para ordenação
-      const minMatch = String(recipe.time || "35").match(/\d+/);
-      const minutes = minMatch ? parseInt(minMatch[0], 10) : 35;
-
-      return {
-        baseServings,
-        activeServings,
-        ratio,
-        totalNum: scaledTotal,
-        perDoseNum: perDose,
-        totalFormatted: scaledTotal.toFixed(2).replace('.', ',') + ' €',
-        perDoseFormatted: perDose.toFixed(2).replace('.', ',') + ' €/dose',
-        minutes
-      };
-    }
-
-    // Escala quantidades textuais (ex: "800 g" -> "400 g" quando ratio = 0.5)
-    function scaleQtyText(qtyStr, ratio) {
-      if (!qtyStr || Math.abs(ratio - 1) < 0.01) return qtyStr;
-      return String(qtyStr).replace(/(\d+(?:[.,]\d+)?)/g, (match) => {
-        const val = parseFloat(match.replace(',', '.')) * ratio;
-        if (val >= 10) return Math.round(val).toString();
-        const rounded = Math.round(val * 10) / 10;
-        return String(rounded).replace('.', ',');
-      });
-    }
-
-    // ==================== RENDERIZAÇÃO DE NAVEGAÇÃO E ESTADO DO FOLHETO ====================
-    function renderMarketsNav() {
-      const nav = document.getElementById('markets-nav');
-      nav.innerHTML = '';
-
-      // 1. Botão Comparador "Todos / Mais Baratos"
-      const isAll = selectedTab === "ALL";
-      const allBtn = document.createElement('button');
-      allBtn.className = `flex-shrink-0 inline-flex items-center gap-2 px-4 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all ${
-        isAll
-          ? 'bg-stone-900 dark:bg-white text-white dark:text-stone-950 shadow-md scale-[1.02]'
-          : 'bg-white dark:bg-stone-900 hover:bg-stone-100 dark:hover:bg-stone-800 text-stone-700 dark:text-stone-300 border border-stone-200/90 dark:border-stone-800'
-      }`;
-      allBtn.innerHTML = `
-        <i class="ph-bold ph-ranking text-amber-500 text-sm"></i>
-        <span>Todos os Supermercados</span>
-      `;
-      allBtn.onclick = () => {
-        selectedTab = "ALL";
-        renderAll();
-      };
-      nav.appendChild(allBtn);
-
-      // 2. Pills de cada Supermercado (fiel ao estilo limpo da captura de ecrã)
-      appData.markets.forEach(market => {
-        const isSelected = selectedTab === market.name;
-        const style = MARKET_STYLES[market.name] || MARKET_STYLES["Continente"];
-        const btn = document.createElement('button');
-
-        btn.className = `flex-shrink-0 inline-flex items-center gap-2 px-4 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all ${
-          isSelected
-            ? `${style.activeBg} shadow-md scale-[1.02]`
-            : 'bg-white dark:bg-stone-900 hover:bg-stone-100 dark:hover:bg-stone-800 text-stone-700 dark:text-stone-300 border border-stone-200/90 dark:border-stone-800'
-        }`;
-
-        btn.innerHTML = `
-          <span class="w-2.5 h-2.5 rounded-full ${isSelected ? 'bg-white' : style.dot}"></span>
-          <span>${market.name}</span>
-        `;
-
-        btn.onclick = () => {
-          selectedTab = market.name;
-          renderAll();
-        };
-        nav.appendChild(btn);
-      });
-    }
-
-    function updateFlyerStatusHeader() {
-      const statusPill = document.getElementById('flyer-status-pill');
-      const statusDot = document.getElementById('flyer-status-dot');
-      const badgeText = document.getElementById('flyer-badge-text');
-      const footerMeta = document.getElementById('footer-flyer-meta');
-      const accentBar = document.getElementById('market-accent-bar');
-      const logoBox = document.getElementById('brand-logo-box');
-
-      if (selectedTab === "ALL") {
-        accentBar.className = "w-2 h-6 rounded-full bg-emerald-600";
-        logoBox.className = "w-10 h-10 rounded-xl bg-emerald-600 text-white flex items-center justify-center font-black text-xl shadow-sm transition-colors";
-        statusPill.className = "inline-flex items-center gap-2 text-xs font-semibold px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800";
-        statusDot.className = "w-2 h-2 rounded-full bg-emerald-500";
-        badgeText.textContent = `${appData.markets.length} supermercados comparados`;
-        footerMeta.innerHTML = `<span>Comparador global de folhetos semanais · Confirma sempre os preços na loja</span>`;
-        return;
-      }
-
-      const market = appData.markets.find(m => m.name === selectedTab) || appData.markets[0];
-      const style = MARKET_STYLES[market.name] || MARKET_STYLES["Continente"];
-      accentBar.className = `w-2 h-6 rounded-full ${style.bar} transition-colors`;
-
-      const isExpired = market.to && market.to < todayISO;
-      const dmTo = market.to ? `${market.to.slice(8, 10)}/${market.to.slice(5, 7)}` : "";
-
-      if (isExpired) {
-        statusPill.className = "inline-flex items-center gap-2 text-xs font-semibold px-3 py-1 rounded-full bg-amber-50 dark:bg-amber-950/80 text-amber-800 dark:text-amber-300 border border-amber-200 dark:border-amber-800";
-        statusDot.className = "w-2 h-2 rounded-full bg-amber-500";
-        badgeText.textContent = `${market.flyer || 'Folheto'} · Expirado em ${dmTo} (aguarda novo)`;
-      } else {
-        statusPill.className = "inline-flex items-center gap-2 text-xs font-semibold px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800";
-        statusDot.className = "w-2 h-2 rounded-full bg-emerald-500";
-        badgeText.textContent = `${market.flyer || 'Folheto em vigor'} · Válido até ${dmTo}`;
-      }
-
-      const sourceLink = market.sources?.[0]?.url
-        ? `<a href="${market.sources[0].url}" target="_blank" rel="noopener" class="underline hover:text-stone-800 dark:hover:text-stone-200">${market.flyer || 'Ver fonte do folheto'}</a>`
-        : `<span>${market.flyer || 'Folheto semanal'}</span>`;
-
-      footerMeta.innerHTML = `
-        ${sourceLink}
-        <span>·</span>
-        <span class="${isExpired ? 'text-amber-600 dark:text-amber-400 font-medium' : ''}">
-          ${isExpired ? `Folheto expirado em ${dmTo} — preços podem ter mudado` : `Folheto válido até ${dmTo}`}
-        </span>
-      `;
-    }
-
-    // ==================== RENDERIZAÇÃO DOS CARTÕES DE RECEITAS ====================
-    function renderRecipes() {
-      const container = document.getElementById('recipes-container');
-      const titleEl = document.getElementById('section-market-title');
-      const countBadge = document.getElementById('recipes-count-badge');
-      container.innerHTML = '';
-
-      // Recolher lista de receitas a exibir
-      let list = [];
-      if (selectedTab === "ALL") {
-        titleEl.textContent = "Todas as Receitas da Semana";
-        appData.markets.forEach(m => {
-          (m.recipes || []).forEach(r => {
-            list.push({ recipe: r, market: m });
-          });
-        });
-      } else {
-        const market = appData.markets.find(m => m.name === selectedTab) || appData.markets[0];
-        titleEl.textContent = `Menu ${market.name}`;
-        (market.recipes || []).forEach(r => {
-          list.push({ recipe: r, market });
-        });
-      }
-
-      // Ordenar receitas conforme seleção
-      list.sort((a, b) => {
-        const ma = calculateRecipeMetrics(a.recipe);
-        const mb = calculateRecipeMetrics(b.recipe);
-        if (sortMode === 'dose_asc') return ma.perDoseNum - mb.perDoseNum;
-        if (sortMode === 'total_asc') return ma.totalNum - mb.totalNum;
-        if (sortMode === 'time_asc') return ma.minutes - mb.minutes;
-        return (a.recipe.slot || 1) - (b.recipe.slot || 1);
-      });
-
-      countBadge.textContent = `${list.length} ${list.length === 1 ? 'prato' : 'pratos'}`;
-
-      list.forEach(({ recipe, market }) => {
-        const metrics = calculateRecipeMetrics(recipe);
-        const isMain = recipe.slot === 1;
-        const mStyle = MARKET_STYLES[market.name] || MARKET_STYLES["Continente"];
-        const promoIngredients = recipe.ingredients.filter(x => x.price);
-
-        const card = document.createElement('article');
-        card.className = "group bg-white dark:bg-stone-900 rounded-3xl border border-stone-200/90 dark:border-stone-800 shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden";
-
-        card.innerHTML = `
-          <!-- Barra superior de cor do supermercado -->
-          <div class="h-1.5 w-full ${mStyle.bar}"></div>
-
-          <!-- Imagem com proporção 16:10 e fallback elegante -->
-          <div class="relative w-full aspect-[16/10] bg-stone-100 dark:bg-stone-800 overflow-hidden cursor-pointer open-modal-trigger">
-            <img 
-              src="${recipe.image || ''}" 
-              alt="${recipe.name}" 
-              loading="lazy"
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ${recipe.image ? '' : 'hidden'}"
-              onerror="this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden');"
-            />
-            <!-- Fallback visual rico se não houver foto ou falhar -->
-            <div class="${recipe.image ? 'hidden' : ''} w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-stone-100 via-stone-50 to-stone-200 dark:from-stone-800 dark:via-stone-900 dark:to-stone-800 p-6 text-center">
-              <div class="w-14 h-14 rounded-2xl bg-white dark:bg-stone-700/80 shadow-xs flex items-center justify-center mb-2.5">
-                <i class="ph-duotone ph-ForkKnife text-3xl text-emerald-600 dark:text-emerald-400"></i>
-              </div>
-              <span class="text-xs font-bold text-stone-600 dark:text-stone-300">${market.name} · ${isMain ? 'Prato Principal' : 'Alternativa'}</span>
-              <span class="text-[11px] text-stone-400 dark:text-stone-500 mt-0.5">Receita económica verificada</span>
-            </div>
-
-            <!-- Etiquetas superiores na imagem -->
-            <div class="absolute top-3.5 left-3.5 flex flex-wrap items-center gap-1.5">
-              <span class="px-3 py-1 rounded-full text-[11px] font-bold tracking-tight shadow-sm ${
-                isMain 
-                  ? 'bg-stone-900/90 text-white backdrop-blur-xs' 
-                  : 'bg-white/95 text-stone-800 backdrop-blur-xs'
-              }">
-                ${isMain ? 'Prato principal' : 'Alternativa'}
-              </span>
-              ${selectedTab === "ALL" ? `
-                <span class="px-2.5 py-1 rounded-full text-[11px] font-extrabold ${mStyle.activeBg} shadow-sm">
-                  ${market.name}
-                </span>
-              ` : ''}
-            </div>
-
-            <!-- Etiqueta de Tempo -->
-            <div class="absolute bottom-3 right-3 bg-stone-950/75 backdrop-blur-xs text-white px-2.5 py-1 rounded-xl text-xs font-semibold flex items-center gap-1.5">
-              <i class="ph-bold ph-clock text-emerald-400"></i>
-              <span>${recipe.time}</span>
-            </div>
-          </div>
-
-          <!-- Conteúdo do Cartão (Fiel à hierarquia limpa do Menu do Dia) -->
-          <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between">
-            <div>
-              <!-- Cabeçalho: Categoria + Título à esquerda | Preço grande + Pessoas à direita -->
-              <div class="flex items-start justify-between gap-4">
-                <div class="flex-1">
-                  <span class="text-xs font-semibold text-stone-400 dark:text-stone-500 block mb-0.5">
-                    ${isMain ? 'Prato principal' : 'Alternativa'} · ${market.name}
-                  </span>
-                  <h3 class="text-lg sm:text-xl font-extrabold text-stone-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors leading-snug cursor-pointer open-modal-trigger">
-                    ${recipe.name}
-                  </h3>
-                </div>
-
-                <div class="text-right flex-shrink-0">
-                  <span class="text-2xl sm:text-[26px] font-black text-stone-900 dark:text-white tracking-tight leading-none block">
-                    ${metrics.totalFormatted}
-                  </span>
-                  <span class="text-xs font-medium text-stone-400 dark:text-stone-500 block mt-1">
-                    ${metrics.activeServings} pessoas (${metrics.perDoseFormatted})
-                  </span>
-                </div>
-              </div>
-
-              <!-- Descrição com os preços dos produtos em promoção -->
-              <p class="text-xs sm:text-sm text-stone-500 dark:text-stone-400 mt-2.5 leading-relaxed">
-                ${recipe.description}
-              </p>
-
-              <!-- Tags rápidas dos produtos em promoção usados -->
-              <div class="mt-4 flex flex-wrap gap-1.5">
-                ${promoIngredients.map(p => `
-                  <span class="inline-flex items-center gap-1.5 text-[11px] bg-stone-100 dark:bg-stone-800/90 text-stone-700 dark:text-stone-300 px-2.5 py-1 rounded-lg font-medium border border-stone-200/60 dark:border-stone-700/60">
-                    <span class="w-1.5 h-1.5 rounded-full ${mStyle.dot}"></span>
-                    <span class="truncate max-w-[165px]">${p.item}</span>
-                    <strong class="font-bold text-stone-900 dark:text-white">${p.label || (Number(p.price).toFixed(2).replace('.', ',') + ' €/' + (p.per || 'un'))}</strong>
-                  </span>
-                `).join('')}
-              </div>
-            </div>
-
-            <!-- Botões Inferiores: "Ver receita" (Pílula escura) + "Adicionar à lista" -->
-            <div class="mt-6 pt-4 border-t border-stone-100 dark:border-stone-800/80 flex items-center gap-3">
-              <button class="open-modal-trigger flex-1 py-3 px-5 rounded-full bg-stone-900 dark:bg-emerald-600 hover:bg-stone-800 dark:hover:bg-emerald-500 text-white font-bold text-xs sm:text-sm transition-all active:scale-95 shadow-xs text-center">
-                Ver receita
-              </button>
-              <button class="quick-add-cart-btn flex-1 py-3 px-4 rounded-full hover:bg-stone-100 dark:hover:bg-stone-800 text-stone-700 dark:text-stone-300 font-bold text-xs sm:text-sm transition-all active:scale-95 text-center border border-transparent hover:border-stone-200 dark:hover:border-stone-700">
-                Adicionar à lista
-              </button>
-            </div>
-          </div>
-        `;
-
-        // Eventos nos elementos do cartão
-        card.querySelectorAll('.open-modal-trigger').forEach(el => {
-          el.addEventListener('click', () => openRecipeModal(recipe, market.name));
-        });
-
-        card.querySelector('.quick-add-cart-btn').addEventListener('click', () => {
-          addRecipeToCart(recipe, market.name, metrics.ratio);
-        });
-
-        container.appendChild(card);
-      });
-    }
-
-    // ==================== SECÇÃO: TODAS AS PROMOÇÕES DO FOLHETO ====================
-    function renderFlyerPromos() {
-      const section = document.getElementById('flyer-promos-section');
-      const titleEl = document.getElementById('promos-drawer-title');
-      const countPill = document.getElementById('promos-total-pill');
-      const grid = document.getElementById('promos-grid');
-
-      // Reunir promoções do supermercado selecionado ou de todos
-      let promosList = [];
-      if (selectedTab === "ALL") {
-        titleEl.textContent = "Todos os Produtos em Promoção nos Folhetos";
-        appData.markets.forEach(m => {
-          (m.promos || []).forEach(p => promosList.push({ ...p, marketName: m.name }));
-        });
-      } else {
-        const market = appData.markets.find(m => m.name === selectedTab) || appData.markets[0];
-        titleEl.textContent = `Produtos em Promoção no Folheto ${market.name}`;
-        (market.promos || []).forEach(p => promosList.push({ ...p, marketName: market.name }));
-      }
-
-      // Filtrar por pesquisa
-      const q = promoSearchQuery.trim().toLowerCase();
-      const filtered = q
-        ? promosList.filter(p => p.name.toLowerCase().includes(q) || p.marketName.toLowerCase().includes(q))
-        : promosList;
-
-      countPill.textContent = `${filtered.length} ${filtered.length === 1 ? 'item' : 'itens'}`;
-      grid.innerHTML = '';
-
-      if (filtered.length === 0) {
-        grid.innerHTML = `
-          <div class="col-span-full py-6 text-center text-xs text-stone-400">
-            Nenhum produto em promoção encontrado para "${promoSearchQuery}".
-          </div>
-        `;
-        return;
-      }
-
-      filtered.forEach(promo => {
-        const mStyle = MARKET_STYLES[promo.marketName] || MARKET_STYLES["Continente"];
-        const priceLabel = promo.label || `${Number(promo.price).toFixed(2).replace('.', ',')} €/${promo.per || 'un'}`;
-
-        const itemCard = document.createElement('div');
-        itemCard.className = "flex items-center justify-between p-3 rounded-2xl bg-white dark:bg-stone-900 border border-stone-200/80 dark:border-stone-800 hover:border-emerald-500/60 transition-all shadow-2xs";
-
-        itemCard.innerHTML = `
-          <div class="min-w-0 pr-2">
-            <div class="flex items-center gap-1.5">
-              <span class="w-2 h-2 rounded-full ${mStyle.dot} flex-shrink-0"></span>
-              <span class="text-xs sm:text-sm font-bold text-stone-900 dark:text-white truncate">${promo.name}</span>
-            </div>
-            <div class="flex items-center gap-2 mt-1">
-              <span class="text-xs font-extrabold text-emerald-700 dark:text-emerald-400">${priceLabel}</span>
-              <span class="text-[10px] text-stone-400 font-medium">${promo.marketName}</span>
-            </div>
-          </div>
-          <button class="add-single-promo-btn flex-shrink-0 w-8 h-8 rounded-xl bg-stone-100 dark:bg-stone-800 hover:bg-emerald-600 hover:text-white text-stone-700 dark:text-stone-200 flex items-center justify-center transition-colors" title="Adicionar à lista de compras">
-            <i class="ph-bold ph-plus text-sm"></i>
-          </button>
-        `;
-
-        itemCard.querySelector('.add-single-promo-btn').addEventListener('click', () => {
-          addSinglePromoToCart(promo);
-        });
-
-        grid.appendChild(itemCard);
-      });
-    }
-
-    // ==================== MODAL DE RECEITA & TEMPORIZADOR INTEGRADO ====================
-    function openRecipeModal(recipe, marketName, overrideServings = null) {
-      const baseServings = getBaseServings(recipe);
-      const activeServings = overrideServings || customServings || baseServings;
-      currentModalContext = { recipe, marketName, activeServings };
-
-      const metrics = calculateRecipeMetrics(recipe, activeServings);
-
-      document.getElementById('modal-title').textContent = recipe.name;
-      document.getElementById('modal-badge-slot').textContent = recipe.slot === 1 ? 'Prato Principal' : 'Alternativa';
-      document.getElementById('modal-badge-market').textContent = marketName;
-      document.getElementById('modal-desc').textContent = recipe.description;
-      document.getElementById('modal-time').textContent = recipe.time;
-      document.getElementById('modal-servings').textContent = activeServings;
-      document.getElementById('modal-total-price').textContent = metrics.totalFormatted;
-      document.getElementById('modal-price-per-serving').textContent = metrics.perDoseFormatted;
-
-      const creditEl = document.getElementById('modal-photo-credit');
-      creditEl.textContent = recipe.imageCredit?.name ? (recipe.imageCredit.url ? `Foto: ${recipe.imageCredit.name}` : `${recipe.imageCredit.name} (ilustrativa)`) : '';
-
-      // Imagem do modal com fallback
-      const modalImg = document.getElementById('modal-img');
-      const fallback = document.getElementById('modal-img-fallback');
-      if (recipe.image) {
-        modalImg.classList.remove('hidden');
-        fallback.classList.add('hidden');
-        modalImg.src = recipe.image;
-        modalImg.onerror = () => {
-          modalImg.classList.add('hidden');
-          fallback.classList.remove('hidden');
-        };
-      } else {
-        modalImg.classList.add('hidden');
-        fallback.classList.remove('hidden');
-      }
-
-      // Renderizar Ingredientes com quantidades escaladas
-      const promoContainer = document.getElementById('modal-promo-ingredients');
-      const pantryContainer = document.getElementById('modal-pantry-ingredients');
-      promoContainer.innerHTML = '';
-      pantryContainer.innerHTML = '';
-
-      recipe.ingredients.forEach(ing => {
-        const scaledQty = scaleQtyText(ing.qty, metrics.ratio);
-        if (ing.price) {
-          const itemCost = (Number(ing.price) * Number(ing.amount || 1) * metrics.ratio).toFixed(2).replace('.', ',') + ' €';
-          const row = document.createElement('div');
-          row.className = 'flex items-center justify-between p-3 rounded-xl bg-emerald-50/70 dark:bg-emerald-950/40 border border-emerald-200/70 dark:border-emerald-800/60 text-xs sm:text-sm';
-          row.innerHTML = `
-            <div class="flex items-center gap-2.5">
-              <span class="w-2 h-2 rounded-full bg-emerald-600"></span>
-              <span class="font-bold text-stone-900 dark:text-white">${ing.item}</span>
-              <span class="text-stone-500 dark:text-stone-400 font-semibold">(${scaledQty})</span>
-            </div>
-            <div class="text-right">
-              <span class="font-extrabold text-emerald-800 dark:text-emerald-300 bg-white dark:bg-stone-900 px-2.5 py-0.5 rounded-lg border border-emerald-200 dark:border-emerald-800 text-xs">
-                ${itemCost}
-              </span>
-            </div>
-          `;
-          promoContainer.appendChild(row);
-        } else {
-          const row = document.createElement('div');
-          row.className = 'flex items-center gap-2 py-1 px-2 rounded-lg bg-stone-50 dark:bg-stone-800/40';
-          row.innerHTML = `
-            <span class="w-1.5 h-1.5 rounded-full bg-stone-400"></span>
-            <span class="text-stone-700 dark:text-stone-300 font-medium">${ing.item}</span>
-            <span class="text-stone-400 dark:text-stone-500 text-xs">(${scaledQty})</span>
-          `;
-          pantryContainer.appendChild(row);
-        }
-      });
-
-      // Renderizar Passos com deteção automática de minutos para Temporizador
-      const stepsContainer = document.getElementById('modal-steps-container');
-      stepsContainer.innerHTML = '';
-
-      recipe.steps.forEach((stepText, idx) => {
-        const stepKey = `${marketName}_${recipe.name}_${idx}`;
-        const isDone = !!completedSteps[stepKey];
-
-        // Detetar expressões como "15 min", "20 minutos", "45 a 50 minutos"
-        const timeMatch = stepText.match(/(\d+)\s*(?:a\s*(\d+)\s*)?(?:minuto|minutos|min\b)/i);
-        const detectedMinutes = timeMatch ? parseInt(timeMatch[2] || timeMatch[1], 10) : null;
-
-        const stepWrapper = document.createElement('div');
-        stepWrapper.className = `p-3.5 rounded-2xl border transition-all ${
-          isDone 
-            ? 'bg-stone-100/70 dark:bg-stone-800/30 border-stone-200 dark:border-stone-800 opacity-60' 
-            : 'bg-stone-50 dark:bg-stone-800/60 border-stone-200/80 dark:border-stone-700/70 hover:border-emerald-500/50'
-        }`;
-
-        stepWrapper.innerHTML = `
-          <div class="flex items-start gap-3 cursor-pointer step-toggle-area select-none">
-            <input type="checkbox" class="mt-1 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-stone-300 cursor-pointer" ${isDone ? 'checked' : ''}>
-            <div class="flex-1 text-xs sm:text-sm text-stone-700 dark:text-stone-200 leading-relaxed ${isDone ? 'line-through' : ''}">
-              <strong class="font-extrabold text-stone-900 dark:text-white mr-1">Passo ${idx + 1}.</strong>
-              <span>${stepText}</span>
-            </div>
-          </div>
-          ${detectedMinutes ? `
-            <div class="mt-2.5 pl-7 flex items-center">
-              <button class="start-step-timer-btn inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-emerald-100 dark:bg-emerald-950 hover:bg-emerald-600 hover:text-white text-emerald-800 dark:text-emerald-300 text-xs font-bold transition-colors border border-emerald-200 dark:border-emerald-800">
-                <i class="ph-bold ph-timer"></i>
-                <span>Iniciar temporizador (${detectedMinutes} min)</span>
-              </button>
-            </div>
-          ` : ''}
-        `;
-
-        const toggleArea = stepWrapper.querySelector('.step-toggle-area');
-        toggleArea.addEventListener('click', () => {
-          completedSteps[stepKey] = !completedSteps[stepKey];
-          localStorage.setItem('menu_dia_steps_v2', JSON.stringify(completedSteps));
-          openRecipeModal(recipe, marketName, activeServings);
-        });
-
-        if (detectedMinutes) {
-          stepWrapper.querySelector('.start-step-timer-btn').addEventListener('click', (e) => {
-            e.stopPropagation();
-            startKitchenTimer(detectedMinutes * 60, `${recipe.name} (Passo ${idx + 1})`);
-          });
-        }
-
-        stepsContainer.appendChild(stepWrapper);
-      });
-
-      document.getElementById('recipe-modal').classList.remove('hidden');
-      document.body.classList.add('overflow-hidden');
-    }
-
-    function closeRecipeModal() {
-      document.getElementById('recipe-modal').classList.add('hidden');
-      document.body.classList.remove('overflow-hidden');
-    }
-
-    // ==================== TEMPORIZADOR FLUTUANTE COM ALERTA SONORO ====================
-    function playTimerBeep() {
-      try {
-        const ctx = new (window.AudioContext || window.webkitAudioContext)();
-        [0, 0.25, 0.5].forEach(delay => {
-          const osc = ctx.createOscillator();
-          const gain = ctx.createGain();
-          osc.type = 'sine';
-          osc.frequency.setValueAtTime(880, ctx.currentTime + delay);
-          gain.gain.setValueAtTime(0.25, ctx.currentTime + delay);
-          gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + delay + 0.2);
-          osc.connect(gain);
-          gain.connect(ctx.destination);
-          osc.start(ctx.currentTime + delay);
-          osc.stop(ctx.currentTime + delay + 0.2);
-        });
-      } catch (_) {}
-    }
-
-    function updateTimerDisplay() {
-      const mins = Math.floor(timerSecondsLeft / 60);
-      const secs = timerSecondsLeft % 60;
-      document.getElementById('timer-countdown-display').textContent =
-        `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
-    }
-
-    function startKitchenTimer(seconds, label) {
-      clearInterval(timerInterval);
-      timerSecondsLeft = seconds;
-      timerPaused = false;
-
-      document.getElementById('timer-step-label').textContent = label || 'Temporizador';
-      document.getElementById('floating-timer').classList.remove('hidden');
-      document.getElementById('timer-pause-icon').className = 'ph-bold ph-pause';
-      updateTimerDisplay();
-      showToast(`Temporizador iniciado: ${Math.round(seconds / 60)} min`);
-
-      timerInterval = setInterval(() => {
-        if (timerPaused) return;
-        timerSecondsLeft--;
-        updateTimerDisplay();
-
-        if (timerSecondsLeft <= 0) {
-          clearInterval(timerInterval);
-          playTimerBeep();
-          showToast(`⏰ Tempo esgotado: ${label}!`);
-        }
-      }, 1000);
-    }
-
-    // ==================== GESTÃO DA LISTA DE COMPRAS ====================
-    function saveCart() {
-      localStorage.setItem('menu_dia_cart_v2', JSON.stringify(cart));
-      const visibleItems = includePantryInCart ? cart : cart.filter(x => x.isPromo);
-      document.getElementById('cart-badge-count').textContent = visibleItems.length;
-      document.getElementById('cart-count-subtitle').textContent =
-        `${visibleItems.length} ${visibleItems.length === 1 ? 'artigo adicionado' : 'artigos adicionados'}`;
-    }
-
-    function addRecipeToCart(recipe, marketName, ratio = 1) {
-      recipe.ingredients.forEach(ing => {
-        const scaledQty = scaleQtyText(ing.qty, ratio);
-        const itemPrice = ing.price ? (Number(ing.price) * Number(ing.amount || 1) * ratio) : 0;
-
-        cart.push({
-          id: 'item_' + Date.now() + '_' + Math.random().toString(36).slice(2, 7),
-          item: ing.item,
-          qty: scaledQty,
-          price: itemPrice,
-          label: ing.label || null,
-          isPromo: !!ing.price,
-          marketName,
-          recipeName: recipe.name,
-          checked: false
-        });
-      });
-
-      saveCart();
-      renderCartItems();
-      showToast(`Ingredientes de "${recipe.name}" adicionados!`);
-    }
-
-    function addSinglePromoToCart(promo) {
-      cart.push({
-        id: 'promo_' + Date.now() + '_' + Math.random().toString(36).slice(2, 7),
-        item: promo.name,
-        qty: `1 ${promo.per || 'un'}`,
-        price: Number(promo.price) || 0,
-        label: promo.label || `${Number(promo.price).toFixed(2).replace('.', ',')} €/${promo.per || 'un'}`,
-        isPromo: true,
-        marketName: promo.marketName,
-        recipeName: 'Produto avulso do folheto',
-        checked: false
-      });
-
-      saveCart();
-      renderCartItems();
-      showToast(`"${promo.name}" adicionado à lista!`);
-    }
-
-    function renderCartItems() {
-      const container = document.getElementById('cart-items-container');
-      const totalEl = document.getElementById('cart-total-price');
-      container.innerHTML = '';
-
-      const filteredCart = includePantryInCart ? cart : cart.filter(i => i.isPromo);
-
-      if (filteredCart.length === 0) {
-        container.innerHTML = `
-          <div class="h-64 flex flex-col items-center justify-center text-center p-6 text-stone-400">
-            <i class="ph-duotone ph-shopping-cart text-6xl text-stone-300 dark:text-stone-700 mb-3"></i>
-            <p class="font-bold text-stone-700 dark:text-stone-300 text-sm">A tua lista de compras está vazia</p>
-            <p class="text-xs text-stone-500 dark:text-stone-400 mt-1 max-w-xs">
-              Adiciona receitas completas ou produtos individuais em promoção no folheto.
-            </p>
-          </div>
-        `;
-        totalEl.textContent = '0,00 €';
-        return;
-      }
-
-      // Agrupar por Supermercado
-      const byMarket = {};
-      filteredCart.forEach(item => {
-        if (!byMarket[item.marketName]) byMarket[item.marketName] = [];
-        byMarket[item.marketName].push(item);
-      });
-
-      let grandTotal = 0;
-
-      Object.keys(byMarket).forEach(mName => {
-        const items = byMarket[mName];
-        const mStyle = MARKET_STYLES[mName] || MARKET_STYLES["Continente"];
-        const marketSubtotal = items.reduce((acc, x) => acc + (x.price || 0), 0);
-        grandTotal += marketSubtotal;
-
-        const groupBlock = document.createElement('div');
-        groupBlock.className = 'space-y-2';
-        groupBlock.innerHTML = `
-          <div class="flex items-center justify-between pb-1.5 border-b border-stone-200 dark:border-stone-800">
-            <div class="flex items-center gap-2">
-              <span class="w-2.5 h-2.5 rounded-full ${mStyle.dot}"></span>
-              <span class="text-xs font-extrabold uppercase tracking-wider text-stone-800 dark:text-stone-200">${mName}</span>
-            </div>
-            <span class="text-xs font-bold text-emerald-700 dark:text-emerald-400">
-              Subtotal: ${marketSubtotal.toFixed(2).replace('.', ',')} €
-            </span>
-          </div>
-        `;
-
-        const listWrap = document.createElement('div');
-        listWrap.className = 'space-y-2';
-
-        items.forEach(item => {
-          const row = document.createElement('div');
-          row.className = `flex items-center justify-between p-3 rounded-2xl border transition-all ${
-            item.checked
-              ? 'bg-stone-100/60 dark:bg-stone-800/30 border-stone-200 dark:border-stone-800 opacity-55'
-              : 'bg-white dark:bg-stone-800/80 border-stone-200/80 dark:border-stone-700/70 shadow-2xs'
-          }`;
-
-          row.innerHTML = `
-            <div class="flex items-center gap-3 flex-1 min-w-0 pr-2">
-              <input type="checkbox" class="w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-stone-300 cursor-pointer item-check" ${item.checked ? 'checked' : ''}>
-              <div class="min-w-0">
-                <span class="block text-xs sm:text-sm font-bold text-stone-900 dark:text-white truncate ${item.checked ? 'line-through' : ''}">
-                  ${item.item}
-                </span>
-                <div class="flex flex-wrap items-center gap-1.5 text-[11px] text-stone-500 dark:text-stone-400">
-                  <span>${item.qty}</span>
-                  ${item.label ? `<span class="text-emerald-700 dark:text-emerald-400 font-semibold">· ${item.label}</span>` : '<span>· Despensa</span>'}
-                </div>
-              </div>
-            </div>
-            <div class="flex items-center gap-2 flex-shrink-0">
-              ${item.price > 0 ? `<span class="text-xs font-extrabold text-stone-900 dark:text-white">${item.price.toFixed(2).replace('.', ',')} €</span>` : ''}
-              <button class="text-stone-400 hover:text-red-500 p-1 remove-btn" title="Remover">
-                <i class="ph-bold ph-trash text-sm"></i>
-              </button>
-            </div>
-          `;
-
-          row.querySelector('.item-check').addEventListener('change', (e) => {
-            item.checked = e.target.checked;
-            saveCart();
-            renderCartItems();
-          });
-
-          row.querySelector('.remove-btn').addEventListener('click', () => {
-            cart = cart.filter(x => x.id !== item.id);
-            saveCart();
-            renderCartItems();
-          });
-
-          listWrap.appendChild(row);
-        });
-
-        groupBlock.appendChild(listWrap);
-        container.appendChild(groupBlock);
-      });
-
-      totalEl.textContent = grandTotal.toFixed(2).replace('.', ',') + ' €';
-    }
-
-    function buildFormattedCartText() {
-      const filteredCart = includePantryInCart ? cart : cart.filter(i => i.isPromo);
-      if (filteredCart.length === 0) return '';
-
-      let text = "🛒 *MENU DO DIA — LISTA DE COMPRAS*\n\n";
-      const byMarket = {};
-      filteredCart.forEach(item => {
-        if (!byMarket[item.marketName]) byMarket[item.marketName] = [];
-        byMarket[item.marketName].push(item);
-      });
-
-      let total = 0;
-      Object.keys(byMarket).forEach(m => {
-        text += `📍 *${m}*\n`;
-        byMarket[m].forEach(i => {
-          total += i.price || 0;
-          const priceStr = i.price > 0 ? ` — ${i.price.toFixed(2).replace('.', ',')} €` : '';
-          text += `${i.checked ? '✅' : '⬜'} ${i.item} (${i.qty})${priceStr}\n`;
-        });
-        text += '\n';
-      });
-      text += `💰 *Total Estimado:* ${total.toFixed(2).replace('.', ',')} €`;
-      return text;
-    }
-
-    // ==================== NOTIFICAÇÕES TOAST ====================
-    let toastTimeout = null;
-    function showToast(message) {
-      const toast = document.getElementById('toast');
-      document.getElementById('toast-message').textContent = message;
-      toast.classList.remove('translate-y-20', 'opacity-0');
-      toast.classList.add('translate-y-0', 'opacity-100');
-      clearTimeout(toastTimeout);
-      toastTimeout = setTimeout(() => {
-        toast.classList.remove('translate-y-0', 'opacity-100');
-        toast.classList.add('translate-y-20', 'opacity-0');
-      }, 2600);
-    }
-
-    // ==================== RENDERIZAÇÃO GLOBAL ====================
-    function renderAll() {
-      renderMarketsNav();
-      updateFlyerStatusHeader();
-      renderRecipes();
-      renderFlyerPromos();
-      saveCart();
-    }
-
-    // ==================== EVENT LISTENERS ====================
-    function setupEvents() {
-      // Tema Claro/Escuro
-      document.getElementById('theme-toggle-btn').addEventListener('click', toggleTheme);
-
-      // Reset no Logótipo
-      document.getElementById('logo-reset').addEventListener('click', (e) => {
-        e.preventDefault();
-        selectedTab = appData.markets[0]?.name || "Intermarché";
-        customServings = null;
-        updateGlobalServingsUI();
-        renderAll();
-      });
-
-      // Controlo Global de Doses (1 a 8 pessoas)
-      function updateGlobalServingsUI() {
-        const valEl = document.getElementById('global-servings-val');
-        const labelEl = document.getElementById('global-servings-label');
-        const resetBtn = document.getElementById('scale-reset-btn');
-
-        if (customServings === null) {
-          valEl.textContent = "Auto";
-          labelEl.textContent = "Dose original da receita";
-          resetBtn.classList.add('hidden');
-        } else {
-          valEl.textContent = `${customServings} p.`;
-          labelEl.textContent = `Recalculado para ${customServings} ${customServings === 1 ? 'pessoa' : 'pessoas'}`;
-          resetBtn.classList.remove('hidden');
-        }
-      }
-
-      document.getElementById('scale-down-btn').addEventListener('click', () => {
-        const current = customServings || 4;
-        customServings = Math.max(1, current - 1);
-        updateGlobalServingsUI();
-        renderRecipes();
-      });
-
-      document.getElementById('scale-up-btn').addEventListener('click', () => {
-        const current = customServings || 4;
-        customServings = Math.min(8, current + 1);
-        updateGlobalServingsUI();
-        renderRecipes();
-      });
-
-      document.getElementById('scale-reset-btn').addEventListener('click', () => {
-        customServings = null;
-        updateGlobalServingsUI();
-        renderRecipes();
-      });
-
-      // Ordenação
-      document.getElementById('sort-select').addEventListener('change', (e) => {
-        sortMode = e.target.value;
-        renderRecipes();
-      });
-
-      // Expansão e Pesquisa de Todas as Promoções do Folheto
-      const togglePromosBtn = document.getElementById('toggle-promos-btn');
-      const promosWrapper = document.getElementById('promos-grid-wrapper');
-      const togglePromosText = document.getElementById('toggle-promos-text');
-      const togglePromosIcon = document.getElementById('toggle-promos-icon');
-
-      function setPromosOpen(open) {
-        showPromosGrid = open;
-        promosWrapper.classList.toggle('hidden', !open);
-        togglePromosText.textContent = open ? 'Ocultar' : 'Mostrar';
-        togglePromosIcon.classList.toggle('rotate-180', open);
-      }
-
-      togglePromosBtn.addEventListener('click', () => setPromosOpen(!showPromosGrid));
-
-      document.getElementById('promo-search-input').addEventListener('input', (e) => {
-        promoSearchQuery = e.target.value;
-        if (!showPromosGrid && promoSearchQuery.trim().length > 0) {
-          setPromosOpen(true);
-        }
-        renderFlyerPromos();
-      });
-
-      // Controlos de Doses dentro do Modal
-      document.getElementById('modal-servings-minus').addEventListener('click', () => {
-        if (!currentModalContext) return;
-        const next = Math.max(1, currentModalContext.activeServings - 1);
-        openRecipeModal(currentModalContext.recipe, currentModalContext.marketName, next);
-      });
-
-      document.getElementById('modal-servings-plus').addEventListener('click', () => {
-        if (!currentModalContext) return;
-        const next = Math.min(10, currentModalContext.activeServings + 1);
-        openRecipeModal(currentModalContext.recipe, currentModalContext.marketName, next);
-      });
-
-      // Fechar Modal de Receita
-      document.getElementById('close-modal-btn').addEventListener('click', closeRecipeModal);
-      document.getElementById('modal-close-footer-btn').addEventListener('click', closeRecipeModal);
-      document.getElementById('recipe-modal-backdrop').addEventListener('click', closeRecipeModal);
-
-      document.getElementById('modal-add-cart-action-btn').addEventListener('click', () => {
-        if (!currentModalContext) return;
-        const metrics = calculateRecipeMetrics(currentModalContext.recipe, currentModalContext.activeServings);
-        addRecipeToCart(currentModalContext.recipe, currentModalContext.marketName, metrics.ratio);
-        closeRecipeModal();
-      });
-
-      // Controlos do Temporizador Flutuante
-      document.getElementById('timer-pause-btn').addEventListener('click', () => {
-        timerPaused = !timerPaused;
-        document.getElementById('timer-pause-icon').className = timerPaused ? 'ph-bold ph-play' : 'ph-bold ph-pause';
-      });
-
-      document.getElementById('timer-add-min-btn').addEventListener('click', () => {
-        timerSecondsLeft += 60;
-        updateTimerDisplay();
-      });
-
-      document.getElementById('timer-close-btn').addEventListener('click', () => {
-        clearInterval(timerInterval);
-        document.getElementById('floating-timer').classList.add('hidden');
-      });
-
-      // Gaveta da Lista de Compras
-      const cartDrawer = document.getElementById('cart-drawer');
-      const cartBackdrop = document.getElementById('cart-backdrop');
-      const cartPanel = document.getElementById('cart-panel');
-
-      function openCartDrawer() {
-        cartDrawer.classList.remove('pointer-events-none');
-        cartBackdrop.classList.remove('pointer-events-none', 'opacity-0');
-        cartBackdrop.classList.add('opacity-100');
-        cartPanel.classList.remove('translate-x-full');
-        document.body.classList.add('overflow-hidden');
-        renderCartItems();
-      }
-
-      function closeCartDrawer() {
-        cartBackdrop.classList.remove('opacity-100');
-        cartBackdrop.classList.add('opacity-0');
-        cartPanel.classList.add('translate-x-full');
-        setTimeout(() => {
-          cartDrawer.classList.add('pointer-events-none');
-          cartBackdrop.classList.add('pointer-events-none');
-          document.body.classList.remove('overflow-hidden');
-        }, 300);
-      }
-
-      document.getElementById('open-cart-btn').addEventListener('click', openCartDrawer);
-      document.getElementById('close-cart-btn').addEventListener('click', closeCartDrawer);
-      cartBackdrop.addEventListener('click', closeCartDrawer);
-
-      // Toggle Despensa na Lista de Compras
-      const pantryToggle = document.getElementById('toggle-pantry-cart');
-      pantryToggle.checked = includePantryInCart;
-      pantryToggle.addEventListener('change', (e) => {
-        includePantryInCart = e.target.checked;
-        localStorage.setItem('menu_dia_pantry_toggle', JSON.stringify(includePantryInCart));
-        saveCart();
-        renderCartItems();
-      });
-
-      // Copiar Lista Formatada
-      document.getElementById('copy-cart-btn').addEventListener('click', () => {
-        const text = buildFormattedCartText();
-        if (!text) {
-          showToast('A lista está vazia!');
-          return;
-        }
-        const area = document.createElement('textarea');
-        area.value = text;
-        document.body.appendChild(area);
-        area.select();
-        try {
-          document.execCommand('copy');
-          showToast('Lista copiada para a área de transferência!');
-        } catch (_) {
-          showToast('Erro ao copiar lista.');
-        }
-        document.body.removeChild(area);
-      });
-
-      // Partilhar no WhatsApp
-      document.getElementById('whatsapp-share-btn').addEventListener('click', () => {
-        const text = buildFormattedCartText();
-        if (!text) {
-          showToast('Adiciona itens antes de partilhar!');
-          return;
-        }
-        const url = `https://wa.me/?text=${encodeURIComponent(text)}`;
-        window.open(url, '_blank', 'noopener');
-      });
-
-      // Limpar Lista
-      document.getElementById('clear-cart-btn').addEventListener('click', () => {
-        if (cart.length === 0) return;
-        cart = [];
-        saveCart();
-        renderCartItems();
-        showToast('Lista de compras limpa');
-      });
-
-      // Fechar modais com tecla Escape
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-          closeRecipeModal();
-          closeCartDrawer();
-        }
-      });
-    }
-
-    // Arranque da Aplicação
-    window.addEventListener('DOMContentLoaded', () => {
-      initTheme();
-      setupGreetingAndDate();
-      setupEvents();
-      loadExternalMenuJson();
-    });
-  </script>
+  <div class="dock"><button class="btn" id="addAll">Adicionar à lista de compras</button></div>`;
+}
+
+/* ---------- cart ---------- */
+function saveCart(){store.set("md_cart",cart)}
+function addRecipe(){
+  const {m,r,servings}=current,ratio=cost(r,servings).ratio;let n=0;
+  r.ingredients.forEach(i=>{const id=`${m.name}|${r.name}|${i.item}`;if(cart.some(x=>x.id===id))return;
+    cart.push(i.price?{id,store:m.name,name:i.item,sub:`${scaleQty(i.qty,ratio)} · ${r.name}`,price:+lineTotal(i,ratio).toFixed(2),on:true}:{id,store:m.name,name:i.item,sub:`${scaleQty(i.qty,ratio)} · ${r.name}`,pantry:true,on:true});n++});
+  saveCart();renderCart();toast(n?`${n} ingredientes adicionados`:"Já estava na lista");
+}
+function addPromo(id){const m=data.markets.find(x=>x.name===tab),p=m.promos.find(x=>x.id===id);const cid=`${m.name}|promo|${p.id}`;if(cart.some(x=>x.id===cid))return toast("Já está na lista");cart.push({id:cid,store:m.name,name:p.name,sub:`${p.label||"1 un."} · promoção`,price:+p.price,on:true});saveCart();renderCart();toast("Adicionado à lista")}
+function visibleCart(){return cart.filter(x=>pantry||!x.pantry)}
+function renderCart(){
+  const v=visibleCart(),n=v.filter(x=>!x.pantry).length;
+  const cnt=$("#count");cnt.hidden=!cart.length;cnt.textContent=cart.length;
+  const by={};v.forEach(x=>(by[x.store]??=[]).push(x));
+  const total=v.filter(x=>x.on&&x.price).reduce((s,x)=>s+x.price,0);
+  $("#drawer").innerHTML=`<div class="drawer-hd"><h2>Lista de compras</h2><button class="ibtn" data-close aria-label="Fechar"><svg viewBox="0 0 24 24"><path d="M5 5l14 14M19 5L5 19"/></svg></button></div>
+  <div class="drawer-body">${cart.length?Object.entries(by).map(([s,items])=>`<div class="cg"><h3><i class="dot" style="--c:${COLORS[s]||"#999"}"></i>${esc(s)}</h3>${items.map(x=>`<div class="ci ${x.on?"":"off"}"><input type="checkbox" data-ck="${esc(x.id)}" ${x.on?"checked":""} aria-label="${esc(x.name)}"><div class="n">${esc(x.name)}<small>${esc(x.sub)}</small></div>${x.price?`<span class="pc">${money(x.price)}</span>`:`<span class="pc" style="color:var(--ink-3);font-weight:500">em casa</span>`}<button class="rm" data-rm="${esc(x.id)}" aria-label="Remover ${esc(x.name)}">✕</button></div>`).join("")}</div>`).join(""):`<div class="empty"><b>A lista está vazia</b>Abre uma receita e toca em “Adicionar à lista de compras”.</div>`}</div>
+  <div class="drawer-ft"><label class="switch"><input type="checkbox" id="pantryT" ${pantry?"checked":""}>Mostrar ingredientes que já tenho em casa</label>
+    <div class="tot"><span>Total (produtos com preço)</span><b>${money(total)}</b></div>
+    <div style="display:flex;gap:8px"><button class="btn sm" id="shareC" ${cart.length?"":"disabled"} style="flex:1">Partilhar</button><button class="btn ghost sm" id="clearC" ${cart.length?"":"disabled"}>Limpar</button></div></div>`;
+}
+function cartText(){
+  const v=visibleCart(),by={};v.forEach(x=>(by[x.store]??=[]).push(x));
+  let t="🛒 Lista de compras — Menu do Dia\n";
+  Object.entries(by).forEach(([s,items])=>{t+=`\n${s}\n`;items.forEach(x=>t+=`${x.on?"⬜":"✅"} ${x.name} (${x.sub.split(" · ")[0]})${x.price?" — "+money(x.price):""}\n`)});
+  t+=`\nTotal: ${money(v.filter(x=>x.on&&x.price).reduce((s,x)=>s+x.price,0))}`;return t;
+}
+async function share(title,text){
+  try{if(navigator.share){await navigator.share({title,text});return}}catch(e){if(e.name==="AbortError")return}
+  try{await navigator.clipboard.writeText(text);toast("Copiado para a área de transferência")}catch{window.open("https://wa.me/?text="+encodeURIComponent(text),"_blank")}
+}
+
+/* ---------- timer ---------- */
+let tInt=null,tEnd=0;
+function beep(){try{const a=new (window.AudioContext||window.webkitAudioContext)();[0,.35,.7].forEach(t=>{const o=a.createOscillator(),g=a.createGain();o.frequency.value=880;o.connect(g);g.connect(a.destination);g.gain.setValueAtTime(.2,a.currentTime+t);g.gain.exponentialRampToValueAtTime(.001,a.currentTime+t+.25);o.start(a.currentTime+t);o.stop(a.currentTime+t+.3)})}catch{}}
+function startTimer(sec,label){clearInterval(tInt);tEnd=Date.now()+sec*1000;$("#timer").hidden=false;$("#tLabel").textContent=label.length>22?label.slice(0,21)+"…":label;
+  const tick=()=>{const left=Math.max(0,Math.round((tEnd-Date.now())/1000));$("#tOut").textContent=String(Math.floor(left/60)).padStart(2,"0")+":"+String(left%60).padStart(2,"0");if(!left){clearInterval(tInt);beep();toast("Tempo terminado!");setTimeout(()=>{$("#timer").hidden=true},4000)}};tick();tInt=setInterval(tick,500)}
+$("#tStop").onclick=()=>{clearInterval(tInt);$("#timer").hidden=true};
+
+/* ---------- misc ---------- */
+let tt;function toast(t){const e=$("#toast");e.textContent=t;e.classList.add("on");clearTimeout(tt);tt=setTimeout(()=>e.classList.remove("on"),2200)}
+
+document.addEventListener("click",e=>{
+  const t=e.target.closest("[data-tab],[data-open],[data-close],[data-serv],[data-step],[data-timer],[data-promo],[data-rm]");
+  if(e.target.matches("dialog")){e.target.close();return}
+  if(e.target.id==="cartBtn"||e.target.closest("#cartBtn")){renderCart();$("#cartDlg").showModal();return}
+  if(e.target.closest("#addAll")){addRecipe();return}
+  if(e.target.closest("#shareR")){const {m,r,servings}=current,c=cost(r,servings);share(r.name,`${r.name} — ${m.name}\nProduto principal: ${money(c.total)} para ${servings} pessoas (${money(c.per)}/pessoa)\n\nIngredientes:\n${r.ingredients.map(i=>"• "+i.item+" — "+scaleQty(i.qty,c.ratio)).join("\n")}\n\nPreparação:\n${r.steps.map((s,i)=>(i+1)+". "+s).join("\n")}`);return}
+  if(e.target.closest("#shareC")){share("Lista de compras",cartText());return}
+  if(e.target.closest("#clearC")){cart=[];saveCart();renderCart();return}
+  if(!t)return;
+  if(t.dataset.tab!=null){tab=t.dataset.tab;store.set("md_tab",tab);renderChips();renderApp();$("#app").scrollIntoView({block:"start"});return}
+  if(t.dataset.open){const [m,i]=t.dataset.open.split("|");openRecipe(m,+i);return}
+  if(t.hasAttribute("data-close")){t.closest("dialog").close();return}
+  if(t.dataset.serv){current.servings=Math.min(12,Math.max(1,current.servings+ +t.dataset.serv));const y=$("#sheet").scrollTop;drawSheet();$("#sheet").scrollTop=y;return}
+  if(t.dataset.timer){e.stopPropagation();startTimer(+t.dataset.timer,t.dataset.label);return}
+  if(t.dataset.step!=null){const k=current.m.name+"|"+current.r.name;(done[k]??={})[t.dataset.step]=!done[k][t.dataset.step];store.set("md_done",done);t.classList.toggle("done");return}
+  if(t.dataset.promo){addPromo(t.dataset.promo);return}
+  if(t.dataset.rm){cart=cart.filter(x=>x.id!==t.dataset.rm);saveCart();renderCart();return}
+});
+document.addEventListener("change",e=>{
+  if(e.target.dataset.ck){const x=cart.find(c=>c.id===e.target.dataset.ck);if(x){x.on=e.target.checked;saveCart();renderCart()}}
+  if(e.target.id==="pantryT"){pantry=e.target.checked;store.set("md_pantry",pantry);renderCart()}
+});
+
+/* ---------- boot ---------- */
+async function boot(){
+  try{
+    const r=await fetch("api/data/menu.json",{cache:"no-store"});if(!r.ok)throw new Error(r.status);
+    data=await r.json();
+    if(!data.markets?.length)throw new Error("vazio");
+    const cap=t=>t?String(t).charAt(0).toUpperCase()+String(t).slice(1):t;
+    data.markets.forEach(m=>{m.promos.forEach(p=>p.name=cap(p.name));m.recipes.forEach(r=>r.ingredients.forEach(i=>i.item=cap(i.item)))});
+    if(tab!=="ALL"&&!data.markets.some(m=>m.name===tab))tab="ALL";
+    render();
+  }catch(e){
+    $("#app").innerHTML=`<div class="err"><h2 style="font-size:24px;margin-bottom:8px">Não foi possível carregar o menu</h2><p style="color:var(--ink-2);margin-bottom:16px">Verifica a ligação e tenta outra vez.</p><button class="btn" onclick="location.reload()">Tentar de novo</button></div>`;
+    $("#how").hidden=true;
+  }
+}
+boot();
+</script>
 </body>
 </html>
