@@ -490,13 +490,6 @@
           "note": "folheto (lido por IA)"
         },
         {
-          "id": "couve-flor",
-          "name": "Couve-Flor",
-          "price": 1.99,
-          "per": "kg",
-          "note": "folheto (lido por IA)"
-        },
-        {
           "id": "brocolos-bimi",
           "name": "Brócolos Bimi",
           "price": 1.89,
@@ -1145,44 +1138,6 @@
       ],
       "promos": [
         {
-          "id": "crisantemo",
-          "name": "Crisântemo",
-          "price": 1.99,
-          "per": "un",
-          "label": "Planta de interior e exterior",
-          "note": "folheto (lido por IA)"
-        },
-        {
-          "id": "peperomia-mix",
-          "name": "Peperomia Mix",
-          "price": 2.99,
-          "per": "un",
-          "label": "Planta de interior",
-          "note": "folheto (lido por IA)"
-        },
-        {
-          "id": "crisantemo-multiflora",
-          "name": "Crisântemo/Multiflora",
-          "price": 1.99,
-          "per": "un",
-          "label": "Planta de interior e exterior",
-          "note": "folheto (lido por IA)"
-        },
-        {
-          "id": "molho-de-crisantemos",
-          "name": "Molho de Crisântemos",
-          "price": 3.99,
-          "per": "un",
-          "note": "folheto (lido por IA)"
-        },
-        {
-          "id": "ramo-de-outono",
-          "name": "Ramo de Outono",
-          "price": 4.79,
-          "per": "un",
-          "note": "folheto (lido por IA)"
-        },
-        {
           "id": "baguete",
           "name": "Baguete",
           "price": 0.39,
@@ -1236,14 +1191,6 @@
           "price": 0.95,
           "per": "un",
           "label": "Emb. 1 L",
-          "note": "folheto (lido por IA)"
-        },
-        {
-          "id": "capsulas-de-cafe-espresso-ristretto",
-          "name": "Cápsulas de Café Espresso Ristretto",
-          "price": 2.99,
-          "per": "un",
-          "label": "Emb. 16 unid.",
           "note": "folheto (lido por IA)"
         }
       ],

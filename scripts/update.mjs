@@ -140,7 +140,7 @@ async function readFlyer(m, pick) {
     }
     for (const p of ex.products ?? []) {
       const it = { id: slug(p.name ?? ""), name: String(p.name ?? "").trim(), price: Math.round(parseFloat(String(p.price).replace(",", ".")) * 100) / 100, per: p.per, ...(p.label ? { label: p.label } : {}) };
-      if (it.id && !seen.has(it.id) && seen.add(it.id) && it.price >= 0.2 && it.price <= (it.per === "kg" ? 45 : 40) && ["kg", "un"].includes(it.per)) items.push(it);
+      if (it.id && !NONFOOD.test(it.id) && !seen.has(it.id) && seen.add(it.id) && it.price >= 0.2 && it.price <= (it.per === "kg" ? 45 : 40) && ["kg", "un"].includes(it.per)) items.push(it);
     }
   }
   if (items.length < 6) throw new Error("só " + items.length + " produtos legíveis (mínimo 6)");
@@ -165,7 +165,8 @@ async function readFlyer(m, pick) {
 
 const DISHES = "Bacalhau à Brás; Bacalhau à Gomes de Sá; Bacalhau com Natas; Arroz de Pato; Polvo à Lagareiro; Caldo Verde; Sopa do Pedreiro; Feijoada; Cozido à Portuguesa; Carne de Porco à Alentejana; Bifanas; Sardinha Assada; Carapau Frito com Batatas; Espetada; Frango de Caril; Frango Assado com Batatas; Arroz de Marisco; Massada de Peixe; Açorda de Marisco; Salada de Polvo; Choco Frito; Lulas à Algarvia; Trinchado; Rojões; Migas; Almôndegas; Estufado de Novilho; Jardineira; Peito de Frango Grelhado; Costeletas de Novilho Grelhadas; Caldeirada; Febras Grelhadas com Arroz; Sopa de Peixe; Grão Estufado com Couve";
 
-const STAR = /bacalhau|polvo|lula|choco|sepia|camarao|gamba|mexilh|ameijoa|amêijoa|salmao|dourada|robalo|pescada|carapau|sardinha|cavala|atum|peixe|filete|tamboril|raia|lingueirao|frango|peru|pato|coelho|porco|suino|vitela|novilho|vaca|boi|borrego|cordeiro|cabrito|entrecosto|costeleta|febra|lombo|bife|perna|pernil|alcatra|acem|carne|salsicha|chourico|linguica|farinheira|morcela|presunto|bacon|toucinho|grao|feijao|lentilha|queijo|cogumelo|arroz|massa/i;
+const STAR = /tintureira|espadarte|cherne|garoupa|solha|linguado|esparguete|espaguete|hamburguer|picanha|rosbife|bacalhau|polvo|lula|choco|sepia|camarao|gamba|mexilh|ameijoa|amêijoa|salmao|dourada|robalo|pescada|carapau|sardinha|cavala|atum|peixe|filete|tamboril|raia|lingueirao|frango|peru|pato|coelho|porco|suino|vitela|novilho|vaca|boi|borrego|cordeiro|cabrito|entrecosto|costeleta|febra|lombo|bife|perna|pernil|alcatra|acem|carne|salsicha|chourico|linguica|farinheira|morcela|presunto|bacon|toucinho|grao|feijao|lentilha|queijo|cogumelo|arroz|massa/i;
+const NONFOOD = /crisantemo|peperomia|ramo-de|flor|planta|vaso|capsula|detergente|papel|vela|decorac/;
 const STAPLE = /cebola|alho|batata|cenoura|tomate|alface|pepino|couve|abobora|pimento|salsa|coentro|limao|laranja|maca|banana|pera|uva|sal\b|azeite|oleo|vinagre|farinha|acucar|leite|natas|manteiga|ovo|agua|sumo|refrigerante|cerveja|vinho|bolacha|chocolate|cafe|iogurte|pao\b|snack|gelado|detergente|papel/i;
 const words = (t) => slug(t).split("-").filter((w) => w.length >= 4);
 const near = (a, b) => a.slice(0, 5) === b.slice(0, 5);
