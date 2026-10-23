@@ -64,7 +64,7 @@
             "Sirva imediatamente como acompanhamento ou prato principal leve."
           ],
           "imageQuery": "iberian salad with spinach and coriander",
-          "image": "/meals/foto-continente-salada-iberica-com-espinafre-e-coentros-2b88e81b.webp",
+          "image": "/meals/foto-continente-salada-iberica-com-espinafre-e-coentros-0453817a.webp",
           "imageCredit": {
             "name": "Imagem gerada por IA",
             "url": ""
@@ -121,7 +121,7 @@
             "Retire do forno, adicione os grãos da Romã e o Amendoim Torrado, misturando delicadamente antes de servir."
           ],
           "imageQuery": "roasted sweet potatoes with pomegranate and peanuts",
-          "image": "/meals/foto-continente-batata-doce-assada-com-roma-e-amendoim-621677f9.webp",
+          "image": "/meals/foto-continente-batata-doce-assada-com-roma-e-amendoim-1ec81c74.webp",
           "imageCredit": {
             "name": "Imagem gerada por IA",
             "url": ""
@@ -301,45 +301,58 @@
       "recipes": [
         {
           "slot": 1,
-          "name": "Salada de Laranja e Abacate",
-          "description": "Uma salada fresca e vibrante, perfeita para os dias quentes.",
+          "name": "Bacalhau à Brás",
+          "description": "Um prato tradicional português feito com bacalhau desfiado, batatas fritas e ovos, temperado com cebola e azeitonas.",
           "servings": "4 pessoas",
-          "time": "20 min",
+          "time": "45 min",
           "ingredients": [
             {
-              "item": "Laranja",
-              "qty": "400 g",
-              "price": 1.25,
+              "item": "bacalhau",
+              "qty": "400g"
+            },
+            {
+              "item": "batata-vermelha",
+              "qty": "500g",
+              "price": 1.19,
               "per": "kg",
-              "amount": 0.4,
+              "amount": 1,
               "note": "folheto (lido por IA)"
             },
             {
-              "item": "Abacate Hass",
-              "qty": "200 g",
-              "price": 3.59,
+              "item": "cebola",
+              "qty": "2",
+              "price": 0.99,
               "per": "kg",
-              "amount": 0.2,
+              "amount": 1,
               "note": "folheto (lido por IA)"
             },
             {
-              "item": "Cebola",
-              "qty": "1 unidade"
+              "item": "ovos",
+              "qty": "4"
             },
             {
-              "item": "Azeite",
-              "qty": "3 c. sopa"
+              "item": "azeite",
+              "qty": "50ml"
+            },
+            {
+              "item": "sal",
+              "qty": "a gosto"
+            },
+            {
+              "item": "pimenta",
+              "qty": "a gosto"
             }
           ],
           "steps": [
-            "Descasque e corte as laranjas em gomos.",
-            "Corte o abacate em cubos e a cebola em fatias finas.",
-            "Misture todos os ingredientes numa tigela.",
-            "Regue com azeite e tempere a gosto.",
-            "Sirva imediatamente."
+            "Cozer o bacalhau em água a ferver durante 10 minutos. Escorrer e desfiar.",
+            "Fritar as batatas em palha até ficarem douradas e crocantes. Reservar.",
+            "Numa frigideira, aquecer o azeite e refogar a cebola picada até ficar transparente.",
+            "Adicionar o bacalhau desfiado e misturar bem. Juntar as batatas fritas.",
+            "Bater os ovos e temperar com sal e pimenta. Verter sobre a mistura de bacalhau e batatas, mexendo até os ovos estarem cozinhados.",
+            "Servir quente, decorado com azeitonas."
           ],
-          "imageQuery": "orange avocado salad",
-          "image": "/meals/foto-pingo-doce-salada-de-laranja-e-abacate-b97315a7.webp",
+          "imageQuery": "bacalhau à brás",
+          "image": "/meals/foto-pingo-doce-bacalhau-a-bras-c17d9076.webp",
           "imageCredit": {
             "name": "Imagem gerada por IA",
             "url": ""
@@ -347,46 +360,61 @@
         },
         {
           "slot": 2,
-          "name": "Purê de Batata Vermelha com Brócolos Bimi",
-          "description": "Um acompanhamento cremoso e nutritivo, ideal para qualquer prato principal.",
+          "name": "Arroz de Marisco",
+          "description": "Um prato saboroso e reconfortante, feito com arroz, marisco e temperos, típico da culinária portuguesa.",
           "servings": "4 pessoas",
-          "time": "30 min",
+          "time": "45 min",
           "ingredients": [
             {
-              "item": "Batata Vermelha",
-              "qty": "600 g",
-              "price": 1.19,
+              "item": "arroz",
+              "qty": "300g"
+            },
+            {
+              "item": "dourada-grande",
+              "qty": "400g",
+              "price": 10.99,
               "per": "kg",
-              "amount": 0.6,
+              "amount": 1,
               "note": "folheto (lido por IA)"
             },
             {
-              "item": "Brócolos Bimi",
-              "qty": "200 g",
-              "price": 1.89,
-              "per": "un",
-              "amount": 0.2,
-              "label": "Emb. 200 g",
+              "item": "cebola",
+              "qty": "1",
+              "price": 0.99,
+              "per": "kg",
+              "amount": 1,
               "note": "folheto (lido por IA)"
             },
             {
-              "item": "Azeite",
-              "qty": "2 c. sopa"
+              "item": "pepino",
+              "qty": "1",
+              "price": 1.49,
+              "per": "kg",
+              "amount": 1,
+              "note": "folheto (lido por IA)"
             },
             {
-              "item": "Sal",
+              "item": "azeite",
+              "qty": "50ml"
+            },
+            {
+              "item": "sal",
+              "qty": "a gosto"
+            },
+            {
+              "item": "pimenta",
               "qty": "a gosto"
             }
           ],
           "steps": [
-            "Descasque e corte as batatas em pedaços.",
-            "Coza as batatas em água fervente durante 15 minutos.",
-            "Adicione os brócolos bimi nos últimos 5 minutos de cozedura.",
-            "Escorra e reduza as batatas e os brócolos a purê, adicionando azeite e sal.",
-            "Misture bem e sirva quente."
+            "Numa panela, aquecer o azeite e refogar a cebola picada até ficar dourada.",
+            "Adicionar o arroz e mexer bem, deixando fritar por 2 minutos.",
+            "Juntar a dourada cortada em pedaços e cobrir com água. Temperar com sal e pimenta.",
+            "Cozinhar em lume brando durante 15-20 minutos, até o arroz estar cozido.",
+            "Servir com fatias de pepino fresco ao lado."
           ],
-          "imageQuery": "red potato puree with bimi broccoli",
-          "image": "/meals/foto-pingo-doce-pure-de-batata-vermelha-com-brocolos-bimi-accc6557.webp",
+          "imageQuery": "arroz de marisco",
+          "image": "/meals/foto-pingo-doce-arroz-de-marisco-12cb1c04.webp",
           "imageCredit": {
             "name": "Imagem gerada por IA",
             "url": ""
@@ -502,10 +530,12 @@
         "Salada Fresca de Pera e Brócolos",
         "Purê de Batata Vermelha com Cebola",
         "Salada de Laranja e Abacate",
-        "Purê de Batata Vermelha com Brócolos Bimi"
+        "Purê de Batata Vermelha com Brócolos Bimi",
+        "Bacalhau à Brás",
+        "Arroz de Marisco"
       ],
       "check": {
-        "date": "2026-10-22",
+        "date": "2026-10-23",
         "result": "sem-novo"
       }
     },
@@ -527,14 +557,14 @@
       "recipes": [
         {
           "slot": 1,
-          "name": "Pernil de Porco Assado com Cogumelos",
-          "description": "Um suculento pernil de porco assado, acompanhado por cogumelos salteados, perfeito para um almoço em família.",
+          "name": "Pernil de Porco Estufado",
+          "description": "Um prato tradicional português, o Pernil de Porco Estufado é uma receita rica e saborosa, ideal para um almoço em família.",
           "servings": "4 pessoas",
-          "time": "90 min",
+          "time": "120 min",
           "ingredients": [
             {
               "item": "Pernil de porco",
-              "qty": "1 kg",
+              "qty": "1",
               "price": 2.99,
               "per": "kg",
               "amount": 1,
@@ -542,39 +572,43 @@
             },
             {
               "item": "Cogumelos",
-              "qty": "250 g",
+              "qty": "200",
               "price": 1.29,
               "per": "un",
-              "amount": 0.25,
+              "amount": 1,
               "label": "1,29 €/emb. 300 g",
               "note": "folheto"
             },
             {
-              "item": "Azeite",
-              "qty": "3 c. sopa"
+              "item": "Tomate coração-de-boi",
+              "qty": "300",
+              "price": 2.29,
+              "per": "kg",
+              "amount": 1,
+              "note": "folheto"
+            },
+            {
+              "item": "Cebola",
+              "qty": "1"
             },
             {
               "item": "Alho",
-              "qty": "3 dentes"
+              "qty": "2"
             },
             {
               "item": "Sal",
               "qty": "a gosto"
-            },
-            {
-              "item": "Pimenta",
-              "qty": "a gosto"
             }
           ],
           "steps": [
-            "Pré-aqueça o forno a 180°C.",
-            "Tempere o pernil de porco com sal, pimenta e alho picado. Coloque-o numa assadeira.",
-            "Leve ao forno por 60 minutos, regando ocasionalmente com o próprio molho.",
-            "Enquanto isso, numa frigideira, aqueça o azeite e salteie os cogumelos até ficarem dourados.",
-            "Sirva o pernil fatiado com os cogumelos por cima."
+            "Comece por cortar o pernil de porco em pedaços e tempere com sal, alho picado e cebola cortada em rodelas.",
+            "Numa panela grande, aqueça um pouco de azeite e doure os pedaços de pernil de porco.",
+            "Adicione os cogumelos e o tomate cortado em cubos, mexendo bem.",
+            "Cubra a panela e deixe cozinhar em fogo baixo durante cerca de 1h30, até que a carne esteja bem tenra.",
+            "Sirva quente, acompanhado de arroz ou batatas."
           ],
-          "imageQuery": "roasted pork with mushrooms",
-          "image": "/meals/foto-lidl-pernil-de-porco-assado-com-cogumelos-5dea6561.webp",
+          "imageQuery": "traditional Portuguese food",
+          "image": "/meals/foto-lidl-pernil-de-porco-estufado-1e7f4819.webp",
           "imageCredit": {
             "name": "Imagem gerada por IA",
             "url": ""
@@ -582,57 +616,58 @@
         },
         {
           "slot": 2,
-          "name": "Salada de Frango com Abacate e Tomate",
-          "description": "Uma salada fresca e nutritiva, ideal para dias quentes, combinando peito de frango grelhado, abacate cremoso e tomate suculento.",
+          "name": "Frango Assado com Tomate e Cogumelos",
+          "description": "Um prato simples e delicioso, o Frango Assado com Tomate e Cogumelos é perfeito para um jantar em família.",
           "servings": "4 pessoas",
-          "time": "30 min",
+          "time": "90 min",
           "ingredients": [
             {
               "item": "Peito de frango",
-              "qty": "400 g",
+              "qty": "800",
               "price": 5.79,
               "per": "kg",
-              "amount": 0.4,
+              "amount": 1,
               "note": "folheto c/ Lidl Plus"
             },
             {
-              "item": "Abacate",
-              "qty": "1 un",
-              "price": 3.59,
+              "item": "Cogumelos",
+              "qty": "200",
+              "price": 1.29,
+              "per": "un",
+              "amount": 1,
+              "label": "1,29 €/emb. 300 g",
+              "note": "folheto"
+            },
+            {
+              "item": "Tomate coração-de-boi",
+              "qty": "300",
+              "price": 2.29,
               "per": "kg",
               "amount": 1,
               "note": "folheto"
             },
             {
-              "item": "Tomate coração-de-boi",
-              "qty": "300 g",
-              "price": 2.29,
-              "per": "kg",
-              "amount": 0.3,
-              "note": "folheto"
+              "item": "Cebola",
+              "qty": "1"
             },
             {
-              "item": "Azeite",
-              "qty": "2 c. sopa"
+              "item": "Alho",
+              "qty": "2"
             },
             {
               "item": "Sal",
               "qty": "a gosto"
-            },
-            {
-              "item": "Limão",
-              "qty": "1 un"
             }
           ],
           "steps": [
-            "Grelhe o peito de frango temperado com sal e azeite por cerca de 15 minutos de cada lado.",
-            "Enquanto o frango está a grelhar, corte o abacate e o tomate em cubos.",
-            "Assim que o frango estiver cozido, deixe arrefecer um pouco e corte em tiras.",
-            "Numa tigela grande, misture o abacate, o tomate e o frango. Regue com azeite e sumo de limão.",
-            "Misture bem e sirva fresca."
+            "Pré-aqueça o forno a 180°C.",
+            "Tempere o peito de frango com sal, alho picado e cebola cortada em rodelas.",
+            "Coloque o frango numa assadeira e adicione os cogumelos e o tomate cortado em cubos ao redor.",
+            "Regue com um fio de azeite e leve ao forno por cerca de 60 minutos, ou até que o frango esteja bem cozido e dourado.",
+            "Sirva quente, acompanhado de uma salada fresca."
           ],
-          "imageQuery": "chicken avocado salad",
-          "image": "/meals/foto-lidl-salada-de-frango-com-abacate-e-tomate-7e79638b.webp",
+          "imageQuery": "traditional Portuguese food",
+          "image": "/meals/foto-lidl-frango-assado-com-tomate-e-cogumelos-992cf209.webp",
           "imageCredit": {
             "name": "Imagem gerada por IA",
             "url": ""
@@ -697,10 +732,12 @@
         "Pernil de Porco Estufado com Cogumelos",
         "Salada de Frango com Abacate e Tomate",
         "Pernil de Porco Assado com Cogumelos",
-        "Salada de Frango com Abacate e Tomate"
+        "Salada de Frango com Abacate e Tomate",
+        "Pernil de Porco Estufado",
+        "Frango Assado com Tomate e Cogumelos"
       ],
       "check": {
-        "date": "2026-10-22",
+        "date": "2026-10-23",
         "result": "sem-novo"
       }
     },
@@ -722,57 +759,59 @@
       "recipes": [
         {
           "slot": 1,
-          "name": "Bifanas de Porco com Cogumelos e Tomate",
-          "description": "Uma deliciosa combinação de bifanas suculentas, cogumelos laminados e tomate fresco, perfeita para um jantar em família.",
+          "name": "Bifanas à Alentejana",
+          "description": "Um prato tradicional português que combina bifanas de porco com um saboroso molho de tomate e especiarias, perfeito para um almoço ou jantar reconfortante.",
           "servings": "4 pessoas",
           "time": "45 min",
           "ingredients": [
             {
               "item": "Bifanas da perna de porco",
-              "qty": "500 g",
+              "qty": "800g",
               "price": 4.49,
               "per": "kg",
-              "amount": 0.5,
-              "note": "folheto"
-            },
-            {
-              "item": "Cogumelos laminados",
-              "qty": "200 g",
-              "price": 1.24,
-              "per": "un",
-              "amount": 0.2,
-              "label": "1,24 €/emb. 250 g",
+              "amount": 1,
               "note": "folheto"
             },
             {
               "item": "Tomate alongado",
-              "qty": "300 g",
+              "qty": "400g",
               "price": 1.49,
               "per": "kg",
-              "amount": 0.3,
+              "amount": 1,
               "note": "folheto"
             },
             {
-              "item": "Azeite",
-              "qty": "2 c. sopa"
-            },
-            {
-              "item": "Sal",
-              "qty": "a gosto"
+              "item": "Cogumelos laminados",
+              "qty": "200g",
+              "price": 1.24,
+              "per": "un",
+              "amount": 1,
+              "label": "1,24 €/emb. 250 g",
+              "note": "folheto"
             },
             {
               "item": "Alho",
               "qty": "2 dentes"
+            },
+            {
+              "item": "Azeite",
+              "qty": "50ml"
+            },
+            {
+              "item": "Sal",
+              "qty": "a gosto"
             }
           ],
           "steps": [
-            "1. Numa frigideira, aqueça o azeite e adicione os dentes de alho picados. Deixe dourar por 1-2 minutos.",
-            "2. Adicione as bifanas e cozinhe por cerca de 5 minutos de cada lado, até estarem bem douradas.",
-            "3. Junte os cogumelos laminados e o tomate cortado em cubos. Tempere com sal e cozinhe por mais 10 minutos.",
-            "4. Sirva quente, acompanhado de arroz ou batatas."
+            "Comece por temperar as bifanas com sal e alho picado.",
+            "Aqueça o azeite numa frigideira grande e frite as bifanas até ficarem douradas.",
+            "Retire as bifanas e reserve.",
+            "Na mesma frigideira, adicione os cogumelos laminados e o tomate cortado em cubos, e cozinhe até que os legumes estejam macios.",
+            "Junte as bifanas novamente à frigideira, misture bem e deixe cozinhar em fogo baixo por cerca de 10 minutos.",
+            "Sirva quente, acompanhado de arroz ou pão."
           ],
-          "imageQuery": "pork steaks with mushrooms and tomatoes",
-          "image": "/meals/foto-aldi-bifanas-de-porco-com-cogumelos-e-tomate-5c4b7755.webp",
+          "imageQuery": "bifanas alentejana",
+          "image": "/meals/foto-aldi-bifanas-a-alentejana-831ac0a2.webp",
           "imageCredit": {
             "name": "Imagem gerada por IA",
             "url": ""
@@ -780,56 +819,57 @@
         },
         {
           "slot": 2,
-          "name": "Salteado de Curgete com Maçã e Bifanas",
-          "description": "Um prato leve e saboroso, onde a curgete e a maçã se juntam às bifanas para uma explosão de sabores.",
+          "name": "Arroz de Tomate e Cogumelos",
+          "description": "Um prato simples e saboroso, ideal para acompanhar bifanas ou ser servido como prato principal vegetariano.",
           "servings": "4 pessoas",
           "time": "30 min",
           "ingredients": [
             {
-              "item": "Bifanas da perna de porco",
-              "qty": "400 g",
-              "price": 4.49,
-              "per": "kg",
-              "amount": 0.4,
-              "note": "folheto"
+              "item": "Arroz",
+              "qty": "300g"
             },
             {
-              "item": "Curgete",
-              "qty": "300 g",
-              "price": 0.99,
-              "per": "kg",
-              "amount": 0.3,
-              "note": "folheto"
-            },
-            {
-              "item": "Maçã Golden",
-              "qty": "2 unidades",
+              "item": "Tomate alongado",
+              "qty": "500g",
               "price": 1.49,
               "per": "kg",
-              "amount": 0.4,
+              "amount": 1,
               "note": "folheto"
             },
             {
-              "item": "Azeite",
-              "qty": "2 c. sopa"
-            },
-            {
-              "item": "Sal",
-              "qty": "a gosto"
+              "item": "Cogumelos laminados",
+              "qty": "200g",
+              "price": 1.24,
+              "per": "un",
+              "amount": 1,
+              "label": "1,24 €/emb. 250 g",
+              "note": "folheto"
             },
             {
               "item": "Cebola",
               "qty": "1 unidade"
+            },
+            {
+              "item": "Alho",
+              "qty": "2 dentes"
+            },
+            {
+              "item": "Azeite",
+              "qty": "50ml"
             }
           ],
           "steps": [
-            "1. Corte as bifanas em tiras e tempere com sal. Numa frigideira, aqueça o azeite e adicione a cebola picada.",
-            "2. Quando a cebola estiver translúcida, adicione as bifanas e cozinhe até dourar.",
-            "3. Junte a curgete cortada em rodelas e a maçã em cubos. Cozinhe por mais 5-7 minutos.",
-            "4. Sirva quente, idealmente com uma salada fresca."
+            "Comece por picar a cebola e o alho.",
+            "Aqueça o azeite numa panela e refogue a cebola e o alho até ficarem dourados.",
+            "Adicione o tomate cortado em cubos e cozinhe até que comece a desmanchar.",
+            "Junte os cogumelos laminados e cozinhe por mais alguns minutos.",
+            "Adicione o arroz e misture bem, deixando fritar por 1-2 minutos.",
+            "Adicione água (cerca de 600ml) e tempere com sal a gosto.",
+            "Deixe cozinhar em fogo médio até que o arroz esteja macio e a água tenha evaporado.",
+            "Sirva quente, como acompanhamento ou prato principal."
           ],
-          "imageQuery": "zucchini stir fry with pork and apple",
-          "image": "/meals/foto-aldi-salteado-de-curgete-com-maca-e-bifanas-539e4fd8.webp",
+          "imageQuery": "arroz tomate cogumelos",
+          "image": "/meals/foto-aldi-arroz-de-tomate-e-cogumelos-ee071cb7.webp",
           "imageCredit": {
             "name": "Imagem gerada por IA",
             "url": ""
@@ -887,10 +927,12 @@
         "Bifanas de Porco com Cogumelos e Tomate",
         "Salteado de Curgete com Bifanas e Maçã",
         "Bifanas de Porco com Cogumelos e Tomate",
-        "Salteado de Curgete com Maçã e Bifanas"
+        "Salteado de Curgete com Maçã e Bifanas",
+        "Bifanas à Alentejana",
+        "Arroz de Tomate e Cogumelos"
       ],
       "check": {
-        "date": "2026-10-22",
+        "date": "2026-10-23",
         "result": "sem-novo"
       }
     },
@@ -962,7 +1004,7 @@
             "Aquece o óleo a 180 °C e frita o carapau 3 minutos de cada lado até ficar dourado. Serve com as batatas."
           ],
           "imageQuery": "fried fish boiled potatoes",
-          "image": "/meals/foto-intermarche-carapau-frito-com-batatas-cozidas-359d22f6.webp",
+          "image": "/meals/foto-intermarche-carapau-frito-com-batatas-cozidas-7d31db3f.webp",
           "imageCredit": {
             "name": "Imagem gerada por IA",
             "url": ""
@@ -1015,7 +1057,7 @@
             "Serve as batatas com o resto da manteiga e o salmão por cima."
           ],
           "imageQuery": "salmon potatoes butter",
-          "image": "/meals/foto-intermarche-posta-de-salmao-com-batatas-e-manteiga-b0bd595a.webp",
+          "image": "/meals/foto-intermarche-posta-de-salmao-com-batatas-e-manteiga-3650b1b6.webp",
           "imageCredit": {
             "name": "Imagem gerada por IA",
             "url": ""
