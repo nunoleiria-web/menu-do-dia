@@ -88,6 +88,7 @@ async function findFlyer(m) {
   const future = m.to < today ? cands.filter((c) => c.from > today) : [];
   const pool = (inForce.length ? inForce : future).sort((a, b) => rank(a.s) - rank(b.s) || (a.from < b.from ? 1 : -1));
   console.log("  candidatos " + m.name + ":", pool.map((c) => c.s).join(" | ") || "nenhum");
+  m.__dbg = "candidatos: " + (pool.map((c) => c.s).join(" | ") || "nenhum (de " + links.length + " links, " + cands.length + " alimentares)");
   if (!pool.length || pool[0].from <= m.from) return null;
   const pickFrom = pool[0].from;
   let promos = [], sources = [], pick = null, lastErr = null;
@@ -101,7 +102,7 @@ async function findFlyer(m) {
       if (promos.length >= 25) break;
     } catch (e) { lastErr = e; console.warn("  " + c.s + " ignorado:", e.message.slice(0, 120)); }
   }
-  if (!pick) throw lastErr ?? new Error("nenhum folheto legível");
+  if (!pick) throw new Error((m.__dbg ?? "") + " | " + (lastErr?.message ?? "nenhum folheto legível"));
   const dm = (d) => d.slice(8) + "/" + d.slice(5, 7);
   return { found: true, from: pick.from, to: pick.to, flyer: "Folheto " + dm(pick.from) + "–" + dm(pick.to), sources, promos };
 }
@@ -173,7 +174,7 @@ async function makeRecipes(m) {
   const fmt = (p) => p.id + ": " + p.name + " " + p.price + "€/" + p.per;
   const hist = (m.history || []).join(", ") || "nenhuma";
   const byId = Object.fromEntries(m.promos.map((p) => [p.id, p]));
-  let feedback = "";
+  let feedback = "", lastReject = "";
   for (let attempt = 0; attempt < 3; attempt++) {
     const j = await ask(
       `És um chef português com estrela, autor de livros de cozinha tradicional. Cria 2 receitas para clientes do ${m.name}.\n\n` +
@@ -222,11 +223,11 @@ async function makeRecipes(m) {
       if (out[0].name === out[1].name) throw new Error("receitas repetidas");
       return out;
     } catch (e) {
-      feedback = e.message;
+      feedback = e.message; lastReject = e.message;
       console.warn("  receitas rejeitadas (tentativa " + (attempt + 1) + "): " + e.message);
     }
   }
-  return null;
+  throw new Error("receitas rejeitadas 3x: " + lastReject);
 }
 
 const CF = process.env.CLOUDFLARE_API_TOKEN && process.env.CLOUDFLARE_ACCOUNT_ID ? { token: process.env.CLOUDFLARE_API_TOKEN, id: process.env.CLOUDFLARE_ACCOUNT_ID } : null;
@@ -283,6 +284,7 @@ for (let i = 0; i < data.markets.length && !PHOTOS_ONLY; i++) {
   tried++;
   try {
     const f = await findFlyer(n);
+    if (!f && n.__dbg) console.log("  " + n.__dbg);
     if (f) {
       Object.assign(n, { from: f.from, to: f.to, flyer: f.flyer, sources: f.sources, promos: f.promos, check: { date: today, result: "novo" } });
       console.log(n.name, "-> folheto novo", f.from, f.to);
@@ -294,6 +296,7 @@ for (let i = 0; i < data.markets.length && !PHOTOS_ONLY; i++) {
       data.markets[i] = n;
       continue;
     }
+    delete n.__dbg;
     const recipes = await makeRecipes(n);
     if (!recipes) throw new Error("não foi possível criar receitas válidas");
     n.recipes = recipes;
@@ -303,7 +306,8 @@ for (let i = 0; i < data.markets.length && !PHOTOS_ONLY; i++) {
     failed++;
     console.warn(n.name, "-> mantido sem alterações:", e.message);
     const prev = data.markets[i];
-    prev.check = { date: today, result: prev.to >= today ? "sem-novo" : "sem-folheto" };
+    delete prev.__dbg;
+    prev.check = { date: today, result: prev.to >= today ? "sem-novo" : "sem-folheto", note: String(e.message).slice(0, 300) };
   }
 }
 
