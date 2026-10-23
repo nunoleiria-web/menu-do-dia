@@ -1,0 +1,41 @@
+name: Publicar no GitHub Pages
+# Publica o site estático (grátis e sem "adormecer"). Corre quando há alterações no código
+# e depois de cada atualização diária. Só funciona depois de ativares:
+# Settings → Pages → Build and deployment → Source: GitHub Actions.
+on:
+  push:
+    branches: [main]
+    paths: [index.html, public/**, api/data/**, .github/workflows/pages.yml]
+  workflow_run:
+    workflows: ["Atualizar menu"]
+    types: [completed]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: true
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    continue-on-error: true      # sem Pages ativado, não marca a execução como falhada
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: main }
+      - name: Montar o site
+        run: |
+          mkdir -p _site/api/data
+          cp index.html _site/
+          cp -r public/. _site/
+          cp api/data/menu.json _site/api/data/
+          touch _site/.nojekyll
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with: { path: _site }
+      - id: deployment
+        uses: actions/deploy-pages@v4

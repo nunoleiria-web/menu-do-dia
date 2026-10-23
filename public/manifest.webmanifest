@@ -1,0 +1,16 @@
+{
+  "name": "Menu do Dia",
+  "short_name": "Menu do Dia",
+  "description": "Almoço e jantar ao preço do folheto: receitas, comparador de lojas e lista de compras.",
+  "lang": "pt-PT",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#FAFAF7",
+  "theme_color": "#2340C8",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

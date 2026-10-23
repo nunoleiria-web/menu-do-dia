@@ -1,0 +1,4804 @@
+[
+ {
+  "id": "bacalhau-bras",
+  "name": "Bacalhau à Brás",
+  "orig": "Bacalhau à Brás",
+  "c": "Portuguesa",
+  "t": "40 min",
+  "d": "Média",
+  "veg": false,
+  "al": [
+   "peixe",
+   "ovos"
+  ],
+  "est": 4.2,
+  "desc": "O clássico lisboeta: bacalhau desfiado, batata palha dourada e ovos cremosos, servido com azeitonas e salsa.",
+  "main": [
+   {
+    "re": "bacalhau",
+    "item": "Bacalhau demolhado e desfiado",
+    "qty": "600 g",
+    "kg": 0.6,
+    "u": 1
+   }
+  ],
+  "ing": [
+   [
+    "Batata palha",
+    "200 g"
+   ],
+   [
+    "Ovos",
+    "6"
+   ],
+   [
+    "Cebola",
+    "2 grandes"
+   ],
+   [
+    "Alho",
+    "3 dentes"
+   ],
+   [
+    "Azeite",
+    "5 c. sopa"
+   ],
+   [
+    "Salsa picada",
+    "2 c. sopa"
+   ],
+   [
+    "Azeitonas pretas",
+    "12"
+   ],
+   [
+    "Pimenta",
+    "a gosto"
+   ],
+   [
+    "Salada de alface e tomate (acompanhamento)",
+    "1 prato"
+   ]
+  ],
+  "steps": [
+   "Demolhe o bacalhau com antecedência (48 h, mudando a água) e desfie-o em lascas, retirando peles e espinhas.",
+   "Corte a cebola em tiras finas e o alho em lâminas.",
+   "Numa frigideira larga, aqueça o azeite em lume médio e refogue a cebola e o alho 8 a 10 min, até ficarem macios e translúcidos, sem escurecer.",
+   "Junte o bacalhau e mexa 5 min para aquecer e libertar sabor.",
+   "Bata os ovos com pimenta, junte à frigideira e mexa em lume brando 2 a 3 min, só até ficarem cremosos (devem ficar húmidos, não secos).",
+   "Retire do lume, envolva a batata palha e rectifique o sal só no fim (o bacalhau já salga).",
+   "Sirva polvilhado com salsa e azeitonas, com uma salada de alface e tomate ao lado."
+  ],
+  "tip": "Junte a batata palha mesmo no fim para se manter estaladiça."
+ },
+ {
+  "id": "bacalhau-natas",
+  "name": "Bacalhau com Natas",
+  "orig": "Bacalhau com Natas",
+  "c": "Portuguesa",
+  "t": "1h",
+  "d": "Fácil",
+  "veg": false,
+  "al": [
+   "peixe",
+   "lactose",
+   "gluten"
+  ],
+  "est": 5.0,
+  "desc": "Lascas de bacalhau e batata em molho cremoso de natas, gratinado no forno até ficar dourado.",
+  "main": [
+   {
+    "re": "bacalhau",
+    "item": "Bacalhau demolhado em lascas",
+    "qty": "600 g",
+    "kg": 0.6,
+    "u": 1
+   }
+  ],
+  "ing": [
+   [
+    "Batata",
+    "800 g"
+   ],
+   [
+    "Natas",
+    "400 ml"
+   ],
+   [
+    "Leite",
+    "300 ml"
+   ],
+   [
+    "Farinha",
+    "3 c. sopa"
+   ],
+   [
+    "Manteiga",
+    "40 g"
+   ],
+   [
+    "Cebola",
+    "2"
+   ],
+   [
+    "Alho",
+    "2 dentes"
+   ],
+   [
+    "Noz-moscada",
+    "1 pitada"
+   ],
+   [
+    "Azeite",
+    "4 c. sopa"
+   ],
+   [
+    "Salada verde (acompanhamento)",
+    "1 prato"
+   ]
+  ],
+  "steps": [
+   "Pré-aqueça o forno a 200 ºC. Corte a batata em cubos pequenos e frite-a em azeite até ficar dourada por fora; escorra em papel absorvente.",
+   "Refogue a cebola e o alho em azeite 8 min até ficarem translúcidos.",
+   "Faça o molho: derreta a manteiga, junte a farinha, mexa 1 min, adicione o leite e as natas aos poucos, mexendo, e cozinhe 6 a 8 min até espessar. Tempere com noz-moscada e pimenta.",
+   "Misture o bacalhau em lascas, a batata e a cebola e envolva no molho.",
+   "Transfira para uma travessa e leve ao forno 20 a 25 min até gratinar.",
+   "Deixe repousar 5 min e sirva com salada verde."
+  ],
+  "tip": "Se o molho ficar espesso demais, aligeire com um pouco de leite."
+ },
+ {
+  "id": "bacalhau-gomes-sa",
+  "name": "Bacalhau à Gomes de Sá",
+  "orig": "Bacalhau à Gomes de Sá",
+  "c": "Portuguesa",
+  "t": "1h 15min",
+  "d": "Média",
+  "veg": false,
+  "al": [
+   "peixe",
+   "ovos"
+  ],
+  "est": 3.8,
+  "desc": "Bacalhau cozido em lascas, camadas de batata em rodelas e cebola, finalizado no forno com ovo cozido e azeitonas.",
+  "main": [
+   {
+    "re": "bacalhau",
+    "item": "Bacalhau demolhado",
+    "qty": "600 g",
+    "kg": 0.6,
+    "u": 1
+   }
+  ],
+  "ing": [
+   [
+    "Batata",
+    "800 g"
+   ],
+   [
+    "Cebola",
+    "3"
+   ],
+   [
+    "Alho",
+    "3 dentes"
+   ],
+   [
+    "Ovos cozidos",
+    "4"
+   ],
+   [
+    "Azeitonas pretas",
+    "16"
+   ],
+   [
+    "Azeite",
+    "8 c. sopa"
+   ],
+   [
+    "Louro",
+    "1 folha"
+   ],
+   [
+    "Salsa",
+    "1 molho"
+   ],
+   [
+    "Leite (para escaldar)",
+    "500 ml"
+   ]
+  ],
+  "steps": [
+   "Cozinhe o bacalhau em lume brando 10 min em leite com água; escorra, retire pele e espinhas e lasque.",
+   "Cozinhe a batata com casca 20 min; descasque e corte em rodelas.",
+   "Refogue a cebola em meias-luas e o alho no azeite com o louro 15 min, em lume brando.",
+   "Pré-aqueça o forno a 200 ºC. Numa travessa, alterne camadas de batata, bacalhau e cebola refogada.",
+   "Regue com azeite e leve ao forno 15 min.",
+   "Decore com ovo cozido em quartos, azeitonas e salsa picada."
+  ],
+  "tip": "Deixe a cebola cozinhar devagar: é ela que dá doçura ao prato."
+ },
+ {
+  "id": "arroz-marisco",
+  "name": "Arroz de Marisco",
+  "orig": "Arroz de Marisco",
+  "c": "Portuguesa",
+  "t": "50 min",
+  "d": "Média",
+  "veg": false,
+  "al": [
+   "marisco"
+  ],
+  "est": 4.5,
+  "desc": "Arroz malandrinho com camarão e mexilhão, num caldo de tomate e coentros.",
+  "main": [
+   {
+    "re": "camarao|gamba|marisco|mexilh|ameijoa",
+    "item": "Marisco (camarão/mexilhão)",
+    "qty": "800 g",
+    "kg": 0.8,
+    "u": 1
+   }
+  ],
+  "ing": [
+   [
+    "Arroz carolino",
+    "300 g"
+   ],
+   [
+    "Cebola",
+    "1"
+   ],
+   [
+    "Alho",
+    "3 dentes"
+   ],
+   [
+    "Tomate maduro",
+    "3"
+   ],
+   [
+    "Polpa de tomate",
+    "2 c. sopa"
+   ],
+   [
+    "Vinho branco",
+    "1 copo"
+   ],
+   [
+    "Coentros",
+    "1 molho"
+   ],
+   [
+    "Louro",
+    "1 folha"
+   ],
+   [
+    "Azeite",
+    "4 c. sopa"
+   ],
+   [
+    "Piri-piri",
+    "a gosto"
+   ],
+   [
+    "Caldo de peixe",
+    "1,2 l"
+   ]
+  ],
+  "steps": [
+   "Lave o marisco. Aqueça o caldo de peixe com o louro.",
+   "Refogue cebola e alho no azeite 8 min; junte o tomate sem pele e a polpa e cozinhe 10 min.",
+   "Adicione o vinho branco e deixe evaporar 2 min.",
+   "Junte o arroz, mexa 1 min e adicione o caldo quente, cerca de 3 vezes o volume do arroz.",
+   "Cozinhe 10 min em lume médio; junte o marisco e cozinhe mais 6 a 8 min até o arroz ficar cremoso.",
+   "Retire do lume, junte coentros picados e deixe repousar 3 min antes de servir."
+  ],
+  "tip": "Junte o marisco só na segunda metade da cozedura para não ficar duro."
+ },
+ {
+  "id": "polvo-lagareiro",
+  "name": "Polvo à Lagareiro",
+  "orig": "Polvo à Lagareiro",
+  "c": "Portuguesa",
+  "t": "1h 30min",
+  "d": "Média",
+  "veg": false,
+  "al": [
+   "marisco"
+  ],
+  "est": 5.0,
+  "desc": "Polvo macio assado com batatas a murro, alho e muito azeite.",
+  "main": [
+   {
+    "re": "polvo",
+    "item": "Polvo",
+    "qty": "1,2 kg",
+    "kg": 1.2,
+    "u": 1
+   }
+  ],
+  "ing": [
+   [
+    "Batata pequena",
+    "1 kg"
+   ],
+   [
+    "Alho",
+    "8 dentes"
+   ],
+   [
+    "Azeite",
+    "200 ml"
+   ],
+   [
+    "Louro",
+    "2 folhas"
+   ],
+   [
+    "Salsa ou coentros",
+    "1 molho"
+   ],
+   [
+    "Cebola",
+    "1"
+   ],
+   [
+    "Sal grosso",
+    "a gosto"
+   ],
+   [
+    "Pimenta",
+    "a gosto"
+   ]
+  ],
+  "steps": [
+   "Se estiver congelado, descongele. Cozinhe o polvo em panela de pressão com a cebola e o louro, sem água, 30 a 40 min.",
+   "Cozinhe as batatas com casca em água e sal 20 min e dê-lhes um murro suave para abrir.",
+   "Pré-aqueça o forno a 220 ºC. Disponha polvo e batatas num tabuleiro com sal grosso e pimenta.",
+   "Junte os dentes de alho esmagados e cubra generosamente com azeite.",
+   "Asse 25 a 30 min, regando uma vez, até o polvo ficar dourado nas pontas.",
+   "Sirva com salsa picada e um fio de azeite do tabuleiro."
+  ],
+  "tip": "Não junte sal ao polvo na cozedura: já tem o sal do mar."
+ },
+ {
+  "id": "lulas-guisadas",
+  "name": "Lulas Guisadas com Batata",
+  "orig": "Lulas Guisadas",
+  "c": "Portuguesa",
+  "t": "50 min",
+  "d": "Fácil",
+  "veg": false,
+  "al": [
+   "marisco"
+  ],
+  "est": 3.5,
+  "desc": "Lulas tenras guisadas lentamente com tomate, pimento e batata, servidas com arroz branco.",
+  "main": [
+   {
+    "re": "lula|choco|sepia",
+    "item": "Lulas limpas",
+    "qty": "800 g",
+    "kg": 0.8,
+    "u": 1
+   }
+  ],
+  "ing": [
+   [
+    "Batata",
+    "600 g"
+   ],
+   [
+    "Arroz branco",
+    "250 g"
+   ],
+   [
+    "Cebola",
+    "2"
+   ],
+   [
+    "Alho",
+    "3 dentes"
+   ],
+   [
+    "Tomate maduro",
+    "3"
+   ],
+   [
+    "Pimento verde",
+    "1"
+   ],
+   [
+    "Vinho branco",
+    "1 copo"
+   ],
+   [
+    "Louro",
+    "1 folha"
+   ],
+   [
+    "Azeite",
+    "4 c. sopa"
+   ],
+   [
+    "Coentros",
+    "1 molho"
+   ]
+  ],
+  "steps": [
+   "Corte as lulas em anéis ou tiras de 2 cm.",
+   "Refogue cebola, alho e pimento em tiras no azeite 8 min com o louro.",
+   "Junte o tomate picado e cozinhe 8 min.",
+   "Adicione as lulas, o vinho branco e meio copo de água. Tape e cozinhe em lume brando 25 min.",
+   "Junte a batata em cubos e cozinhe mais 15 a 20 min, até estar macia.",
+   "Cozinhe o arroz branco à parte (18 min) e sirva as lulas com coentros picados."
+  ],
+  "tip": "Não mexa demasiado: as lulas devem ficar com o corte intacto."
+ },
+ {
+  "id": "sardinha-assada",
+  "name": "Sardinhas Assadas com Salada de Pimentos",
+  "orig": "Sardinhas Assadas",
+  "c": "Portuguesa",
+  "t": "35 min",
+  "d": "Fácil",
+  "veg": false,
+  "al": [
+   "peixe"
+  ],
+  "est": 3.0,
+  "desc": "Sardinhas na grelha com batata cozida e salada de pimentos assados, como numa noite de santos populares.",
+  "main": [
+   {
+    "re": "sardinha",
+    "item": "Sardinhas frescas",
+    "qty": "1,2 kg",
+    "kg": 1.2,
+    "u": 1
+   }
+  ],
+  "ing": [
+   [
+    "Pimentos vermelhos",
+    "3"
+   ],
+   [
+    "Batata",
+    "800 g"
+   ],
+   [
+    "Cebola",
+    "1"
+   ],
+   [
+    "Alho",
+    "2 dentes"
+   ],
+   [
+    "Azeite",
+    "5 c. sopa"
+   ],
+   [
+    "Vinagre",
+    "1 c. sopa"
+   ],
+   [
+    "Sal grosso",
+    "a gosto"
+   ],
+   [
+    "Pão",
+    "4 fatias"
+   ]
+  ],
+  "steps": [
+   "Asse os pimentos no forno a 220 ºC 25 min até a pele queimar; feche num saco 10 min, descasque e corte em tiras.",
+   "Tempere os pimentos com cebola em meias-luas, alho, azeite, vinagre e sal.",
+   "Cozinhe a batata com casca 20 min.",
+   "Salgue as sardinhas com sal grosso 15 min antes de grelhar.",
+   "Grelhe em lume forte 4 a 5 min de cada lado.",
+   "Sirva sobre pão (que absorve o sumo) com a salada de pimentos e a batata."
+  ],
+  "tip": "Escolha sardinhas com olhos brilhantes e barriga firme."
+ },
+ {
+  "id": "carapau-alimado",
+  "name": "Carapaus Alimados com Salada de Feijão-frade",
+  "orig": "Carapaus Alimados",
+  "c": "Portuguesa",
+  "t": "40 min",
+  "d": "Fácil",
+  "veg": false,
+  "al": [
+   "peixe"
+  ],
+  "est": 3.2,
+  "desc": "Carapaus temperados com alho e vinagre, fritos e servidos com salada de feijão-frade.",
+  "main": [
+   {
+    "re": "carapau",
+    "item": "Carapaus",
+    "qty": "1 kg",
+    "kg": 1,
+    "u": 1
+   }
+  ],
+  "ing": [
+   [
+    "Feijão-frade cozido",
+    "400 g"
+   ],
+   [
+    "Cebola",
+    "1"
+   ],
+   [
+    "Alho",
+    "3 dentes"
+   ],
+   [
+    "Vinagre",
+    "3 c. sopa"
+   ],
+   [
+    "Azeite",
+    "6 c. sopa"
+   ],
+   [
+    "Coentros",
+    "1 molho"
+   ],
+   [
+    "Farinha de milho",
+    "4 c. sopa"
+   ],
+   [
+    "Óleo para fritar",
+    "300 ml"
+   ],
+   [
+    "Salada de tomate",
+    "1 prato"
+   ]
+  ],
+  "steps": [
+   "Limpe os carapaus e tempere com sal, alho esmagado e vinagre 20 min.",
+   "Prepare a salada: misture feijão-frade, cebola picada, coentros, azeite, vinagre e sal.",
+   "Passe os carapaus por farinha de milho.",
+   "Frite em óleo bem quente 3 a 4 min por lado até ficarem dourados.",
+   "Escorra em papel absorvente e sirva com a salada de feijão-frade e tomate."
+  ],
+  "tip": "Deixe a salada repousar 15 min para o feijão absorver o tempero."
+ },
+ {
+  "id": "caldeirada",
+  "name": "Caldeirada de Peixe",
+  "orig": "Caldeirada",
+  "c": "Portuguesa",
+  "t": "55 min",
+  "d": "Média",
+  "veg": false,
+  "al": [
+   "peixe",
+   "marisco"
+  ],
+  "est": 4.0,
+  "desc": "Peixe em camadas com batata, tomate e pimento, cozinhado lentamente num caldo aromático.",
+  "main": [
+   {
+    "re": "pescada|tamboril|cherne|dourada|robalo|peixe|cavala|tintureira|espadarte",
+    "item": "Peixe fresco em postas",
+    "qty": "1 kg",
+    "kg": 1,
+    "u": 1
+   }
+  ],
+  "ing": [
+   [
+    "Batata",
+    "800 g"
+   ],
+   [
+    "Cebola",
+    "2"
+   ],
+   [
+    "Tomate maduro",
+    "4"
+   ],
+   [
+    "Pimento verde",
+    "1"
+   ],
+   [
+    "Alho",
+    "3 dentes"
+   ],
+   [
+    "Louro",
+    "2 folhas"
+   ],
+   [
+    "Vinho branco",
+    "1 copo"
+   ],
+   [
+    "Azeite",
+    "5 c. sopa"
+   ],
+   [
+    "Coentros",
+    "1 molho"
+   ],
+   [
+    "Pão torrado",
+    "4 fatias"
+   ]
+  ],
+  "steps": [
+   "Numa panela larga, forre o fundo com cebola, tomate e pimento em rodelas e alho laminado.",
+   "Cubra com a batata em rodelas finas e depois o peixe em postas.",
+   "Junte louro, azeite, vinho branco, sal e um copo de água.",
+   "Tape e cozinhe em lume brando 30 a 35 min, sem mexer (só abane a panela).",
+   "Sirva sobre pão torrado e polvilhe com coentros."
+  ],
+  "tip": "Nunca mexa com colher: abane a panela para não desfazer o peixe."
+ },
+ {
+  "id": "dourada-forno",
+  "name": "Dourada no Forno com Batatas e Legumes",
+  "orig": "Dourada ao Forno",
+  "c": "Portuguesa",
+  "t": "45 min",
+  "d": "Fácil",
+  "veg": false,
+  "al": [
+   "peixe"
+  ],
+  "est": 3.5,
+  "desc": "Dourada inteira assada com batata, cebola e limão, simples e perfumada.",
+  "main": [
+   {
+    "re": "dourada|robalo",
+    "item": "Dourada inteira",
+    "qty": "1,2 kg",
+    "kg": 1.2,
+    "u": 1
+   }
+  ],
+  "ing": [
+   [
+    "Batata",
+    "800 g"
+   ],
+   [
+    "Cebola",
+    "2"
+   ],
+   [
+    "Alho",
+    "3 dentes"
+   ],
+   [
+    "Limão",
+    "1"
+   ],
+   [
+    "Azeite",
+    "6 c. sopa"
+   ],
+   [
+    "Louro",
+    "2 folhas"
+   ],
+   [
+    "Vinho branco",
+    "1/2 copo"
+   ],
+   [
+    "Salsa",
+    "1 molho"
+   ],
+   [
+    "Sal e pimenta",
+    "a gosto"
+   ]
+  ],
+  "steps": [
+   "Pré-aqueça o forno a 200 ºC.",
+   "Corte batata e cebola em rodelas finas e disponha-as num tabuleiro com azeite, sal e louro.",
+   "Asse 15 min para a batata começar a cozer.",
+   "Tempere o peixe com sal, limão e alho e coloque por cima dos legumes; regue com vinho e azeite.",
+   "Asse 25 a 30 min, regando uma vez, até a carne se desprender da espinha.",
+   "Sirva com salsa picada e gomos de limão."
+  ],
+  "tip": "Corte a batata fina e uniforme para ficar cozida ao mesmo tempo que o peixe."
+ },
+ {
+  "id": "frango-churrasco",
+  "name": "Frango no Churrasco com Batata Frita e Salada",
+  "orig": "Frango Assado",
+  "c": "Portuguesa",
+  "t": "1h",
+  "d": "Fácil",
+  "veg": false,
+  "al": [],
+  "est": 3.5,
+  "desc": "Frango temperado com piri-piri, alho e limão, assado até ficar com a pele estaladiça.",
+  "main": [
+   {
+    "re": "frango|coxa|perna-de-frango",
+    "item": "Frango",
+    "qty": "1,6 kg",
+    "kg": 1.6,
+    "u": 1,
+    "not": "peru|pato|porco|vaca|novilho|borrego|cordeiro|peixe"
+   }
+  ],
+  "ing": [
+   [
+    "Batata",
+    "800 g"
+   ],
+   [
+    "Óleo para fritar",
+    "400 ml"
+   ],
+   [
+    "Alho",
+    "4 dentes"
+   ],
+   [
+    "Piri-piri",
+    "2 c. sopa"
+   ],
+   [
+    "Limão",
+    "1"
+   ],
+   [
+    "Azeite",
+    "4 c. sopa"
+   ],
+   [
+    "Paprika",
+    "1 c. sopa"
+   ],
+   [
+    "Alface",
+    "1"
+   ],
+   [
+    "Tomate",
+    "2"
+   ]
+  ],
+  "steps": [
+   "Abra o frango ao meio (espalmado) e tempere com alho, piri-piri, paprika, sal, limão e azeite durante 2 horas, no frigorífico.",
+   "Pré-aqueça o forno a 220 ºC.",
+   "Asse o frango 45 a 50 min, virando a meio e regando com o molho.",
+   "Corte a batata em palitos grossos e frite em óleo quente até ficar dourada.",
+   "Prepare a salada de alface e tomate com azeite e sal.",
+   "Deixe o frango repousar 5 min e sirva com a batata frita e a salada."
+  ],
+  "tip": "Deixe o frango fora do frigorífico 30 min antes de assar para cozinhar de forma uniforme."
+ },
+ {
+  "id": "arroz-pato",
+  "name": "Arroz de Pato",
+  "orig": "Arroz de Pato",
+  "c": "Portuguesa",
+  "t": "1h 15min",
+  "d": "Média",
+  "veg": false,
+  "al": [],
+  "est": 4.5,
+  "desc": "Arroz cozido no caldo do pato, com carne desfiada e chouriço, gratinado no forno.",
+  "main": [
+   {
+    "re": "pato",
+    "item": "Pato",
+    "qty": "1,5 kg",
+    "kg": 1.5,
+    "u": 1
+   }
+  ],
+  "ing": [
+   [
+    "Arroz agulha",
+    "300 g"
+   ],
+   [
+    "Chouriço de carne",
+    "150 g"
+   ],
+   [
+    "Cebola",
+    "2"
+   ],
+   [
+    "Alho",
+    "3 dentes"
+   ],
+   [
+    "Louro",
+    "2 folhas"
+   ],
+   [
+    "Vinho branco",
+    "1 copo"
+   ],
+   [
+    "Azeite",
+    "4 c. sopa"
+   ],
+   [
+    "Laranja (casca e gomos)",
+    "1"
+   ]
+  ],
+  "steps": [
+   "Cozinhe o pato em água com cebola, louro e sal 45 min; escorra, retire a carne e desfie, guardando o caldo.",
+   "Refogue cebola, alho e metade do chouriço em azeite 10 min; junte o vinho branco.",
+   "Adicione o arroz e 3 medidas do caldo quente.",
+   "Cozinhe 12 min e junte a carne desfiada.",
+   "Transfira para uma travessa, cubra com o restante chouriço em rodelas e leve ao forno a 220 ºC 10 min.",
+   "Sirva com gomos de laranja."
+  ],
+  "tip": "Guarde o caldo do pato: é o segredo do sabor do arroz."
+ },
+ {
+  "id": "bifanas",
+  "name": "Bifanas no Pão com Batata Frita",
+  "orig": "Bifanas",
+  "c": "Portuguesa",
+  "t": "35 min",
+  "d": "Fácil",
+  "veg": false,
+  "al": [
+   "gluten"
+  ],
+  "est": 3.2,
+  "desc": "Fatias finas de porco marinadas em alho e vinho, estufadas em molho de pimentão e servidas no pão.",
+  "main": [
+   {
+    "re": "bifana|porco|lombo|febra",
+    "item": "Bifanas de porco",
+    "qty": "700 g",
+    "kg": 0.7,
+    "u": 1,
+    "not": "frango|peru|pato|vaca|novilho|borrego|cordeiro|peixe|bacalhau"
+   }
+  ],
+  "ing": [
+   [
+    "Pão de trigo",
+    "4"
+   ],
+   [
+    "Vinho branco",
+    "1 copo"
+   ],
+   [
+    "Alho",
+    "4 dentes"
+   ],
+   [
+    "Colorau",
+    "1 c. sopa"
+   ],
+   [
+    "Louro",
+    "1 folha"
+   ],
+   [
+    "Azeite",
+    "3 c. sopa"
+   ],
+   [
+    "Batata",
+    "600 g"
+   ],
+   [
+    "Mostarda",
+    "a gosto"
+   ]
+  ],
+  "steps": [
+   "Tempere as bifanas com sal, alho esmagado, colorau, louro e vinho branco; deixe marinar 2 horas, no frigorífico.",
+   "Aqueça azeite numa frigideira e frite as bifanas 2 min de cada lado.",
+   "Junte a marinada e cozinhe em lume brando 15 min, até o molho reduzir.",
+   "Frite a batata em palitos.",
+   "Abra os pães, recheie com bifanas e regue com molho.",
+   "Sirva com batata frita e mostarda."
+  ],
+  "tip": "Corte as bifanas finas (0,5 cm) para ficarem tenras."
+ },
+ {
+  "id": "porco-alentejana",
+  "name": "Carne de Porco à Alentejana",
+  "orig": "Carne de Porco à Alentejana",
+  "c": "Portuguesa",
+  "t": "50 min",
+  "d": "Média",
+  "veg": false,
+  "al": [
+   "marisco"
+  ],
+  "est": 4.0,
+  "desc": "Cubos de porco marinados com amêijoas, batata frita e coentros: a mais famosa mistura de mar e serra.",
+  "main": [
+   {
+    "re": "porco|lombo|pernil|febra",
+    "item": "Porco em cubos",
+    "qty": "700 g",
+    "kg": 0.7,
+    "u": 1,
+    "not": "frango|peru|pato|vaca|novilho|borrego|cordeiro|peixe|bacalhau"
+   }
+  ],
+  "ing": [
+   [
+    "Amêijoas",
+    "500 g"
+   ],
+   [
+    "Batata",
+    "600 g"
+   ],
+   [
+    "Alho",
+    "4 dentes"
+   ],
+   [
+    "Colorau",
+    "1 c. sopa"
+   ],
+   [
+    "Vinho branco",
+    "1 copo"
+   ],
+   [
+    "Louro",
+    "2 folhas"
+   ],
+   [
+    "Coentros",
+    "1 molho"
+   ],
+   [
+    "Limão",
+    "1"
+   ],
+   [
+    "Azeite e óleo",
+    "a gosto"
+   ]
+  ],
+  "steps": [
+   "Marine o porco em cubos com alho, colorau, louro, vinho, sal e pimenta, 3 horas.",
+   "Deixe as amêijoas em água com sal 1 hora para largarem a areia.",
+   "Corte a batata em cubos e frite até dourar.",
+   "Frite o porco escorrido em azeite quente até ficar dourado; reduza o lume e cozinhe 15 min.",
+   "Junte as amêijoas, tape e cozinhe 4 min até abrirem; descarte as que ficarem fechadas.",
+   "Misture a batata, coentros e sirva com limão."
+  ],
+  "tip": "Frite o porco em lume forte para selar o sumo."
+ },
+ {
+  "id": "entrecosto-forno",
+  "name": "Entrecosto no Forno com Batata-doce",
+  "orig": "Entrecosto Assado",
+  "c": "Portuguesa",
+  "t": "1h 45min",
+  "d": "Fácil",
+  "veg": false,
+  "al": [],
+  "est": 3.5,
+  "desc": "Entrecosto marinado em vinho e alho, assado lentamente até ficar macio.",
+  "main": [
+   {
+    "re": "entrecosto|costeleta",
+    "item": "Entrecosto",
+    "qty": "1,2 kg",
+    "kg": 1.2,
+    "u": 1
+   }
+  ],
+  "ing": [
+   [
+    "Batata-doce",
+    "800 g"
+   ],
+   [
+    "Alho",
+    "4 dentes"
+   ],
+   [
+    "Colorau",
+    "1 c. sopa"
+   ],
+   [
+    "Vinho branco",
+    "1 copo"
+   ],
+   [
+    "Louro",
+    "2 folhas"
+   ],
+   [
+    "Azeite",
+    "4 c. sopa"
+   ],
+   [
+    "Mel",
+    "1 c. sopa"
+   ],
+   [
+    "Salada verde",
+    "1 prato"
+   ]
+  ],
+  "steps": [
+   "Marine o entrecosto com alho, colorau, vinho, louro, sal e pimenta durante a noite.",
+   "Pré-aqueça o forno a 180 ºC. Disponha o entrecosto num tabuleiro, cubra com papel de alumínio.",
+   "Asse 1 hora; retire o alumínio, regue com mel e azeite.",
+   "Junte a batata-doce em pedaços e asse mais 30 a 35 min a 200 ºC, até dourar.",
+   "Deixe repousar 5 min e sirva com salada verde."
+  ],
+  "tip": "A cozedura lenta e tapada é o que o torna macio."
+ },
+ {
+  "id": "bife-portuguesa",
+  "name": "Bife à Portuguesa com Ovo e Batata Frita",
+  "orig": "Bife à Portuguesa",
+  "c": "Portuguesa",
+  "t": "30 min",
+  "d": "Fácil",
+  "veg": false,
+  "al": [
+   "ovos"
+  ],
+  "est": 3.5,
+  "desc": "Bife tenro em molho de alho e vinho, com ovo estrelado e batata frita.",
+  "main": [
+   {
+    "re": "bife|novilho|vitela|vaca|alcatra|fraldinha|acem|medalhao",
+    "item": "Bifes de vaca",
+    "qty": "600 g",
+    "kg": 0.6,
+    "u": 1,
+    "not": "frango|peru|pato|porco|peixe|atum|salmao|pescada|cherne|camarao|lula|polvo|bacalhau|tintureira|espadarte|queijo|borrego"
+   }
+  ],
+  "ing": [
+   [
+    "Ovos",
+    "4"
+   ],
+   [
+    "Batata",
+    "700 g"
+   ],
+   [
+    "Manteiga",
+    "30 g"
+   ],
+   [
+    "Alho",
+    "3 dentes"
+   ],
+   [
+    "Vinho branco",
+    "1/2 copo"
+   ],
+   [
+    "Louro",
+    "1 folha"
+   ],
+   [
+    "Azeite",
+    "2 c. sopa"
+   ],
+   [
+    "Salada de alface",
+    "1 prato"
+   ]
+  ],
+  "steps": [
+   "Retire os bifes do frigorífico 20 min antes e tempere com sal e pimenta.",
+   "Frite a batata em palitos até dourar.",
+   "Frite os bifes numa frigideira muito quente com azeite 1 a 2 min de cada lado; reserve.",
+   "Na mesma frigideira, junte manteiga, alho laminado, louro e vinho; reduza 3 min.",
+   "Estrele os ovos em frigideira antiaderente.",
+   "Regue os bifes com o molho, coroe com o ovo e sirva com batata frita e salada."
+  ],
+  "tip": "Não pique a carne com o garfo ao virar, para não perder sumo."
+ },
+ {
+  "id": "estufado-novilho",
+  "name": "Estufado de Novilho com Cenoura e Batata",
+  "orig": "Estufado de Novilho",
+  "c": "Portuguesa",
+  "t": "2h",
+  "d": "Fácil",
+  "veg": false,
+  "al": [],
+  "est": 3.8,
+  "desc": "Carne de vaca cozida lentamente em vinho tinto e tomate, até se desfazer na boca.",
+  "main": [
+   {
+    "re": "estufar|chambao|novilho|vaca|vitela|acem",
+    "item": "Carne de vaca para estufar",
+    "qty": "1 kg",
+    "kg": 1,
+    "u": 1,
+    "not": "frango|peru|pato|porco|peixe|atum|salmao|pescada|cherne|camarao|lula|polvo|bacalhau|tintureira|espadarte|queijo|borrego"
+   }
+  ],
+  "ing": [
+   [
+    "Cenoura",
+    "3"
+   ],
+   [
+    "Batata",
+    "600 g"
+   ],
+   [
+    "Cebola",
+    "2"
+   ],
+   [
+    "Alho",
+    "3 dentes"
+   ],
+   [
+    "Tomate pelado",
+    "400 g"
+   ],
+   [
+    "Vinho tinto",
+    "1 copo"
+   ],
+   [
+    "Louro",
+    "2 folhas"
+   ],
+   [
+    "Azeite",
+    "4 c. sopa"
+   ],
+   [
+    "Sal e pimenta",
+    "a gosto"
+   ]
+  ],
+  "steps": [
+   "Corte a carne em cubos de 3 cm e tempere com sal e pimenta.",
+   "Doure em azeite, em lotes, e reserve.",
+   "Refogue cebola e alho 8 min; junte o tomate e o vinho tinto e deixe reduzir 5 min.",
+   "Regresse a carne com o louro e água até quase cobrir. Tape e cozinhe em lume brando 1 hora.",
+   "Junte cenoura e batata em pedaços e cozinhe mais 40 min, até a carne estar tenra.",
+   "Rectifique o sal e sirva bem quente."
+  ],
+  "tip": "Doure a carne em pequenos lotes para não cozer em vez de dourar."
+ },
+ {
+  "id": "almondegas",
+  "name": "Almôndegas em Molho de Tomate com Arroz",
+  "orig": "Almôndegas",
+  "c": "Portuguesa",
+  "t": "50 min",
+  "d": "Fácil",
+  "veg": false,
+  "al": [
+   "gluten",
+   "ovos"
+  ],
+  "est": 3.5,
+  "desc": "Bolinhas de carne temperadas, estufadas em molho de tomate, com arroz branco.",
+  "main": [
+   {
+    "re": "picada|carne-picada|hamburguer",
+    "item": "Carne picada",
+    "qty": "700 g",
+    "kg": 0.7,
+    "u": 1,
+    "not": "frango|peru|peixe"
+   }
+  ],
+  "ing": [
+   [
+    "Arroz branco",
+    "300 g"
+   ],
+   [
+    "Pão duro",
+    "2 fatias"
+   ],
+   [
+    "Leite",
+    "100 ml"
+   ],
+   [
+    "Ovo",
+    "1"
+   ],
+   [
+    "Cebola",
+    "2"
+   ],
+   [
+    "Alho",
+    "3 dentes"
+   ],
+   [
+    "Tomate pelado",
+    "400 g"
+   ],
+   [
+    "Salsa",
+    "1 molho"
+   ],
+   [
+    "Azeite",
+    "3 c. sopa"
+   ],
+   [
+    "Noz-moscada",
+    "1 pitada"
+   ]
+  ],
+  "steps": [
+   "Demolhe o pão no leite e esprema.",
+   "Misture carne, pão, ovo, metade da cebola ralada, alho, salsa, sal, pimenta e noz-moscada.",
+   "Forme bolinhas do tamanho de uma noz.",
+   "Refogue o resto da cebola, junte o tomate pelado e cozinhe 10 min.",
+   "Junte as almôndegas ao molho e cozinhe tapadas em lume brando 20 min.",
+   "Sirva com arroz branco cozido (18 min)."
+  ],
+  "tip": "Molhe as mãos para modelar as bolinhas sem que se colem."
+ },
+ {
+  "id": "feijoada",
+  "name": "Feijoada à Transmontana",
+  "orig": "Feijoada",
+  "c": "Portuguesa",
+  "t": "1h 30min",
+  "d": "Fácil",
+  "veg": false,
+  "al": [],
+  "est": 5.0,
+  "desc": "Feijão em caldo de enchidos, entrecosto e couve, com arroz branco.",
+  "main": [
+   {
+    "re": "feijao",
+    "item": "Feijão",
+    "qty": "600 g cozido",
+    "kg": 0.6,
+    "u": 1
+   }
+  ],
+  "ing": [
+   [
+    "Chouriço de carne",
+    "200 g"
+   ],
+   [
+    "Entrecosto ou toucinho",
+    "300 g"
+   ],
+   [
+    "Couve-lombarda",
+    "1/2"
+   ],
+   [
+    "Cenoura",
+    "2"
+   ],
+   [
+    "Cebola",
+    "2"
+   ],
+   [
+    "Alho",
+    "3 dentes"
+   ],
+   [
+    "Louro",
+    "2 folhas"
+   ],
+   [
+    "Arroz branco",
+    "250 g"
+   ],
+   [
+    "Azeite",
+    "3 c. sopa"
+   ]
+  ],
+  "steps": [
+   "Se usar feijão seco, deixe de molho de véspera e cozinhe 45 min; ou use feijão cozido.",
+   "Refogue cebola, alho e louro em azeite; junte entrecosto e chouriço em rodelas.",
+   "Adicione cenoura em rodelas e água suficiente para cobrir; cozinhe 30 min.",
+   "Junte o feijão e a couve em tiras; cozinhe mais 20 min em lume brando.",
+   "Rectifique o sal e sirva com arroz branco."
+  ],
+  "tip": "Cozinhe o arroz à parte para não escurecer o caldo."
+ },
+ {
+  "id": "grao-espinafres",
+  "name": "Grão com Espinafres e Ovos Escalfados",
+  "orig": "Grão com Espinafres",
+  "c": "Portuguesa",
+  "t": "35 min",
+  "d": "Fácil",
+  "veg": true,
+  "al": [
+   "ovos"
+  ],
+  "est": 3.0,
+  "desc": "Prato rústico de grão, espinafres e ovos escalfados, perfumado com cominhos e alho.",
+  "main": [
+   {
+    "re": "grao",
+    "item": "Grão cozido",
+    "qty": "800 g",
+    "kg": 0.8,
+    "u": 1
+   }
+  ],
+  "ing": [
+   [
+    "Espinafres",
+    "500 g"
+   ],
+   [
+    "Ovos",
+    "4"
+   ],
+   [
+    "Cebola",
+    "1"
+   ],
+   [
+    "Alho",
+    "3 dentes"
+   ],
+   [
+    "Cominhos",
+    "1 c. chá"
+   ],
+   [
+    "Colorau",
+    "1 c. chá"
+   ],
+   [
+    "Vinagre",
+    "1 c. sopa"
+   ],
+   [
+    "Azeite",
+    "4 c. sopa"
+   ],
+   [
+    "Pão",
+    "4 fatias"
+   ]
+  ],
+  "steps": [
+   "Refogue cebola e alho em azeite 6 min.",
+   "Junte cominhos e colorau e mexa 1 min.",
+   "Adicione o grão escorrido e meio copo de água; cozinhe 10 min.",
+   "Junte os espinafres e cozinhe 3 min até murcharem.",
+   "Abra 4 covas no preparado e escalfe os ovos tapados 4 a 5 min.",
+   "Finalize com vinagre e sirva com pão."
+  ],
+  "tip": "Esprema levemente metade do grão para engrossar o molho."
+ },
+ {
+  "id": "cogumelos-ovo",
+  "name": "Cogumelos Salteados com Alho e Ovo Estrelado",
+  "orig": "Cogumelos Salteados",
+  "c": "Portuguesa",
+  "t": "25 min",
+  "d": "Fácil",
+  "veg": true,
+  "al": [
+   "ovos"
+  ],
+  "est": 2.5,
+  "desc": "Cogumelos dourados com alho e salsa, com ovo estrelado e pão tostado.",
+  "main": [
+   {
+    "re": "cogumelo",
+    "item": "Cogumelos laminados",
+    "qty": "600 g",
+    "kg": 0.6,
+    "u": 2,
+    "not": "conserva"
+   }
+  ],
+  "ing": [
+   [
+    "Ovos",
+    "4"
+   ],
+   [
+    "Alho",
+    "4 dentes"
+   ],
+   [
+    "Salsa",
+    "1 molho"
+   ],
+   [
+    "Pão rústico",
+    "4 fatias"
+   ],
+   [
+    "Azeite",
+    "5 c. sopa"
+   ],
+   [
+    "Limão",
+    "1/2"
+   ],
+   [
+    "Salada de rúcula",
+    "1 prato"
+   ]
+  ],
+  "steps": [
+   "Limpe os cogumelos com um pano húmido e lamine.",
+   "Aqueça uma frigideira larga sem gordura, em lume forte, e salteie os cogumelos em duas vezes, sem encher, 5 min até dourar.",
+   "Junte azeite e alho laminado e salteie 1 min.",
+   "Tempere com sal, pimenta, limão e salsa picada.",
+   "Estrele os ovos em azeite.",
+   "Sirva os cogumelos sobre pão tostado, com o ovo por cima e salada de rúcula."
+  ],
+  "tip": "Não lave os cogumelos em água: absorvem-na e não douram."
+ },
+ {
+  "id": "carbonara",
+  "name": "Esparguete à Carbonara",
+  "orig": "Spaghetti alla Carbonara",
+  "c": "Italiana",
+  "t": "25 min",
+  "d": "Média",
+  "veg": false,
+  "al": [
+   "gluten",
+   "ovos",
+   "lactose"
+  ],
+  "est": 3.5,
+  "desc": "Massa cremosa feita só com ovo, queijo e carne curada, sem natas.",
+  "main": [
+   {
+    "re": "bacon|toucinho|pancetta|presunto|guanciale",
+    "item": "Bacon ou pancetta em cubos",
+    "qty": "200 g",
+    "kg": 0.2,
+    "u": 1
+   }
+  ],
+  "ing": [
+   [
+    "Esparguete",
+    "400 g"
+   ],
+   [
+    "Gemas",
+    "4"
+   ],
+   [
+    "Ovo inteiro",
+    "1"
+   ],
+   [
+    "Queijo pecorino ou parmesão ralado",
+    "80 g"
+   ],
+   [
+    "Pimenta preta moída",
+    "1 c. chá"
+   ],
+   [
+    "Sal para a água",
+    "1 c. sopa"
+   ],
+   [
+    "Salada de rúcula (acompanhamento)",
+    "1 prato"
+   ]
+  ],
+  "steps": [
+   "Coloque a água a ferver com sal e cozinhe o esparguete até ficar al dente (cerca de 9 min), guardando 1 chávena da água.",
+   "Frite o bacon em lume médio, sem gordura, 6 a 8 min até ficar dourado.",
+   "Misture num recipiente as gemas, o ovo, o queijo e muita pimenta.",
+   "Escorra a massa e junte ao bacon, com o lume desligado.",
+   "Junte a mistura de ovo e mexa depressa, adicionando água da massa até ficar um molho cremoso.",
+   "Sirva de imediato, com queijo por cima e salada de rúcula."
+  ],
+  "tip": "Fora do lume, o ovo cria creme em vez de ovo mexido."
+ },
+ {
+  "id": "bolonhesa",
+  "name": "Esparguete à Bolonhesa",
+  "orig": "Ragù alla Bolognese",
+  "c": "Italiana",
+  "t": "1h 15min",
+  "d": "Fácil",
+  "veg": false,
+  "al": [
+   "gluten",
+   "lactose"
+  ],
+  "est": 3.2,
+  "desc": "Ragù de carne cozinhado lentamente com vegetais e tomate, servido com massa e parmesão.",
+  "main": [
+   {
+    "re": "picada|carne-picada",
+    "item": "Carne picada",
+    "qty": "600 g",
+    "kg": 0.6,
+    "u": 1,
+    "not": "frango|peru|peixe"
+   }
+  ],
+  "ing": [
+   [
+    "Esparguete",
+    "400 g"
+   ],
+   [
+    "Cebola",
+    "1"
+   ],
+   [
+    "Cenoura",
+    "1"
+   ],
+   [
+    "Aipo",
+    "1 talo"
+   ],
+   [
+    "Alho",
+    "2 dentes"
+   ],
+   [
+    "Tomate pelado",
+    "400 g"
+   ],
+   [
+    "Concentrado de tomate",
+    "2 c. sopa"
+   ],
+   [
+    "Vinho tinto",
+    "1/2 copo"
+   ],
+   [
+    "Azeite",
+    "3 c. sopa"
+   ],
+   [
+    "Parmesão",
+    "50 g"
+   ]
+  ],
+  "steps": [
+   "Pique finamente cebola, cenoura, aipo e alho e refogue em azeite 10 min.",
+   "Junte a carne e frite em lume forte, desfazendo os grumos, 8 min.",
+   "Adicione o concentrado e o vinho tinto; deixe reduzir 3 min.",
+   "Junte o tomate pelado, sal, pimenta e meia chávena de água.",
+   "Cozinhe em lume brando, tapado a meio, 45 min.",
+   "Cozinhe o esparguete al dente, envolva no ragù e sirva com parmesão."
+  ],
+  "tip": "Quanto mais tempo cozinhar, melhor o sabor do ragù."
+ },
+ {
+  "id": "lasanha",
+  "name": "Lasanha de Carne",
+  "orig": "Lasagne alla Bolognese",
+  "c": "Italiana",
+  "t": "1h 30min",
+  "d": "Média",
+  "veg": false,
+  "al": [
+   "gluten",
+   "lactose",
+   "ovos"
+  ],
+  "est": 4.5,
+  "desc": "Camadas de massa, ragù e bechamel gratinadas até ficarem douradas.",
+  "main": [
+   {
+    "re": "picada|carne-picada",
+    "item": "Carne picada",
+    "qty": "600 g",
+    "kg": 0.6,
+    "u": 1,
+    "not": "frango|peru|peixe"
+   }
+  ],
+  "ing": [
+   [
+    "Folhas de lasanha",
+    "250 g"
+   ],
+   [
+    "Tomate pelado",
+    "400 g"
+   ],
+   [
+    "Cebola",
+    "1"
+   ],
+   [
+    "Alho",
+    "2 dentes"
+   ],
+   [
+    "Leite",
+    "700 ml"
+   ],
+   [
+    "Manteiga",
+    "50 g"
+   ],
+   [
+    "Farinha",
+    "50 g"
+   ],
+   [
+    "Queijo ralado",
+    "150 g"
+   ],
+   [
+    "Noz-moscada",
+    "1 pitada"
+   ],
+   [
+    "Azeite",
+    "3 c. sopa"
+   ],
+   [
+    "Salada verde",
+    "1 prato"
+   ]
+  ],
+  "steps": [
+   "Refogue cebola e alho; junte a carne e doure 8 min; adicione o tomate e cozinhe 25 min.",
+   "Faça o bechamel: derreta a manteiga, junte a farinha, mexa 1 min, adicione o leite em fio, mexendo, até engrossar (8 min). Tempere com noz-moscada.",
+   "Pré-aqueça o forno a 180 ºC.",
+   "Numa travessa, alterne camadas de ragù, massa e bechamel; termine com bechamel e queijo.",
+   "Leve ao forno 35 a 40 min até dourar.",
+   "Deixe repousar 10 min antes de cortar e sirva com salada."
+  ],
+  "tip": "O repouso final evita que a lasanha se desfaça."
+ },
+ {
+  "id": "risotto-cogumelos",
+  "name": "Risotto de Cogumelos",
+  "orig": "Risotto ai Funghi",
+  "c": "Italiana",
+  "t": "40 min",
+  "d": "Média",
+  "veg": true,
+  "al": [
+   "lactose"
+  ],
+  "est": 4.0,
+  "desc": "Arroz cremoso cozinhado devagar em caldo, com cogumelos salteados e parmesão.",
+  "main": [
+   {
+    "re": "cogumelo",
+    "item": "Cogumelos laminados",
+    "qty": "500 g",
+    "kg": 0.5,
+    "u": 2,
+    "not": "conserva"
+   }
+  ],
+  "ing": [
+   [
+    "Arroz arbóreo ou carnaroli",
+    "320 g"
+   ],
+   [
+    "Caldo de legumes",
+    "1,2 l"
+   ],
+   [
+    "Cebola",
+    "1"
+   ],
+   [
+    "Alho",
+    "2 dentes"
+   ],
+   [
+    "Vinho branco",
+    "1 copo"
+   ],
+   [
+    "Manteiga",
+    "40 g"
+   ],
+   [
+    "Parmesão",
+    "60 g"
+   ],
+   [
+    "Azeite",
+    "3 c. sopa"
+   ],
+   [
+    "Salsa",
+    "1 molho"
+   ]
+  ],
+  "steps": [
+   "Aqueça o caldo e mantenha-o em lume muito brando.",
+   "Salteie os cogumelos em azeite em lume forte, 5 min, com alho e sal; reserve.",
+   "Refogue a cebola picada em azeite e manteiga 5 min; junte o arroz e tosta 2 min.",
+   "Deite o vinho e deixe evaporar.",
+   "Adicione o caldo concha a concha, mexendo, durante 16 a 18 min.",
+   "Fora do lume, junte manteiga, parmesão e os cogumelos; deixe repousar 2 min e sirva com salsa."
+  ],
+  "tip": "O risotto deve ficar 'ondulante', nunca seco."
+ },
+ {
+  "id": "frango-parmegiana",
+  "name": "Frango à Parmegiana com Esparguete",
+  "orig": "Pollo alla Parmigiana",
+  "c": "Italiana",
+  "t": "50 min",
+  "d": "Fácil",
+  "veg": false,
+  "al": [
+   "gluten",
+   "ovos",
+   "lactose"
+  ],
+  "est": 4.0,
+  "desc": "Peito de frango panado, coberto de molho de tomate e queijo derretido.",
+  "main": [
+   {
+    "re": "peito|frango",
+    "item": "Peito de frango",
+    "qty": "700 g",
+    "kg": 0.7,
+    "u": 1,
+    "not": "peru|pato|porco|vaca|novilho|borrego|cordeiro|peixe"
+   }
+  ],
+  "ing": [
+   [
+    "Esparguete",
+    "350 g"
+   ],
+   [
+    "Pão ralado",
+    "120 g"
+   ],
+   [
+    "Ovos",
+    "2"
+   ],
+   [
+    "Farinha",
+    "4 c. sopa"
+   ],
+   [
+    "Molho de tomate",
+    "400 g"
+   ],
+   [
+    "Mozzarella",
+    "200 g"
+   ],
+   [
+    "Parmesão",
+    "40 g"
+   ],
+   [
+    "Azeite",
+    "5 c. sopa"
+   ],
+   [
+    "Manjericão",
+    "algumas folhas"
+   ]
+  ],
+  "steps": [
+   "Corte o frango em bifes finos e bata levemente com um martelo.",
+   "Passe por farinha, ovo batido e pão ralado com parmesão.",
+   "Frite em azeite 3 min de cada lado, até dourar.",
+   "Pré-aqueça o forno a 200 ºC. Disponha os bifes num tabuleiro, cubra com molho de tomate e mozzarella.",
+   "Gratine 12 a 15 min.",
+   "Cozinhe o esparguete al dente e sirva com o frango e manjericão."
+  ],
+  "tip": "Pressione bem o pão ralado para que fique colado."
+ },
+ {
+  "id": "espadarte-siciliana",
+  "name": "Espadarte à Siciliana com Esparguete",
+  "orig": "Pesce Spada alla Siciliana",
+  "c": "Italiana",
+  "t": "35 min",
+  "d": "Média",
+  "veg": false,
+  "al": [
+   "peixe",
+   "gluten"
+  ],
+  "est": 4.5,
+  "desc": "Postas de peixe-espada em molho de tomate, azeitonas e alcaparras.",
+  "main": [
+   {
+    "re": "tintureira|espadarte|atum|peixe-espada",
+    "item": "Postas de espadarte/atum",
+    "qty": "700 g",
+    "kg": 0.7,
+    "u": 1,
+    "not": "conserva|lata"
+   }
+  ],
+  "ing": [
+   [
+    "Esparguete",
+    "350 g"
+   ],
+   [
+    "Tomate pelado",
+    "400 g"
+   ],
+   [
+    "Azeitonas",
+    "80 g"
+   ],
+   [
+    "Alcaparras",
+    "2 c. sopa"
+   ],
+   [
+    "Alho",
+    "2 dentes"
+   ],
+   [
+    "Azeite",
+    "4 c. sopa"
+   ],
+   [
+    "Orégãos",
+    "1 c. chá"
+   ],
+   [
+    "Salsa",
+    "1 molho"
+   ]
+  ],
+  "steps": [
+   "Tempere as postas com sal e pimenta.",
+   "Aqueça azeite e sele o peixe 2 min por lado; reserve.",
+   "Na mesma frigideira, refogue o alho, junte tomate, azeitonas, alcaparras e orégãos; cozinhe 10 min.",
+   "Volte a colocar o peixe e cozinhe 4 a 5 min.",
+   "Cozinhe o esparguete al dente e envolva em parte do molho.",
+   "Sirva o peixe com o molho, a massa e salsa picada."
+  ],
+  "tip": "Não cozinhe o peixe em excesso: deve ficar rosado e suculento."
+ },
+ {
+  "id": "puttanesca",
+  "name": "Esparguete alla Puttanesca",
+  "orig": "Spaghetti alla Puttanesca",
+  "c": "Italiana",
+  "t": "25 min",
+  "d": "Fácil",
+  "veg": false,
+  "al": [
+   "gluten",
+   "peixe"
+  ],
+  "est": 3.0,
+  "desc": "Massa picante com tomate, azeitonas, alcaparras e anchovas: despensa e sabor.",
+  "main": [
+   {
+    "re": "esparguete|espaguete|massa|macarrao",
+    "item": "Esparguete",
+    "qty": "400 g",
+    "kg": 0.4,
+    "u": 1
+   }
+  ],
+  "ing": [
+   [
+    "Tomate pelado",
+    "400 g"
+   ],
+   [
+    "Azeitonas pretas",
+    "100 g"
+   ],
+   [
+    "Alcaparras",
+    "2 c. sopa"
+   ],
+   [
+    "Anchovas",
+    "6 filetes"
+   ],
+   [
+    "Alho",
+    "3 dentes"
+   ],
+   [
+    "Piri-piri",
+    "1"
+   ],
+   [
+    "Azeite",
+    "4 c. sopa"
+   ],
+   [
+    "Salsa",
+    "1 molho"
+   ],
+   [
+    "Parmesão",
+    "40 g"
+   ]
+  ],
+  "steps": [
+   "Cozinhe o esparguete em água com sal até ficar al dente.",
+   "Aqueça azeite com alho e anchovas e desfaça-as 2 min.",
+   "Junte o piri-piri, o tomate e cozinhe 10 min.",
+   "Adicione azeitonas e alcaparras.",
+   "Envolva a massa no molho com um pouco da água de cozedura 1 min.",
+   "Sirva com salsa e parmesão."
+  ],
+  "tip": "As anchovas dissolvem-se e dão profundidade sem sabor a peixe."
+ },
+ {
+  "id": "boeuf-bourguignon",
+  "name": "Estufado de Vaca à Borgonhesa",
+  "orig": "Boeuf Bourguignon",
+  "c": "Francesa",
+  "t": "2h 30min",
+  "d": "Média",
+  "veg": false,
+  "al": [
+   "gluten"
+  ],
+  "est": 6.0,
+  "desc": "Vaca estufada em vinho tinto com cogumelos, cebolinhas e bacon, acompanhada de puré.",
+  "main": [
+   {
+    "re": "estufar|chambao|novilho|vaca|acem",
+    "item": "Carne de vaca para estufar",
+    "qty": "1 kg",
+    "kg": 1,
+    "u": 1,
+    "not": "frango|peru|pato|porco|peixe|atum|salmao|pescada|cherne|camarao|lula|polvo|bacalhau|tintureira|espadarte|queijo|borrego"
+   }
+  ],
+  "ing": [
+   [
+    "Bacon",
+    "120 g"
+   ],
+   [
+    "Cenoura",
+    "2"
+   ],
+   [
+    "Cebolinhas",
+    "12"
+   ],
+   [
+    "Cogumelos",
+    "250 g"
+   ],
+   [
+    "Vinho tinto",
+    "500 ml"
+   ],
+   [
+    "Caldo de carne",
+    "300 ml"
+   ],
+   [
+    "Farinha",
+    "2 c. sopa"
+   ],
+   [
+    "Tomilho",
+    "2 ramos"
+   ],
+   [
+    "Batata para puré",
+    "800 g"
+   ],
+   [
+    "Manteiga",
+    "60 g"
+   ],
+   [
+    "Leite",
+    "100 ml"
+   ]
+  ],
+  "steps": [
+   "Corte a carne em cubos, seque com papel e passe por farinha.",
+   "Frite o bacon, retire e doure a carne em lotes na gordura; reserve.",
+   "Refogue a cenoura e a cebola; regresse a carne e o bacon, adicione o vinho, caldo e tomilho.",
+   "Tape e cozinhe no forno a 160 ºC 2 horas.",
+   "Salteie os cogumelos e as cebolinhas em manteiga e junte nos últimos 20 min.",
+   "Cozinhe a batata, faça puré com manteiga e leite e sirva com o estufado."
+  ],
+  "tip": "É ainda melhor no dia seguinte: faça com antecedência."
+ },
+ {
+  "id": "coq-au-vin",
+  "name": "Frango ao Vinho Tinto",
+  "orig": "Coq au Vin",
+  "c": "Francesa",
+  "t": "1h 15min",
+  "d": "Média",
+  "veg": false,
+  "al": [
+   "gluten"
+  ],
+  "est": 5.5,
+  "desc": "Frango cozinhado em vinho tinto com bacon, cogumelos e cebolinhas.",
+  "main": [
+   {
+    "re": "frango|coxa|perna",
+    "item": "Coxas e sobrecoxas de frango",
+    "qty": "1,2 kg",
+    "kg": 1.2,
+    "u": 1,
+    "not": "peru|pato|porco|vaca|novilho|borrego|cordeiro|peixe"
+   }
+  ],
+  "ing": [
+   [
+    "Bacon",
+    "120 g"
+   ],
+   [
+    "Cogumelos",
+    "250 g"
+   ],
+   [
+    "Cebolinhas",
+    "12"
+   ],
+   [
+    "Cenoura",
+    "2"
+   ],
+   [
+    "Alho",
+    "3 dentes"
+   ],
+   [
+    "Vinho tinto",
+    "500 ml"
+   ],
+   [
+    "Caldo de galinha",
+    "200 ml"
+   ],
+   [
+    "Tomilho e louro",
+    "1 molho"
+   ],
+   [
+    "Farinha",
+    "1 c. sopa"
+   ],
+   [
+    "Batata",
+    "800 g"
+   ]
+  ],
+  "steps": [
+   "Doure o bacon, retire; doure o frango temperado na mesma panela, 4 min por lado; reserve.",
+   "Refogue cenoura, cebolinhas e alho; polvilhe com farinha.",
+   "Adicione o vinho, caldo, tomilho e louro e deixe ferver 5 min.",
+   "Regresse o frango e o bacon; tape e cozinhe em lume brando 40 min.",
+   "Junte os cogumelos salteados e cozinhe 10 min.",
+   "Cozinhe a batata e sirva com o frango."
+  ],
+  "tip": "Use um vinho que beberia: dá todo o sabor ao molho."
+ },
+ {
+  "id": "salmao-papillote",
+  "name": "Salmão en Papillote com Legumes e Arroz",
+  "orig": "Saumon en Papillote",
+  "c": "Francesa",
+  "t": "35 min",
+  "d": "Fácil",
+  "veg": false,
+  "al": [
+   "peixe"
+  ],
+  "est": 4.5,
+  "desc": "Salmão cozinhado ao vapor dentro de papel vegetal, com legumes, limão e ervas.",
+  "main": [
+   {
+    "re": "salmao",
+    "item": "Lombos de salmão",
+    "qty": "600 g",
+    "kg": 0.6,
+    "u": 1
+   }
+  ],
+  "ing": [
+   [
+    "Courgette",
+    "2"
+   ],
+   [
+    "Cenoura",
+    "2"
+   ],
+   [
+    "Tomate cherry",
+    "200 g"
+   ],
+   [
+    "Limão",
+    "1"
+   ],
+   [
+    "Manteiga",
+    "40 g"
+   ],
+   [
+    "Vinho branco",
+    "4 c. sopa"
+   ],
+   [
+    "Endro ou salsa",
+    "1 molho"
+   ],
+   [
+    "Arroz branco",
+    "250 g"
+   ]
+  ],
+  "steps": [
+   "Pré-aqueça o forno a 200 ºC. Corte os legumes em tiras finas.",
+   "Em 4 folhas de papel vegetal, coloque legumes e um lombo de salmão.",
+   "Tempere com sal, pimenta, manteiga, limão e vinho branco.",
+   "Feche bem os papéis, formando um saquinho.",
+   "Asse 15 a 18 min.",
+   "Cozinhe o arroz branco e sirva com o salmão aberto na hora."
+  ],
+  "tip": "Feche bem as dobras para o vapor ficar retido."
+ },
+ {
+  "id": "moules-marinieres",
+  "name": "Mexilhões à Marinheira com Batata Frita",
+  "orig": "Moules Marinières",
+  "c": "Francesa",
+  "t": "30 min",
+  "d": "Fácil",
+  "veg": false,
+  "al": [
+   "marisco"
+  ],
+  "est": 3.5,
+  "desc": "Mexilhões em vinho branco, chalota e salsa, com batata frita crocante.",
+  "main": [
+   {
+    "re": "mexilh",
+    "item": "Mexilhões",
+    "qty": "1,5 kg",
+    "kg": 1.5,
+    "u": 1
+   }
+  ],
+  "ing": [
+   [
+    "Chalotas ou cebola",
+    "3"
+   ],
+   [
+    "Alho",
+    "2 dentes"
+   ],
+   [
+    "Vinho branco",
+    "300 ml"
+   ],
+   [
+    "Manteiga",
+    "40 g"
+   ],
+   [
+    "Salsa",
+    "1 molho"
+   ],
+   [
+    "Natas",
+    "100 ml"
+   ],
+   [
+    "Batata",
+    "800 g"
+   ],
+   [
+    "Óleo para fritar",
+    "400 ml"
+   ]
+  ],
+  "steps": [
+   "Lave os mexilhões, remova as barbas e descarte os que estiverem abertos.",
+   "Derreta a manteiga e refogue a chalota e o alho 4 min.",
+   "Junte o vinho e deixe ferver 2 min.",
+   "Adicione os mexilhões, tape e cozinhe 5 a 6 min, agitando a panela, até abrirem.",
+   "Junte as natas e salsa picada.",
+   "Frite as batatas em palitos e sirva com os mexilhões e o caldo."
+  ],
+  "tip": "Descarte os mexilhões que não abrirem."
+ },
+ {
+  "id": "ratatouille",
+  "name": "Ratatouille com Ovos e Pão",
+  "orig": "Ratatouille",
+  "c": "Francesa",
+  "t": "55 min",
+  "d": "Fácil",
+  "veg": true,
+  "al": [
+   "ovos",
+   "gluten"
+  ],
+  "est": 3.5,
+  "desc": "Estufado provençal de beringela, courgette, pimento e tomate, com ovo escalfado.",
+  "main": [
+   {
+    "re": "beringela|courgette|curgete|pimento",
+    "item": "Legumes mistos (beringela, courgette, pimento)",
+    "qty": "1,2 kg",
+    "kg": 1.2,
+    "u": 1
+   }
+  ],
+  "ing": [
+   [
+    "Tomate maduro",
+    "600 g"
+   ],
+   [
+    "Cebola",
+    "1"
+   ],
+   [
+    "Alho",
+    "3 dentes"
+   ],
+   [
+    "Azeite",
+    "5 c. sopa"
+   ],
+   [
+    "Tomilho",
+    "1 c. chá"
+   ],
+   [
+    "Manjericão",
+    "algumas folhas"
+   ],
+   [
+    "Ovos",
+    "4"
+   ],
+   [
+    "Pão",
+    "4 fatias"
+   ]
+  ],
+  "steps": [
+   "Corte os legumes em cubos de 2 cm.",
+   "Refogue cebola e alho em azeite 5 min.",
+   "Junte beringela e pimento e cozinhe 10 min.",
+   "Adicione courgette, tomate e tomilho.",
+   "Tape e cozinhe em lume brando 30 min, mexendo ocasionalmente.",
+   "Escalfe os ovos por cima nos últimos 5 min e sirva com pão e manjericão."
+  ],
+  "tip": "Cozinhe devagar para os legumes ficarem macios mas inteiros."
+ },
+ {
+  "id": "paella",
+  "name": "Paella de Frango e Legumes",
+  "orig": "Paella Valenciana",
+  "c": "Espanhola",
+  "t": "1h",
+  "d": "Média",
+  "veg": false,
+  "al": [],
+  "est": 4.5,
+  "desc": "Arroz seco e soltinho com açafrão, frango, feijão-verde e pimento.",
+  "main": [
+   {
+    "re": "frango|coxa|peito",
+    "item": "Frango aos pedaços",
+    "qty": "900 g",
+    "kg": 0.9,
+    "u": 1,
+    "not": "peru|pato|porco|vaca|novilho|borrego|cordeiro|peixe"
+   }
+  ],
+  "ing": [
+   [
+    "Arroz bomba ou redondo",
+    "350 g"
+   ],
+   [
+    "Caldo de galinha",
+    "1 l"
+   ],
+   [
+    "Pimento vermelho",
+    "1"
+   ],
+   [
+    "Feijão-verde",
+    "200 g"
+   ],
+   [
+    "Tomate",
+    "2"
+   ],
+   [
+    "Alho",
+    "3 dentes"
+   ],
+   [
+    "Açafrão ou cúrcuma",
+    "1 pitada"
+   ],
+   [
+    "Paprika doce",
+    "1 c. chá"
+   ],
+   [
+    "Azeite",
+    "5 c. sopa"
+   ],
+   [
+    "Limão",
+    "1"
+   ]
+  ],
+  "steps": [
+   "Doure o frango temperado em azeite numa paellera ou frigideira larga, 10 min; reserve.",
+   "Refogue pimento, feijão-verde, alho e tomate ralado 8 min.",
+   "Junte paprika e arroz; mexa 1 min.",
+   "Adicione o caldo quente com açafrão e regresse o frango.",
+   "Cozinhe 18 min sem mexer, em lume médio.",
+   "Deixe repousar 5 min tapado com pano e sirva com limão."
+  ],
+  "tip": "Não mexa depois de juntar o caldo: forma-se o socarrat (crosta) no fundo."
+ },
+ {
+  "id": "gambas-ajillo",
+  "name": "Gambas ao Alhilho com Arroz de Tomate",
+  "orig": "Gambas al Ajillo",
+  "c": "Espanhola",
+  "t": "25 min",
+  "d": "Fácil",
+  "veg": false,
+  "al": [
+   "marisco"
+  ],
+  "est": 3.5,
+  "desc": "Camarões salteados em azeite com alho e piri-piri, servidos com pão para molhar.",
+  "main": [
+   {
+    "re": "camarao|gamba",
+    "item": "Camarão",
+    "qty": "700 g",
+    "kg": 0.7,
+    "u": 1
+   }
+  ],
+  "ing": [
+   [
+    "Alho",
+    "8 dentes"
+   ],
+   [
+    "Azeite",
+    "8 c. sopa"
+   ],
+   [
+    "Piri-piri seco",
+    "2"
+   ],
+   [
+    "Vinho branco ou xerez",
+    "3 c. sopa"
+   ],
+   [
+    "Salsa",
+    "1 molho"
+   ],
+   [
+    "Pão rústico",
+    "8 fatias"
+   ],
+   [
+    "Arroz de tomate",
+    "300 g de arroz"
+   ]
+  ],
+  "steps": [
+   "Descasque os camarões, deixando a cauda, e seque com papel.",
+   "Aqueça o azeite com o alho laminado e o piri-piri em lume brando 3 min, sem queimar.",
+   "Aumente o lume, junte os camarões e salteie 2 a 3 min até ficarem rosados.",
+   "Deite o vinho, deixe evaporar 30 segundos e retire do lume.",
+   "Polvilhe com salsa e sal.",
+   "Sirva com pão e arroz de tomate."
+  ],
+  "tip": "Retire do lume logo que fiquem rosados: o camarão cozinha em segundos."
+ },
+ {
+  "id": "tortilha",
+  "name": "Tortilha Espanhola com Salada",
+  "orig": "Tortilla de Patatas",
+  "c": "Espanhola",
+  "t": "40 min",
+  "d": "Média",
+  "veg": true,
+  "al": [
+   "ovos"
+  ],
+  "est": 2.5,
+  "desc": "Omelete grossa de batata e cebola, macia por dentro e dourada por fora.",
+  "main": [
+   {
+    "re": "(^|-)ovos?(-|$)",
+    "item": "Ovos",
+    "qty": "8",
+    "kg": 0.5,
+    "u": 1
+   }
+  ],
+  "ing": [
+   [
+    "Batata",
+    "700 g"
+   ],
+   [
+    "Cebola",
+    "1"
+   ],
+   [
+    "Azeite",
+    "150 ml"
+   ],
+   [
+    "Salada de tomate e alface",
+    "1 prato"
+   ],
+   [
+    "Pão",
+    "4 fatias"
+   ]
+  ],
+  "steps": [
+   "Corte a batata em lâminas finas e a cebola em tiras.",
+   "Cozinhe em azeite em lume brando 15 a 20 min, sem dourar, até a batata estar macia.",
+   "Escorra o azeite e junte aos ovos batidos com sal; deixe repousar 5 min.",
+   "Numa frigideira antiaderente, aqueça um fio de azeite e deite a mistura.",
+   "Cozinhe 5 min, vire com a ajuda de um prato e cozinhe mais 3 min.",
+   "Sirva morna com salada e pão."
+  ],
+  "tip": "Deixe a mistura repousar: a batata absorve o ovo e fica mais cremosa."
+ },
+ {
+  "id": "calamares",
+  "name": "Calamares à Romana com Salada",
+  "orig": "Calamares a la Romana",
+  "c": "Espanhola",
+  "t": "35 min",
+  "d": "Fácil",
+  "veg": false,
+  "al": [
+   "marisco",
+   "gluten",
+   "ovos"
+  ],
+  "est": 3.5,
+  "desc": "Anéis de lula em polme leve, fritos até ficarem crocantes, com limão e maionese de alho.",
+  "main": [
+   {
+    "re": "lula|choco",
+    "item": "Lulas em anéis",
+    "qty": "700 g",
+    "kg": 0.7,
+    "u": 1
+   }
+  ],
+  "ing": [
+   [
+    "Farinha",
+    "150 g"
+   ],
+   [
+    "Ovos",
+    "2"
+   ],
+   [
+    "Cerveja",
+    "100 ml"
+   ],
+   [
+    "Óleo para fritar",
+    "500 ml"
+   ],
+   [
+    "Limão",
+    "2"
+   ],
+   [
+    "Maionese",
+    "4 c. sopa"
+   ],
+   [
+    "Alho",
+    "1 dente"
+   ],
+   [
+    "Batata frita",
+    "600 g"
+   ]
+  ],
+  "steps": [
+   "Seque bem os anéis de lula e tempere com sal.",
+   "Misture farinha, ovos, cerveja e uma pitada de sal para um polme espesso.",
+   "Aqueça o óleo a 180 ºC.",
+   "Passe os anéis pelo polme e frite em pequenas doses 2 a 3 min.",
+   "Escorra em papel absorvente.",
+   "Misture maionese com alho ralado e sirva com limão e batata frita."
+  ],
+  "tip": "Frite em pequenas porções para o óleo não arrefecer."
+ },
+ {
+  "id": "pulpo-gallega",
+  "name": "Polvo à Galega",
+  "orig": "Pulpo a la Gallega",
+  "c": "Espanhola",
+  "t": "1h 15min",
+  "d": "Média",
+  "veg": false,
+  "al": [
+   "marisco"
+  ],
+  "est": 3.0,
+  "desc": "Polvo cozido em rodelas sobre batata, com azeite, sal grosso e paprika.",
+  "main": [
+   {
+    "re": "polvo",
+    "item": "Polvo",
+    "qty": "1,2 kg",
+    "kg": 1.2,
+    "u": 1
+   }
+  ],
+  "ing": [
+   [
+    "Batata",
+    "800 g"
+   ],
+   [
+    "Azeite",
+    "8 c. sopa"
+   ],
+   [
+    "Paprika doce e picante",
+    "1 c. sopa"
+   ],
+   [
+    "Sal grosso",
+    "a gosto"
+   ],
+   [
+    "Pão",
+    "4 fatias"
+   ]
+  ],
+  "steps": [
+   "Cozinhe o polvo em panela de pressão 35 a 40 min; deixe repousar na água.",
+   "Cozinhe a batata em rodelas na água do polvo 15 min.",
+   "Corte o polvo em rodelas de 1 cm com tesoura.",
+   "Disponha a batata na base e coloque o polvo por cima.",
+   "Tempere com sal grosso, paprika e muito azeite.",
+   "Sirva morno com pão."
+  ],
+  "tip": "Aproveite a água de cozedura do polvo para cozer a batata: ganha sabor."
+ },
+ {
+  "id": "moussaka",
+  "name": "Moussaka",
+  "orig": "Μουσακάς (Moussaka)",
+  "c": "Grega",
+  "t": "1h 30min",
+  "d": "Média",
+  "veg": false,
+  "al": [
+   "lactose",
+   "gluten",
+   "ovos"
+  ],
+  "est": 5.0,
+  "desc": "Camadas de beringela, ragù de carne e bechamel, gratinadas no forno.",
+  "main": [
+   {
+    "re": "picada|carne-picada",
+    "item": "Carne picada",
+    "qty": "600 g",
+    "kg": 0.6,
+    "u": 1,
+    "not": "frango|peru|peixe"
+   }
+  ],
+  "ing": [
+   [
+    "Beringela",
+    "3"
+   ],
+   [
+    "Batata",
+    "400 g"
+   ],
+   [
+    "Cebola",
+    "1"
+   ],
+   [
+    "Tomate pelado",
+    "400 g"
+   ],
+   [
+    "Canela",
+    "1 c. chá"
+   ],
+   [
+    "Leite",
+    "500 ml"
+   ],
+   [
+    "Manteiga",
+    "40 g"
+   ],
+   [
+    "Farinha",
+    "40 g"
+   ],
+   [
+    "Ovo",
+    "1"
+   ],
+   [
+    "Queijo ralado",
+    "80 g"
+   ],
+   [
+    "Azeite",
+    "5 c. sopa"
+   ],
+   [
+    "Salada grega",
+    "1 prato"
+   ]
+  ],
+  "steps": [
+   "Fatie a beringela e a batata, regue com azeite e asse a 200 ºC 20 min.",
+   "Refogue a cebola, junte a carne e doure 8 min.",
+   "Adicione tomate e canela; cozinhe 20 min.",
+   "Faça o bechamel (manteiga, farinha, leite) e junte o ovo batido.",
+   "Monte: batata, beringela, ragù, beringela e bechamel com queijo.",
+   "Asse a 180 ºC 35 min; deixe repousar 10 min e sirva com salada grega."
+  ],
+  "tip": "Assar a beringela evita que absorva muito óleo."
+ },
+ {
+  "id": "souvlaki",
+  "name": "Souvlaki de Frango com Tzatziki e Pita",
+  "orig": "Σουβλάκι (Souvlaki)",
+  "c": "Grega",
+  "t": "40 min",
+  "d": "Fácil",
+  "veg": false,
+  "al": [
+   "lactose",
+   "gluten"
+  ],
+  "est": 4.0,
+  "desc": "Espetadas de frango marinado em limão e orégãos, em pão pita com tzatziki.",
+  "main": [
+   {
+    "re": "frango|peito",
+    "item": "Peito de frango em cubos",
+    "qty": "700 g",
+    "kg": 0.7,
+    "u": 1,
+    "not": "peru|pato|porco|vaca|novilho|borrego|cordeiro|peixe"
+   }
+  ],
+  "ing": [
+   [
+    "Pães pita",
+    "4"
+   ],
+   [
+    "Iogurte grego",
+    "300 g"
+   ],
+   [
+    "Pepino",
+    "1"
+   ],
+   [
+    "Alho",
+    "3 dentes"
+   ],
+   [
+    "Limão",
+    "2"
+   ],
+   [
+    "Orégãos",
+    "1 c. sopa"
+   ],
+   [
+    "Azeite",
+    "4 c. sopa"
+   ],
+   [
+    "Tomate",
+    "2"
+   ],
+   [
+    "Cebola roxa",
+    "1"
+   ]
+  ],
+  "steps": [
+   "Marine o frango com limão, azeite, orégãos, alho, sal e pimenta, 1 hora.",
+   "Faça o tzatziki: iogurte, pepino ralado e espremido, alho, azeite e sal.",
+   "Enfie o frango em espetos.",
+   "Grelhe 10 a 12 min, virando.",
+   "Aqueça as pitas.",
+   "Sirva com tomate, cebola roxa e tzatziki."
+  ],
+  "tip": "Esprema o pepino ralado para o tzatziki não ficar aguado."
+ },
+ {
+  "id": "gyros-porco",
+  "name": "Gyros de Porco no Pão Pita",
+  "orig": "Γύρος (Gyros)",
+  "c": "Grega",
+  "t": "40 min",
+  "d": "Fácil",
+  "veg": false,
+  "al": [
+   "lactose",
+   "gluten"
+  ],
+  "est": 4.0,
+  "desc": "Tiras de porco temperadas e salteadas em pita com tzatziki, tomate e batata frita.",
+  "main": [
+   {
+    "re": "porco|lombo|bifana|febra",
+    "item": "Porco em tiras",
+    "qty": "700 g",
+    "kg": 0.7,
+    "u": 1,
+    "not": "frango|peru|pato|vaca|novilho|borrego|cordeiro|peixe|bacalhau"
+   }
+  ],
+  "ing": [
+   [
+    "Pães pita",
+    "4"
+   ],
+   [
+    "Iogurte grego",
+    "250 g"
+   ],
+   [
+    "Pepino",
+    "1/2"
+   ],
+   [
+    "Alho",
+    "3 dentes"
+   ],
+   [
+    "Orégãos",
+    "1 c. sopa"
+   ],
+   [
+    "Paprika",
+    "1 c. chá"
+   ],
+   [
+    "Tomate",
+    "2"
+   ],
+   [
+    "Cebola roxa",
+    "1"
+   ],
+   [
+    "Batata frita",
+    "500 g"
+   ],
+   [
+    "Azeite",
+    "3 c. sopa"
+   ]
+  ],
+  "steps": [
+   "Corte o porco em tiras finas e tempere com orégãos, paprika, alho, sal e azeite, 30 min.",
+   "Faça um molho de iogurte com pepino e alho.",
+   "Salteie o porco em frigideira muito quente, em duas vezes, 6 min.",
+   "Aqueça as pitas.",
+   "Recheie com porco, tomate, cebola, batata frita e molho.",
+   "Sirva de imediato."
+  ],
+  "tip": "Frigideira muito quente: a carne deve dourar, não cozer."
+ },
+ {
+  "id": "tagine-frango",
+  "name": "Tagine de Frango com Azeitonas e Limão",
+  "orig": "Tajine de Poulet aux Olives et Citron Confit",
+  "c": "Marroquina",
+  "t": "1h 10min",
+  "d": "Fácil",
+  "veg": false,
+  "al": [],
+  "est": 4.0,
+  "desc": "Frango estufado com especiarias, azeitonas e limão, servido com cuscuz.",
+  "main": [
+   {
+    "re": "frango|coxa|peito|perna",
+    "item": "Frango aos pedaços",
+    "qty": "1,2 kg",
+    "kg": 1.2,
+    "u": 1,
+    "not": "peru|pato|porco|vaca|novilho|borrego|cordeiro|peixe"
+   }
+  ],
+  "ing": [
+   [
+    "Cuscuz",
+    "300 g"
+   ],
+   [
+    "Cebola",
+    "2"
+   ],
+   [
+    "Alho",
+    "3 dentes"
+   ],
+   [
+    "Gengibre",
+    "1 c. sopa"
+   ],
+   [
+    "Cúrcuma",
+    "1 c. chá"
+   ],
+   [
+    "Cominhos",
+    "1 c. chá"
+   ],
+   [
+    "Canela",
+    "1/2 c. chá"
+   ],
+   [
+    "Azeitonas verdes",
+    "100 g"
+   ],
+   [
+    "Limão",
+    "1"
+   ],
+   [
+    "Coentros",
+    "1 molho"
+   ],
+   [
+    "Azeite",
+    "4 c. sopa"
+   ]
+  ],
+  "steps": [
+   "Tempere o frango com gengibre, cúrcuma, cominhos, canela, sal e pimenta.",
+   "Doure o frango em azeite; reserve.",
+   "Refogue a cebola e o alho 8 min.",
+   "Regresse o frango, junte meia chávena de água, tape e cozinhe 35 min.",
+   "Junte as azeitonas e rodelas de limão; cozinhe 10 min.",
+   "Prepare o cuscuz com água a ferver e azeite; sirva com o frango e coentros."
+  ],
+  "tip": "Cozinhe tapado e em lume brando: o frango fica sumarento."
+ },
+ {
+  "id": "tagine-borrego",
+  "name": "Tagine de Borrego com Ameixas",
+  "orig": "Tajine d'Agneau aux Pruneaux",
+  "c": "Marroquina",
+  "t": "1h 45min",
+  "d": "Média",
+  "veg": false,
+  "al": [
+   "frutos-secos",
+   "gluten"
+  ],
+  "est": 5.5,
+  "desc": "Borrego cozinhado lentamente com cebola, mel, ameixas e amêndoas, com cuscuz.",
+  "main": [
+   {
+    "re": "borrego|cordeiro|cabrito",
+    "item": "Borrego em pedaços",
+    "qty": "1 kg",
+    "kg": 1,
+    "u": 1
+   }
+  ],
+  "ing": [
+   [
+    "Cuscuz",
+    "300 g"
+   ],
+   [
+    "Cebola",
+    "2"
+   ],
+   [
+    "Alho",
+    "3 dentes"
+   ],
+   [
+    "Canela",
+    "1 c. chá"
+   ],
+   [
+    "Gengibre",
+    "1 c. chá"
+   ],
+   [
+    "Ameixas secas",
+    "150 g"
+   ],
+   [
+    "Mel",
+    "2 c. sopa"
+   ],
+   [
+    "Amêndoas",
+    "50 g"
+   ],
+   [
+    "Azeite",
+    "4 c. sopa"
+   ]
+  ],
+  "steps": [
+   "Tempere o borrego com gengibre, canela, sal e pimenta.",
+   "Doure em azeite; reserve.",
+   "Refogue a cebola e o alho 10 min.",
+   "Regresse a carne, cubra com água e cozinhe tapado em lume brando 1 hora.",
+   "Junte ameixas e mel e cozinhe mais 20 min.",
+   "Torre as amêndoas, prepare o cuscuz e sirva."
+  ],
+  "tip": "O doce das ameixas equilibra a gordura do borrego."
+ },
+ {
+  "id": "cuscuz-grao",
+  "name": "Cuscuz com Legumes e Grão",
+  "orig": "Couscous aux Légumes",
+  "c": "Marroquina",
+  "t": "40 min",
+  "d": "Fácil",
+  "veg": true,
+  "al": [
+   "gluten"
+  ],
+  "est": 3.5,
+  "desc": "Cuscuz fofo com estufado de legumes e grão, temperado com ras el hanout.",
+  "main": [
+   {
+    "re": "grao",
+    "item": "Grão cozido",
+    "qty": "600 g",
+    "kg": 0.6,
+    "u": 1
+   }
+  ],
+  "ing": [
+   [
+    "Cuscuz",
+    "300 g"
+   ],
+   [
+    "Cenoura",
+    "2"
+   ],
+   [
+    "Courgette",
+    "2"
+   ],
+   [
+    "Abóbora",
+    "300 g"
+   ],
+   [
+    "Cebola",
+    "1"
+   ],
+   [
+    "Tomate pelado",
+    "300 g"
+   ],
+   [
+    "Ras el hanout ou caril",
+    "2 c. chá"
+   ],
+   [
+    "Azeite",
+    "4 c. sopa"
+   ],
+   [
+    "Coentros",
+    "1 molho"
+   ]
+  ],
+  "steps": [
+   "Refogue a cebola em azeite 5 min e junte as especiarias.",
+   "Adicione cenoura e abóbora em pedaços, tomate e 300 ml de água.",
+   "Cozinhe 15 min, junte a courgette e o grão e cozinhe 10 min.",
+   "Hidrate o cuscuz com água a ferver, tape 5 min e solte com um garfo.",
+   "Sirva o estufado sobre o cuscuz com coentros."
+  ],
+  "tip": "Solte o cuscuz com um fio de azeite para ficar fofo."
+ },
+ {
+  "id": "chili",
+  "name": "Chili con Carne com Arroz",
+  "orig": "Chili con Carne",
+  "c": "Mexicana",
+  "t": "1h",
+  "d": "Fácil",
+  "veg": false,
+  "al": [],
+  "est": 3.5,
+  "desc": "Carne picada com feijão encarnado, tomate e especiarias, servida com arroz e coentros.",
+  "main": [
+   {
+    "re": "picada|carne-picada",
+    "item": "Carne picada",
+    "qty": "600 g",
+    "kg": 0.6,
+    "u": 1,
+    "not": "frango|peru|peixe"
+   }
+  ],
+  "ing": [
+   [
+    "Feijão encarnado",
+    "400 g"
+   ],
+   [
+    "Arroz",
+    "300 g"
+   ],
+   [
+    "Cebola",
+    "1"
+   ],
+   [
+    "Alho",
+    "3 dentes"
+   ],
+   [
+    "Pimento",
+    "1"
+   ],
+   [
+    "Tomate pelado",
+    "400 g"
+   ],
+   [
+    "Cominhos",
+    "1 c. chá"
+   ],
+   [
+    "Paprika fumada",
+    "1 c. chá"
+   ],
+   [
+    "Piri-piri ou malagueta",
+    "a gosto"
+   ],
+   [
+    "Coentros",
+    "1 molho"
+   ],
+   [
+    "Azeite",
+    "3 c. sopa"
+   ]
+  ],
+  "steps": [
+   "Refogue cebola, alho e pimento em azeite 8 min.",
+   "Junte a carne e doure 8 min.",
+   "Adicione cominhos, paprika, piri-piri, sal e tomate.",
+   "Cozinhe tapado em lume brando 30 min.",
+   "Junte o feijão escorrido e cozinhe 10 min.",
+   "Cozinhe o arroz e sirva com coentros."
+  ],
+  "tip": "Uma colher de cacau ou chocolate negro dá profundidade ao chili."
+ },
+ {
+  "id": "tacos-porco",
+  "name": "Tacos de Porco com Salsa Fresca",
+  "orig": "Tacos de Carnitas",
+  "c": "Mexicana",
+  "t": "50 min",
+  "d": "Fácil",
+  "veg": false,
+  "al": [
+   "gluten"
+  ],
+  "est": 4.0,
+  "desc": "Porco desfiado e crocante em tortilhas de milho, com cebola roxa, coentros e lima.",
+  "main": [
+   {
+    "re": "porco|lombo|pernil|entrecosto",
+    "item": "Porco em pedaços",
+    "qty": "800 g",
+    "kg": 0.8,
+    "u": 1,
+    "not": "frango|peru|pato|vaca|novilho|borrego|cordeiro|peixe|bacalhau"
+   }
+  ],
+  "ing": [
+   [
+    "Tortilhas",
+    "12"
+   ],
+   [
+    "Cebola roxa",
+    "1"
+   ],
+   [
+    "Coentros",
+    "1 molho"
+   ],
+   [
+    "Lima",
+    "2"
+   ],
+   [
+    "Cominhos",
+    "1 c. chá"
+   ],
+   [
+    "Orégãos",
+    "1 c. chá"
+   ],
+   [
+    "Laranja",
+    "1"
+   ],
+   [
+    "Tomate",
+    "3"
+   ],
+   [
+    "Abacate",
+    "1"
+   ],
+   [
+    "Azeite",
+    "2 c. sopa"
+   ]
+  ],
+  "steps": [
+   "Tempere o porco com sal, cominhos, orégãos e sumo de laranja.",
+   "Cozinhe em lume brando, tapado, 40 min.",
+   "Desfie e doure numa frigideira com azeite até ficar crocante nas pontas.",
+   "Prepare a salsa com tomate, cebola, coentros, lima e sal.",
+   "Aqueça as tortilhas.",
+   "Monte os tacos e sirva com abacate e lima."
+  ],
+  "tip": "Doure a carne no fim para ficar crocante."
+ },
+ {
+  "id": "quesadillas",
+  "name": "Quesadillas de Frango e Queijo",
+  "orig": "Quesadillas de Pollo",
+  "c": "Mexicana",
+  "t": "30 min",
+  "d": "Fácil",
+  "veg": false,
+  "al": [
+   "gluten",
+   "lactose"
+  ],
+  "est": 4.0,
+  "desc": "Tortilhas recheadas com frango, pimento e queijo derretido, com guacamole.",
+  "main": [
+   {
+    "re": "frango|peito",
+    "item": "Peito de frango",
+    "qty": "600 g",
+    "kg": 0.6,
+    "u": 1,
+    "not": "peru|pato|porco|vaca|novilho|borrego|cordeiro|peixe"
+   }
+  ],
+  "ing": [
+   [
+    "Tortilhas grandes",
+    "8"
+   ],
+   [
+    "Queijo ralado",
+    "250 g"
+   ],
+   [
+    "Pimento",
+    "1"
+   ],
+   [
+    "Cebola",
+    "1"
+   ],
+   [
+    "Cominhos",
+    "1 c. chá"
+   ],
+   [
+    "Paprika",
+    "1 c. chá"
+   ],
+   [
+    "Abacate",
+    "2"
+   ],
+   [
+    "Lima",
+    "1"
+   ],
+   [
+    "Azeite",
+    "2 c. sopa"
+   ]
+  ],
+  "steps": [
+   "Corte o frango em tiras e tempere com cominhos, paprika e sal.",
+   "Salteie em azeite 6 min com pimento e cebola.",
+   "Esmague o abacate com lima e sal para o guacamole.",
+   "Coloque queijo e recheio em metade da tortilha e dobre.",
+   "Doure em frigideira 2 a 3 min de cada lado.",
+   "Corte em triângulos e sirva com guacamole."
+  ],
+  "tip": "Frigideira em lume médio: o queijo derrete sem queimar a tortilha."
+ },
+ {
+  "id": "moqueca",
+  "name": "Moqueca de Peixe com Arroz",
+  "orig": "Moqueca Capixaba",
+  "c": "Brasileira",
+  "t": "45 min",
+  "d": "Fácil",
+  "veg": false,
+  "al": [
+   "peixe"
+  ],
+  "est": 4.5,
+  "desc": "Peixe cozinhado em leite de coco, tomate e pimento, com coentros e arroz branco.",
+  "main": [
+   {
+    "re": "pescada|tamboril|cherne|dourada|robalo|peixe|tintureira|espadarte|cavala",
+    "item": "Postas de peixe",
+    "qty": "800 g",
+    "kg": 0.8,
+    "u": 1
+   }
+  ],
+  "ing": [
+   [
+    "Arroz branco",
+    "300 g"
+   ],
+   [
+    "Leite de coco",
+    "400 ml"
+   ],
+   [
+    "Cebola",
+    "2"
+   ],
+   [
+    "Tomate",
+    "3"
+   ],
+   [
+    "Pimento",
+    "1"
+   ],
+   [
+    "Alho",
+    "3 dentes"
+   ],
+   [
+    "Coentros",
+    "1 molho"
+   ],
+   [
+    "Lima",
+    "1"
+   ],
+   [
+    "Azeite de dendê ou azeite",
+    "3 c. sopa"
+   ],
+   [
+    "Piri-piri",
+    "a gosto"
+   ]
+  ],
+  "steps": [
+   "Tempere o peixe com lima, alho, sal e pimenta, 20 min.",
+   "Em panela larga, faça camadas de cebola, tomate e pimento em rodelas.",
+   "Coloque o peixe por cima e regue com azeite.",
+   "Junte o leite de coco e piri-piri; tape e cozinhe 15 a 20 min em lume brando.",
+   "Cozinhe o arroz branco.",
+   "Finalize com coentros e sirva com arroz."
+  ],
+  "tip": "Não mexa o peixe: abane suavemente a panela."
+ },
+ {
+  "id": "strogonoff",
+  "name": "Strogonoff de Frango com Arroz e Batata Palha",
+  "orig": "Estrogonofe de Frango",
+  "c": "Brasileira",
+  "t": "35 min",
+  "d": "Fácil",
+  "veg": false,
+  "al": [
+   "lactose"
+  ],
+  "est": 3.8,
+  "desc": "Frango em molho cremoso de tomate e natas, com arroz branco e batata palha.",
+  "main": [
+   {
+    "re": "frango|peito",
+    "item": "Peito de frango em cubos",
+    "qty": "700 g",
+    "kg": 0.7,
+    "u": 1,
+    "not": "peru|pato|porco|vaca|novilho|borrego|cordeiro|peixe"
+   }
+  ],
+  "ing": [
+   [
+    "Arroz branco",
+    "300 g"
+   ],
+   [
+    "Batata palha",
+    "150 g"
+   ],
+   [
+    "Natas",
+    "200 ml"
+   ],
+   [
+    "Cogumelos",
+    "200 g"
+   ],
+   [
+    "Cebola",
+    "1"
+   ],
+   [
+    "Alho",
+    "2 dentes"
+   ],
+   [
+    "Ketchup",
+    "2 c. sopa"
+   ],
+   [
+    "Mostarda",
+    "1 c. chá"
+   ],
+   [
+    "Conhaque (opcional)",
+    "1 c. sopa"
+   ],
+   [
+    "Azeite",
+    "3 c. sopa"
+   ]
+  ],
+  "steps": [
+   "Tempere o frango com sal, pimenta e alho.",
+   "Doure em azeite; reserve.",
+   "Refogue a cebola, junte os cogumelos laminados e salteie 5 min.",
+   "Regresse o frango, adicione ketchup, mostarda e conhaque; cozinhe 5 min.",
+   "Junte as natas em lume brando e aqueça sem ferver, 3 min.",
+   "Sirva com arroz e batata palha."
+  ],
+  "tip": "Junte as natas fora do lume forte para não talhar."
+ },
+ {
+  "id": "tikka-masala",
+  "name": "Frango Tikka Masala com Arroz Basmati",
+  "orig": "Chicken Tikka Masala",
+  "c": "Indiana",
+  "t": "55 min",
+  "d": "Média",
+  "veg": false,
+  "al": [
+   "lactose"
+  ],
+  "est": 4.5,
+  "desc": "Frango marinado em iogurte e especiarias num molho cremoso de tomate.",
+  "main": [
+   {
+    "re": "frango|peito|coxa",
+    "item": "Frango em pedaços",
+    "qty": "800 g",
+    "kg": 0.8,
+    "u": 1,
+    "not": "peru|pato|porco|vaca|novilho|borrego|cordeiro|peixe"
+   }
+  ],
+  "ing": [
+   [
+    "Arroz basmati",
+    "300 g"
+   ],
+   [
+    "Iogurte natural",
+    "150 g"
+   ],
+   [
+    "Tomate pelado",
+    "400 g"
+   ],
+   [
+    "Natas",
+    "150 ml"
+   ],
+   [
+    "Cebola",
+    "2"
+   ],
+   [
+    "Alho",
+    "3 dentes"
+   ],
+   [
+    "Gengibre",
+    "1 c. sopa"
+   ],
+   [
+    "Garam masala",
+    "2 c. chá"
+   ],
+   [
+    "Paprika",
+    "1 c. chá"
+   ],
+   [
+    "Cúrcuma",
+    "1/2 c. chá"
+   ],
+   [
+    "Coentros",
+    "1 molho"
+   ],
+   [
+    "Azeite",
+    "3 c. sopa"
+   ]
+  ],
+  "steps": [
+   "Marine o frango com iogurte, metade das especiarias, sal e sumo de limão, 1 hora.",
+   "Doure o frango em azeite; reserve.",
+   "Refogue a cebola, o alho e o gengibre 8 min; junte as especiarias restantes.",
+   "Adicione o tomate e cozinhe 15 min; triture o molho.",
+   "Regresse o frango, junte as natas e cozinhe 10 min.",
+   "Cozinhe o arroz basmati e sirva com coentros."
+  ],
+  "tip": "Quanto mais tempo marinar, mais macio e saboroso fica."
+ },
+ {
+  "id": "curry-grao",
+  "name": "Curry de Grão e Espinafres",
+  "orig": "Chana Saag",
+  "c": "Indiana",
+  "t": "35 min",
+  "d": "Fácil",
+  "veg": true,
+  "al": [],
+  "est": 3.0,
+  "desc": "Grão em molho de tomate e especiarias, com espinafres frescos e arroz.",
+  "main": [
+   {
+    "re": "grao",
+    "item": "Grão cozido",
+    "qty": "800 g",
+    "kg": 0.8,
+    "u": 1
+   }
+  ],
+  "ing": [
+   [
+    "Espinafres",
+    "300 g"
+   ],
+   [
+    "Arroz basmati",
+    "300 g"
+   ],
+   [
+    "Cebola",
+    "1"
+   ],
+   [
+    "Alho",
+    "3 dentes"
+   ],
+   [
+    "Gengibre",
+    "1 c. sopa"
+   ],
+   [
+    "Tomate pelado",
+    "400 g"
+   ],
+   [
+    "Garam masala",
+    "2 c. chá"
+   ],
+   [
+    "Cúrcuma",
+    "1/2 c. chá"
+   ],
+   [
+    "Leite de coco",
+    "200 ml"
+   ],
+   [
+    "Azeite",
+    "3 c. sopa"
+   ]
+  ],
+  "steps": [
+   "Refogue cebola, alho e gengibre em azeite 8 min.",
+   "Junte as especiarias e mexa 1 min.",
+   "Adicione o tomate e cozinhe 10 min.",
+   "Junte o grão e o leite de coco; cozinhe 10 min.",
+   "Adicione os espinafres e cozinhe 2 min.",
+   "Sirva com arroz basmati."
+  ],
+  "tip": "Esmague parte do grão para engrossar o molho."
+ },
+ {
+  "id": "dal",
+  "name": "Dal de Lentilhas com Arroz e Pão Naan",
+  "orig": "Tadka Dal",
+  "c": "Indiana",
+  "t": "40 min",
+  "d": "Fácil",
+  "veg": true,
+  "al": [
+   "gluten"
+  ],
+  "est": 3.0,
+  "desc": "Papa de lentilhas vermelhas cremosa, temperada com cominhos, alho e malagueta.",
+  "main": [
+   {
+    "re": "lentilha",
+    "item": "Lentilhas vermelhas",
+    "qty": "400 g",
+    "kg": 0.4,
+    "u": 1
+   }
+  ],
+  "ing": [
+   [
+    "Arroz basmati",
+    "300 g"
+   ],
+   [
+    "Cebola",
+    "1"
+   ],
+   [
+    "Tomate",
+    "2"
+   ],
+   [
+    "Alho",
+    "3 dentes"
+   ],
+   [
+    "Gengibre",
+    "1 c. sopa"
+   ],
+   [
+    "Cúrcuma",
+    "1 c. chá"
+   ],
+   [
+    "Cominhos",
+    "1 c. chá"
+   ],
+   [
+    "Malagueta",
+    "1"
+   ],
+   [
+    "Pão naan",
+    "4"
+   ],
+   [
+    "Coentros",
+    "1 molho"
+   ],
+   [
+    "Óleo",
+    "3 c. sopa"
+   ]
+  ],
+  "steps": [
+   "Lave as lentilhas e cozinhe com cúrcuma e 1 l de água 20 min.",
+   "Refogue cebola, gengibre e tomate 10 min e junte às lentilhas.",
+   "Faça o tadka: aqueça óleo e frite cominhos, alho e malagueta 1 min.",
+   "Junte o tadka às lentilhas.",
+   "Cozinhe o arroz e aqueça o pão.",
+   "Sirva com coentros."
+  ],
+  "tip": "O tadka final dá o aroma característico do dal."
+ },
+ {
+  "id": "pad-thai",
+  "name": "Pad Thai de Camarão",
+  "orig": "ผัดไทย (Pad Thai)",
+  "c": "Tailandesa",
+  "t": "35 min",
+  "d": "Média",
+  "veg": false,
+  "al": [
+   "marisco",
+   "ovos",
+   "frutos-secos",
+   "soja",
+   "peixe"
+  ],
+  "est": 4.5,
+  "desc": "Noodles de arroz salteados com camarão, ovo, rebentos de soja e amendoim.",
+  "main": [
+   {
+    "re": "camarao|gamba",
+    "item": "Camarão",
+    "qty": "500 g",
+    "kg": 0.5,
+    "u": 1
+   }
+  ],
+  "ing": [
+   [
+    "Noodles de arroz",
+    "250 g"
+   ],
+   [
+    "Ovos",
+    "2"
+   ],
+   [
+    "Rebentos de soja",
+    "150 g"
+   ],
+   [
+    "Cebolinho",
+    "4"
+   ],
+   [
+    "Alho",
+    "2 dentes"
+   ],
+   [
+    "Molho de peixe",
+    "2 c. sopa"
+   ],
+   [
+    "Molho de soja",
+    "1 c. sopa"
+   ],
+   [
+    "Açúcar",
+    "1 c. sopa"
+   ],
+   [
+    "Tamarindo ou lima",
+    "2 c. sopa"
+   ],
+   [
+    "Amendoim torrado",
+    "50 g"
+   ],
+   [
+    "Óleo",
+    "3 c. sopa"
+   ],
+   [
+    "Lima",
+    "1"
+   ]
+  ],
+  "steps": [
+   "Demolhe os noodles em água morna 20 min e escorra.",
+   "Misture o molho: peixe, soja, açúcar e tamarindo.",
+   "Salteie o alho e os camarões em óleo bem quente 2 min; reserve.",
+   "Junte os noodles e o molho e salteie 3 min.",
+   "Faça um canto, mexa os ovos, misture tudo.",
+   "Junte rebentos, cebolinho e camarão; sirva com amendoim e lima."
+  ],
+  "tip": "Frite em lume muito forte e em pequenas quantidades."
+ },
+ {
+  "id": "curry-verde",
+  "name": "Curry Verde de Frango",
+  "orig": "แกงเขียวหวานไก่ (Gaeng Keow Wan)",
+  "c": "Tailandesa",
+  "t": "40 min",
+  "d": "Fácil",
+  "veg": false,
+  "al": [
+   "peixe"
+  ],
+  "est": 4.5,
+  "desc": "Frango em leite de coco e pasta de caril verde, com legumes e arroz jasmim.",
+  "main": [
+   {
+    "re": "frango|peito|coxa",
+    "item": "Frango em tiras",
+    "qty": "700 g",
+    "kg": 0.7,
+    "u": 1,
+    "not": "peru|pato|porco|vaca|novilho|borrego|cordeiro|peixe"
+   }
+  ],
+  "ing": [
+   [
+    "Arroz jasmim",
+    "300 g"
+   ],
+   [
+    "Leite de coco",
+    "400 ml"
+   ],
+   [
+    "Pasta de caril verde",
+    "3 c. sopa"
+   ],
+   [
+    "Beringela ou courgette",
+    "300 g"
+   ],
+   [
+    "Pimento",
+    "1"
+   ],
+   [
+    "Molho de peixe",
+    "1 c. sopa"
+   ],
+   [
+    "Açúcar",
+    "1 c. chá"
+   ],
+   [
+    "Manjericão",
+    "1 molho"
+   ],
+   [
+    "Lima",
+    "1"
+   ]
+  ],
+  "steps": [
+   "Frite a pasta de caril em 3 colheres de leite de coco espesso 2 min.",
+   "Junte o frango e cozinhe 4 min.",
+   "Adicione o restante leite de coco e 100 ml de água.",
+   "Junte os legumes e cozinhe 12 min.",
+   "Tempere com molho de peixe, açúcar e lima.",
+   "Sirva com arroz jasmim e manjericão."
+  ],
+  "tip": "Ajuste o picante com mais ou menos pasta de caril."
+ },
+ {
+  "id": "frango-agridoce",
+  "name": "Frango Agridoce com Arroz Chau-chau",
+  "orig": "糖醋鸡 (Frango Agridoce)",
+  "c": "Chinesa",
+  "t": "45 min",
+  "d": "Fácil",
+  "veg": false,
+  "al": [
+   "soja",
+   "ovos",
+   "gluten"
+  ],
+  "est": 4.0,
+  "desc": "Frango crocante em molho agridoce com pimento e ananás, com arroz salteado.",
+  "main": [
+   {
+    "re": "frango|peito",
+    "item": "Peito de frango em cubos",
+    "qty": "700 g",
+    "kg": 0.7,
+    "u": 1,
+    "not": "peru|pato|porco|vaca|novilho|borrego|cordeiro|peixe"
+   }
+  ],
+  "ing": [
+   [
+    "Arroz",
+    "300 g"
+   ],
+   [
+    "Ovos",
+    "3"
+   ],
+   [
+    "Fécula de milho",
+    "5 c. sopa"
+   ],
+   [
+    "Pimento",
+    "1"
+   ],
+   [
+    "Cebola",
+    "1"
+   ],
+   [
+    "Ananás em calda",
+    "150 g"
+   ],
+   [
+    "Vinagre",
+    "3 c. sopa"
+   ],
+   [
+    "Ketchup",
+    "4 c. sopa"
+   ],
+   [
+    "Açúcar",
+    "3 c. sopa"
+   ],
+   [
+    "Molho de soja",
+    "2 c. sopa"
+   ],
+   [
+    "Óleo",
+    "300 ml"
+   ]
+  ],
+  "steps": [
+   "Passe o frango por ovo e fécula e frite em óleo quente 5 a 6 min até dourar.",
+   "Misture vinagre, ketchup, açúcar, soja e água com fécula para o molho.",
+   "Salteie pimento e cebola 3 min; junte o molho e deixe engrossar.",
+   "Envolva o frango no molho.",
+   "Cozinhe o arroz, salteie com ovo mexido, soja e cebolinho.",
+   "Sirva o frango com arroz."
+  ],
+  "tip": "Sirva logo após envolver no molho para manter o crocante."
+ },
+ {
+  "id": "vaca-brocolos",
+  "name": "Vaca Salteada com Brócolos e Arroz",
+  "orig": "西兰花牛肉 (Beef and Broccoli)",
+  "c": "Chinesa",
+  "t": "30 min",
+  "d": "Fácil",
+  "veg": false,
+  "al": [
+   "soja"
+  ],
+  "est": 4.0,
+  "desc": "Tiras de vaca em molho de ostra e soja, com brócolos crocantes.",
+  "main": [
+   {
+    "re": "bife|novilho|vaca|vitela|alcatra|fraldinha",
+    "item": "Vaca em tiras",
+    "qty": "600 g",
+    "kg": 0.6,
+    "u": 1,
+    "not": "frango|peru|pato|porco|peixe|atum|salmao|pescada|cherne|camarao|lula|polvo|bacalhau|tintureira|espadarte|queijo|borrego"
+   }
+  ],
+  "ing": [
+   [
+    "Brócolos",
+    "400 g"
+   ],
+   [
+    "Arroz",
+    "300 g"
+   ],
+   [
+    "Alho",
+    "3 dentes"
+   ],
+   [
+    "Gengibre",
+    "1 c. sopa"
+   ],
+   [
+    "Molho de soja",
+    "3 c. sopa"
+   ],
+   [
+    "Molho de ostra",
+    "2 c. sopa"
+   ],
+   [
+    "Fécula de milho",
+    "1 c. sopa"
+   ],
+   [
+    "Açúcar",
+    "1 c. chá"
+   ],
+   [
+    "Óleo",
+    "3 c. sopa"
+   ]
+  ],
+  "steps": [
+   "Corte a carne em tiras finas contra a fibra e marine com soja e fécula 15 min.",
+   "Escalde os brócolos 2 min e escorra.",
+   "Aqueça o óleo no wok e salteie a carne 2 min; reserve.",
+   "Salteie alho e gengibre 30 s, junte os brócolos.",
+   "Regresse a carne com molho de ostra, soja e açúcar; salteie 2 min.",
+   "Sirva com arroz branco."
+  ],
+  "tip": "O wok deve estar muito quente para selar a carne."
+ },
+ {
+  "id": "teriyaki-salmao",
+  "name": "Salmão Teriyaki com Arroz",
+  "orig": "鮭の照り焼き (Sake no Teriyaki)",
+  "c": "Japonesa",
+  "t": "30 min",
+  "d": "Fácil",
+  "veg": false,
+  "al": [
+   "peixe",
+   "soja",
+   "gluten"
+  ],
+  "est": 3.8,
+  "desc": "Salmão glaceado em molho teriyaki, com arroz japonês e legumes ao vapor.",
+  "main": [
+   {
+    "re": "salmao|tintureira|atum",
+    "item": "Lombos de salmão",
+    "qty": "600 g",
+    "kg": 0.6,
+    "u": 1
+   }
+  ],
+  "ing": [
+   [
+    "Arroz de sushi",
+    "300 g"
+   ],
+   [
+    "Molho de soja",
+    "4 c. sopa"
+   ],
+   [
+    "Mirin ou vinho branco",
+    "3 c. sopa"
+   ],
+   [
+    "Açúcar",
+    "1 c. sopa"
+   ],
+   [
+    "Gengibre",
+    "1 c. chá"
+   ],
+   [
+    "Brócolos",
+    "300 g"
+   ],
+   [
+    "Sementes de sésamo",
+    "1 c. sopa"
+   ],
+   [
+    "Óleo",
+    "1 c. sopa"
+   ]
+  ],
+  "steps": [
+   "Cozinhe o arroz de sushi segundo as instruções.",
+   "Misture soja, mirin, açúcar e gengibre.",
+   "Doure o salmão em óleo, 3 min por lado.",
+   "Junte o molho e cozinhe 3 min, regando até glacear.",
+   "Cozinhe os brócolos ao vapor 4 min.",
+   "Sirva sobre arroz com sésamo."
+  ],
+  "tip": "Regue o salmão várias vezes com o molho para ficar brilhante."
+ },
+ {
+  "id": "katsu-porco",
+  "name": "Tonkatsu com Arroz e Repolho",
+  "orig": "とんかつ (Tonkatsu)",
+  "c": "Japonesa",
+  "t": "35 min",
+  "d": "Média",
+  "veg": false,
+  "al": [
+   "gluten",
+   "ovos",
+   "soja"
+  ],
+  "est": 3.8,
+  "desc": "Costeleta de porco panada com panko, servida com repolho e molho tonkatsu.",
+  "main": [
+   {
+    "re": "porco|lombo|costeleta|bifana",
+    "item": "Lombo ou costeletas de porco",
+    "qty": "600 g",
+    "kg": 0.6,
+    "u": 1,
+    "not": "frango|peru|pato|vaca|novilho|borrego|cordeiro|peixe|bacalhau"
+   }
+  ],
+  "ing": [
+   [
+    "Arroz de sushi",
+    "300 g"
+   ],
+   [
+    "Panko ou pão ralado",
+    "120 g"
+   ],
+   [
+    "Ovos",
+    "2"
+   ],
+   [
+    "Farinha",
+    "4 c. sopa"
+   ],
+   [
+    "Repolho",
+    "1/4"
+   ],
+   [
+    "Ketchup",
+    "2 c. sopa"
+   ],
+   [
+    "Molho Worcestershire",
+    "2 c. sopa"
+   ],
+   [
+    "Molho de soja",
+    "1 c. sopa"
+   ],
+   [
+    "Óleo para fritar",
+    "400 ml"
+   ]
+  ],
+  "steps": [
+   "Bata as costeletas até 1,5 cm e tempere.",
+   "Passe por farinha, ovo e panko.",
+   "Frite em óleo a 170 ºC 4 a 5 min de cada lado.",
+   "Misture ketchup, Worcestershire e soja para o molho.",
+   "Corte o repolho em tiras finíssimas.",
+   "Corte o tonkatsu em tiras e sirva com arroz, repolho e molho."
+  ],
+  "tip": "O repolho cru fresco equilibra a fritura."
+ },
+ {
+  "id": "bulgogi",
+  "name": "Bulgogi com Arroz e Pickles",
+  "orig": "불고기 (Bulgogi)",
+  "c": "Coreana",
+  "t": "40 min",
+  "d": "Fácil",
+  "veg": false,
+  "al": [
+   "soja",
+   "frutos-secos"
+  ],
+  "est": 3.5,
+  "desc": "Carne em fatias finas marinada em soja, pera e alho, salteada e servida com arroz.",
+  "main": [
+   {
+    "re": "bife|novilho|vaca|porco|bifana|lombo",
+    "item": "Carne em fatias finas",
+    "qty": "600 g",
+    "kg": 0.6,
+    "u": 1,
+    "not": "frango|peru|pato|peixe|bacalhau|borrego"
+   }
+  ],
+  "ing": [
+   [
+    "Arroz",
+    "300 g"
+   ],
+   [
+    "Molho de soja",
+    "5 c. sopa"
+   ],
+   [
+    "Açúcar",
+    "2 c. sopa"
+   ],
+   [
+    "Alho",
+    "4 dentes"
+   ],
+   [
+    "Pera",
+    "1/2"
+   ],
+   [
+    "Óleo de sésamo",
+    "1 c. sopa"
+   ],
+   [
+    "Cebolinho",
+    "4"
+   ],
+   [
+    "Sementes de sésamo",
+    "1 c. sopa"
+   ],
+   [
+    "Pepino",
+    "1"
+   ],
+   [
+    "Vinagre",
+    "2 c. sopa"
+   ],
+   [
+    "Alface",
+    "8 folhas"
+   ]
+  ],
+  "steps": [
+   "Triture a pera com alho, soja, açúcar e óleo de sésamo para a marinada.",
+   "Marine as fatias finas de carne 1 hora (ou mais).",
+   "Prepare pickles: pepino em rodelas com vinagre, açúcar e sal.",
+   "Cozinhe o arroz.",
+   "Salteie a carne em frigideira muito quente, em duas vezes, 3 min.",
+   "Sirva com arroz, pickles, alface (para enrolar) e sésamo."
+  ],
+  "tip": "A pera amacia a carne e equilibra o sabor."
+ },
+ {
+  "id": "bo-kho",
+  "name": "Bò Kho – Estufado de Vaca Vietnamita",
+  "orig": "Bò Kho",
+  "c": "Vietnamita",
+  "t": "1h 45min",
+  "d": "Média",
+  "veg": false,
+  "al": [
+   "peixe"
+  ],
+  "est": 4.5,
+  "desc": "Vaca estufada com anis-estrelado, canela e citronela, com cenoura e pão.",
+  "main": [
+   {
+    "re": "estufar|chambao|novilho|vaca",
+    "item": "Vaca para estufar",
+    "qty": "1 kg",
+    "kg": 1,
+    "u": 1,
+    "not": "frango|peru|pato|porco|peixe|atum|salmao|pescada|cherne|camarao|lula|polvo|bacalhau|tintureira|espadarte|queijo|borrego"
+   }
+  ],
+  "ing": [
+   [
+    "Cenoura",
+    "3"
+   ],
+   [
+    "Cebola",
+    "2"
+   ],
+   [
+    "Alho",
+    "4 dentes"
+   ],
+   [
+    "Gengibre",
+    "1 c. sopa"
+   ],
+   [
+    "Anis-estrelado",
+    "2"
+   ],
+   [
+    "Canela",
+    "1 pau"
+   ],
+   [
+    "Citronela",
+    "2 talos"
+   ],
+   [
+    "Concentrado de tomate",
+    "2 c. sopa"
+   ],
+   [
+    "Molho de peixe",
+    "2 c. sopa"
+   ],
+   [
+    "Pão",
+    "4"
+   ],
+   [
+    "Coentros",
+    "1 molho"
+   ]
+  ],
+  "steps": [
+   "Corte a carne em cubos e doure em lotes.",
+   "Refogue cebola, alho, gengibre e citronela esmagada.",
+   "Junte as especiarias e o concentrado de tomate.",
+   "Cubra com água, adicione molho de peixe e cozinhe tapado 1 hora.",
+   "Junte as cenouras em pedaços e cozinhe 30 min.",
+   "Sirva com pão, coentros e rodelas de lima."
+  ],
+  "tip": "Sirva com pão para molhar o molho."
+ },
+ {
+  "id": "kebab-frango",
+  "name": "Kebab de Frango com Arroz e Molho de Iogurte",
+  "orig": "Tavuk Şiş",
+  "c": "Turca",
+  "t": "45 min",
+  "d": "Fácil",
+  "veg": false,
+  "al": [
+   "lactose"
+  ],
+  "est": 3.8,
+  "desc": "Espetadas de frango marinadas em iogurte e especiarias, com arroz e salada.",
+  "main": [
+   {
+    "re": "frango|peito|coxa",
+    "item": "Frango em cubos",
+    "qty": "700 g",
+    "kg": 0.7,
+    "u": 1,
+    "not": "peru|pato|porco|vaca|novilho|borrego|cordeiro|peixe"
+   }
+  ],
+  "ing": [
+   [
+    "Arroz",
+    "300 g"
+   ],
+   [
+    "Iogurte natural",
+    "300 g"
+   ],
+   [
+    "Alho",
+    "3 dentes"
+   ],
+   [
+    "Paprika",
+    "1 c. sopa"
+   ],
+   [
+    "Cominhos",
+    "1 c. chá"
+   ],
+   [
+    "Limão",
+    "1"
+   ],
+   [
+    "Azeite",
+    "3 c. sopa"
+   ],
+   [
+    "Tomate",
+    "2"
+   ],
+   [
+    "Pepino",
+    "1"
+   ],
+   [
+    "Hortelã",
+    "algumas folhas"
+   ]
+  ],
+  "steps": [
+   "Marine o frango com 150 g de iogurte, paprika, cominhos, alho, limão, sal e azeite, 2 horas.",
+   "Enfie em espetos e grelhe 12 min, virando.",
+   "Misture o resto do iogurte com hortelã e alho.",
+   "Cozinhe o arroz.",
+   "Corte tomate e pepino para a salada.",
+   "Sirva o kebab com arroz, salada e molho."
+  ],
+  "tip": "Marinar mais tempo torna o frango mais tenro."
+ },
+ {
+  "id": "kafta",
+  "name": "Kafta de Carne com Hummus e Pão",
+  "orig": "كفتة (Kafta)",
+  "c": "Libanesa",
+  "t": "35 min",
+  "d": "Fácil",
+  "veg": false,
+  "al": [
+   "gluten",
+   "frutos-secos"
+  ],
+  "est": 4.0,
+  "desc": "Espetos de carne picada com salsa e especiarias, servidos com hummus e salada.",
+  "main": [
+   {
+    "re": "picada|carne-picada",
+    "item": "Carne picada",
+    "qty": "700 g",
+    "kg": 0.7,
+    "u": 1,
+    "not": "frango|peru|peixe"
+   }
+  ],
+  "ing": [
+   [
+    "Salsa",
+    "1 molho"
+   ],
+   [
+    "Cebola",
+    "1"
+   ],
+   [
+    "Canela",
+    "1/2 c. chá"
+   ],
+   [
+    "Pimenta da Jamaica ou noz-moscada",
+    "1/2 c. chá"
+   ],
+   [
+    "Hummus",
+    "200 g"
+   ],
+   [
+    "Pão pita",
+    "4"
+   ],
+   [
+    "Tomate",
+    "2"
+   ],
+   [
+    "Pepino",
+    "1"
+   ],
+   [
+    "Hortelã",
+    "algumas folhas"
+   ]
+  ],
+  "steps": [
+   "Misture a carne com cebola ralada, salsa picada, especiarias, sal e pimenta.",
+   "Divida em 8 e molde em volta de espetos.",
+   "Grelhe 8 a 10 min, virando.",
+   "Aqueça o pão.",
+   "Prepare a salada de tomate, pepino e hortelã.",
+   "Sirva com hummus."
+  ],
+  "tip": "Molhe as mãos para moldar a kafta sem se colar."
+ },
+ {
+  "id": "hamburguer",
+  "name": "Hambúrguer Caseiro com Batata Frita",
+  "orig": "Classic Cheeseburger",
+  "c": "Americana",
+  "t": "35 min",
+  "d": "Fácil",
+  "veg": false,
+  "al": [
+   "gluten",
+   "lactose",
+   "ovos"
+  ],
+  "est": 4.0,
+  "desc": "Hambúrguer sumarento com queijo derretido, no pão tostado, com batata frita.",
+  "main": [
+   {
+    "re": "picada|hamburguer|carne-picada",
+    "item": "Carne picada",
+    "qty": "700 g",
+    "kg": 0.7,
+    "u": 1,
+    "not": "frango|peru|peixe"
+   }
+  ],
+  "ing": [
+   [
+    "Pão de hambúrguer",
+    "4"
+   ],
+   [
+    "Queijo cheddar",
+    "4 fatias"
+   ],
+   [
+    "Alface",
+    "4 folhas"
+   ],
+   [
+    "Tomate",
+    "1"
+   ],
+   [
+    "Cebola",
+    "1"
+   ],
+   [
+    "Pickles",
+    "8 rodelas"
+   ],
+   [
+    "Ketchup e mostarda",
+    "a gosto"
+   ],
+   [
+    "Batata",
+    "800 g"
+   ],
+   [
+    "Óleo para fritar",
+    "400 ml"
+   ]
+  ],
+  "steps": [
+   "Tempere a carne com sal e pimenta e forme 4 hambúrgueres.",
+   "Grelhe em frigideira muito quente 3 a 4 min por lado.",
+   "Coloque queijo no último minuto e tape.",
+   "Toste os pães.",
+   "Frite a batata em palitos.",
+   "Monte com alface, tomate, cebola, pickles e molhos."
+  ],
+  "tip": "Não pressione o hambúrguer na frigideira."
+ },
+ {
+  "id": "frango-frito",
+  "name": "Frango Frito Crocante com Puré e Salada de Couve",
+  "orig": "Southern Fried Chicken",
+  "c": "Americana",
+  "t": "1h",
+  "d": "Média",
+  "veg": false,
+  "al": [
+   "gluten",
+   "lactose",
+   "ovos"
+  ],
+  "est": 4.0,
+  "desc": "Frango marinado em leitelho, panado e frito, com puré cremoso e salada de couve.",
+  "main": [
+   {
+    "re": "frango|coxa|perna|asa",
+    "item": "Coxas e sobrecoxas de frango",
+    "qty": "1,2 kg",
+    "kg": 1.2,
+    "u": 1,
+    "not": "peru|pato|porco|vaca|novilho|borrego|cordeiro|peixe"
+   }
+  ],
+  "ing": [
+   [
+    "Iogurte natural ou leitelho",
+    "250 ml"
+   ],
+   [
+    "Farinha",
+    "200 g"
+   ],
+   [
+    "Paprika",
+    "2 c. chá"
+   ],
+   [
+    "Alho em pó",
+    "1 c. chá"
+   ],
+   [
+    "Batata",
+    "800 g"
+   ],
+   [
+    "Manteiga",
+    "50 g"
+   ],
+   [
+    "Leite",
+    "150 ml"
+   ],
+   [
+    "Repolho",
+    "1/4"
+   ],
+   [
+    "Cenoura",
+    "1"
+   ],
+   [
+    "Maionese",
+    "3 c. sopa"
+   ],
+   [
+    "Óleo para fritar",
+    "500 ml"
+   ]
+  ],
+  "steps": [
+   "Marine o frango no iogurte com sal 2 horas.",
+   "Misture a farinha com paprika, alho em pó, sal e pimenta; envolva o frango.",
+   "Frite em óleo a 170 ºC 14 a 16 min até estar dourado e cozido.",
+   "Cozinhe a batata e faça puré com manteiga e leite.",
+   "Rale o repolho e a cenoura e misture com maionese.",
+   "Sirva o frango com puré e salada."
+  ],
+  "tip": "Use termómetro: o óleo deve manter 170 ºC."
+ },
+ {
+  "id": "mac-cheese",
+  "name": "Mac and Cheese Gratinado",
+  "orig": "Baked Mac and Cheese",
+  "c": "Americana",
+  "t": "45 min",
+  "d": "Fácil",
+  "veg": true,
+  "al": [
+   "gluten",
+   "lactose"
+  ],
+  "est": 3.0,
+  "desc": "Massa cotovelos em molho cremoso de queijo, gratinada, com salada verde.",
+  "main": [
+   {
+    "re": "queijo",
+    "item": "Queijo ralado/fatiado",
+    "qty": "300 g",
+    "kg": 0.3,
+    "u": 1
+   }
+  ],
+  "ing": [
+   [
+    "Massa cotovelos",
+    "350 g"
+   ],
+   [
+    "Leite",
+    "600 ml"
+   ],
+   [
+    "Manteiga",
+    "50 g"
+   ],
+   [
+    "Farinha",
+    "40 g"
+   ],
+   [
+    "Mostarda",
+    "1 c. chá"
+   ],
+   [
+    "Noz-moscada",
+    "1 pitada"
+   ],
+   [
+    "Pão ralado",
+    "3 c. sopa"
+   ],
+   [
+    "Salada verde",
+    "1 prato"
+   ]
+  ],
+  "steps": [
+   "Cozinhe a massa 2 min menos do que indica a embalagem.",
+   "Faça o molho: manteiga, farinha, leite em fio, até engrossar (6 min).",
+   "Retire do lume, junte 250 g de queijo, mostarda e noz-moscada.",
+   "Misture a massa no molho.",
+   "Transfira para travessa, cubra com queijo restante e pão ralado.",
+   "Gratine a 200 ºC 15 min e sirva com salada."
+  ],
+  "tip": "Misture dois queijos para ter sabor e cremosidade."
+ },
+ {
+  "id": "pasta-atum",
+  "name": "Massa com Atum, Tomate e Alcaparras",
+  "orig": "Pasta al Tonno",
+  "c": "Italiana",
+  "t": "25 min",
+  "d": "Fácil",
+  "veg": false,
+  "al": [
+   "gluten",
+   "peixe"
+  ],
+  "est": 3.0,
+  "desc": "Esparguete com tomate, atum e alcaparras: rápido e cheio de sabor.",
+  "main": [
+   {
+    "re": "atum",
+    "item": "Atum",
+    "qty": "400 g",
+    "kg": 0.4,
+    "u": 2
+   }
+  ],
+  "ing": [
+   [
+    "Esparguete",
+    "350 g"
+   ],
+   [
+    "Tomate pelado",
+    "400 g"
+   ],
+   [
+    "Alho",
+    "2 dentes"
+   ],
+   [
+    "Alcaparras",
+    "1 c. sopa"
+   ],
+   [
+    "Azeitonas",
+    "50 g"
+   ],
+   [
+    "Piri-piri",
+    "a gosto"
+   ],
+   [
+    "Azeite",
+    "4 c. sopa"
+   ],
+   [
+    "Salsa",
+    "1 molho"
+   ]
+  ],
+  "steps": [
+   "Cozinhe o esparguete al dente.",
+   "Refogue o alho e o piri-piri em azeite.",
+   "Junte o tomate e cozinhe 10 min.",
+   "Adicione o atum, alcaparras e azeitonas; aqueça 2 min.",
+   "Envolva a massa no molho.",
+   "Finalize com salsa."
+  ],
+  "tip": "Junte o atum no fim para não secar."
+ },
+ {
+  "id": "couve-flor-curry",
+  "name": "Couve-flor Assada com Curry e Arroz",
+  "orig": "Gobi Masala",
+  "c": "Indiana",
+  "t": "45 min",
+  "d": "Fácil",
+  "veg": true,
+  "al": [],
+  "est": 3.0,
+  "desc": "Couve-flor assada com especiarias, em molho de tomate e coco.",
+  "main": [
+   {
+    "re": "couve-flor|couveflor|brocolo|abobora",
+    "item": "Couve-flor",
+    "qty": "1 kg",
+    "kg": 1,
+    "u": 1
+   }
+  ],
+  "ing": [
+   [
+    "Arroz basmati",
+    "300 g"
+   ],
+   [
+    "Cebola",
+    "1"
+   ],
+   [
+    "Alho",
+    "3 dentes"
+   ],
+   [
+    "Gengibre",
+    "1 c. sopa"
+   ],
+   [
+    "Tomate pelado",
+    "400 g"
+   ],
+   [
+    "Leite de coco",
+    "200 ml"
+   ],
+   [
+    "Garam masala",
+    "2 c. chá"
+   ],
+   [
+    "Cúrcuma",
+    "1/2 c. chá"
+   ],
+   [
+    "Azeite",
+    "4 c. sopa"
+   ],
+   [
+    "Coentros",
+    "1 molho"
+   ]
+  ],
+  "steps": [
+   "Corte a couve-flor em ramos e asse a 220 ºC com azeite, sal e cúrcuma 20 min.",
+   "Refogue cebola, alho e gengibre 8 min; junte garam masala.",
+   "Adicione tomate e leite de coco; cozinhe 10 min.",
+   "Junte a couve-flor ao molho e cozinhe 5 min.",
+   "Cozinhe o arroz basmati.",
+   "Sirva com coentros."
+  ],
+  "tip": "Assar antes dá sabor tostado e evita que desfaça."
+ }
+]

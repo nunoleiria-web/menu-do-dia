@@ -11,6 +11,10 @@ on:
         description: "Voltar a escolher TODAS as fotos (corrige fotos erradas)"
         type: boolean
         default: false
+      reread:
+        description: "Voltar a ler os folhetos em vigor (mais produtos e preços)"
+        type: boolean
+        default: false
       photos_only:
         description: "Só procurar fotos em falta (não mexe em preços nem receitas)"
         type: boolean
@@ -44,6 +48,7 @@ jobs:
           AI_DELAY_MS: ${{ vars.AI_DELAY_MS }}
           REDO_PHOTOS: ${{ inputs.redo_photos && '1' || '' }}
           PHOTOS_ONLY: ${{ inputs.photos_only && '1' || '' }}
+          REREAD: ${{ inputs.reread && '1' || '' }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           CLOUDFLARE_IMAGE_MODEL: ${{ vars.CLOUDFLARE_IMAGE_MODEL }}

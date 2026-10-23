@@ -1,6 +1,7 @@
 import { createHash } from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
+import { buildPlan, buildCompare } from "./menu.mjs";
 
 const { MISTRAL_API_KEY: MK, OPENAI_API_KEY: OK } = process.env;
 const AI = OK
@@ -21,10 +22,13 @@ const IMG = "public/meals";
 
 fs.mkdirSync(IMG, { recursive: true });
 const data = JSON.parse(fs.readFileSync(FILE, "utf8"));
+const library = JSON.parse(fs.readFileSync(new URL("./recipes.json", import.meta.url), "utf8"));
+const REREAD = !!process.env.REREAD;
+data.images ??= {};
 const today = new Date().toLocaleDateString("en-CA", { timeZone: "Europe/Lisbon" });
 
 const slug = (s) => String(s ?? "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
-const imgName = (m, r, buf) => "foto-" + slug(m.name) + "-" + slug(r.name) + "-" + createHash("sha1").update(buf).digest("hex").slice(0, 8) + ".webp";
+const imgName = (m, r, buf) => "lib-" + r.id + "-" + createHash("sha1").update(buf).digest("hex").slice(0, 8) + ".webp";
 const sleep = (ms) => new Promise((ok) => setTimeout(ok, ms));
 const UA = { "user-agent": "Mozilla/5.0 (compatible; MenuDoDiaBot/1.0)" };
 
@@ -93,7 +97,8 @@ async function findFlyer(m) {
   const pool = (inForce.length ? inForce : future).sort((a, b) => rank(a.s) - rank(b.s) || (a.from < b.from ? 1 : -1));
   console.log("  candidatos " + m.name + ":", pool.map((c) => c.s).join(" | ") || "nenhum");
   m.__dbg = "candidatos: " + (pool.map((c) => c.s).join(" | ") || "nenhum (de " + links.length + " links, " + cands.length + " alimentares)");
-  if (!pool.length || pool[0].from <= m.from) return null;
+  const force = REREAD || m.readVersion !== 2;
+  if (!pool.length || pool[0].from < m.from || (pool[0].from === m.from && !force)) return null;
   const pickFrom = pool[0].from;
   let promos = [], sources = [], pick = null, lastErr = null;
   for (const c of pool.filter((c) => c.from === pickFrom).slice(0, 3)) {
@@ -120,138 +125,50 @@ async function readFlyer(m, pick) {
   const base = og && /-p\d+\.jpe?g/.test(og) ? og : pages[0];
   if (!base) throw new Error("sem imagens do folheto");
   const seq = [...pages].sort((a, b) => num(a) - num(b));
-  const imgs = [...new Set([base, ...seq])].slice(0, 8);
+  const imgs = [...new Set([base, ...seq])].slice(0, 14);
   const parts = [];
   for (const u of imgs) {
     const r = await getPage(u);
     parts.push(imgPart("data:image/jpeg;base64," + Buffer.from(await r.arrayBuffer()).toString("base64")));
   }
 
-  // Extrair produtos em blocos de 2 páginas (resposta curta = JSON nunca truncado)
+  // Blocos de 2 páginas: extrair e confirmar cada bloco com as suas próprias imagens (JSON curto, nunca truncado)
   const seen = new Set();
-  const items = [];
+  const promos = [];
   for (let i = 0; i < parts.length; i += 2) {
-    let ex;
+    const block = parts.slice(i, i + 2);
+    const items = [];
     try {
-      ex = await ask([{ type: "text", text: "Estas imagens são páginas do folheto do " + m.name + ". Extrai TODOS os produtos alimentares visíveis com preço legível. per='kg' ou 'un'. JSON: {\"products\":[{\"name\":\"\",\"price\":0.0,\"per\":\"kg|un\",\"label\":\"\"}]}" }, ...parts.slice(i, i + 2)]);
+      const ex = await ask([{ type: "text", text: "Estas imagens são páginas do folheto do " + m.name + ". Extrai TODOS os produtos alimentares visíveis com preço legível (carne, peixe, marisco, legumes, fruta, queijo, massa, arroz, leguminosas, ovos). Ignora flores, plantas, decoração e bazar. per='kg' ou 'un'. JSON: {\"products\":[{\"name\":\"\",\"price\":0.0,\"per\":\"kg|un\",\"label\":\"\"}]}" }, ...block]);
+      for (const p of ex.products ?? []) {
+        const it = { id: slug(p.name ?? ""), name: String(p.name ?? "").trim(), price: Math.round(parseFloat(String(p.price).replace(",", ".")) * 100) / 100, per: p.per, ...(p.label ? { label: p.label } : {}) };
+        if (it.id && !NONFOOD.test(it.id) && !seen.has(it.id) && it.price >= 0.2 && it.price <= (it.per === "kg" ? 45 : 40) && ["kg", "un"].includes(it.per)) { seen.add(it.id); items.push(it); }
+      }
     } catch (e) {
-      console.warn("  extracção da página " + (i / 2 + 1) + " falhou:", e.message.slice(0, 100));
+      console.warn("  extracção das páginas " + (i + 1) + "-" + (i + 2) + " falhou:", e.message.slice(0, 100));
       continue;
     }
-    for (const p of ex.products ?? []) {
-      const it = { id: slug(p.name ?? ""), name: String(p.name ?? "").trim(), price: Math.round(parseFloat(String(p.price).replace(",", ".")) * 100) / 100, per: p.per, ...(p.label ? { label: p.label } : {}) };
-      if (it.id && !NONFOOD.test(it.id) && !seen.has(it.id) && seen.add(it.id) && it.price >= 0.2 && it.price <= (it.per === "kg" ? 45 : 40) && ["kg", "un"].includes(it.per)) items.push(it);
-    }
+    if (!items.length) continue;
+    let keep = items;
+    try {
+      const ver = await ask([{ type: "text", text: "Confirma nestas páginas do folheto do " + m.name + " se o preço está exato. Lista: " + items.map((p) => p.id + ": " + p.name + " " + p.price + " €/" + p.per).join("; ") + ". JSON: {\"confirmed\":[\"id\"]}" }, ...block]);
+      const ok = new Set(ver.confirmed ?? []);
+      const confirmed = items.filter((p) => ok.has(p.id));
+      if (confirmed.length) keep = confirmed;
+    } catch (e) { console.warn("  confirmação falhou (" + e.message.slice(0, 60) + "), a usar leitura sem confirmar"); }
+    promos.push(...keep.map((p) => ({ ...p, note: "folheto (lido por IA)" })));
   }
-  if (items.length < 6) throw new Error("só " + items.length + " produtos legíveis (mínimo 6)");
-
-  // Confirmar preços em blocos de 25; se a confirmação falhar ou rejeitar tudo, usar a extracção sem confirmar
-  let promos;
-  try {
-    const ok = new Set();
-    for (let i = 0; i < items.length; i += 25) {
-      const chunk = items.slice(i, i + 25);
-      const ver = await ask([{ type: "text", text: "Confirma nas imagens do folheto do " + m.name + " se o preço está exato. Lista: " + chunk.map((p) => p.id + ": " + p.name + " " + p.price + " €/" + p.per).join("; ") + ". JSON: {\"confirmed\":[\"id\"]}" }, ...parts]);
-      for (const id of ver.confirmed ?? []) ok.add(id);
-    }
-    promos = items.filter((p) => ok.has(p.id)).map((p) => ({ ...p, note: "folheto (lido por IA)" }));
-    if (promos.length < 6) throw new Error("só " + promos.length + " preços confirmados (mínimo 6)");
-  } catch (e) {
-    console.warn("  confirmação de preços falhou (" + e.message.slice(0, 80) + ") — a usar extracção sem confirmação");
-    promos = items.map((p) => ({ ...p, note: "folheto (lido por IA)" }));
-  }
+  if (promos.length < 6) throw new Error("só " + promos.length + " produtos legíveis (mínimo 6)");
+  console.log("  " + m.name + ": " + promos.length + " produtos lidos de " + imgs.length + " páginas");
   return { promos, source: { title: "Blog 200 — " + title, url: pick.url } };
 }
 
-const CUISINES = ["Portuguesa","Italiana","Francesa","Espanhola","Grega","Marroquina","Mexicana","Brasileira","Indiana","Tailandesa","Chinesa","Japonesa","Coreana","Turca","Libanesa","Americana","Cabo-verdiana","Vietnamita"];
-const pickCuisines = (m) => { const h = createHash("sha1").update(today + m.name).digest(); const a = h[0] % CUISINES.length; let b = h[1] % CUISINES.length; if (b === a) b = (b + 5) % CUISINES.length; return [CUISINES[a], CUISINES[b]]; };
-const DISHES = "Bacalhau à Brás; Bacalhau à Gomes de Sá; Bacalhau com Natas; Arroz de Pato; Polvo à Lagareiro; Caldo Verde; Sopa do Pedreiro; Feijoada; Cozido à Portuguesa; Carne de Porco à Alentejana; Bifanas; Sardinha Assada; Carapau Frito com Batatas; Espetada; Frango de Caril; Frango Assado com Batatas; Arroz de Marisco; Massada de Peixe; Açorda de Marisco; Salada de Polvo; Choco Frito; Lulas à Algarvia; Trinchado; Rojões; Migas; Almôndegas; Estufado de Novilho; Jardineira; Peito de Frango Grelhado; Costeletas de Novilho Grelhadas; Caldeirada; Febras Grelhadas com Arroz; Sopa de Peixe; Grão Estufado com Couve";
-
-const STAR = /tintureira|espadarte|cherne|garoupa|solha|linguado|esparguete|espaguete|hamburguer|picanha|rosbife|bacalhau|polvo|lula|choco|sepia|camarao|gamba|mexilh|ameijoa|amêijoa|salmao|dourada|robalo|pescada|carapau|sardinha|cavala|atum|peixe|filete|tamboril|raia|lingueirao|frango|peru|pato|coelho|porco|suino|vitela|novilho|vaca|boi|borrego|cordeiro|cabrito|entrecosto|costeleta|febra|lombo|bife|perna|pernil|alcatra|acem|carne|salsicha|chourico|linguica|farinheira|morcela|presunto|bacon|toucinho|grao|feijao|lentilha|queijo|cogumelo|arroz|massa/i;
 const NONFOOD = /crisantemo|peperomia|ramo-de|flor|planta|vaso|capsula|detergente|papel|vela|decorac/;
-const STAPLE = /cebola|alho|batata|cenoura|tomate|alface|pepino|couve|abobora|pimento|salsa|coentro|limao|laranja|maca|banana|pera|uva|sal\b|azeite|oleo|vinagre|farinha|acucar|leite|natas|manteiga|ovo|agua|sumo|refrigerante|cerveja|vinho|bolacha|chocolate|cafe|iogurte|pao\b|snack|gelado|detergente|papel/i;
-const words = (t) => slug(t).split("-").filter((w) => w.length >= 4);
-const near = (a, b) => { const n = Math.min(5, a.length, b.length); return n >= 4 && a.slice(0, n) === b.slice(0, n); };
-
-async function makeRecipes(m) {
-  const sl = (p) => slug(p.name);
-  let stars = m.promos.filter((p) => STAR.test(sl(p)) && !(STAPLE.test(sl(p)) && !STAR.test(sl(p))));
-  if (stars.length < 2) stars = m.promos.filter((p) => !STAPLE.test(sl(p)));
-  if (stars.length < 2) stars = m.promos;
-  const fmt = (p) => p.id + ": " + p.name + " " + p.price + "€/" + p.per;
-  const hist = (m.history || []).join(", ") || "nenhuma";
-  const byId = Object.fromEntries(m.promos.map((p) => [p.id, p]));
-  const cz = pickCuisines(m);
-  let feedback = "", lastReject = "";
-  for (let attempt = 0; attempt < 3; attempt++) {
-    const j = await ask(
-      `És um chef internacional premiado, autor de livros das grandes cozinhas do mundo. Cria 2 refeições COMPLETAS para clientes do ${m.name}: a receita 1 é um ALMOÇO e a receita 2 é um JANTAR.\n\n` +
-      `PRODUTOS-ESTRELA DISPONÍVEIS NO FOLHETO (único sítio onde pode haver preço):\n${stars.map(fmt).join("; ")}\n\n` +
-      `REGRAS:\n` +
-      `1) Cozinhas obrigatórias: receita 1 = cozinha ${cz[0]}; receita 2 = cozinha ${cz[1]}. Cada receita é um prato CLÁSSICO e AUTÊNTICO dessa cozinha, que existe mesmo (ex.: Carbonara, Boeuf Bourguignon, Chicken Tikka Masala, Pad Thai, Moussaka, Tagine, Chili con Carne, Feijoada, Bulgogi), adaptado ao produto-estrela. Nada de misturas inventadas.\n` +
-      `2) Cada receita nasce de 1 (no máximo 2) produto(s) da lista acima, que são a razão de ser do prato e têm de aparecer no NOME em português (ex.: "Frango Tikka Masala", "Estufado de Vaca à Borgonhesa", "Lulas à Algarvia"). Prefere UMA só estrela; usa duas apenas numa combinação clássica. Só esses ingredientes levam "promo" (id exato) e "amount" para 4 pessoas (kg se per=kg; unidades se per=un). Se o produto não servir bem à cozinha pedida, escolhe outro produto-estrela.\n` +
-      `3) É uma refeição completa: prato principal + acompanhamento tradicional (arroz, massa, pão, batata, salada, legumes, molho…) incluídos nos ingredientes e nos passos. TODOS os restantes ingredientes levam "promo": null e ficam SEM preço. Entre 9 e 16 ingredientes, com doses realistas para 4 pessoas (ex.: "800 g", "2 dentes").\n` +
-      `4) 7 a 10 passos em português europeu, com técnica, tempos e temperaturas concretos, incluindo o acompanhamento e como empratar. Termina com uma "dica" do chef.\n` +
-      `5) "time" realista (ex.: "45 min"), "difficulty" = Fácil | Média | Difícil, "cuisine" = a cozinha, "meal" = "Almoço" ou "Jantar", "original" = nome original do prato (ex.: "Boeuf Bourguignon").\n` +
-      `6) As duas receitas usam estrelas diferentes. Não repitas: ${hist}.\n` +
-      (feedback ? `CORRIGE: ${feedback}\n` : "") +
-      `\nJSON: {"recipes":[{"name":"","original":"","cuisine":"","meal":"Almoço","slot":1,"description":"1-2 frases apetitosas","servings":"4 pessoas","time":"","difficulty":"","tip":"","imageQuery":"english food keywords","ingredients":[{"item":"","qty":"","promo":"id ou null","amount":1}],"steps":[""]}]}`
-    );
-    try {
-      const out = [];
-      for (const r of (j?.recipes ?? []).slice(0, 2)) {
-        const ings = [], used = new Set();
-        for (const x of r.ingredients ?? []) {
-          const item = String(x.item ?? "").trim();
-          if (!item) continue;
-          let pid = typeof x.promo === "string" && x.promo.trim() && !["null", "nenhum", "none", "n/a"].includes(x.promo.trim().toLowerCase()) ? x.promo.trim() : null;
-          let p = pid ? (byId[pid] || byId[slug(pid)]) : null;
-          if (pid && !p) p = stars.find((q) => words(q.name).some((w) => words(item).some((v) => near(v, w)))) ?? null;
-          if (!p && !pid) {
-            const q = stars.find((q) => !used.has(q.id) && STAR.test(slug(q.name)) && words(q.name).some((w) => words(item).some((v) => near(v, w))));
-            if (q) p = q;
-          }
-          if (!p) { ings.push({ item, qty: String(x.qty ?? "") }); continue; }
-          used.add(p.id);
-          const amount = Math.min(5, Math.max(0.1, parseFloat(String(x.amount ?? 1).replace(",", ".")) || 1));
-          ings.push({ item: item || p.name, qty: String(x.qty ?? ""), price: p.price, per: p.per, amount, ...(p.label ? { label: p.label } : {}), note: p.note ?? "folheto", _p: p });
-        }
-        const priced = ings.filter((x) => x.price);
-        const name = String(r.name ?? "").trim();
-        if (!name) throw new Error("receita sem nome");
-        if (priced.length < 1 || priced.length > 2) throw new Error(`"${name}" deve ter 1 ou 2 ingredientes com preço (tem ${priced.length}). Usa exatamente estes ids no campo promo: ${stars.slice(0, 10).map((p) => p.id).join(", ")}`);
-        const bad = priced.find((x) => STAPLE.test(slug(x._p.name)) && !STAR.test(slug(x._p.name)));
-        if (bad) throw new Error(`"${bad.item}" é um ingrediente de apoio: deve ficar sem preço (promo null)`);
-        const nw = words(name);
-        const hit = (x) => words(x._p.name + " " + x.item).some((w) => nw.some((v) => near(v, w)));
-        for (const x of priced.filter((x) => !hit(x))) { if (!priced.some(hit)) throw new Error(`"${x._p.name}" leva preço mas não aparece no nome "${name}". Só o produto que dá nome ao prato leva preço. Estrelas disponíveis: ${stars.slice(0, 8).map((p) => p.id).join(", ")}`); delete x.price; delete x.per; delete x.amount; delete x.label; delete x.note; }
-        priced.splice(0, priced.length, ...priced.filter((x) => x.price));
-        if (ings.length < 8) throw new Error(`"${name}" tem poucos ingredientes`);
-        if ((r.steps ?? []).length < 6) throw new Error(`"${name}" tem poucos passos`);
-        const steps = r.steps.map((t) => String(t).trim()).filter(Boolean);
-        const tip = String(r.tip ?? "").trim();
-        if (tip) steps.push("Dica do chef: " + tip.replace(/^dica( do chef)?:\s*/i, ""));
-        const orig = String(r.original ?? '').trim();
-        const fullName = orig && !/portugues/i.test(String(r.cuisine || cz[out.length])) && !slug(name).includes(slug(orig)) ? name + " (" + orig + ")" : name;
-        out.push({ name: fullName, description: String(r.description ?? "").trim(), servings: String(r.servings ?? "4 pessoas"), time: String(r.time ?? ""), ...(r.difficulty ? { difficulty: String(r.difficulty) } : {}), cuisine: String(r.cuisine || cz[out.length]), meal: out.length ? "Jantar" : "Almoço", ...(r.original ? { original: String(r.original) } : {}), imageQuery: String(r.imageQuery ?? ""), ingredients: ings.map(({ _p, ...x }) => x), steps, slot: out.length + 1 });
-      }
-      if (out.length !== 2) throw new Error("foram pedidas 2 receitas");
-      if (out[0].name === out[1].name) throw new Error("receitas repetidas");
-      const pk = (r) => r.ingredients.filter((i) => i.price).map((i) => slug(i.item));
-      if (pk(out[0]).some((k) => pk(out[1]).some((j) => near(k, j)))) throw new Error("as duas receitas usam o mesmo produto principal; a receita 2 tem de ter outra estrela e outro tipo de prato");
-      return out;
-    } catch (e) {
-      feedback = e.message; lastReject = e.message;
-      console.warn("  receitas rejeitadas (tentativa " + (attempt + 1) + "): " + e.message);
-    }
-  }
-  throw new Error("receitas rejeitadas 3x: " + lastReject);
-}
 
 const CF = process.env.CLOUDFLARE_API_TOKEN && process.env.CLOUDFLARE_ACCOUNT_ID ? { token: process.env.CLOUDFLARE_API_TOKEN, id: process.env.CLOUDFLARE_ACCOUNT_ID } : null;
 
 async function generateCloudflare(m, r) {
-  const prompt = "Professional food photography, overhead 45-degree view, natural light, ceramic plate on wooden table. Authentic " + (r.cuisine || "") + " cuisine dish, complete meal with side: " + (r.original || r.name) + ". Ingredients: " + r.ingredients.map((i) => i.item).join(", ") + ". No text, no people, no hands.";
+  const prompt = "Professional food photography, overhead 45-degree view, natural light, ceramic plate on wooden table. Authentic " + (r.cuisine || "") + " cuisine dish, complete meal with side: " + (r.original || r.name) + ". Ingredients: " + r.ingredients.slice(0, 8).map((i) => i.item).join(", ") + ". No text, no people, no hands.";
   const model = process.env.CLOUDFLARE_IMAGE_MODEL || "@cf/black-forest-labs/flux-1-schnell";
   const res = await fetch("https://api.cloudflare.com/client/v4/accounts/" + CF.id + "/ai/run/" + model, {
     method: "POST", headers: { authorization: "Bearer " + CF.token, "content-type": "application/json" },
@@ -268,7 +185,7 @@ async function generateCloudflare(m, r) {
 }
 
 async function generateImage(m, r) {
-  const prompt = "Professional food photography, 45-degree overhead view, natural light, ceramic plate on wooden table. Authentic " + (r.cuisine || "") + " cuisine dish, complete meal with side: " + (r.original || r.name) + ". Keywords: " + (r.imageQuery || "") + ". Ingredients: " + r.ingredients.map((i) => i.item).join(", ") + ". No text, no people, no hands.";
+  const prompt = "Professional food photography, 45-degree overhead view, natural light, ceramic plate on wooden table. Authentic " + (r.cuisine || "") + " cuisine dish, complete meal with side: " + (r.original || r.name) + ". Keywords: " + (r.imageQuery || "") + ". Ingredients: " + r.ingredients.slice(0, 8).map((i) => i.item).join(", ") + ". No text, no people, no hands.";
   const res = await fetch("https://api.openai.com/v1/images/generations", {
     method: "POST", headers: { authorization: "Bearer " + OK, "content-type": "application/json" },
     body: JSON.stringify({ model: process.env.OPENAI_IMAGE_MODEL || "gpt-image-1-mini", prompt, size: "1024x1024", quality: process.env.OPENAI_IMAGE_QUALITY || "low", n: 1 }),
@@ -303,26 +220,16 @@ for (let i = 0; i < data.markets.length && !PHOTOS_ONLY; i++) {
   try {
     const f = await findFlyer(n);
     if (!f && n.__dbg) console.log("  " + n.__dbg);
+    delete n.__dbg;
     if (f) {
-      Object.assign(n, { from: f.from, to: f.to, flyer: f.flyer, sources: f.sources, promos: f.promos, check: { date: today, result: "novo" } });
-      console.log(n.name, "-> folheto novo", f.from, f.to);
+      const isNew = f.from !== n.from;
+      Object.assign(n, { from: f.from, to: f.to, flyer: f.flyer, sources: f.sources, promos: f.promos, readVersion: 2, check: { date: today, result: isNew ? "novo" : "sem-novo" } });
+      console.log(n.name, isNew ? "-> folheto novo" : "-> folheto relido", f.from, f.to);
     } else if (n.to >= today) {
       n.check = { date: today, result: "sem-novo" };
-      console.log(n.name, "-> sem folheto novo; receitas novas com promoções em vigor");
+      console.log(n.name, "-> sem folheto novo");
     } else {
       n.check = { date: today, result: "sem-folheto" };
-      data.markets[i] = n;
-      continue;
-    }
-    delete n.__dbg;
-    try {
-      const recipes = await makeRecipes(n);
-      n.recipes = recipes;
-      n.history = [...n.history, ...recipes.map((r) => r.name)].slice(-12);
-    } catch (e) {
-      console.warn("  receitas mantidas:", e.message);
-      n.check = { ...n.check, note: String(e.message).slice(0, 300) };
-      if (n.check.result !== "novo") throw e;
     }
     data.markets[i] = n;
   } catch (e) {
@@ -334,19 +241,43 @@ for (let i = 0; i < data.markets.length && !PHOTOS_ONLY; i++) {
   }
 }
 
-for (const m of data.markets) for (const r of m.recipes) {
-  if (r.image && !REDO) continue;
-  const img = await makeImage(m, r);
-  if (img) { r.image = img.image; r.imageCredit = img.credit; }
-  else if (REDO && !photoAuthFailed) { delete r.image; delete r.imageCredit; }
+// Plano semanal (2 refeições por dia) e comparador do mesmo prato entre lojas
+for (const m of data.markets) {
+  const hist = (m.hist ?? []).filter((h) => h.date !== today);
+  m.plan = buildPlan(m, data.markets, library, today, hist);
+  m.recipes = m.plan[0]?.recipes ?? [];
+  m.hist = [...hist, ...(m.recipes.length ? [{ date: today, ids: m.recipes.map((r) => r.id) }] : [])].slice(-14);
+  delete m.history;
+  console.log(m.name, "-> plano de", m.plan.length, "dia(s):", m.recipes.map((r) => r.name).join(" | ") || "sem receitas (folheto expirado)");
 }
+data.compare = buildCompare(data.markets, library, today);
 
-const used = new Set(data.markets.flatMap((m) => m.recipes.map((r) => r.image && path.basename(r.image))));
-for (const f of fs.readdirSync(IMG)) if (f.startsWith("foto-") && !used.has(f)) fs.unlinkSync(path.join(IMG, f));
-if (!(tried > 0 && failed === tried)) data.updatedAt = today;
-fs.writeFileSync(FILE, JSON.stringify(data, null, 2) + "\n");
+// Imagens: uma por receita da biblioteca (reutilizada por todas as lojas e dias)
+if (REDO) data.images = {};
+const byId = new Map();
+const todo = [...data.markets.flatMap((m) => m.recipes), ...data.compare.map((c) => c.recipe), ...data.markets.flatMap((m) => m.plan.slice(1).flatMap((d) => d.recipes))];
+for (const r of todo) if (!byId.has(r.id)) byId.set(r.id, r);
+let made = 0;
+const MAX_NEW = REDO ? 999 : +process.env.MAX_IMAGES || 14;
+for (const r of byId.values()) {
+  const cur = data.images[r.id];
+  if (cur && fs.existsSync(path.join("public", cur))) continue;
+  if (made >= MAX_NEW) break;
+  const img = await makeImage({ name: "" }, r);
+  if (img) { data.images[r.id] = img.image; made++; }
+  else if (photoAuthFailed) break;
+}
+const attach = (r) => { if (data.images[r.id]) { r.image = data.images[r.id]; r.imageCredit = { name: "Imagem gerada por IA", url: "" }; } else { delete r.image; delete r.imageCredit; } };
+for (const m of data.markets) { m.recipes.forEach(attach); m.plan.forEach((d) => d.recipes.forEach(attach)); }
+data.compare.forEach((c) => attach(c.recipe));
 
-if (tried > 0 && failed === tried) { console.error("ERRO: IA falhou em todos os supermercados."); process.exitCode = 1; }
+const keep = new Set(Object.values(data.images).map((p) => path.basename(p)));
+for (const f of fs.readdirSync(IMG)) if ((f.startsWith("foto-") || f.startsWith("lib-")) && !keep.has(f)) fs.unlinkSync(path.join(IMG, f));
+if (!(tried > 0 && failed === tried)) data.updatedAt = new Date().toISOString();
+fs.writeFileSync(FILE, JSON.stringify(data, null, 1) + "\n");
+
+if (tried > 0 && failed === tried) { console.error("ERRO: falhou em todos os supermercados."); process.exitCode = 1; }
+else if (failed) { console.error("AVISO: " + failed + " supermercado(s) com erro; os restantes foram atualizados."); process.exitCode = 1; }
 if (photoGenFailed) { console.error("ERRO: geração de imagens falhou."); process.exitCode = 1; }
 if (photoAuthFailed) { console.error("ERRO: configuração de geração de imagens em falta."); process.exitCode = 1; }
 // FIM DO SCRIPT
