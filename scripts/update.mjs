@@ -79,7 +79,7 @@ async function findFlyer(m) {
   const html = await (await getPage(BLOG + "/tag/" + src.tag)).text();
   const links = [...new Set([...html.matchAll(/href="((?:https:\/\/blog200porcento\.com)?\/antevisao-folheto-[^"#]+)"/g)].map((x) => x[1].startsWith("/") ? BLOG + x[1] : x[1]))];
   const cands = links.map((url) => ({ url, s: url.split("/").pop() }))
-    .filter(({ s }) => s.startsWith("antevisao-folheto-" + src.key + "-frescos-") && !/fim-de-semana|madeira|acores|bazar/.test(s))
+    .filter(({ s }) => s.startsWith("antevisao-folheto-" + src.key + "-") && !/fim-de-semana|madeira|acores|bazar|tecnologia|mobilia|jardim/.test(s))
     .map((c) => ({ ...c, ...slugDates(c.s) })).filter((c) => c.from && c.to).sort((a, b) => (a.from < b.from ? 1 : -1));
   const pick = cands.find((c) => c.from <= today && c.to >= today) ?? (m.to < today ? [...cands].reverse().find((c) => c.from > today) : undefined);
   if (!pick || pick.from <= m.from) return null;
@@ -136,25 +136,42 @@ async function findFlyer(m) {
   return { found: true, from: pick.from, to: pick.to, flyer: "Folheto " + dm(pick.from) + "–" + dm(pick.to), sources: [{ title: "Blog 200 — " + title, url: pick.url }], promos };
 }
 
-const DISHES = "Bacalhau à Brás, Bacalhau à Gomes de Sá, Bacalhau com Natas, Arroz de Pato, Polvo à Lagareiro, Arroz de Polvo, Caldo Verde, Sopa do Pedreiro, Feijoada, Cozido à Portuguesa, Carne de Porco à Alentejana, Bifanas, Sardinha Assada, Carapau Frito, Espetada, Frango de Caril, Frango Assado com Batatas, Arroz de Marisco, Massada de Peixe, Açorda de Marisco, Salada de Polvo, Choco Frito, Lulas à Algarvia, Trinchado, Rojões, Migas, Almôndegas, Estufado de Novilho, Jardineira, Peito de Frango Grelhado, Costeleta de Novilho Grelhada, Sopa de Peixe";
+const DISHES = "Bacalhau à Brás; Bacalhau à Gomes de Sá; Bacalhau com Natas; Arroz de Pato; Polvo à Lagareiro; Caldo Verde; Sopa do Pedreiro; Feijoada; Cozido à Portuguesa; Carne de Porco à Alentejana; Bifanas; Sardinha Assada; Carapau Frito com Batatas; Espetada; Frango de Caril; Frango Assado com Batatas; Arroz de Marisco; Massada de Peixe; Açorda de Marisco; Salada de Polvo; Choco Frito; Lulas à Algarvia; Trinchado; Rojões; Migas; Almôndegas; Estufado de Novilho; Jardineira; Peito de Frango Grelhado; Costeletas de Novilho Grelhadas; Caldeirada; Febras Grelhadas com Arroz; Sopa de Peixe; Grão Estufado com Couve";
 
 async function makeRecipes(m) {
   const list = m.promos.map((p) => p.id + ": " + p.name + " " + p.price + "€/" + p.per).join("; ");
-  const j = await ask("Cria 2 receitas para " + m.name + ". REGRAS: 1) Cada receita deve ser um prato REAL e tradicional português (ex.: " + DISHES + "). O campo name deve ser o nome tradicional do prato — NÃO inventes nomes novos. 2) Ingredientes principais: usa APENAS produtos desta lista, com o id exato no campo promo: " + list + ". 3) Podes usar até 3 ingredientes de despensa básica com promo:null (ex.: azeite, sal, alho, cebola, ovos, arroz, massa). 4) Não repitas: " + (m.history.join(", ") || "nenhuma") + ". JSON: {\"recipes\":[{\"name\":\"\",\"description\":\"\",\"servings\":\"4 pessoas\",\"time\":\"45 min\",\"imageQuery\":\"english food keywords\",\"ingredients\":[{\"item\":\"\",\"qty\":\"\",\"promo\":\"id ou null\",\"amount\":1}],\"steps\":[\"\"]}]}");
-  if (!(j.recipes?.length >= 2)) throw new Error("menos de 2 receitas");
+  const hist = (m.history || []).join(", ") || "nenhuma";
+  const j = await ask(
+    `És um chef profissional português. Cria 2 receitas para ${m.name} a partir das promoções do folheto.\n\n` +
+    `PRODUTOS EM PROMOÇÃO:\n${list}\n\n` +
+    `REGRAS:\n` +
+    `1) Escolhe 1 ou 2 produtos da lista que sejam a ESTRELA do prato — a razão de ser da receita (ex.: se "salmao" está em promoção, o prato é "Salmão Grelhado com Molho de Manteiga e Limão"). Esses ingredientes levam o id exato no campo promo e amount para 4 pessoas.\n` +
+    `2) O prato deve ser uma receita REAL da cozinha portuguesa (ex.: ${DISHES}). Usa o nome tradicional do prato — NÃO inventes nomes novos.\n` +
+    `3) TODOS os outros ingredientes (guarnição, molho, aromáticos, temperos, gordura) ficam SEM preço: promo:null. Máximo 8 ingredientes ao todo.\n` +
+    `4) Qualidade profissional: description apetitosa em 1-2 frases; 5 a 7 passos concretos e ordenados; doses realistas para 4 pessoas; tempo credível.\n` +
+    `5) slot 1 = prato principal; slot 2 = outra estrela diferente da lista.\n` +
+    `6) Não repitas receitas recentes: ${hist}.\n\n` +
+    `JSON: {"recipes":[{"name":"","slot":1,"description":"","servings":"4 pessoas","time":"","imageQuery":"english food keywords","ingredients":[{"item":"","qty":"","promo":"id","amount":1}],"steps":[""]}]}`
+  );
+  if (!Array.isArray(j?.recipes)) return null;
   const byId = Object.fromEntries(m.promos.map((p) => [p.id, p]));
-  return j.recipes.slice(0, 2).map((r, i) => {
-    const ingredients = (r.ingredients ?? []).map((x) => {
-      const pid = typeof x.promo === "string" && x.promo.trim() && x.promo.trim().toLowerCase() !== "null" && x.promo.trim().toLowerCase() !== "nenhum" ? x.promo.trim() : null;
-      if (!pid) return { item: x.item, qty: x.qty };
+  const out = [];
+  for (const r of j.recipes.slice(0, 2)) {
+    const ings = [];
+    for (const x of r.ingredients ?? []) {
+      const pid = typeof x.promo === "string" && x.promo.trim() && !["null", "nenhum", "none", ""].includes(x.promo.trim().toLowerCase()) ? x.promo.trim() : null;
+      if (!pid) { ings.push({ item: String(x.item ?? "").trim(), qty: String(x.qty ?? "") }); continue; }
       const p = byId[pid] || byId[slug(pid)];
       if (!p) throw new Error("promo inválida: " + pid);
       const amount = Math.min(5, Math.max(0.1, parseFloat(String(x.amount ?? 1).replace(",", ".")) || 1));
-      return { item: x.item || p.name, qty: x.qty, price: p.price, per: p.per, amount, ...(p.label && { label: p.label }), note: p.note ?? "folheto" };
-    });
-    if (ingredients.filter((x) => x.price).length < 2 || !(r.steps?.length >= 3)) throw new Error("receita fraca");
-    return { slot: i + 1, name: r.name, description: r.description, servings: r.servings, time: r.time, ingredients, steps: r.steps, imageQuery: String(r.imageQuery ?? r.name) };
-  });
+      ings.push({ item: String(x.item ?? p.name).trim(), qty: String(x.qty ?? ""), price: p.price, per: p.per, amount, ...(p.label ? { label: p.label } : {}), note: p.note ?? "folheto" });
+    }
+    const priced = ings.filter((x) => x.price).length;
+    if (priced < 1 || priced > 3) return null;
+    if (!String(r.name ?? "").trim() || !(r.steps ?? []).length) return null;
+    out.push({ name: String(r.name).trim(), description: String(r.description ?? "").trim(), servings: String(r.servings ?? "4 pessoas"), time: String(r.time ?? ""), imageQuery: String(r.imageQuery ?? ""), ingredients: ings, steps: (r.steps ?? []).map((s) => String(s)), slot: out.length + 1 });
+  }
+  return out.length === 2 ? out : null;
 }
 
 const CF = process.env.CLOUDFLARE_API_TOKEN && process.env.CLOUDFLARE_ACCOUNT_ID ? { token: process.env.CLOUDFLARE_API_TOKEN, id: process.env.CLOUDFLARE_ACCOUNT_ID } : null;
