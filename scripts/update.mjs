@@ -192,14 +192,19 @@ async function makeRecipes(m) {
     try {
       const out = [];
       for (const r of (j?.recipes ?? []).slice(0, 2)) {
-        const ings = [];
+        const ings = [], used = new Set();
         for (const x of r.ingredients ?? []) {
-          const pid = typeof x.promo === "string" && x.promo.trim() && !["null", "nenhum", "none", "n/a"].includes(x.promo.trim().toLowerCase()) ? x.promo.trim() : null;
           const item = String(x.item ?? "").trim();
           if (!item) continue;
-          if (!pid) { ings.push({ item, qty: String(x.qty ?? "") }); continue; }
-          const p = byId[pid] || byId[slug(pid)];
-          if (!p) throw new Error("promo inválida: " + pid);
+          let pid = typeof x.promo === "string" && x.promo.trim() && !["null", "nenhum", "none", "n/a"].includes(x.promo.trim().toLowerCase()) ? x.promo.trim() : null;
+          let p = pid ? (byId[pid] || byId[slug(pid)]) : null;
+          if (pid && !p) p = stars.find((q) => words(q.name).some((w) => words(item).some((v) => near(v, w)))) ?? null;
+          if (!p && !pid) {
+            const q = stars.find((q) => !used.has(q.id) && STAR.test(slug(q.name)) && words(q.name).some((w) => words(item).some((v) => near(v, w))));
+            if (q) p = q;
+          }
+          if (!p) { ings.push({ item, qty: String(x.qty ?? "") }); continue; }
+          used.add(p.id);
           const amount = Math.min(5, Math.max(0.1, parseFloat(String(x.amount ?? 1).replace(",", ".")) || 1));
           ings.push({ item: item || p.name, qty: String(x.qty ?? ""), price: p.price, per: p.per, amount, ...(p.label ? { label: p.label } : {}), note: p.note ?? "folheto", _p: p });
         }
@@ -211,7 +216,7 @@ async function makeRecipes(m) {
         if (bad) throw new Error(`"${bad.item}" é um ingrediente de apoio: deve ficar sem preço (promo null)`);
         const nw = words(name);
         if (!priced.some((x) => words(x._p.name + " " + x.item).some((w) => nw.some((v) => near(v, w)))))
-          throw new Error(`o produto com preço de "${name}" tem de ser o ingrediente principal e aparecer no nome do prato`);
+          throw new Error(`o produto com preço de "${name}" (${priced.map((x) => x._p.name).join(", ")}) tem de aparecer no nome do prato; usa um nome de prato baseado em ${stars.slice(0, 6).map((p) => p.name).join(" / ")}`);
         if (ings.length < 6) throw new Error(`"${name}" tem poucos ingredientes`);
         if ((r.steps ?? []).length < 5) throw new Error(`"${name}" tem poucos passos`);
         const steps = r.steps.map((t) => String(t).trim()).filter(Boolean);
@@ -297,10 +302,15 @@ for (let i = 0; i < data.markets.length && !PHOTOS_ONLY; i++) {
       continue;
     }
     delete n.__dbg;
-    const recipes = await makeRecipes(n);
-    if (!recipes) throw new Error("não foi possível criar receitas válidas");
-    n.recipes = recipes;
-    n.history = [...n.history, ...recipes.map((r) => r.name)].slice(-12);
+    try {
+      const recipes = await makeRecipes(n);
+      n.recipes = recipes;
+      n.history = [...n.history, ...recipes.map((r) => r.name)].slice(-12);
+    } catch (e) {
+      console.warn("  receitas mantidas:", e.message);
+      n.check = { ...n.check, note: String(e.message).slice(0, 300) };
+      if (n.check.result !== "novo") throw e;
+    }
     data.markets[i] = n;
   } catch (e) {
     failed++;
