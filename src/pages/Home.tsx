@@ -291,7 +291,7 @@ export default function Home() {
         </div>
 
         <p className="mt-8 text-center text-xs leading-relaxed text-[#5C6B63]">
-          {meals[0] ? `${meals[0].source} · ${validity(meals[0])}` : "Folhetos semanais"} · Confirma os preços na loja · Fotos: Pexels
+          {meals[0] ? `${meals[0].source} · ${validity(meals[0])}` : "Folhetos semanais"} · Confirma os preços na loja · Fotos geradas por IA
         </p>
       </main>
 
@@ -346,9 +346,11 @@ export default function Home() {
 
                 <p className="mt-6 text-xs leading-relaxed text-[#5C6B63]">
                   {openMeal.source} · {validity(openMeal)}
-                  {openMeal.imageCredit && (
-                    <a href={openMeal.imageCredit.url} target="_blank" rel="noreferrer" className="mt-1 block underline">Foto: {openMeal.imageCredit.name} / Pexels</a>
-                  )}
+                  {openMeal.imageCredit && (openMeal.imageCredit.url ? (
+                    <a href={openMeal.imageCredit.url} target="_blank" rel="noreferrer" className="mt-1 block underline">Foto: {openMeal.imageCredit.name}</a>
+                  ) : (
+                    <span className="mt-1 block">Foto: {openMeal.imageCredit.name}</span>
+                  ))}
                   {openMeal.sources.map((x) => (
                     <a key={x.url} href={x.url} target="_blank" rel="noreferrer" className="mt-1 block underline">{x.title}</a>
                   ))}

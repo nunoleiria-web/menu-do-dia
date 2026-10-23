@@ -17,6 +17,16 @@ app.use("/api/trpc/*", async (c) => {
     createContext,
   });
 });
+app.get("/api/data/menu.json", async (c) => {
+  const { readFile } = await import("node:fs/promises");
+  try {
+    const data = await readFile(process.cwd() + "/api/data/menu.json", "utf-8");
+    return c.json(JSON.parse(data));
+  } catch {
+    return c.json({ error: "menu indisponível" }, 500);
+  }
+});
+
 app.all("/api/*", (c) => c.json({ error: "Not Found" }, 404));
 
 export default app;
