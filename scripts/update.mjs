@@ -223,14 +223,17 @@ async function makeRecipes(m) {
         const bad = priced.find((x) => STAPLE.test(slug(x._p.name)) && !STAR.test(slug(x._p.name)));
         if (bad) throw new Error(`"${bad.item}" é um ingrediente de apoio: deve ficar sem preço (promo null)`);
         const nw = words(name);
-        const miss = priced.find((x) => !words(x._p.name + " " + x.item).some((w) => nw.some((v) => near(v, w))));
-        if (miss) throw new Error(`"${miss._p.name}" leva preço mas não aparece no nome "${name}". Só o(s) produto(s) que dão nome ao prato levam preço; usa "promo": null nos outros. Estrelas disponíveis: ${stars.slice(0, 8).map((p) => p.id).join(", ")}`);
+        const hit = (x) => words(x._p.name + " " + x.item).some((w) => nw.some((v) => near(v, w)));
+        for (const x of priced.filter((x) => !hit(x))) { if (!priced.some(hit)) throw new Error(`"${x._p.name}" leva preço mas não aparece no nome "${name}". Só o produto que dá nome ao prato leva preço. Estrelas disponíveis: ${stars.slice(0, 8).map((p) => p.id).join(", ")}`); delete x.price; delete x.per; delete x.amount; delete x.label; delete x.note; }
+        priced.splice(0, priced.length, ...priced.filter((x) => x.price));
         if (ings.length < 8) throw new Error(`"${name}" tem poucos ingredientes`);
         if ((r.steps ?? []).length < 6) throw new Error(`"${name}" tem poucos passos`);
         const steps = r.steps.map((t) => String(t).trim()).filter(Boolean);
         const tip = String(r.tip ?? "").trim();
         if (tip) steps.push("Dica do chef: " + tip.replace(/^dica( do chef)?:\s*/i, ""));
-        out.push({ name, description: String(r.description ?? "").trim(), servings: String(r.servings ?? "4 pessoas"), time: String(r.time ?? ""), ...(r.difficulty ? { difficulty: String(r.difficulty) } : {}), cuisine: String(r.cuisine || cz[out.length]), meal: out.length ? "Jantar" : "Almoço", ...(r.original ? { original: String(r.original) } : {}), imageQuery: String(r.imageQuery ?? ""), ingredients: ings.map(({ _p, ...x }) => x), steps, slot: out.length + 1 });
+        const orig = String(r.original ?? '').trim();
+        const fullName = orig && !/portugues/i.test(String(r.cuisine || cz[out.length])) && !slug(name).includes(slug(orig)) ? name + " (" + orig + ")" : name;
+        out.push({ name: fullName, description: String(r.description ?? "").trim(), servings: String(r.servings ?? "4 pessoas"), time: String(r.time ?? ""), ...(r.difficulty ? { difficulty: String(r.difficulty) } : {}), cuisine: String(r.cuisine || cz[out.length]), meal: out.length ? "Jantar" : "Almoço", ...(r.original ? { original: String(r.original) } : {}), imageQuery: String(r.imageQuery ?? ""), ingredients: ings.map(({ _p, ...x }) => x), steps, slot: out.length + 1 });
       }
       if (out.length !== 2) throw new Error("foram pedidas 2 receitas");
       if (out[0].name === out[1].name) throw new Error("receitas repetidas");
