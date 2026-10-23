@@ -300,26 +300,30 @@
       ],
       "recipes": [
         {
-          "slot": 1,
-          "name": "Bacalhau à Brás",
-          "description": "Um prato tradicional português feito com bacalhau desfiado, batatas fritas e ovos, temperado com cebola e azeitonas.",
+          "name": "Carne de Porco à Alentejana",
+          "description": "Uma deliciosa combinação de carne de porco tenra com amêijoas, temperada com especiarias e acompanhada por batatas fritas crocantes. Este prato é um verdadeiro clássico da cozinha portuguesa, perfeito para um almoço em família.",
           "servings": "4 pessoas",
-          "time": "45 min",
+          "time": "45 minutos",
+          "imageQuery": "Carne de Porco à Alentejana",
           "ingredients": [
             {
-              "item": "bacalhau",
-              "qty": "400g"
+              "item": "Lombo de Porco",
+              "qty": "800g",
+              "price": 4.49,
+              "per": "kg",
+              "amount": 1,
+              "note": "folheto (lido por IA)"
             },
             {
-              "item": "batata-vermelha",
-              "qty": "500g",
+              "item": "Batata Vermelha",
+              "qty": "600g",
               "price": 1.19,
               "per": "kg",
               "amount": 1,
               "note": "folheto (lido por IA)"
             },
             {
-              "item": "cebola",
+              "item": "Cebola",
               "qty": "2",
               "price": 0.99,
               "per": "kg",
@@ -327,98 +331,89 @@
               "note": "folheto (lido por IA)"
             },
             {
-              "item": "ovos",
-              "qty": "4"
+              "item": "Alho",
+              "qty": "4 dentes"
             },
             {
-              "item": "azeite",
-              "qty": "50ml"
+              "item": "Vinho Branco",
+              "qty": "200ml"
             },
             {
-              "item": "sal",
-              "qty": "a gosto"
+              "item": "Azeite",
+              "qty": "q.b."
             },
             {
-              "item": "pimenta",
-              "qty": "a gosto"
+              "item": "Sal e Pimenta",
+              "qty": "q.b."
             }
           ],
           "steps": [
-            "Cozer o bacalhau em água a ferver durante 10 minutos. Escorrer e desfiar.",
-            "Fritar as batatas em palha até ficarem douradas e crocantes. Reservar.",
-            "Numa frigideira, aquecer o azeite e refogar a cebola picada até ficar transparente.",
-            "Adicionar o bacalhau desfiado e misturar bem. Juntar as batatas fritas.",
-            "Bater os ovos e temperar com sal e pimenta. Verter sobre a mistura de bacalhau e batatas, mexendo até os ovos estarem cozinhados.",
-            "Servir quente, decorado com azeitonas."
+            "Corte o lombo de porco em cubos e tempere com sal, pimenta e um pouco de vinho branco. Deixe marinar por 30 minutos.",
+            "Descasque e corte as batatas vermelhas em palitos e frite-as em azeite quente até ficarem douradas e crocantes.",
+            "Numa frigideira grande, aqueça azeite e refogue a cebola picada e os dentes de alho até ficarem dourados.",
+            "Adicione os cubos de carne de porco à frigideira e cozinhe até que estejam bem dourados por todos os lados.",
+            "Junte as amêijoas à carne e adicione mais vinho branco. Cozinhe até que as amêijoas abram.",
+            "Sirva a carne de porco com as amêijoas sobre uma cama de batatas fritas crocantes."
           ],
-          "imageQuery": "bacalhau à brás",
-          "image": "/meals/foto-pingo-doce-bacalhau-a-bras-d63cf8d8.webp",
-          "imageCredit": {
-            "name": "Imagem gerada por IA",
-            "url": ""
-          }
+          "slot": 1
         },
         {
-          "slot": 2,
-          "name": "Arroz de Marisco",
-          "description": "Um prato saboroso e reconfortante, feito com arroz, marisco e temperos, típico da culinária portuguesa.",
+          "name": "Caldeirada de Peixe",
+          "description": "Uma caldeirada rica e saborosa, repleta de peixes frescos e legumes, cozinhada lentamente para realçar todos os sabores do mar. Ideal para um jantar especial, este prato é uma verdadeira celebração da gastronomia portuguesa.",
           "servings": "4 pessoas",
-          "time": "45 min",
+          "time": "60 minutos",
+          "imageQuery": "Caldeirada de Peixe",
           "ingredients": [
             {
-              "item": "arroz",
-              "qty": "300g"
-            },
-            {
-              "item": "dourada-grande",
-              "qty": "400g",
+              "item": "Dourada Grande",
+              "qty": "800g",
               "price": 10.99,
               "per": "kg",
               "amount": 1,
               "note": "folheto (lido por IA)"
             },
             {
-              "item": "cebola",
-              "qty": "1",
+              "item": "Cebola",
+              "qty": "2",
               "price": 0.99,
               "per": "kg",
               "amount": 1,
               "note": "folheto (lido por IA)"
             },
             {
-              "item": "pepino",
-              "qty": "1",
-              "price": 1.49,
+              "item": "Pimento Vermelho",
+              "qty": "1"
+            },
+            {
+              "item": "Batata Vermelha",
+              "qty": "400g",
+              "price": 1.19,
               "per": "kg",
               "amount": 1,
               "note": "folheto (lido por IA)"
             },
             {
-              "item": "azeite",
-              "qty": "50ml"
+              "item": "Tomate",
+              "qty": "2"
             },
             {
-              "item": "sal",
-              "qty": "a gosto"
+              "item": "Alho",
+              "qty": "3 dentes"
             },
             {
-              "item": "pimenta",
-              "qty": "a gosto"
+              "item": "Azeite",
+              "qty": "q.b."
             }
           ],
           "steps": [
-            "Numa panela, aquecer o azeite e refogar a cebola picada até ficar dourada.",
-            "Adicionar o arroz e mexer bem, deixando fritar por 2 minutos.",
-            "Juntar a dourada cortada em pedaços e cobrir com água. Temperar com sal e pimenta.",
-            "Cozinhar em lume brando durante 15-20 minutos, até o arroz estar cozido.",
-            "Servir com fatias de pepino fresco ao lado."
+            "Corte a dourada em postas e tempere com sal e pimenta. Reserve.",
+            "Numa panela grande, aqueça azeite e refogue a cebola picada e os dentes de alho até ficarem dourados.",
+            "Adicione o pimento vermelho cortado em tiras e os tomates picados, cozinhando até que os legumes estejam macios.",
+            "Junte as batatas vermelhas cortadas em rodelas e adicione água suficiente para cobrir os ingredientes. Cozinhe até que as batatas estejam quase cozidas.",
+            "Coloque as postas de dourada na panela e cozinhe em fogo brando até que o peixe esteja cozido e os sabores se misturem.",
+            "Sirva a caldeirada quente, acompanhada de pão fresco."
           ],
-          "imageQuery": "arroz de marisco",
-          "image": "/meals/foto-pingo-doce-arroz-de-marisco-a6f0bcf1.webp",
-          "imageCredit": {
-            "name": "Imagem gerada por IA",
-            "url": ""
-          }
+          "slot": 2
         }
       ],
       "promos": [
@@ -532,7 +527,9 @@
         "Salada de Laranja e Abacate",
         "Purê de Batata Vermelha com Brócolos Bimi",
         "Bacalhau à Brás",
-        "Arroz de Marisco"
+        "Arroz de Marisco",
+        "Carne de Porco à Alentejana",
+        "Caldeirada de Peixe"
       ],
       "check": {
         "date": "2026-10-23",
@@ -556,11 +553,11 @@
       ],
       "recipes": [
         {
-          "name": "Pernil de Porco Assado com Tomate Coração de Boi",
-          "description": "Um prato suculento e aromático, onde o pernil de porco é assado lentamente, acompanhado por tomates coração de boi frescos que realçam o sabor da carne. Ideal para um almoço em família.",
+          "name": "Pernil de Porco Assado com Abacaxi",
+          "description": "Um prato suculento e aromático, onde o pernil de porco é assado lentamente, ganhando um toque tropical com o abacaxi, perfeito para um almoço em família.",
           "servings": "4 pessoas",
-          "time": "2 horas",
-          "imageQuery": "pork roast with tomatoes",
+          "time": "120 minutos",
+          "imageQuery": "pork roast with pineapple",
           "ingredients": [
             {
               "item": "Pernil de porco",
@@ -571,9 +568,9 @@
               "note": "folheto"
             },
             {
-              "item": "Tomate coração de boi",
-              "qty": "500 g",
-              "price": 2.29,
+              "item": "Abacaxi",
+              "qty": "1 unidade",
+              "price": 1.09,
               "per": "kg",
               "amount": 1,
               "note": "folheto"
@@ -584,7 +581,7 @@
             },
             {
               "item": "Cebola",
-              "qty": "2 médias"
+              "qty": "2 unidades"
             },
             {
               "item": "Azeite",
@@ -602,24 +599,19 @@
           "steps": [
             "Pré-aqueça o forno a 180°C.",
             "Tempere o pernil de porco com sal, pimenta, alho picado e azeite, esfregando bem a carne.",
-            "Coloque o pernil numa assadeira e rodeie com as cebolas cortadas em rodelas e os tomates cortados ao meio.",
-            "Regue tudo com um fio de azeite e leve ao forno por cerca de 1 hora e 30 minutos, regando ocasionalmente com os sucos da assadeira.",
-            "Quando a carne estiver bem dourada e cozida, retire do forno e deixe descansar por 10 minutos antes de fatiar.",
-            "Sirva o pernil fatiado com os tomates e cebolas assadas ao lado."
+            "Coloque o pernil numa assadeira e rodeie com cebolas cortadas em rodelas e o abacaxi cortado em fatias.",
+            "Cubra a assadeira com papel alumínio e leve ao forno por cerca de 90 minutos.",
+            "Retire o papel alumínio e deixe assar por mais 30 minutos, até que a carne esteja dourada e suculenta.",
+            "Sirva o pernil fatiado com as fatias de abacaxi e cebola, regado com o molho da assadeira."
           ],
-          "slot": 1,
-          "image": "/meals/foto-lidl-pernil-de-porco-assado-com-tomate-coracao-de-boi-52ac4f7a.webp",
-          "imageCredit": {
-            "name": "Imagem gerada por IA",
-            "url": ""
-          }
+          "slot": 1
         },
         {
-          "name": "Peito de Frango Grelhado com Cogumelos Salteados",
-          "description": "Um prato leve e saboroso, onde o peito de frango é grelhado à perfeição e servido com cogumelos salteados, ideal para uma refeição saudável e rápida.",
+          "name": "Frango de Caril com Cogumelos",
+          "description": "Um prato aromático e reconfortante, onde o peito de frango é cozinhado com especiarias e cogumelos, criando uma combinação deliciosa e exótica.",
           "servings": "4 pessoas",
-          "time": "30 minutos",
-          "imageQuery": "grilled chicken with sautéed mushrooms",
+          "time": "40 minutos",
+          "imageQuery": "chicken curry with mushrooms",
           "ingredients": [
             {
               "item": "Peito de frango",
@@ -631,7 +623,7 @@
             },
             {
               "item": "Cogumelos",
-              "qty": "300 g",
+              "qty": "250 g",
               "price": 1.29,
               "per": "un",
               "amount": 1,
@@ -639,40 +631,35 @@
               "note": "folheto"
             },
             {
+              "item": "Cebola",
+              "qty": "1 unidade"
+            },
+            {
               "item": "Alho",
               "qty": "2 dentes"
             },
             {
+              "item": "Leite de coco",
+              "qty": "400 ml"
+            },
+            {
+              "item": "Caril em pó",
+              "qty": "2 colheres de sopa"
+            },
+            {
               "item": "Azeite",
               "qty": "30 ml"
-            },
-            {
-              "item": "Sal",
-              "qty": "a gosto"
-            },
-            {
-              "item": "Pimenta",
-              "qty": "a gosto"
-            },
-            {
-              "item": "Salsa picada",
-              "qty": "a gosto"
             }
           ],
           "steps": [
-            "Tempere os peitos de frango com sal, pimenta e um fio de azeite.",
-            "Aqueça uma grelha ou frigideira antiaderente e grelhe os peitos de frango por cerca de 6-7 minutos de cada lado, até estarem bem cozidos.",
-            "Enquanto o frango grelha, limpe os cogumelos e corte-os em fatias.",
-            "Numa frigideira, aqueça um pouco de azeite e adicione o alho picado, deixando dourar levemente.",
-            "Adicione os cogumelos e salteie até que estejam macios e dourados, temperando com sal e pimenta a gosto.",
-            "Sirva o peito de frango grelhado com os cogumelos salteados por cima e polvilhe com salsa picada."
+            "Corte o peito de frango em cubos e tempere com sal e pimenta.",
+            "Numa frigideira grande, aqueça o azeite e refogue a cebola e o alho picados até ficarem dourados.",
+            "Adicione os cubos de frango e cozinhe até que estejam dourados por todos os lados.",
+            "Junte os cogumelos fatiados e o caril em pó, mexendo bem para envolver.",
+            "Adicione o leite de coco e deixe cozinhar em fogo baixo por cerca de 15 minutos, até o frango estar cozido e o molho espesso.",
+            "Sirva quente, acompanhado de arroz branco ou pão naan."
           ],
-          "slot": 2,
-          "image": "/meals/foto-lidl-peito-de-frango-grelhado-com-cogumelos-salteados-5425154b.webp",
-          "imageCredit": {
-            "name": "Imagem gerada por IA",
-            "url": ""
-          }
+          "slot": 2
         }
       ],
       "promos": [
@@ -728,8 +715,6 @@
         }
       ],
       "history": [
-        "Pernil de porco estufado com cogumelos",
-        "Salada morna de frango, abacate e tomate",
         "Pernil de Porco Estufado com Cogumelos",
         "Salada de Frango com Abacate e Tomate",
         "Pernil de Porco Assado com Cogumelos",
@@ -739,7 +724,9 @@
         "Carne de Porco à Alentejana",
         "Peito de Frango Grelhado com Salada de Tomate e Abacate",
         "Pernil de Porco Assado com Tomate Coração de Boi",
-        "Peito de Frango Grelhado com Cogumelos Salteados"
+        "Peito de Frango Grelhado com Cogumelos Salteados",
+        "Pernil de Porco Assado com Abacaxi",
+        "Frango de Caril com Cogumelos"
       ],
       "check": {
         "date": "2026-10-23",
@@ -767,7 +754,7 @@
           "description": "As Bifanas à Alentejana são um prato tradicional português, onde a suculência da carne de porco se combina com o sabor intenso dos temperos e o toque especial do vinho. Uma verdadeira delícia que vai conquistar o seu paladar!",
           "servings": "4 pessoas",
           "time": "30 minutos",
-          "imageQuery": "bifanas",
+          "imageQuery": "bifanas alentejana",
           "ingredients": [
             {
               "item": "Bifanas da perna de porco",
@@ -795,7 +782,7 @@
             },
             {
               "item": "Azeite",
-              "qty": "q.b."
+              "qty": "50ml"
             },
             {
               "item": "Louro",
@@ -804,24 +791,19 @@
           ],
           "steps": [
             "Tempere as bifanas com sal, pimenta, alho picado e vinho branco. Deixe marinar por pelo menos 15 minutos.",
-            "Numa frigideira grande, aqueça um pouco de azeite e adicione as bifanas, selando-as de ambos os lados até ficarem douradas.",
-            "Adicione as folhas de louro e um pouco mais de vinho branco, deixando cozinhar em fogo médio até a carne estar bem cozida e o molho reduzido.",
-            "Retire as bifanas e reserve. No mesmo molho, adicione um pouco mais de azeite se necessário e deixe reduzir mais um pouco.",
-            "Sirva as bifanas com o molho por cima e acompanhe com arroz ou batatas fritas."
+            "Numa frigideira grande, aqueça o azeite e adicione as bifanas, selando-as de ambos os lados até ficarem douradas.",
+            "Adicione as folhas de louro e um pouco mais de vinho branco, deixando cozinhar em lume brando por cerca de 10 minutos.",
+            "Retire as bifanas e reserve. Reduza o molho na frigideira até ficar mais espesso.",
+            "Sirva as bifanas regadas com o molho e acompanhe com arroz ou batatas fritas."
           ],
-          "slot": 1,
-          "image": "/meals/foto-aldi-bifanas-a-alentejana-e22b3583.webp",
-          "imageCredit": {
-            "name": "Imagem gerada por IA",
-            "url": ""
-          }
+          "slot": 1
         },
         {
           "name": "Salada de Tomate e Curgete",
           "description": "Uma salada fresca e colorida, perfeita para acompanhar as bifanas, onde o tomate suculento e a curgete crocante se juntam para criar uma explosão de sabores e texturas.",
           "servings": "4 pessoas",
           "time": "15 minutos",
-          "imageQuery": "salad",
+          "imageQuery": "salada tomate curgete",
           "ingredients": [
             {
               "item": "Tomate alongado",
@@ -840,16 +822,16 @@
               "note": "folheto"
             },
             {
-              "item": "Cebola roxa",
-              "qty": "1 unidade"
+              "item": "Cebolinha",
+              "qty": "2 unidades"
             },
             {
               "item": "Azeite",
-              "qty": "q.b."
+              "qty": "50ml"
             },
             {
               "item": "Vinagre balsâmico",
-              "qty": "q.b."
+              "qty": "30ml"
             },
             {
               "item": "Sal",
@@ -862,17 +844,12 @@
           ],
           "steps": [
             "Lave bem os tomates e a curgete. Corte os tomates em rodelas e a curgete em tiras finas.",
-            "Descasque e corte a cebola roxa em fatias finas.",
-            "Numa tigela grande, misture os tomates, a curgete e a cebola.",
-            "Regue com azeite e vinagre balsâmico a gosto, temperando com sal e pimenta.",
-            "Misture tudo delicadamente e sirva fresca como acompanhamento."
+            "Numa tigela, misture os tomates, a curgete e a cebolinha picada.",
+            "Regue com azeite e vinagre balsâmico, temperando com sal e pimenta a gosto.",
+            "Misture tudo delicadamente para que os sabores se combinem.",
+            "Deixe repousar por 5 minutos antes de servir para intensificar os sabores."
           ],
-          "slot": 2,
-          "image": "/meals/foto-aldi-salada-de-tomate-e-curgete-5b6b636a.webp",
-          "imageCredit": {
-            "name": "Imagem gerada por IA",
-            "url": ""
-          }
+          "slot": 2
         }
       ],
       "promos": [
@@ -921,14 +898,14 @@
         }
       ],
       "history": [
-        "Bifanas de porco com cogumelos salteados",
-        "Esparguete de tomate, curgete e cogumelos",
         "Bifanas de Porco com Cogumelos e Tomate",
         "Salteado de Curgete com Bifanas e Maçã",
         "Bifanas de Porco com Cogumelos e Tomate",
         "Salteado de Curgete com Maçã e Bifanas",
         "Bifanas à Alentejana",
         "Arroz de Tomate e Cogumelos",
+        "Bifanas à Alentejana",
+        "Salada de Tomate e Curgete",
         "Bifanas à Alentejana",
         "Salada de Tomate e Curgete",
         "Bifanas à Alentejana",
