@@ -14,114 +14,136 @@
       ],
       "recipes": [
         {
-          "slot": 1,
-          "name": "Salada Ibérica com Espinafre e Coentros",
-          "description": "Uma salada fresca e vibrante, perfeita para os dias quentes, combinando a crocância da Salada Ibérica com o sabor intenso dos coentros.",
+          "name": "Estufado de Novilho Angus",
+          "description": "Um prato reconfortante e cheio de sabor, perfeito para aquecer os dias mais frios. O Estufado de Novilho Angus é uma verdadeira iguaria da cozinha portuguesa, que derrete na boca.",
           "servings": "4 pessoas",
-          "time": "15 min",
+          "time": "1h 30min",
+          "difficulty": "Média",
+          "imageQuery": "beef stew, traditional Portuguese food",
           "ingredients": [
             {
-              "item": "Salada Ibérica",
-              "qty": "200 g",
-              "price": 1.68,
-              "per": "un",
-              "amount": 0.2,
+              "item": "Estufar (Chambão) Novilho Angus",
+              "qty": "1",
+              "price": 13.99,
+              "per": "kg",
+              "amount": 1,
               "label": "1 embalagem",
               "note": "folheto (lido por IA)"
             },
             {
-              "item": "Espinafre Baby",
-              "qty": "100 g",
-              "price": 1.39,
-              "per": "un",
-              "amount": 0.1,
-              "label": "1 embalagem",
-              "note": "folheto (lido por IA)"
+              "item": "Cebola",
+              "qty": "2"
             },
             {
-              "item": "Coentros Naturais",
-              "qty": "50 g",
-              "price": 0.98,
-              "per": "un",
-              "amount": 0.05,
-              "label": "1 embalagem",
-              "note": "folheto (lido por IA)"
+              "item": "Alho",
+              "qty": "4 dentes"
             },
             {
               "item": "Azeite",
-              "qty": "3 c. sopa"
+              "qty": "50 ml"
             },
             {
-              "item": "Sal",
-              "qty": "a gosto"
+              "item": "Louro",
+              "qty": "2 folhas"
+            },
+            {
+              "item": "Vinho tinto",
+              "qty": "200 ml"
+            },
+            {
+              "item": "Tomate pelado",
+              "qty": "400 g"
+            },
+            {
+              "item": "Batatas",
+              "qty": "800 g"
+            },
+            {
+              "item": "Salsa picada",
+              "qty": "q.b."
             }
           ],
           "steps": [
-            "Lave bem a Salada Ibérica e o Espinafre Baby e coloque-os numa tigela grande.",
-            "Pique os Coentros Naturais e adicione à tigela.",
-            "Regue com azeite e tempere com sal a gosto.",
-            "Misture tudo delicadamente até que os ingredientes estejam bem combinados.",
-            "Sirva imediatamente como acompanhamento ou prato principal leve."
+            "Corte o Estufar (Chambão) Novilho Angus em cubos de aproximadamente 3 cm.",
+            "Num tacho grande, aqueça o azeite e refogue a cebola picada e os dentes de alho esmagados até ficarem dourados.",
+            "Adicione a carne e deixe dourar de todos os lados, cerca de 10 minutos.",
+            "Junte as folhas de louro e o vinho tinto, deixando cozinhar até o álcool evaporar, cerca de 5 minutos.",
+            "Adicione o tomate pelado e as batatas cortadas em cubos, misturando bem.",
+            "Cubra com água, tempere com sal e pimenta a gosto e deixe cozinhar em lume brando durante 1 hora, mexendo ocasionalmente.",
+            "Quando a carne estiver tenra e o molho espesso, retire do lume e polvilhe com salsa picada antes de servir.",
+            "Sirva quente, acompanhado de arroz ou pão fresco.",
+            "Dica do chef: Para um sabor ainda mais intenso, deixe o estufado repousar durante algumas horas antes de servir."
           ],
-          "imageQuery": "iberian salad with spinach and coriander",
-          "image": "/meals/foto-continente-salada-iberica-com-espinafre-e-coentros-1c04d22a.webp",
+          "slot": 1,
+          "image": "/meals/foto-continente-estufado-de-novilho-angus-14a8de8c.webp",
           "imageCredit": {
             "name": "Imagem gerada por IA",
             "url": ""
           }
         },
         {
-          "slot": 2,
-          "name": "Batata Doce Assada com Romã e Amendoim",
-          "description": "Uma combinação deliciosa de batata doce assada, romã suculenta e amendoim crocante, perfeita para um acompanhamento nutritivo.",
+          "name": "Medalhões de Controlo Novilho",
+          "description": "Suculentos medalhões de novilho grelhados, perfeitos para um jantar especial. Acompanhados de um molho de ervas frescas, são uma verdadeira delícia.",
           "servings": "4 pessoas",
-          "time": "50 min",
+          "time": "30 min",
+          "difficulty": "Fácil",
+          "imageQuery": "grilled beef medallions, traditional Portuguese food",
           "ingredients": [
             {
-              "item": "Batata Doce Biológica",
+              "item": "Medalhões de Controlo Novilho",
               "qty": "800 g",
-              "price": 2.69,
+              "price": 14.99,
               "per": "kg",
-              "amount": 0.8,
-              "label": "1 embalagem",
-              "note": "folheto (lido por IA)"
-            },
-            {
-              "item": "Romã Biológica",
-              "qty": "1 un",
-              "price": 2.99,
-              "per": "un",
               "amount": 1,
               "label": "1 embalagem",
               "note": "folheto (lido por IA)"
             },
             {
-              "item": "Amendoim Torrado",
-              "qty": "100 g",
-              "price": 0.95,
-              "per": "kg",
-              "amount": 0.1,
-              "label": "1 embalagem",
-              "note": "folheto (lido por IA)"
+              "item": "Alho",
+              "qty": "2 dentes"
             },
             {
               "item": "Azeite",
-              "qty": "2 c. sopa"
+              "qty": "50 ml"
+            },
+            {
+              "item": "Alecrim",
+              "qty": "q.b."
+            },
+            {
+              "item": "Tomilho",
+              "qty": "q.b."
             },
             {
               "item": "Sal",
               "qty": "a gosto"
+            },
+            {
+              "item": "Pimenta",
+              "qty": "a gosto"
+            },
+            {
+              "item": "Batatas",
+              "qty": "800 g"
+            },
+            {
+              "item": "Brócolos",
+              "qty": "400 g"
             }
           ],
           "steps": [
-            "Pré-aqueça o forno a 200°C.",
-            "Descasque e corte a Batata Doce em cubos e coloque-os numa assadeira.",
-            "Regue com azeite e tempere com sal, misturando bem.",
-            "Asse no forno por cerca de 30-35 minutos ou até que estejam douradas e macias.",
-            "Retire do forno, adicione os grãos da Romã e o Amendoim Torrado, misturando delicadamente antes de servir."
+            "Tempere os medalhões de controlo novilho com sal, pimenta, alho picado, alecrim e tomilho.",
+            "Aqueça uma grelha ou frigideira antiaderente com azeite em lume médio-alto.",
+            "Grelhe os medalhões durante 4-5 minutos de cada lado, ou até atingirem o ponto desejado.",
+            "Enquanto os medalhões grelham, coza as batatas em água com sal até ficarem macias, cerca de 15 minutos.",
+            "Nos últimos 5 minutos, adicione os brócolos à água a ferver para cozer.",
+            "Retire os medalhões da grelha e deixe repousar durante 5 minutos antes de servir.",
+            "Sirva os medalhões com as batatas e brócolos, regados com um fio de azeite.",
+            "Decore com ervas frescas a gosto.",
+            "Dica do chef: Para um toque extra, grelhe os medalhões com um pouco de manteiga e ervas aromáticas."
           ],
-          "imageQuery": "roasted sweet potatoes with pomegranate and peanuts",
-          "image": "/meals/foto-continente-batata-doce-assada-com-roma-e-amendoim-c78db320.webp",
+          "slot": 2,
+          "image": "/meals/foto-continente-medalhoes-de-controlo-novilho-c3aa25f6.webp",
           "imageCredit": {
             "name": "Imagem gerada por IA",
             "url": ""
@@ -280,10 +302,12 @@
         "Salada Ibérica com Espinafre e Coentros",
         "Batata Doce Assada com Romã e Amendoim",
         "Salada Ibérica com Espinafre e Coentros",
-        "Batata Doce Assada com Romã e Amendoim"
+        "Batata Doce Assada com Romã e Amendoim",
+        "Estufado de Novilho Angus",
+        "Medalhões de Controlo Novilho"
       ],
       "check": {
-        "date": "2026-10-22",
+        "date": "2026-10-23",
         "result": "sem-novo"
       }
     },
@@ -355,7 +379,12 @@
             "Junte as amêijoas à carne e adicione mais vinho branco. Cozinhe até que as amêijoas abram.",
             "Sirva a carne de porco com as amêijoas sobre uma cama de batatas fritas crocantes."
           ],
-          "slot": 1
+          "slot": 1,
+          "image": "/meals/foto-pingo-doce-carne-de-porco-a-alentejana-f9457051.webp",
+          "imageCredit": {
+            "name": "Imagem gerada por IA",
+            "url": ""
+          }
         },
         {
           "name": "Caldeirada de Peixe",
@@ -413,7 +442,12 @@
             "Coloque as postas de dourada na panela e cozinhe em fogo brando até que o peixe esteja cozido e os sabores se misturem.",
             "Sirva a caldeirada quente, acompanhada de pão fresco."
           ],
-          "slot": 2
+          "slot": 2,
+          "image": "/meals/foto-pingo-doce-caldeirada-de-peixe-b28fbc4b.webp",
+          "imageCredit": {
+            "name": "Imagem gerada por IA",
+            "url": ""
+          }
         }
       ],
       "promos": [
@@ -553,113 +587,135 @@
       ],
       "recipes": [
         {
-          "name": "Pernil de Porco Assado com Abacaxi",
-          "description": "Um prato suculento e aromático, onde o pernil de porco é assado lentamente, ganhando um toque tropical com o abacaxi, perfeito para um almoço em família.",
+          "name": "Pernil de Porco Estufado",
+          "description": "Um prato reconfortante e cheio de sabor, onde o pernil de porco é cozinhado lentamente até ficar tenro e suculento, envolto em um molho rico e aromático.",
           "servings": "4 pessoas",
-          "time": "120 minutos",
-          "imageQuery": "pork roast with pineapple",
+          "time": "2h",
+          "difficulty": "Média",
+          "imageQuery": "pork stew",
           "ingredients": [
             {
-              "item": "Pernil de porco",
-              "qty": "1.5 kg",
+              "item": "pernil de porco",
+              "qty": "1.2",
               "price": 2.99,
               "per": "kg",
               "amount": 1,
               "note": "folheto"
             },
             {
-              "item": "Abacaxi",
-              "qty": "1 unidade",
-              "price": 1.09,
-              "per": "kg",
-              "amount": 1,
-              "note": "folheto"
+              "item": "cebola",
+              "qty": "2"
             },
             {
-              "item": "Alho",
-              "qty": "4 dentes"
+              "item": "dentes de alho",
+              "qty": "4"
             },
             {
-              "item": "Cebola",
-              "qty": "2 unidades"
-            },
-            {
-              "item": "Azeite",
+              "item": "azeite",
               "qty": "50 ml"
             },
             {
-              "item": "Sal",
+              "item": "tomate pelado",
+              "qty": "400 g"
+            },
+            {
+              "item": "vinho branco",
+              "qty": "200 ml"
+            },
+            {
+              "item": "louro",
+              "qty": "2 folhas"
+            },
+            {
+              "item": "sal",
               "qty": "a gosto"
             },
             {
-              "item": "Pimenta",
+              "item": "pimenta",
               "qty": "a gosto"
             }
           ],
           "steps": [
-            "Pré-aqueça o forno a 180°C.",
-            "Tempere o pernil de porco com sal, pimenta, alho picado e azeite, esfregando bem a carne.",
-            "Coloque o pernil numa assadeira e rodeie com cebolas cortadas em rodelas e o abacaxi cortado em fatias.",
-            "Cubra a assadeira com papel alumínio e leve ao forno por cerca de 90 minutos.",
-            "Retire o papel alumínio e deixe assar por mais 30 minutos, até que a carne esteja dourada e suculenta.",
-            "Sirva o pernil fatiado com as fatias de abacaxi e cebola, regado com o molho da assadeira."
+            "Corte o pernil de porco em pedaços grandes e tempere com sal e pimenta a gosto.",
+            "Numa panela grande, aqueça o azeite em fogo médio e doure os pedaços de pernil de todos os lados.",
+            "Retire o pernil da panela e reserve. Na mesma panela, adicione a cebola picada e os dentes de alho picados, refogando até ficarem macios.",
+            "Adicione o tomate pelado e o vinho branco, mexendo bem para soltar os sabores.",
+            "Junte o pernil de volta à panela, adicione as folhas de louro e cubra com água. Deixe cozinhar em fogo baixo durante cerca de 1h30, até o pernil estar bem tenro.",
+            "Verifique o tempero e ajuste com mais sal e pimenta, se necessário. Se o molho estiver muito líquido, deixe cozinhar mais um pouco destampado para reduzir.",
+            "Sirva quente, acompanhado de arroz ou puré de batata.",
+            "Dica do chef: Para um sabor ainda mais intenso, deixe o pernil marinar durante a noite antes de cozinhar."
           ],
-          "slot": 1
+          "slot": 1,
+          "image": "/meals/foto-lidl-pernil-de-porco-estufado-d8e76c8d.webp",
+          "imageCredit": {
+            "name": "Imagem gerada por IA",
+            "url": ""
+          }
         },
         {
-          "name": "Frango de Caril com Cogumelos",
-          "description": "Um prato aromático e reconfortante, onde o peito de frango é cozinhado com especiarias e cogumelos, criando uma combinação deliciosa e exótica.",
+          "name": "Peito de Frango Grelhado com Tomate Coração de Boi",
+          "description": "Um prato leve e fresco, onde o peito de frango é grelhado à perfeição e servido com tomates coração de boi suculentos e aromáticos.",
           "servings": "4 pessoas",
-          "time": "40 minutos",
-          "imageQuery": "chicken curry with mushrooms",
+          "time": "30 min",
+          "difficulty": "Fácil",
+          "imageQuery": "grilled chicken with tomatoes",
           "ingredients": [
             {
-              "item": "Peito de frango",
-              "qty": "600 g",
+              "item": "peito de frango",
+              "qty": "800",
               "price": 5.79,
               "per": "kg",
               "amount": 1,
               "note": "folheto c/ Lidl Plus"
             },
             {
-              "item": "Cogumelos",
-              "qty": "250 g",
-              "price": 1.29,
-              "per": "un",
+              "item": "tomate coração de boi",
+              "qty": "4",
+              "price": 2.29,
+              "per": "kg",
               "amount": 1,
-              "label": "1,29 €/emb. 300 g",
               "note": "folheto"
             },
             {
-              "item": "Cebola",
-              "qty": "1 unidade"
+              "item": "azeite",
+              "qty": "50 ml"
             },
             {
-              "item": "Alho",
-              "qty": "2 dentes"
+              "item": "sal",
+              "qty": "a gosto"
             },
             {
-              "item": "Leite de coco",
-              "qty": "400 ml"
+              "item": "pimenta",
+              "qty": "a gosto"
             },
             {
-              "item": "Caril em pó",
+              "item": "alho em pó",
+              "qty": "1 colher de chá"
+            },
+            {
+              "item": "salsa picada",
               "qty": "2 colheres de sopa"
             },
             {
-              "item": "Azeite",
-              "qty": "30 ml"
+              "item": "limão",
+              "qty": "1"
             }
           ],
           "steps": [
-            "Corte o peito de frango em cubos e tempere com sal e pimenta.",
-            "Numa frigideira grande, aqueça o azeite e refogue a cebola e o alho picados até ficarem dourados.",
-            "Adicione os cubos de frango e cozinhe até que estejam dourados por todos os lados.",
-            "Junte os cogumelos fatiados e o caril em pó, mexendo bem para envolver.",
-            "Adicione o leite de coco e deixe cozinhar em fogo baixo por cerca de 15 minutos, até o frango estar cozido e o molho espesso.",
-            "Sirva quente, acompanhado de arroz branco ou pão naan."
+            "Tempere os peitos de frango com sal, pimenta e alho em pó. Deixe marinar por 10 minutos.",
+            "Aqueça uma grelha ou uma frigideira antiaderente em fogo médio-alto e adicione um fio de azeite.",
+            "Grelhe os peitos de frango durante cerca de 6-7 minutos de cada lado, ou até estarem bem cozinhados e com marcas de grelha.",
+            "Enquanto o frango está a grelhar, corte os tomates coração de boi em rodelas e tempere com sal, pimenta, azeite e sumo de limão.",
+            "Retire o frango da grelha e deixe descansar por 5 minutos antes de fatiar.",
+            "Sirva o peito de frango fatiado com as rodelas de tomate ao lado, polvilhado com salsa picada.",
+            "Dica do chef: Para um toque extra, adicione manjericão fresco picado sobre os tomates antes de servir."
           ],
-          "slot": 2
+          "slot": 2,
+          "image": "/meals/foto-lidl-peito-de-frango-grelhado-com-tomate-coracao-de-boi-bfcc79c8.webp",
+          "imageCredit": {
+            "name": "Imagem gerada por IA",
+            "url": ""
+          }
         }
       ],
       "promos": [
@@ -715,8 +771,6 @@
         }
       ],
       "history": [
-        "Pernil de Porco Estufado com Cogumelos",
-        "Salada de Frango com Abacate e Tomate",
         "Pernil de Porco Assado com Cogumelos",
         "Salada de Frango com Abacate e Tomate",
         "Pernil de Porco Estufado",
@@ -726,7 +780,9 @@
         "Pernil de Porco Assado com Tomate Coração de Boi",
         "Peito de Frango Grelhado com Cogumelos Salteados",
         "Pernil de Porco Assado com Abacaxi",
-        "Frango de Caril com Cogumelos"
+        "Frango de Caril com Cogumelos",
+        "Pernil de Porco Estufado",
+        "Peito de Frango Grelhado com Tomate Coração de Boi"
       ],
       "check": {
         "date": "2026-10-23",
@@ -751,105 +807,125 @@
       "recipes": [
         {
           "name": "Bifanas à Alentejana",
-          "description": "As Bifanas à Alentejana são um prato tradicional português, onde a suculência da carne de porco se combina com o sabor intenso dos temperos e o toque especial do vinho. Uma verdadeira delícia que vai conquistar o seu paladar!",
+          "description": "As bifanas à Alentejana são um prato tradicional português, suculento e cheio de sabor, perfeito para uma refeição reconfortante. A combinação de carne de porco temperada e o toque de alho e louro tornam este prato irresistível.",
           "servings": "4 pessoas",
-          "time": "30 minutos",
-          "imageQuery": "bifanas alentejana",
+          "time": "45 min",
+          "difficulty": "Fácil",
+          "imageQuery": "bifanas, traditional Portuguese food",
           "ingredients": [
             {
-              "item": "Bifanas da perna de porco",
-              "qty": "800g",
+              "item": "bifanas da perna de porco",
+              "qty": "800 g",
               "price": 4.49,
               "per": "kg",
-              "amount": 1,
+              "amount": 0.8,
               "note": "folheto"
             },
             {
-              "item": "Alho",
+              "item": "alho",
               "qty": "4 dentes"
             },
             {
-              "item": "Vinho branco",
-              "qty": "200ml"
-            },
-            {
-              "item": "Pimenta",
-              "qty": "a gosto"
-            },
-            {
-              "item": "Sal",
-              "qty": "a gosto"
-            },
-            {
-              "item": "Azeite",
-              "qty": "50ml"
-            },
-            {
-              "item": "Louro",
+              "item": "folhas de louro",
               "qty": "2 folhas"
+            },
+            {
+              "item": "azeite",
+              "qty": "50 ml"
+            },
+            {
+              "item": "sal",
+              "qty": "a gosto"
+            },
+            {
+              "item": "pimenta preta",
+              "qty": "a gosto"
+            },
+            {
+              "item": "vinho branco",
+              "qty": "100 ml"
+            },
+            {
+              "item": "salsa picada",
+              "qty": "2 colheres de sopa"
             }
           ],
           "steps": [
-            "Tempere as bifanas com sal, pimenta, alho picado e vinho branco. Deixe marinar por pelo menos 15 minutos.",
-            "Numa frigideira grande, aqueça o azeite e adicione as bifanas, selando-as de ambos os lados até ficarem douradas.",
-            "Adicione as folhas de louro e um pouco mais de vinho branco, deixando cozinhar em lume brando por cerca de 10 minutos.",
-            "Retire as bifanas e reserve. Reduza o molho na frigideira até ficar mais espesso.",
-            "Sirva as bifanas regadas com o molho e acompanhe com arroz ou batatas fritas."
+            "Tempere as bifanas com sal, pimenta, alho picado e as folhas de louro. Deixe marinar por 30 minutos.",
+            "Numa frigideira grande, aqueça o azeite em fogo médio.",
+            "Adicione as bifanas e frite-as durante cerca de 5 minutos de cada lado, até estarem douradas.",
+            "Retire as bifanas da frigideira e reserve.",
+            "Na mesma frigideira, adicione o vinho branco e deixe ferver, raspando o fundo para soltar os sabores.",
+            "Volte a colocar as bifanas na frigideira e cozinhe por mais 10 minutos em fogo baixo, para que absorvam o molho.",
+            "Finalize com salsa picada antes de servir.",
+            "Sirva quente, acompanhado de arroz ou batatas fritas.",
+            "Dica do chef: Sirva com um bom pão alentejano para aproveitar o molho!"
           ],
-          "slot": 1
+          "slot": 1,
+          "image": "/meals/foto-aldi-bifanas-a-alentejana-f366485f.webp",
+          "imageCredit": {
+            "name": "Imagem gerada por IA",
+            "url": ""
+          }
         },
         {
-          "name": "Salada de Tomate e Curgete",
-          "description": "Uma salada fresca e colorida, perfeita para acompanhar as bifanas, onde o tomate suculento e a curgete crocante se juntam para criar uma explosão de sabores e texturas.",
+          "name": "Cogumelos Laminados Salteados com Alho",
+          "description": "Um acompanhamento simples e delicioso, os cogumelos laminados salteados com alho são uma explosão de sabor e uma ótima forma de realçar qualquer prato principal.",
           "servings": "4 pessoas",
-          "time": "15 minutos",
-          "imageQuery": "salada tomate curgete",
+          "time": "20 min",
+          "difficulty": "Fácil",
+          "imageQuery": "sautéed mushrooms, garlic, side dish",
           "ingredients": [
             {
-              "item": "Tomate alongado",
-              "qty": "400g",
-              "price": 1.49,
-              "per": "kg",
-              "amount": 1,
+              "item": "cogumelos laminados",
+              "qty": "2 un",
+              "price": 1.24,
+              "per": "un",
+              "amount": 2,
+              "label": "1,24 €/emb. 250 g",
               "note": "folheto"
             },
             {
-              "item": "Curgete",
-              "qty": "300g",
-              "price": 0.99,
-              "per": "kg",
-              "amount": 1,
-              "note": "folheto"
+              "item": "alho",
+              "qty": "3 dentes"
             },
             {
-              "item": "Cebolinha",
-              "qty": "2 unidades"
+              "item": "azeite",
+              "qty": "30 ml"
             },
             {
-              "item": "Azeite",
-              "qty": "50ml"
-            },
-            {
-              "item": "Vinagre balsâmico",
-              "qty": "30ml"
-            },
-            {
-              "item": "Sal",
+              "item": "sal",
               "qty": "a gosto"
             },
             {
-              "item": "Pimenta",
+              "item": "pimenta preta",
               "qty": "a gosto"
+            },
+            {
+              "item": "salsa picada",
+              "qty": "2 colheres de sopa"
+            },
+            {
+              "item": "limão",
+              "qty": "1"
             }
           ],
           "steps": [
-            "Lave bem os tomates e a curgete. Corte os tomates em rodelas e a curgete em tiras finas.",
-            "Numa tigela, misture os tomates, a curgete e a cebolinha picada.",
-            "Regue com azeite e vinagre balsâmico, temperando com sal e pimenta a gosto.",
-            "Misture tudo delicadamente para que os sabores se combinem.",
-            "Deixe repousar por 5 minutos antes de servir para intensificar os sabores."
+            "Aqueça o azeite numa frigideira em fogo médio.",
+            "Adicione o alho picado e refogue por 1-2 minutos até começar a dourar.",
+            "Junte os cogumelos laminados e tempere com sal e pimenta.",
+            "Salteie os cogumelos durante cerca de 5-7 minutos, até estarem macios e dourados.",
+            "Adicione a salsa picada e misture bem.",
+            "Retire do fogo e esprema o sumo de limão por cima antes de servir.",
+            "Sirva como acompanhamento ou como entrada.",
+            "Dica do chef: Experimente adicionar um pouco de vinho branco para um toque extra de sabor!"
           ],
-          "slot": 2
+          "slot": 2,
+          "image": "/meals/foto-aldi-cogumelos-laminados-salteados-com-alho-339a5b0a.webp",
+          "imageCredit": {
+            "name": "Imagem gerada por IA",
+            "url": ""
+          }
         }
       ],
       "promos": [
@@ -899,8 +975,6 @@
       ],
       "history": [
         "Bifanas de Porco com Cogumelos e Tomate",
-        "Salteado de Curgete com Bifanas e Maçã",
-        "Bifanas de Porco com Cogumelos e Tomate",
         "Salteado de Curgete com Maçã e Bifanas",
         "Bifanas à Alentejana",
         "Arroz de Tomate e Cogumelos",
@@ -909,7 +983,9 @@
         "Bifanas à Alentejana",
         "Salada de Tomate e Curgete",
         "Bifanas à Alentejana",
-        "Salada de Tomate e Curgete"
+        "Salada de Tomate e Curgete",
+        "Bifanas à Alentejana",
+        "Cogumelos Laminados Salteados com Alho"
       ],
       "check": {
         "date": "2026-10-23",
@@ -1100,7 +1176,11 @@
       "history": [
         "Carapau frito com batatas cozidas",
         "Posta de salmão com batatas e manteiga"
-      ]
+      ],
+      "check": {
+        "date": "2026-10-23",
+        "result": "sem-folheto"
+      }
     }
   ]
 }
