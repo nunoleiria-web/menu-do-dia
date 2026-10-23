@@ -1,63 +1,57 @@
-name: update
-
+name: Atualizar menu
 on:
   schedule:
-    - cron: "15 7,19 * * *"
-  workflow_dispatch:
+    # Todos os dias às 05:00 de Lisboa. O cron é em UTC e a hora de Lisboa muda (verão/inverno),
+    # por isso corre às 04:00 e às 05:00 UTC e o primeiro passo só deixa continuar quando em Lisboa são as 5h.
+    - cron: "0 4 * * *"
+    - cron: "0 5 * * *"
+  workflow_dispatch:                     # também podes correr à mão
     inputs:
       redo_photos:
-        description: "Voltar a gerar todas as fotos (REDO_PHOTOS)"
-        required: false
-        default: ""
+        description: "Voltar a escolher TODAS as fotos (corrige fotos erradas)"
+        type: boolean
+        default: false
       photos_only:
-        description: "Procurar/gerar apenas fotos em falta (PHOTOS_ONLY)"
-        required: false
-        default: ""
-
+        description: "Só procurar fotos em falta (não mexe em preços nem receitas)"
+        type: boolean
+        default: false
 permissions:
   contents: write
-
 jobs:
   update:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - id: gate
+        run: |
+          H=$(TZ=Europe/Lisbon date +%H)
+          if [ "${{ github.event_name }}" = "schedule" ] && [ "$H" != "05" ]; then echo "run=false" >> "$GITHUB_OUTPUT"; echo "Em Lisboa são as ${H}h: não é a hora, a saltar."; else echo "run=true" >> "$GITHUB_OUTPUT"; fi
+      - if: steps.gate.outputs.run == 'true'
         uses: actions/checkout@v4
-
-      - name: Setup Node.js
+      - if: steps.gate.outputs.run == 'true'
         uses: actions/setup-node@v4
-        with:
-          node-version: "22"
-
-      - name: Install dependencies
+        with: { node-version: 22 }
+      # Instala só o que o script precisa (a sharp), isolado do projeto do site
+      - if: steps.gate.outputs.run == 'true'
         run: npm install --no-audit --no-fund
-
-      - name: Run update script
-        id: run_update
-        continue-on-error: true
+        working-directory: scripts
+      - if: steps.gate.outputs.run == 'true'
+        run: node scripts/update.mjs
         env:
-          MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
+          MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
+          MISTRAL_MODEL: ${{ vars.MISTRAL_MODEL }}
+          AI_DELAY_MS: ${{ vars.AI_DELAY_MS }}
+          REDO_PHOTOS: ${{ inputs.redo_photos && '1' || '' }}
+          PHOTOS_ONLY: ${{ inputs.photos_only && '1' || '' }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          REDO_PHOTOS: ${{ github.event.inputs.redo_photos }}
-          PHOTOS_ONLY: ${{ github.event.inputs.photos_only }}
-        run: node scripts/update.mjs
-
-      - name: Commit and Push changes
+          CLOUDFLARE_IMAGE_MODEL: ${{ vars.CLOUDFLARE_IMAGE_MODEL }}
+          OPENAI_IMAGE_MODEL: ${{ vars.OPENAI_IMAGE_MODEL }}
+          OPENAI_IMAGE_QUALITY: ${{ vars.OPENAI_IMAGE_QUALITY }}
+      - if: ${{ !cancelled() && steps.gate.outputs.run == 'true' }}   # grava o que tiver mudado, mesmo que o passo anterior tenha falhado
         run: |
-          git config user.name "menu-bot"
-          git config user.email "menu-bot@users.noreply.github.com"
-          git add api/data/menu.json public/meals/
-          if ! git diff --cached --quiet; then
-            git commit -m "chore: atualiza menu e fotos das receitas"
-            git pull --rebase origin main
-            git push origin main
-          else
-            echo "Sem alterações para guardar."
-          fi
-
-      - name: Check script status
-        if: steps.run_update.outcome == 'failure'
-        run: exit 1
+          git config user.name "menu-bot"; git config user.email "menu-bot@users.noreply.github.com"
+          git add api/data public/meals
+          echo "Alterações a gravar:"; git status --short | head -30
+          git diff --cached --quiet || (git commit -m "Atualização automática $(date -u +%F)" && git push)
