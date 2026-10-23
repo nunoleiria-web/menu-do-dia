@@ -19,11 +19,11 @@
           "servings": "4 pessoas",
           "time": "1h 30min",
           "difficulty": "Média",
-          "imageQuery": "beef stew, traditional Portuguese food, comfort food",
+          "imageQuery": "beef stew",
           "ingredients": [
             {
               "item": "Estufar (Chambão) Novilho Angus",
-              "qty": "1",
+              "qty": "1 kg",
               "price": 13.99,
               "per": "kg",
               "amount": 1,
@@ -32,7 +32,7 @@
             },
             {
               "item": "Cebola",
-              "qty": "2"
+              "qty": "2 unidades"
             },
             {
               "item": "Alho",
@@ -59,23 +59,23 @@
               "qty": "800 g"
             },
             {
-              "item": "Salsa",
-              "qty": "q.b."
+              "item": "Cenoura",
+              "qty": "2 unidades"
             }
           ],
           "steps": [
-            "Corte o Estufar de Novilho Angus em cubos de cerca de 3 cm e tempere com sal e pimenta.",
-            "Numa panela grande, aqueça o azeite e refogue a cebola picada e os dentes de alho picados até ficarem dourados.",
-            "Adicione a carne e deixe dourar de todos os lados, cerca de 10 minutos.",
-            "Junte as folhas de louro e o vinho tinto, deixando cozinhar até o álcool evaporar, cerca de 5 minutos.",
-            "Adicione o tomate pelado e as batatas cortadas em cubos, mexendo bem para envolver todos os ingredientes.",
-            "Cubra com água, tempere com sal e pimenta a gosto e deixe cozinhar em lume brando durante 1 hora, mexendo ocasionalmente.",
-            "Quando a carne estiver tenra e o molho espesso, retire do lume e polvilhe com salsa picada.",
-            "Sirva quente, acompanhado de arroz branco ou puré de batata.",
-            "Dica do chef: Sirva com arroz branco ou puré de batata para aproveitar o molho delicioso."
+            "Num tacho grande, aqueça o azeite em lume médio e adicione a cebola picada e os dentes de alho picados. Refogue até a cebola ficar translúcida.",
+            "Adicione o Estufar (Chambão) Novilho Angus cortado em cubos e deixe dourar por todos os lados.",
+            "Junte as folhas de louro e o vinho tinto, deixando cozinhar por cerca de 5 minutos para evaporar o álcool.",
+            "Adicione o tomate pelado, previamente triturado, e tempere com sal e pimenta a gosto. Cozinhe em lume brando durante 1 hora, mexendo ocasionalmente.",
+            "Enquanto isso, descasque as batatas e as cenouras. Corte as batatas em cubos e as cenouras em rodelas.",
+            "Após 1 hora, adicione as batatas e as cenouras ao tacho e misture bem. Cozinhe por mais 30 minutos, até os legumes estarem macios.",
+            "Verifique o tempero e ajuste se necessário. Se o molho estiver muito espesso, adicione um pouco de água.",
+            "Sirva quente, polvilhado com salsa picada.",
+            "Dica do chef: Sirva com um bom pão para aproveitar o molho delicioso!"
           ],
           "slot": 1,
-          "image": "/meals/foto-continente-estufado-de-novilho-angus-37cb8560.webp",
+          "image": "/meals/foto-continente-estufado-de-novilho-angus-d6c30289.webp",
           "imageCredit": {
             "name": "Imagem gerada por IA",
             "url": ""
@@ -83,11 +83,11 @@
         },
         {
           "name": "Medalhões de Controlo Novilho com Molho de Mostarda",
-          "description": "Suculentos medalhões de novilho grelhados, servidos com um molho de mostarda que realça o sabor da carne. Uma combinação perfeita para um jantar especial.",
+          "description": "Suculentos medalhões de novilho, grelhados à perfeição e acompanhados por um molho de mostarda cremoso que realça o sabor da carne. Uma refeição digna de um verdadeiro banquete!",
           "servings": "4 pessoas",
           "time": "30 min",
           "difficulty": "Fácil",
-          "imageQuery": "grilled beef medallions, mustard sauce, gourmet food",
+          "imageQuery": "beef medallions",
           "ingredients": [
             {
               "item": "Medalhões de Controlo Novilho",
@@ -100,7 +100,7 @@
             },
             {
               "item": "Mostarda Dijon",
-              "qty": "4 colheres de sopa"
+              "qty": "3 colheres de sopa"
             },
             {
               "item": "Natas",
@@ -116,15 +116,11 @@
             },
             {
               "item": "Sal",
-              "qty": "q.b."
+              "qty": "a gosto"
             },
             {
               "item": "Pimenta",
-              "qty": "q.b."
-            },
-            {
-              "item": "Ervas de Provence",
-              "qty": "q.b."
+              "qty": "a gosto"
             },
             {
               "item": "Salsa",
@@ -132,18 +128,18 @@
             }
           ],
           "steps": [
-            "Tempere os medalhões de novilho com sal, pimenta e ervas de Provence a gosto.",
-            "Numa frigideira, aqueça o azeite em lume médio-alto e grelhe os medalhões durante 4-5 minutos de cada lado, ou até atingirem o ponto desejado.",
+            "Tempere os medalhões de controlo novilho com sal e pimenta a gosto.",
+            "Numa frigideira, aqueça o azeite em lume médio-alto e adicione os medalhões. Cozinhe por cerca de 4-5 minutos de cada lado, ou até estarem ao seu gosto.",
             "Retire os medalhões da frigideira e mantenha-os aquecidos.",
             "Na mesma frigideira, adicione os dentes de alho picados e refogue por 1 minuto.",
-            "Junte a mostarda e as natas, mexendo bem até obter um molho homogéneo.",
-            "Deixe cozinhar em lume brando durante 3-4 minutos, ajustando o tempero com sal e pimenta.",
-            "Sirva os medalhões regados com o molho de mostarda e polvilhados com salsa picada.",
-            "Acompanhe com legumes grelhados ou uma salada fresca.",
-            "Dica do chef: Acompanhe com legumes grelhados ou uma salada fresca para um prato equilibrado."
+            "Junte a mostarda Dijon e as natas, mexendo bem para incorporar todos os sabores. Cozinhe por 2-3 minutos até o molho engrossar.",
+            "Verifique o tempero e ajuste com sal e pimenta, se necessário.",
+            "Sirva os medalhões com o molho de mostarda por cima e polvilhe com salsa picada.",
+            "Acompanhe com puré de batata ou legumes grelhados.",
+            "Dica do chef: Acompanhe com puré de batata ou legumes grelhados para um prato completo!"
           ],
           "slot": 2,
-          "image": "/meals/foto-continente-medalhoes-de-controlo-novilho-com-molho-de-mostarda-c25ed358.webp",
+          "image": "/meals/foto-continente-medalhoes-de-controlo-novilho-com-molho-de-mostarda-1259df00.webp",
           "imageCredit": {
             "name": "Imagem gerada por IA",
             "url": ""
@@ -297,14 +293,14 @@
         }
       ],
       "history": [
-        "Pernas de frango assadas com batata-doce",
-        "Postas de salmão com batata-doce assada",
         "Salada Ibérica com Espinafre e Coentros",
         "Batata Doce Assada com Romã e Amendoim",
         "Salada Ibérica com Espinafre e Coentros",
         "Batata Doce Assada com Romã e Amendoim",
         "Estufado de Novilho Angus",
         "Medalhões de Controlo Novilho",
+        "Estufado de Novilho Angus",
+        "Medalhões de Controlo Novilho com Molho de Mostarda",
         "Estufado de Novilho Angus",
         "Medalhões de Controlo Novilho com Molho de Mostarda",
         "Estufado de Novilho Angus",
@@ -328,126 +324,129 @@
       ],
       "recipes": [
         {
-          "name": "Carne de Porco à Alentejana",
-          "description": "Uma deliciosa combinação de carne de porco tenra com amêijoas, temperada com especiarias e acompanhada por batatas fritas crocantes. Este prato é um verdadeiro clássico da cozinha portuguesa, perfeito para um almoço em família.",
+          "name": "Dourada no Forno com Batatas e Ervas",
+          "description": "Uma deliciosa dourada assada no forno, acompanhada por batatas tenras e aromáticas. Um prato simples e elegante que traz o sabor do mar à sua mesa.",
           "servings": "4 pessoas",
-          "time": "45 minutos",
-          "imageQuery": "Carne de Porco à Alentejana",
-          "ingredients": [
-            {
-              "item": "Lombo de Porco",
-              "qty": "800g",
-              "price": 4.49,
-              "per": "kg",
-              "amount": 1,
-              "note": "folheto (lido por IA)"
-            },
-            {
-              "item": "Batata Vermelha",
-              "qty": "600g",
-              "price": 1.19,
-              "per": "kg",
-              "amount": 1,
-              "note": "folheto (lido por IA)"
-            },
-            {
-              "item": "Cebola",
-              "qty": "2",
-              "price": 0.99,
-              "per": "kg",
-              "amount": 1,
-              "note": "folheto (lido por IA)"
-            },
-            {
-              "item": "Alho",
-              "qty": "4 dentes"
-            },
-            {
-              "item": "Vinho Branco",
-              "qty": "200ml"
-            },
-            {
-              "item": "Azeite",
-              "qty": "q.b."
-            },
-            {
-              "item": "Sal e Pimenta",
-              "qty": "q.b."
-            }
-          ],
-          "steps": [
-            "Corte o lombo de porco em cubos e tempere com sal, pimenta e um pouco de vinho branco. Deixe marinar por 30 minutos.",
-            "Descasque e corte as batatas vermelhas em palitos e frite-as em azeite quente até ficarem douradas e crocantes.",
-            "Numa frigideira grande, aqueça azeite e refogue a cebola picada e os dentes de alho até ficarem dourados.",
-            "Adicione os cubos de carne de porco à frigideira e cozinhe até que estejam bem dourados por todos os lados.",
-            "Junte as amêijoas à carne e adicione mais vinho branco. Cozinhe até que as amêijoas abram.",
-            "Sirva a carne de porco com as amêijoas sobre uma cama de batatas fritas crocantes."
-          ],
-          "slot": 1,
-          "image": "/meals/foto-pingo-doce-carne-de-porco-a-alentejana-f9457051.webp",
-          "imageCredit": {
-            "name": "Imagem gerada por IA",
-            "url": ""
-          }
-        },
-        {
-          "name": "Caldeirada de Peixe",
-          "description": "Uma caldeirada rica e saborosa, repleta de peixes frescos e legumes, cozinhada lentamente para realçar todos os sabores do mar. Ideal para um jantar especial, este prato é uma verdadeira celebração da gastronomia portuguesa.",
-          "servings": "4 pessoas",
-          "time": "60 minutos",
-          "imageQuery": "Caldeirada de Peixe",
+          "time": "45 min",
+          "difficulty": "Fácil",
+          "imageQuery": "dourada assada com batatas e ervas",
           "ingredients": [
             {
               "item": "Dourada Grande",
-              "qty": "800g",
+              "qty": "1",
               "price": 10.99,
               "per": "kg",
               "amount": 1,
               "note": "folheto (lido por IA)"
             },
             {
-              "item": "Cebola",
-              "qty": "2",
-              "price": 0.99,
-              "per": "kg",
-              "amount": 1,
-              "note": "folheto (lido por IA)"
-            },
-            {
-              "item": "Pimento Vermelho",
-              "qty": "1"
-            },
-            {
-              "item": "Batata Vermelha",
-              "qty": "400g",
-              "price": 1.19,
-              "per": "kg",
-              "amount": 1,
-              "note": "folheto (lido por IA)"
-            },
-            {
-              "item": "Tomate",
-              "qty": "2"
+              "item": "Batatas",
+              "qty": "800 g"
             },
             {
               "item": "Alho",
-              "qty": "3 dentes"
+              "qty": "4 dentes"
             },
             {
               "item": "Azeite",
-              "qty": "q.b."
+              "qty": "50 ml"
+            },
+            {
+              "item": "Alecrim",
+              "qty": "2 ramos"
+            },
+            {
+              "item": "Limão",
+              "qty": "1"
+            },
+            {
+              "item": "Sal",
+              "qty": "a gosto"
+            },
+            {
+              "item": "Pimenta",
+              "qty": "a gosto"
             }
           ],
           "steps": [
-            "Corte a dourada em postas e tempere com sal e pimenta. Reserve.",
-            "Numa panela grande, aqueça azeite e refogue a cebola picada e os dentes de alho até ficarem dourados.",
-            "Adicione o pimento vermelho cortado em tiras e os tomates picados, cozinhando até que os legumes estejam macios.",
-            "Junte as batatas vermelhas cortadas em rodelas e adicione água suficiente para cobrir os ingredientes. Cozinhe até que as batatas estejam quase cozidas.",
-            "Coloque as postas de dourada na panela e cozinhe em fogo brando até que o peixe esteja cozido e os sabores se misturem.",
-            "Sirva a caldeirada quente, acompanhada de pão fresco."
+            "Pré-aqueça o forno a 200 ºC.",
+            "Descasque as batatas e corte-as em rodelas. Coloque-as numa assadeira.",
+            "Regue as batatas com azeite, tempere com sal e pimenta e misture bem.",
+            "Coloque a dourada limpa e escamada sobre as batatas.",
+            "Faça cortes diagonais na pele da dourada e insira fatias de alho e limão nos cortes.",
+            "Regue a dourada com um fio de azeite e tempere com sal, pimenta e alecrim.",
+            "Leve ao forno durante 25-30 minutos, ou até a dourada estar cozinhada e as batatas macias.",
+            "Sirva quente, decorado com ramos de alecrim.",
+            "Dica do chef: Para um toque extra, adicione rodelas de limão por cima da dourada antes de assar."
+          ],
+          "slot": 1,
+          "image": "/meals/foto-pingo-doce-dourada-no-forno-com-batatas-e-ervas-c6b78266.webp",
+          "imageCredit": {
+            "name": "Imagem gerada por IA",
+            "url": ""
+          }
+        },
+        {
+          "name": "Lombo de Porco à Alentejana",
+          "description": "Um prato tradicional português que combina a suculência do lombo de porco com a frescura das amêijoas, criando uma explosão de sabores.",
+          "servings": "4 pessoas",
+          "time": "1h",
+          "difficulty": "Média",
+          "imageQuery": "lombo de porco à alentejana",
+          "ingredients": [
+            {
+              "item": "Lombo de Porco",
+              "qty": "800 g",
+              "price": 4.49,
+              "per": "kg",
+              "amount": 1,
+              "note": "folheto (lido por IA)"
+            },
+            {
+              "item": "Amêijoas",
+              "qty": "500 g"
+            },
+            {
+              "item": "Cebola",
+              "qty": "1"
+            },
+            {
+              "item": "Alho",
+              "qty": "4 dentes"
+            },
+            {
+              "item": "Azeite",
+              "qty": "50 ml"
+            },
+            {
+              "item": "Vinho Branco",
+              "qty": "100 ml"
+            },
+            {
+              "item": "Coentros",
+              "qty": "a gosto"
+            },
+            {
+              "item": "Sal",
+              "qty": "a gosto"
+            },
+            {
+              "item": "Pimenta",
+              "qty": "a gosto"
+            }
+          ],
+          "steps": [
+            "Corte o lombo de porco em cubos e tempere com sal e pimenta.",
+            "Numa frigideira grande, aqueça o azeite e doure os cubos de lombo de porco de todos os lados.",
+            "Adicione a cebola picada e os dentes de alho picados e refogue até a cebola ficar translúcida.",
+            "Junte o vinho branco e deixe cozinhar por 5 minutos para evaporar o álcool.",
+            "Adicione as amêijoas e cozinhe até que abram, cerca de 5-7 minutos.",
+            "Finalize com coentros picados e ajuste o tempero com sal e pimenta.",
+            "Sirva quente, acompanhado de arroz ou batatas.",
+            "Dica do chef: Acompanhe com um bom pão alentejano para aproveitar o molho."
           ],
           "slot": 2,
-          "image": "/meals/foto-pingo-doce-caldeirada-de-peixe-b28fbc4b.webp",
+          "image": "/meals/foto-pingo-doce-lombo-de-porco-a-alentejana-04cc6753.webp",
           "imageCredit": {
             "name": "Imagem gerada por IA",
             "url": ""
@@ -556,8 +555,6 @@
         }
       ],
       "history": [
-        "Frango do campo assado com couve",
-        "Dourada no forno com couve salteada",
         "Sopa de Couve-Flor e Batata Vermelha",
         "Salada de Pepino e Maçã Fuji",
         "Salada Fresca de Pera e Brócolos",
@@ -567,12 +564,13 @@
         "Bacalhau à Brás",
         "Arroz de Marisco",
         "Carne de Porco à Alentejana",
-        "Caldeirada de Peixe"
+        "Caldeirada de Peixe",
+        "Dourada no Forno com Batatas e Ervas",
+        "Lombo de Porco à Alentejana"
       ],
       "check": {
         "date": "2026-10-23",
-        "result": "sem-novo",
-        "note": "fetch failed"
+        "result": "sem-novo"
       }
     },
     {
@@ -592,44 +590,41 @@
       ],
       "recipes": [
         {
-          "name": "Pernil de Porco Estufado",
-          "description": "Um prato reconfortante e cheio de sabor, onde o pernil de porco é cozinhado lentamente até ficar tenro e suculento, envolto em um molho rico e aromático.",
+          "name": "Pernil de Porco Assado com Cogumelos",
+          "description": "Um suculento pernil de porco assado, envolto em sabores intensos de cogumelos, perfeito para um almoço em família.",
           "servings": "4 pessoas",
-          "time": "2h",
+          "time": "2 horas",
           "difficulty": "Média",
-          "imageQuery": "pork stew",
+          "imageQuery": "roast pork with mushrooms",
           "ingredients": [
             {
               "item": "pernil de porco",
-              "qty": "1.2",
+              "qty": "1.5",
               "price": 2.99,
               "per": "kg",
               "amount": 1,
               "note": "folheto"
             },
             {
+              "item": "cogumelos",
+              "qty": "400",
+              "price": 1.29,
+              "per": "un",
+              "amount": 1,
+              "label": "1,29 €/emb. 300 g",
+              "note": "folheto"
+            },
+            {
+              "item": "alho",
+              "qty": "4"
+            },
+            {
               "item": "cebola",
               "qty": "2"
             },
             {
-              "item": "dentes de alho",
-              "qty": "4"
-            },
-            {
               "item": "azeite",
-              "qty": "50 ml"
-            },
-            {
-              "item": "tomate pelado",
-              "qty": "400 g"
-            },
-            {
-              "item": "vinho branco",
-              "qty": "200 ml"
-            },
-            {
-              "item": "louro",
-              "qty": "2 folhas"
+              "qty": "50"
             },
             {
               "item": "sal",
@@ -638,20 +633,24 @@
             {
               "item": "pimenta",
               "qty": "a gosto"
+            },
+            {
+              "item": "tomilho",
+              "qty": "a gosto"
             }
           ],
           "steps": [
-            "Corte o pernil de porco em pedaços grandes e tempere com sal e pimenta a gosto.",
-            "Numa panela grande, aqueça o azeite em fogo médio e doure os pedaços de pernil de todos os lados.",
-            "Retire o pernil da panela e reserve. Na mesma panela, adicione a cebola picada e os dentes de alho picados, refogando até ficarem macios.",
-            "Adicione o tomate pelado e o vinho branco, mexendo bem para soltar os sabores.",
-            "Junte o pernil de volta à panela, adicione as folhas de louro e cubra com água. Deixe cozinhar em fogo baixo durante cerca de 1h30, até o pernil estar bem tenro.",
-            "Verifique o tempero e ajuste com mais sal e pimenta, se necessário. Se o molho estiver muito líquido, deixe cozinhar mais um pouco destampado para reduzir.",
-            "Sirva quente, acompanhado de arroz ou puré de batata.",
-            "Dica do chef: Para um sabor ainda mais intenso, deixe o pernil marinar durante a noite antes de cozinhar."
+            "Pré-aqueça o forno a 180 ºC.",
+            "Tempere o pernil de porco com sal, pimenta, alho picado e tomilho. Deixe marinar por pelo menos 30 minutos.",
+            "Numa assadeira, coloque o pernil e regue com azeite. Adicione as cebolas cortadas em gomos e os cogumelos limpos ao redor.",
+            "Leve ao forno por 1 hora e 30 minutos, regando ocasionalmente com o próprio molho.",
+            "Verifique a cozedura do pernil, que deve estar bem dourado e a carne a desprender-se do osso.",
+            "Retire do forno e deixe repousar durante 10 minutos antes de fatiar.",
+            "Sirva com os cogumelos e cebolas assadas ao lado.",
+            "Dica do chef: Para um sabor extra, deixe marinar o pernil durante a noite com alho e ervas aromáticas."
           ],
           "slot": 1,
-          "image": "/meals/foto-lidl-pernil-de-porco-estufado-d8e76c8d.webp",
+          "image": "/meals/foto-lidl-pernil-de-porco-assado-com-cogumelos-8b64257a.webp",
           "imageCredit": {
             "name": "Imagem gerada por IA",
             "url": ""
@@ -659,11 +658,11 @@
         },
         {
           "name": "Peito de Frango Grelhado com Tomate Coração de Boi",
-          "description": "Um prato leve e fresco, onde o peito de frango é grelhado à perfeição e servido com tomates coração de boi suculentos e aromáticos.",
+          "description": "Um prato leve e fresco, onde o peito de frango grelhado se combina com o sabor intenso do tomate coração de boi.",
           "servings": "4 pessoas",
           "time": "30 min",
           "difficulty": "Fácil",
-          "imageQuery": "grilled chicken with tomatoes",
+          "imageQuery": "grilled chicken with beef tomatoes",
           "ingredients": [
             {
               "item": "peito de frango",
@@ -675,15 +674,19 @@
             },
             {
               "item": "tomate coração de boi",
-              "qty": "4",
+              "qty": "600",
               "price": 2.29,
               "per": "kg",
               "amount": 1,
               "note": "folheto"
             },
             {
+              "item": "alho",
+              "qty": "2"
+            },
+            {
               "item": "azeite",
-              "qty": "50 ml"
+              "qty": "30"
             },
             {
               "item": "sal",
@@ -694,29 +697,21 @@
               "qty": "a gosto"
             },
             {
-              "item": "alho em pó",
-              "qty": "1 colher de chá"
-            },
-            {
-              "item": "salsa picada",
-              "qty": "2 colheres de sopa"
-            },
-            {
-              "item": "limão",
-              "qty": "1"
+              "item": "manjericão",
+              "qty": "a gosto"
             }
           ],
           "steps": [
-            "Tempere os peitos de frango com sal, pimenta e alho em pó. Deixe marinar por 10 minutos.",
-            "Aqueça uma grelha ou uma frigideira antiaderente em fogo médio-alto e adicione um fio de azeite.",
-            "Grelhe os peitos de frango durante cerca de 6-7 minutos de cada lado, ou até estarem bem cozinhados e com marcas de grelha.",
-            "Enquanto o frango está a grelhar, corte os tomates coração de boi em rodelas e tempere com sal, pimenta, azeite e sumo de limão.",
-            "Retire o frango da grelha e deixe descansar por 5 minutos antes de fatiar.",
-            "Sirva o peito de frango fatiado com as rodelas de tomate ao lado, polvilhado com salsa picada.",
-            "Dica do chef: Para um toque extra, adicione manjericão fresco picado sobre os tomates antes de servir."
+            "Tempere os peitos de frango com sal, pimenta e alho picado.",
+            "Aqueça uma grelha ou frigideira antiaderente com um fio de azeite em fogo médio-alto.",
+            "Grelhe os peitos de frango durante cerca de 6-7 minutos de cada lado, até estarem bem cozinhados e dourados.",
+            "Enquanto o frango grelha, corte os tomates coração de boi em rodelas e tempere com sal, pimenta e um fio de azeite.",
+            "Retire o frango da grelha e deixe repousar por 5 minutos antes de fatiar.",
+            "Sirva o peito de frango fatiado com as rodelas de tomate ao lado, decorado com manjericão fresco.",
+            "Dica do chef: Para um toque especial, adicione manjericão fresco ao tomate antes de servir."
           ],
           "slot": 2,
-          "image": "/meals/foto-lidl-peito-de-frango-grelhado-com-tomate-coracao-de-boi-bfcc79c8.webp",
+          "image": "/meals/foto-lidl-peito-de-frango-grelhado-com-tomate-coracao-de-boi-4644e93f.webp",
           "imageCredit": {
             "name": "Imagem gerada por IA",
             "url": ""
@@ -776,8 +771,6 @@
         }
       ],
       "history": [
-        "Pernil de Porco Assado com Cogumelos",
-        "Salada de Frango com Abacate e Tomate",
         "Pernil de Porco Estufado",
         "Frango Assado com Tomate e Cogumelos",
         "Carne de Porco à Alentejana",
@@ -787,12 +780,13 @@
         "Pernil de Porco Assado com Abacaxi",
         "Frango de Caril com Cogumelos",
         "Pernil de Porco Estufado",
+        "Peito de Frango Grelhado com Tomate Coração de Boi",
+        "Pernil de Porco Assado com Cogumelos",
         "Peito de Frango Grelhado com Tomate Coração de Boi"
       ],
       "check": {
         "date": "2026-10-23",
-        "result": "sem-novo",
-        "note": "receitas rejeitadas 3x: \"Pernil de Porco Assado com Cogumelos\" deve ter 1 ou 2 ingredientes com preço (tem 0)"
+        "result": "sem-novo"
       }
     },
     {
@@ -813,10 +807,10 @@
       "recipes": [
         {
           "name": "Bifanas da Perna de Porco à Alentejana",
-          "description": "Uma deliciosa receita tradicional que combina a suculência das bifanas com o sabor intenso do alho e do vinho, perfeita para um almoço em família.",
+          "description": "Uma deliciosa receita tradicional que combina a suculência das bifanas com o sabor intenso do alho e do vinho. Perfeitas para um almoço em família ou um jantar especial.",
           "servings": "4 pessoas",
           "time": "45 min",
-          "difficulty": "Média",
+          "difficulty": "Fácil",
           "imageQuery": "bifanas alentejana",
           "ingredients": [
             {
@@ -824,7 +818,7 @@
               "qty": "800 g",
               "price": 4.49,
               "per": "kg",
-              "amount": 0.8,
+              "amount": 1,
               "note": "folheto"
             },
             {
@@ -853,20 +847,22 @@
             },
             {
               "item": "salsa picada",
-              "qty": "2 colheres de sopa"
+              "qty": "a gosto"
             }
           ],
           "steps": [
             "Tempere as bifanas com sal, pimenta e os dentes de alho picados. Deixe marinar por 30 minutos.",
-            "Numa frigideira grande, aqueça o azeite em fogo médio e adicione as bifanas. Cozinhe por cerca de 5 minutos de cada lado até ficarem douradas.",
-            "Adicione o vinho branco e as folhas de louro à frigideira. Deixe cozinhar em fogo baixo por mais 10 minutos, até o molho reduzir.",
-            "Retire as bifanas e mantenha-as aquecidas.",
-            "Aumente o fogo e deixe o molho reduzir mais um pouco, ajustando o tempero se necessário.",
-            "Sirva as bifanas regadas com o molho e polvilhadas com salsa picada. Acompanhe com arroz ou batatas fritas.",
+            "Numa frigideira grande, aqueça o azeite em fogo médio e adicione as bifanas. Cozinhe por cerca de 5 minutos de cada lado, até estarem douradas.",
+            "Retire as bifanas da frigideira e reserve.",
+            "Na mesma frigideira, adicione o vinho branco e as folhas de louro, raspando o fundo para soltar os sabores.",
+            "Deixe o vinho reduzir por cerca de 5 minutos.",
+            "Volte a colocar as bifanas na frigideira e cozinhe por mais 10 minutos, regando com o molho.",
+            "Finalize com salsa picada a gosto antes de servir.",
+            "Sirva quente, acompanhado de arroz ou batatas fritas.",
             "Dica do chef: Sirva com um bom pão alentejano para aproveitar o molho!"
           ],
           "slot": 1,
-          "image": "/meals/foto-aldi-bifanas-da-perna-de-porco-a-alentejana-34c58948.webp",
+          "image": "/meals/foto-aldi-bifanas-da-perna-de-porco-a-alentejana-8640a036.webp",
           "imageCredit": {
             "name": "Imagem gerada por IA",
             "url": ""
@@ -874,7 +870,7 @@
         },
         {
           "name": "Cogumelos Laminados Salteados com Alho",
-          "description": "Um acompanhamento simples e saboroso, onde os cogumelos laminados ganham vida com o alho e o azeite, ideal para complementar qualquer prato.",
+          "description": "Um acompanhamento simples e saboroso, ideal para realçar qualquer prato. Os cogumelos laminados ganham vida com o alho e o azeite.",
           "servings": "4 pessoas",
           "time": "20 min",
           "difficulty": "Fácil",
@@ -885,7 +881,7 @@
               "qty": "2 un",
               "price": 1.24,
               "per": "un",
-              "amount": 2,
+              "amount": 1,
               "label": "1,24 €/emb. 250 g",
               "note": "folheto"
             },
@@ -907,7 +903,7 @@
             },
             {
               "item": "salsa picada",
-              "qty": "2 colheres de sopa"
+              "qty": "a gosto"
             },
             {
               "item": "limão",
@@ -915,16 +911,17 @@
             }
           ],
           "steps": [
-            "Descasque e pique finamente os dentes de alho.",
-            "Numa frigideira, aqueça o azeite em fogo médio e adicione o alho picado. Cozinhe por 1-2 minutos até começar a dourar.",
-            "Adicione os cogumelos laminados à frigideira e tempere com sal e pimenta.",
+            "Aqueça o azeite numa frigideira em fogo médio.",
+            "Adicione os dentes de alho picados e deixe dourar levemente, cerca de 1-2 minutos.",
+            "Junte os cogumelos laminados e tempere com sal e pimenta a gosto.",
             "Cozinhe os cogumelos por cerca de 5-7 minutos, mexendo ocasionalmente, até que estejam macios e dourados.",
             "Retire do fogo e adicione a salsa picada e o sumo de limão a gosto.",
-            "Misture bem e sirva quente como acompanhamento.",
-            "Dica do chef: Experimente adicionar um pouco de vinho branco para um sabor extra!"
+            "Misture bem e ajuste os temperos se necessário.",
+            "Sirva quente como acompanhamento ou como entrada.",
+            "Dica do chef: Experimente adicionar um pouco de vinho branco para um toque extra de sabor!"
           ],
           "slot": 2,
-          "image": "/meals/foto-aldi-cogumelos-laminados-salteados-com-alho-c4fda022.webp",
+          "image": "/meals/foto-aldi-cogumelos-laminados-salteados-com-alho-6dd5ae76.webp",
           "imageCredit": {
             "name": "Imagem gerada por IA",
             "url": ""
@@ -982,8 +979,8 @@
         "Bifanas à Alentejana",
         "Salada de Tomate e Curgete",
         "Bifanas à Alentejana",
-        "Salada de Tomate e Curgete",
-        "Bifanas à Alentejana",
+        "Cogumelos Laminados Salteados com Alho",
+        "Bifanas da Perna de Porco à Alentejana",
         "Cogumelos Laminados Salteados com Alho",
         "Bifanas da Perna de Porco à Alentejana",
         "Cogumelos Laminados Salteados com Alho",
@@ -1258,7 +1255,8 @@
       ],
       "check": {
         "date": "2026-10-23",
-        "result": "novo"
+        "result": "sem-novo",
+        "note": "receitas rejeitadas 3x: \"Lulas Limpa Grelhadas com Queijo Flamengo\" deve ter 1 ou 2 ingredientes com preço (tem 0). Usa exatamente estes ids no campo promo: queijo-flamengo-fatiado-pack-familiar, lula-limpa"
       }
     }
   ]
