@@ -169,7 +169,7 @@ const STAR = /tintureira|espadarte|cherne|garoupa|solha|linguado|esparguete|espa
 const NONFOOD = /crisantemo|peperomia|ramo-de|flor|planta|vaso|capsula|detergente|papel|vela|decorac/;
 const STAPLE = /cebola|alho|batata|cenoura|tomate|alface|pepino|couve|abobora|pimento|salsa|coentro|limao|laranja|maca|banana|pera|uva|sal\b|azeite|oleo|vinagre|farinha|acucar|leite|natas|manteiga|ovo|agua|sumo|refrigerante|cerveja|vinho|bolacha|chocolate|cafe|iogurte|pao\b|snack|gelado|detergente|papel/i;
 const words = (t) => slug(t).split("-").filter((w) => w.length >= 4);
-const near = (a, b) => a.slice(0, 5) === b.slice(0, 5);
+const near = (a, b) => { const n = Math.min(5, a.length, b.length); return n >= 4 && a.slice(0, n) === b.slice(0, n); };
 
 async function makeRecipes(m) {
   const sl = (p) => slug(p.name);
@@ -185,7 +185,7 @@ async function makeRecipes(m) {
       `És um chef português com estrela, autor de livros de cozinha tradicional. Cria 2 receitas para clientes do ${m.name}.\n\n` +
       `PRODUTOS-ESTRELA DISPONÍVEIS NO FOLHETO (único sítio onde pode haver preço):\n${stars.map(fmt).join("; ")}\n\n` +
       `REGRAS:\n` +
-      `1) Cada receita nasce de 1 (no máximo 2) produto(s) da lista acima, que são a razão de ser do prato e têm de aparecer no nome (ex.: "Bacalhau com Natas" -> bacalhau). Só esses ingredientes levam "promo" (id exato) e "amount" para 4 pessoas (kg se per=kg; unidades se per=un).\n` +
+      `1) Cada receita nasce de 1 (no máximo 2) produto(s) da lista acima, que são a razão de ser do prato e têm de aparecer no nome (ex.: "Bacalhau com Natas" -> bacalhau). Prefere UMA só estrela; usa duas apenas se forem uma combinação clássica e sensata (ex.: bacalhau e grão, frango e cogumelos) — nunca junta peixe com queijo ou combinações estranhas. Só esses ingredientes levam "promo" (id exato) e "amount" para 4 pessoas (kg se per=kg; unidades se per=un).\n` +
       `2) O prato é uma receita REAL e reconhecível da cozinha portuguesa (ou internacional clássica), com nome tradicional — sugestões: ${DISHES}. Nada de misturas inventadas.\n` +
       `3) TODOS os restantes ingredientes (batata, cebola, alho, azeite, ervas, molhos, acompanhamentos, temperos) levam "promo": null e ficam SEM preço. Entre 7 e 12 ingredientes no total, com doses realistas para 4 pessoas (ex.: "800 g", "2 dentes").\n` +
       `4) 6 a 9 passos em português europeu, com técnica, tempos e temperaturas concretos (ex.: "Forno a 200 ºC durante 25 min"). Inclui a ordem correta e pontos de cozedura. Termina com uma "dica" do chef.\n` +
