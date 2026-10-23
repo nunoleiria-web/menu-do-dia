@@ -56,8 +56,12 @@ const SOURCES = {
 const MONTHS = ["janeiro","fevereiro","marco","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"];
 
 async function getPage(url) {
-  await sleep(1000);
-  const r = await fetch(url, { headers: UA });
+  let r, err;
+  for (let t = 0; t < 3; t++) {
+    await sleep(1000 * (t + 1));
+    try { r = await fetch(url, { headers: UA }); err = null; if (r.ok || r.status < 500) break; } catch (e) { err = e; }
+  }
+  if (err) throw err;
   if (!r.ok) throw new Error(url + " -> " + r.status);
   return r;
 }
@@ -211,12 +215,12 @@ async function makeRecipes(m) {
         const priced = ings.filter((x) => x.price);
         const name = String(r.name ?? "").trim();
         if (!name) throw new Error("receita sem nome");
-        if (priced.length < 1 || priced.length > 2) throw new Error(`"${name}" deve ter 1 ou 2 ingredientes com preço (tem ${priced.length})`);
+        if (priced.length < 1 || priced.length > 2) throw new Error(`"${name}" deve ter 1 ou 2 ingredientes com preço (tem ${priced.length}). Usa exatamente estes ids no campo promo: ${stars.slice(0, 10).map((p) => p.id).join(", ")}`);
         const bad = priced.find((x) => STAPLE.test(slug(x._p.name)) && !STAR.test(slug(x._p.name)));
         if (bad) throw new Error(`"${bad.item}" é um ingrediente de apoio: deve ficar sem preço (promo null)`);
         const nw = words(name);
-        if (!priced.some((x) => words(x._p.name + " " + x.item).some((w) => nw.some((v) => near(v, w)))))
-          throw new Error(`o produto com preço de "${name}" (${priced.map((x) => x._p.name).join(", ")}) tem de aparecer no nome do prato; usa um nome de prato baseado em ${stars.slice(0, 6).map((p) => p.name).join(" / ")}`);
+        const miss = priced.find((x) => !words(x._p.name + " " + x.item).some((w) => nw.some((v) => near(v, w))));
+        if (miss) throw new Error(`"${miss._p.name}" leva preço mas não aparece no nome "${name}". Só o(s) produto(s) que dão nome ao prato levam preço; usa "promo": null nos outros. Estrelas disponíveis: ${stars.slice(0, 8).map((p) => p.id).join(", ")}`);
         if (ings.length < 6) throw new Error(`"${name}" tem poucos ingredientes`);
         if ((r.steps ?? []).length < 5) throw new Error(`"${name}" tem poucos passos`);
         const steps = r.steps.map((t) => String(t).trim()).filter(Boolean);
@@ -226,6 +230,8 @@ async function makeRecipes(m) {
       }
       if (out.length !== 2) throw new Error("foram pedidas 2 receitas");
       if (out[0].name === out[1].name) throw new Error("receitas repetidas");
+      const pk = (r) => r.ingredients.filter((i) => i.price).map((i) => slug(i.item));
+      if (pk(out[0]).some((k) => pk(out[1]).some((j) => near(k, j)))) throw new Error("as duas receitas usam o mesmo produto principal; a receita 2 tem de ter outra estrela e outro tipo de prato");
       return out;
     } catch (e) {
       feedback = e.message; lastReject = e.message;
