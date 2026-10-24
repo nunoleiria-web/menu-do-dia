@@ -55,7 +55,10 @@ export function caption({ m, r }) {
   ].join("\n");
 }
 
-const git = (c) => execSync(c, { cwd: ROOT, stdio: "pipe" }).toString();
+const git = (c) => {
+  try { return execSync(c, { cwd: ROOT, stdio: "pipe" }).toString(); }
+  catch (e) { throw new Error((e.stderr?.toString() || e.message).trim().split("\n").slice(-2).join(" ")); }
+};
 
 // Gera a imagem 1080x1350, envia-a para o repositório e devolve o endereço público (confirmado acessível)
 async function jpg(item, date) {
@@ -74,11 +77,12 @@ async function jpg(item, date) {
   git(`git add -A public/posts`);
   if (git("git status --porcelain public/posts").trim()) {
     git(`git commit -q -m 'Imagem de publicação ${name}'`);
-    let pushed = false;
+    let pushed = false, lastErr = "";
     for (let t = 0; t < 3 && !pushed; t++) {
-      try { git("git pull --rebase -q origin main && git push -q origin HEAD:main"); pushed = true; } catch (e) { await sleep(3000 * (t + 1)); }
+      // --autostash: o npm install altera o package-lock.json e isso não pode bloquear o pull
+      try { git("git pull --rebase --autostash -q origin main && git push -q origin HEAD:main"); pushed = true; } catch (e) { lastErr = e.message; await sleep(3000 * (t + 1)); }
     }
-    if (!pushed) throw new Error("não foi possível enviar a imagem para o GitHub");
+    if (!pushed) throw new Error("não foi possível enviar a imagem para o GitHub: " + lastErr);
   }
   const url = `https://raw.githubusercontent.com/${REPO}/main/public/posts/${name}`;
   for (let t = 0; t < 12; t++) {          // espera até a imagem estar acessível na internet (até ~1 min)
