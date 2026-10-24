@@ -1,58 +1,60 @@
 # Menu do Dia
 
-3 refeições por supermercado a partir de **preços reais de folheto** (Continente, Pingo Doce, Lidl, Aldi, Intermarché).
+Almoço e jantar ao **preço real do folheto** de cada supermercado (Continente, Pingo Doce, Lidl, Aldi, Intermarché):
+receitas de cozinhas do mundo, comparador entre lojas, plano da semana e lista de compras.
+
+🌐 Site: **https://nunoleiria-web.github.io/menu-do-dia/** (funciona também como app no telemóvel — PWA)
+📸 Instagram: publicações automáticas das receitas do dia, das 10h às 19h
 
 ## Princípio
-Nenhum preço é gerado por IA. Todos vêm de `api/flyer-data.ts`, com validade e links de fonte por supermercado.
-Os custos das receitas são calculados em código (preço × quantidade). Ingredientes sem preço de folheto aparecem como "despensa" e não entram nos totais.
+Nenhum preço é inventado. Os preços vêm dos folhetos (lidos por IA e confirmados numa segunda leitura);
+os custos das receitas são calculados em código (preço × quantidade). O custo por pessoa inclui uma
+estimativa dos ingredientes de despensa e está sempre indicado como aproximado.
 
-## Correr localmente
-```bash
-npm install
-npm run dev
-```
-Não precisa de base de dados nem de chaves de API.
-
-## Atualização automática (GitHub Actions)
-O workflow `.github/workflows/update.yml` corre **todos os dias às 05:00 de Lisboa**:
-procura folheto novo; se houver, atualiza preços; em qualquer caso gera receitas novas só com produtos
-em promoção e uma foto gerada por IA por receita (Cloudflare Workers AI ou OpenAI).
-
-### Secrets necessários (Settings → Secrets and variables → Actions)
-| Secret | Obrigatório | Descrição |
+## Como funciona
+| Quando | Workflow | O que faz |
 |---|---|---|
-| `OPENAI_API_KEY` | um dos dois | Ler folhetos + gerar receitas |
-| `MISTRAL_API_KEY` | um dos dois | Alternativa ao OpenAI |
-| `CLOUDFLARE_API_TOKEN` + `CLOUDFLARE_ACCOUNT_ID` | opcional | Gerar fotos grátis no Workers AI (quota diária) |
-
-### Variables opcionais (Settings → Secrets and variables → Actions → Variables)
-| Variable | Omissão | Descrição |
-|---|---|---|
-| `OPENAI_MODEL` | `gpt-4o-mini` | Modelo de texto OpenAI |
-| `MISTRAL_MODEL` | `mistral-small-latest` | Modelo de texto Mistral |
-| `CLOUDFLARE_IMAGE_MODEL` | `@cf/black-forest-labs/flux-1-schnell` | Modelo de imagem Cloudflare |
-| `OPENAI_IMAGE_MODEL` | `gpt-image-1-mini` | Modelo de imagem OpenAI |
-| `OPENAI_IMAGE_QUALITY` | `low` | Qualidade da imagem OpenAI (`low`/`medium`/`high`) |
-| `AI_DELAY_MS` | 300/1100 | Delay entre chamadas à API |
-
-Também podes correr o workflow à mão (*Actions → Atualizar menu → Run workflow*), com opções para refazer fotos.
-
-## Deploy
-A app é um servidor Node único (Hono + Vite build). Em produção:
-```bash
-npm install
-npm run build
-npm start          # serve estático + API na porta PORT (omissão: 3000)
-```
-Ex.: Railway, Render, Fly.io, ou qualquer VPS com Node 20+.
+| Todos os dias às 05:00 | `update.yml` → `scripts/update.mjs` | Procura folhetos novos, lê preços, escolhe receitas da biblioteca, gera fotos com IA |
+| A seguir a cada atualização | `pages.yml` | Publica o site estático no GitHub Pages |
+| De 30 em 30 min, 10h–19h | `publish.yml` → `scripts/publish.mjs` | Publica a próxima receita da fila no Instagram (uma por prato) |
 
 ## Estrutura
 ```
-api/
-  flyer-data.ts     ← dados de origem (folhetos, preços, receitas)
-  data/menu.json    ← menu atual (gerado automaticamente)
-  queries/          ← lógica (custo, validade, estado do folheto)
-scripts/update.mjs  ← atualização automática (Actions)
-public/meals/       ← fotos das receitas
-src/pages/Home.tsx  ← interface (tabs, receitas, lista de compras)
+index.html            ← o site (HTML + JS, sem build)
+public/               ← ícones, manifest, service worker, fotos (meals/) e imagens das publicações (posts/)
+api/data/menu.json    ← menu atual (gerado automaticamente)
+api/data/published.json ← estado das publicações do dia (gerado automaticamente)
+scripts/
+  update.mjs          ← atualização diária (folhetos, receitas, fotos)
+  menu.mjs            ← lógica pura: escolha de receitas, custos, plano, comparador
+  publish.mjs         ← publicação no Instagram/Facebook
+  recipes.json        ← biblioteca de receitas
+  prices.json         ← preços médios para estimar ingredientes de despensa
+  dev.mjs             ← ver o site localmente
 ```
+
+## Correr localmente
+```bash
+npm run dev              # site em http://localhost:3000
+npm run publish:ensaio   # mostra a próxima publicação, sem publicar
+```
+
+## Segredos e variáveis (Settings → Secrets and variables → Actions)
+| Nome | Tipo | Para quê |
+|---|---|---|
+| `OPENAI_API_KEY` ou `MISTRAL_API_KEY` | segredo | Ler folhetos (obrigatório um dos dois) |
+| `CLOUDFLARE_API_TOKEN` + `CLOUDFLARE_ACCOUNT_ID` | segredo | Fotos grátis no Workers AI (opcional) |
+| `IG_TOKEN` | segredo | Publicar no Instagram (API com login do Instagram, sem Página de Facebook) |
+| `FB_PAGE_ID` + `FB_PAGE_TOKEN` | segredo | Publicar também na Página de Facebook (opcional) |
+| `SITE_URL` | variável | Link nas legendas (omissão: o GitHub Pages) |
+| `OPENAI_MODEL`, `MISTRAL_MODEL`, `CLOUDFLARE_IMAGE_MODEL`, `OPENAI_IMAGE_MODEL`, `OPENAI_IMAGE_QUALITY`, `AI_DELAY_MS` | variáveis | Afinação dos modelos (opcional) |
+
+### Token do Instagram
+Gera-se em developers.facebook.com → app → Instagram → *API setup with Instagram login* → *Generate token*.
+**Dura 60 dias.** A partir do dia 50, a execução "Publicar receitas do dia" fica a vermelho uma vez por dia
+(o GitHub envia email): gera um token novo e substitui o segredo `IG_TOKEN`.
+
+## Manutenção
+- Correr a atualização à mão: *Actions → Atualizar menu → Run workflow* (com opções para refazer fotos ou reler folhetos).
+- Testar uma publicação: *Actions → Publicar receitas do dia → Run workflow*.
+- Ver o que foi publicado hoje: `api/data/published.json`.
