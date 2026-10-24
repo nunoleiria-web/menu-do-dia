@@ -3,13 +3,15 @@
  "done": [
   "Continente|moussaka",
   "Lidl|souvlaki",
-  "Intermarché|moqueca"
+  "Intermarché|moqueca",
+  "Continente|paella"
  ],
  "log": [
   "2026-10-24T16:03:27.401Z Continente|moussaka instagram:ok",
   "2026-10-24T16:20:02.720Z Lidl|souvlaki instagram:erro Media ID is not available (código 9007/2207027)",
   "2026-10-24T16:39:54.677Z Lidl|souvlaki instagram:ok (reel)",
-  "2026-10-24T16:57:08.055Z Intermarché|moqueca instagram:ok (carrossel)"
+  "2026-10-24T16:57:08.055Z Intermarché|moqueca instagram:ok (carrossel)",
+  "2026-10-24T17:21:25.615Z Continente|paella instagram:ok (reel)"
  ],
  "token": {
   "hash": "caff9d1523bc",
