@@ -17,6 +17,7 @@ estimativa dos ingredientes de despensa e está sempre indicado como aproximado.
 | Todos os dias às 05:00 | `update.yml` → `scripts/update.mjs` | Procura folhetos novos, lê preços, escolhe receitas da biblioteca, gera fotos com IA |
 | A seguir a cada atualização | `pages.yml` | Publica o site estático no GitHub Pages |
 | De 30 em 30 min, 10h–19h | `publish.yml` → `scripts/publish.mjs` | Publica a próxima receita no Instagram, alternando **carrossel** (foto → onde é mais barato → chamada para o site) e **Reel** (vídeo de ~9 s) |
+| ~07:30 e ~20:00 | `monitor.yml` → `scripts/monitor.mjs` | Vigia o site, o menu, as fotos, o Instagram e os outros workflows; se algo falhar fica a vermelho e o GitHub envia email |
 
 ## Estrutura
 ```
@@ -32,6 +33,7 @@ scripts/
   media.mjs           ← imagens do carrossel e vídeo do Reel
   recipes.json        ← biblioteca de receitas
   prices.json         ← preços médios para estimar ingredientes de despensa
+  monitor.mjs         ← verificação do site e das publicações
   dev.mjs             ← ver o site localmente
 ```
 
@@ -62,4 +64,5 @@ Gera-se em developers.facebook.com → app → Instagram → *API setup with Ins
 - Testar uma publicação: *Actions → Publicar receitas do dia → Run workflow*.
 - Ver como fica sem publicar: o mesmo, com a opção **preview** marcada (os ficheiros ficam no ramo `media`).
 - Se um Reel falhar, a publicação sai em carrossel; se o carrossel falhar, sai como foto.
+- Ver o estado de tudo: *Actions → Vigiar o site → Run workflow* e abrir o resumo da execução.
 - Ver o que foi publicado hoje: `api/data/published.json`.

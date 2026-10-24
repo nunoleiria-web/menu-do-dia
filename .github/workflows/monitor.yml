@@ -1,0 +1,24 @@
+name: Vigiar o site
+# Verifica duas vezes por dia se o site, o menu, as fotos e o Instagram estão a funcionar.
+# Se algo falhar, a execução fica a vermelho e o GitHub envia um email. O relatório fica no resumo da execução.
+on:
+  schedule:
+    - cron: "30 6 * * *"   # ~07:30 em Lisboa: depois da atualização diária
+    - cron: "0 19 * * *"   # ~20:00 em Lisboa: depois da janela de publicação
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  vigiar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - name: Verificar site, menu, fotos e Instagram
+        run: node scripts/monitor.mjs
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          SITE_URL: ${{ vars.SITE_URL }}
+          GITHUB_TOKEN: ${{ github.token }}
