@@ -5,7 +5,8 @@ name: Publicar no GitHub Pages
 on:
   push:
     branches: [main]
-    paths: [index.html, public/**, api/data/**, .github/workflows/pages.yml]
+    # Não volta a publicar o site por causa das imagens/estado das publicações no Instagram
+    paths: [index.html, "public/**", "!public/posts/**", "api/data/**", "!api/data/published.json", .github/workflows/pages.yml]
   workflow_run:
     workflows: ["Atualizar menu"]
     types: [completed]

@@ -23,8 +23,9 @@ jobs:
           FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
           IG_TOKEN: ${{ secrets.IG_TOKEN }}
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
-          SITE_URL: ${{ vars.SITE_URL }}
+          SITE_URL: ${{ vars.SITE_URL }}   # opcional; por omissão usa o GitHub Pages
       - name: Guardar estado
+        if: ${{ !cancelled() }}   # grava também quando a publicação falha (para se ver o erro)
         run: |
           git config user.name "Menu do Dia bot"; git config user.email "noreply@users.noreply.github.com"
           git add api/data/published.json 2>/dev/null || true

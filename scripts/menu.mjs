@@ -164,7 +164,8 @@ export function buildPlan(market, markets, library, today, histEntries = []) {
         if (meal === "Almoço" && !/min|^1h( |$)/.test(c.lib.t)) s += 0.2;
         return { c, s };
       }).sort((a, b) => a.s - b.s);
-      const { c } = scored[0];
+      // Nunca o mesmo prato ao almoço e ao jantar do mesmo dia (se houver alternativa)
+      const { c } = scored.find((x) => !taken.some((t) => t.id === x.c.lib.id)) ?? scored[0];
       used.set(c.lib.id, (used.get(c.lib.id) ?? 0) + 1);
       cuis.set(c.lib.c, (cuis.get(c.lib.c) ?? 0) + 1);
       const cmp = compareRows(c.lib, markets, today);
