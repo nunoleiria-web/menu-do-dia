@@ -16,18 +16,20 @@ estimativa dos ingredientes de despensa e está sempre indicado como aproximado.
 |---|---|---|
 | Todos os dias às 05:00 | `update.yml` → `scripts/update.mjs` | Procura folhetos novos, lê preços, escolhe receitas da biblioteca, gera fotos com IA |
 | A seguir a cada atualização | `pages.yml` | Publica o site estático no GitHub Pages |
-| De 30 em 30 min, 10h–19h | `publish.yml` → `scripts/publish.mjs` | Publica a próxima receita da fila no Instagram (uma por prato) |
+| De 30 em 30 min, 10h–19h | `publish.yml` → `scripts/publish.mjs` | Publica a próxima receita no Instagram, alternando **carrossel** (foto → onde é mais barato → chamada para o site) e **Reel** (vídeo de ~9 s) |
 
 ## Estrutura
 ```
 index.html            ← o site (HTML + JS, sem build)
-public/               ← ícones, manifest, service worker, fotos (meals/) e imagens das publicações (posts/)
+public/               ← ícones, manifest, service worker e fotos das receitas (meals/)
 api/data/menu.json    ← menu atual (gerado automaticamente)
 api/data/published.json ← estado das publicações do dia (gerado automaticamente)
+ramo media             ← ficheiros da publicação atual (substituído a cada publicação, não acumula)
 scripts/
   update.mjs          ← atualização diária (folhetos, receitas, fotos)
   menu.mjs            ← lógica pura: escolha de receitas, custos, plano, comparador
   publish.mjs         ← publicação no Instagram/Facebook
+  media.mjs           ← imagens do carrossel e vídeo do Reel
   recipes.json        ← biblioteca de receitas
   prices.json         ← preços médios para estimar ingredientes de despensa
   dev.mjs             ← ver o site localmente
@@ -47,6 +49,7 @@ npm run publish:ensaio   # mostra a próxima publicação, sem publicar
 | `IG_TOKEN` | segredo | Publicar no Instagram (API com login do Instagram, sem Página de Facebook) |
 | `FB_PAGE_ID` + `FB_PAGE_TOKEN` | segredo | Publicar também na Página de Facebook (opcional) |
 | `SITE_URL` | variável | Link nas legendas (omissão: o GitHub Pages) |
+| `IG_FORMAT` | variável | `alternar` (omissão), `carrossel`, `reel` ou `foto` |
 | `OPENAI_MODEL`, `MISTRAL_MODEL`, `CLOUDFLARE_IMAGE_MODEL`, `OPENAI_IMAGE_MODEL`, `OPENAI_IMAGE_QUALITY`, `AI_DELAY_MS` | variáveis | Afinação dos modelos (opcional) |
 
 ### Token do Instagram
@@ -57,4 +60,6 @@ Gera-se em developers.facebook.com → app → Instagram → *API setup with Ins
 ## Manutenção
 - Correr a atualização à mão: *Actions → Atualizar menu → Run workflow* (com opções para refazer fotos ou reler folhetos).
 - Testar uma publicação: *Actions → Publicar receitas do dia → Run workflow*.
+- Ver como fica sem publicar: o mesmo, com a opção **preview** marcada (os ficheiros ficam no ramo `media`).
+- Se um Reel falhar, a publicação sai em carrossel; se o carrossel falhar, sai como foto.
 - Ver o que foi publicado hoje: `api/data/published.json`.

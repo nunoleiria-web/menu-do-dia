@@ -4,6 +4,11 @@ on:
     # De 30 em 30 min das 09:00 às 19:30 UTC; o script só publica dentro da janela 10h–19h de Lisboa
     - cron: "0,30 9-19 * * *"
   workflow_dispatch:
+    inputs:
+      preview:
+        description: "Só pré-visualizar: gera as imagens e o vídeo da próxima receita, sem publicar"
+        type: boolean
+        default: false
 permissions:
   contents: write
 concurrency: publicar
@@ -16,6 +21,8 @@ jobs:
         with: { node-version: 22 }
       - run: npm install --no-audit --no-fund --no-save
         working-directory: scripts
+      - name: Instalar o ffmpeg (para os Reels)
+        run: which ffmpeg || (sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg)
       - name: Publicar a próxima receita da fila
         run: node scripts/publish.mjs
         env:
@@ -24,6 +31,8 @@ jobs:
           IG_TOKEN: ${{ secrets.IG_TOKEN }}
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
           SITE_URL: ${{ vars.SITE_URL }}   # opcional; por omissão usa o GitHub Pages
+          IG_FORMAT: ${{ vars.IG_FORMAT }}   # opcional: alternar (omissão) | carrossel | reel | foto
+          PREVIEW: ${{ inputs.preview && '1' || '' }}
       - name: Guardar estado
         if: ${{ !cancelled() }}   # grava também quando a publicação falha (para se ver o erro)
         run: |
