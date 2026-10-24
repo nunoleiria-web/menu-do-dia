@@ -36,23 +36,64 @@ export function buildQueue(menu, date) {
   return items.map((x, i) => ({ ...x, key: `${x.m.name}|${x.r.id}`, slot: n > 1 ? Math.round(FROM + (i * (TO - FROM)) / (n - 1)) : FROM }));
 }
 
-export function caption({ m, r }) {
-  const serv = parseInt(r.servings) || 4, per = ((+r.mainCost || 0) + (+r.est || 0)) / serv;
+const perPerson = (r) => ((+r.mainCost || 0) + (+r.est || 0)) / (parseInt(r.servings) || 4);
+const SITE_SHORT = SITE.replace(/^https?:\/\//, "").replace(/\/$/, "");
+
+// Legenda: o mais importante (preço + convite para ver a receita no site) nas 2 primeiras linhas,
+// que são as únicas visíveis no feed antes do "mais".
+export function caption({ m, r }, handle) {
+  const serv = parseInt(r.servings) || 4, per = perPerson(r);
   const main = (r.ingredients || []).find((i) => i.price);
+  const bio = handle ? `link na bio @${handle}` : "link na bio";
   const tags = ["#receitas", "#menudodia", "#supermercado", "#poupar", "#" + plain(m.name), ...(r.cuisine ? ["#cozinha" + plain(r.cuisine)] : [])];
   return [
-    `${EMOJI[r.meal] || "🍴"} ${r.meal} · ${r.name}`,
+    `${EMOJI[r.meal] || "🍴"} ${r.name} por cerca de ${money(per)} por pessoa`,
+    `👉 Receita completa, lista de compras e preços de todas as lojas: ${bio}`,
+    "",
     [r.cuisine, r.time, `${serv} pessoas`].filter(Boolean).join(" · "),
-    ...(r.description ? ["", r.description] : []),
+    ...(r.description ? [r.description] : []),
     "",
     `🛒 ${m.name}${main ? `: ${main.item} a ${money(main.price)}${main.per === "kg" ? "/kg" : ""} no folheto` : ""}`,
-    `💶 Cerca de ${money(per)} por pessoa (produto do folheto + despensa, valor aproximado)`,
+    `💶 Produto do folheto + despensa (valor aproximado)`,
     "",
-    `Receita completa e lista de compras: ${SITE}`,
+    `🔗 ${SITE_SHORT}`,
     "Preços lidos dos folhetos; confirma na loja. Imagem gerada por IA.",
     "",
     tags.join(" "),
   ].join("\n");
+}
+
+const esc = (t) => String(t).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+function wrap(text, max) {
+  const lines = [""];
+  for (const w of String(text).split(/\s+/)) {
+    const cur = lines[lines.length - 1];
+    if ((cur + " " + w).trim().length > max && cur) lines.push(w); else lines[lines.length - 1] = (cur + " " + w).trim();
+  }
+  if (lines.length > 2) { lines.length = 2; lines[1] = lines[1].replace(/\s*\S*$/, "") + "…"; }
+  return lines;
+}
+
+// Faixa por cima da foto (1080x1350): marca, loja, nome do prato, preço por pessoa e convite para o site
+export function cardSvg({ m, r }) {
+  const W = 1080, H = 1350, BLUE = "#2340C8", YEL = "#FFD43B", F = "DejaVu Sans, Liberation Sans, Arial, sans-serif";
+  const title = wrap(r.name, 22);
+  const tY = 1060 - (title.length - 1) * 82;
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#000" stop-opacity="0"/><stop offset="0.4" stop-color="#000" stop-opacity="0.75"/><stop offset="1" stop-color="#000" stop-opacity="0.92"/></linearGradient></defs>
+  <rect x="0" y="${tY - 330}" width="${W}" height="${H - tY + 330}" fill="url(#g)"/>
+  <g transform="translate(40,40)">
+    <rect width="372" height="78" rx="39" fill="${BLUE}"/>
+    <g transform="translate(26,14) scale(0.1)" fill="${YEL}"><path d="M0 300 A250 250 0 0 1 500 300 L440 300 A190 190 0 0 0 60 300 Z"/><rect x="215" y="25" width="70" height="40"/><rect x="0" y="330" width="500" height="70"/></g>
+    <text x="96" y="52" font-family="${F}" font-size="32" font-weight="700" fill="${YEL}">MENU DO DIA</text>
+  </g>
+  <text x="60" y="${tY - 120}" font-family="${F}" font-size="34" font-weight="700" fill="${YEL}" letter-spacing="2">${esc((m.name + " · " + r.meal).toUpperCase())}</text>
+  ${title.map((l, i) => `<text x="60" y="${tY - 30 + i * 82}" font-family="${F}" font-size="72" font-weight="700" fill="#fff">${esc(l)}</text>`).join("\n  ")}
+  <text x="60" y="${tY + (title.length - 1) * 82 + 70}" font-family="${F}" font-size="50" font-weight="700" fill="${YEL}">≈ ${esc(money(perPerson(r)))} por pessoa</text>
+  <rect x="0" y="${H - 150}" width="${W}" height="150" fill="${BLUE}"/>
+  <text x="${W / 2}" y="${H - 85}" text-anchor="middle" font-family="${F}" font-size="44" font-weight="700" fill="#fff">Receita completa → link na bio</text>
+  <text x="${W / 2}" y="${H - 35}" text-anchor="middle" font-family="${F}" font-size="30" fill="${YEL}">${esc(SITE_SHORT)}</text>
+</svg>`;
 }
 
 const git = (c) => {
@@ -72,7 +113,9 @@ async function jpg(item, date) {
   }
   const src = path.join(ROOT, "public", item.r.image.replace(/^\//, ""));
   const name = `${date}-${plain(item.m.name)}-${plain(item.r.id)}.jpg`;
-  await sharp(src).resize(1080, 1350, { fit: "cover" }).jpeg({ quality: 88 }).toFile(path.join(dir, name));
+  await sharp(src).resize(1080, 1350, { fit: "cover" })
+    .composite([{ input: Buffer.from(cardSvg(item)), top: 0, left: 0 }])
+    .jpeg({ quality: 88 }).toFile(path.join(dir, name));
   git("git config user.name 'Menu do Dia bot' && git config user.email 'noreply@users.noreply.github.com'");
   git(`git add -A public/posts`);
   if (git("git status --porcelain public/posts").trim()) {
@@ -141,6 +184,7 @@ async function checkToken(state, date) {
   const age = daysBetween(state.token.since, date);
   try {
     const me = await get(`${IGRAPH}/me?fields=user_id,username&access_token=${IG_TOKEN}`);
+    state.token.handle = me.username;
     console.log(`Token do Instagram OK: @${me.username} · em uso há ${age} dia(s) (dura ${TOKEN_DAYS})`);
   } catch (e) {
     throw new Error(`Token do Instagram inválido ou expirado (${e.message}). Gera um novo na Meta e atualiza o segredo IG_TOKEN.`);
@@ -159,13 +203,13 @@ async function main() {
   const due = queue.find((q) => !state.done.includes(q.key) && q.slot <= min && min <= TO + 45);
   console.log(`${date} ${Math.floor(min / 60)}:${String(min % 60).padStart(2, "0")} · fila ${queue.length} · publicadas ${state.done.length}`);
   if (!due) return console.log("Nada para publicar agora.");
-  const text = caption(due), live = IG_TOKEN || (FB_PAGE_ID && FB_PAGE_TOKEN);
+  let text = caption(due, state.token?.handle); const live = IG_TOKEN || (FB_PAGE_ID && FB_PAGE_TOKEN);
   console.log(`\n→ ${due.key} (horário ${Math.floor(due.slot / 60)}:${String(due.slot % 60).padStart(2, "0")})\n${text}\n`);
   if (!live) return console.log("ENSAIO: sem credenciais, nada foi publicado.");
   const save = () => fs.writeFileSync(stateFile, JSON.stringify(state, null, 1) + "\n");
   let warning = null, res = [];
   try {
-    if (IG_TOKEN) warning = await checkToken(state, date);
+    if (IG_TOKEN) { warning = await checkToken(state, date); text = caption(due, state.token.handle); }
     const img = await jpg(due, date);
     const tries = [...(FB_PAGE_ID && FB_PAGE_TOKEN ? [["facebook", () => sendFacebook(img, text)]] : []), ...(IG_TOKEN ? [["instagram", () => sendInstagramDirect(img, text)]] : IG_USER_ID && FB_PAGE_TOKEN ? [["instagram", () => sendInstagram(img, text)]] : [])];
     for (const [n, f] of tries) { try { await f(); res.push(n + ":ok"); } catch (e) { res.push(`${n}:erro ${e.message}`); } }
