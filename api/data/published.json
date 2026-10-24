@@ -4,10 +4,13 @@
   "Continente|moussaka"
  ],
  "log": [
-  "2026-10-24T16:03:27.401Z Continente|moussaka instagram:ok"
+  "2026-10-24T16:03:27.401Z Continente|moussaka instagram:ok",
+  "2026-10-24T16:20:02.720Z Lidl|souvlaki instagram:erro Media ID is not available (código 9007/2207027)"
  ],
  "token": {
   "hash": "caff9d1523bc",
-  "since": "2026-10-24"
- }
+  "since": "2026-10-24",
+  "handle": "diamenudo"
+ },
+ "fails": 1
 }
