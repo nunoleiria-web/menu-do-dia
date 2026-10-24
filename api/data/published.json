@@ -5,7 +5,8 @@
   "Lidl|souvlaki",
   "Intermarché|moqueca",
   "Continente|paella",
-  "Pingo Doce|coq-au-vin"
+  "Pingo Doce|coq-au-vin",
+  "Lidl|tacos-porco"
  ],
  "log": [
   "2026-10-24T16:03:27.401Z Continente|moussaka instagram:ok",
@@ -13,7 +14,8 @@
   "2026-10-24T16:39:54.677Z Lidl|souvlaki instagram:ok (reel)",
   "2026-10-24T16:57:08.055Z Intermarché|moqueca instagram:ok (carrossel)",
   "2026-10-24T17:21:25.615Z Continente|paella instagram:ok (reel)",
-  "2026-10-24T17:52:19.403Z Pingo Doce|coq-au-vin instagram:ok (carrossel)"
+  "2026-10-24T17:52:19.403Z Pingo Doce|coq-au-vin instagram:ok (carrossel)",
+  "2026-10-24T18:19:53.298Z Lidl|tacos-porco instagram:ok (reel)"
  ],
  "token": {
   "hash": "caff9d1523bc",
