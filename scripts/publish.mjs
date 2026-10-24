@@ -8,7 +8,7 @@ import { execSync } from "node:child_process";
 const ROOT = path.resolve(new URL("..", import.meta.url).pathname);
 const SITE = process.env.SITE_URL || "https://menu-do-dia.onrender.com";
 const REPO = process.env.GITHUB_REPOSITORY || "nunoleiria-web/menu-do-dia";
-const { FB_PAGE_ID, FB_PAGE_TOKEN, IG_USER_ID } = process.env;
+const { FB_PAGE_ID, FB_PAGE_TOKEN, IG_USER_ID, IG_TOKEN } = process.env;   // IG_TOKEN = só Instagram (sem Página de Facebook)
 const GRAPH = "https://graph.facebook.com/v21.0";
 const FROM = 10 * 60, TO = 19 * 60;   // janela em minutos desde as 00:00
 
@@ -68,6 +68,17 @@ const post = async (url, body) => {
   return j;
 };
 async function sendFacebook(img, text) { return post(`${GRAPH}/${FB_PAGE_ID}/photos`, { url: img, caption: text, access_token: FB_PAGE_TOKEN }); }
+async function sendInstagramDirect(img, text) {
+  const G = "https://graph.instagram.com/v21.0", t = IG_TOKEN;
+  const c = await post(`${G}/me/media`, { image_url: img, caption: text, access_token: t });
+  for (let i = 0; i < 10; i++) {
+    const s = await (await fetch(`${G}/${c.id}?fields=status_code&access_token=${t}`)).json();
+    if (s.status_code === "FINISHED") break;
+    if (s.status_code === "ERROR") throw new Error("Instagram não aceitou a imagem");
+    await new Promise((r) => setTimeout(r, 3000));
+  }
+  return post(`${G}/me/media_publish`, { creation_id: c.id, access_token: t });
+}
 async function sendInstagram(img, text) {
   const c = await post(`${GRAPH}/${IG_USER_ID}/media`, { image_url: img, caption: text, access_token: FB_PAGE_TOKEN });
   for (let i = 0; i < 10; i++) {          // espera o Instagram processar a imagem
@@ -89,11 +100,11 @@ async function main() {
   const due = queue.find((q) => !state.done.includes(q.key) && q.slot <= min && min <= TO + 45);
   console.log(`${date} ${Math.floor(min / 60)}:${String(min % 60).padStart(2, "0")} · fila ${queue.length} · publicadas ${state.done.length}`);
   if (!due) return console.log("Nada para publicar agora.");
-  const text = caption(due), live = FB_PAGE_ID && FB_PAGE_TOKEN;
+  const text = caption(due), live = IG_TOKEN || (FB_PAGE_ID && FB_PAGE_TOKEN);
   console.log(`\n→ ${due.key} (horário ${Math.floor(due.slot / 60)}:${String(due.slot % 60).padStart(2, "0")})\n${text}\n`);
   if (!live) return console.log("ENSAIO: sem credenciais, nada foi publicado.");
   const img = await jpg(due), res = [];
-  const tries = [["facebook", () => sendFacebook(img, text)], ...(IG_USER_ID ? [["instagram", () => sendInstagram(img, text)]] : [])];
+  const tries = [...(FB_PAGE_ID && FB_PAGE_TOKEN ? [["facebook", () => sendFacebook(img, text)]] : []), ...(IG_TOKEN ? [["instagram", () => sendInstagramDirect(img, text)]] : IG_USER_ID && FB_PAGE_TOKEN ? [["instagram", () => sendInstagram(img, text)]] : [])];
   for (const [n, f] of tries) { try { await f(); res.push(n + ":ok"); } catch (e) { res.push(`${n}:erro ${e.message}`); } }
   console.log(res.join(" | "));
   if (res.some((x) => x.endsWith(":ok"))) state.done.push(due.key);
