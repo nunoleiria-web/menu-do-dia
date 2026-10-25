@@ -6,7 +6,8 @@
   "Lidl|kebab-frango",
   "Aldi|bo-kho",
   "Intermarché|lulas-guisadas",
-  "Continente|frango-frito"
+  "Continente|frango-frito",
+  "Lidl|risotto-cogumelos"
  ],
  "log": [
   "2026-10-25T10:22:20.681Z Continente|polvo-lagareiro instagram:ok (foto) depois de: carrossel falhou: Media ID is not available (código 9007/2207027)",
@@ -14,7 +15,8 @@
   "2026-10-25T12:23:06.257Z Lidl|kebab-frango instagram:ok (carrossel)",
   "2026-10-25T13:56:35.580Z Aldi|bo-kho instagram:ok (reel)",
   "2026-10-25T14:56:04.995Z Intermarché|lulas-guisadas instagram:ok (carrossel)",
-  "2026-10-25T15:56:48.369Z Continente|frango-frito instagram:ok (reel)"
+  "2026-10-25T15:56:48.369Z Continente|frango-frito instagram:ok (reel)",
+  "2026-10-25T16:57:34.510Z Lidl|risotto-cogumelos instagram:ok (carrossel)"
  ],
  "token": {
   "hash": "caff9d1523bc",
