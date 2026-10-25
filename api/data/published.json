@@ -1,10 +1,12 @@
 {
  "date": "2026-10-25",
  "done": [
-  "Continente|polvo-lagareiro"
+  "Continente|polvo-lagareiro",
+  "Pingo Doce|lasanha"
  ],
  "log": [
-  "2026-10-25T10:22:20.681Z Continente|polvo-lagareiro instagram:ok (foto) depois de: carrossel falhou: Media ID is not available (código 9007/2207027)"
+  "2026-10-25T10:22:20.681Z Continente|polvo-lagareiro instagram:ok (foto) depois de: carrossel falhou: Media ID is not available (código 9007/2207027)",
+  "2026-10-25T11:20:47.337Z Pingo Doce|lasanha instagram:ok (reel)"
  ],
  "token": {
   "hash": "caff9d1523bc",
