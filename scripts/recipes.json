@@ -743,7 +743,7 @@
     "qty": "1,6 kg",
     "kg": 1.6,
     "u": 1,
-    "not": "peru|pato|porco|vaca|novilho|borrego|cordeiro|peixe"
+    "not": "peru|pato|porco|vaca|novilho|borrego|cordeiro|peixe|peito|asa|hamburguer|salsicha|nuggets"
    }
   ],
   "ing": [
@@ -2093,7 +2093,7 @@
     "qty": "1,2 kg",
     "kg": 1.2,
     "u": 1,
-    "not": "peru|pato|porco|vaca|novilho|borrego|cordeiro|peixe"
+    "not": "peru|pato|porco|vaca|novilho|borrego|cordeiro|peixe|peito|hamburguer|salsicha|nuggets"
    }
   ],
   "ing": [
@@ -4067,7 +4067,7 @@
   "desc": "Salmão glaceado em molho teriyaki, com arroz japonês e legumes ao vapor.",
   "main": [
    {
-    "re": "salmao|tintureira|atum",
+    "re": "salmao",
     "item": "Lombos de salmão",
     "qty": "600 g",
     "kg": 0.6,
@@ -4679,7 +4679,8 @@
     "item": "Queijo ralado/fatiado",
     "qty": "300 g",
     "kg": 0.3,
-    "u": 1
+    "u": 1,
+    "not": "hamburguer|pizza|tosta|pao|bolo|requeijao|queijo-fresco|fresco|creme|salsicha|fiambre|panad|folhado|pastel"
    }
   ],
   "ing": [
@@ -4747,7 +4748,8 @@
     "item": "Atum",
     "qty": "400 g",
     "kg": 0.4,
-    "u": 2
+    "u": 2,
+    "processed": true
    }
   ],
   "ing": [
