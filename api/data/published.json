@@ -1,26 +1,14 @@
 {
- "date": "2026-10-24",
+ "date": "2026-10-25",
  "done": [
-  "Continente|moussaka",
-  "Lidl|souvlaki",
-  "Intermarché|moqueca",
-  "Continente|paella",
-  "Pingo Doce|coq-au-vin",
-  "Lidl|tacos-porco"
+  "Continente|polvo-lagareiro"
  ],
  "log": [
-  "2026-10-24T16:03:27.401Z Continente|moussaka instagram:ok",
-  "2026-10-24T16:20:02.720Z Lidl|souvlaki instagram:erro Media ID is not available (código 9007/2207027)",
-  "2026-10-24T16:39:54.677Z Lidl|souvlaki instagram:ok (reel)",
-  "2026-10-24T16:57:08.055Z Intermarché|moqueca instagram:ok (carrossel)",
-  "2026-10-24T17:21:25.615Z Continente|paella instagram:ok (reel)",
-  "2026-10-24T17:52:19.403Z Pingo Doce|coq-au-vin instagram:ok (carrossel)",
-  "2026-10-24T18:19:53.298Z Lidl|tacos-porco instagram:ok (reel)"
+  "2026-10-25T10:22:20.681Z Continente|polvo-lagareiro instagram:ok (foto) depois de: carrossel falhou: Media ID is not available (código 9007/2207027)"
  ],
  "token": {
   "hash": "caff9d1523bc",
   "since": "2026-10-24",
   "handle": "diamenudo"
- },
- "fails": 1
+ }
 }
