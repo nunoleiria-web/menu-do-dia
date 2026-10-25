@@ -4,13 +4,15 @@
   "Continente|polvo-lagareiro",
   "Pingo Doce|lasanha",
   "Lidl|kebab-frango",
-  "Aldi|bo-kho"
+  "Aldi|bo-kho",
+  "Intermarché|lulas-guisadas"
  ],
  "log": [
   "2026-10-25T10:22:20.681Z Continente|polvo-lagareiro instagram:ok (foto) depois de: carrossel falhou: Media ID is not available (código 9007/2207027)",
   "2026-10-25T11:20:47.337Z Pingo Doce|lasanha instagram:ok (reel)",
   "2026-10-25T12:23:06.257Z Lidl|kebab-frango instagram:ok (carrossel)",
-  "2026-10-25T13:56:35.580Z Aldi|bo-kho instagram:ok (reel)"
+  "2026-10-25T13:56:35.580Z Aldi|bo-kho instagram:ok (reel)",
+  "2026-10-25T14:56:04.995Z Intermarché|lulas-guisadas instagram:ok (carrossel)"
  ],
  "token": {
   "hash": "caff9d1523bc",
