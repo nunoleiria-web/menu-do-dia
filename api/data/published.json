@@ -2,11 +2,13 @@
  "date": "2026-10-26",
  "done": [
   "Continente|mac-cheese",
-  "Pingo Doce|porco-alentejana"
+  "Pingo Doce|porco-alentejana",
+  "Continente|calamares"
  ],
  "log": [
   "2026-10-26T10:33:41.975Z Continente|mac-cheese instagram:ok (carrossel)",
-  "2026-10-26T11:33:47.934Z Pingo Doce|porco-alentejana instagram:ok (reel)"
+  "2026-10-26T11:33:47.934Z Pingo Doce|porco-alentejana instagram:ok (reel)",
+  "2026-10-26T14:34:42.759Z Continente|calamares instagram:ok (carrossel)"
  ],
  "token": {
   "hash": "caff9d1523bc",
