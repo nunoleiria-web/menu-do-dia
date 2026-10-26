@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-10-26T13:40:36.773Z",
+ "updatedAt": "2026-10-26T13:58:51.433Z",
  "markets": [
   {
    "name": "Continente",
@@ -116,7 +116,7 @@
        "promoId": "lulas-limpas-20-40-pescanova-450g"
       }
      ],
-     "image": "/meals/lib-calamares-cafc751d.webp",
+     "image": "/meals/lib-calamares-5715a1e2.webp",
      "imageCredit": {
       "name": "Imagem gerada por IA",
       "url": ""
@@ -203,7 +203,7 @@
       "Dica do chef: Se o molho ficar espesso demais, aligeire com um pouco de leite."
      ],
      "imageQuery": "Bacalhau com Natas Portuguesa",
-     "image": "/meals/lib-bacalhau-natas-39c7fe55.webp",
+     "image": "/meals/lib-bacalhau-natas-d96bb432.webp",
      "imageCredit": {
       "name": "Imagem gerada por IA",
       "url": ""
@@ -1174,7 +1174,7 @@
      "id": "mirtilo",
      "name": "Mirtilo",
      "price": 6.99,
-     "per": "kg",
+     "per": "un",
      "note": "folheto oficial"
     },
     {
@@ -1489,7 +1489,7 @@
      "id": "peito-de-frango-em-vacuo-continente",
      "name": "Peito de Frango em Vácuo Continente",
      "price": 6.49,
-     "per": "kg",
+     "per": "un",
      "note": "folheto oficial"
     },
     {
@@ -1503,7 +1503,7 @@
      "id": "frango-para-churrasco-continente",
      "name": "Frango para Churrasco Continente",
      "price": 3.39,
-     "per": "kg",
+     "per": "un",
      "note": "folheto oficial"
     },
     {
@@ -10151,7 +10151,7 @@
          "promoId": "lulas-limpas-20-40-pescanova-450g"
         }
        ],
-       "image": "/meals/lib-calamares-cafc751d.webp",
+       "image": "/meals/lib-calamares-5715a1e2.webp",
        "imageCredit": {
         "name": "Imagem gerada por IA",
         "url": ""
@@ -10238,7 +10238,7 @@
         "Dica do chef: Se o molho ficar espesso demais, aligeire com um pouco de leite."
        ],
        "imageQuery": "Bacalhau com Natas Portuguesa",
-       "image": "/meals/lib-bacalhau-natas-39c7fe55.webp",
+       "image": "/meals/lib-bacalhau-natas-d96bb432.webp",
        "imageCredit": {
         "name": "Imagem gerada por IA",
         "url": ""
@@ -10382,12 +10382,12 @@
     {
      "id": "frango-churrasco",
      "promos": [
-      "frango-para-churrasco-continente"
+      "frango-do-campo-inteiro-com-miudos-continente"
      ],
      "amounts": [
       1.6
      ],
-     "cost": 5.42,
+     "cost": 6.38,
      "est": 5.6
     },
     {
@@ -10525,12 +10525,12 @@
     {
      "id": "frango-parmegiana",
      "promos": [
-      "frango-para-churrasco-continente"
+      "frango-do-campo-inteiro-com-miudos-continente"
      ],
      "amounts": [
       0.7
      ],
-     "cost": 2.37,
+     "cost": 2.79,
      "est": 5.1
     },
     {
@@ -10569,12 +10569,12 @@
     {
      "id": "coq-au-vin",
      "promos": [
-      "frango-para-churrasco-continente"
+      "frango-do-campo-inteiro-com-miudos-continente"
      ],
      "amounts": [
       1.2
      ],
-     "cost": 4.07,
+     "cost": 4.79,
      "est": 7.55
     },
     {
@@ -10602,12 +10602,12 @@
     {
      "id": "paella",
      "promos": [
-      "frango-para-churrasco-continente"
+      "frango-do-campo-inteiro-com-miudos-continente"
      ],
      "amounts": [
       0.9
      ],
-     "cost": 3.05,
+     "cost": 3.59,
      "est": 6.15
     },
     {
@@ -10668,12 +10668,12 @@
     {
      "id": "souvlaki",
      "promos": [
-      "frango-para-churrasco-continente"
+      "frango-do-campo-inteiro-com-miudos-continente"
      ],
      "amounts": [
       0.7
      ],
-     "cost": 2.37,
+     "cost": 2.79,
      "est": 5
     },
     {
@@ -10690,12 +10690,12 @@
     {
      "id": "tagine-frango",
      "promos": [
-      "frango-para-churrasco-continente"
+      "frango-do-campo-inteiro-com-miudos-continente"
      ],
      "amounts": [
       1.2
      ],
-     "cost": 4.07,
+     "cost": 4.79,
      "est": 4.05
     },
     {
@@ -10745,12 +10745,12 @@
     {
      "id": "quesadillas",
      "promos": [
-      "frango-para-churrasco-continente"
+      "frango-do-campo-inteiro-com-miudos-continente"
      ],
      "amounts": [
       0.6
      ],
-     "cost": 2.03,
+     "cost": 2.39,
      "est": 8.2
     },
     {
@@ -10767,23 +10767,23 @@
     {
      "id": "strogonoff",
      "promos": [
-      "frango-para-churrasco-continente"
+      "frango-do-campo-inteiro-com-miudos-continente"
      ],
      "amounts": [
       0.7
      ],
-     "cost": 2.37,
+     "cost": 2.79,
      "est": 3.6
     },
     {
      "id": "tikka-masala",
      "promos": [
-      "frango-para-churrasco-continente"
+      "frango-do-campo-inteiro-com-miudos-continente"
      ],
      "amounts": [
       0.8
      ],
-     "cost": 2.71,
+     "cost": 3.19,
      "est": 5.15
     },
     {
@@ -10822,23 +10822,23 @@
     {
      "id": "curry-verde",
      "promos": [
-      "frango-para-churrasco-continente"
+      "frango-do-campo-inteiro-com-miudos-continente"
      ],
      "amounts": [
       0.7
      ],
-     "cost": 2.37,
+     "cost": 2.79,
      "est": 5.9
     },
     {
      "id": "frango-agridoce",
      "promos": [
-      "frango-para-churrasco-continente"
+      "frango-do-campo-inteiro-com-miudos-continente"
      ],
      "amounts": [
       0.7
      ],
-     "cost": 2.37,
+     "cost": 2.79,
      "est": 3.8
     },
     {
@@ -10899,12 +10899,12 @@
     {
      "id": "kebab-frango",
      "promos": [
-      "frango-para-churrasco-continente"
+      "frango-do-campo-inteiro-com-miudos-continente"
      ],
      "amounts": [
       0.7
      ],
-     "cost": 2.37,
+     "cost": 2.79,
      "est": 4
     },
     {
@@ -10932,12 +10932,12 @@
     {
      "id": "frango-frito",
      "promos": [
-      "frango-para-churrasco-continente"
+      "frango-do-campo-inteiro-com-miudos-continente"
      ],
      "amounts": [
       1.2
      ],
-     "cost": 4.07,
+     "cost": 4.79,
      "est": 3.95
     },
     {
@@ -11064,7 +11064,7 @@
       "Dica do chef: As anchovas dissolvem-se e dão profundidade sem sabor a peixe."
      ],
      "imageQuery": "Spaghetti alla Puttanesca Italiana",
-     "image": "/meals/lib-puttanesca-6a956011.webp",
+     "image": "/meals/lib-puttanesca-bbc571c1.webp",
      "imageCredit": {
       "name": "Imagem gerada por IA",
       "url": ""
@@ -22397,7 +22397,7 @@
         "Dica do chef: As anchovas dissolvem-se e dão profundidade sem sabor a peixe."
        ],
        "imageQuery": "Spaghetti alla Puttanesca Italiana",
-       "image": "/meals/lib-puttanesca-6a956011.webp",
+       "image": "/meals/lib-puttanesca-bbc571c1.webp",
        "imageCredit": {
         "name": "Imagem gerada por IA",
         "url": ""
@@ -26360,7 +26360,7 @@
         "Dica do chef: As anchovas dissolvem-se e dão profundidade sem sabor a peixe."
        ],
        "imageQuery": "Spaghetti alla Puttanesca Italiana",
-       "image": "/meals/lib-puttanesca-6a956011.webp",
+       "image": "/meals/lib-puttanesca-bbc571c1.webp",
        "imageCredit": {
         "name": "Imagem gerada por IA",
         "url": ""
@@ -27250,7 +27250,7 @@
        "promoId": "lulas-limpas-20-40-pescanova-450g"
       }
      ],
-     "image": "/meals/lib-calamares-cafc751d.webp",
+     "image": "/meals/lib-calamares-5715a1e2.webp",
      "imageCredit": {
       "name": "Imagem gerada por IA",
       "url": ""
@@ -27503,7 +27503,7 @@
          "promoId": "lulas-limpas-20-40-pescanova-450g"
         }
        ],
-       "image": "/meals/lib-calamares-cafc751d.webp",
+       "image": "/meals/lib-calamares-5715a1e2.webp",
        "imageCredit": {
         "name": "Imagem gerada por IA",
         "url": ""
@@ -27909,7 +27909,7 @@
          "promoId": "massa-esparguete-milaneza"
         }
        ],
-       "image": "/meals/lib-puttanesca-6a956011.webp",
+       "image": "/meals/lib-puttanesca-bbc571c1.webp",
        "imageCredit": {
         "name": "Imagem gerada por IA",
         "url": ""
@@ -28059,10 +28059,10 @@
   "estufado-novilho": "/meals/lib-estufado-novilho-0b437e5a.webp",
   "bo-kho": "/meals/lib-bo-kho-e4f2dd5e.webp",
   "bulgogi": "/meals/lib-bulgogi-daf2e1bc.webp",
-  "calamares": "/meals/lib-calamares-cafc751d.webp",
-  "puttanesca": "/meals/lib-puttanesca-6a956011.webp",
+  "calamares": "/meals/lib-calamares-5715a1e2.webp",
+  "puttanesca": "/meals/lib-puttanesca-bbc571c1.webp",
   "chili": "/meals/lib-chili-6be76280.webp",
-  "bacalhau-natas": "/meals/lib-bacalhau-natas-39c7fe55.webp",
+  "bacalhau-natas": "/meals/lib-bacalhau-natas-d96bb432.webp",
   "hamburguer": "/meals/lib-hamburguer-b49dacf7.webp",
   "almondegas": "/meals/lib-almondegas-d35cbf3f.webp",
   "bacalhau-bras": "/meals/lib-bacalhau-bras-9767ed7b.webp",
@@ -28093,7 +28093,9 @@
   "cuscuz-grao": "/meals/lib-cuscuz-grao-2a907cdd.webp",
   "strogonoff": "/meals/lib-strogonoff-c72c4635.webp",
   "curry-grao": "/meals/lib-curry-grao-5bbe781a.webp",
-  "dal": "/meals/lib-dal-f96d3e26.webp"
+  "dal": "/meals/lib-dal-f96d3e26.webp",
+  "curry-verde": "/meals/lib-curry-verde-d25efa8f.webp",
+  "pasta-atum": "/meals/lib-pasta-atum-fe5702f9.webp"
  },
  "compare": [
   {
@@ -28373,7 +28375,7 @@
       "promoId": "lulas-limpas-20-40-pescanova-450g"
      }
     ],
-    "image": "/meals/lib-calamares-cafc751d.webp",
+    "image": "/meals/lib-calamares-5715a1e2.webp",
     "imageCredit": {
      "name": "Imagem gerada por IA",
      "url": ""
@@ -28660,5 +28662,12 @@
     }
    }
   }
- ]
+ ],
+ "imageStyle": {
+  "curry-verde": "caseira-v2",
+  "pasta-atum": "caseira-v2",
+  "calamares": "caseira-v2",
+  "bacalhau-natas": "caseira-v2",
+  "puttanesca": "caseira-v2"
+ }
 }
