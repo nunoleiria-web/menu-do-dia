@@ -2,6 +2,7 @@ import { createHash } from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
 import { buildPlan, buildCompare, buildPool } from "./menu.mjs";
+import { hasOfficial, readOfficial } from "./official.mjs";
 
 const { MISTRAL_API_KEY: MK, OPENAI_API_KEY: OK } = process.env;
 const AI = OK
@@ -139,6 +140,13 @@ async function readFlyer(m, pick) {
   if (!base) throw new Error("sem imagens do folheto");
   const seq = [...pages].sort((a, b) => num(a) - num(b));
   const imgs = [...new Set([base, ...seq])].slice(0, 14);
+  const promos = await extractFromImages(m, imgs);
+  return { promos, source: { title: "Blog 200 — " + title, url: pick.url } };
+}
+
+// Lê com IA as páginas de um folheto (imagens), em blocos de 2 páginas, e confirma cada bloco numa segunda leitura.
+// Usado pelo Blog 200 e pelo folheto oficial do Lidl.
+async function extractFromImages(m, imgs) {
   const parts = [];
   for (const u of imgs) {
     const r = await getPage(u);
@@ -173,10 +181,10 @@ async function readFlyer(m, pick) {
   }
   if (promos.length < 2) throw new Error("só " + promos.length + " produtos legíveis (mínimo 2)");
   console.log("  " + m.name + ": " + promos.length + " produtos lidos de " + imgs.length + " páginas");
-  return { promos, source: { title: "Blog 200 — " + title, url: pick.url } };
+  return promos;
 }
 
-const NONFOOD = /crisantemo|peperomia|ramo-de|flor|planta|vaso|capsula|detergente|papel|vela|decorac/;
+const NONFOOD = /crisantemo|peperomia|ramo-de|flor|planta|vaso|capsula|detergente|papel|vela|decorac|amaciador|lixivia|limpa-|limpador|limpeza|desengordurante|esfregao|guardanapo|fralda|toalhit|champo|gel-de-banho|desodoriz|pasta-dentifrica|escova|lamina|absorvent|penso|racao|areia-|brinquedo|pilha|lampada|ambientador|abrilhantador|pastilhas-.*maquina|sacos-do-lixo|rolo-de-cozinha|creme-hidratante/;
 
 const CF = process.env.CLOUDFLARE_API_TOKEN && process.env.CLOUDFLARE_ACCOUNT_ID ? { token: process.env.CLOUDFLARE_API_TOKEN, id: process.env.CLOUDFLARE_ACCOUNT_ID } : null;
 
@@ -231,6 +239,16 @@ for (let i = 0; i < data.markets.length && !PHOTOS_ONLY; i++) {
   const n = structuredClone(data.markets[i]);
   tried++;
   try {
+    // 1) Site oficial do supermercado; 2) se falhar (ou não houver), o Blog 200
+    if (hasOfficial(n.name)) {
+      try {
+        const o = await readOfficial(n, { today, getPage, slug, NONFOOD, ask: AI.key ? ask : null, extractFromImages, reread: REREAD });
+        const isNew = o.from !== n.from;
+        Object.assign(n, { from: o.from, to: o.to, flyer: o.flyer, sources: o.sources, promos: o.promos, officialId: o.officialId, source: "oficial", readVersion: 3, check: { date: today, result: isNew ? "novo" : "sem-novo" } });
+        console.log(n.name, "-> site oficial:", o.unchanged ? "folheto já lido" : n.promos.length + " produtos", o.from, o.to);
+        delete n.__dbg; data.markets[i] = n; continue;
+      } catch (e) { console.warn(n.name, "-> site oficial falhou, a usar o Blog 200:", e.message.slice(0, 200)); n.source = "blog"; }
+    }
     const f = await findFlyer(n);
     if (!f && n.__dbg) console.log("  " + n.__dbg);
     if (f && f.supplement) {

@@ -462,7 +462,7 @@ function renderApp(){
 
 function renderFoot(){
   const u=data.updatedAt?new Date(data.updatedAt).toLocaleString("pt-PT",{dateStyle:"long",timeStyle:"short",timeZone:"Europe/Lisbon"}):"";
-  $("#foot").innerHTML=`<p>Preços lidos dos folhetos publicados no Blog 200 e arredondados; confirma sempre na loja. ${u?`Última atualização: ${esc(u)}.`:""}</p><p>Os custos dos restantes ingredientes são estimativas. Este site não tem qualquer ligação aos supermercados referidos, cujas marcas pertencem aos respetivos donos. Imagens geradas por IA, meramente ilustrativas.</p>`;
+  $("#foot").innerHTML=`<p>Preços lidos dos folhetos oficiais de cada supermercado (no Intermarché, e sempre que o site oficial falha, dos folhetos publicados no Blog 200); confirma sempre na loja. ${u?`Última atualização: ${esc(u)}.`:""}</p><p>Os custos dos restantes ingredientes são estimativas. Este site não tem qualquer ligação aos supermercados referidos, cujas marcas pertencem aos respetivos donos. Imagens geradas por IA, meramente ilustrativas.</p>`;
 }
 
 /* ---------- recipe sheet ---------- */

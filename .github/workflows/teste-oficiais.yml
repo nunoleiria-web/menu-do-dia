@@ -1,0 +1,19 @@
+name: Teste dos leitores oficiais (temporário)
+on:
+  push:
+    branches: [fontes-oficiais]
+permissions:
+  contents: write
+jobs:
+  testar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - run: node probe/official-live.mjs
+      - name: Gravar resultado
+        if: always()
+        run: |
+          git config user.name "teste-bot"; git config user.email "noreply@users.noreply.github.com"
+          git add -f probe/live && git commit -q -m "Resultado do teste ao vivo [skip ci]" && git push -q origin HEAD:fontes-oficiais || echo "nada"
