@@ -53,6 +53,8 @@ h1,h2,h3{font-family:var(--display);line-height:1.08;letter-spacing:-.02em;text-
 .sp{flex:1}
 .ibtn{position:relative;height:42px;min-width:42px;padding:0 12px;border-radius:999px;border:1px solid var(--line);background:var(--card);display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:600;font-size:14px}
 .ibtn:hover{border-color:var(--ink-3)}
+.plan-link{text-decoration:none;color:var(--ink);white-space:nowrap}
+@media (max-width:440px){.plan-link span{display:none}}
 .ibtn svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .ibtn.on svg{fill:#E5483D;stroke:#E5483D}
 .count{position:absolute;top:-5px;right:-3px;min-width:20px;height:20px;border-radius:999px;background:var(--tag);color:var(--tag-ink);font:700 12px/20px var(--body);text-align:center;padding:0 5px}
@@ -270,6 +272,7 @@ ol.st .tm{margin-top:8px}
 <header class="top"><div class="wrap">
   <a class="brand" href="#" aria-label="Menu do Dia"><i><svg viewBox="0 0 64 64" fill="none" stroke="#FFD23F" stroke-width="5" stroke-linecap="round"><path d="M12 42h40M18 42c0-10 6-16 14-16s14 6 14 16M32 20v6"/></svg></i>Menu do Dia</a>
   <div class="sp"></div>
+  <a class="ibtn plan-link" href="plano.html"><svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg><span>O meu plano</span></a>
   <button class="ibtn" id="theme" aria-label="Alternar modo escuro"><svg viewBox="0 0 24 24"><path d="M21 13.2A8.5 8.5 0 1 1 10.8 3a6.8 6.8 0 0 0 10.2 10.2z"/></svg></button>
   <button class="ibtn" id="cartBtn" aria-label="Abrir lista de compras"><svg viewBox="0 0 24 24"><path d="M3 4h2.5l2.2 11h10.6l2-8H6.2"/><circle cx="9" cy="19.5" r="1.3"/><circle cx="17" cy="19.5" r="1.3"/></svg><span>Lista</span><span class="count" id="count" hidden>0</span></button>
 </div></header>

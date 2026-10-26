@@ -198,3 +198,15 @@ export function buildCompare(markets, library, today, max = 4) {
     recipe: buildRecipe(lib, best, picks, "Jantar", rows)
   }));
 }
+
+// Todas as receitas da biblioteca que se podem fazer com as promoções em vigor numa loja, em formato curto:
+// o plano semanal (plano.html) junta-lhes a receita completa de api/data/receitas.json.
+// cost = produto(s) principal(is) para 4 pessoas; est = restantes ingredientes (estimativa) para 4 pessoas.
+export function buildPool(market, library, today) {
+  if (!market.to || market.to < today) return [];
+  return library.flatMap((lib) => {
+    const picks = matchRecipe(lib, market.promos ?? []);
+    if (!picks) return [];
+    return [{ id: lib.id, promos: picks.map((x) => x.promo.id), amounts: picks.map((x) => mainAmount(x.main, x.promo)), cost: costOf(picks), est: lib.ing?.length ? estimateRest(lib.ing) : lib.est }];
+  });
+}

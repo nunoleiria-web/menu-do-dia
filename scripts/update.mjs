@@ -1,7 +1,7 @@
 import { createHash } from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
-import { buildPlan, buildCompare } from "./menu.mjs";
+import { buildPlan, buildCompare, buildPool } from "./menu.mjs";
 
 const { MISTRAL_API_KEY: MK, OPENAI_API_KEY: OK } = process.env;
 const AI = OK
@@ -269,11 +269,16 @@ for (const m of data.markets) {
   console.log(m.name, "-> plano de", m.plan.length, "dia(s):", m.recipes.map((r) => r.name).join(" | ") || "sem receitas (folheto expirado)");
 }
 data.compare = buildCompare(data.markets, library, today);
+// Todas as receitas possíveis com as promoções de cada loja (para o plano semanal em plano.html)
+for (const m of data.markets) m.pool = buildPool(m, library, today);
 
 // Imagens: uma por receita da biblioteca (reutilizada por todas as lojas e dias)
 if (REDO) data.images = {};
 const byId = new Map();
 const todo = [...data.markets.flatMap((m) => m.recipes), ...data.compare.map((c) => c.recipe), ...data.markets.flatMap((m) => m.plan.slice(1).flatMap((d) => d.recipes))];
+// Depois, aos poucos (MAX_IMAGES por dia), as receitas possíveis do plano semanal que ainda não têm foto
+const libById = new Map(library.map((l) => [l.id, l]));
+for (const e of data.markets.flatMap((m) => m.pool ?? [])) { const l = libById.get(e.id); if (l) todo.push({ id: l.id, name: l.name, original: l.orig, imgDesc: l.img }); }
 for (const r of todo) if (!byId.has(r.id)) byId.set(r.id, r);
 let made = 0;
 const MAX_NEW = REDO ? 999 : +process.env.MAX_IMAGES || 14;
