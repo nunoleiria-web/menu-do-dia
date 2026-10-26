@@ -1,0 +1,3 @@
+"https://endpoints.leaflets.schwarz"
+",i=new URLSearchParams({flyer_identifier:e});return typeof t<"
+"region_code"
