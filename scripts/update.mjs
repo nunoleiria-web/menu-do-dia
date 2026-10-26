@@ -2,6 +2,7 @@ import { createHash } from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
 import { buildPlan, buildCompare } from "./menu.mjs";
+import { recordPrices } from "./history.mjs";
 
 const { MISTRAL_API_KEY: MK, OPENAI_API_KEY: OK } = process.env;
 const AI = OK
@@ -257,6 +258,12 @@ for (let i = 0; i < data.markets.length && !PHOTOS_ONLY; i++) {
     delete prev.__dbg;
     prev.check = { date: today, result: prev.to >= today ? "sem-novo" : "sem-folheto", note: String(e.message).slice(0, 300) };
   }
+}
+
+// Histórico de preços (api/data/precos/AAAA.json): nunca se apaga
+if (!PHOTOS_ONLY) {
+  try { const h = recordPrices(data.markets, today); console.log("Histórico de preços:", h.added, "novos,", h.changed, "corrigidos"); }
+  catch (e) { console.warn("Histórico de preços não gravado:", e.message); process.exitCode = 1; }
 }
 
 // Plano semanal (2 refeições por dia) e comparador do mesmo prato entre lojas
