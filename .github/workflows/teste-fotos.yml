@@ -13,11 +13,13 @@ jobs:
         with: { node-version: 22 }
       - run: npm install --no-audit --no-fund
         working-directory: scripts
-      - run: cp probe/fotos.mjs scripts/fotos-teste.mjs && sed -i 's#"scripts/recipes.json"#"recipes.json"#; s#"probe/fotos#"../probe/fotos#g' scripts/fotos-teste.mjs && cd scripts && node fotos-teste.mjs
+      - run: cp probe/fotos.mjs scripts/fotos-teste.mjs && cd scripts && node fotos-teste.mjs
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          OUT_DIR: ../probe/fotos
+          LIB: recipes.json
       - name: Gravar
         if: always()
         run: |
