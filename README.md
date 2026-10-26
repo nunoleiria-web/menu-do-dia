@@ -25,6 +25,7 @@ index.html            ← o site (HTML + JS, sem build)
 public/               ← ícones, manifest, service worker e fotos das receitas (meals/)
 api/data/menu.json    ← menu atual (gerado automaticamente)
 api/data/published.json ← estado das publicações do dia (gerado automaticamente)
+api/data/precos/AAAA.json ← histórico de preços: cada produto de cada folheto, nunca apagado
 ramo media             ← ficheiros da publicação atual (substituído a cada publicação, não acumula)
 scripts/
   update.mjs          ← atualização diária (folhetos, receitas, fotos)
@@ -34,6 +35,8 @@ scripts/
   recipes.json        ← biblioteca de receitas
   prices.json         ← preços médios para estimar ingredientes de despensa
   monitor.mjs         ← verificação do site e das publicações
+  history.mjs         ← grava o histórico de preços (chamado pela atualização diária)
+  backfill-history.mjs ← recupera preços antigos a partir das versões de menu.json no git
   dev.mjs             ← ver o site localmente
 ```
 
@@ -58,6 +61,12 @@ npm run publish:ensaio   # mostra a próxima publicação, sem publicar
 Gera-se em developers.facebook.com → app → Instagram → *API setup with Instagram login* → *Generate token*.
 **Dura 60 dias.** A partir do dia 50, a execução "Publicar receitas do dia" fica a vermelho uma vez por dia
 (o GitHub envia email): gera um token novo e substitui o segredo `IG_TOKEN`.
+
+## Histórico de preços
+A atualização diária junta a `api/data/precos/AAAA.json` todos os produtos lidos, uma linha por produto e folheto
+(`m` loja, `f`/`t` validade, `id`, `n` nome, `p` preço, `u` kg/un, `l` etiqueta, `s` primeiro dia visto, `v` última leitura).
+Se uma releitura corrigir um preço, a linha é atualizada; nada é apagado. É a base para o índice de preços dos pratos
+e para prever quando cada produto volta a estar em promoção.
 
 ## Manutenção
 - Correr a atualização à mão: *Actions → Atualizar menu → Run workflow* (com opções para refazer fotos ou reler folhetos).
