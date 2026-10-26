@@ -64,12 +64,39 @@ function addDays(date, n) {
   return d.toISOString().slice(0, 10);
 }
 
+// Produtos transformados (conservas, panados, refeições prontas) nunca servem de ingrediente principal,
+// a não ser que a receita o peça com "processed": true (ex.: massa com atum de lata).
+const PROCESSED = /(^|-)(latas?|conservas?|enlatad[oa]s?|nuggets|panad[oa]s?|douradinhos|pizzas?|pre-?cozinhad[oa]s?|pre-?assad[oa]s?|assad[oa]s?|slow-cook\w*|refeic(ao|oes))(-|$)|(^|-)(em|de)-(azeite|oleo)(-|$)|ao-natural/;
+
+// Todas as promoções que servem o ingrediente principal.
+export function matchAll(main, promos) {
+  const re = new RegExp(main.re), not = main.not ? new RegExp(main.not) : null;
+  return promos.filter((p) => { const s = slug(p.name); return re.test(s) && !(not && not.test(s)) && (main.processed || !PROCESSED.test(s)); });
+}
+
 // Melhor promoção (a mais barata por unidade de medida) que serve o ingrediente principal.
 export function matchMain(main, promos) {
-  const re = new RegExp(main.re), not = main.not ? new RegExp(main.not) : null;
-  const ok = promos.filter((p) => { const s = slug(p.name); return re.test(s) && !(not && not.test(s)); });
+  const ok = matchAll(main, promos);
   if (!ok.length) return null;
   return ok.sort((a, b) => a.price - b.price)[0];
+}
+
+// Tipo de produto, para o comparador só pôr lado a lado o mesmo produto em lojas diferentes:
+// a palavra da receita que o produto contém (frango, salmão, queijo…) mais o corte ou a forma
+// (peito, coxa, picada, fatiado…). Frango inteiro e peito de frango ficam em grupos diferentes.
+const CUT = /(^|-)(peito|sobrecoxas?|coxas?|pernas?|asas?|bifanas?|febras?|entrecosto|costeletas?|picad[oa]|hamburguer(es)?|cubos|tiras|fati\w*|ralad[oa])(-|$)/;
+// Nas carnes, também o corte do animal (pernil, lombo, costela…); no peixe "lombos" e "postas" equivalem-se.
+const MEAT = /porco|bifana|febra|lombo|pernil|entrecosto|costeleta|vaca|novilho|vitela|bife|frango|peru|borrego|cordeiro|cabrito|pato/;
+const MEAT_CUT = /(^|-)(pernil|lombo|costelas?|entremeada|cachaco|secretos?|acem|alcatra|fraldinha|chambao|vazia|pa)(-|$)/;
+export function productKey(main, promo) {
+  const s = slug(promo.name);
+  let kind;
+  try { kind = main.re.split("|").find((alt) => new RegExp(alt).test(s)) ?? ""; }
+  catch { kind = main.re; } // expressão com grupos (ex.: "(^|-)ovos?(-|$)"): um só tipo
+  const animal = s.match(/porco|vaca|novilho|vitela|frango|peru|borrego|cordeiro|cabrito|pato/)?.[0];
+  if (animal) kind = animal.replace(/novilho|vitela/, "vaca").replace(/cordeiro/, "borrego");
+  const cut = (s.match(CUT)?.[2] ?? (MEAT.test(kind) ? s.match(MEAT_CUT)?.[2] : "") ?? "").replace(/s$/, "").replace(/^fati.*/, "fatiado").replace(/^sobrecoxa$/, "coxa");
+  return kind + "|" + cut;
 }
 
 const mainAmount = (main, promo) => (promo.per === "kg" ? main.kg : main.u ?? 1);
@@ -126,14 +153,32 @@ export function buildRecipe(lib, market, picks, meal, compare) {
   };
 }
 
-export function compareRows(lib, markets, today) {
-  const rows = [];
+// O mesmo prato em cada loja, mas só com o MESMO tipo de produto principal (ver productKey):
+// agrupa as promoções por tipo e fica com o grupo presente em mais lojas, ou, com `anchor`,
+// com o grupo do produto que a receita já usa (para a comparação bater certo com o cartão).
+export function compareRows(lib, markets, today, anchor) {
+  const [first, ...others] = lib.main;
+  const groups = new Map(); // tipo -> Map(loja -> linha)
   for (const mk of markets) {
-    const picks = matchRecipe(lib, mk.promos ?? []);
-    if (!picks || (today && mk.to < today)) continue;
-    rows.push({ market: mk.name, product: picks[0].promo.name, price: picks[0].promo.price, per: picks[0].promo.per, total: costOf(picks) });
+    if (today && mk.to < today) continue;
+    const rest = others.map((m) => ({ main: m, promo: matchMain(m, mk.promos ?? []) }));
+    if (rest.some((x) => !x.promo)) continue;
+    for (const p of matchAll(first, mk.promos ?? [])) {
+      const k = productKey(first, p);
+      if (!groups.has(k)) groups.set(k, new Map());
+      const g = groups.get(k), total = costOf([{ main: first, promo: p }, ...rest]);
+      if (!g.has(mk.name) || total < g.get(mk.name).total)
+        g.set(mk.name, { market: mk.name, product: p.name, price: p.price, per: p.per, total, promoId: p.id });
+    }
   }
-  return rows.sort((a, b) => a.total - b.total);
+  const best = anchor ? { rows: [...(groups.get(productKey(first, anchor))?.values() ?? [])] } : [...groups.entries()]
+    .map(([k, g]) => ({ k, rows: [...g.values()] }))
+    .sort((a, b) => b.rows.length - a.rows.length || (a.k.endsWith("|") ? -1 : 0) - (b.k.endsWith("|") ? -1 : 0) || Math.min(...a.rows.map((r) => r.total)) - Math.min(...b.rows.map((r) => r.total)))[0];
+  const rows = (best?.rows ?? []).sort((a, b) => a.total - b.total);
+  // Diferença de mais de 3× para o mesmo produto quase sempre é erro de leitura do folheto
+  // ou qualidades muito diferentes: nesse caso não se mostra a comparação.
+  if (rows.length > 1 && rows[rows.length - 1].total > rows[0].total * 3) return [];
+  return rows;
 }
 
 // Plano de até 7 dias (enquanto o folheto durar), 2 refeições por dia, sem repetir pratos.
@@ -168,7 +213,7 @@ export function buildPlan(market, markets, library, today, histEntries = []) {
       const { c } = scored.find((x) => !taken.some((t) => t.id === x.c.lib.id)) ?? scored[0];
       used.set(c.lib.id, (used.get(c.lib.id) ?? 0) + 1);
       cuis.set(c.lib.c, (cuis.get(c.lib.c) ?? 0) + 1);
-      const cmp = compareRows(c.lib, markets, today);
+      const cmp = compareRows(c.lib, markets, today, c.picks[0].promo);
       day.recipes.push(buildRecipe(c.lib, market, c.picks, meal, cmp.length > 1 ? cmp : undefined));
     }
     plan.push(day);
@@ -183,7 +228,8 @@ export function buildCompare(markets, library, today, max = 4) {
     const rows = compareRows(lib, markets, today);
     if (rows.length < 2) continue;
     const best = markets.find((m) => m.name === rows[0].market);
-    const picks = matchRecipe(lib, best.promos);
+    // A receita usa exatamente o produto que aparece no comparador
+    const picks = matchRecipe(lib, best.promos).map((x, i) => (i === 0 ? { ...x, promo: best.promos.find((p) => p.id === rows[0].promoId) ?? x.promo } : x));
     const spread = rows[rows.length - 1].total - rows[0].total;
     items.push({ lib, rows, best, picks, spread, score: rows.length * 2 + Math.min(spread, 6) + rnd(today + lib.id) });
   }

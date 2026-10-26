@@ -5,6 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Menu do Dia</title>
 <meta name="description" content="Almoço e jantar de cozinhas do mundo com preços reais dos folhetos do Continente, Pingo Doce, Lidl, Aldi e Intermarché. Receitas, custo por pessoa, comparador e lista de compras.">
+<link rel="canonical" href="https://nunoleiria-web.github.io/menu-do-dia/">
+<!-- Pré-visualização do link no WhatsApp, Instagram, Facebook, X… -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_PT">
+<meta property="og:site_name" content="Menu do Dia">
+<meta property="og:title" content="Menu do Dia · Almoço e jantar ao preço do folheto">
+<meta property="og:description" content="Receitas com preços reais dos folhetos do Continente, Pingo Doce, Lidl, Aldi e Intermarché. Comparador de lojas, plano da semana e lista de compras.">
+<meta property="og:url" content="https://nunoleiria-web.github.io/menu-do-dia/">
+<meta property="og:image" content="https://nunoleiria-web.github.io/menu-do-dia/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Menu do Dia: almoço e jantar ao preço do folheto">
+<meta name="twitter:card" content="summary_large_image">
+<!-- Estatísticas de visitas (GoatCounter, grátis e sem cookies): cria uma conta em goatcounter.com
+     e escreve aqui o código escolhido (ex.: "menudodia"). Vazio = desligado. -->
+<meta name="goatcounter" content="">
 <meta name="theme-color" content="#FAFAF7" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0E1626" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232340C8'/%3E%3Cpath d='M18 40h28M22 40c0-8 5-13 10-13s10 5 10 13M32 22v5' stroke='%23FFD23F' stroke-width='4' stroke-linecap='round' fill='none'/%3E%3C/svg%3E">
@@ -160,6 +176,8 @@ select.sort,select.sel{height:40px;border-radius:999px;border:1px solid var(--li
 .facts .m{color:var(--cobalt)}
 .main-prod{font-size:13px;color:var(--ink-2);background:var(--wash);border-radius:10px;padding:7px 10px}
 .main-prod b{color:var(--ink)}
+.also{font-size:12.5px;color:var(--ink-2);margin-top:-2px}
+.also b{color:var(--ink);font-weight:600}
 .cmpcard{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:18px;display:grid;gap:10px;text-align:left;box-shadow:var(--shadow)}
 .cmpcard:hover{border-color:var(--ink-3)}
 .cmpcard h3{font-size:20px}
@@ -393,14 +411,17 @@ function renderChips(){
 function statusBanner(m){const s=status(m);const ic={novo:"✓","sem-novo":"•",expirado:"!"}[s.k];const src=(m.sources||[])[0];
   return `<div class="banner ${s.k}"><span class="ic">${ic}</span><div><b>${esc(s.t)} · ${esc(m.name)}</b><p>${esc(s.d)}${src?` <a href="${esc(src.url)}" target="_blank" rel="noopener">Ver folheto</a>`:""}</p></div></div>`}
 
-function cardHTML({m,r,c}){
+// Na vista "Todas as lojas", a mesma receita em várias lojas aparece uma só vez (a mais barata),
+// com as outras lojas indicadas no cartão.
+function dedupe(list){const by=new Map();for(const x of list){const cur=by.get(x.r.id);if(!cur)by.set(x.r.id,{...x,also:[]});else if(x.c.per<cur.c.per)by.set(x.r.id,{...x,also:[...cur.also,{m:cur.m,per:cur.c.per}]});else cur.also.push({m:x.m,per:x.c.per})}return[...by.values()]}
+function cardHTML({m,r,c,also}){
   const main=r.ingredients.filter(i=>i.price).map(i=>i.item).join(" + "),fv=favs.includes(r.id);
   return `<div class="card"><button class="fav ${fv?"on":""}" data-fav="${esc(r.id)}" aria-label="${fv?"Remover dos favoritos":"Guardar nos favoritos"}" aria-pressed="${fv}">${heart}</button>
     <button style="all:unset;cursor:pointer;display:flex;flex-direction:column;flex:1" data-open="${esc(key(m,r))}" aria-label="Abrir ${esc(r.name)}">
     <span class="ph">${imgHTML(r,r.name)}<span class="store"><i class="dot" style="--c:${COLORS[m.name]||"#999"}"></i>${esc(m.name)}</span><span class="tagpos">${tagFull(c.per)}</span></span>
     <span class="cb"><h3>${esc(r.name)}</h3><p>${esc(r.description)}</p>
       <span class="facts"><span class="m">${esc(r.meal)} · ${esc(r.cuisine)}</span><span>${esc(r.time)}</span>${r.veg?`<span>Vegetariano</span>`:""}</span>
-      <span class="main-prod">Folheto: <b>${esc(main)} ${money(c.main)}</b> + despensa ~${money(Math.round(c.rest*2)/2)} (estim.)</span></span></button></div>`;
+      <span class="main-prod">Folheto: <b>${esc(main)} ${money(c.main)}</b> + despensa ~${money(Math.round(c.rest*2)/2)} (estim.)</span>${also&&also.length?`<span class="also">Também no ${also.map(a=>`<b>${esc(a.m.name)}</b> (~${money(Math.round(a.per*10)/10)}/pessoa)`).join(", ")}</span>`:""}</span></button></div>`;
 }
 
 function cmpCard(c){
@@ -436,7 +457,7 @@ function renderApp(){
   const noData=!ds.length;
   if(tab==="ALL"){
     h+=daysHTML()+filtersHTML();
-    const list=sorted(onDate(date).filter(passes));
+    const list=sorted(dedupe(onDate(date).filter(passes)));
     h+=`<div class="sec"><div class="sec-h"><h2>Refeições de ${esc(dl.toLowerCase())}</h2><span class="sp"></span><label class="sr" for="sort">Ordenar</label><select class="sort" id="sort"><option value="price">Mais barato</option><option value="time">Mais rápido</option><option value="store">Por loja</option></select></div>${list.length?`<div class="grid">${list.map(cardHTML).join("")}</div>`:`<div class="empty"><b>${noData?"Sem receitas disponíveis":"Nenhuma refeição com estes filtros"}</b>${noData?"Todos os folhetos expiraram. Voltamos assim que houver promoções válidas.":"Experimenta limpar os filtros ou escolher outro dia."}</div>`}</div>`;
     if((data.compare||[]).length)h+=`<div class="sec"><div class="sec-h"><h2>O mesmo prato, em cada loja</h2></div><div class="grid">${data.compare.map(cmpCard).join("")}</div></div>`;
     h+=`<div class="sec"><div class="sec-h"><h2>Estado dos folhetos</h2></div><div class="mini-status">${data.markets.map(m=>{const s=status(m);return `<button class="mini" data-tab="${esc(m.name)}"><span class="pill ${s.k}">${esc(s.t)}</span><b>${esc(m.name)}</b><span>Válido de ${dmy(m.from)} a ${dmy(m.to)} · ${m.promos.length} produtos lidos</span></button>`}).join("")}</div></div>`;
@@ -469,6 +490,7 @@ function renderFoot(){
 function openRecipe(k){
   const e=REG.get(k);if(!e)return;
   current={m:e.m,r:e.r,servings:baseServ(e.r)};drawSheet();$("#recipeDlg").showModal();$("#sheet").scrollTop=0;
+  track("receita/"+e.r.id,e.r.name+" · "+e.m.name);
 }
 function drawSheet(){
   const {m,r,servings}=current,c=cost(r,servings),ratio=c.ratio;
@@ -544,6 +566,11 @@ function beep(){try{const a=new (window.AudioContext||window.webkitAudioContext)
 function startTimer(sec,label){clearInterval(tInt);tEnd=Date.now()+sec*1000;$("#timer").hidden=false;$("#tLabel").textContent=label.length>22?label.slice(0,21)+"…":label;
   const tick=()=>{const left=Math.max(0,Math.round((tEnd-Date.now())/1000));$("#tOut").textContent=String(Math.floor(left/60)).padStart(2,"0")+":"+String(left%60).padStart(2,"0");if(!left){clearInterval(tInt);beep();toast("Tempo terminado!");setTimeout(()=>{$("#timer").hidden=true},4000)}};tick();tInt=setInterval(tick,500)}
 $("#tStop").onclick=()=>{clearInterval(tInt);$("#timer").hidden=true};
+
+/* ---------- estatísticas (GoatCounter; só liga se o código estiver preenchido no <head>) ---------- */
+const GC=(document.querySelector('meta[name="goatcounter"]')?.content||"").trim();
+if(GC&&/^[a-z0-9-]+$/i.test(GC)){const s=document.createElement("script");s.async=true;s.src="https://gc.zgo.at/count.js";s.dataset.goatcounter=`https://${GC}.goatcounter.com/count`;document.head.appendChild(s)}
+function track(path,title){try{window.goatcounter?.count?.({path,title,event:true})}catch{}}
 
 let tt;function toast(t){const e=$("#toast");e.textContent=t;e.classList.add("on");clearTimeout(tt);tt=setTimeout(()=>e.classList.remove("on"),2200)}
 function toggleFav(id){favs=favs.includes(id)?favs.filter(x=>x!==id):[...favs,id];store.set("md_favs",favs);renderChips();if($("#recipeDlg").open)drawSheet();else renderApp();toast(favs.includes(id)?"Guardado nos favoritos":"Removido dos favoritos")}
