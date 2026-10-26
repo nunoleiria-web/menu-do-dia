@@ -6,7 +6,8 @@
   "Continente|calamares",
   "Pingo Doce|puttanesca",
   "Lidl|bolonhesa",
-  "Aldi|bifanas"
+  "Aldi|bifanas",
+  "Intermarché|espadarte-siciliana"
  ],
  "log": [
   "2026-10-26T10:33:41.975Z Continente|mac-cheese instagram:ok (carrossel)",
@@ -14,7 +15,8 @@
   "2026-10-26T14:34:42.759Z Continente|calamares instagram:ok (carrossel)",
   "2026-10-26T15:59:53.572Z Pingo Doce|puttanesca instagram:ok (reel)",
   "2026-10-26T16:44:07.966Z Lidl|bolonhesa instagram:ok (carrossel)",
-  "2026-10-26T17:32:40.025Z Aldi|bifanas instagram:ok (reel)"
+  "2026-10-26T17:32:40.025Z Aldi|bifanas instagram:ok (reel)",
+  "2026-10-26T18:33:34.166Z Intermarché|espadarte-siciliana instagram:ok (carrossel)"
  ],
  "token": {
   "hash": "caff9d1523bc",
