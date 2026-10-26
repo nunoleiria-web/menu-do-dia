@@ -122,9 +122,12 @@ async function readContinente(ctx) {
   const main = choose(list.filter((f) => (/semanal/i.test(f.title) || /\/semanal-\d+/.test(f.url)) && !regional.test(f.title + f.url)), today);
   if (!main) throw new Error("folheto semanal não encontrado (" + list.length + " folhetos na página)");
   const weekend = list.filter((f) => /fim de semana|fim-de-semana/i.test(f.title + f.url) && !regional.test(f.title + f.url) && inForce(f, today));
-  const flyers = [main, ...weekend];
-  const items = [];
-  for (const f of flyers) items.push(...(await ipaperProducts(ctx, f.url)));
+  const extra = weekend;
+  const items = await ipaperProducts(ctx, main.url);
+  const flyers = [main];
+  for (const f of extra) { // folhetos de fim de semana: se um falhar, segue sem ele
+    try { items.push(...(await ipaperProducts(ctx, f.url))); flyers.push(f); } catch (e) { console.warn("  folheto complementar ignorado:", e.message.slice(0, 120)); }
+  }
   const units = await classifyUnits(ctx, items);
   const promos = dedupe(items.map((it) => toPromo(ctx, it.name, it.price, units.get(it.name) ?? "un")));
   return { found: true, from: main.from, to: main.to, flyer: "Folheto " + dm(main.from) + "–" + dm(main.to), officialId: main.url,
@@ -138,9 +141,12 @@ async function readPingoDoce(ctx) {
   const main = choose(weekly, today);
   if (!main) throw new Error("folheto Poupe Esta Semana não encontrado (" + list.length + " folhetos na página)");
   const weekend = list.filter((f) => /poupe-este-fim-de-semana\/continental/.test(f.url) && inForce(f, today));
-  const flyers = [main, ...weekend];
-  const items = [];
-  for (const f of flyers) items.push(...(await ipaperProducts(ctx, f.url)));
+  const extra = weekend;
+  const items = await ipaperProducts(ctx, main.url);
+  const flyers = [main];
+  for (const f of extra) { // folhetos de fim de semana: se um falhar, segue sem ele
+    try { items.push(...(await ipaperProducts(ctx, f.url))); flyers.push(f); } catch (e) { console.warn("  folheto complementar ignorado:", e.message.slice(0, 120)); }
+  }
   // Os nomes do Pingo Doce trazem o peso ("450G", "EMB. KG"); sem peso, o preço é por unidade
   const promos = dedupe(items.map((it) => toPromo(ctx, it.name.charAt(0) + it.name.slice(1).toLowerCase(), it.price, "un")));
   return { found: true, from: main.from, to: main.to, flyer: "Folheto " + dm(main.from) + "–" + dm(main.to), officialId: main.url,
