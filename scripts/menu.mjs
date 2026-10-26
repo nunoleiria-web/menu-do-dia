@@ -67,18 +67,54 @@ function addDays(date, n) {
 // Produtos transformados (conservas, panados, refeições prontas) nunca servem de ingrediente principal,
 // a não ser que a receita o peça com "processed": true (ex.: massa com atum de lata).
 const PROCESSED = /(^|-)(latas?|conservas?|enlatad[oa]s?|nuggets|panad[oa]s?|douradinhos|pizzas?|pre-?cozinhad[oa]s?|pre-?assad[oa]s?|assad[oa]s?|slow-cook\w*|refeic(ao|oes))(-|$)|(^|-)(em|de)-(azeite|oleo)(-|$)|ao-natural/;
+// Também nunca: salgados, caldos e temperos, snacks, pratos prontos e comida para animais (os folhetos oficiais trazem tudo)
+const NOT_MAIN = /(^|-)(rissois|rissol|croquetes?|chamucas?|empadas?|pasteis|pastel|bolinhos?|caldos?|knorr|temperos?|molhos?|sopas?|pate|aperitivos?|snacks?|chips|salgadinhos|surimi|delicias|gato|caes|cao|purina|whiskas|felix|friskies|pedigree|dog|cat|pet|comida-humida|cozinha-continente|prato|pronto|wrap|sandes|sushi|gyoza|lasanha|quiche|tarte|gelado|iogurte|bebida|sumo|aromatizad[oa]|gt|seca|humida|racao|petisco|em-tomate|escabeche|abrasivo|sanitario|chocolate|kinder|surpresa|barrar|ramirez|bom-petisco|vasco-da-gama|vasco-gama|tenorio|cocagne|nuri|pinhais|minerva|briosa|tricana|conserveira)(-|$)|\d+-\d+g(-|$)/;
+
+// O ingrediente tem de ser o PRODUTO do nome, não um pormenor: "Lombos de Salmão" serve para salmão,
+// "Pão de queijo de bacalhau" ou "Requeijão de vaca" não. Antes da palavra só podem vir cortes, formas e ligações.
+const HEAD_OK = new Set(("de do da dos das e em com a o para meio meia inteiro inteira lombo lombos lombinho lombinhos bife bifes bifinhos perna pernas perninhas " +
+  "peito peitos coxa coxas sobrecoxa sobrecoxas asa asas posta postas filete filetes file tranche tranches medalhoes miolo carne carnes picada picado preparado " +
+  "costeleta costeletas costela costelas entrecosto febra febras bifana bifanas rojoes secretos secreto pa cachaco chambao acem vazia alcatra fraldinha maminha " +
+  "cubos tiras espetadas espetada lagarto supremas porcoes porcao fatias fatiado fatiada fresco fresca frescos frescas congelado congelada congelados congeladas " +
+  "ultracongelado ultracongelada ultracongelados limpo limpa limpos limpas pequeno pequena pequenos pequenas medio media medios medias grande grandes mini nacional portugues portuguesa bio biologico " +
+  "biologica selecao premium extra tenro tenra magro magra desfiado desfiada demolhado demolhada vacuo").split(" "));
+const PROTEIN = /salmao|bacalhau|atum|pescada|dourada|robalo|tamboril|espadarte|tintureira|polvo|lula|choco|camarao|frango|peru|pato|porco|vaca|novilho|vitela|bovino|borrego|cordeiro|cabrito|coelho/g;
+export function headMatch(reSrc, s) {
+  const re = new RegExp(reSrc, "g");
+  for (let m; (m = re.exec(s)); ) {
+    if (!m[0]) { re.lastIndex++; continue; }
+    let start = m.index, end = m.index + m[0].length;
+    if (s[start] === "-") start++;
+    if (s[end - 1] === "-") end--;
+    if (start > 0 && s[start - 1] !== "-") continue;            // a meio de uma palavra
+    const rest = s.slice(end).split("-")[0];
+    if (rest.length > 3) continue;                              // "choco" em "chocolate"; plurais (lulas, bifes) passam
+    if (!s.slice(0, start).split("-").filter(Boolean).every((t) => HEAD_OK.has(t))) continue;
+    // Se a palavra encontrada é só um corte ("lombo"), o produto não pode ser de outro animal ou peixe ("lombos de salmão")
+    const word = s.slice(start, end);
+    if (HEAD_OK.has(word) || HEAD_OK.has(word.replace(/s$/, ""))) {
+      const beef = /vaca|novilho|vitela|bovino/, recipeBeef = beef.test(reSrc);
+      const other = (s.match(PROTEIN) || []).filter((p) => !new RegExp(reSrc).test(p) && !(recipeBeef && beef.test(p)));
+      if (other.length) continue;
+    }
+    return true;
+  }
+  return false;
+}
 
 // Todas as promoções que servem o ingrediente principal.
 export function matchAll(main, promos) {
-  const re = new RegExp(main.re), not = main.not ? new RegExp(main.not) : null;
-  return promos.filter((p) => { const s = slug(p.name); return re.test(s) && !(not && not.test(s)) && (main.processed || !PROCESSED.test(s)); });
+  const not = main.not ? new RegExp(main.not) : null;
+  return promos.filter((p) => { const s = slug(p.name); return headMatch(main.re, s) && !(not && not.test(s)) && !NOT_MAIN.test(s) && (main.processed || !PROCESSED.test(s)); });
 }
 
 // Melhor promoção (a mais barata por unidade de medida) que serve o ingrediente principal.
 export function matchMain(main, promos) {
   const ok = matchAll(main, promos);
   if (!ok.length) return null;
-  return ok.sort((a, b) => a.price - b.price)[0];
+  // Prefere preços ao kg (sabe-se o custo da quantidade da receita); 'un' só se não houver nenhum ao kg
+  const kg = ok.filter((p) => p.per === "kg");
+  return (kg.length ? kg : ok).sort((a, b) => a.price - b.price)[0];
 }
 
 // Tipo de produto, para o comparador só pôr lado a lado o mesmo produto em lojas diferentes:
@@ -96,7 +132,7 @@ export function productKey(main, promo) {
   const animal = s.match(/porco|vaca|novilho|vitela|frango|peru|borrego|cordeiro|cabrito|pato/)?.[0];
   if (animal) kind = animal.replace(/novilho|vitela/, "vaca").replace(/cordeiro/, "borrego");
   const cut = (s.match(CUT)?.[2] ?? (MEAT.test(kind) ? s.match(MEAT_CUT)?.[2] : "") ?? "").replace(/s$/, "").replace(/^fati.*/, "fatiado").replace(/^sobrecoxa$/, "coxa");
-  return kind + "|" + cut;
+  return kind + "|" + cut + "|" + (promo.per || "");  // kg e unidade nunca se comparam
 }
 
 const mainAmount = (main, promo) => (promo.per === "kg" ? main.kg : main.u ?? 1);
@@ -173,7 +209,7 @@ export function compareRows(lib, markets, today, anchor) {
   }
   const best = anchor ? { rows: [...(groups.get(productKey(first, anchor))?.values() ?? [])] } : [...groups.entries()]
     .map(([k, g]) => ({ k, rows: [...g.values()] }))
-    .sort((a, b) => b.rows.length - a.rows.length || (a.k.endsWith("|") ? -1 : 0) - (b.k.endsWith("|") ? -1 : 0) || Math.min(...a.rows.map((r) => r.total)) - Math.min(...b.rows.map((r) => r.total)))[0];
+    .sort((a, b) => b.rows.length - a.rows.length || (a.k.split("|")[1] ? 0 : -1) - (b.k.split("|")[1] ? 0 : -1) || (a.k.endsWith("|kg") ? -1 : 0) - (b.k.endsWith("|kg") ? -1 : 0) || Math.min(...a.rows.map((r) => r.total)) - Math.min(...b.rows.map((r) => r.total)))[0];
   const rows = (best?.rows ?? []).sort((a, b) => a.total - b.total);
   // Diferença de mais de 3× para o mesmo produto quase sempre é erro de leitura do folheto
   // ou qualidades muito diferentes: nesse caso não se mostra a comparação.
