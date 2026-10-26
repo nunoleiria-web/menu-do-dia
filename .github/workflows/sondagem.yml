@@ -1,0 +1,20 @@
+name: Sondagem de fontes oficiais (teste)
+# Só corre quando se faz push para o ramo sondagem-fontes. Só lê páginas públicas; não publica nada.
+on:
+  push:
+    branches: [sondagem-fontes]
+permissions:
+  contents: read
+jobs:
+  sondar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - run: node probe/probe.mjs
+      - run: cat probe/out/REPORT.md >> "$GITHUB_STEP_SUMMARY"
+        if: always()
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: { name: sondagem, path: probe/out, retention-days: 3 }
