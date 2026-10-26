@@ -12,12 +12,12 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with: { node-version: 22 }
-      - run: node probe/probe.mjs
-      - run: cat probe/out/REPORT.md >> "$GITHUB_STEP_SUMMARY"
+      - run: node probe/probe2.mjs
+      - run: cat probe/out2/REPORT.md >> "$GITHUB_STEP_SUMMARY"
         if: always()
       - name: Gravar resultados no ramo de teste
         if: always()
         run: |
           git config user.name "sondagem-bot"; git config user.email "noreply@users.noreply.github.com"
-          git add -f probe/out
+          git add -f probe/out2
           git commit -q -m "Resultados da sondagem [skip ci]" && git push -q origin HEAD:sondagem-fontes || echo "nada a gravar"
