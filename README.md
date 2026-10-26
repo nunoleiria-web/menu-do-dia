@@ -6,6 +6,18 @@ receitas de cozinhas do mundo, comparador entre lojas, plano da semana e lista d
 🌐 Site: **https://nunoleiria-web.github.io/menu-do-dia/** (funciona também como app no telemóvel — PWA)
 📸 Instagram: publicações automáticas das receitas do dia, das 10h às 19h
 
+## De onde vêm os preços
+| Loja | Fonte | Como |
+|---|---|---|
+| Continente | Folheto oficial em folhetos.continente.pt | Produtos e preços em texto (iPaper); a IA só indica se o preço é ao kg ou por unidade |
+| Pingo Doce | Folheto oficial em folhetos.pingodoce.pt | Produtos, pesos e preços em texto (iPaper) |
+| Aldi | aldi.pt — Oportunidades da semana | Produtos, preços, €/kg e datas em texto |
+| Lidl | Folheto oficial (leaflets.schwarz) | Imagens das páginas de alimentação, lidas pela IA (só quando o folheto muda) |
+| Intermarché | Blog 200 | O site oficial bloqueia leituras automáticas |
+
+Se o site oficial de uma loja falhar, a atualização usa o Blog 200 nesse dia. Só se leem páginas que o robots.txt de cada site permite
+(as listagens das lojas online do Continente e do Pingo Doce não são usadas). Código em `scripts/official.mjs`.
+
 ## Princípio
 Nenhum preço é inventado. Os preços vêm dos folhetos (lidos por IA e confirmados numa segunda leitura);
 os custos das receitas são calculados em código (preço × quantidade). O custo por pessoa inclui uma
