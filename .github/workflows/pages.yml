@@ -6,7 +6,7 @@ on:
   push:
     branches: [main]
     # Não volta a publicar o site por causa das imagens/estado das publicações no Instagram
-    paths: [index.html, "public/**", "!public/posts/**", "api/data/**", "!api/data/published.json", .github/workflows/pages.yml]
+    paths: [index.html, plano.html, scripts/recipes.json, "public/**", "!public/posts/**", "api/data/**", "!api/data/published.json", .github/workflows/pages.yml]
   workflow_run:
     workflows: ["Atualizar menu"]
     types: [completed]
@@ -31,9 +31,10 @@ jobs:
       - name: Montar o site
         run: |
           mkdir -p _site/api/data
-          cp index.html _site/
+          cp index.html plano.html _site/
           cp -r public/. _site/
           cp api/data/menu.json _site/api/data/
+          cp scripts/recipes.json _site/api/data/receitas.json
           touch _site/.nojekyll
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
