@@ -189,7 +189,7 @@ const NONFOOD = /crisantemo|peperomia|ramo-de|flor|planta|vaso|capsula|detergent
 const CF = process.env.CLOUDFLARE_API_TOKEN && process.env.CLOUDFLARE_ACCOUNT_ID ? { token: process.env.CLOUDFLARE_API_TOKEN, id: process.env.CLOUDFLARE_ACCOUNT_ID } : null;
 
 async function generateCloudflare(m, r) {
-  const prompt = "Professional food photography, overhead shot, natural daylight, rustic wooden table. " + (r.imgDesc || r.original || r.name) + ". Realistic, appetizing, no text, no people.";
+  const prompt = photoPrompt(r);
   const model = process.env.CLOUDFLARE_IMAGE_MODEL || "@cf/black-forest-labs/flux-1-schnell";
   const res = await fetch("https://api.cloudflare.com/client/v4/accounts/" + CF.id + "/ai/run/" + model, {
     method: "POST", headers: { authorization: "Bearer " + CF.token, "content-type": "application/json" },
@@ -206,10 +206,10 @@ async function generateCloudflare(m, r) {
 }
 
 async function generateImage(m, r) {
-  const prompt = "Professional food photography, overhead shot, natural daylight, rustic wooden table. " + (r.imgDesc || r.original || r.name) + ". Realistic, appetizing, no text, no people.";
+  const prompt = photoPrompt(r);
   const res = await fetch("https://api.openai.com/v1/images/generations", {
     method: "POST", headers: { authorization: "Bearer " + OK, "content-type": "application/json" },
-    body: JSON.stringify({ model: process.env.OPENAI_IMAGE_MODEL || "gpt-image-1-mini", prompt, size: "1024x1024", quality: process.env.OPENAI_IMAGE_QUALITY || "low", n: 1 }),
+    body: JSON.stringify({ model: process.env.OPENAI_IMAGE_MODEL || "gpt-image-1-mini", prompt, size: "1024x1024", quality: process.env.OPENAI_IMAGE_QUALITY || "medium", n: 1 }),
     signal: AbortSignal.timeout(120000)
   });
   if (!res.ok) throw new Error("OpenAI imagens " + res.status + ": " + (await res.text()).slice(0, 200));
@@ -222,9 +222,16 @@ async function generateImage(m, r) {
   return { image: "/meals/" + name, credit: { name: "Imagem gerada por IA", url: "" } };
 }
 
+// Pedido das fotos: uma foto caseira, tirada com o telemóvel, em vez de "fotografia profissional" (que sai artificial)
+const PHOTO_STYLE = "caseira-v2";
+function photoPrompt(r) {
+  const dish = r.imgDesc || r.original || r.name;
+  return `A real, candid smartphone photo of homemade ${dish}, just served at home in Portugal. Simple everyday ceramic plate on a kitchen table with a cotton napkin, a fork and a glass of water nearby. Soft natural window light from the side, photographed at a 45-degree angle, shallow depth of field. Honest home-cooked look: real textures, slightly uneven portions, a few drips of sauce and olive oil, no food styling. Photorealistic photograph, no text, no people, not an illustration, not a 3D render.`;
+}
+
 async function makeImage(m, r) {
   let genErr = null;
-  const gens = [CF && generateCloudflare, OK && generateImage].filter(Boolean);
+  const gens = [OK && generateImage, CF && generateCloudflare].filter(Boolean); // OpenAI primeiro: fotos mais realistas
   for (const g of gens) {
     try { return await g(m, r); } catch (e) { genErr = e; console.warn("  geração falhou para " + r.name + ":", e.message.slice(0, 160)); }
   }
@@ -291,7 +298,8 @@ data.compare = buildCompare(data.markets, library, today);
 for (const m of data.markets) m.pool = buildPool(m, library, today);
 
 // Imagens: uma por receita da biblioteca (reutilizada por todas as lojas e dias)
-if (REDO) data.images = {};
+data.imageStyle ??= {};
+if (REDO) { data.images = {}; data.imageStyle = {}; }
 const byId = new Map();
 const todo = [...data.markets.flatMap((m) => m.recipes), ...data.compare.map((c) => c.recipe), ...data.markets.flatMap((m) => m.plan.slice(1).flatMap((d) => d.recipes))];
 // Depois, aos poucos (MAX_IMAGES por dia), as receitas possíveis do plano semanal que ainda não têm foto
@@ -305,8 +313,17 @@ for (const r of byId.values()) {
   if (cur && fs.existsSync(path.join("public", cur))) continue;
   if (made >= MAX_NEW) break;
   const img = await makeImage({ name: "" }, r);
-  if (img) { data.images[r.id] = img.image; made++; }
+  if (img) { data.images[r.id] = img.image; data.imageStyle[r.id] = PHOTO_STYLE; made++; }
   else if (photoAuthFailed) break;
+}
+// Fotos antigas (estilo "profissional", artificial): substituídas aos poucos, MAX_RESTYLE por dia (omissão 3)
+const MAX_RESTYLE = process.env.MAX_RESTYLE != null && process.env.MAX_RESTYLE !== "" ? +process.env.MAX_RESTYLE : 3;
+let restyled = 0;
+for (const r of byId.values()) {
+  if (restyled >= MAX_RESTYLE || photoAuthFailed || photoGenFailed) break;
+  if (!data.images[r.id] || data.imageStyle[r.id] === PHOTO_STYLE) continue;
+  const img = await makeImage({ name: "" }, r);
+  if (img) { data.images[r.id] = img.image; data.imageStyle[r.id] = PHOTO_STYLE; restyled++; console.log("  foto renovada:", r.name); }
 }
 const attach = (r) => { if (data.images[r.id]) { r.image = data.images[r.id]; r.imageCredit = { name: "Imagem gerada por IA", url: "" }; } else { delete r.image; delete r.imageCredit; } };
 for (const m of data.markets) { m.recipes.forEach(attach); m.plan.forEach((d) => d.recipes.forEach(attach)); }
