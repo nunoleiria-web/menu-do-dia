@@ -54,6 +54,7 @@ jobs:
           CLOUDFLARE_IMAGE_MODEL: ${{ vars.CLOUDFLARE_IMAGE_MODEL }}
           OPENAI_IMAGE_MODEL: ${{ vars.OPENAI_IMAGE_MODEL }}
           OPENAI_IMAGE_QUALITY: ${{ vars.OPENAI_IMAGE_QUALITY }}
+          MAX_RESTYLE: ${{ vars.MAX_RESTYLE }}
       - if: ${{ !cancelled() && steps.gate.outputs.run == 'true' }}   # grava o que tiver mudado, mesmo que o passo anterior tenha falhado
         run: |
           git config user.name "menu-bot"; git config user.email "menu-bot@users.noreply.github.com"

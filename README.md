@@ -65,6 +65,7 @@ npm run publish:ensaio   # mostra a próxima publicação, sem publicar
 | `SITE_URL` | variável | Link nas legendas (omissão: o GitHub Pages) |
 | `IG_FORMAT` | variável | `alternar` (omissão), `carrossel`, `reel` ou `foto` |
 | `OPENAI_MODEL`, `MISTRAL_MODEL`, `CLOUDFLARE_IMAGE_MODEL`, `OPENAI_IMAGE_MODEL`, `OPENAI_IMAGE_QUALITY`, `AI_DELAY_MS` | variáveis | Afinação dos modelos (opcional) |
+| `MAX_RESTYLE` | variável | Fotos antigas renovadas por dia no estilo caseiro (omissão 3; 0 para parar) |
 
 ### Token do Instagram
 Gera-se em developers.facebook.com → app → Instagram → *API setup with Instagram login* → *Generate token*.
