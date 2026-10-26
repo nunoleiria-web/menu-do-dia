@@ -16,7 +16,7 @@
     "url": "https://folhetos.continente.pt/2026/10/fim-de-semana-s43-bj10/"
    }
   ],
-  "secs": 7,
+  "secs": 8,
   "sample": [
    {
     "id": "camarao-cozido-25-35-fresco",
@@ -196,8 +196,216 @@
   ]
  },
  "Pingo Doce": {
-  "ok": false,
-  "error": "folheto sem lista de produtos: https://folhetos.pingodoce.pt/2026/poupe-este-fim-de-semana/continental/S43-bomba/"
+  "ok": true,
+  "from": "2026-10-20",
+  "to": "2026-10-26",
+  "flyer": "Folheto 20/10–26/10",
+  "n": 1531,
+  "kg": 445,
+  "sources": [
+   {
+    "title": "Pingo Doce — Folheto Poupe Esta Semana Lojas Grandes",
+    "url": "https://folhetos.pingodoce.pt/2026/poupe-esta-semana/continental-lojas-grandes/S43/"
+   }
+  ],
+  "secs": 2,
+  "sample": [
+   {
+    "id": "pao-de-queijo-de-bacalhau",
+    "name": "Pão de queijo de bacalhau",
+    "price": 0.59,
+    "per": "un",
+    "note": "folheto oficial"
+   },
+   {
+    "id": "camarao-cozido-30-50-emb-kg-pd",
+    "name": "Camarão cozido 30/50 emb. kg pd",
+    "price": 9.99,
+    "per": "kg",
+    "note": "folheto oficial"
+   },
+   {
+    "id": "batata-pal-10-10-forno-pingo-doce-1kg",
+    "name": "Batata pal 10/10 forno pingo doce 1kg",
+    "price": 1.59,
+    "per": "kg",
+    "label": "1,59 € a embalagem de 1 kg",
+    "note": "folheto oficial"
+   },
+   {
+    "id": "lulas-limpas-20-40-pescanova-450g",
+    "name": "Lulas limpas 20/40 pescanova 450g",
+    "price": 13.31,
+    "per": "kg",
+    "label": "5,99 € a embalagem de 450 g",
+    "note": "folheto oficial"
+   },
+   {
+    "id": "miolo-de-camarao-50-70-mar-iberica-300g",
+    "name": "Miolo de camarão 50/70 mar ibérica 300g",
+    "price": 15.97,
+    "per": "kg",
+    "label": "4,79 € a embalagem de 300 g",
+    "note": "folheto oficial"
+   },
+   {
+    "id": "miolo-de-camarao-30-50-mar-iberica-300g",
+    "name": "Miolo de camarão 30/50 mar ibérica 300g",
+    "price": 19.63,
+    "per": "kg",
+    "label": "5,89 € a embalagem de 300 g",
+    "note": "folheto oficial"
+   },
+   {
+    "id": "medalhoes-de-salmao-pescanova-400g",
+    "name": "Medalhões de salmão pescanova 400g",
+    "price": 29.98,
+    "per": "kg",
+    "label": "11,99 € a embalagem de 400 g",
+    "note": "folheto oficial"
+   },
+   {
+    "id": "camarao-mocambique-32-48-pescanova-800g",
+    "name": "Camarão moçambique 32/48 pescanova 800g",
+    "price": 22.49,
+    "per": "kg",
+    "label": "17,99 € a embalagem de 800 g",
+    "note": "folheto oficial"
+   },
+   {
+    "id": "lombos-de-salmao-com-pele-pescanova-250g",
+    "name": "Lombos de salmão com pele pescanova 250g",
+    "price": 27.56,
+    "per": "kg",
+    "label": "6,89 € a embalagem de 250 g",
+    "note": "folheto oficial"
+   },
+   {
+    "id": "camarao-mocambique-48-64-pescanova-800g",
+    "name": "Camarão moçambique 48/64 pescanova 800g",
+    "price": 19.99,
+    "per": "kg",
+    "label": "15,99 € a embalagem de 800 g",
+    "note": "folheto oficial"
+   },
+   {
+    "id": "miolo-de-camarao-15-30-pescanova-250g",
+    "name": "Miolo de camarão 15/30 pescanova 250g",
+    "price": 27.96,
+    "per": "kg",
+    "label": "6,99 € a embalagem de 250 g",
+    "note": "folheto oficial"
+   },
+   {
+    "id": "camarao-vannamei-24-40-pescanova-800g",
+    "name": "Camarão vannamei 24/40 pescanova 800g",
+    "price": 13.11,
+    "per": "kg",
+    "label": "10,49 € a embalagem de 800 g",
+    "note": "folheto oficial"
+   },
+   {
+    "id": "miolo-de-camarao-40-60-pescanova-200g",
+    "name": "Miolo de camarão 40/60 pescanova 200g",
+    "price": 22.95,
+    "per": "kg",
+    "label": "4,59 € a embalagem de 200 g",
+    "note": "folheto oficial"
+   },
+   {
+    "id": "lombos-de-salmao-pescanova-250g",
+    "name": "Lombos de salmão pescanova 250g",
+    "price": 31.96,
+    "per": "kg",
+    "label": "7,99 € a embalagem de 250 g",
+    "note": "folheto oficial"
+   },
+   {
+    "id": "miolo-camarao-cozid-40-60-pescanova-200g",
+    "name": "Miolo camarão cozid 40/60 pescanova 200g",
+    "price": 27.45,
+    "per": "kg",
+    "label": "5,49 € a embalagem de 200 g",
+    "note": "folheto oficial"
+   },
+   {
+    "id": "medalhoes-de-pescada-pescanova-1kg",
+    "name": "Medalhões de pescada pescanova 1kg",
+    "price": 16.49,
+    "per": "kg",
+    "label": "16,49 € a embalagem de 1 kg",
+    "note": "folheto oficial"
+   },
+   {
+    "id": "miolo-de-camarao-80-100-pescanova-350g",
+    "name": "Miolo de camarão 80/100 pescanova 350g",
+    "price": 19.97,
+    "per": "kg",
+    "label": "6,99 € a embalagem de 350 g",
+    "note": "folheto oficial"
+   },
+   {
+    "id": "mimos-de-pescada-pescanova-1kg",
+    "name": "Mimos de pescada pescanova 1kg",
+    "price": 12.99,
+    "per": "kg",
+    "label": "12,99 € a embalagem de 1 kg",
+    "note": "folheto oficial"
+   },
+   {
+    "id": "filetes-salmao-sem-pele-pescanova-400g",
+    "name": "Filetes salmão sem pele pescanova 400g",
+    "price": 22.23,
+    "per": "kg",
+    "label": "8,89 € a embalagem de 400 g",
+    "note": "folheto oficial"
+   },
+   {
+    "id": "barrinhas-pescada-s-glut-pescanova-1-2kg",
+    "name": "Barrinhas pescada s/glút pescanova 1,2kg",
+    "price": 7.49,
+    "per": "kg",
+    "label": "8,99 € a embalagem de 1,2 kg",
+    "note": "folheto oficial"
+   },
+   {
+    "id": "filetes-de-pescada-limao-pescanova-400g",
+    "name": "Filetes de pescada limão pescanova 400g",
+    "price": 13.73,
+    "per": "kg",
+    "label": "5,49 € a embalagem de 400 g",
+    "note": "folheto oficial"
+   },
+   {
+    "id": "barrinha-salmao-s-gluten-pescanova-300g",
+    "name": "Barrinha salmão s/ glúten pescanova 300g",
+    "price": 9.97,
+    "per": "kg",
+    "label": "2,99 € a embalagem de 300 g",
+    "note": "folheto oficial"
+   },
+   {
+    "id": "v-p-set-qta-camarate-doce-bco-75cl",
+    "name": "V.p.set.qta camarate doce bco 75cl",
+    "price": 7.49,
+    "per": "un",
+    "note": "folheto oficial"
+   },
+   {
+    "id": "v-alent-porco-bravo-bco-75cl",
+    "name": "V.alent. porco bravo bco 75cl",
+    "price": 3.99,
+    "per": "un",
+    "note": "folheto oficial"
+   },
+   {
+    "id": "v-alent-porco-bravo-premium-tto-75cl",
+    "name": "V.alent porco bravo premium tto 75cl",
+    "price": 4.99,
+    "per": "un",
+    "note": "folheto oficial"
+   }
+  ]
  },
  "Aldi": {
   "ok": true,
