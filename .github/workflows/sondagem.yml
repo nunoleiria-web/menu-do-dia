@@ -4,7 +4,7 @@ on:
   push:
     branches: [sondagem-fontes]
 permissions:
-  contents: read
+  contents: write
 jobs:
   sondar:
     runs-on: ubuntu-latest
@@ -15,6 +15,9 @@ jobs:
       - run: node probe/probe.mjs
       - run: cat probe/out/REPORT.md >> "$GITHUB_STEP_SUMMARY"
         if: always()
-      - uses: actions/upload-artifact@v4
+      - name: Gravar resultados no ramo de teste
         if: always()
-        with: { name: sondagem, path: probe/out, retention-days: 3 }
+        run: |
+          git config user.name "sondagem-bot"; git config user.email "noreply@users.noreply.github.com"
+          git add -f probe/out
+          git commit -q -m "Resultados da sondagem [skip ci]" && git push -q origin HEAD:sondagem-fontes || echo "nada a gravar"
