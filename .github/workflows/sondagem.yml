@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with: { node-version: 22 }
-      - run: sudo apt-get install -y -qq poppler-utils >/dev/null
+      - run: (sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils) >/dev/null || echo "sem pdftotext"
       - run: node probe/probe3.mjs
       - run: cat probe/out3/REPORT.md >> "$GITHUB_STEP_SUMMARY"
         if: always()
