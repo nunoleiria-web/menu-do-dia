@@ -6,7 +6,8 @@
   "Lidl|bife-portuguesa",
   "Aldi|gyros-porco",
   "Intermarché|lulas-guisadas",
-  "Continente|teriyaki-salmao"
+  "Continente|teriyaki-salmao",
+  "Pingo Doce|pulpo-gallega"
  ],
  "log": [
   "2026-10-27T10:31:01.906Z Continente|mac-cheese instagram:ok (carrossel)",
@@ -14,7 +15,8 @@
   "2026-10-27T13:21:44.526Z Lidl|bife-portuguesa instagram:ok (carrossel)",
   "2026-10-27T14:56:09.157Z Aldi|gyros-porco instagram:ok (reel)",
   "2026-10-27T15:15:06.431Z Intermarché|lulas-guisadas instagram:ok (carrossel)",
-  "2026-10-27T16:12:21.859Z Continente|teriyaki-salmao instagram:ok (reel)"
+  "2026-10-27T16:12:21.859Z Continente|teriyaki-salmao instagram:ok (reel)",
+  "2026-10-27T17:13:05.929Z Pingo Doce|pulpo-gallega instagram:ok (carrossel)"
  ],
  "token": {
   "hash": "caff9d1523bc",
