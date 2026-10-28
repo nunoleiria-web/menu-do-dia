@@ -1,26 +1,10 @@
 {
- "date": "2026-10-27",
+ "date": "2026-10-28",
  "done": [
-  "Continente|mac-cheese",
-  "Pingo Doce|ratatouille",
-  "Lidl|bife-portuguesa",
-  "Aldi|gyros-porco",
-  "Intermarché|lulas-guisadas",
-  "Continente|teriyaki-salmao",
-  "Pingo Doce|pulpo-gallega",
-  "Lidl|moussaka",
-  "Aldi|risotto-cogumelos"
+  "Continente|porco-alentejana"
  ],
  "log": [
-  "2026-10-27T10:31:01.906Z Continente|mac-cheese instagram:ok (carrossel)",
-  "2026-10-27T11:28:11.606Z Pingo Doce|ratatouille instagram:ok (reel)",
-  "2026-10-27T13:21:44.526Z Lidl|bife-portuguesa instagram:ok (carrossel)",
-  "2026-10-27T14:56:09.157Z Aldi|gyros-porco instagram:ok (reel)",
-  "2026-10-27T15:15:06.431Z Intermarché|lulas-guisadas instagram:ok (carrossel)",
-  "2026-10-27T16:12:21.859Z Continente|teriyaki-salmao instagram:ok (reel)",
-  "2026-10-27T17:13:05.929Z Pingo Doce|pulpo-gallega instagram:ok (carrossel)",
-  "2026-10-27T18:33:29.279Z Lidl|moussaka instagram:ok (reel)",
-  "2026-10-27T19:17:09.597Z Aldi|risotto-cogumelos instagram:ok (carrossel)"
+  "2026-10-28T10:40:07.956Z Continente|porco-alentejana instagram:ok (carrossel)"
  ],
  "token": {
   "hash": "caff9d1523bc",
