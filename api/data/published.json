@@ -5,14 +5,16 @@
   "Pingo Doce|calamares",
   "Lidl|vaca-brocolos",
   "Aldi|couve-flor-curry",
-  "Intermarché|lulas-guisadas"
+  "Intermarché|lulas-guisadas",
+  "Continente|hamburguer"
  ],
  "log": [
   "2026-10-28T10:40:07.956Z Continente|porco-alentejana instagram:ok (carrossel)",
   "2026-10-28T11:33:07.277Z Pingo Doce|calamares instagram:ok (reel)",
   "2026-10-28T12:37:55.676Z Lidl|vaca-brocolos instagram:ok (carrossel)",
   "2026-10-28T13:50:46.022Z Aldi|couve-flor-curry instagram:ok (reel)",
-  "2026-10-28T14:44:52.339Z Intermarché|lulas-guisadas instagram:ok (foto) depois de: carrossel falhou: Media ID is not available (código 9007/2207027)"
+  "2026-10-28T14:44:52.339Z Intermarché|lulas-guisadas instagram:ok (foto) depois de: carrossel falhou: Media ID is not available (código 9007/2207027)",
+  "2026-10-28T15:43:12.688Z Continente|hamburguer instagram:ok (reel)"
  ],
  "token": {
   "hash": "caff9d1523bc",
