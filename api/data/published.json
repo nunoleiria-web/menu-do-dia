@@ -15,12 +15,13 @@
   "2026-10-28T13:50:46.022Z Aldi|couve-flor-curry instagram:ok (reel)",
   "2026-10-28T14:44:52.339Z Intermarché|lulas-guisadas instagram:ok (foto) depois de: carrossel falhou: Media ID is not available (código 9007/2207027)",
   "2026-10-28T15:43:12.688Z Continente|hamburguer instagram:ok (reel)",
-  "2026-10-28T16:43:43.143Z Pingo Doce|almondegas instagram:erro carrossel falhou: Application request limit reached (código 4/2207051); foto falhou: Application request limit reached (código 4/2207051)"
+  "2026-10-28T16:43:43.143Z Pingo Doce|almondegas instagram:erro carrossel falhou: Application request limit reached (código 4/2207051); foto falhou: Application request limit reached (código 4/2207051)",
+  "2026-10-28T17:37:59.379Z Pingo Doce|almondegas instagram:erro carrossel falhou: Media ID is not available (código 9007/2207027); foto falhou: Application request limit reached (código 4/2207051)"
  ],
  "token": {
   "hash": "caff9d1523bc",
   "since": "2026-10-24",
   "handle": "menudodia.pt"
  },
- "fails": 1
+ "fails": 2
 }
