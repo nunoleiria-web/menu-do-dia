@@ -3,12 +3,14 @@
  "done": [
   "Continente|porco-alentejana",
   "Pingo Doce|calamares",
-  "Lidl|vaca-brocolos"
+  "Lidl|vaca-brocolos",
+  "Aldi|couve-flor-curry"
  ],
  "log": [
   "2026-10-28T10:40:07.956Z Continente|porco-alentejana instagram:ok (carrossel)",
   "2026-10-28T11:33:07.277Z Pingo Doce|calamares instagram:ok (reel)",
-  "2026-10-28T12:37:55.676Z Lidl|vaca-brocolos instagram:ok (carrossel)"
+  "2026-10-28T12:37:55.676Z Lidl|vaca-brocolos instagram:ok (carrossel)",
+  "2026-10-28T13:50:46.022Z Aldi|couve-flor-curry instagram:ok (reel)"
  ],
  "token": {
   "hash": "caff9d1523bc",
