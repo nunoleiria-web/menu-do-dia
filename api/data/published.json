@@ -2,11 +2,13 @@
  "date": "2026-10-28",
  "done": [
   "Continente|porco-alentejana",
-  "Pingo Doce|calamares"
+  "Pingo Doce|calamares",
+  "Lidl|vaca-brocolos"
  ],
  "log": [
   "2026-10-28T10:40:07.956Z Continente|porco-alentejana instagram:ok (carrossel)",
-  "2026-10-28T11:33:07.277Z Pingo Doce|calamares instagram:ok (reel)"
+  "2026-10-28T11:33:07.277Z Pingo Doce|calamares instagram:ok (reel)",
+  "2026-10-28T12:37:55.676Z Lidl|vaca-brocolos instagram:ok (carrossel)"
  ],
  "token": {
   "hash": "caff9d1523bc",
