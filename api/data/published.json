@@ -4,12 +4,13 @@
  "log": [
   "2026-10-29T10:39:51.952Z Continente|bife-portuguesa instagram:erro carrossel falhou: Application request limit reached (código 4/2207051); foto falhou: Application request limit reached (código 4/2207051)",
   "2026-10-29T11:33:42.492Z Continente|bife-portuguesa instagram:erro carrossel falhou: Application request limit reached (código 4/2207051); foto falhou: Application request limit reached (código 4/2207051)",
-  "2026-10-29T12:38:18.120Z Continente|bife-portuguesa instagram:erro carrossel falhou: Application request limit reached (código 4/2207051); foto falhou: Application request limit reached (código 4/2207051)"
+  "2026-10-29T12:38:18.120Z Continente|bife-portuguesa instagram:erro carrossel falhou: Application request limit reached (código 4/2207051); foto falhou: Application request limit reached (código 4/2207051)",
+  "2026-10-29T13:52:29.905Z Continente|bife-portuguesa instagram:erro carrossel falhou: Application request limit reached (código 4/2207051); foto falhou: Application request limit reached (código 4/2207051)"
  ],
  "token": {
   "hash": "caff9d1523bc",
   "since": "2026-10-24",
   "handle": "menudodia.pt"
  },
- "fails": 3
+ "fails": 4
 }
