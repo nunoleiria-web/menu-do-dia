@@ -1,8 +1,8 @@
 {
- "date": "2026-10-30",
+ "date": "2026-10-31",
  "done": [],
  "log": [
-  "2026-10-30T16:33:26.048Z Continente|almondegas instagram:erro carrossel falhou: Application request limit reached (código 4/2207051); foto falhou: Application request limit reached (código 4/2207051)"
+  "2026-10-31T15:03:40.131Z Continente|moqueca instagram:erro carrossel falhou: Application request limit reached (código 4/2207051); foto falhou: Application request limit reached (código 4/2207051)"
  ],
  "token": {
   "hash": "caff9d1523bc",
