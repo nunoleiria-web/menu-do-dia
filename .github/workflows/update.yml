@@ -25,12 +25,20 @@ jobs:
   update:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
+      # Corre à primeira execução agendada a partir das 5h de Lisboa que ainda não tenha atualizado o menu hoje.
+      # (O GitHub atrasa por vezes as tarefas agendadas várias horas; exigir as 5h exatas fazia saltar o dia todo.)
       - id: gate
         run: |
           H=$(TZ=Europe/Lisbon date +%H)
-          if [ "${{ github.event_name }}" = "schedule" ] && [ "$H" != "05" ]; then echo "run=false" >> "$GITHUB_OUTPUT"; echo "Em Lisboa são as ${H}h: não é a hora, a saltar."; else echo "run=true" >> "$GITHUB_OUTPUT"; fi
-      - if: steps.gate.outputs.run == 'true'
-        uses: actions/checkout@v4
+          TODAY=$(TZ=Europe/Lisbon date +%F)
+          U=$(node -e 'try{console.log(JSON.parse(require("fs").readFileSync("api/data/menu.json","utf8")).updatedAt||"")}catch(e){console.log("")}')
+          LAST=""; [ -n "$U" ] && LAST=$(TZ=Europe/Lisbon date -d "$U" +%F 2>/dev/null || true)
+          if [ "${{ github.event_name }}" = "schedule" ] && { [ "$((10#$H))" -lt 5 ] || [ "$LAST" = "$TODAY" ]; }; then
+            echo "run=false" >> "$GITHUB_OUTPUT"; echo "Em Lisboa são as ${H}h e o menu foi atualizado a '${LAST}': nada a fazer."
+          else
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          fi
       - if: steps.gate.outputs.run == 'true'
         uses: actions/setup-node@v4
         with: { node-version: 22 }
