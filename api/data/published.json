@@ -1,8 +1,8 @@
 {
- "date": "2026-11-01",
+ "date": "2026-11-02",
  "done": [],
  "log": [
-  "2026-11-01T15:47:42.790Z Continente|dal instagram:erro carrossel falhou: Application request limit reached (código 4/2207051); foto falhou: Application request limit reached (código 4/2207051)"
+  "2026-11-02T19:12:06.733Z Continente|kebab-frango erro: Token do Instagram inválido ou expirado (Error validating access token: You cannot access the app till you log in to www.instagram.com and follow the instructions given. (código 190)). Gera um novo na Meta e atualiza o segredo IG_TOKEN."
  ],
  "token": {
   "hash": "caff9d1523bc",
