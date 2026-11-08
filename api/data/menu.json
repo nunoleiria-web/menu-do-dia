@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-07T11:00:10.103Z",
+ "updatedAt": "2026-11-08T11:13:03.929Z",
  "markets": [
   {
    "name": "Continente",
@@ -18,135 +18,145 @@
    ],
    "recipes": [
     {
-     "id": "katsu-porco",
+     "id": "coq-au-vin",
      "slot": 1,
      "meal": "Almoço",
-     "name": "Tonkatsu com Arroz e Repolho",
-     "original": "とんかつ (Tonkatsu)",
-     "cuisine": "Japonesa",
-     "description": "Costeleta de porco panada com panko, servida com repolho e molho tonkatsu.",
+     "name": "Frango ao Vinho Tinto",
+     "original": "Coq au Vin",
+     "cuisine": "Francesa",
+     "description": "Frango cozinhado em vinho tinto com bacon, cogumelos e cebolinhas.",
      "servings": "4 pessoas",
-     "time": "35 min",
+     "time": "1h 15min",
      "difficulty": "Média",
      "veg": false,
      "allergens": [
-      "gluten",
-      "ovos",
-      "soja"
+      "gluten"
      ],
-     "est": 3.55,
-     "imgDesc": "Tonkatsu breaded pork cutlet sliced with shredded cabbage, rice and tonkatsu sauce",
-     "mainCost": 2.39,
+     "est": 7.55,
+     "imgDesc": "Coq au vin, chicken in red wine sauce with mushrooms and bacon, with potatoes",
+     "mainCost": 3.59,
      "ingredients": [
       {
-       "item": "Lombo ou costeletas de porco",
-       "qty": "600 g",
-       "price": 3.99,
+       "item": "Coxas e sobrecoxas de frango",
+       "qty": "1,2 kg",
+       "price": 2.99,
        "per": "kg",
-       "amount": 0.6,
-       "note": "folheto: Pá de Porco com Osso Continente",
-       "promoId": "pa-de-porco-com-osso-continente"
+       "amount": 1.2,
+       "note": "folheto: Perna de Frango em Vácuo Continente",
+       "promoId": "perna-de-frango-em-vacuo-continente"
       },
       {
-       "item": "Arroz de sushi",
-       "qty": "300 g"
-      },
-      {
-       "item": "Panko ou pão ralado",
+       "item": "Bacon",
        "qty": "120 g"
       },
       {
-       "item": "Ovos",
+       "item": "Cogumelos",
+       "qty": "250 g"
+      },
+      {
+       "item": "Cebolinhas",
+       "qty": "12"
+      },
+      {
+       "item": "Cenoura",
        "qty": "2"
-      },
-      {
-       "item": "Farinha",
-       "qty": "4 c. sopa"
-      },
-      {
-       "item": "Repolho",
-       "qty": "1/4"
-      },
-      {
-       "item": "Ketchup",
-       "qty": "2 c. sopa"
-      },
-      {
-       "item": "Molho Worcestershire",
-       "qty": "2 c. sopa"
-      },
-      {
-       "item": "Molho de soja",
-       "qty": "1 c. sopa"
-      },
-      {
-       "item": "Óleo para fritar",
-       "qty": "400 ml"
-      }
-     ],
-     "steps": [
-      "Bata as costeletas até 1,5 cm e tempere.",
-      "Passe por farinha, ovo e panko.",
-      "Frite em óleo a 170 ºC 4 a 5 min de cada lado.",
-      "Misture ketchup, Worcestershire e soja para o molho.",
-      "Corte o repolho em tiras finíssimas.",
-      "Corte o tonkatsu em tiras e sirva com arroz, repolho e molho.",
-      "Dica do chef: O repolho cru fresco equilibra a fritura."
-     ],
-     "imageQuery": "とんかつ (Tonkatsu) Japonesa",
-     "image": "/meals/lib-katsu-porco-32b62c63.webp",
-     "imageCredit": {
-      "name": "Imagem gerada por IA",
-      "url": ""
-     }
-    },
-    {
-     "id": "bife-portuguesa",
-     "slot": 2,
-     "meal": "Jantar",
-     "name": "Bife à Portuguesa com Ovo e Batata Frita",
-     "original": "Bife à Portuguesa",
-     "cuisine": "Portuguesa",
-     "description": "Bife tenro em molho de alho e vinho, com ovo estrelado e batata frita.",
-     "servings": "4 pessoas",
-     "time": "30 min",
-     "difficulty": "Fácil",
-     "veg": false,
-     "allergens": [
-      "ovos"
-     ],
-     "est": 3.75,
-     "imgDesc": "Bife à portuguesa, steak with a fried egg on top, french fries and lettuce salad",
-     "mainCost": 8.39,
-     "ingredients": [
-      {
-       "item": "Bifes de vaca",
-       "qty": "600 g",
-       "price": 13.99,
-       "per": "kg",
-       "amount": 0.6,
-       "note": "folheto: Chambão de Novilho Balcão Angus",
-       "promoId": "chambao-de-novilho-balcao-angus"
-      },
-      {
-       "item": "Ovos",
-       "qty": "4"
-      },
-      {
-       "item": "Batata",
-       "qty": "700 g"
-      },
-      {
-       "item": "Manteiga",
-       "qty": "30 g"
       },
       {
        "item": "Alho",
        "qty": "3 dentes"
       },
       {
+       "item": "Vinho tinto",
+       "qty": "500 ml"
+      },
+      {
+       "item": "Caldo de galinha",
+       "qty": "200 ml"
+      },
+      {
+       "item": "Tomilho e louro",
+       "qty": "1 molho"
+      },
+      {
+       "item": "Farinha",
+       "qty": "1 c. sopa"
+      },
+      {
+       "item": "Batata",
+       "qty": "800 g"
+      }
+     ],
+     "steps": [
+      "Doure o bacon, retire; doure o frango temperado na mesma panela, 4 min por lado; reserve.",
+      "Refogue cenoura, cebolinhas e alho; polvilhe com farinha.",
+      "Adicione o vinho, caldo, tomilho e louro e deixe ferver 5 min.",
+      "Regresse o frango e o bacon; tape e cozinhe em lume brando 40 min.",
+      "Junte os cogumelos salteados e cozinhe 10 min.",
+      "Cozinhe a batata e sirva com o frango.",
+      "Dica do chef: Use um vinho que beberia: dá todo o sabor ao molho."
+     ],
+     "imageQuery": "Coq au Vin Francesa",
+     "image": "/meals/lib-coq-au-vin-d6189da4.webp",
+     "imageCredit": {
+      "name": "Imagem gerada por IA",
+      "url": ""
+     }
+    },
+    {
+     "id": "arroz-marisco",
+     "slot": 2,
+     "meal": "Jantar",
+     "name": "Arroz de Marisco",
+     "original": "Arroz de Marisco",
+     "cuisine": "Portuguesa",
+     "description": "Arroz malandrinho com camarão e mexilhão, num caldo de tomate e coentros.",
+     "servings": "4 pessoas",
+     "time": "50 min",
+     "difficulty": "Média",
+     "veg": false,
+     "allergens": [
+      "marisco"
+     ],
+     "est": 6.15,
+     "imgDesc": "Portuguese seafood rice, wet rice with prawns and mussels and fresh coriander in a pot",
+     "mainCost": 1.59,
+     "ingredients": [
+      {
+       "item": "Marisco (camarão/mexilhão)",
+       "qty": "800 g",
+       "price": 1.99,
+       "per": "kg",
+       "amount": 0.8,
+       "note": "folheto: Mexilhão Fresco",
+       "promoId": "mexilhao-fresco"
+      },
+      {
+       "item": "Arroz carolino",
+       "qty": "300 g"
+      },
+      {
+       "item": "Cebola",
+       "qty": "1"
+      },
+      {
+       "item": "Alho",
+       "qty": "3 dentes"
+      },
+      {
+       "item": "Tomate maduro",
+       "qty": "3"
+      },
+      {
+       "item": "Polpa de tomate",
+       "qty": "2 c. sopa"
+      },
+      {
        "item": "Vinho branco",
-       "qty": "1/2 copo"
+       "qty": "1 copo"
+      },
+      {
+       "item": "Coentros",
+       "qty": "1 molho"
       },
       {
        "item": "Louro",
@@ -154,24 +164,46 @@
       },
       {
        "item": "Azeite",
-       "qty": "2 c. sopa"
+       "qty": "4 c. sopa"
       },
       {
-       "item": "Salada de alface",
-       "qty": "1 prato"
+       "item": "Piri-piri",
+       "qty": "a gosto"
+      },
+      {
+       "item": "Caldo de peixe",
+       "qty": "1,2 l"
       }
      ],
      "steps": [
-      "Retire os bifes do frigorífico 20 min antes e tempere com sal e pimenta.",
-      "Frite a batata em palitos até dourar.",
-      "Frite os bifes numa frigideira muito quente com azeite 1 a 2 min de cada lado; reserve.",
-      "Na mesma frigideira, junte manteiga, alho laminado, louro e vinho; reduza 3 min.",
-      "Estrele os ovos em frigideira antiaderente.",
-      "Regue os bifes com o molho, coroe com o ovo e sirva com batata frita e salada.",
-      "Dica do chef: Não pique a carne com o garfo ao virar, para não perder sumo."
+      "Lave o marisco. Aqueça o caldo de peixe com o louro.",
+      "Refogue cebola e alho no azeite 8 min; junte o tomate sem pele e a polpa e cozinhe 10 min.",
+      "Adicione o vinho branco e deixe evaporar 2 min.",
+      "Junte o arroz, mexa 1 min e adicione o caldo quente, cerca de 3 vezes o volume do arroz.",
+      "Cozinhe 10 min em lume médio; junte o marisco e cozinhe mais 6 a 8 min até o arroz ficar cremoso.",
+      "Retire do lume, junte coentros picados e deixe repousar 3 min antes de servir.",
+      "Dica do chef: Junte o marisco só na segunda metade da cozedura para não ficar duro."
      ],
-     "imageQuery": "Bife à Portuguesa Portuguesa",
-     "image": "/meals/lib-bife-portuguesa-04bf9e2c.webp",
+     "imageQuery": "Arroz de Marisco Portuguesa",
+     "compare": [
+      {
+       "market": "Continente",
+       "product": "Mexilhão Fresco",
+       "price": 1.99,
+       "per": "kg",
+       "total": 1.59,
+       "promoId": "mexilhao-fresco"
+      },
+      {
+       "market": "Lidl",
+       "product": "Mexilhão Meia Concha",
+       "price": 4.99,
+       "per": "kg",
+       "total": 3.99,
+       "promoId": "mexilhao-meia-concha"
+      }
+     ],
+     "image": "/meals/lib-arroz-marisco-e4d6ae47.webp",
      "imageCredit": {
       "name": "Imagem gerada por IA",
       "url": ""
@@ -211,7 +243,7 @@
      "id": "arroz-basmati-continente",
      "name": "Arroz Basmati Continente",
      "price": 1.89,
-     "per": "kg",
+     "per": "un",
      "note": "folheto oficial"
     },
     {
@@ -527,7 +559,7 @@
      "id": "cachacos-de-bacalhau-12-meses-de-cura-msc-congelado-riberalves",
      "name": "Cachaços de Bacalhau 12 Meses de Cura MSC Congelado Riberalves",
      "price": 13.49,
-     "per": "kg",
+     "per": "un",
      "note": "folheto oficial"
     },
     {
@@ -1143,7 +1175,7 @@
      "id": "mamao-continente",
      "name": "Mamão Continente",
      "price": 4.59,
-     "per": "un",
+     "per": "kg",
      "note": "folheto oficial"
     },
     {
@@ -3306,7 +3338,7 @@
      "id": "oleo-alimentar-fula",
      "name": "Óleo Alimentar Fula",
      "price": 1.99,
-     "per": "kg",
+     "per": "un",
      "note": "folheto oficial"
     },
     {
@@ -3376,7 +3408,7 @@
      "id": "farinha-de-trigo-fina-com-fermento-branca-de-neve",
      "name": "Farinha de Trigo Fina com Fermento Branca de Neve",
      "price": 1.99,
-     "per": "kg",
+     "per": "un",
      "note": "folheto oficial"
     },
     {
@@ -3418,7 +3450,7 @@
      "id": "feijao-vermelho-cacarola",
      "name": "Feijão Vermelho Caçarola",
      "price": 1.3,
-     "per": "un",
+     "per": "kg",
      "note": "folheto oficial"
     },
     {
@@ -3446,7 +3478,7 @@
      "id": "filete-de-atum-em-azeite-santa-catarina",
      "name": "Filete de Atum em Azeite Santa Catarina",
      "price": 2.99,
-     "per": "un",
+     "per": "kg",
      "note": "folheto oficial"
     },
     {
@@ -6386,7 +6418,7 @@
      "id": "filetes-de-pescada-panados-continente",
      "name": "Filetes de Pescada Panados Continente",
      "price": 4.69,
-     "per": "kg",
+     "per": "un",
      "note": "folheto oficial"
     },
     {
@@ -6428,7 +6460,7 @@
      "id": "filetes-de-pescada-com-ovo-continente",
      "name": "Filetes de Pescada com Ovo Continente",
      "price": 5.29,
-     "per": "kg",
+     "per": "un",
      "note": "folheto oficial"
     },
     {
@@ -6463,14 +6495,14 @@
      "id": "filetes-de-pescada-com-salsa-e-alho-continente",
      "name": "Filetes de Pescada com Salsa e Alho Continente",
      "price": 5.39,
-     "per": "kg",
+     "per": "un",
      "note": "folheto oficial"
     },
     {
      "id": "filetes-de-pescada-panados-sem-gluten-pescanova",
      "name": "Filetes de Pescada Panados sem Glúten Pescanova",
      "price": 7.89,
-     "per": "kg",
+     "per": "un",
      "note": "folheto oficial"
     },
     {
@@ -9613,7 +9645,7 @@
      "id": "argolas-do-mar-ultracongeladas-pescanova",
      "name": "Argolas do Mar Ultracongeladas Pescanova",
      "price": 3.79,
-     "per": "un",
+     "per": "kg",
      "note": "folheto oficial"
     },
     {
@@ -10053,176 +10085,11 @@
     }
    ],
    "check": {
-    "date": "2026-11-07",
+    "date": "2026-11-08",
     "result": "sem-novo"
    },
    "readVersion": 3,
    "plan": [
-    {
-     "date": "2026-11-07",
-     "recipes": [
-      {
-       "id": "katsu-porco",
-       "slot": 1,
-       "meal": "Almoço",
-       "name": "Tonkatsu com Arroz e Repolho",
-       "original": "とんかつ (Tonkatsu)",
-       "cuisine": "Japonesa",
-       "description": "Costeleta de porco panada com panko, servida com repolho e molho tonkatsu.",
-       "servings": "4 pessoas",
-       "time": "35 min",
-       "difficulty": "Média",
-       "veg": false,
-       "allergens": [
-        "gluten",
-        "ovos",
-        "soja"
-       ],
-       "est": 3.55,
-       "imgDesc": "Tonkatsu breaded pork cutlet sliced with shredded cabbage, rice and tonkatsu sauce",
-       "mainCost": 2.39,
-       "ingredients": [
-        {
-         "item": "Lombo ou costeletas de porco",
-         "qty": "600 g",
-         "price": 3.99,
-         "per": "kg",
-         "amount": 0.6,
-         "note": "folheto: Pá de Porco com Osso Continente",
-         "promoId": "pa-de-porco-com-osso-continente"
-        },
-        {
-         "item": "Arroz de sushi",
-         "qty": "300 g"
-        },
-        {
-         "item": "Panko ou pão ralado",
-         "qty": "120 g"
-        },
-        {
-         "item": "Ovos",
-         "qty": "2"
-        },
-        {
-         "item": "Farinha",
-         "qty": "4 c. sopa"
-        },
-        {
-         "item": "Repolho",
-         "qty": "1/4"
-        },
-        {
-         "item": "Ketchup",
-         "qty": "2 c. sopa"
-        },
-        {
-         "item": "Molho Worcestershire",
-         "qty": "2 c. sopa"
-        },
-        {
-         "item": "Molho de soja",
-         "qty": "1 c. sopa"
-        },
-        {
-         "item": "Óleo para fritar",
-         "qty": "400 ml"
-        }
-       ],
-       "steps": [
-        "Bata as costeletas até 1,5 cm e tempere.",
-        "Passe por farinha, ovo e panko.",
-        "Frite em óleo a 170 ºC 4 a 5 min de cada lado.",
-        "Misture ketchup, Worcestershire e soja para o molho.",
-        "Corte o repolho em tiras finíssimas.",
-        "Corte o tonkatsu em tiras e sirva com arroz, repolho e molho.",
-        "Dica do chef: O repolho cru fresco equilibra a fritura."
-       ],
-       "imageQuery": "とんかつ (Tonkatsu) Japonesa",
-       "image": "/meals/lib-katsu-porco-32b62c63.webp",
-       "imageCredit": {
-        "name": "Imagem gerada por IA",
-        "url": ""
-       }
-      },
-      {
-       "id": "bife-portuguesa",
-       "slot": 2,
-       "meal": "Jantar",
-       "name": "Bife à Portuguesa com Ovo e Batata Frita",
-       "original": "Bife à Portuguesa",
-       "cuisine": "Portuguesa",
-       "description": "Bife tenro em molho de alho e vinho, com ovo estrelado e batata frita.",
-       "servings": "4 pessoas",
-       "time": "30 min",
-       "difficulty": "Fácil",
-       "veg": false,
-       "allergens": [
-        "ovos"
-       ],
-       "est": 3.75,
-       "imgDesc": "Bife à portuguesa, steak with a fried egg on top, french fries and lettuce salad",
-       "mainCost": 8.39,
-       "ingredients": [
-        {
-         "item": "Bifes de vaca",
-         "qty": "600 g",
-         "price": 13.99,
-         "per": "kg",
-         "amount": 0.6,
-         "note": "folheto: Chambão de Novilho Balcão Angus",
-         "promoId": "chambao-de-novilho-balcao-angus"
-        },
-        {
-         "item": "Ovos",
-         "qty": "4"
-        },
-        {
-         "item": "Batata",
-         "qty": "700 g"
-        },
-        {
-         "item": "Manteiga",
-         "qty": "30 g"
-        },
-        {
-         "item": "Alho",
-         "qty": "3 dentes"
-        },
-        {
-         "item": "Vinho branco",
-         "qty": "1/2 copo"
-        },
-        {
-         "item": "Louro",
-         "qty": "1 folha"
-        },
-        {
-         "item": "Azeite",
-         "qty": "2 c. sopa"
-        },
-        {
-         "item": "Salada de alface",
-         "qty": "1 prato"
-        }
-       ],
-       "steps": [
-        "Retire os bifes do frigorífico 20 min antes e tempere com sal e pimenta.",
-        "Frite a batata em palitos até dourar.",
-        "Frite os bifes numa frigideira muito quente com azeite 1 a 2 min de cada lado; reserve.",
-        "Na mesma frigideira, junte manteiga, alho laminado, louro e vinho; reduza 3 min.",
-        "Estrele os ovos em frigideira antiaderente.",
-        "Regue os bifes com o molho, coroe com o ovo e sirva com batata frita e salada.",
-        "Dica do chef: Não pique a carne com o garfo ao virar, para não perder sumo."
-       ],
-       "imageQuery": "Bife à Portuguesa Portuguesa",
-       "image": "/meals/lib-bife-portuguesa-04bf9e2c.webp",
-       "imageCredit": {
-        "name": "Imagem gerada por IA",
-        "url": ""
-       }
-      }
-     ]
-    },
     {
      "date": "2026-11-08",
      "recipes": [
@@ -10312,90 +10179,107 @@
        }
       },
       {
-       "id": "bulgogi",
+       "id": "arroz-marisco",
        "slot": 2,
        "meal": "Jantar",
-       "name": "Bulgogi com Arroz e Pickles",
-       "original": "불고기 (Bulgogi)",
-       "cuisine": "Coreana",
-       "description": "Carne em fatias finas marinada em soja, pera e alho, salteada e servida com arroz.",
+       "name": "Arroz de Marisco",
+       "original": "Arroz de Marisco",
+       "cuisine": "Portuguesa",
+       "description": "Arroz malandrinho com camarão e mexilhão, num caldo de tomate e coentros.",
        "servings": "4 pessoas",
-       "time": "40 min",
-       "difficulty": "Fácil",
+       "time": "50 min",
+       "difficulty": "Média",
        "veg": false,
        "allergens": [
-        "soja",
-        "frutos-secos"
+        "marisco"
        ],
-       "est": 3.2,
-       "imgDesc": "Korean bulgogi beef with steamed rice, cucumber pickles and lettuce leaves",
-       "mainCost": 2.39,
+       "est": 6.15,
+       "imgDesc": "Portuguese seafood rice, wet rice with prawns and mussels and fresh coriander in a pot",
+       "mainCost": 1.59,
        "ingredients": [
         {
-         "item": "Carne em fatias finas",
-         "qty": "600 g",
-         "price": 3.99,
+         "item": "Marisco (camarão/mexilhão)",
+         "qty": "800 g",
+         "price": 1.99,
          "per": "kg",
-         "amount": 0.6,
-         "note": "folheto: Pá de Porco com Osso Continente",
-         "promoId": "pa-de-porco-com-osso-continente"
+         "amount": 0.8,
+         "note": "folheto: Mexilhão Fresco",
+         "promoId": "mexilhao-fresco"
         },
         {
-         "item": "Arroz",
+         "item": "Arroz carolino",
          "qty": "300 g"
         },
         {
-         "item": "Molho de soja",
-         "qty": "5 c. sopa"
-        },
-        {
-         "item": "Açúcar",
-         "qty": "2 c. sopa"
-        },
-        {
-         "item": "Alho",
-         "qty": "4 dentes"
-        },
-        {
-         "item": "Pera",
-         "qty": "1/2"
-        },
-        {
-         "item": "Óleo de sésamo",
-         "qty": "1 c. sopa"
-        },
-        {
-         "item": "Cebolinho",
-         "qty": "4"
-        },
-        {
-         "item": "Sementes de sésamo",
-         "qty": "1 c. sopa"
-        },
-        {
-         "item": "Pepino",
+         "item": "Cebola",
          "qty": "1"
         },
         {
-         "item": "Vinagre",
+         "item": "Alho",
+         "qty": "3 dentes"
+        },
+        {
+         "item": "Tomate maduro",
+         "qty": "3"
+        },
+        {
+         "item": "Polpa de tomate",
          "qty": "2 c. sopa"
         },
         {
-         "item": "Alface",
-         "qty": "8 folhas"
+         "item": "Vinho branco",
+         "qty": "1 copo"
+        },
+        {
+         "item": "Coentros",
+         "qty": "1 molho"
+        },
+        {
+         "item": "Louro",
+         "qty": "1 folha"
+        },
+        {
+         "item": "Azeite",
+         "qty": "4 c. sopa"
+        },
+        {
+         "item": "Piri-piri",
+         "qty": "a gosto"
+        },
+        {
+         "item": "Caldo de peixe",
+         "qty": "1,2 l"
         }
        ],
        "steps": [
-        "Triture a pera com alho, soja, açúcar e óleo de sésamo para a marinada.",
-        "Marine as fatias finas de carne 1 hora (ou mais).",
-        "Prepare pickles: pepino em rodelas com vinagre, açúcar e sal.",
-        "Cozinhe o arroz.",
-        "Salteie a carne em frigideira muito quente, em duas vezes, 3 min.",
-        "Sirva com arroz, pickles, alface (para enrolar) e sésamo.",
-        "Dica do chef: A pera amacia a carne e equilibra o sabor."
+        "Lave o marisco. Aqueça o caldo de peixe com o louro.",
+        "Refogue cebola e alho no azeite 8 min; junte o tomate sem pele e a polpa e cozinhe 10 min.",
+        "Adicione o vinho branco e deixe evaporar 2 min.",
+        "Junte o arroz, mexa 1 min e adicione o caldo quente, cerca de 3 vezes o volume do arroz.",
+        "Cozinhe 10 min em lume médio; junte o marisco e cozinhe mais 6 a 8 min até o arroz ficar cremoso.",
+        "Retire do lume, junte coentros picados e deixe repousar 3 min antes de servir.",
+        "Dica do chef: Junte o marisco só na segunda metade da cozedura para não ficar duro."
        ],
-       "imageQuery": "불고기 (Bulgogi) Coreana",
-       "image": "/meals/lib-bulgogi-daf2e1bc.webp",
+       "imageQuery": "Arroz de Marisco Portuguesa",
+       "compare": [
+        {
+         "market": "Continente",
+         "product": "Mexilhão Fresco",
+         "price": 1.99,
+         "per": "kg",
+         "total": 1.59,
+         "promoId": "mexilhao-fresco"
+        },
+        {
+         "market": "Lidl",
+         "product": "Mexilhão Meia Concha",
+         "price": 4.99,
+         "per": "kg",
+         "total": 3.99,
+         "promoId": "mexilhao-meia-concha"
+        }
+       ],
+       "image": "/meals/lib-arroz-marisco-e4d6ae47.webp",
        "imageCredit": {
         "name": "Imagem gerada por IA",
         "url": ""
@@ -10478,7 +10362,7 @@
         "Dica do chef: Não cozinhe o peixe em excesso: deve ficar rosado e suculento."
        ],
        "imageQuery": "Pesce Spada alla Siciliana Italiana",
-       "image": "/meals/lib-espadarte-siciliana-8eed7a24.webp",
+       "image": "/meals/lib-espadarte-siciliana-a9b24904.webp",
        "imageCredit": {
         "name": "Imagem gerada por IA",
         "url": ""
@@ -10576,13 +10460,6 @@
    ],
    "hist": [
     {
-     "date": "2026-10-23",
-     "ids": [
-      "tagine-borrego",
-      "quesadillas"
-     ]
-    },
-    {
      "date": "2026-10-24",
      "ids": [
       "moussaka",
@@ -10672,6 +10549,13 @@
       "katsu-porco",
       "bife-portuguesa"
      ]
+    },
+    {
+     "date": "2026-11-08",
+     "ids": [
+      "coq-au-vin",
+      "arroz-marisco"
+     ]
     }
    ],
    "officialId": "https://folhetos.continente.pt/2026/11/semanal-45-vg65/",
@@ -10757,12 +10641,12 @@
     {
      "id": "caldeirada",
      "promos": [
-      "filetes-de-pescada-com-ovo-continente"
+      "filetes-de-pescada-do-cabo-ultracongelada-pescanova"
      ],
      "amounts": [
       1
      ],
-     "cost": 5.29,
+     "cost": 5.99,
      "est": 5.8
     },
     {
@@ -11087,12 +10971,12 @@
     {
      "id": "moqueca",
      "promos": [
-      "filetes-de-pescada-com-ovo-continente"
+      "filetes-de-pescada-do-cabo-ultracongelada-pescanova"
      ],
      "amounts": [
       0.8
      ],
-     "cost": 4.23,
+     "cost": 4.79,
      "est": 5.15
     },
     {
@@ -11263,12 +11147,12 @@
     {
      "id": "pasta-atum",
      "promos": [
-      "bife-de-atum-fresco-continente"
+      "filete-de-atum-em-azeite-santa-catarina"
      ],
      "amounts": [
       0.4
      ],
-     "cost": 1.8,
+     "cost": 1.2,
      "est": 3.1
     },
     {
@@ -11297,111 +11181,27 @@
    ],
    "recipes": [
     {
-     "id": "porco-alentejana",
+     "id": "lulas-guisadas",
      "slot": 1,
      "meal": "Almoço",
-     "name": "Carne de Porco à Alentejana",
-     "original": "Carne de Porco à Alentejana",
+     "name": "Lulas Guisadas com Batata",
+     "original": "Lulas Guisadas",
      "cuisine": "Portuguesa",
-     "description": "Cubos de porco marinados com amêijoas, batata frita e coentros: a mais famosa mistura de mar e serra.",
+     "description": "Lulas tenras guisadas lentamente com tomate, pimento e batata, servidas com arroz branco.",
      "servings": "4 pessoas",
      "time": "50 min",
-     "difficulty": "Média",
+     "difficulty": "Fácil",
      "veg": false,
      "allergens": [
       "marisco"
      ],
-     "est": 7.55,
-     "imgDesc": "Carne de porco à alentejana, pork cubes with clams, fried potato cubes and coriander",
-     "mainCost": 13.93,
-     "ingredients": [
-      {
-       "item": "Porco em cubos",
-       "qty": "700 g",
-       "price": 19.9,
-       "per": "kg",
-       "amount": 0.7,
-       "label": "1,99 € a embalagem de 100 g",
-       "note": "folheto: Lombo de porco fum pingo doce fat 100g",
-       "promoId": "lombo-de-porco-fum-pingo-doce-fat-100g"
-      },
-      {
-       "item": "Amêijoas",
-       "qty": "500 g"
-      },
-      {
-       "item": "Batata",
-       "qty": "600 g"
-      },
-      {
-       "item": "Alho",
-       "qty": "4 dentes"
-      },
-      {
-       "item": "Colorau",
-       "qty": "1 c. sopa"
-      },
-      {
-       "item": "Vinho branco",
-       "qty": "1 copo"
-      },
-      {
-       "item": "Louro",
-       "qty": "2 folhas"
-      },
-      {
-       "item": "Coentros",
-       "qty": "1 molho"
-      },
-      {
-       "item": "Limão",
-       "qty": "1"
-      },
-      {
-       "item": "Azeite e óleo",
-       "qty": "a gosto"
-      }
-     ],
-     "steps": [
-      "Marine o porco em cubos com alho, colorau, louro, vinho, sal e pimenta, 3 horas.",
-      "Deixe as amêijoas em água com sal 1 hora para largarem a areia.",
-      "Corte a batata em cubos e frite até dourar.",
-      "Frite o porco escorrido em azeite quente até ficar dourado; reduza o lume e cozinhe 15 min.",
-      "Junte as amêijoas, tape e cozinhe 4 min até abrirem; descarte as que ficarem fechadas.",
-      "Misture a batata, coentros e sirva com limão.",
-      "Dica do chef: Frite o porco em lume forte para selar o sumo."
-     ],
-     "imageQuery": "Carne de Porco à Alentejana Portuguesa",
-     "image": "/meals/lib-porco-alentejana-d2352674.webp",
-     "imageCredit": {
-      "name": "Imagem gerada por IA",
-      "url": ""
-     }
-    },
-    {
-     "id": "calamares",
-     "slot": 2,
-     "meal": "Jantar",
-     "name": "Calamares à Romana com Salada",
-     "original": "Calamares a la Romana",
-     "cuisine": "Espanhola",
-     "description": "Anéis de lula em polme leve, fritos até ficarem crocantes, com limão e maionese de alho.",
-     "servings": "4 pessoas",
-     "time": "35 min",
-     "difficulty": "Fácil",
-     "veg": false,
-     "allergens": [
-      "marisco",
-      "gluten",
-      "ovos"
-     ],
-     "est": 4.9,
-     "imgDesc": "Fried calamari rings a la romana with lemon wedges, garlic mayonnaise and french fries",
+     "est": 4.85,
+     "imgDesc": "Stewed squid rings in tomato sauce with potatoes, served with white rice",
      "mainCost": 1.59,
      "ingredients": [
       {
-       "item": "Lulas em anéis",
-       "qty": "700 g",
+       "item": "Lulas limpas",
+       "qty": "800 g",
        "price": 1.59,
        "per": "un",
        "amount": 1,
@@ -11409,49 +11209,140 @@
        "promoId": "chocobom-mini-s-gluten-gullon-pack3"
       },
       {
-       "item": "Farinha",
-       "qty": "150 g"
+       "item": "Batata",
+       "qty": "600 g"
       },
       {
-       "item": "Ovos",
+       "item": "Arroz branco",
+       "qty": "250 g"
+      },
+      {
+       "item": "Cebola",
        "qty": "2"
-      },
-      {
-       "item": "Cerveja",
-       "qty": "100 ml"
-      },
-      {
-       "item": "Óleo para fritar",
-       "qty": "500 ml"
-      },
-      {
-       "item": "Limão",
-       "qty": "2"
-      },
-      {
-       "item": "Maionese",
-       "qty": "4 c. sopa"
       },
       {
        "item": "Alho",
-       "qty": "1 dente"
+       "qty": "3 dentes"
       },
       {
-       "item": "Batata frita",
-       "qty": "600 g"
+       "item": "Tomate maduro",
+       "qty": "3"
+      },
+      {
+       "item": "Pimento verde",
+       "qty": "1"
+      },
+      {
+       "item": "Vinho branco",
+       "qty": "1 copo"
+      },
+      {
+       "item": "Louro",
+       "qty": "1 folha"
+      },
+      {
+       "item": "Azeite",
+       "qty": "4 c. sopa"
+      },
+      {
+       "item": "Coentros",
+       "qty": "1 molho"
       }
      ],
      "steps": [
-      "Seque bem os anéis de lula e tempere com sal.",
-      "Misture farinha, ovos, cerveja e uma pitada de sal para um polme espesso.",
-      "Aqueça o óleo a 180 ºC.",
-      "Passe os anéis pelo polme e frite em pequenas doses 2 a 3 min.",
-      "Escorra em papel absorvente.",
-      "Misture maionese com alho ralado e sirva com limão e batata frita.",
-      "Dica do chef: Frite em pequenas porções para o óleo não arrefecer."
+      "Corte as lulas em anéis ou tiras de 2 cm.",
+      "Refogue cebola, alho e pimento em tiras no azeite 8 min com o louro.",
+      "Junte o tomate picado e cozinhe 8 min.",
+      "Adicione as lulas, o vinho branco e meio copo de água. Tape e cozinhe em lume brando 25 min.",
+      "Junte a batata em cubos e cozinhe mais 15 a 20 min, até estar macia.",
+      "Cozinhe o arroz branco à parte (18 min) e sirva as lulas com coentros picados.",
+      "Dica do chef: Não mexa demasiado: as lulas devem ficar com o corte intacto."
      ],
-     "imageQuery": "Calamares a la Romana Espanhola",
-     "image": "/meals/lib-calamares-5715a1e2.webp",
+     "imageQuery": "Lulas Guisadas Portuguesa",
+     "image": "/meals/lib-lulas-guisadas-3903aac1.webp",
+     "imageCredit": {
+      "name": "Imagem gerada por IA",
+      "url": ""
+     }
+    },
+    {
+     "id": "tortilha",
+     "slot": 2,
+     "meal": "Jantar",
+     "name": "Tortilha Espanhola com Salada",
+     "original": "Tortilla de Patatas",
+     "cuisine": "Espanhola",
+     "description": "Omelete grossa de batata e cebola, macia por dentro e dourada por fora.",
+     "servings": "4 pessoas",
+     "time": "40 min",
+     "difficulty": "Média",
+     "veg": true,
+     "allergens": [
+      "ovos"
+     ],
+     "est": 3,
+     "imgDesc": "Spanish potato omelette tortilla española cut into wedges with a tomato salad and bread",
+     "mainCost": 3.99,
+     "ingredients": [
+      {
+       "item": "Ovos",
+       "qty": "8",
+       "price": 3.99,
+       "per": "un",
+       "amount": 1,
+       "note": "folheto: Ovos m/l ar livre matinados 12un+3u",
+       "promoId": "ovos-m-l-ar-livre-matinados-12un-3u"
+      },
+      {
+       "item": "Batata",
+       "qty": "700 g"
+      },
+      {
+       "item": "Cebola",
+       "qty": "1"
+      },
+      {
+       "item": "Azeite",
+       "qty": "150 ml"
+      },
+      {
+       "item": "Salada de tomate e alface",
+       "qty": "1 prato"
+      },
+      {
+       "item": "Pão",
+       "qty": "4 fatias"
+      }
+     ],
+     "steps": [
+      "Corte a batata em lâminas finas e a cebola em tiras.",
+      "Cozinhe em azeite em lume brando 15 a 20 min, sem dourar, até a batata estar macia.",
+      "Escorra o azeite e junte aos ovos batidos com sal; deixe repousar 5 min.",
+      "Numa frigideira antiaderente, aqueça um fio de azeite e deite a mistura.",
+      "Cozinhe 5 min, vire com a ajuda de um prato e cozinhe mais 3 min.",
+      "Sirva morna com salada e pão.",
+      "Dica do chef: Deixe a mistura repousar: a batata absorve o ovo e fica mais cremosa."
+     ],
+     "imageQuery": "Tortilla de Patatas Espanhola",
+     "compare": [
+      {
+       "market": "Aldi",
+       "product": "Ovos do Solo Classe M",
+       "price": 2.79,
+       "per": "un",
+       "total": 2.79,
+       "promoId": "ovos-do-solo-classe-m"
+      },
+      {
+       "market": "Pingo Doce",
+       "product": "Ovos m/l ar livre matinados 12un+3u",
+       "price": 3.99,
+       "per": "un",
+       "total": 3.99,
+       "promoId": "ovos-m-l-ar-livre-matinados-12un-3u"
+      }
+     ],
+     "image": "/meals/lib-tortilha-2db0b9a5.webp",
      "imageCredit": {
       "name": "Imagem gerada por IA",
       "url": ""
@@ -23153,119 +23044,35 @@
     }
    ],
    "check": {
-    "date": "2026-11-07",
+    "date": "2026-11-08",
     "result": "sem-novo"
    },
    "plan": [
     {
-     "date": "2026-11-07",
+     "date": "2026-11-08",
      "recipes": [
       {
-       "id": "porco-alentejana",
+       "id": "lulas-guisadas",
        "slot": 1,
        "meal": "Almoço",
-       "name": "Carne de Porco à Alentejana",
-       "original": "Carne de Porco à Alentejana",
+       "name": "Lulas Guisadas com Batata",
+       "original": "Lulas Guisadas",
        "cuisine": "Portuguesa",
-       "description": "Cubos de porco marinados com amêijoas, batata frita e coentros: a mais famosa mistura de mar e serra.",
+       "description": "Lulas tenras guisadas lentamente com tomate, pimento e batata, servidas com arroz branco.",
        "servings": "4 pessoas",
        "time": "50 min",
-       "difficulty": "Média",
+       "difficulty": "Fácil",
        "veg": false,
        "allergens": [
         "marisco"
        ],
-       "est": 7.55,
-       "imgDesc": "Carne de porco à alentejana, pork cubes with clams, fried potato cubes and coriander",
-       "mainCost": 13.93,
-       "ingredients": [
-        {
-         "item": "Porco em cubos",
-         "qty": "700 g",
-         "price": 19.9,
-         "per": "kg",
-         "amount": 0.7,
-         "label": "1,99 € a embalagem de 100 g",
-         "note": "folheto: Lombo de porco fum pingo doce fat 100g",
-         "promoId": "lombo-de-porco-fum-pingo-doce-fat-100g"
-        },
-        {
-         "item": "Amêijoas",
-         "qty": "500 g"
-        },
-        {
-         "item": "Batata",
-         "qty": "600 g"
-        },
-        {
-         "item": "Alho",
-         "qty": "4 dentes"
-        },
-        {
-         "item": "Colorau",
-         "qty": "1 c. sopa"
-        },
-        {
-         "item": "Vinho branco",
-         "qty": "1 copo"
-        },
-        {
-         "item": "Louro",
-         "qty": "2 folhas"
-        },
-        {
-         "item": "Coentros",
-         "qty": "1 molho"
-        },
-        {
-         "item": "Limão",
-         "qty": "1"
-        },
-        {
-         "item": "Azeite e óleo",
-         "qty": "a gosto"
-        }
-       ],
-       "steps": [
-        "Marine o porco em cubos com alho, colorau, louro, vinho, sal e pimenta, 3 horas.",
-        "Deixe as amêijoas em água com sal 1 hora para largarem a areia.",
-        "Corte a batata em cubos e frite até dourar.",
-        "Frite o porco escorrido em azeite quente até ficar dourado; reduza o lume e cozinhe 15 min.",
-        "Junte as amêijoas, tape e cozinhe 4 min até abrirem; descarte as que ficarem fechadas.",
-        "Misture a batata, coentros e sirva com limão.",
-        "Dica do chef: Frite o porco em lume forte para selar o sumo."
-       ],
-       "imageQuery": "Carne de Porco à Alentejana Portuguesa",
-       "image": "/meals/lib-porco-alentejana-d2352674.webp",
-       "imageCredit": {
-        "name": "Imagem gerada por IA",
-        "url": ""
-       }
-      },
-      {
-       "id": "calamares",
-       "slot": 2,
-       "meal": "Jantar",
-       "name": "Calamares à Romana com Salada",
-       "original": "Calamares a la Romana",
-       "cuisine": "Espanhola",
-       "description": "Anéis de lula em polme leve, fritos até ficarem crocantes, com limão e maionese de alho.",
-       "servings": "4 pessoas",
-       "time": "35 min",
-       "difficulty": "Fácil",
-       "veg": false,
-       "allergens": [
-        "marisco",
-        "gluten",
-        "ovos"
-       ],
-       "est": 4.9,
-       "imgDesc": "Fried calamari rings a la romana with lemon wedges, garlic mayonnaise and french fries",
+       "est": 4.85,
+       "imgDesc": "Stewed squid rings in tomato sauce with potatoes, served with white rice",
        "mainCost": 1.59,
        "ingredients": [
         {
-         "item": "Lulas em anéis",
-         "qty": "700 g",
+         "item": "Lulas limpas",
+         "qty": "800 g",
          "price": 1.59,
          "per": "un",
          "amount": 1,
@@ -23273,91 +23080,12 @@
          "promoId": "chocobom-mini-s-gluten-gullon-pack3"
         },
         {
-         "item": "Farinha",
-         "qty": "150 g"
-        },
-        {
-         "item": "Ovos",
-         "qty": "2"
-        },
-        {
-         "item": "Cerveja",
-         "qty": "100 ml"
-        },
-        {
-         "item": "Óleo para fritar",
-         "qty": "500 ml"
-        },
-        {
-         "item": "Limão",
-         "qty": "2"
-        },
-        {
-         "item": "Maionese",
-         "qty": "4 c. sopa"
-        },
-        {
-         "item": "Alho",
-         "qty": "1 dente"
-        },
-        {
-         "item": "Batata frita",
+         "item": "Batata",
          "qty": "600 g"
-        }
-       ],
-       "steps": [
-        "Seque bem os anéis de lula e tempere com sal.",
-        "Misture farinha, ovos, cerveja e uma pitada de sal para um polme espesso.",
-        "Aqueça o óleo a 180 ºC.",
-        "Passe os anéis pelo polme e frite em pequenas doses 2 a 3 min.",
-        "Escorra em papel absorvente.",
-        "Misture maionese com alho ralado e sirva com limão e batata frita.",
-        "Dica do chef: Frite em pequenas porções para o óleo não arrefecer."
-       ],
-       "imageQuery": "Calamares a la Romana Espanhola",
-       "image": "/meals/lib-calamares-5715a1e2.webp",
-       "imageCredit": {
-        "name": "Imagem gerada por IA",
-        "url": ""
-       }
-      }
-     ]
-    },
-    {
-     "date": "2026-11-08",
-     "recipes": [
-      {
-       "id": "tagine-borrego",
-       "slot": 1,
-       "meal": "Almoço",
-       "name": "Tagine de Borrego com Ameixas",
-       "original": "Tajine d'Agneau aux Pruneaux",
-       "cuisine": "Marroquina",
-       "description": "Borrego cozinhado lentamente com cebola, mel, ameixas e amêndoas, com cuscuz.",
-       "servings": "4 pessoas",
-       "time": "1h 45min",
-       "difficulty": "Média",
-       "veg": false,
-       "allergens": [
-        "frutos-secos",
-        "gluten"
-       ],
-       "est": 4.05,
-       "imgDesc": "Moroccan lamb tagine with prunes and almonds in a tagine pot, with couscous",
-       "mainCost": 18.99,
-       "ingredients": [
-        {
-         "item": "Borrego em pedaços",
-         "qty": "1 kg",
-         "price": 18.99,
-         "per": "un",
-         "amount": 1,
-         "note": "folheto: Borrego costeletas pd",
-         "promoId": "borrego-costeletas-pd"
         },
         {
-         "item": "Cuscuz",
-         "qty": "300 g"
+         "item": "Arroz branco",
+         "qty": "250 g"
         },
         {
          "item": "Cebola",
@@ -23368,142 +23096,124 @@
          "qty": "3 dentes"
         },
         {
-         "item": "Canela",
-         "qty": "1 c. chá"
+         "item": "Tomate maduro",
+         "qty": "3"
         },
         {
-         "item": "Gengibre",
-         "qty": "1 c. chá"
+         "item": "Pimento verde",
+         "qty": "1"
         },
         {
-         "item": "Ameixas secas",
-         "qty": "150 g"
+         "item": "Vinho branco",
+         "qty": "1 copo"
         },
         {
-         "item": "Mel",
-         "qty": "2 c. sopa"
-        },
-        {
-         "item": "Amêndoas",
-         "qty": "50 g"
+         "item": "Louro",
+         "qty": "1 folha"
         },
         {
          "item": "Azeite",
          "qty": "4 c. sopa"
+        },
+        {
+         "item": "Coentros",
+         "qty": "1 molho"
         }
        ],
        "steps": [
-        "Tempere o borrego com gengibre, canela, sal e pimenta.",
-        "Doure em azeite; reserve.",
-        "Refogue a cebola e o alho 10 min.",
-        "Regresse a carne, cubra com água e cozinhe tapado em lume brando 1 hora.",
-        "Junte ameixas e mel e cozinhe mais 20 min.",
-        "Torre as amêndoas, prepare o cuscuz e sirva.",
-        "Dica do chef: O doce das ameixas equilibra a gordura do borrego."
+        "Corte as lulas em anéis ou tiras de 2 cm.",
+        "Refogue cebola, alho e pimento em tiras no azeite 8 min com o louro.",
+        "Junte o tomate picado e cozinhe 8 min.",
+        "Adicione as lulas, o vinho branco e meio copo de água. Tape e cozinhe em lume brando 25 min.",
+        "Junte a batata em cubos e cozinhe mais 15 a 20 min, até estar macia.",
+        "Cozinhe o arroz branco à parte (18 min) e sirva as lulas com coentros picados.",
+        "Dica do chef: Não mexa demasiado: as lulas devem ficar com o corte intacto."
        ],
-       "imageQuery": "Tajine d'Agneau aux Pruneaux Marroquina",
-       "image": "/meals/lib-tagine-borrego-5fbe59b9.webp",
+       "imageQuery": "Lulas Guisadas Portuguesa",
+       "image": "/meals/lib-lulas-guisadas-3903aac1.webp",
        "imageCredit": {
         "name": "Imagem gerada por IA",
         "url": ""
        }
       },
       {
-       "id": "hamburguer",
+       "id": "tortilha",
        "slot": 2,
        "meal": "Jantar",
-       "name": "Hambúrguer Caseiro com Batata Frita",
-       "original": "Classic Cheeseburger",
-       "cuisine": "Americana",
-       "description": "Hambúrguer sumarento com queijo derretido, no pão tostado, com batata frita.",
+       "name": "Tortilha Espanhola com Salada",
+       "original": "Tortilla de Patatas",
+       "cuisine": "Espanhola",
+       "description": "Omelete grossa de batata e cebola, macia por dentro e dourada por fora.",
        "servings": "4 pessoas",
-       "time": "35 min",
-       "difficulty": "Fácil",
-       "veg": false,
+       "time": "40 min",
+       "difficulty": "Média",
+       "veg": true,
        "allergens": [
-        "gluten",
-        "lactose",
         "ovos"
        ],
-       "est": 5.25,
-       "imgDesc": "Homemade cheeseburger in a toasted bun with lettuce, tomato and pickles, with french fries",
-       "mainCost": 9.99,
+       "est": 3,
+       "imgDesc": "Spanish potato omelette tortilla española cut into wedges with a tomato salad and bread",
+       "mainCost": 3.99,
        "ingredients": [
         {
-         "item": "Carne picada",
-         "qty": "700 g",
-         "price": 9.99,
+         "item": "Ovos",
+         "qty": "8",
+         "price": 3.99,
          "per": "un",
          "amount": 1,
-         "note": "folheto: Hambúrguer de vaca s/glúten cap iglo 8un",
-         "promoId": "hamburguer-de-vaca-s-gluten-cap-iglo-8un"
+         "note": "folheto: Ovos m/l ar livre matinados 12un+3u",
+         "promoId": "ovos-m-l-ar-livre-matinados-12un-3u"
         },
         {
-         "item": "Pão de hambúrguer",
-         "qty": "4"
-        },
-        {
-         "item": "Queijo cheddar",
-         "qty": "4 fatias"
-        },
-        {
-         "item": "Alface",
-         "qty": "4 folhas"
-        },
-        {
-         "item": "Tomate",
-         "qty": "1"
+         "item": "Batata",
+         "qty": "700 g"
         },
         {
          "item": "Cebola",
          "qty": "1"
         },
         {
-         "item": "Pickles",
-         "qty": "8 rodelas"
+         "item": "Azeite",
+         "qty": "150 ml"
         },
         {
-         "item": "Ketchup e mostarda",
-         "qty": "a gosto"
+         "item": "Salada de tomate e alface",
+         "qty": "1 prato"
         },
         {
-         "item": "Batata",
-         "qty": "800 g"
-        },
-        {
-         "item": "Óleo para fritar",
-         "qty": "400 ml"
+         "item": "Pão",
+         "qty": "4 fatias"
         }
        ],
        "steps": [
-        "Tempere a carne com sal e pimenta e forme 4 hambúrgueres.",
-        "Grelhe em frigideira muito quente 3 a 4 min por lado.",
-        "Coloque queijo no último minuto e tape.",
-        "Toste os pães.",
-        "Frite a batata em palitos.",
-        "Monte com alface, tomate, cebola, pickles e molhos.",
-        "Dica do chef: Não pressione o hambúrguer na frigideira."
+        "Corte a batata em lâminas finas e a cebola em tiras.",
+        "Cozinhe em azeite em lume brando 15 a 20 min, sem dourar, até a batata estar macia.",
+        "Escorra o azeite e junte aos ovos batidos com sal; deixe repousar 5 min.",
+        "Numa frigideira antiaderente, aqueça um fio de azeite e deite a mistura.",
+        "Cozinhe 5 min, vire com a ajuda de um prato e cozinhe mais 3 min.",
+        "Sirva morna com salada e pão.",
+        "Dica do chef: Deixe a mistura repousar: a batata absorve o ovo e fica mais cremosa."
        ],
-       "imageQuery": "Classic Cheeseburger Americana",
+       "imageQuery": "Tortilla de Patatas Espanhola",
        "compare": [
         {
-         "market": "Lidl",
-         "product": "Hambúrguer de Novilho com Trufas",
-         "price": 4.49,
+         "market": "Aldi",
+         "product": "Ovos do Solo Classe M",
+         "price": 2.79,
          "per": "un",
-         "total": 4.49,
-         "promoId": "hamburguer-de-novilho-com-trufas"
+         "total": 2.79,
+         "promoId": "ovos-do-solo-classe-m"
         },
         {
          "market": "Pingo Doce",
-         "product": "Hambúrguer de vaca s/glúten cap iglo 8un",
-         "price": 9.99,
+         "product": "Ovos m/l ar livre matinados 12un+3u",
+         "price": 3.99,
          "per": "un",
-         "total": 9.99,
-         "promoId": "hamburguer-de-vaca-s-gluten-cap-iglo-8un"
+         "total": 3.99,
+         "promoId": "ovos-m-l-ar-livre-matinados-12un-3u"
         }
        ],
-       "image": "/meals/lib-hamburguer-b26ea0f0.webp",
+       "image": "/meals/lib-tortilha-2db0b9a5.webp",
        "imageCredit": {
         "name": "Imagem gerada por IA",
         "url": ""
@@ -23612,112 +23322,101 @@
        }
       },
       {
-       "id": "moqueca",
+       "id": "hamburguer",
        "slot": 2,
        "meal": "Jantar",
-       "name": "Moqueca de Peixe com Arroz",
-       "original": "Moqueca Capixaba",
-       "cuisine": "Brasileira",
-       "description": "Peixe cozinhado em leite de coco, tomate e pimento, com coentros e arroz branco.",
+       "name": "Hambúrguer Caseiro com Batata Frita",
+       "original": "Classic Cheeseburger",
+       "cuisine": "Americana",
+       "description": "Hambúrguer sumarento com queijo derretido, no pão tostado, com batata frita.",
        "servings": "4 pessoas",
-       "time": "45 min",
+       "time": "35 min",
        "difficulty": "Fácil",
        "veg": false,
        "allergens": [
-        "peixe"
+        "gluten",
+        "lactose",
+        "ovos"
        ],
-       "est": 5.15,
-       "imgDesc": "Brazilian fish moqueca stew in coconut milk with peppers and tomato, with white rice and cilantro",
-       "mainCost": 8.88,
+       "est": 5.25,
+       "imgDesc": "Homemade cheeseburger in a toasted bun with lettuce, tomato and pickles, with french fries",
+       "mainCost": 9.99,
        "ingredients": [
         {
-         "item": "Postas de peixe",
-         "qty": "800 g",
-         "price": 11.1,
-         "per": "kg",
-         "amount": 0.8,
-         "label": "9,99 € a embalagem de 900 g",
-         "note": "folheto: Filetes pescada argentina pescanova 900g",
-         "promoId": "filetes-pescada-argentina-pescanova-900g"
+         "item": "Carne picada",
+         "qty": "700 g",
+         "price": 9.99,
+         "per": "un",
+         "amount": 1,
+         "note": "folheto: Hambúrguer de vaca s/glúten cap iglo 8un",
+         "promoId": "hamburguer-de-vaca-s-gluten-cap-iglo-8un"
         },
         {
-         "item": "Arroz branco",
-         "qty": "300 g"
+         "item": "Pão de hambúrguer",
+         "qty": "4"
         },
         {
-         "item": "Leite de coco",
-         "qty": "400 ml"
+         "item": "Queijo cheddar",
+         "qty": "4 fatias"
         },
         {
-         "item": "Cebola",
-         "qty": "2"
+         "item": "Alface",
+         "qty": "4 folhas"
         },
         {
          "item": "Tomate",
-         "qty": "3"
-        },
-        {
-         "item": "Pimento",
          "qty": "1"
         },
         {
-         "item": "Alho",
-         "qty": "3 dentes"
-        },
-        {
-         "item": "Coentros",
-         "qty": "1 molho"
-        },
-        {
-         "item": "Lima",
+         "item": "Cebola",
          "qty": "1"
         },
         {
-         "item": "Azeite de dendê ou azeite",
-         "qty": "3 c. sopa"
+         "item": "Pickles",
+         "qty": "8 rodelas"
         },
         {
-         "item": "Piri-piri",
+         "item": "Ketchup e mostarda",
          "qty": "a gosto"
+        },
+        {
+         "item": "Batata",
+         "qty": "800 g"
+        },
+        {
+         "item": "Óleo para fritar",
+         "qty": "400 ml"
         }
        ],
        "steps": [
-        "Tempere o peixe com lima, alho, sal e pimenta, 20 min.",
-        "Em panela larga, faça camadas de cebola, tomate e pimento em rodelas.",
-        "Coloque o peixe por cima e regue com azeite.",
-        "Junte o leite de coco e piri-piri; tape e cozinhe 15 a 20 min em lume brando.",
-        "Cozinhe o arroz branco.",
-        "Finalize com coentros e sirva com arroz.",
-        "Dica do chef: Não mexa o peixe: abane suavemente a panela."
+        "Tempere a carne com sal e pimenta e forme 4 hambúrgueres.",
+        "Grelhe em frigideira muito quente 3 a 4 min por lado.",
+        "Coloque queijo no último minuto e tape.",
+        "Toste os pães.",
+        "Frite a batata em palitos.",
+        "Monte com alface, tomate, cebola, pickles e molhos.",
+        "Dica do chef: Não pressione o hambúrguer na frigideira."
        ],
-       "imageQuery": "Moqueca Capixaba Brasileira",
+       "imageQuery": "Classic Cheeseburger Americana",
        "compare": [
         {
-         "market": "Continente",
-         "product": "Filetes de Pescada com Ovo Continente",
-         "price": 5.29,
-         "per": "kg",
-         "total": 4.23,
-         "promoId": "filetes-de-pescada-com-ovo-continente"
-        },
-        {
          "market": "Lidl",
-         "product": "Pescada do Cabo à Posta para Cozer XXL",
-         "price": 5.85,
-         "per": "kg",
-         "total": 4.68,
-         "promoId": "pescada-do-cabo-a-posta-para-cozer-xxl"
+         "product": "Hambúrguer de Novilho com Trufas",
+         "price": 4.49,
+         "per": "un",
+         "total": 4.49,
+         "promoId": "hamburguer-de-novilho-com-trufas"
         },
         {
          "market": "Pingo Doce",
-         "product": "Filetes pescada argentina pescanova 900g",
-         "price": 11.1,
-         "per": "kg",
-         "total": 8.88,
-         "promoId": "filetes-pescada-argentina-pescanova-900g"
+         "product": "Hambúrguer de vaca s/glúten cap iglo 8un",
+         "price": 9.99,
+         "per": "un",
+         "total": 9.99,
+         "promoId": "hamburguer-de-vaca-s-gluten-cap-iglo-8un"
         }
        ],
-       "image": "/meals/lib-moqueca-425d828f.webp",
+       "image": "/meals/lib-hamburguer-b26ea0f0.webp",
        "imageCredit": {
         "name": "Imagem gerada por IA",
         "url": ""
@@ -23727,13 +23426,6 @@
     }
    ],
    "hist": [
-    {
-     "date": "2026-10-23",
-     "ids": [
-      "tagine-frango",
-      "moqueca"
-     ]
-    },
     {
      "date": "2026-10-24",
      "ids": [
@@ -23823,6 +23515,13 @@
      "ids": [
       "porco-alentejana",
       "calamares"
+     ]
+    },
+    {
+     "date": "2026-11-08",
+     "ids": [
+      "lulas-guisadas",
+      "tortilha"
      ]
     }
    ],
@@ -24179,189 +23878,196 @@
    ],
    "recipes": [
     {
-     "id": "gyros-porco",
+     "id": "frango-frito",
      "slot": 1,
      "meal": "Almoço",
-     "name": "Gyros de Porco no Pão Pita",
-     "original": "Γύρος (Gyros)",
-     "cuisine": "Grega",
-     "description": "Tiras de porco temperadas e salteadas em pita com tzatziki, tomate e batata frita.",
-     "servings": "4 pessoas",
-     "time": "40 min",
-     "difficulty": "Fácil",
-     "veg": false,
-     "allergens": [
-      "lactose",
-      "gluten"
-     ],
-     "est": 5.55,
-     "imgDesc": "Pork gyros in pita bread with tzatziki, tomato, red onion and french fries",
-     "mainCost": 3.14,
-     "ingredients": [
-      {
-       "item": "Porco em tiras",
-       "qty": "700 g",
-       "price": 4.49,
-       "per": "kg",
-       "amount": 0.7,
-       "label": "Sempre disponível",
-       "note": "folheto: Lombo de Porco",
-       "promoId": "lombo-de-porco"
-      },
-      {
-       "item": "Pães pita",
-       "qty": "4"
-      },
-      {
-       "item": "Iogurte grego",
-       "qty": "250 g"
-      },
-      {
-       "item": "Pepino",
-       "qty": "1/2"
-      },
-      {
-       "item": "Alho",
-       "qty": "3 dentes"
-      },
-      {
-       "item": "Orégãos",
-       "qty": "1 c. sopa"
-      },
-      {
-       "item": "Paprika",
-       "qty": "1 c. chá"
-      },
-      {
-       "item": "Tomate",
-       "qty": "2"
-      },
-      {
-       "item": "Cebola roxa",
-       "qty": "1"
-      },
-      {
-       "item": "Batata frita",
-       "qty": "500 g"
-      },
-      {
-       "item": "Azeite",
-       "qty": "3 c. sopa"
-      }
-     ],
-     "steps": [
-      "Corte o porco em tiras finas e tempere com orégãos, paprika, alho, sal e azeite, 30 min.",
-      "Faça um molho de iogurte com pepino e alho.",
-      "Salteie o porco em frigideira muito quente, em duas vezes, 6 min.",
-      "Aqueça as pitas.",
-      "Recheie com porco, tomate, cebola, batata frita e molho.",
-      "Sirva de imediato.",
-      "Dica do chef: Frigideira muito quente: a carne deve dourar, não cozer."
-     ],
-     "imageQuery": "Γύρος (Gyros) Grega",
-     "image": "/meals/lib-gyros-porco-886aaec4.webp",
-     "imageCredit": {
-      "name": "Imagem gerada por IA",
-      "url": ""
-     }
-    },
-    {
-     "id": "hamburguer",
-     "slot": 2,
-     "meal": "Jantar",
-     "name": "Hambúrguer Caseiro com Batata Frita",
-     "original": "Classic Cheeseburger",
+     "name": "Frango Frito Crocante com Puré e Salada de Couve",
+     "original": "Southern Fried Chicken",
      "cuisine": "Americana",
-     "description": "Hambúrguer sumarento com queijo derretido, no pão tostado, com batata frita.",
+     "description": "Frango marinado em leitelho, panado e frito, com puré cremoso e salada de couve.",
      "servings": "4 pessoas",
-     "time": "35 min",
-     "difficulty": "Fácil",
+     "time": "1h",
+     "difficulty": "Média",
      "veg": false,
      "allergens": [
       "gluten",
       "lactose",
       "ovos"
      ],
-     "est": 5.25,
-     "imgDesc": "Homemade cheeseburger in a toasted bun with lettuce, tomato and pickles, with french fries",
-     "mainCost": 4.49,
+     "est": 3.95,
+     "imgDesc": "Southern fried chicken pieces with mashed potatoes and coleslaw",
+     "mainCost": 4.31,
      "ingredients": [
       {
-       "item": "Carne picada",
-       "qty": "700 g",
-       "price": 4.49,
-       "per": "un",
-       "amount": 1,
-       "label": "DELUXE",
-       "note": "folheto: Hambúrguer de Novilho com Trufas",
-       "promoId": "hamburguer-de-novilho-com-trufas"
+       "item": "Coxas e sobrecoxas de frango",
+       "qty": "1,2 kg",
+       "price": 3.59,
+       "per": "kg",
+       "amount": 1.2,
+       "label": "Emb. 1 kg",
+       "note": "folheto: Coxa de Frango XXL",
+       "promoId": "coxa-de-frango-xxl"
       },
       {
-       "item": "Pão de hambúrguer",
-       "qty": "4"
+       "item": "Iogurte natural ou leitelho",
+       "qty": "250 ml"
       },
       {
-       "item": "Queijo cheddar",
-       "qty": "4 fatias"
+       "item": "Farinha",
+       "qty": "200 g"
       },
       {
-       "item": "Alface",
-       "qty": "4 folhas"
+       "item": "Paprika",
+       "qty": "2 c. chá"
       },
       {
-       "item": "Tomate",
-       "qty": "1"
-      },
-      {
-       "item": "Cebola",
-       "qty": "1"
-      },
-      {
-       "item": "Pickles",
-       "qty": "8 rodelas"
-      },
-      {
-       "item": "Ketchup e mostarda",
-       "qty": "a gosto"
+       "item": "Alho em pó",
+       "qty": "1 c. chá"
       },
       {
        "item": "Batata",
        "qty": "800 g"
       },
       {
+       "item": "Manteiga",
+       "qty": "50 g"
+      },
+      {
+       "item": "Leite",
+       "qty": "150 ml"
+      },
+      {
+       "item": "Repolho",
+       "qty": "1/4"
+      },
+      {
+       "item": "Cenoura",
+       "qty": "1"
+      },
+      {
+       "item": "Maionese",
+       "qty": "3 c. sopa"
+      },
+      {
        "item": "Óleo para fritar",
-       "qty": "400 ml"
+       "qty": "500 ml"
       }
      ],
      "steps": [
-      "Tempere a carne com sal e pimenta e forme 4 hambúrgueres.",
-      "Grelhe em frigideira muito quente 3 a 4 min por lado.",
-      "Coloque queijo no último minuto e tape.",
-      "Toste os pães.",
-      "Frite a batata em palitos.",
-      "Monte com alface, tomate, cebola, pickles e molhos.",
-      "Dica do chef: Não pressione o hambúrguer na frigideira."
+      "Marine o frango no iogurte com sal 2 horas.",
+      "Misture a farinha com paprika, alho em pó, sal e pimenta; envolva o frango.",
+      "Frite em óleo a 170 ºC 14 a 16 min até estar dourado e cozido.",
+      "Cozinhe a batata e faça puré com manteiga e leite.",
+      "Rale o repolho e a cenoura e misture com maionese.",
+      "Sirva o frango com puré e salada.",
+      "Dica do chef: Use termómetro: o óleo deve manter 170 ºC."
      ],
-     "imageQuery": "Classic Cheeseburger Americana",
+     "imageQuery": "Southern Fried Chicken Americana",
      "compare": [
       {
-       "market": "Lidl",
-       "product": "Hambúrguer de Novilho com Trufas",
-       "price": 4.49,
-       "per": "un",
-       "total": 4.49,
-       "promoId": "hamburguer-de-novilho-com-trufas"
+       "market": "Continente",
+       "product": "Coxas de Frango Congeladas Continente",
+       "price": 3.49,
+       "per": "kg",
+       "total": 4.19,
+       "promoId": "coxas-de-frango-congeladas-continente"
       },
       {
-       "market": "Pingo Doce",
-       "product": "Hambúrguer de vaca s/glúten cap iglo 8un",
-       "price": 9.99,
-       "per": "un",
-       "total": 9.99,
-       "promoId": "hamburguer-de-vaca-s-gluten-cap-iglo-8un"
+       "market": "Lidl",
+       "product": "Coxa de Frango XXL",
+       "price": 3.59,
+       "per": "kg",
+       "total": 4.31,
+       "promoId": "coxa-de-frango-xxl"
       }
      ],
-     "image": "/meals/lib-hamburguer-b26ea0f0.webp",
+     "image": "/meals/lib-frango-frito-beb9abc6.webp",
+     "imageCredit": {
+      "name": "Imagem gerada por IA",
+      "url": ""
+     }
+    },
+    {
+     "id": "tacos-porco",
+     "slot": 2,
+     "meal": "Jantar",
+     "name": "Tacos de Porco com Salsa Fresca",
+     "original": "Tacos de Carnitas",
+     "cuisine": "Mexicana",
+     "description": "Porco desfiado e crocante em tortilhas de milho, com cebola roxa, coentros e lima.",
+     "servings": "4 pessoas",
+     "time": "50 min",
+     "difficulty": "Fácil",
+     "veg": false,
+     "allergens": [
+      "gluten"
+     ],
+     "est": 8,
+     "imgDesc": "Pulled pork carnitas tacos on corn tortillas with fresh salsa, red onion, cilantro, lime and avocado",
+     "mainCost": 3.59,
+     "ingredients": [
+      {
+       "item": "Porco em pedaços",
+       "qty": "800 g",
+       "price": 4.49,
+       "per": "kg",
+       "amount": 0.8,
+       "label": "Sempre disponível",
+       "note": "folheto: Lombo de Porco",
+       "promoId": "lombo-de-porco"
+      },
+      {
+       "item": "Tortilhas",
+       "qty": "12"
+      },
+      {
+       "item": "Cebola roxa",
+       "qty": "1"
+      },
+      {
+       "item": "Coentros",
+       "qty": "1 molho"
+      },
+      {
+       "item": "Lima",
+       "qty": "2"
+      },
+      {
+       "item": "Cominhos",
+       "qty": "1 c. chá"
+      },
+      {
+       "item": "Orégãos",
+       "qty": "1 c. chá"
+      },
+      {
+       "item": "Laranja",
+       "qty": "1"
+      },
+      {
+       "item": "Tomate",
+       "qty": "3"
+      },
+      {
+       "item": "Abacate",
+       "qty": "1"
+      },
+      {
+       "item": "Azeite",
+       "qty": "2 c. sopa"
+      }
+     ],
+     "steps": [
+      "Tempere o porco com sal, cominhos, orégãos e sumo de laranja.",
+      "Cozinhe em lume brando, tapado, 40 min.",
+      "Desfie e doure numa frigideira com azeite até ficar crocante nas pontas.",
+      "Prepare a salsa com tomate, cebola, coentros, lima e sal.",
+      "Aqueça as tortilhas.",
+      "Monte os tacos e sirva com abacate e lima.",
+      "Dica do chef: Doure a carne no fim para ficar crocante."
+     ],
+     "imageQuery": "Tacos de Carnitas Mexicana",
+     "image": "/meals/lib-tacos-porco-f8bb3168.webp",
      "imageCredit": {
       "name": "Imagem gerada por IA",
       "url": ""
@@ -24770,372 +24476,106 @@
     }
    ],
    "check": {
-    "date": "2026-11-07",
+    "date": "2026-11-08",
     "result": "sem-novo"
    },
    "plan": [
     {
-     "date": "2026-11-07",
+     "date": "2026-11-08",
      "recipes": [
       {
-       "id": "gyros-porco",
+       "id": "frango-frito",
        "slot": 1,
        "meal": "Almoço",
-       "name": "Gyros de Porco no Pão Pita",
-       "original": "Γύρος (Gyros)",
-       "cuisine": "Grega",
-       "description": "Tiras de porco temperadas e salteadas em pita com tzatziki, tomate e batata frita.",
-       "servings": "4 pessoas",
-       "time": "40 min",
-       "difficulty": "Fácil",
-       "veg": false,
-       "allergens": [
-        "lactose",
-        "gluten"
-       ],
-       "est": 5.55,
-       "imgDesc": "Pork gyros in pita bread with tzatziki, tomato, red onion and french fries",
-       "mainCost": 3.14,
-       "ingredients": [
-        {
-         "item": "Porco em tiras",
-         "qty": "700 g",
-         "price": 4.49,
-         "per": "kg",
-         "amount": 0.7,
-         "label": "Sempre disponível",
-         "note": "folheto: Lombo de Porco",
-         "promoId": "lombo-de-porco"
-        },
-        {
-         "item": "Pães pita",
-         "qty": "4"
-        },
-        {
-         "item": "Iogurte grego",
-         "qty": "250 g"
-        },
-        {
-         "item": "Pepino",
-         "qty": "1/2"
-        },
-        {
-         "item": "Alho",
-         "qty": "3 dentes"
-        },
-        {
-         "item": "Orégãos",
-         "qty": "1 c. sopa"
-        },
-        {
-         "item": "Paprika",
-         "qty": "1 c. chá"
-        },
-        {
-         "item": "Tomate",
-         "qty": "2"
-        },
-        {
-         "item": "Cebola roxa",
-         "qty": "1"
-        },
-        {
-         "item": "Batata frita",
-         "qty": "500 g"
-        },
-        {
-         "item": "Azeite",
-         "qty": "3 c. sopa"
-        }
-       ],
-       "steps": [
-        "Corte o porco em tiras finas e tempere com orégãos, paprika, alho, sal e azeite, 30 min.",
-        "Faça um molho de iogurte com pepino e alho.",
-        "Salteie o porco em frigideira muito quente, em duas vezes, 6 min.",
-        "Aqueça as pitas.",
-        "Recheie com porco, tomate, cebola, batata frita e molho.",
-        "Sirva de imediato.",
-        "Dica do chef: Frigideira muito quente: a carne deve dourar, não cozer."
-       ],
-       "imageQuery": "Γύρος (Gyros) Grega",
-       "image": "/meals/lib-gyros-porco-886aaec4.webp",
-       "imageCredit": {
-        "name": "Imagem gerada por IA",
-        "url": ""
-       }
-      },
-      {
-       "id": "hamburguer",
-       "slot": 2,
-       "meal": "Jantar",
-       "name": "Hambúrguer Caseiro com Batata Frita",
-       "original": "Classic Cheeseburger",
+       "name": "Frango Frito Crocante com Puré e Salada de Couve",
+       "original": "Southern Fried Chicken",
        "cuisine": "Americana",
-       "description": "Hambúrguer sumarento com queijo derretido, no pão tostado, com batata frita.",
+       "description": "Frango marinado em leitelho, panado e frito, com puré cremoso e salada de couve.",
        "servings": "4 pessoas",
-       "time": "35 min",
-       "difficulty": "Fácil",
+       "time": "1h",
+       "difficulty": "Média",
        "veg": false,
        "allergens": [
         "gluten",
         "lactose",
         "ovos"
        ],
-       "est": 5.25,
-       "imgDesc": "Homemade cheeseburger in a toasted bun with lettuce, tomato and pickles, with french fries",
-       "mainCost": 4.49,
+       "est": 3.95,
+       "imgDesc": "Southern fried chicken pieces with mashed potatoes and coleslaw",
+       "mainCost": 4.31,
        "ingredients": [
         {
-         "item": "Carne picada",
-         "qty": "700 g",
-         "price": 4.49,
-         "per": "un",
-         "amount": 1,
-         "label": "DELUXE",
-         "note": "folheto: Hambúrguer de Novilho com Trufas",
-         "promoId": "hamburguer-de-novilho-com-trufas"
+         "item": "Coxas e sobrecoxas de frango",
+         "qty": "1,2 kg",
+         "price": 3.59,
+         "per": "kg",
+         "amount": 1.2,
+         "label": "Emb. 1 kg",
+         "note": "folheto: Coxa de Frango XXL",
+         "promoId": "coxa-de-frango-xxl"
         },
         {
-         "item": "Pão de hambúrguer",
-         "qty": "4"
+         "item": "Iogurte natural ou leitelho",
+         "qty": "250 ml"
         },
         {
-         "item": "Queijo cheddar",
-         "qty": "4 fatias"
+         "item": "Farinha",
+         "qty": "200 g"
         },
         {
-         "item": "Alface",
-         "qty": "4 folhas"
+         "item": "Paprika",
+         "qty": "2 c. chá"
         },
         {
-         "item": "Tomate",
-         "qty": "1"
-        },
-        {
-         "item": "Cebola",
-         "qty": "1"
-        },
-        {
-         "item": "Pickles",
-         "qty": "8 rodelas"
-        },
-        {
-         "item": "Ketchup e mostarda",
-         "qty": "a gosto"
+         "item": "Alho em pó",
+         "qty": "1 c. chá"
         },
         {
          "item": "Batata",
          "qty": "800 g"
         },
         {
-         "item": "Óleo para fritar",
-         "qty": "400 ml"
-        }
-       ],
-       "steps": [
-        "Tempere a carne com sal e pimenta e forme 4 hambúrgueres.",
-        "Grelhe em frigideira muito quente 3 a 4 min por lado.",
-        "Coloque queijo no último minuto e tape.",
-        "Toste os pães.",
-        "Frite a batata em palitos.",
-        "Monte com alface, tomate, cebola, pickles e molhos.",
-        "Dica do chef: Não pressione o hambúrguer na frigideira."
-       ],
-       "imageQuery": "Classic Cheeseburger Americana",
-       "compare": [
-        {
-         "market": "Lidl",
-         "product": "Hambúrguer de Novilho com Trufas",
-         "price": 4.49,
-         "per": "un",
-         "total": 4.49,
-         "promoId": "hamburguer-de-novilho-com-trufas"
+         "item": "Manteiga",
+         "qty": "50 g"
         },
         {
-         "market": "Pingo Doce",
-         "product": "Hambúrguer de vaca s/glúten cap iglo 8un",
-         "price": 9.99,
-         "per": "un",
-         "total": 9.99,
-         "promoId": "hamburguer-de-vaca-s-gluten-cap-iglo-8un"
-        }
-       ],
-       "image": "/meals/lib-hamburguer-b26ea0f0.webp",
-       "imageCredit": {
-        "name": "Imagem gerada por IA",
-        "url": ""
-       }
-      }
-     ]
-    },
-    {
-     "date": "2026-11-08",
-     "recipes": [
-      {
-       "id": "bifanas",
-       "slot": 1,
-       "meal": "Almoço",
-       "name": "Bifanas no Pão com Batata Frita",
-       "original": "Bifanas",
-       "cuisine": "Portuguesa",
-       "description": "Fatias finas de porco marinadas em alho e vinho, estufadas em molho de pimentão e servidas no pão.",
-       "servings": "4 pessoas",
-       "time": "35 min",
-       "difficulty": "Fácil",
-       "veg": false,
-       "allergens": [
-        "gluten"
-       ],
-       "est": 3.7,
-       "imgDesc": "Portuguese bifana pork sandwich in a bread roll with sauce, with french fries",
-       "mainCost": 3.14,
-       "ingredients": [
-        {
-         "item": "Bifanas de porco",
-         "qty": "700 g",
-         "price": 4.49,
-         "per": "kg",
-         "amount": 0.7,
-         "label": "Sempre disponível",
-         "note": "folheto: Lombo de Porco",
-         "promoId": "lombo-de-porco"
+         "item": "Leite",
+         "qty": "150 ml"
         },
         {
-         "item": "Pão de trigo",
-         "qty": "4"
+         "item": "Repolho",
+         "qty": "1/4"
         },
         {
-         "item": "Vinho branco",
-         "qty": "1 copo"
-        },
-        {
-         "item": "Alho",
-         "qty": "4 dentes"
-        },
-        {
-         "item": "Colorau",
-         "qty": "1 c. sopa"
-        },
-        {
-         "item": "Louro",
-         "qty": "1 folha"
-        },
-        {
-         "item": "Azeite",
-         "qty": "3 c. sopa"
-        },
-        {
-         "item": "Batata",
-         "qty": "600 g"
-        },
-        {
-         "item": "Mostarda",
-         "qty": "a gosto"
-        }
-       ],
-       "steps": [
-        "Tempere as bifanas com sal, alho esmagado, colorau, louro e vinho branco; deixe marinar 2 horas, no frigorífico.",
-        "Aqueça azeite numa frigideira e frite as bifanas 2 min de cada lado.",
-        "Junte a marinada e cozinhe em lume brando 15 min, até o molho reduzir.",
-        "Frite a batata em palitos.",
-        "Abra os pães, recheie com bifanas e regue com molho.",
-        "Sirva com batata frita e mostarda.",
-        "Dica do chef: Corte as bifanas finas (0,5 cm) para ficarem tenras."
-       ],
-       "imageQuery": "Bifanas Portuguesa",
-       "image": "/meals/lib-bifanas-1596f076.webp",
-       "imageCredit": {
-        "name": "Imagem gerada por IA",
-        "url": ""
-       }
-      },
-      {
-       "id": "strogonoff",
-       "slot": 2,
-       "meal": "Jantar",
-       "name": "Strogonoff de Frango com Arroz e Batata Palha",
-       "original": "Estrogonofe de Frango",
-       "cuisine": "Brasileira",
-       "description": "Frango em molho cremoso de tomate e natas, com arroz branco e batata palha.",
-       "servings": "4 pessoas",
-       "time": "35 min",
-       "difficulty": "Fácil",
-       "veg": false,
-       "allergens": [
-        "lactose"
-       ],
-       "est": 3.6,
-       "imgDesc": "Chicken stroganoff in creamy sauce with white rice and straw potato sticks",
-       "mainCost": 2.51,
-       "ingredients": [
-        {
-         "item": "Peito de frango em cubos",
-         "qty": "700 g",
-         "price": 3.59,
-         "per": "kg",
-         "amount": 0.7,
-         "label": "Emb. 1 kg",
-         "note": "folheto: Coxa de Frango XXL",
-         "promoId": "coxa-de-frango-xxl"
-        },
-        {
-         "item": "Arroz branco",
-         "qty": "300 g"
-        },
-        {
-         "item": "Batata palha",
-         "qty": "150 g"
-        },
-        {
-         "item": "Natas",
-         "qty": "200 ml"
-        },
-        {
-         "item": "Cogumelos",
-         "qty": "200 g"
-        },
-        {
-         "item": "Cebola",
+         "item": "Cenoura",
          "qty": "1"
         },
         {
-         "item": "Alho",
-         "qty": "2 dentes"
-        },
-        {
-         "item": "Ketchup",
-         "qty": "2 c. sopa"
-        },
-        {
-         "item": "Mostarda",
-         "qty": "1 c. chá"
-        },
-        {
-         "item": "Conhaque (opcional)",
-         "qty": "1 c. sopa"
-        },
-        {
-         "item": "Azeite",
+         "item": "Maionese",
          "qty": "3 c. sopa"
+        },
+        {
+         "item": "Óleo para fritar",
+         "qty": "500 ml"
         }
        ],
        "steps": [
-        "Tempere o frango com sal, pimenta e alho.",
-        "Doure em azeite; reserve.",
-        "Refogue a cebola, junte os cogumelos laminados e salteie 5 min.",
-        "Regresse o frango, adicione ketchup, mostarda e conhaque; cozinhe 5 min.",
-        "Junte as natas em lume brando e aqueça sem ferver, 3 min.",
-        "Sirva com arroz e batata palha.",
-        "Dica do chef: Junte as natas fora do lume forte para não talhar."
+        "Marine o frango no iogurte com sal 2 horas.",
+        "Misture a farinha com paprika, alho em pó, sal e pimenta; envolva o frango.",
+        "Frite em óleo a 170 ºC 14 a 16 min até estar dourado e cozido.",
+        "Cozinhe a batata e faça puré com manteiga e leite.",
+        "Rale o repolho e a cenoura e misture com maionese.",
+        "Sirva o frango com puré e salada.",
+        "Dica do chef: Use termómetro: o óleo deve manter 170 ºC."
        ],
-       "imageQuery": "Estrogonofe de Frango Brasileira",
+       "imageQuery": "Southern Fried Chicken Americana",
        "compare": [
         {
          "market": "Continente",
          "product": "Coxas de Frango Congeladas Continente",
          "price": 3.49,
          "per": "kg",
-         "total": 2.44,
+         "total": 4.19,
          "promoId": "coxas-de-frango-congeladas-continente"
         },
         {
@@ -25143,11 +24583,97 @@
          "product": "Coxa de Frango XXL",
          "price": 3.59,
          "per": "kg",
-         "total": 2.51,
+         "total": 4.31,
          "promoId": "coxa-de-frango-xxl"
         }
        ],
-       "image": "/meals/lib-strogonoff-1d5e3d48.webp",
+       "image": "/meals/lib-frango-frito-beb9abc6.webp",
+       "imageCredit": {
+        "name": "Imagem gerada por IA",
+        "url": ""
+       }
+      },
+      {
+       "id": "tacos-porco",
+       "slot": 2,
+       "meal": "Jantar",
+       "name": "Tacos de Porco com Salsa Fresca",
+       "original": "Tacos de Carnitas",
+       "cuisine": "Mexicana",
+       "description": "Porco desfiado e crocante em tortilhas de milho, com cebola roxa, coentros e lima.",
+       "servings": "4 pessoas",
+       "time": "50 min",
+       "difficulty": "Fácil",
+       "veg": false,
+       "allergens": [
+        "gluten"
+       ],
+       "est": 8,
+       "imgDesc": "Pulled pork carnitas tacos on corn tortillas with fresh salsa, red onion, cilantro, lime and avocado",
+       "mainCost": 3.59,
+       "ingredients": [
+        {
+         "item": "Porco em pedaços",
+         "qty": "800 g",
+         "price": 4.49,
+         "per": "kg",
+         "amount": 0.8,
+         "label": "Sempre disponível",
+         "note": "folheto: Lombo de Porco",
+         "promoId": "lombo-de-porco"
+        },
+        {
+         "item": "Tortilhas",
+         "qty": "12"
+        },
+        {
+         "item": "Cebola roxa",
+         "qty": "1"
+        },
+        {
+         "item": "Coentros",
+         "qty": "1 molho"
+        },
+        {
+         "item": "Lima",
+         "qty": "2"
+        },
+        {
+         "item": "Cominhos",
+         "qty": "1 c. chá"
+        },
+        {
+         "item": "Orégãos",
+         "qty": "1 c. chá"
+        },
+        {
+         "item": "Laranja",
+         "qty": "1"
+        },
+        {
+         "item": "Tomate",
+         "qty": "3"
+        },
+        {
+         "item": "Abacate",
+         "qty": "1"
+        },
+        {
+         "item": "Azeite",
+         "qty": "2 c. sopa"
+        }
+       ],
+       "steps": [
+        "Tempere o porco com sal, cominhos, orégãos e sumo de laranja.",
+        "Cozinhe em lume brando, tapado, 40 min.",
+        "Desfie e doure numa frigideira com azeite até ficar crocante nas pontas.",
+        "Prepare a salsa com tomate, cebola, coentros, lima e sal.",
+        "Aqueça as tortilhas.",
+        "Monte os tacos e sirva com abacate e lima.",
+        "Dica do chef: Doure a carne no fim para ficar crocante."
+       ],
+       "imageQuery": "Tacos de Carnitas Mexicana",
+       "image": "/meals/lib-tacos-porco-f8bb3168.webp",
        "imageCredit": {
         "name": "Imagem gerada por IA",
         "url": ""
@@ -25157,13 +24683,6 @@
     }
    ],
    "hist": [
-    {
-     "date": "2026-10-23",
-     "ids": [
-      "frango-frito",
-      "porco-alentejana"
-     ]
-    },
     {
      "date": "2026-10-24",
      "ids": [
@@ -25253,6 +24772,13 @@
      "ids": [
       "gyros-porco",
       "hamburguer"
+     ]
+    },
+    {
+     "date": "2026-11-08",
+     "ids": [
+      "frango-frito",
+      "tacos-porco"
      ]
     }
    ],
@@ -25616,86 +25142,89 @@
    ],
    "recipes": [
     {
-     "id": "frango-churrasco",
+     "id": "souvlaki",
      "slot": 1,
      "meal": "Almoço",
-     "name": "Frango no Churrasco com Batata Frita e Salada",
-     "original": "Frango Assado",
-     "cuisine": "Portuguesa",
-     "description": "Frango temperado com piri-piri, alho e limão, assado até ficar com a pele estaladiça.",
+     "name": "Souvlaki de Frango com Tzatziki e Pita",
+     "original": "Σουβλάκι (Souvlaki)",
+     "cuisine": "Grega",
+     "description": "Espetadas de frango marinado em limão e orégãos, em pão pita com tzatziki.",
      "servings": "4 pessoas",
-     "time": "1h",
+     "time": "40 min",
      "difficulty": "Fácil",
      "veg": false,
-     "allergens": [],
-     "est": 5.6,
-     "imgDesc": "Portuguese grilled piri-piri chicken with french fries and green salad",
-     "mainCost": 3.82,
+     "allergens": [
+      "lactose",
+      "gluten"
+     ],
+     "est": 5,
+     "imgDesc": "Chicken souvlaki skewers with tzatziki and warm pita bread, tomato and red onion",
+     "mainCost": 1.67,
      "ingredients": [
       {
-       "item": "Frango",
-       "qty": "1,6 kg",
+       "item": "Peito de frango em cubos",
+       "qty": "700 g",
        "price": 2.39,
        "per": "kg",
-       "amount": 1.6,
+       "amount": 0.7,
        "label": "2,39 € (Kg)",
        "note": "folheto: Frango Inteiro sem Miúdos",
        "promoId": "frango-inteiro-sem-miudos"
       },
       {
-       "item": "Batata",
-       "qty": "800 g"
+       "item": "Pães pita",
+       "qty": "4"
       },
       {
-       "item": "Óleo para fritar",
-       "qty": "400 ml"
+       "item": "Iogurte grego",
+       "qty": "300 g"
+      },
+      {
+       "item": "Pepino",
+       "qty": "1"
       },
       {
        "item": "Alho",
-       "qty": "4 dentes"
-      },
-      {
-       "item": "Piri-piri",
-       "qty": "2 c. sopa"
+       "qty": "3 dentes"
       },
       {
        "item": "Limão",
-       "qty": "1"
+       "qty": "2"
+      },
+      {
+       "item": "Orégãos",
+       "qty": "1 c. sopa"
       },
       {
        "item": "Azeite",
        "qty": "4 c. sopa"
       },
       {
-       "item": "Paprika",
-       "qty": "1 c. sopa"
-      },
-      {
-       "item": "Alface",
-       "qty": "1"
-      },
-      {
        "item": "Tomate",
        "qty": "2"
+      },
+      {
+       "item": "Cebola roxa",
+       "qty": "1"
       }
      ],
      "steps": [
-      "Abra o frango ao meio (espalmado) e tempere com alho, piri-piri, paprika, sal, limão e azeite durante 2 horas, no frigorífico.",
-      "Pré-aqueça o forno a 220 ºC.",
-      "Asse o frango 45 a 50 min, virando a meio e regando com o molho.",
-      "Corte a batata em palitos grossos e frite em óleo quente até ficar dourada.",
-      "Prepare a salada de alface e tomate com azeite e sal.",
-      "Deixe o frango repousar 5 min e sirva com a batata frita e a salada.",
-      "Dica do chef: Deixe o frango fora do frigorífico 30 min antes de assar para cozinhar de forma uniforme."
+      "Marine o frango com limão, azeite, orégãos, alho, sal e pimenta, 1 hora.",
+      "Faça o tzatziki: iogurte, pepino ralado e espremido, alho, azeite e sal.",
+      "Enfie o frango em espetos.",
+      "Grelhe 10 a 12 min, virando.",
+      "Aqueça as pitas.",
+      "Sirva com tomate, cebola roxa e tzatziki.",
+      "Dica do chef: Esprema o pepino ralado para o tzatziki não ficar aguado."
      ],
-     "imageQuery": "Frango Assado Portuguesa",
+     "imageQuery": "Σουβλάκι (Souvlaki) Grega",
      "compare": [
       {
        "market": "Aldi",
        "product": "Frango Inteiro sem Miúdos",
        "price": 2.39,
        "per": "kg",
-       "total": 3.82,
+       "total": 1.67,
        "promoId": "frango-inteiro-sem-miudos"
       },
       {
@@ -25703,95 +25232,111 @@
        "product": "Frango para Churrasco Continente",
        "price": 3.39,
        "per": "kg",
-       "total": 5.42,
+       "total": 2.37,
        "promoId": "frango-para-churrasco-continente"
       }
      ],
-     "image": "/meals/lib-frango-churrasco-2847388c.webp",
+     "image": "/meals/lib-souvlaki-c700deca.webp",
      "imageCredit": {
       "name": "Imagem gerada por IA",
       "url": ""
      }
     },
     {
-     "id": "tortilha",
+     "id": "porco-alentejana",
      "slot": 2,
      "meal": "Jantar",
-     "name": "Tortilha Espanhola com Salada",
-     "original": "Tortilla de Patatas",
-     "cuisine": "Espanhola",
-     "description": "Omelete grossa de batata e cebola, macia por dentro e dourada por fora.",
+     "name": "Carne de Porco à Alentejana",
+     "original": "Carne de Porco à Alentejana",
+     "cuisine": "Portuguesa",
+     "description": "Cubos de porco marinados com amêijoas, batata frita e coentros: a mais famosa mistura de mar e serra.",
      "servings": "4 pessoas",
-     "time": "40 min",
+     "time": "50 min",
      "difficulty": "Média",
-     "veg": true,
+     "veg": false,
      "allergens": [
-      "ovos"
+      "marisco"
      ],
-     "est": 3,
-     "imgDesc": "Spanish potato omelette tortilla española cut into wedges with a tomato salad and bread",
-     "mainCost": 2.79,
+     "est": 7.55,
+     "imgDesc": "Carne de porco à alentejana, pork cubes with clams, fried potato cubes and coriander",
+     "mainCost": 3.49,
      "ingredients": [
       {
-       "item": "Ovos",
-       "qty": "8",
-       "price": 2.79,
-       "per": "un",
-       "amount": 1,
-       "label": "636 g",
-       "note": "folheto: Ovos do Solo Classe M",
-       "promoId": "ovos-do-solo-classe-m"
+       "item": "Porco em cubos",
+       "qty": "700 g",
+       "price": 4.99,
+       "per": "kg",
+       "amount": 0.7,
+       "label": "4,99 € (Kg)",
+       "note": "folheto: Cachaço de Porco",
+       "promoId": "cachaco-de-porco"
+      },
+      {
+       "item": "Amêijoas",
+       "qty": "500 g"
       },
       {
        "item": "Batata",
-       "qty": "700 g"
+       "qty": "600 g"
       },
       {
-       "item": "Cebola",
+       "item": "Alho",
+       "qty": "4 dentes"
+      },
+      {
+       "item": "Colorau",
+       "qty": "1 c. sopa"
+      },
+      {
+       "item": "Vinho branco",
+       "qty": "1 copo"
+      },
+      {
+       "item": "Louro",
+       "qty": "2 folhas"
+      },
+      {
+       "item": "Coentros",
+       "qty": "1 molho"
+      },
+      {
+       "item": "Limão",
        "qty": "1"
       },
       {
-       "item": "Azeite",
-       "qty": "150 ml"
-      },
-      {
-       "item": "Salada de tomate e alface",
-       "qty": "1 prato"
-      },
-      {
-       "item": "Pão",
-       "qty": "4 fatias"
+       "item": "Azeite e óleo",
+       "qty": "a gosto"
       }
      ],
      "steps": [
-      "Corte a batata em lâminas finas e a cebola em tiras.",
-      "Cozinhe em azeite em lume brando 15 a 20 min, sem dourar, até a batata estar macia.",
-      "Escorra o azeite e junte aos ovos batidos com sal; deixe repousar 5 min.",
-      "Numa frigideira antiaderente, aqueça um fio de azeite e deite a mistura.",
-      "Cozinhe 5 min, vire com a ajuda de um prato e cozinhe mais 3 min.",
-      "Sirva morna com salada e pão.",
-      "Dica do chef: Deixe a mistura repousar: a batata absorve o ovo e fica mais cremosa."
+      "Marine o porco em cubos com alho, colorau, louro, vinho, sal e pimenta, 3 horas.",
+      "Deixe as amêijoas em água com sal 1 hora para largarem a areia.",
+      "Corte a batata em cubos e frite até dourar.",
+      "Frite o porco escorrido em azeite quente até ficar dourado; reduza o lume e cozinhe 15 min.",
+      "Junte as amêijoas, tape e cozinhe 4 min até abrirem; descarte as que ficarem fechadas.",
+      "Misture a batata, coentros e sirva com limão.",
+      "Dica do chef: Frite o porco em lume forte para selar o sumo."
      ],
-     "imageQuery": "Tortilla de Patatas Espanhola",
+     "imageQuery": "Carne de Porco à Alentejana Portuguesa",
      "compare": [
       {
        "market": "Aldi",
-       "product": "Ovos do Solo Classe M",
-       "price": 2.79,
-       "per": "un",
-       "total": 2.79,
-       "promoId": "ovos-do-solo-classe-m"
+       "product": "Cachaço de Porco",
+       "price": 4.99,
+       "per": "kg",
+       "total": 3.49,
+       "promoId": "cachaco-de-porco"
       },
       {
-       "market": "Pingo Doce",
-       "product": "Ovos m/l ar livre matinados 12un+3u",
-       "price": 3.99,
-       "per": "un",
-       "total": 3.99,
-       "promoId": "ovos-m-l-ar-livre-matinados-12un-3u"
+       "market": "Continente",
+       "product": "Cachaço de Porco sem Osso para Assar Continente",
+       "price": 5.29,
+       "per": "kg",
+       "total": 3.7,
+       "promoId": "cachaco-de-porco-sem-osso-para-assar-continente"
       }
      ],
-     "image": "/meals/lib-tortilha-2db0b9a5.webp",
+     "image": "/meals/lib-porco-alentejana-d2352674.webp",
      "imageCredit": {
       "name": "Imagem gerada por IA",
       "url": ""
@@ -26169,198 +25714,11 @@
     }
    ],
    "check": {
-    "date": "2026-11-07",
+    "date": "2026-11-08",
     "result": "sem-novo"
    },
    "readVersion": 3,
    "plan": [
-    {
-     "date": "2026-11-07",
-     "recipes": [
-      {
-       "id": "frango-churrasco",
-       "slot": 1,
-       "meal": "Almoço",
-       "name": "Frango no Churrasco com Batata Frita e Salada",
-       "original": "Frango Assado",
-       "cuisine": "Portuguesa",
-       "description": "Frango temperado com piri-piri, alho e limão, assado até ficar com a pele estaladiça.",
-       "servings": "4 pessoas",
-       "time": "1h",
-       "difficulty": "Fácil",
-       "veg": false,
-       "allergens": [],
-       "est": 5.6,
-       "imgDesc": "Portuguese grilled piri-piri chicken with french fries and green salad",
-       "mainCost": 3.82,
-       "ingredients": [
-        {
-         "item": "Frango",
-         "qty": "1,6 kg",
-         "price": 2.39,
-         "per": "kg",
-         "amount": 1.6,
-         "label": "2,39 € (Kg)",
-         "note": "folheto: Frango Inteiro sem Miúdos",
-         "promoId": "frango-inteiro-sem-miudos"
-        },
-        {
-         "item": "Batata",
-         "qty": "800 g"
-        },
-        {
-         "item": "Óleo para fritar",
-         "qty": "400 ml"
-        },
-        {
-         "item": "Alho",
-         "qty": "4 dentes"
-        },
-        {
-         "item": "Piri-piri",
-         "qty": "2 c. sopa"
-        },
-        {
-         "item": "Limão",
-         "qty": "1"
-        },
-        {
-         "item": "Azeite",
-         "qty": "4 c. sopa"
-        },
-        {
-         "item": "Paprika",
-         "qty": "1 c. sopa"
-        },
-        {
-         "item": "Alface",
-         "qty": "1"
-        },
-        {
-         "item": "Tomate",
-         "qty": "2"
-        }
-       ],
-       "steps": [
-        "Abra o frango ao meio (espalmado) e tempere com alho, piri-piri, paprika, sal, limão e azeite durante 2 horas, no frigorífico.",
-        "Pré-aqueça o forno a 220 ºC.",
-        "Asse o frango 45 a 50 min, virando a meio e regando com o molho.",
-        "Corte a batata em palitos grossos e frite em óleo quente até ficar dourada.",
-        "Prepare a salada de alface e tomate com azeite e sal.",
-        "Deixe o frango repousar 5 min e sirva com a batata frita e a salada.",
-        "Dica do chef: Deixe o frango fora do frigorífico 30 min antes de assar para cozinhar de forma uniforme."
-       ],
-       "imageQuery": "Frango Assado Portuguesa",
-       "compare": [
-        {
-         "market": "Aldi",
-         "product": "Frango Inteiro sem Miúdos",
-         "price": 2.39,
-         "per": "kg",
-         "total": 3.82,
-         "promoId": "frango-inteiro-sem-miudos"
-        },
-        {
-         "market": "Continente",
-         "product": "Frango para Churrasco Continente",
-         "price": 3.39,
-         "per": "kg",
-         "total": 5.42,
-         "promoId": "frango-para-churrasco-continente"
-        }
-       ],
-       "image": "/meals/lib-frango-churrasco-2847388c.webp",
-       "imageCredit": {
-        "name": "Imagem gerada por IA",
-        "url": ""
-       }
-      },
-      {
-       "id": "tortilha",
-       "slot": 2,
-       "meal": "Jantar",
-       "name": "Tortilha Espanhola com Salada",
-       "original": "Tortilla de Patatas",
-       "cuisine": "Espanhola",
-       "description": "Omelete grossa de batata e cebola, macia por dentro e dourada por fora.",
-       "servings": "4 pessoas",
-       "time": "40 min",
-       "difficulty": "Média",
-       "veg": true,
-       "allergens": [
-        "ovos"
-       ],
-       "est": 3,
-       "imgDesc": "Spanish potato omelette tortilla española cut into wedges with a tomato salad and bread",
-       "mainCost": 2.79,
-       "ingredients": [
-        {
-         "item": "Ovos",
-         "qty": "8",
-         "price": 2.79,
-         "per": "un",
-         "amount": 1,
-         "label": "636 g",
-         "note": "folheto: Ovos do Solo Classe M",
-         "promoId": "ovos-do-solo-classe-m"
-        },
-        {
-         "item": "Batata",
-         "qty": "700 g"
-        },
-        {
-         "item": "Cebola",
-         "qty": "1"
-        },
-        {
-         "item": "Azeite",
-         "qty": "150 ml"
-        },
-        {
-         "item": "Salada de tomate e alface",
-         "qty": "1 prato"
-        },
-        {
-         "item": "Pão",
-         "qty": "4 fatias"
-        }
-       ],
-       "steps": [
-        "Corte a batata em lâminas finas e a cebola em tiras.",
-        "Cozinhe em azeite em lume brando 15 a 20 min, sem dourar, até a batata estar macia.",
-        "Escorra o azeite e junte aos ovos batidos com sal; deixe repousar 5 min.",
-        "Numa frigideira antiaderente, aqueça um fio de azeite e deite a mistura.",
-        "Cozinhe 5 min, vire com a ajuda de um prato e cozinhe mais 3 min.",
-        "Sirva morna com salada e pão.",
-        "Dica do chef: Deixe a mistura repousar: a batata absorve o ovo e fica mais cremosa."
-       ],
-       "imageQuery": "Tortilla de Patatas Espanhola",
-       "compare": [
-        {
-         "market": "Aldi",
-         "product": "Ovos do Solo Classe M",
-         "price": 2.79,
-         "per": "un",
-         "total": 2.79,
-         "promoId": "ovos-do-solo-classe-m"
-        },
-        {
-         "market": "Pingo Doce",
-         "product": "Ovos m/l ar livre matinados 12un+3u",
-         "price": 3.99,
-         "per": "un",
-         "total": 3.99,
-         "promoId": "ovos-m-l-ar-livre-matinados-12un-3u"
-        }
-       ],
-       "image": "/meals/lib-tortilha-2db0b9a5.webp",
-       "imageCredit": {
-        "name": "Imagem gerada por IA",
-        "url": ""
-       }
-      }
-     ]
-    },
     {
      "date": "2026-11-08",
      "recipes": [
@@ -26459,97 +25817,95 @@
          "promoId": "frango-para-churrasco-continente"
         }
        ],
-       "image": "/meals/lib-souvlaki-f994b561.webp",
+       "image": "/meals/lib-souvlaki-c700deca.webp",
        "imageCredit": {
         "name": "Imagem gerada por IA",
         "url": ""
        }
       },
       {
-       "id": "katsu-porco",
+       "id": "porco-alentejana",
        "slot": 2,
        "meal": "Jantar",
-       "name": "Tonkatsu com Arroz e Repolho",
-       "original": "とんかつ (Tonkatsu)",
-       "cuisine": "Japonesa",
-       "description": "Costeleta de porco panada com panko, servida com repolho e molho tonkatsu.",
+       "name": "Carne de Porco à Alentejana",
+       "original": "Carne de Porco à Alentejana",
+       "cuisine": "Portuguesa",
+       "description": "Cubos de porco marinados com amêijoas, batata frita e coentros: a mais famosa mistura de mar e serra.",
        "servings": "4 pessoas",
-       "time": "35 min",
+       "time": "50 min",
        "difficulty": "Média",
        "veg": false,
        "allergens": [
-        "gluten",
-        "ovos",
-        "soja"
+        "marisco"
        ],
-       "est": 3.55,
-       "imgDesc": "Tonkatsu breaded pork cutlet sliced with shredded cabbage, rice and tonkatsu sauce",
-       "mainCost": 2.99,
+       "est": 7.55,
+       "imgDesc": "Carne de porco à alentejana, pork cubes with clams, fried potato cubes and coriander",
+       "mainCost": 3.49,
        "ingredients": [
         {
-         "item": "Lombo ou costeletas de porco",
-         "qty": "600 g",
+         "item": "Porco em cubos",
+         "qty": "700 g",
          "price": 4.99,
          "per": "kg",
-         "amount": 0.6,
+         "amount": 0.7,
          "label": "4,99 € (Kg)",
          "note": "folheto: Cachaço de Porco",
          "promoId": "cachaco-de-porco"
         },
         {
-         "item": "Arroz de sushi",
-         "qty": "300 g"
+         "item": "Amêijoas",
+         "qty": "500 g"
         },
         {
-         "item": "Panko ou pão ralado",
-         "qty": "120 g"
+         "item": "Batata",
+         "qty": "600 g"
         },
         {
-         "item": "Ovos",
-         "qty": "2"
+         "item": "Alho",
+         "qty": "4 dentes"
         },
         {
-         "item": "Farinha",
-         "qty": "4 c. sopa"
-        },
-        {
-         "item": "Repolho",
-         "qty": "1/4"
-        },
-        {
-         "item": "Ketchup",
-         "qty": "2 c. sopa"
-        },
-        {
-         "item": "Molho Worcestershire",
-         "qty": "2 c. sopa"
-        },
-        {
-         "item": "Molho de soja",
+         "item": "Colorau",
          "qty": "1 c. sopa"
         },
         {
-         "item": "Óleo para fritar",
-         "qty": "400 ml"
+         "item": "Vinho branco",
+         "qty": "1 copo"
+        },
+        {
+         "item": "Louro",
+         "qty": "2 folhas"
+        },
+        {
+         "item": "Coentros",
+         "qty": "1 molho"
+        },
+        {
+         "item": "Limão",
+         "qty": "1"
+        },
+        {
+         "item": "Azeite e óleo",
+         "qty": "a gosto"
         }
        ],
        "steps": [
-        "Bata as costeletas até 1,5 cm e tempere.",
-        "Passe por farinha, ovo e panko.",
-        "Frite em óleo a 170 ºC 4 a 5 min de cada lado.",
-        "Misture ketchup, Worcestershire e soja para o molho.",
-        "Corte o repolho em tiras finíssimas.",
-        "Corte o tonkatsu em tiras e sirva com arroz, repolho e molho.",
-        "Dica do chef: O repolho cru fresco equilibra a fritura."
+        "Marine o porco em cubos com alho, colorau, louro, vinho, sal e pimenta, 3 horas.",
+        "Deixe as amêijoas em água com sal 1 hora para largarem a areia.",
+        "Corte a batata em cubos e frite até dourar.",
+        "Frite o porco escorrido em azeite quente até ficar dourado; reduza o lume e cozinhe 15 min.",
+        "Junte as amêijoas, tape e cozinhe 4 min até abrirem; descarte as que ficarem fechadas.",
+        "Misture a batata, coentros e sirva com limão.",
+        "Dica do chef: Frite o porco em lume forte para selar o sumo."
        ],
-       "imageQuery": "とんかつ (Tonkatsu) Japonesa",
+       "imageQuery": "Carne de Porco à Alentejana Portuguesa",
        "compare": [
         {
          "market": "Aldi",
          "product": "Cachaço de Porco",
          "price": 4.99,
          "per": "kg",
-         "total": 2.99,
+         "total": 3.49,
          "promoId": "cachaco-de-porco"
         },
         {
@@ -26557,11 +25913,11 @@
          "product": "Cachaço de Porco sem Osso para Assar Continente",
          "price": 5.29,
          "per": "kg",
-         "total": 3.17,
+         "total": 3.7,
          "promoId": "cachaco-de-porco-sem-osso-para-assar-continente"
         }
        ],
-       "image": "/meals/lib-katsu-porco-32b62c63.webp",
+       "image": "/meals/lib-porco-alentejana-d2352674.webp",
        "imageCredit": {
         "name": "Imagem gerada por IA",
         "url": ""
@@ -26571,13 +25927,6 @@
     }
    ],
    "hist": [
-    {
-     "date": "2026-10-23",
-     "ids": [
-      "lasanha",
-      "vaca-brocolos"
-     ]
-    },
     {
      "date": "2026-10-24",
      "ids": [
@@ -26667,6 +26016,13 @@
      "ids": [
       "frango-churrasco",
       "tortilha"
+     ]
+    },
+    {
+     "date": "2026-11-08",
+     "ids": [
+      "souvlaki",
+      "porco-alentejana"
      ]
     }
    ],
@@ -26971,7 +26327,7 @@
     }
    ],
    "check": {
-    "date": "2026-11-07",
+    "date": "2026-11-08",
     "result": "sem-novo",
     "note": "poucos produtos (6); candidatos: antevisao-folheto-intermarche-marcas-proprias-promocoes-de-5-a-18-novembro-318670 | antevisao-folheto-intermarche-especial-higiene-promocoes-de-5-a-11-novembro-318684"
    },
@@ -27072,16 +26428,16 @@
   "caldeirada": "/meals/lib-caldeirada-50124beb.webp",
   "frango-churrasco": "/meals/lib-frango-churrasco-2847388c.webp",
   "teriyaki-salmao": "/meals/lib-teriyaki-salmao-e23cd147.webp",
-  "espadarte-siciliana": "/meals/lib-espadarte-siciliana-8eed7a24.webp",
+  "espadarte-siciliana": "/meals/lib-espadarte-siciliana-a9b24904.webp",
   "bacalhau-gomes-sa": "/meals/lib-bacalhau-gomes-sa-95729af6.webp",
   "moussaka": "/meals/lib-moussaka-8995994f.webp",
   "paella": "/meals/lib-paella-51ff64b7.webp",
   "polvo-lagareiro": "/meals/lib-polvo-lagareiro-955e67f1.webp",
   "pad-thai": "/meals/lib-pad-thai-072caa11.webp",
   "coq-au-vin": "/meals/lib-coq-au-vin-d6189da4.webp",
-  "lulas-guisadas": "/meals/lib-lulas-guisadas-1c97718a.webp",
+  "lulas-guisadas": "/meals/lib-lulas-guisadas-3903aac1.webp",
   "frango-agridoce": "/meals/lib-frango-agridoce-51f04a89.webp",
-  "souvlaki": "/meals/lib-souvlaki-f994b561.webp",
+  "souvlaki": "/meals/lib-souvlaki-c700deca.webp",
   "tacos-porco": "/meals/lib-tacos-porco-f8bb3168.webp",
   "kebab-frango": "/meals/lib-kebab-frango-befe9df4.webp",
   "risotto-cogumelos": "/meals/lib-risotto-cogumelos-5014d99a.webp",
@@ -27135,20 +26491,20 @@
    "original": "Caldeirada",
    "rows": [
     {
-     "market": "Continente",
-     "product": "Filetes de Pescada com Ovo Continente",
-     "price": 5.29,
-     "per": "kg",
-     "total": 5.29,
-     "promoId": "filetes-de-pescada-com-ovo-continente"
-    },
-    {
      "market": "Lidl",
      "product": "Pescada do Cabo à Posta para Cozer XXL",
      "price": 5.85,
      "per": "kg",
      "total": 5.85,
      "promoId": "pescada-do-cabo-a-posta-para-cozer-xxl"
+    },
+    {
+     "market": "Continente",
+     "product": "Filetes de Pescada do Cabo Ultracongelada Pescanova",
+     "price": 5.99,
+     "per": "kg",
+     "total": 5.99,
+     "promoId": "filetes-de-pescada-do-cabo-ultracongelada-pescanova"
     },
     {
      "market": "Pingo Doce",
@@ -27159,7 +26515,7 @@
      "promoId": "filetes-pescada-argentina-pescanova-900g"
     }
    ],
-   "market": "Continente",
+   "market": "Lidl",
    "recipe": {
     "id": "caldeirada",
     "slot": 2,
@@ -27178,16 +26534,17 @@
     ],
     "est": 5.8,
     "imgDesc": "Portuguese fish stew caldeirada with fish steaks, potatoes, tomato and peppers in a pot, toasted bread",
-    "mainCost": 5.29,
+    "mainCost": 5.85,
     "ingredients": [
      {
       "item": "Peixe fresco em postas",
       "qty": "1 kg",
-      "price": 5.29,
+      "price": 5.85,
       "per": "kg",
       "amount": 1,
-      "note": "folheto: Filetes de Pescada com Ovo Continente",
-      "promoId": "filetes-de-pescada-com-ovo-continente"
+      "label": "Stock limitado",
+      "note": "folheto: Pescada do Cabo à Posta para Cozer XXL",
+      "promoId": "pescada-do-cabo-a-posta-para-cozer-xxl"
      },
      {
       "item": "Batata",
@@ -27241,20 +26598,20 @@
     "imageQuery": "Caldeirada Portuguesa",
     "compare": [
      {
-      "market": "Continente",
-      "product": "Filetes de Pescada com Ovo Continente",
-      "price": 5.29,
-      "per": "kg",
-      "total": 5.29,
-      "promoId": "filetes-de-pescada-com-ovo-continente"
-     },
-     {
       "market": "Lidl",
       "product": "Pescada do Cabo à Posta para Cozer XXL",
       "price": 5.85,
       "per": "kg",
       "total": 5.85,
       "promoId": "pescada-do-cabo-a-posta-para-cozer-xxl"
+     },
+     {
+      "market": "Continente",
+      "product": "Filetes de Pescada do Cabo Ultracongelada Pescanova",
+      "price": 5.99,
+      "per": "kg",
+      "total": 5.99,
+      "promoId": "filetes-de-pescada-do-cabo-ultracongelada-pescanova"
      },
      {
       "market": "Pingo Doce",
@@ -27279,20 +26636,20 @@
    "original": "Moqueca Capixaba",
    "rows": [
     {
-     "market": "Continente",
-     "product": "Filetes de Pescada com Ovo Continente",
-     "price": 5.29,
-     "per": "kg",
-     "total": 4.23,
-     "promoId": "filetes-de-pescada-com-ovo-continente"
-    },
-    {
      "market": "Lidl",
      "product": "Pescada do Cabo à Posta para Cozer XXL",
      "price": 5.85,
      "per": "kg",
      "total": 4.68,
      "promoId": "pescada-do-cabo-a-posta-para-cozer-xxl"
+    },
+    {
+     "market": "Continente",
+     "product": "Filetes de Pescada do Cabo Ultracongelada Pescanova",
+     "price": 5.99,
+     "per": "kg",
+     "total": 4.79,
+     "promoId": "filetes-de-pescada-do-cabo-ultracongelada-pescanova"
     },
     {
      "market": "Pingo Doce",
@@ -27303,7 +26660,7 @@
      "promoId": "filetes-pescada-argentina-pescanova-900g"
     }
    ],
-   "market": "Continente",
+   "market": "Lidl",
    "recipe": {
     "id": "moqueca",
     "slot": 2,
@@ -27321,16 +26678,17 @@
     ],
     "est": 5.15,
     "imgDesc": "Brazilian fish moqueca stew in coconut milk with peppers and tomato, with white rice and cilantro",
-    "mainCost": 4.23,
+    "mainCost": 4.68,
     "ingredients": [
      {
       "item": "Postas de peixe",
       "qty": "800 g",
-      "price": 5.29,
+      "price": 5.85,
       "per": "kg",
       "amount": 0.8,
-      "note": "folheto: Filetes de Pescada com Ovo Continente",
-      "promoId": "filetes-de-pescada-com-ovo-continente"
+      "label": "Stock limitado",
+      "note": "folheto: Pescada do Cabo à Posta para Cozer XXL",
+      "promoId": "pescada-do-cabo-a-posta-para-cozer-xxl"
      },
      {
       "item": "Arroz branco",
@@ -27385,20 +26743,20 @@
     "imageQuery": "Moqueca Capixaba Brasileira",
     "compare": [
      {
-      "market": "Continente",
-      "product": "Filetes de Pescada com Ovo Continente",
-      "price": 5.29,
-      "per": "kg",
-      "total": 4.23,
-      "promoId": "filetes-de-pescada-com-ovo-continente"
-     },
-     {
       "market": "Lidl",
       "product": "Pescada do Cabo à Posta para Cozer XXL",
       "price": 5.85,
       "per": "kg",
       "total": 4.68,
       "promoId": "pescada-do-cabo-a-posta-para-cozer-xxl"
+     },
+     {
+      "market": "Continente",
+      "product": "Filetes de Pescada do Cabo Ultracongelada Pescanova",
+      "price": 5.99,
+      "per": "kg",
+      "total": 4.79,
+      "promoId": "filetes-de-pescada-do-cabo-ultracongelada-pescanova"
      },
      {
       "market": "Pingo Doce",
@@ -27410,133 +26768,6 @@
      }
     ],
     "image": "/meals/lib-moqueca-425d828f.webp",
-    "imageCredit": {
-     "name": "Imagem gerada por IA",
-     "url": ""
-    }
-   }
-  },
-  {
-   "id": "hamburguer",
-   "name": "Hambúrguer Caseiro com Batata Frita",
-   "cuisine": "Americana",
-   "original": "Classic Cheeseburger",
-   "rows": [
-    {
-     "market": "Lidl",
-     "product": "Hambúrguer de Novilho com Trufas",
-     "price": 4.49,
-     "per": "un",
-     "total": 4.49,
-     "promoId": "hamburguer-de-novilho-com-trufas"
-    },
-    {
-     "market": "Pingo Doce",
-     "product": "Hambúrguer de vaca s/glúten cap iglo 8un",
-     "price": 9.99,
-     "per": "un",
-     "total": 9.99,
-     "promoId": "hamburguer-de-vaca-s-gluten-cap-iglo-8un"
-    }
-   ],
-   "market": "Lidl",
-   "recipe": {
-    "id": "hamburguer",
-    "slot": 2,
-    "meal": "Jantar",
-    "name": "Hambúrguer Caseiro com Batata Frita",
-    "original": "Classic Cheeseburger",
-    "cuisine": "Americana",
-    "description": "Hambúrguer sumarento com queijo derretido, no pão tostado, com batata frita.",
-    "servings": "4 pessoas",
-    "time": "35 min",
-    "difficulty": "Fácil",
-    "veg": false,
-    "allergens": [
-     "gluten",
-     "lactose",
-     "ovos"
-    ],
-    "est": 5.25,
-    "imgDesc": "Homemade cheeseburger in a toasted bun with lettuce, tomato and pickles, with french fries",
-    "mainCost": 4.49,
-    "ingredients": [
-     {
-      "item": "Carne picada",
-      "qty": "700 g",
-      "price": 4.49,
-      "per": "un",
-      "amount": 1,
-      "label": "DELUXE",
-      "note": "folheto: Hambúrguer de Novilho com Trufas",
-      "promoId": "hamburguer-de-novilho-com-trufas"
-     },
-     {
-      "item": "Pão de hambúrguer",
-      "qty": "4"
-     },
-     {
-      "item": "Queijo cheddar",
-      "qty": "4 fatias"
-     },
-     {
-      "item": "Alface",
-      "qty": "4 folhas"
-     },
-     {
-      "item": "Tomate",
-      "qty": "1"
-     },
-     {
-      "item": "Cebola",
-      "qty": "1"
-     },
-     {
-      "item": "Pickles",
-      "qty": "8 rodelas"
-     },
-     {
-      "item": "Ketchup e mostarda",
-      "qty": "a gosto"
-     },
-     {
-      "item": "Batata",
-      "qty": "800 g"
-     },
-     {
-      "item": "Óleo para fritar",
-      "qty": "400 ml"
-     }
-    ],
-    "steps": [
-     "Tempere a carne com sal e pimenta e forme 4 hambúrgueres.",
-     "Grelhe em frigideira muito quente 3 a 4 min por lado.",
-     "Coloque queijo no último minuto e tape.",
-     "Toste os pães.",
-     "Frite a batata em palitos.",
-     "Monte com alface, tomate, cebola, pickles e molhos.",
-     "Dica do chef: Não pressione o hambúrguer na frigideira."
-    ],
-    "imageQuery": "Classic Cheeseburger Americana",
-    "compare": [
-     {
-      "market": "Lidl",
-      "product": "Hambúrguer de Novilho com Trufas",
-      "price": 4.49,
-      "per": "un",
-      "total": 4.49,
-      "promoId": "hamburguer-de-novilho-com-trufas"
-     },
-     {
-      "market": "Pingo Doce",
-      "product": "Hambúrguer de vaca s/glúten cap iglo 8un",
-      "price": 9.99,
-      "per": "un",
-      "total": 9.99,
-      "promoId": "hamburguer-de-vaca-s-gluten-cap-iglo-8un"
-     }
-    ],
-    "image": "/meals/lib-hamburguer-b26ea0f0.webp",
     "imageCredit": {
      "name": "Imagem gerada por IA",
      "url": ""
@@ -27672,6 +26903,133 @@
      "url": ""
     }
    }
+  },
+  {
+   "id": "hamburguer",
+   "name": "Hambúrguer Caseiro com Batata Frita",
+   "cuisine": "Americana",
+   "original": "Classic Cheeseburger",
+   "rows": [
+    {
+     "market": "Lidl",
+     "product": "Hambúrguer de Novilho com Trufas",
+     "price": 4.49,
+     "per": "un",
+     "total": 4.49,
+     "promoId": "hamburguer-de-novilho-com-trufas"
+    },
+    {
+     "market": "Pingo Doce",
+     "product": "Hambúrguer de vaca s/glúten cap iglo 8un",
+     "price": 9.99,
+     "per": "un",
+     "total": 9.99,
+     "promoId": "hamburguer-de-vaca-s-gluten-cap-iglo-8un"
+    }
+   ],
+   "market": "Lidl",
+   "recipe": {
+    "id": "hamburguer",
+    "slot": 2,
+    "meal": "Jantar",
+    "name": "Hambúrguer Caseiro com Batata Frita",
+    "original": "Classic Cheeseburger",
+    "cuisine": "Americana",
+    "description": "Hambúrguer sumarento com queijo derretido, no pão tostado, com batata frita.",
+    "servings": "4 pessoas",
+    "time": "35 min",
+    "difficulty": "Fácil",
+    "veg": false,
+    "allergens": [
+     "gluten",
+     "lactose",
+     "ovos"
+    ],
+    "est": 5.25,
+    "imgDesc": "Homemade cheeseburger in a toasted bun with lettuce, tomato and pickles, with french fries",
+    "mainCost": 4.49,
+    "ingredients": [
+     {
+      "item": "Carne picada",
+      "qty": "700 g",
+      "price": 4.49,
+      "per": "un",
+      "amount": 1,
+      "label": "DELUXE",
+      "note": "folheto: Hambúrguer de Novilho com Trufas",
+      "promoId": "hamburguer-de-novilho-com-trufas"
+     },
+     {
+      "item": "Pão de hambúrguer",
+      "qty": "4"
+     },
+     {
+      "item": "Queijo cheddar",
+      "qty": "4 fatias"
+     },
+     {
+      "item": "Alface",
+      "qty": "4 folhas"
+     },
+     {
+      "item": "Tomate",
+      "qty": "1"
+     },
+     {
+      "item": "Cebola",
+      "qty": "1"
+     },
+     {
+      "item": "Pickles",
+      "qty": "8 rodelas"
+     },
+     {
+      "item": "Ketchup e mostarda",
+      "qty": "a gosto"
+     },
+     {
+      "item": "Batata",
+      "qty": "800 g"
+     },
+     {
+      "item": "Óleo para fritar",
+      "qty": "400 ml"
+     }
+    ],
+    "steps": [
+     "Tempere a carne com sal e pimenta e forme 4 hambúrgueres.",
+     "Grelhe em frigideira muito quente 3 a 4 min por lado.",
+     "Coloque queijo no último minuto e tape.",
+     "Toste os pães.",
+     "Frite a batata em palitos.",
+     "Monte com alface, tomate, cebola, pickles e molhos.",
+     "Dica do chef: Não pressione o hambúrguer na frigideira."
+    ],
+    "imageQuery": "Classic Cheeseburger Americana",
+    "compare": [
+     {
+      "market": "Lidl",
+      "product": "Hambúrguer de Novilho com Trufas",
+      "price": 4.49,
+      "per": "un",
+      "total": 4.49,
+      "promoId": "hamburguer-de-novilho-com-trufas"
+     },
+     {
+      "market": "Pingo Doce",
+      "product": "Hambúrguer de vaca s/glúten cap iglo 8un",
+      "price": 9.99,
+      "per": "un",
+      "total": 9.99,
+      "promoId": "hamburguer-de-vaca-s-gluten-cap-iglo-8un"
+     }
+    ],
+    "image": "/meals/lib-hamburguer-b26ea0f0.webp",
+    "imageCredit": {
+     "name": "Imagem gerada por IA",
+     "url": ""
+    }
+   }
   }
  ],
  "imageStyle": {
@@ -27713,6 +27071,9 @@
   "feijoada": "caseira-v2",
   "frango-churrasco": "caseira-v2",
   "tortilha": "caseira-v2",
-  "coq-au-vin": "caseira-v2"
+  "coq-au-vin": "caseira-v2",
+  "lulas-guisadas": "caseira-v2",
+  "souvlaki": "caseira-v2",
+  "espadarte-siciliana": "caseira-v2"
  }
 }
