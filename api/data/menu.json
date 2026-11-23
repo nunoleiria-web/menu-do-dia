@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-22T12:41:00.217Z",
+ "updatedAt": "2026-11-23T14:26:55.435Z",
  "markets": [
   {
    "name": "Continente",
@@ -18,31 +18,112 @@
    ],
    "recipes": [
     {
-     "id": "pad-thai",
+     "id": "lulas-guisadas",
      "slot": 1,
      "meal": "Almoço",
-     "name": "Pad Thai de Camarão",
-     "original": "ผัดไทย (Pad Thai)",
-     "cuisine": "Tailandesa",
-     "description": "Noodles de arroz salteados com camarão, ovo, rebentos de soja e amendoim.",
+     "name": "Lulas Guisadas com Batata",
+     "original": "Lulas Guisadas",
+     "cuisine": "Portuguesa",
+     "description": "Lulas tenras guisadas lentamente com tomate, pimento e batata, servidas com arroz branco.",
      "servings": "4 pessoas",
-     "time": "35 min",
-     "difficulty": "Média",
+     "time": "50 min",
+     "difficulty": "Fácil",
      "veg": false,
      "allergens": [
-      "marisco",
-      "ovos",
-      "frutos-secos",
-      "soja",
-      "peixe"
+      "marisco"
      ],
-     "est": 4.9,
-     "imgDesc": "Shrimp pad thai with rice noodles, egg, bean sprouts, crushed peanuts and lime",
+     "est": 4.85,
+     "imgDesc": "Stewed squid rings in tomato sauce with potatoes, served with white rice",
+     "mainCost": 2.36,
+     "ingredients": [
+      {
+       "item": "Lulas limpas",
+       "qty": "800 g",
+       "price": 2.95,
+       "per": "kg",
+       "amount": 0.8,
+       "note": "folheto: Lulas Recheadas Pitéu",
+       "promoId": "lulas-recheadas-piteu"
+      },
+      {
+       "item": "Batata",
+       "qty": "600 g"
+      },
+      {
+       "item": "Arroz branco",
+       "qty": "250 g"
+      },
+      {
+       "item": "Cebola",
+       "qty": "2"
+      },
+      {
+       "item": "Alho",
+       "qty": "3 dentes"
+      },
+      {
+       "item": "Tomate maduro",
+       "qty": "3"
+      },
+      {
+       "item": "Pimento verde",
+       "qty": "1"
+      },
+      {
+       "item": "Vinho branco",
+       "qty": "1 copo"
+      },
+      {
+       "item": "Louro",
+       "qty": "1 folha"
+      },
+      {
+       "item": "Azeite",
+       "qty": "4 c. sopa"
+      },
+      {
+       "item": "Coentros",
+       "qty": "1 molho"
+      }
+     ],
+     "steps": [
+      "Corte as lulas em anéis ou tiras de 2 cm.",
+      "Refogue cebola, alho e pimento em tiras no azeite 8 min com o louro.",
+      "Junte o tomate picado e cozinhe 8 min.",
+      "Adicione as lulas, o vinho branco e meio copo de água. Tape e cozinhe em lume brando 25 min.",
+      "Junte a batata em cubos e cozinhe mais 15 a 20 min, até estar macia.",
+      "Cozinhe o arroz branco à parte (18 min) e sirva as lulas com coentros picados.",
+      "Dica do chef: Não mexa demasiado: as lulas devem ficar com o corte intacto."
+     ],
+     "imageQuery": "Lulas Guisadas Portuguesa",
+     "image": "/meals/lib-lulas-guisadas-3903aac1.webp",
+     "imageCredit": {
+      "name": "Imagem gerada por IA",
+      "url": ""
+     }
+    },
+    {
+     "id": "gambas-ajillo",
+     "slot": 2,
+     "meal": "Jantar",
+     "name": "Gambas ao Alhilho com Arroz de Tomate",
+     "original": "Gambas al Ajillo",
+     "cuisine": "Espanhola",
+     "description": "Camarões salteados em azeite com alho e piri-piri, servidos com pão para molhar.",
+     "servings": "4 pessoas",
+     "time": "25 min",
+     "difficulty": "Fácil",
+     "veg": false,
+     "allergens": [
+      "marisco"
+     ],
+     "est": 4,
+     "imgDesc": "Gambas al ajillo, garlic prawns sizzling in olive oil with chili in a clay dish, with bread",
      "mainCost": 4.59,
      "ingredients": [
       {
        "item": "Camarão",
-       "qty": "500 g",
+       "qty": "700 g",
        "price": 4.59,
        "per": "un",
        "amount": 1,
@@ -50,64 +131,44 @@
        "promoId": "miolo-de-camarao-grande-40-60-ultracongelado-pescanova"
       },
       {
-       "item": "Noodles de arroz",
-       "qty": "250 g"
+       "item": "Alho",
+       "qty": "8 dentes"
       },
       {
-       "item": "Ovos",
+       "item": "Azeite",
+       "qty": "8 c. sopa"
+      },
+      {
+       "item": "Piri-piri seco",
        "qty": "2"
       },
       {
-       "item": "Rebentos de soja",
-       "qty": "150 g"
-      },
-      {
-       "item": "Cebolinho",
-       "qty": "4"
-      },
-      {
-       "item": "Alho",
-       "qty": "2 dentes"
-      },
-      {
-       "item": "Molho de peixe",
-       "qty": "2 c. sopa"
-      },
-      {
-       "item": "Molho de soja",
-       "qty": "1 c. sopa"
-      },
-      {
-       "item": "Açúcar",
-       "qty": "1 c. sopa"
-      },
-      {
-       "item": "Tamarindo ou lima",
-       "qty": "2 c. sopa"
-      },
-      {
-       "item": "Amendoim torrado",
-       "qty": "50 g"
-      },
-      {
-       "item": "Óleo",
+       "item": "Vinho branco ou xerez",
        "qty": "3 c. sopa"
       },
       {
-       "item": "Lima",
-       "qty": "1"
+       "item": "Salsa",
+       "qty": "1 molho"
+      },
+      {
+       "item": "Pão rústico",
+       "qty": "8 fatias"
+      },
+      {
+       "item": "Arroz de tomate",
+       "qty": "300 g de arroz"
       }
      ],
      "steps": [
-      "Demolhe os noodles em água morna 20 min e escorra.",
-      "Misture o molho: peixe, soja, açúcar e tamarindo.",
-      "Salteie o alho e os camarões em óleo bem quente 2 min; reserve.",
-      "Junte os noodles e o molho e salteie 3 min.",
-      "Faça um canto, mexa os ovos, misture tudo.",
-      "Junte rebentos, cebolinho e camarão; sirva com amendoim e lima.",
-      "Dica do chef: Frite em lume muito forte e em pequenas quantidades."
+      "Descasque os camarões, deixando a cauda, e seque com papel.",
+      "Aqueça o azeite com o alho laminado e o piri-piri em lume brando 3 min, sem queimar.",
+      "Aumente o lume, junte os camarões e salteie 2 a 3 min até ficarem rosados.",
+      "Deite o vinho, deixe evaporar 30 segundos e retire do lume.",
+      "Polvilhe com salsa e sal.",
+      "Sirva com pão e arroz de tomate.",
+      "Dica do chef: Retire do lume logo que fiquem rosados: o camarão cozinha em segundos."
      ],
-     "imageQuery": "ผัดไทย (Pad Thai) Tailandesa",
+     "imageQuery": "Gambas al Ajillo Espanhola",
      "compare": [
       {
        "market": "Continente",
@@ -126,86 +187,7 @@
        "promoId": "camarao-cozido-20-30-emb-500gr-pd"
       }
      ],
-     "image": "/meals/lib-pad-thai-072caa11.webp",
-     "imageCredit": {
-      "name": "Imagem gerada por IA",
-      "url": ""
-     }
-    },
-    {
-     "id": "teriyaki-salmao",
-     "slot": 2,
-     "meal": "Jantar",
-     "name": "Salmão Teriyaki com Arroz",
-     "original": "鮭の照り焼き (Sake no Teriyaki)",
-     "cuisine": "Japonesa",
-     "description": "Salmão glaceado em molho teriyaki, com arroz japonês e legumes ao vapor.",
-     "servings": "4 pessoas",
-     "time": "30 min",
-     "difficulty": "Fácil",
-     "veg": false,
-     "allergens": [
-      "peixe",
-      "soja",
-      "gluten"
-     ],
-     "est": 2.8,
-     "imgDesc": "Teriyaki glazed salmon fillet with sushi rice, broccoli and sesame seeds",
-     "mainCost": 3.59,
-     "ingredients": [
-      {
-       "item": "Lombos de salmão",
-       "qty": "600 g",
-       "price": 5.99,
-       "per": "kg",
-       "amount": 0.6,
-       "note": "folheto: Cubos de Salmão Fumado Skandia",
-       "promoId": "cubos-de-salmao-fumado-skandia"
-      },
-      {
-       "item": "Arroz de sushi",
-       "qty": "300 g"
-      },
-      {
-       "item": "Molho de soja",
-       "qty": "4 c. sopa"
-      },
-      {
-       "item": "Mirin ou vinho branco",
-       "qty": "3 c. sopa"
-      },
-      {
-       "item": "Açúcar",
-       "qty": "1 c. sopa"
-      },
-      {
-       "item": "Gengibre",
-       "qty": "1 c. chá"
-      },
-      {
-       "item": "Brócolos",
-       "qty": "300 g"
-      },
-      {
-       "item": "Sementes de sésamo",
-       "qty": "1 c. sopa"
-      },
-      {
-       "item": "Óleo",
-       "qty": "1 c. sopa"
-      }
-     ],
-     "steps": [
-      "Cozinhe o arroz de sushi segundo as instruções.",
-      "Misture soja, mirin, açúcar e gengibre.",
-      "Doure o salmão em óleo, 3 min por lado.",
-      "Junte o molho e cozinhe 3 min, regando até glacear.",
-      "Cozinhe os brócolos ao vapor 4 min.",
-      "Sirva sobre arroz com sésamo.",
-      "Dica do chef: Regue o salmão várias vezes com o molho para ficar brilhante."
-     ],
-     "imageQuery": "鮭の照り焼き (Sake no Teriyaki) Japonesa",
-     "image": "/meals/lib-teriyaki-salmao-e23cd147.webp",
+     "image": "/meals/lib-gambas-ajillo-cee5e421.webp",
      "imageCredit": {
       "name": "Imagem gerada por IA",
       "url": ""
@@ -11171,210 +11153,11 @@
     }
    ],
    "check": {
-    "date": "2026-11-22",
+    "date": "2026-11-23",
     "result": "sem-novo"
    },
    "readVersion": 3,
    "plan": [
-    {
-     "date": "2026-11-22",
-     "recipes": [
-      {
-       "id": "pad-thai",
-       "slot": 1,
-       "meal": "Almoço",
-       "name": "Pad Thai de Camarão",
-       "original": "ผัดไทย (Pad Thai)",
-       "cuisine": "Tailandesa",
-       "description": "Noodles de arroz salteados com camarão, ovo, rebentos de soja e amendoim.",
-       "servings": "4 pessoas",
-       "time": "35 min",
-       "difficulty": "Média",
-       "veg": false,
-       "allergens": [
-        "marisco",
-        "ovos",
-        "frutos-secos",
-        "soja",
-        "peixe"
-       ],
-       "est": 4.9,
-       "imgDesc": "Shrimp pad thai with rice noodles, egg, bean sprouts, crushed peanuts and lime",
-       "mainCost": 4.59,
-       "ingredients": [
-        {
-         "item": "Camarão",
-         "qty": "500 g",
-         "price": 4.59,
-         "per": "un",
-         "amount": 1,
-         "note": "folheto: Miolo de Camarão Grande 40/60 Ultracongelado Pescanova",
-         "promoId": "miolo-de-camarao-grande-40-60-ultracongelado-pescanova"
-        },
-        {
-         "item": "Noodles de arroz",
-         "qty": "250 g"
-        },
-        {
-         "item": "Ovos",
-         "qty": "2"
-        },
-        {
-         "item": "Rebentos de soja",
-         "qty": "150 g"
-        },
-        {
-         "item": "Cebolinho",
-         "qty": "4"
-        },
-        {
-         "item": "Alho",
-         "qty": "2 dentes"
-        },
-        {
-         "item": "Molho de peixe",
-         "qty": "2 c. sopa"
-        },
-        {
-         "item": "Molho de soja",
-         "qty": "1 c. sopa"
-        },
-        {
-         "item": "Açúcar",
-         "qty": "1 c. sopa"
-        },
-        {
-         "item": "Tamarindo ou lima",
-         "qty": "2 c. sopa"
-        },
-        {
-         "item": "Amendoim torrado",
-         "qty": "50 g"
-        },
-        {
-         "item": "Óleo",
-         "qty": "3 c. sopa"
-        },
-        {
-         "item": "Lima",
-         "qty": "1"
-        }
-       ],
-       "steps": [
-        "Demolhe os noodles em água morna 20 min e escorra.",
-        "Misture o molho: peixe, soja, açúcar e tamarindo.",
-        "Salteie o alho e os camarões em óleo bem quente 2 min; reserve.",
-        "Junte os noodles e o molho e salteie 3 min.",
-        "Faça um canto, mexa os ovos, misture tudo.",
-        "Junte rebentos, cebolinho e camarão; sirva com amendoim e lima.",
-        "Dica do chef: Frite em lume muito forte e em pequenas quantidades."
-       ],
-       "imageQuery": "ผัดไทย (Pad Thai) Tailandesa",
-       "compare": [
-        {
-         "market": "Continente",
-         "product": "Miolo de Camarão Grande 40/60 Ultracongelado Pescanova",
-         "price": 4.59,
-         "per": "un",
-         "total": 4.59,
-         "promoId": "miolo-de-camarao-grande-40-60-ultracongelado-pescanova"
-        },
-        {
-         "market": "Pingo Doce",
-         "product": "Camarão cozido 20/30 emb. 500gr pd",
-         "price": 7.49,
-         "per": "un",
-         "total": 7.49,
-         "promoId": "camarao-cozido-20-30-emb-500gr-pd"
-        }
-       ],
-       "image": "/meals/lib-pad-thai-072caa11.webp",
-       "imageCredit": {
-        "name": "Imagem gerada por IA",
-        "url": ""
-       }
-      },
-      {
-       "id": "teriyaki-salmao",
-       "slot": 2,
-       "meal": "Jantar",
-       "name": "Salmão Teriyaki com Arroz",
-       "original": "鮭の照り焼き (Sake no Teriyaki)",
-       "cuisine": "Japonesa",
-       "description": "Salmão glaceado em molho teriyaki, com arroz japonês e legumes ao vapor.",
-       "servings": "4 pessoas",
-       "time": "30 min",
-       "difficulty": "Fácil",
-       "veg": false,
-       "allergens": [
-        "peixe",
-        "soja",
-        "gluten"
-       ],
-       "est": 2.8,
-       "imgDesc": "Teriyaki glazed salmon fillet with sushi rice, broccoli and sesame seeds",
-       "mainCost": 3.59,
-       "ingredients": [
-        {
-         "item": "Lombos de salmão",
-         "qty": "600 g",
-         "price": 5.99,
-         "per": "kg",
-         "amount": 0.6,
-         "note": "folheto: Cubos de Salmão Fumado Skandia",
-         "promoId": "cubos-de-salmao-fumado-skandia"
-        },
-        {
-         "item": "Arroz de sushi",
-         "qty": "300 g"
-        },
-        {
-         "item": "Molho de soja",
-         "qty": "4 c. sopa"
-        },
-        {
-         "item": "Mirin ou vinho branco",
-         "qty": "3 c. sopa"
-        },
-        {
-         "item": "Açúcar",
-         "qty": "1 c. sopa"
-        },
-        {
-         "item": "Gengibre",
-         "qty": "1 c. chá"
-        },
-        {
-         "item": "Brócolos",
-         "qty": "300 g"
-        },
-        {
-         "item": "Sementes de sésamo",
-         "qty": "1 c. sopa"
-        },
-        {
-         "item": "Óleo",
-         "qty": "1 c. sopa"
-        }
-       ],
-       "steps": [
-        "Cozinhe o arroz de sushi segundo as instruções.",
-        "Misture soja, mirin, açúcar e gengibre.",
-        "Doure o salmão em óleo, 3 min por lado.",
-        "Junte o molho e cozinhe 3 min, regando até glacear.",
-        "Cozinhe os brócolos ao vapor 4 min.",
-        "Sirva sobre arroz com sésamo.",
-        "Dica do chef: Regue o salmão várias vezes com o molho para ficar brilhante."
-       ],
-       "imageQuery": "鮭の照り焼き (Sake no Teriyaki) Japonesa",
-       "image": "/meals/lib-teriyaki-salmao-e23cd147.webp",
-       "imageCredit": {
-        "name": "Imagem gerada por IA",
-        "url": ""
-       }
-      }
-     ]
-    },
     {
      "date": "2026-11-23",
      "recipes": [
@@ -11559,13 +11342,6 @@
    ],
    "hist": [
     {
-     "date": "2026-11-09",
-     "ids": [
-      "espadarte-siciliana",
-      "tagine-frango"
-     ]
-    },
-    {
      "date": "2026-11-10",
      "ids": [
       "hamburguer",
@@ -11654,6 +11430,13 @@
      "ids": [
       "pad-thai",
       "teriyaki-salmao"
+     ]
+    },
+    {
+     "date": "2026-11-23",
+     "ids": [
+      "lulas-guisadas",
+      "gambas-ajillo"
      ]
     }
    ],
@@ -12368,27 +12151,26 @@
    ],
    "recipes": [
     {
-     "id": "gyros-porco",
+     "id": "bifanas",
      "slot": 1,
      "meal": "Almoço",
-     "name": "Gyros de Porco no Pão Pita",
-     "original": "Γύρος (Gyros)",
-     "cuisine": "Grega",
-     "description": "Tiras de porco temperadas e salteadas em pita com tzatziki, tomate e batata frita.",
+     "name": "Bifanas no Pão com Batata Frita",
+     "original": "Bifanas",
+     "cuisine": "Portuguesa",
+     "description": "Fatias finas de porco marinadas em alho e vinho, estufadas em molho de pimentão e servidas no pão.",
      "servings": "4 pessoas",
-     "time": "40 min",
+     "time": "35 min",
      "difficulty": "Fácil",
      "veg": false,
      "allergens": [
-      "lactose",
       "gluten"
      ],
-     "est": 5.55,
-     "imgDesc": "Pork gyros in pita bread with tzatziki, tomato, red onion and french fries",
+     "est": 3.7,
+     "imgDesc": "Portuguese bifana pork sandwich in a bread roll with sauce, with french fries",
      "mainCost": 7.3,
      "ingredients": [
       {
-       "item": "Porco em tiras",
+       "item": "Bifanas de porco",
        "qty": "700 g",
        "price": 10.43,
        "per": "kg",
@@ -12398,158 +12180,128 @@
        "promoId": "lombos-de-pangasius-pescanova-400g"
       },
       {
-       "item": "Pães pita",
+       "item": "Pão de trigo",
        "qty": "4"
       },
       {
-       "item": "Iogurte grego",
-       "qty": "250 g"
-      },
-      {
-       "item": "Pepino",
-       "qty": "1/2"
+       "item": "Vinho branco",
+       "qty": "1 copo"
       },
       {
        "item": "Alho",
-       "qty": "3 dentes"
+       "qty": "4 dentes"
       },
       {
-       "item": "Orégãos",
+       "item": "Colorau",
        "qty": "1 c. sopa"
       },
       {
-       "item": "Paprika",
-       "qty": "1 c. chá"
-      },
-      {
-       "item": "Tomate",
-       "qty": "2"
-      },
-      {
-       "item": "Cebola roxa",
-       "qty": "1"
-      },
-      {
-       "item": "Batata frita",
-       "qty": "500 g"
+       "item": "Louro",
+       "qty": "1 folha"
       },
       {
        "item": "Azeite",
        "qty": "3 c. sopa"
+      },
+      {
+       "item": "Batata",
+       "qty": "600 g"
+      },
+      {
+       "item": "Mostarda",
+       "qty": "a gosto"
       }
      ],
      "steps": [
-      "Corte o porco em tiras finas e tempere com orégãos, paprika, alho, sal e azeite, 30 min.",
-      "Faça um molho de iogurte com pepino e alho.",
-      "Salteie o porco em frigideira muito quente, em duas vezes, 6 min.",
-      "Aqueça as pitas.",
-      "Recheie com porco, tomate, cebola, batata frita e molho.",
-      "Sirva de imediato.",
-      "Dica do chef: Frigideira muito quente: a carne deve dourar, não cozer."
+      "Tempere as bifanas com sal, alho esmagado, colorau, louro e vinho branco; deixe marinar 2 horas, no frigorífico.",
+      "Aqueça azeite numa frigideira e frite as bifanas 2 min de cada lado.",
+      "Junte a marinada e cozinhe em lume brando 15 min, até o molho reduzir.",
+      "Frite a batata em palitos.",
+      "Abra os pães, recheie com bifanas e regue com molho.",
+      "Sirva com batata frita e mostarda.",
+      "Dica do chef: Corte as bifanas finas (0,5 cm) para ficarem tenras."
      ],
-     "imageQuery": "Γύρος (Gyros) Grega",
-     "image": "/meals/lib-gyros-porco-886aaec4.webp",
+     "imageQuery": "Bifanas Portuguesa",
+     "image": "/meals/lib-bifanas-1596f076.webp",
      "imageCredit": {
       "name": "Imagem gerada por IA",
       "url": ""
      }
     },
     {
-     "id": "puttanesca",
+     "id": "mac-cheese",
      "slot": 2,
      "meal": "Jantar",
-     "name": "Esparguete alla Puttanesca",
-     "original": "Spaghetti alla Puttanesca",
-     "cuisine": "Italiana",
-     "description": "Massa picante com tomate, azeitonas, alcaparras e anchovas: despensa e sabor.",
+     "name": "Mac and Cheese Gratinado",
+     "original": "Baked Mac and Cheese",
+     "cuisine": "Americana",
+     "description": "Massa cotovelos em molho cremoso de queijo, gratinada, com salada verde.",
      "servings": "4 pessoas",
-     "time": "25 min",
+     "time": "45 min",
      "difficulty": "Fácil",
-     "veg": false,
+     "veg": true,
      "allergens": [
       "gluten",
-      "peixe"
+      "lactose"
      ],
-     "est": 4.75,
-     "imgDesc": "Spaghetti alla puttanesca with tomato sauce, black olives, capers and parsley",
-     "mainCost": 0.83,
+     "est": 2.85,
+     "imgDesc": "Baked macaroni and cheese in a casserole dish with golden cheesy crust and a green salad",
+     "mainCost": 2.4,
      "ingredients": [
       {
-       "item": "Esparguete",
-       "qty": "400 g",
-       "price": 2.08,
+       "item": "Queijo ralado/fatiado",
+       "qty": "300 g",
+       "price": 7.99,
        "per": "kg",
-       "amount": 0.4,
-       "label": "1,04 € a embalagem de 500 g",
-       "note": "folheto: Massa milaneza cotovelos gr 0,5kg",
-       "promoId": "massa-milaneza-cotovelos-gr-0-5kg"
+       "amount": 0.3,
+       "label": "6,39 € a embalagem de 800 g",
+       "note": "folheto: Queijo gouda fatiado campainha 2x400g",
+       "promoId": "queijo-gouda-fatiado-campainha-2x400g"
       },
       {
-       "item": "Tomate pelado",
-       "qty": "400 g"
+       "item": "Massa cotovelos",
+       "qty": "350 g"
       },
       {
-       "item": "Azeitonas pretas",
-       "qty": "100 g"
+       "item": "Leite",
+       "qty": "600 ml"
       },
       {
-       "item": "Alcaparras",
-       "qty": "2 c. sopa"
+       "item": "Manteiga",
+       "qty": "50 g"
       },
       {
-       "item": "Anchovas",
-       "qty": "6 filetes"
-      },
-      {
-       "item": "Alho",
-       "qty": "3 dentes"
-      },
-      {
-       "item": "Piri-piri",
-       "qty": "1"
-      },
-      {
-       "item": "Azeite",
-       "qty": "4 c. sopa"
-      },
-      {
-       "item": "Salsa",
-       "qty": "1 molho"
-      },
-      {
-       "item": "Parmesão",
+       "item": "Farinha",
        "qty": "40 g"
+      },
+      {
+       "item": "Mostarda",
+       "qty": "1 c. chá"
+      },
+      {
+       "item": "Noz-moscada",
+       "qty": "1 pitada"
+      },
+      {
+       "item": "Pão ralado",
+       "qty": "3 c. sopa"
+      },
+      {
+       "item": "Salada verde",
+       "qty": "1 prato"
       }
      ],
      "steps": [
-      "Cozinhe o esparguete em água com sal até ficar al dente.",
-      "Aqueça azeite com alho e anchovas e desfaça-as 2 min.",
-      "Junte o piri-piri, o tomate e cozinhe 10 min.",
-      "Adicione azeitonas e alcaparras.",
-      "Envolva a massa no molho com um pouco da água de cozedura 1 min.",
-      "Sirva com salsa e parmesão.",
-      "Dica do chef: As anchovas dissolvem-se e dão profundidade sem sabor a peixe."
+      "Cozinhe a massa 2 min menos do que indica a embalagem.",
+      "Faça o molho: manteiga, farinha, leite em fio, até engrossar (6 min).",
+      "Retire do lume, junte 250 g de queijo, mostarda e noz-moscada.",
+      "Misture a massa no molho.",
+      "Transfira para travessa, cubra com queijo restante e pão ralado.",
+      "Gratine a 200 ºC 15 min e sirva com salada.",
+      "Dica do chef: Misture dois queijos para ter sabor e cremosidade."
      ],
-     "imageQuery": "Spaghetti alla Puttanesca Italiana",
-     "compare": [
-      {
-       "market": "Pingo Doce",
-       "product": "Massa milaneza cotovelos gr 0,5kg",
-       "price": 2.08,
-       "per": "kg",
-       "total": 0.83,
-       "promoId": "massa-milaneza-cotovelos-gr-0-5kg"
-      },
-      {
-       "market": "Aldi",
-       "product": "Massa Proteica",
-       "price": 4.48,
-       "per": "kg",
-       "total": 1.79,
-       "promoId": "massa-proteica"
-      }
-     ],
-     "image": "/meals/lib-puttanesca-bbc571c1.webp",
+     "imageQuery": "Baked Mac and Cheese Americana",
+     "image": "/meals/lib-mac-cheese-4ada9ac5.webp",
      "imageCredit": {
       "name": "Imagem gerada por IA",
       "url": ""
@@ -23124,203 +22876,10 @@
     }
    ],
    "check": {
-    "date": "2026-11-22",
+    "date": "2026-11-23",
     "result": "sem-novo"
    },
    "plan": [
-    {
-     "date": "2026-11-22",
-     "recipes": [
-      {
-       "id": "gyros-porco",
-       "slot": 1,
-       "meal": "Almoço",
-       "name": "Gyros de Porco no Pão Pita",
-       "original": "Γύρος (Gyros)",
-       "cuisine": "Grega",
-       "description": "Tiras de porco temperadas e salteadas em pita com tzatziki, tomate e batata frita.",
-       "servings": "4 pessoas",
-       "time": "40 min",
-       "difficulty": "Fácil",
-       "veg": false,
-       "allergens": [
-        "lactose",
-        "gluten"
-       ],
-       "est": 5.55,
-       "imgDesc": "Pork gyros in pita bread with tzatziki, tomato, red onion and french fries",
-       "mainCost": 7.3,
-       "ingredients": [
-        {
-         "item": "Porco em tiras",
-         "qty": "700 g",
-         "price": 10.43,
-         "per": "kg",
-         "amount": 0.7,
-         "label": "4,17 € a embalagem de 400 g",
-         "note": "folheto: Lombos de pangasius pescanova 400g",
-         "promoId": "lombos-de-pangasius-pescanova-400g"
-        },
-        {
-         "item": "Pães pita",
-         "qty": "4"
-        },
-        {
-         "item": "Iogurte grego",
-         "qty": "250 g"
-        },
-        {
-         "item": "Pepino",
-         "qty": "1/2"
-        },
-        {
-         "item": "Alho",
-         "qty": "3 dentes"
-        },
-        {
-         "item": "Orégãos",
-         "qty": "1 c. sopa"
-        },
-        {
-         "item": "Paprika",
-         "qty": "1 c. chá"
-        },
-        {
-         "item": "Tomate",
-         "qty": "2"
-        },
-        {
-         "item": "Cebola roxa",
-         "qty": "1"
-        },
-        {
-         "item": "Batata frita",
-         "qty": "500 g"
-        },
-        {
-         "item": "Azeite",
-         "qty": "3 c. sopa"
-        }
-       ],
-       "steps": [
-        "Corte o porco em tiras finas e tempere com orégãos, paprika, alho, sal e azeite, 30 min.",
-        "Faça um molho de iogurte com pepino e alho.",
-        "Salteie o porco em frigideira muito quente, em duas vezes, 6 min.",
-        "Aqueça as pitas.",
-        "Recheie com porco, tomate, cebola, batata frita e molho.",
-        "Sirva de imediato.",
-        "Dica do chef: Frigideira muito quente: a carne deve dourar, não cozer."
-       ],
-       "imageQuery": "Γύρος (Gyros) Grega",
-       "image": "/meals/lib-gyros-porco-886aaec4.webp",
-       "imageCredit": {
-        "name": "Imagem gerada por IA",
-        "url": ""
-       }
-      },
-      {
-       "id": "puttanesca",
-       "slot": 2,
-       "meal": "Jantar",
-       "name": "Esparguete alla Puttanesca",
-       "original": "Spaghetti alla Puttanesca",
-       "cuisine": "Italiana",
-       "description": "Massa picante com tomate, azeitonas, alcaparras e anchovas: despensa e sabor.",
-       "servings": "4 pessoas",
-       "time": "25 min",
-       "difficulty": "Fácil",
-       "veg": false,
-       "allergens": [
-        "gluten",
-        "peixe"
-       ],
-       "est": 4.75,
-       "imgDesc": "Spaghetti alla puttanesca with tomato sauce, black olives, capers and parsley",
-       "mainCost": 0.83,
-       "ingredients": [
-        {
-         "item": "Esparguete",
-         "qty": "400 g",
-         "price": 2.08,
-         "per": "kg",
-         "amount": 0.4,
-         "label": "1,04 € a embalagem de 500 g",
-         "note": "folheto: Massa milaneza cotovelos gr 0,5kg",
-         "promoId": "massa-milaneza-cotovelos-gr-0-5kg"
-        },
-        {
-         "item": "Tomate pelado",
-         "qty": "400 g"
-        },
-        {
-         "item": "Azeitonas pretas",
-         "qty": "100 g"
-        },
-        {
-         "item": "Alcaparras",
-         "qty": "2 c. sopa"
-        },
-        {
-         "item": "Anchovas",
-         "qty": "6 filetes"
-        },
-        {
-         "item": "Alho",
-         "qty": "3 dentes"
-        },
-        {
-         "item": "Piri-piri",
-         "qty": "1"
-        },
-        {
-         "item": "Azeite",
-         "qty": "4 c. sopa"
-        },
-        {
-         "item": "Salsa",
-         "qty": "1 molho"
-        },
-        {
-         "item": "Parmesão",
-         "qty": "40 g"
-        }
-       ],
-       "steps": [
-        "Cozinhe o esparguete em água com sal até ficar al dente.",
-        "Aqueça azeite com alho e anchovas e desfaça-as 2 min.",
-        "Junte o piri-piri, o tomate e cozinhe 10 min.",
-        "Adicione azeitonas e alcaparras.",
-        "Envolva a massa no molho com um pouco da água de cozedura 1 min.",
-        "Sirva com salsa e parmesão.",
-        "Dica do chef: As anchovas dissolvem-se e dão profundidade sem sabor a peixe."
-       ],
-       "imageQuery": "Spaghetti alla Puttanesca Italiana",
-       "compare": [
-        {
-         "market": "Pingo Doce",
-         "product": "Massa milaneza cotovelos gr 0,5kg",
-         "price": 2.08,
-         "per": "kg",
-         "total": 0.83,
-         "promoId": "massa-milaneza-cotovelos-gr-0-5kg"
-        },
-        {
-         "market": "Aldi",
-         "product": "Massa Proteica",
-         "price": 4.48,
-         "per": "kg",
-         "total": 1.79,
-         "promoId": "massa-proteica"
-        }
-       ],
-       "image": "/meals/lib-puttanesca-bbc571c1.webp",
-       "imageCredit": {
-        "name": "Imagem gerada por IA",
-        "url": ""
-       }
-      }
-     ]
-    },
     {
      "date": "2026-11-23",
      "recipes": [
@@ -23475,24 +23034,6 @@
         "Dica do chef: Misture dois queijos para ter sabor e cremosidade."
        ],
        "imageQuery": "Baked Mac and Cheese Americana",
-       "compare": [
-        {
-         "market": "Aldi",
-         "product": "Queijo Amanteigado em Fatias",
-         "price": 6.65,
-         "per": "kg",
-         "total": 2,
-         "promoId": "queijo-amanteigado-em-fatias"
-        },
-        {
-         "market": "Pingo Doce",
-         "product": "Queijo gouda fatiado campainha 2x400g",
-         "price": 7.99,
-         "per": "kg",
-         "total": 2.4,
-         "promoId": "queijo-gouda-fatiado-campainha-2x400g"
-        }
-       ],
        "image": "/meals/lib-mac-cheese-4ada9ac5.webp",
        "imageCredit": {
         "name": "Imagem gerada por IA",
@@ -23503,13 +23044,6 @@
     }
    ],
    "hist": [
-    {
-     "date": "2026-11-08",
-     "ids": [
-      "lulas-guisadas",
-      "tortilha"
-     ]
-    },
     {
      "date": "2026-11-09",
      "ids": [
@@ -23599,6 +23133,13 @@
      "ids": [
       "gyros-porco",
       "puttanesca"
+     ]
+    },
+    {
+     "date": "2026-11-23",
+     "ids": [
+      "bifanas",
+      "mac-cheese"
      ]
     }
    ],
@@ -24233,9 +23774,9 @@
     }
    ],
    "check": {
-    "date": "2026-11-22",
+    "date": "2026-11-23",
     "result": "sem-folheto",
-    "note": "candidatos: antevisao-folheto-lidl-back-friday-promocoes-fim-de-semana-27-a-29-novembro-318920 | antevisao-folheto-lidl-cozinha-e-cuidado-do-lar-promocoes-fim-de-semana-27-a-29-novembro-318922 | só 0 produtos legíveis (mínimo 2)"
+    "note": "candidatos: antevisao-folheto-lidl-cozinha-e-cuidado-do-lar-promocoes-fim-de-semana-27-a-29-novembro-318922 | antevisao-folheto-lidl-back-friday-promocoes-fim-de-semana-27-a-29-novembro-318920 | só 0 produtos legíveis (mínimo 2)"
    },
    "plan": [],
    "hist": [
@@ -24345,9 +23886,9 @@
   },
   {
    "name": "Aldi",
-   "from": "2026-11-16",
-   "to": "2026-11-22",
-   "flyer": "Promoções 16/11–22/11",
+   "from": "2026-11-20",
+   "to": "2026-11-29",
+   "flyer": "Promoções 20/11–29/11",
    "sources": [
     {
      "title": "Aldi — Oportunidades da semana",
@@ -24356,192 +23897,203 @@
    ],
    "recipes": [
     {
-     "id": "bulgogi",
+     "id": "bacalhau-gomes-sa",
      "slot": 1,
      "meal": "Almoço",
-     "name": "Bulgogi com Arroz e Pickles",
-     "original": "불고기 (Bulgogi)",
-     "cuisine": "Coreana",
-     "description": "Carne em fatias finas marinada em soja, pera e alho, salteada e servida com arroz.",
+     "name": "Bacalhau à Gomes de Sá",
+     "original": "Bacalhau à Gomes de Sá",
+     "cuisine": "Portuguesa",
+     "description": "Bacalhau cozido em lascas, camadas de batata em rodelas e cebola, finalizado no forno com ovo cozido e azeitonas.",
      "servings": "4 pessoas",
-     "time": "40 min",
-     "difficulty": "Fácil",
+     "time": "1h 15min",
+     "difficulty": "Média",
      "veg": false,
      "allergens": [
-      "soja",
-      "frutos-secos"
+      "peixe",
+      "ovos"
      ],
-     "est": 3.2,
-     "imgDesc": "Korean bulgogi beef with steamed rice, cucumber pickles and lettuce leaves",
-     "mainCost": 3.89,
+     "est": 5.1,
+     "imgDesc": "Bacalhau à Gomes de Sá, baked salt cod with sliced potatoes, onions, boiled egg and black olives in a ceramic dish",
+     "mainCost": 15.37,
      "ingredients": [
       {
-       "item": "Carne em fatias finas",
+       "item": "Bacalhau demolhado",
        "qty": "600 g",
-       "price": 6.49,
+       "price": 25.62,
        "per": "kg",
        "amount": 0.6,
-       "label": "6,49 € (kg)",
-       "note": "folheto: Costela de Porco",
-       "promoId": "costela-de-porco"
+       "label": "9,99 € (390 g embalagem)",
+       "note": "folheto: Lombo de Bacalhau",
+       "promoId": "lombo-de-bacalhau"
       },
       {
-       "item": "Arroz",
-       "qty": "300 g"
+       "item": "Batata",
+       "qty": "800 g"
       },
       {
-       "item": "Molho de soja",
-       "qty": "5 c. sopa"
-      },
-      {
-       "item": "Açúcar",
-       "qty": "2 c. sopa"
-      },
-      {
-       "item": "Alho",
-       "qty": "4 dentes"
-      },
-      {
-       "item": "Pera",
-       "qty": "1/2"
-      },
-      {
-       "item": "Óleo de sésamo",
-       "qty": "1 c. sopa"
-      },
-      {
-       "item": "Cebolinho",
-       "qty": "4"
-      },
-      {
-       "item": "Sementes de sésamo",
-       "qty": "1 c. sopa"
-      },
-      {
-       "item": "Pepino",
-       "qty": "1"
-      },
-      {
-       "item": "Vinagre",
-       "qty": "2 c. sopa"
-      },
-      {
-       "item": "Alface",
-       "qty": "8 folhas"
-      }
-     ],
-     "steps": [
-      "Triture a pera com alho, soja, açúcar e óleo de sésamo para a marinada.",
-      "Marine as fatias finas de carne 1 hora (ou mais).",
-      "Prepare pickles: pepino em rodelas com vinagre, açúcar e sal.",
-      "Cozinhe o arroz.",
-      "Salteie a carne em frigideira muito quente, em duas vezes, 3 min.",
-      "Sirva com arroz, pickles, alface (para enrolar) e sésamo.",
-      "Dica do chef: A pera amacia a carne e equilibra o sabor."
-     ],
-     "imageQuery": "불고기 (Bulgogi) Coreana",
-     "image": "/meals/lib-bulgogi-31bfb9d6.webp",
-     "imageCredit": {
-      "name": "Imagem gerada por IA",
-      "url": ""
-     }
-    },
-    {
-     "id": "puttanesca",
-     "slot": 2,
-     "meal": "Jantar",
-     "name": "Esparguete alla Puttanesca",
-     "original": "Spaghetti alla Puttanesca",
-     "cuisine": "Italiana",
-     "description": "Massa picante com tomate, azeitonas, alcaparras e anchovas: despensa e sabor.",
-     "servings": "4 pessoas",
-     "time": "25 min",
-     "difficulty": "Fácil",
-     "veg": false,
-     "allergens": [
-      "gluten",
-      "peixe"
-     ],
-     "est": 4.75,
-     "imgDesc": "Spaghetti alla puttanesca with tomato sauce, black olives, capers and parsley",
-     "mainCost": 1.79,
-     "ingredients": [
-      {
-       "item": "Esparguete",
-       "qty": "400 g",
-       "price": 4.48,
-       "per": "kg",
-       "amount": 0.4,
-       "label": "1,79 € (400 g unidade)",
-       "note": "folheto: Massa Proteica",
-       "promoId": "massa-proteica"
-      },
-      {
-       "item": "Tomate pelado",
-       "qty": "400 g"
-      },
-      {
-       "item": "Azeitonas pretas",
-       "qty": "100 g"
-      },
-      {
-       "item": "Alcaparras",
-       "qty": "2 c. sopa"
-      },
-      {
-       "item": "Anchovas",
-       "qty": "6 filetes"
+       "item": "Cebola",
+       "qty": "3"
       },
       {
        "item": "Alho",
        "qty": "3 dentes"
       },
       {
-       "item": "Piri-piri",
-       "qty": "1"
+       "item": "Ovos cozidos",
+       "qty": "4"
+      },
+      {
+       "item": "Azeitonas pretas",
+       "qty": "16"
       },
       {
        "item": "Azeite",
-       "qty": "4 c. sopa"
+       "qty": "8 c. sopa"
+      },
+      {
+       "item": "Louro",
+       "qty": "1 folha"
       },
       {
        "item": "Salsa",
        "qty": "1 molho"
       },
       {
-       "item": "Parmesão",
-       "qty": "40 g"
+       "item": "Leite (para escaldar)",
+       "qty": "500 ml"
       }
      ],
      "steps": [
-      "Cozinhe o esparguete em água com sal até ficar al dente.",
-      "Aqueça azeite com alho e anchovas e desfaça-as 2 min.",
-      "Junte o piri-piri, o tomate e cozinhe 10 min.",
-      "Adicione azeitonas e alcaparras.",
-      "Envolva a massa no molho com um pouco da água de cozedura 1 min.",
-      "Sirva com salsa e parmesão.",
-      "Dica do chef: As anchovas dissolvem-se e dão profundidade sem sabor a peixe."
+      "Cozinhe o bacalhau em lume brando 10 min em leite com água; escorra, retire pele e espinhas e lasque.",
+      "Cozinhe a batata com casca 20 min; descasque e corte em rodelas.",
+      "Refogue a cebola em meias-luas e o alho no azeite com o louro 15 min, em lume brando.",
+      "Pré-aqueça o forno a 200 ºC. Numa travessa, alterne camadas de batata, bacalhau e cebola refogada.",
+      "Regue com azeite e leve ao forno 15 min.",
+      "Decore com ovo cozido em quartos, azeitonas e salsa picada.",
+      "Dica do chef: Deixe a cebola cozinhar devagar: é ela que dá doçura ao prato."
      ],
-     "imageQuery": "Spaghetti alla Puttanesca Italiana",
+     "imageQuery": "Bacalhau à Gomes de Sá Portuguesa",
      "compare": [
       {
-       "market": "Pingo Doce",
-       "product": "Massa milaneza cotovelos gr 0,5kg",
-       "price": 2.08,
+       "market": "Continente",
+       "product": "Lombos de Bacalhau Seco Continente",
+       "price": 20.99,
        "per": "kg",
-       "total": 0.83,
-       "promoId": "massa-milaneza-cotovelos-gr-0-5kg"
+       "total": 12.59,
+       "promoId": "lombos-de-bacalhau-seco-continente"
       },
       {
        "market": "Aldi",
-       "product": "Massa Proteica",
-       "price": 4.48,
+       "product": "Lombo de Bacalhau",
+       "price": 25.62,
        "per": "kg",
-       "total": 1.79,
-       "promoId": "massa-proteica"
+       "total": 15.37,
+       "promoId": "lombo-de-bacalhau"
       }
      ],
-     "image": "/meals/lib-puttanesca-bbc571c1.webp",
+     "image": "/meals/lib-bacalhau-gomes-sa-95729af6.webp",
+     "imageCredit": {
+      "name": "Imagem gerada por IA",
+      "url": ""
+     }
+    },
+    {
+     "id": "katsu-porco",
+     "slot": 2,
+     "meal": "Jantar",
+     "name": "Tonkatsu com Arroz e Repolho",
+     "original": "とんかつ (Tonkatsu)",
+     "cuisine": "Japonesa",
+     "description": "Costeleta de porco panada com panko, servida com repolho e molho tonkatsu.",
+     "servings": "4 pessoas",
+     "time": "35 min",
+     "difficulty": "Média",
+     "veg": false,
+     "allergens": [
+      "gluten",
+      "ovos",
+      "soja"
+     ],
+     "est": 3.55,
+     "imgDesc": "Tonkatsu breaded pork cutlet sliced with shredded cabbage, rice and tonkatsu sauce",
+     "mainCost": 2.39,
+     "ingredients": [
+      {
+       "item": "Lombo ou costeletas de porco",
+       "qty": "600 g",
+       "price": 3.99,
+       "per": "kg",
+       "amount": 0.6,
+       "label": "3,99 € (kg)",
+       "note": "folheto: Pá de Porco sem Osso",
+       "promoId": "pa-de-porco-sem-osso"
+      },
+      {
+       "item": "Arroz de sushi",
+       "qty": "300 g"
+      },
+      {
+       "item": "Panko ou pão ralado",
+       "qty": "120 g"
+      },
+      {
+       "item": "Ovos",
+       "qty": "2"
+      },
+      {
+       "item": "Farinha",
+       "qty": "4 c. sopa"
+      },
+      {
+       "item": "Repolho",
+       "qty": "1/4"
+      },
+      {
+       "item": "Ketchup",
+       "qty": "2 c. sopa"
+      },
+      {
+       "item": "Molho Worcestershire",
+       "qty": "2 c. sopa"
+      },
+      {
+       "item": "Molho de soja",
+       "qty": "1 c. sopa"
+      },
+      {
+       "item": "Óleo para fritar",
+       "qty": "400 ml"
+      }
+     ],
+     "steps": [
+      "Bata as costeletas até 1,5 cm e tempere.",
+      "Passe por farinha, ovo e panko.",
+      "Frite em óleo a 170 ºC 4 a 5 min de cada lado.",
+      "Misture ketchup, Worcestershire e soja para o molho.",
+      "Corte o repolho em tiras finíssimas.",
+      "Corte o tonkatsu em tiras e sirva com arroz, repolho e molho.",
+      "Dica do chef: O repolho cru fresco equilibra a fritura."
+     ],
+     "imageQuery": "とんかつ (Tonkatsu) Japonesa",
+     "compare": [
+      {
+       "market": "Aldi",
+       "product": "Pá de Porco sem Osso",
+       "price": 3.99,
+       "per": "kg",
+       "total": 2.39,
+       "promoId": "pa-de-porco-sem-osso"
+      },
+      {
+       "market": "Continente",
+       "product": "Pá de Porco com Osso Continente",
+       "price": 4.49,
+       "per": "kg",
+       "total": 2.69,
+       "promoId": "pa-de-porco-com-osso-continente"
+      }
+     ],
+     "image": "/meals/lib-katsu-porco-32b62c63.webp",
      "imageCredit": {
       "name": "Imagem gerada por IA",
       "url": ""
@@ -24550,1050 +24102,1564 @@
    ],
    "promos": [
     {
+     "id": "batata-doce",
+     "name": "Batata-doce",
+     "price": 1.69,
+     "per": "kg",
+     "label": "1,69 € (1 kg embalagem)",
+     "note": "folheto oficial"
+    },
+    {
+     "id": "coco-biologico",
+     "name": "Coco Biológico",
+     "price": 2.29,
+     "per": "un",
+     "label": "Unidade",
+     "note": "folheto oficial"
+    },
+    {
+     "id": "laranja",
+     "name": "Laranja",
+     "price": 1.15,
+     "per": "kg",
+     "label": "1,15 € (kg)",
+     "note": "folheto oficial"
+    },
+    {
+     "id": "maca-fuji",
+     "name": "Maça Fuji",
+     "price": 1.59,
+     "per": "kg",
+     "label": "1,59 € (Kg)",
+     "note": "folheto oficial"
+    },
+    {
+     "id": "brocolos",
+     "name": "Brócolos",
+     "price": 2.39,
+     "per": "kg",
+     "label": "2,39 € (Kg)",
+     "note": "folheto oficial"
+    },
+    {
      "id": "cogumelos",
      "name": "Cogumelos",
+     "price": 3.97,
+     "per": "kg",
+     "label": "1,19 € (300 g embalagem)",
+     "note": "folheto oficial"
+    },
+    {
+     "id": "pa-de-porco-sem-osso",
+     "name": "Pá de Porco sem Osso",
+     "price": 3.99,
+     "per": "kg",
+     "label": "3,99 € (kg)",
+     "note": "folheto oficial"
+    },
+    {
+     "id": "hamburgueres-vegetarianos",
+     "name": "Hambúrgueres Vegetarianos",
+     "price": 14.95,
+     "per": "kg",
+     "label": "2,99 € (200 g pack)",
+     "note": "folheto oficial"
+    },
+    {
+     "id": "mix-de-frutos-vermelhos",
+     "name": "Mix de Frutos Vermelhos",
+     "price": 15.93,
+     "per": "kg",
+     "label": "2,39 € (150 g embalagem)",
+     "note": "folheto oficial"
+    },
+    {
+     "id": "mix-de-uvas",
+     "name": "Mix de Uvas",
      "price": 4.58,
      "per": "kg",
      "label": "2,29 € (500 g embalagem)",
      "note": "folheto oficial"
     },
     {
-     "id": "nata-cremosa",
-     "name": "Nata Cremosa",
-     "price": 0.91,
-     "per": "un",
-     "label": "200 ml unidade",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "leite-meio-gordo",
-     "name": "Leite Meio-gordo",
-     "price": 1,
-     "per": "un",
-     "label": "1 l unidade",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "wafers",
-     "name": "Wafers",
-     "price": 8.93,
-     "per": "kg",
-     "label": "1,59 € (175/180 g unidade)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "atum-em-oleo",
-     "name": "Atum em Óleo",
-     "price": 15.26,
-     "per": "kg",
-     "label": "1,19 € (78 g unidade)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "manteiga-com-sal",
-     "name": "Manteiga com Sal",
-     "price": 8.76,
-     "per": "kg",
-     "label": "2,19 € (250 g unidade )",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "nougat-macio",
-     "name": "Nougat Macio",
-     "price": 12.07,
-     "per": "kg",
-     "label": "1,69 € (140 g pack)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "batata-vermelha",
-     "name": "Batata Vermelha",
-     "price": 0.89,
-     "per": "kg",
-     "label": "0,89 € (kg)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "erva-para-gatos-biologica",
-     "name": "Erva para Gatos Biológica",
-     "price": 1.99,
-     "per": "un",
-     "label": "vaso",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "nectar-manga-laranja",
-     "name": "Néctar Manga Laranja",
-     "price": 1.35,
-     "per": "un",
-     "label": "1 l unidade",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "batata-branca",
-     "name": "Batata Branca",
-     "price": 0.89,
-     "per": "kg",
-     "label": "0,89 € (kg)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "bombons-de-chocolate-com-caramelo",
-     "name": "Bombons de Chocolate com Caramelo",
-     "price": 15.97,
-     "per": "kg",
-     "label": "5,99 € (375 g unidade)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "mini-chocolates",
-     "name": "Mini Chocolates",
-     "price": 19.97,
-     "per": "kg",
-     "label": "5,99 € (300 g unidade)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "pai-natal",
-     "name": "Pai Natal",
-     "price": 12.64,
-     "per": "kg",
-     "label": "1,39 € (110 g unidade)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "bolo-rei",
-     "name": "Bolo Rei",
-     "price": 8.32,
-     "per": "kg",
-     "label": "4,99 € (600 g unidade)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "calendario-de-natal",
-     "name": "Calendário de Natal",
-     "price": 21.2,
-     "per": "kg",
-     "label": "1,59 € (75 g unidade)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "bolo-rainha",
-     "name": "Bolo Rainha",
-     "price": 11.98,
-     "per": "kg",
-     "label": "5,99 € (500 g unidade)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "maca-fuji",
-     "name": "Maçã Fuji",
-     "price": 1.26,
-     "per": "kg",
-     "label": "1,89 € (1.5 kg saco)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "salsicha-brasileira",
-     "name": "Salsicha Brasileira",
+     "id": "funcho",
+     "name": "Funcho",
      "price": 6.73,
      "per": "kg",
      "label": "2,69 € (400 g embalagem)",
      "note": "folheto oficial"
     },
     {
-     "id": "entrecosto-para-forno",
-     "name": "Entrecosto para Forno",
-     "price": 5.49,
-     "per": "kg",
-     "label": "5,49 € (kg )",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "pera-rocha",
-     "name": "Pera Rocha",
-     "price": 1.66,
-     "per": "kg",
-     "label": "2,49 € (1.5 kg saco)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "clementina",
-     "name": "Clementina",
-     "price": 1.69,
-     "per": "kg",
-     "label": "1,69 € (kg)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "curgete",
-     "name": "Curgete",
-     "price": 1.19,
-     "per": "kg",
-     "label": "1,19 € (kg)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "mandioca",
-     "name": "Mandioca",
-     "price": 3.59,
-     "per": "kg",
-     "label": "3,59 € (kg)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "wafers-sortidas",
-     "name": "Wafers Sortidas",
-     "price": 11.65,
-     "per": "kg",
-     "label": "6,99 € (600 g unidade)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "peluche-de-natal-com-chocolates-de-leite",
-     "name": "Peluche de Natal com Chocolates de Leite",
-     "price": 54.19,
-     "per": "kg",
-     "label": "6,99 € (129 g unidade)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "metades-de-noz",
-     "name": "Metades de Noz",
-     "price": 9.98,
-     "per": "kg",
-     "label": "4,99 € (500 g unidade)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "ervilhas",
-     "name": "Ervilhas",
-     "price": 4.99,
-     "per": "kg",
-     "label": "3,49 € (700 g embalagem)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "pure-de-maca",
-     "name": "Puré de Maça",
-     "price": 3.11,
-     "per": "kg",
-     "label": "2,49 € (800 g pack)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "nozes",
-     "name": "Nozes",
-     "price": 4.99,
-     "per": "kg",
-     "label": "4,99 € (1 kg saco)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "caramelos-happy-fruttis",
-     "name": "Caramelos Happy Fruttis",
-     "price": 7.37,
-     "per": "kg",
-     "label": "1,29 € (175 g unidade)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "queijo-fundido-com-palitos",
-     "name": "Queijo Fundido com Palitos",
-     "price": 14.21,
-     "per": "kg",
-     "label": "1,99 € (140 g unidade)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "salsichas-xxl",
-     "name": "Salsichas XXL",
-     "price": 8.74,
-     "per": "kg",
-     "label": "6,99 € (800 g  unidade)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "azeitonas-gregas",
-     "name": "Azeitonas Gregas",
-     "price": 8.81,
-     "per": "kg",
-     "label": "7,49 € (850 g unidade)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "queijo-flamengo-light-em-fatias-50-gordura",
-     "name": "Queijo Flamengo Light em Fatias -50% Gordura",
-     "price": 12.25,
-     "per": "kg",
-     "label": "2,45 € (200 g unidade)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "batatas-fritas-classicas",
-     "name": "Batatas Fritas Clássicas",
-     "price": 5.77,
-     "per": "kg",
-     "label": "1,79 € (310 g unidade)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "malaguetas-levemente-picantes",
-     "name": "Malaguetas Levemente Picantes",
-     "price": 11.19,
-     "per": "kg",
-     "label": "1,79 € (160 g unidade)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "creme-vegetal",
-     "name": "Creme Vegetal",
-     "price": 5.72,
-     "per": "kg",
-     "label": "1,43 € (250 g unidade)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "palitos-crocantes",
-     "name": "Palitos Crocantes",
-     "price": 11.93,
-     "per": "kg",
-     "label": "1,79 € (150 g unidade)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "mirtilos",
-     "name": "Mirtilos",
-     "price": 13.3,
-     "per": "kg",
-     "label": "3,99 € (300 g embalagem)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "diospiro",
-     "name": "Diospiro",
-     "price": 1.89,
-     "per": "kg",
-     "label": "1,89 € (1 kg embalagem)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "frango-cozido-desfiado",
-     "name": "Frango Cozido Desfiado",
-     "price": 10.83,
-     "per": "kg",
-     "label": "3,79 € (350 g embalagem)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "bife-da-vazia-de-novilho-dos-acores",
-     "name": "Bife da Vazia de Novilho dos Açores",
-     "price": 19.97,
-     "per": "kg",
-     "label": "5,99 € (300 g embalagem)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "bife-do-dianteiro-dos-acores",
-     "name": "Bife do Dianteiro dos Açores",
-     "price": 13.3,
-     "per": "kg",
-     "label": "3,99 € (300 g embalagem)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "hamburgueres-de-bovino-com-cebola",
-     "name": "Hambúrgueres de Bovino com Cebola",
-     "price": 13.3,
-     "per": "kg",
-     "label": "3,99 € (300 g embalagem )",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "pao-de-alho-e-ervas",
-     "name": "Pão de Alho e Ervas",
-     "price": 3.97,
-     "per": "kg",
-     "label": "1,39 € (350 g embalagem)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "pizza-de-alho",
-     "name": "Pizza de Alho",
-     "price": 6.31,
-     "per": "kg",
-     "label": "1,49 € (236 g embalagem)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "nuggets",
-     "name": "Nuggets",
-     "price": 6.63,
-     "per": "kg",
-     "label": "1,99 € (300 g embalagem)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "legumes-gratinados",
-     "name": "Legumes Gratinados",
-     "price": 4.99,
-     "per": "kg",
-     "label": "3,99 € (800 g embalagem)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "high-protein-shots",
-     "name": "High Protein Shots",
-     "price": 4.98,
-     "per": "kg",
-     "label": "2,99 € (600 g pack)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "massa-proteica",
-     "name": "Massa Proteica",
-     "price": 4.48,
-     "per": "kg",
-     "label": "1,79 € (400 g unidade)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "paezinhos-proteicos",
-     "name": "Pãezinhos Proteicos",
-     "price": 6.63,
-     "per": "kg",
-     "label": "1,99 € (300 g unidade)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "bombons-de-chocolate-caja-roja",
-     "name": "Bombons de Chocolate Caja Roja",
-     "price": 43.59,
-     "per": "kg",
-     "label": "4,49 € (103 g unidade)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "mini-panettone-de-chocolate",
-     "name": "Mini Panettone de Chocolate",
-     "price": 15.9,
-     "per": "kg",
-     "label": "1,59 € (100 g unidade)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "bolachas-de-natal",
-     "name": "Bolachas de Natal",
-     "price": 5.82,
-     "per": "kg",
-     "label": "3,49 € (600 g unidade)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "argolas-de-chocolate-de-leite",
-     "name": "Argolas de Chocolate de Leite",
-     "price": 9.95,
-     "per": "kg",
-     "label": "1,99 € (200 g unidade)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "bombons-plaisir-de-ginja",
-     "name": "Bombons Plaisir de Ginja",
-     "price": 37.91,
-     "per": "kg",
-     "label": "5,99 € (158 g unidade)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "batatas-fritas-extra-crocantes",
-     "name": "Batatas Fritas Extra Crocantes",
-     "price": 6.63,
-     "per": "kg",
-     "label": "1,99 € (300 g)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "pao-ralado",
-     "name": "Pão Ralado",
-     "price": 1.89,
+     "id": "novilho-para-assar-estufar",
+     "name": "Novilho para Assar/ Estufar",
+     "price": 13.89,
      "per": "un",
-     "label": "1 kg unidade",
+     "label": "kg",
      "note": "folheto oficial"
     },
     {
-     "id": "cocktail-de-frutos-secos",
-     "name": "Cocktail de Frutos Secos",
-     "price": 5.98,
+     "id": "coelho-inteiro",
+     "name": "Coelho Inteiro",
+     "price": 6.99,
      "per": "kg",
-     "label": "2,99 € (500 g unidade)",
+     "label": "6,99 € (kg )",
      "note": "folheto oficial"
     },
     {
-     "id": "sementes-de-girassol",
-     "name": "Sementes de Girassol",
-     "price": 6.23,
-     "per": "kg",
-     "label": "2,49 € (400 g unidade)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "caju-ao-natural",
-     "name": "Caju ao Natural",
-     "price": 11.4,
-     "per": "kg",
-     "label": "3,99 € (350 g unidade)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "lacos-folhados",
-     "name": "Laços Folhados",
-     "price": 9.3,
-     "per": "kg",
-     "label": "2,79 € (300 g unidade)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "tortilhas-de-trigo",
-     "name": "Tortilhas de Trigo",
-     "price": 3.28,
-     "per": "kg",
-     "label": "2,69 € (820 g unidade)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "creme-para-barrar",
-     "name": "Creme para Barrar",
-     "price": 7.99,
-     "per": "un",
-     "label": "1 kg unidade",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "manteiga-de-amendoim-cremosa-crocante",
-     "name": "Manteiga de Amendoim Cremosa/ Crocante",
-     "price": 4.39,
-     "per": "kg",
-     "label": "3,29 € (750 g unidade)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "bolachas-com-recheio-de-chocolate",
-     "name": "Bolachas com Recheio de Chocolate",
-     "price": 2.99,
-     "per": "un",
-     "label": "1 kg",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "tortilhas-asiaticas",
-     "name": "Tortilhas Asiáticas",
-     "price": 6.63,
-     "per": "kg",
-     "label": "1,99 € (300 g unidade)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "rebucados-de-mentol",
-     "name": "Rebuçados de Mentol",
-     "price": 12.95,
-     "per": "kg",
-     "label": "2,59 € (200 g unidade)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "caramelos-de-nata",
-     "name": "Caramelos de Nata",
-     "price": 9.3,
-     "per": "kg",
-     "label": "2,79 € (300 g unidade)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "queijo-fundido-light",
-     "name": "Queijo Fundido Light",
-     "price": 11.8,
-     "per": "kg",
-     "label": "2,95 € (250 g unidade)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "cafe-em-grao-lote-chavena",
-     "name": "Café em Grão Lote Chávena",
-     "price": 15.96,
-     "per": "kg",
-     "label": "3,99 € (250 g unidade)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "queijo-de-mistura",
-     "name": "Queijo de Mistura",
-     "price": 3.49,
+     "id": "dot-de-pistacio",
+     "name": "Dot de Pistácio",
+     "price": 0.89,
      "per": "un",
      "label": "Unidade",
      "note": "folheto oficial"
     },
     {
-     "id": "bolachas-originais",
-     "name": "Bolachas Originais",
-     "price": 9.68,
+     "id": "vieiras-com-coral",
+     "name": "Vieiras com Coral",
+     "price": 39.95,
      "per": "kg",
-     "label": "1,49 € (154 g unidade)",
+     "label": "7,99 € (200 g unidade)",
      "note": "folheto oficial"
     },
     {
-     "id": "drageias-de-chocolate",
-     "name": "Drageias de Chocolate",
-     "price": 26.59,
+     "id": "vieira",
+     "name": "Vieira",
+     "price": 24.94,
      "per": "kg",
-     "label": "3,59 € (135 g unidade)",
+     "label": "4,49 € (180 g unidade)",
      "note": "folheto oficial"
     },
     {
-     "id": "refrigerante-com-gas-zero-acucar",
-     "name": "Refrigerante com Gás Zero Açucar",
-     "price": 3.29,
+     "id": "conquilhas",
+     "name": "Conquilhas",
+     "price": 23.96,
+     "per": "kg",
+     "label": "5,99 € (250 g embalagem)",
+     "note": "folheto oficial"
+    },
+    {
+     "id": "lombo-de-bacalhau",
+     "name": "Lombo de Bacalhau",
+     "price": 25.62,
+     "per": "kg",
+     "label": "9,99 € (390 g embalagem)",
+     "note": "folheto oficial"
+    },
+    {
+     "id": "frango-recheado",
+     "name": "Frango Recheado",
+     "price": 14.15,
+     "per": "kg",
+     "label": "8,49 € (600 g unidade)",
+     "note": "folheto oficial"
+    },
+    {
+     "id": "mini-tartes",
+     "name": "Mini Tartes",
+     "price": 18.14,
+     "per": "kg",
+     "label": "3,99 € (220 g embalagem)",
+     "note": "folheto oficial"
+    },
+    {
+     "id": "panettone-classico-premium",
+     "name": "Panettone Clássico Premium",
+     "price": 9.99,
+     "per": "kg",
+     "label": "9,99 € (1 kg unidade)",
+     "note": "folheto oficial"
+    },
+    {
+     "id": "bombons-de-chocolate-preto-com-recheio-licores-portugueses",
+     "name": "Bombons de Chocolate Preto com Recheio Licores Portugueses",
+     "price": 29.92,
+     "per": "kg",
+     "label": "3,59 € (120 g unidade)",
+     "note": "folheto oficial"
+    },
+    {
+     "id": "sobremesas",
+     "name": "Sobremesas",
+     "price": 14.9,
+     "per": "kg",
+     "label": "1,49 € (100 g unidade)",
+     "note": "folheto oficial"
+    },
+    {
+     "id": "barista-cup",
+     "name": "Barista Cup",
+     "price": 26.53,
+     "per": "kg",
+     "label": "1,99 € (75 g unidade)",
+     "note": "folheto oficial"
+    },
+    {
+     "id": "graos-de-cafe-torrado-com-chocolate-preto",
+     "name": "Grãos de Café Torrado com Chocolate Preto",
+     "price": 26.88,
+     "per": "kg",
+     "label": "2,15 € (80 g unidade)",
+     "note": "folheto oficial"
+    },
+    {
+     "id": "miolo-de-camarao-20-40",
+     "name": "Miolo de Camarão 20/40",
+     "price": 14.45,
+     "per": "kg",
+     "label": "2,89 € (200 g embalagem)",
+     "note": "folheto oficial"
+    },
+    {
+     "id": "filetes-de-peixe",
+     "name": "Filetes de Peixe",
+     "price": 8.29,
+     "per": "kg",
+     "label": "1,99 € (240 g embalagem)",
+     "note": "folheto oficial"
+    },
+    {
+     "id": "espinafres",
+     "name": "Espinafres",
+     "price": 1.49,
+     "per": "kg",
+     "label": "1,19 € (800 g embalagem)",
+     "note": "folheto oficial"
+    },
+    {
+     "id": "gelado",
+     "name": "Gelado",
+     "price": 2.69,
      "per": "un",
-     "label": "3.5 l pack",
+     "label": "1 l embalagem",
      "note": "folheto oficial"
     },
     {
-     "id": "refrigerante-com-gas",
-     "name": "Refrigerante com Gás",
-     "price": 3.99,
-     "per": "un",
-     "label": "3,5 l pack",
+     "id": "massa-de-natal",
+     "name": "Massa de Natal",
+     "price": 3.58,
+     "per": "kg",
+     "label": "1,79 € (500 g unidade)",
      "note": "folheto oficial"
     },
     {
-     "id": "refrigerante-com-gas-lima-limao",
-     "name": "Refrigerante com Gás Lima-limão",
-     "price": 1.79,
-     "per": "un",
-     "label": "1.5 l unidade",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "kalanchoe",
-     "name": "Kalanchoe",
-     "price": 2.49,
-     "per": "un",
-     "label": "Vaso",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "higrometro",
-     "name": "Higrómetro",
+     "id": "estrela-de-natal",
+     "name": "Estrela de Natal",
      "price": 5.99,
      "per": "un",
-     "label": "unidade",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "tomate-cherry",
-     "name": "Tomate Cherry",
-     "price": 6.54,
-     "per": "kg",
-     "label": "2,29 € (350 g unidade)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "mix-frutos-vermelhos",
-     "name": "Mix Frutos Vermelhos",
-     "price": 14.3,
-     "per": "kg",
-     "label": "4,29 € (300 g embalagem)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "lombo-de-porco-assado",
-     "name": "Lombo de Porco Assado",
-     "price": 11.73,
-     "per": "kg",
-     "label": "4,69 € (400 g embalagem)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "costela-de-porco",
-     "name": "Costela de Porco",
-     "price": 6.49,
-     "per": "kg",
-     "label": "6,49 € (kg)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "pernil-de-porco",
-     "name": "Pernil de Porco",
-     "price": 2.79,
-     "per": "kg",
-     "label": "2,79 € (kg )",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "pernas-de-frango",
-     "name": "Pernas de Frango",
-     "price": 2.48,
-     "per": "kg",
-     "label": "2,48 € (kg)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "queijo-amanteigado-em-fatias",
-     "name": "Queijo Amanteigado em Fatias",
-     "price": 6.65,
-     "per": "kg",
-     "label": "3,99 € (600 g unidade)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "alheira-de-presunto",
-     "name": "Alheira de Presunto",
-     "price": 11.06,
-     "per": "kg",
-     "label": "1,99 € (180 g unidade)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "presunto-serrano-gourmet",
-     "name": "Presunto Serrano Gourmet",
-     "price": 31.29,
-     "per": "kg",
-     "label": "2,19 € (0.07 kg)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "presunto-serrano-espanhol",
-     "name": "Presunto Serrano Espanhol",
-     "price": 19.54,
-     "per": "kg",
-     "label": "4,69 € (240 g unidade)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "passata-biologica",
-     "name": "Passata Biológica",
-     "price": 3.27,
-     "per": "kg",
-     "label": "2,29 € (700 g unidade)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "arroz-pronto-a-comer",
-     "name": "Arroz Pronto a Comer",
-     "price": 3.74,
-     "per": "kg",
-     "label": "2,99 € (800 g unidade)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "tamaras-desidratadas",
-     "name": "Tâmaras Desidratadas",
-     "price": 4.98,
-     "per": "kg",
-     "label": "1,99 € (400 g unidade)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "mel",
-     "name": "Mel",
-     "price": 11.68,
-     "per": "kg",
-     "label": "5,84 € (500 g unidade)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "iogurte-grego",
-     "name": "Iogurte Grego",
-     "price": 3.32,
-     "per": "kg",
-     "label": "1,99 € (600 g pack)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "biscoitos-crocantes-de-chocolate",
-     "name": "Biscoitos Crocantes de Chocolate",
-     "price": 17.09,
-     "per": "kg",
-     "label": "2,99 € (175 g unidade)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "bolachas-de-amendoim",
-     "name": "Bolachas de Amendoim",
-     "price": 12.21,
-     "per": "kg",
-     "label": "1,99 € (150/175 g unidade)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "bolachas-belgas-com-amendoa",
-     "name": "Bolachas Belgas com Amêndoa",
-     "price": 24.9,
-     "per": "kg",
-     "label": "2,49 € (100 g unidade)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "pipocas-com-caramelo-toffee",
-     "name": "Pipocas com Caramelo Toffee",
-     "price": 15.92,
-     "per": "kg",
-     "label": "1,99 € (125 g unidade)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "selecao-de-cafes-origem",
-     "name": "Seleção de Cafés Origem",
-     "price": 15.98,
-     "per": "kg",
-     "label": "7,99 € (500 g unidade)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "barras-de-chocolate-ratinho",
-     "name": "Barras de Chocolate Ratinho",
-     "price": 12.45,
-     "per": "kg",
-     "label": "2,49 € (200 g unidade)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "snack-de-chocolate-ratinho",
-     "name": "Snack de Chocolate Ratinho",
-     "price": 13.3,
-     "per": "kg",
-     "label": "3,99 € (300 g unidade)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "chocolate-praline",
-     "name": "Chocolate Praliné",
-     "price": 14.95,
-     "per": "kg",
-     "label": "2,99 € (200 g unidade)",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "ice-tea-de-laranja",
-     "name": "Ice Tea de Laranja",
-     "price": 1.69,
-     "per": "un",
-     "label": "1 l unidade",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "ice-tea-cinnamon",
-     "name": "Ice Tea Cinnamon",
-     "price": 1.69,
-     "per": "un",
-     "label": "1.5 l unidade",
-     "note": "folheto oficial"
-    },
-    {
-     "id": "sumo-biologico",
-     "name": "Sumo Biológico",
-     "price": 2.29,
-     "per": "un",
-     "label": "1 l unidade",
+     "label": "vaso",
      "note": "folheto oficial"
     }
    ],
    "check": {
-    "date": "2026-11-22",
-    "result": "sem-novo"
+    "date": "2026-11-23",
+    "result": "novo"
    },
    "readVersion": 3,
    "plan": [
     {
-     "date": "2026-11-22",
+     "date": "2026-11-23",
      "recipes": [
       {
-       "id": "bulgogi",
+       "id": "bacalhau-gomes-sa",
        "slot": 1,
        "meal": "Almoço",
-       "name": "Bulgogi com Arroz e Pickles",
-       "original": "불고기 (Bulgogi)",
-       "cuisine": "Coreana",
-       "description": "Carne em fatias finas marinada em soja, pera e alho, salteada e servida com arroz.",
+       "name": "Bacalhau à Gomes de Sá",
+       "original": "Bacalhau à Gomes de Sá",
+       "cuisine": "Portuguesa",
+       "description": "Bacalhau cozido em lascas, camadas de batata em rodelas e cebola, finalizado no forno com ovo cozido e azeitonas.",
        "servings": "4 pessoas",
-       "time": "40 min",
-       "difficulty": "Fácil",
+       "time": "1h 15min",
+       "difficulty": "Média",
        "veg": false,
        "allergens": [
-        "soja",
-        "frutos-secos"
+        "peixe",
+        "ovos"
        ],
-       "est": 3.2,
-       "imgDesc": "Korean bulgogi beef with steamed rice, cucumber pickles and lettuce leaves",
-       "mainCost": 3.89,
+       "est": 5.1,
+       "imgDesc": "Bacalhau à Gomes de Sá, baked salt cod with sliced potatoes, onions, boiled egg and black olives in a ceramic dish",
+       "mainCost": 15.37,
        "ingredients": [
         {
-         "item": "Carne em fatias finas",
+         "item": "Bacalhau demolhado",
          "qty": "600 g",
-         "price": 6.49,
+         "price": 25.62,
          "per": "kg",
          "amount": 0.6,
-         "label": "6,49 € (kg)",
-         "note": "folheto: Costela de Porco",
-         "promoId": "costela-de-porco"
+         "label": "9,99 € (390 g embalagem)",
+         "note": "folheto: Lombo de Bacalhau",
+         "promoId": "lombo-de-bacalhau"
         },
         {
-         "item": "Arroz",
-         "qty": "300 g"
+         "item": "Batata",
+         "qty": "800 g"
         },
         {
-         "item": "Molho de soja",
-         "qty": "5 c. sopa"
-        },
-        {
-         "item": "Açúcar",
-         "qty": "2 c. sopa"
-        },
-        {
-         "item": "Alho",
-         "qty": "4 dentes"
-        },
-        {
-         "item": "Pera",
-         "qty": "1/2"
-        },
-        {
-         "item": "Óleo de sésamo",
-         "qty": "1 c. sopa"
-        },
-        {
-         "item": "Cebolinho",
-         "qty": "4"
-        },
-        {
-         "item": "Sementes de sésamo",
-         "qty": "1 c. sopa"
-        },
-        {
-         "item": "Pepino",
-         "qty": "1"
-        },
-        {
-         "item": "Vinagre",
-         "qty": "2 c. sopa"
-        },
-        {
-         "item": "Alface",
-         "qty": "8 folhas"
-        }
-       ],
-       "steps": [
-        "Triture a pera com alho, soja, açúcar e óleo de sésamo para a marinada.",
-        "Marine as fatias finas de carne 1 hora (ou mais).",
-        "Prepare pickles: pepino em rodelas com vinagre, açúcar e sal.",
-        "Cozinhe o arroz.",
-        "Salteie a carne em frigideira muito quente, em duas vezes, 3 min.",
-        "Sirva com arroz, pickles, alface (para enrolar) e sésamo.",
-        "Dica do chef: A pera amacia a carne e equilibra o sabor."
-       ],
-       "imageQuery": "불고기 (Bulgogi) Coreana",
-       "image": "/meals/lib-bulgogi-31bfb9d6.webp",
-       "imageCredit": {
-        "name": "Imagem gerada por IA",
-        "url": ""
-       }
-      },
-      {
-       "id": "puttanesca",
-       "slot": 2,
-       "meal": "Jantar",
-       "name": "Esparguete alla Puttanesca",
-       "original": "Spaghetti alla Puttanesca",
-       "cuisine": "Italiana",
-       "description": "Massa picante com tomate, azeitonas, alcaparras e anchovas: despensa e sabor.",
-       "servings": "4 pessoas",
-       "time": "25 min",
-       "difficulty": "Fácil",
-       "veg": false,
-       "allergens": [
-        "gluten",
-        "peixe"
-       ],
-       "est": 4.75,
-       "imgDesc": "Spaghetti alla puttanesca with tomato sauce, black olives, capers and parsley",
-       "mainCost": 1.79,
-       "ingredients": [
-        {
-         "item": "Esparguete",
-         "qty": "400 g",
-         "price": 4.48,
-         "per": "kg",
-         "amount": 0.4,
-         "label": "1,79 € (400 g unidade)",
-         "note": "folheto: Massa Proteica",
-         "promoId": "massa-proteica"
-        },
-        {
-         "item": "Tomate pelado",
-         "qty": "400 g"
-        },
-        {
-         "item": "Azeitonas pretas",
-         "qty": "100 g"
-        },
-        {
-         "item": "Alcaparras",
-         "qty": "2 c. sopa"
-        },
-        {
-         "item": "Anchovas",
-         "qty": "6 filetes"
+         "item": "Cebola",
+         "qty": "3"
         },
         {
          "item": "Alho",
          "qty": "3 dentes"
         },
         {
-         "item": "Piri-piri",
-         "qty": "1"
+         "item": "Ovos cozidos",
+         "qty": "4"
+        },
+        {
+         "item": "Azeitonas pretas",
+         "qty": "16"
         },
         {
          "item": "Azeite",
-         "qty": "4 c. sopa"
+         "qty": "8 c. sopa"
+        },
+        {
+         "item": "Louro",
+         "qty": "1 folha"
         },
         {
          "item": "Salsa",
          "qty": "1 molho"
         },
         {
-         "item": "Parmesão",
-         "qty": "40 g"
+         "item": "Leite (para escaldar)",
+         "qty": "500 ml"
         }
        ],
        "steps": [
-        "Cozinhe o esparguete em água com sal até ficar al dente.",
-        "Aqueça azeite com alho e anchovas e desfaça-as 2 min.",
-        "Junte o piri-piri, o tomate e cozinhe 10 min.",
-        "Adicione azeitonas e alcaparras.",
-        "Envolva a massa no molho com um pouco da água de cozedura 1 min.",
-        "Sirva com salsa e parmesão.",
-        "Dica do chef: As anchovas dissolvem-se e dão profundidade sem sabor a peixe."
+        "Cozinhe o bacalhau em lume brando 10 min em leite com água; escorra, retire pele e espinhas e lasque.",
+        "Cozinhe a batata com casca 20 min; descasque e corte em rodelas.",
+        "Refogue a cebola em meias-luas e o alho no azeite com o louro 15 min, em lume brando.",
+        "Pré-aqueça o forno a 200 ºC. Numa travessa, alterne camadas de batata, bacalhau e cebola refogada.",
+        "Regue com azeite e leve ao forno 15 min.",
+        "Decore com ovo cozido em quartos, azeitonas e salsa picada.",
+        "Dica do chef: Deixe a cebola cozinhar devagar: é ela que dá doçura ao prato."
        ],
-       "imageQuery": "Spaghetti alla Puttanesca Italiana",
+       "imageQuery": "Bacalhau à Gomes de Sá Portuguesa",
        "compare": [
         {
-         "market": "Pingo Doce",
-         "product": "Massa milaneza cotovelos gr 0,5kg",
-         "price": 2.08,
+         "market": "Continente",
+         "product": "Lombos de Bacalhau Seco Continente",
+         "price": 20.99,
          "per": "kg",
-         "total": 0.83,
-         "promoId": "massa-milaneza-cotovelos-gr-0-5kg"
+         "total": 12.59,
+         "promoId": "lombos-de-bacalhau-seco-continente"
         },
         {
          "market": "Aldi",
-         "product": "Massa Proteica",
-         "price": 4.48,
+         "product": "Lombo de Bacalhau",
+         "price": 25.62,
          "per": "kg",
-         "total": 1.79,
-         "promoId": "massa-proteica"
+         "total": 15.37,
+         "promoId": "lombo-de-bacalhau"
         }
        ],
-       "image": "/meals/lib-puttanesca-bbc571c1.webp",
+       "image": "/meals/lib-bacalhau-gomes-sa-95729af6.webp",
+       "imageCredit": {
+        "name": "Imagem gerada por IA",
+        "url": ""
+       }
+      },
+      {
+       "id": "katsu-porco",
+       "slot": 2,
+       "meal": "Jantar",
+       "name": "Tonkatsu com Arroz e Repolho",
+       "original": "とんかつ (Tonkatsu)",
+       "cuisine": "Japonesa",
+       "description": "Costeleta de porco panada com panko, servida com repolho e molho tonkatsu.",
+       "servings": "4 pessoas",
+       "time": "35 min",
+       "difficulty": "Média",
+       "veg": false,
+       "allergens": [
+        "gluten",
+        "ovos",
+        "soja"
+       ],
+       "est": 3.55,
+       "imgDesc": "Tonkatsu breaded pork cutlet sliced with shredded cabbage, rice and tonkatsu sauce",
+       "mainCost": 2.39,
+       "ingredients": [
+        {
+         "item": "Lombo ou costeletas de porco",
+         "qty": "600 g",
+         "price": 3.99,
+         "per": "kg",
+         "amount": 0.6,
+         "label": "3,99 € (kg)",
+         "note": "folheto: Pá de Porco sem Osso",
+         "promoId": "pa-de-porco-sem-osso"
+        },
+        {
+         "item": "Arroz de sushi",
+         "qty": "300 g"
+        },
+        {
+         "item": "Panko ou pão ralado",
+         "qty": "120 g"
+        },
+        {
+         "item": "Ovos",
+         "qty": "2"
+        },
+        {
+         "item": "Farinha",
+         "qty": "4 c. sopa"
+        },
+        {
+         "item": "Repolho",
+         "qty": "1/4"
+        },
+        {
+         "item": "Ketchup",
+         "qty": "2 c. sopa"
+        },
+        {
+         "item": "Molho Worcestershire",
+         "qty": "2 c. sopa"
+        },
+        {
+         "item": "Molho de soja",
+         "qty": "1 c. sopa"
+        },
+        {
+         "item": "Óleo para fritar",
+         "qty": "400 ml"
+        }
+       ],
+       "steps": [
+        "Bata as costeletas até 1,5 cm e tempere.",
+        "Passe por farinha, ovo e panko.",
+        "Frite em óleo a 170 ºC 4 a 5 min de cada lado.",
+        "Misture ketchup, Worcestershire e soja para o molho.",
+        "Corte o repolho em tiras finíssimas.",
+        "Corte o tonkatsu em tiras e sirva com arroz, repolho e molho.",
+        "Dica do chef: O repolho cru fresco equilibra a fritura."
+       ],
+       "imageQuery": "とんかつ (Tonkatsu) Japonesa",
+       "compare": [
+        {
+         "market": "Aldi",
+         "product": "Pá de Porco sem Osso",
+         "price": 3.99,
+         "per": "kg",
+         "total": 2.39,
+         "promoId": "pa-de-porco-sem-osso"
+        },
+        {
+         "market": "Continente",
+         "product": "Pá de Porco com Osso Continente",
+         "price": 4.49,
+         "per": "kg",
+         "total": 2.69,
+         "promoId": "pa-de-porco-com-osso-continente"
+        }
+       ],
+       "image": "/meals/lib-katsu-porco-32b62c63.webp",
+       "imageCredit": {
+        "name": "Imagem gerada por IA",
+        "url": ""
+       }
+      }
+     ]
+    },
+    {
+     "date": "2026-11-24",
+     "recipes": [
+      {
+       "id": "boeuf-bourguignon",
+       "slot": 1,
+       "meal": "Almoço",
+       "name": "Estufado de Vaca à Borgonhesa",
+       "original": "Boeuf Bourguignon",
+       "cuisine": "Francesa",
+       "description": "Vaca estufada em vinho tinto com cogumelos, cebolinhas e bacon, acompanhada de puré.",
+       "servings": "4 pessoas",
+       "time": "2h 30min",
+       "difficulty": "Média",
+       "veg": false,
+       "allergens": [
+        "gluten"
+       ],
+       "est": 7.8,
+       "imgDesc": "Boeuf bourguignon, beef braised in red wine with mushrooms, pearl onions and bacon, with mashed potatoes",
+       "mainCost": 13.89,
+       "ingredients": [
+        {
+         "item": "Carne de vaca para estufar",
+         "qty": "1 kg",
+         "price": 13.89,
+         "per": "un",
+         "amount": 1,
+         "label": "kg",
+         "note": "folheto: Novilho para Assar/ Estufar",
+         "promoId": "novilho-para-assar-estufar"
+        },
+        {
+         "item": "Bacon",
+         "qty": "120 g"
+        },
+        {
+         "item": "Cenoura",
+         "qty": "2"
+        },
+        {
+         "item": "Cebolinhas",
+         "qty": "12"
+        },
+        {
+         "item": "Cogumelos",
+         "qty": "250 g"
+        },
+        {
+         "item": "Vinho tinto",
+         "qty": "500 ml"
+        },
+        {
+         "item": "Caldo de carne",
+         "qty": "300 ml"
+        },
+        {
+         "item": "Farinha",
+         "qty": "2 c. sopa"
+        },
+        {
+         "item": "Tomilho",
+         "qty": "2 ramos"
+        },
+        {
+         "item": "Batata para puré",
+         "qty": "800 g"
+        },
+        {
+         "item": "Manteiga",
+         "qty": "60 g"
+        },
+        {
+         "item": "Leite",
+         "qty": "100 ml"
+        }
+       ],
+       "steps": [
+        "Corte a carne em cubos, seque com papel e passe por farinha.",
+        "Frite o bacon, retire e doure a carne em lotes na gordura; reserve.",
+        "Refogue a cenoura e a cebola; regresse a carne e o bacon, adicione o vinho, caldo e tomilho.",
+        "Tape e cozinhe no forno a 160 ºC 2 horas.",
+        "Salteie os cogumelos e as cebolinhas em manteiga e junte nos últimos 20 min.",
+        "Cozinhe a batata, faça puré com manteiga e leite e sirva com o estufado.",
+        "Dica do chef: É ainda melhor no dia seguinte: faça com antecedência."
+       ],
+       "imageQuery": "Boeuf Bourguignon Francesa",
+       "image": "/meals/lib-boeuf-bourguignon-89da3681.webp",
+       "imageCredit": {
+        "name": "Imagem gerada por IA",
+        "url": ""
+       }
+      },
+      {
+       "id": "couve-flor-curry",
+       "slot": 2,
+       "meal": "Jantar",
+       "name": "Couve-flor Assada com Curry e Arroz",
+       "original": "Gobi Masala",
+       "cuisine": "Indiana",
+       "description": "Couve-flor assada com especiarias, em molho de tomate e coco.",
+       "servings": "4 pessoas",
+       "time": "45 min",
+       "difficulty": "Fácil",
+       "veg": true,
+       "allergens": [],
+       "est": 4.6,
+       "imgDesc": "Roasted cauliflower curry in tomato and coconut sauce with basmati rice and cilantro",
+       "mainCost": 2.39,
+       "ingredients": [
+        {
+         "item": "Couve-flor",
+         "qty": "1 kg",
+         "price": 2.39,
+         "per": "kg",
+         "amount": 1,
+         "label": "2,39 € (Kg)",
+         "note": "folheto: Brócolos",
+         "promoId": "brocolos"
+        },
+        {
+         "item": "Arroz basmati",
+         "qty": "300 g"
+        },
+        {
+         "item": "Cebola",
+         "qty": "1"
+        },
+        {
+         "item": "Alho",
+         "qty": "3 dentes"
+        },
+        {
+         "item": "Gengibre",
+         "qty": "1 c. sopa"
+        },
+        {
+         "item": "Tomate pelado",
+         "qty": "400 g"
+        },
+        {
+         "item": "Leite de coco",
+         "qty": "200 ml"
+        },
+        {
+         "item": "Garam masala",
+         "qty": "2 c. chá"
+        },
+        {
+         "item": "Cúrcuma",
+         "qty": "1/2 c. chá"
+        },
+        {
+         "item": "Azeite",
+         "qty": "4 c. sopa"
+        },
+        {
+         "item": "Coentros",
+         "qty": "1 molho"
+        }
+       ],
+       "steps": [
+        "Corte a couve-flor em ramos e asse a 220 ºC com azeite, sal e cúrcuma 20 min.",
+        "Refogue cebola, alho e gengibre 8 min; junte garam masala.",
+        "Adicione tomate e leite de coco; cozinhe 10 min.",
+        "Junte a couve-flor ao molho e cozinhe 5 min.",
+        "Cozinhe o arroz basmati.",
+        "Sirva com coentros.",
+        "Dica do chef: Assar antes dá sabor tostado e evita que desfaça."
+       ],
+       "imageQuery": "Gobi Masala Indiana",
+       "image": "/meals/lib-couve-flor-curry-7cca6d6c.webp",
+       "imageCredit": {
+        "name": "Imagem gerada por IA",
+        "url": ""
+       }
+      }
+     ]
+    },
+    {
+     "date": "2026-11-25",
+     "recipes": [
+      {
+       "id": "frango-frito",
+       "slot": 1,
+       "meal": "Almoço",
+       "name": "Frango Frito Crocante com Puré e Salada de Couve",
+       "original": "Southern Fried Chicken",
+       "cuisine": "Americana",
+       "description": "Frango marinado em leitelho, panado e frito, com puré cremoso e salada de couve.",
+       "servings": "4 pessoas",
+       "time": "1h",
+       "difficulty": "Média",
+       "veg": false,
+       "allergens": [
+        "gluten",
+        "lactose",
+        "ovos"
+       ],
+       "est": 3.95,
+       "imgDesc": "Southern fried chicken pieces with mashed potatoes and coleslaw",
+       "mainCost": 16.98,
+       "ingredients": [
+        {
+         "item": "Coxas e sobrecoxas de frango",
+         "qty": "1,2 kg",
+         "price": 14.15,
+         "per": "kg",
+         "amount": 1.2,
+         "label": "8,49 € (600 g unidade)",
+         "note": "folheto: Frango Recheado",
+         "promoId": "frango-recheado"
+        },
+        {
+         "item": "Iogurte natural ou leitelho",
+         "qty": "250 ml"
+        },
+        {
+         "item": "Farinha",
+         "qty": "200 g"
+        },
+        {
+         "item": "Paprika",
+         "qty": "2 c. chá"
+        },
+        {
+         "item": "Alho em pó",
+         "qty": "1 c. chá"
+        },
+        {
+         "item": "Batata",
+         "qty": "800 g"
+        },
+        {
+         "item": "Manteiga",
+         "qty": "50 g"
+        },
+        {
+         "item": "Leite",
+         "qty": "150 ml"
+        },
+        {
+         "item": "Repolho",
+         "qty": "1/4"
+        },
+        {
+         "item": "Cenoura",
+         "qty": "1"
+        },
+        {
+         "item": "Maionese",
+         "qty": "3 c. sopa"
+        },
+        {
+         "item": "Óleo para fritar",
+         "qty": "500 ml"
+        }
+       ],
+       "steps": [
+        "Marine o frango no iogurte com sal 2 horas.",
+        "Misture a farinha com paprika, alho em pó, sal e pimenta; envolva o frango.",
+        "Frite em óleo a 170 ºC 14 a 16 min até estar dourado e cozido.",
+        "Cozinhe a batata e faça puré com manteiga e leite.",
+        "Rale o repolho e a cenoura e misture com maionese.",
+        "Sirva o frango com puré e salada.",
+        "Dica do chef: Use termómetro: o óleo deve manter 170 ºC."
+       ],
+       "imageQuery": "Southern Fried Chicken Americana",
+       "image": "/meals/lib-frango-frito-beb9abc6.webp",
+       "imageCredit": {
+        "name": "Imagem gerada por IA",
+        "url": ""
+       }
+      },
+      {
+       "id": "vaca-brocolos",
+       "slot": 2,
+       "meal": "Jantar",
+       "name": "Vaca Salteada com Brócolos e Arroz",
+       "original": "西兰花牛肉 (Beef and Broccoli)",
+       "cuisine": "Chinesa",
+       "description": "Tiras de vaca em molho de ostra e soja, com brócolos crocantes.",
+       "servings": "4 pessoas",
+       "time": "30 min",
+       "difficulty": "Fácil",
+       "veg": false,
+       "allergens": [
+        "soja"
+       ],
+       "est": 2.85,
+       "imgDesc": "Beef and broccoli stir-fry in a glossy sauce with steamed rice",
+       "mainCost": 13.89,
+       "ingredients": [
+        {
+         "item": "Vaca em tiras",
+         "qty": "600 g",
+         "price": 13.89,
+         "per": "un",
+         "amount": 1,
+         "label": "kg",
+         "note": "folheto: Novilho para Assar/ Estufar",
+         "promoId": "novilho-para-assar-estufar"
+        },
+        {
+         "item": "Brócolos",
+         "qty": "400 g"
+        },
+        {
+         "item": "Arroz",
+         "qty": "300 g"
+        },
+        {
+         "item": "Alho",
+         "qty": "3 dentes"
+        },
+        {
+         "item": "Gengibre",
+         "qty": "1 c. sopa"
+        },
+        {
+         "item": "Molho de soja",
+         "qty": "3 c. sopa"
+        },
+        {
+         "item": "Molho de ostra",
+         "qty": "2 c. sopa"
+        },
+        {
+         "item": "Fécula de milho",
+         "qty": "1 c. sopa"
+        },
+        {
+         "item": "Açúcar",
+         "qty": "1 c. chá"
+        },
+        {
+         "item": "Óleo",
+         "qty": "3 c. sopa"
+        }
+       ],
+       "steps": [
+        "Corte a carne em tiras finas contra a fibra e marine com soja e fécula 15 min.",
+        "Escalde os brócolos 2 min e escorra.",
+        "Aqueça o óleo no wok e salteie a carne 2 min; reserve.",
+        "Salteie alho e gengibre 30 s, junte os brócolos.",
+        "Regresse a carne com molho de ostra, soja e açúcar; salteie 2 min.",
+        "Sirva com arroz branco.",
+        "Dica do chef: O wok deve estar muito quente para selar a carne."
+       ],
+       "imageQuery": "西兰花牛肉 (Beef and Broccoli) Chinesa",
+       "image": "/meals/lib-vaca-brocolos-1c82a58c.webp",
+       "imageCredit": {
+        "name": "Imagem gerada por IA",
+        "url": ""
+       }
+      }
+     ]
+    },
+    {
+     "date": "2026-11-26",
+     "recipes": [
+      {
+       "id": "moqueca",
+       "slot": 1,
+       "meal": "Almoço",
+       "name": "Moqueca de Peixe com Arroz",
+       "original": "Moqueca Capixaba",
+       "cuisine": "Brasileira",
+       "description": "Peixe cozinhado em leite de coco, tomate e pimento, com coentros e arroz branco.",
+       "servings": "4 pessoas",
+       "time": "45 min",
+       "difficulty": "Fácil",
+       "veg": false,
+       "allergens": [
+        "peixe"
+       ],
+       "est": 5.15,
+       "imgDesc": "Brazilian fish moqueca stew in coconut milk with peppers and tomato, with white rice and cilantro",
+       "mainCost": 6.63,
+       "ingredients": [
+        {
+         "item": "Postas de peixe",
+         "qty": "800 g",
+         "price": 8.29,
+         "per": "kg",
+         "amount": 0.8,
+         "label": "1,99 € (240 g embalagem)",
+         "note": "folheto: Filetes de Peixe",
+         "promoId": "filetes-de-peixe"
+        },
+        {
+         "item": "Arroz branco",
+         "qty": "300 g"
+        },
+        {
+         "item": "Leite de coco",
+         "qty": "400 ml"
+        },
+        {
+         "item": "Cebola",
+         "qty": "2"
+        },
+        {
+         "item": "Tomate",
+         "qty": "3"
+        },
+        {
+         "item": "Pimento",
+         "qty": "1"
+        },
+        {
+         "item": "Alho",
+         "qty": "3 dentes"
+        },
+        {
+         "item": "Coentros",
+         "qty": "1 molho"
+        },
+        {
+         "item": "Lima",
+         "qty": "1"
+        },
+        {
+         "item": "Azeite de dendê ou azeite",
+         "qty": "3 c. sopa"
+        },
+        {
+         "item": "Piri-piri",
+         "qty": "a gosto"
+        }
+       ],
+       "steps": [
+        "Tempere o peixe com lima, alho, sal e pimenta, 20 min.",
+        "Em panela larga, faça camadas de cebola, tomate e pimento em rodelas.",
+        "Coloque o peixe por cima e regue com azeite.",
+        "Junte o leite de coco e piri-piri; tape e cozinhe 15 a 20 min em lume brando.",
+        "Cozinhe o arroz branco.",
+        "Finalize com coentros e sirva com arroz.",
+        "Dica do chef: Não mexa o peixe: abane suavemente a panela."
+       ],
+       "imageQuery": "Moqueca Capixaba Brasileira",
+       "image": "/meals/lib-moqueca-425d828f.webp",
+       "imageCredit": {
+        "name": "Imagem gerada por IA",
+        "url": ""
+       }
+      },
+      {
+       "id": "paella",
+       "slot": 2,
+       "meal": "Jantar",
+       "name": "Paella de Frango e Legumes",
+       "original": "Paella Valenciana",
+       "cuisine": "Espanhola",
+       "description": "Arroz seco e soltinho com açafrão, frango, feijão-verde e pimento.",
+       "servings": "4 pessoas",
+       "time": "1h",
+       "difficulty": "Média",
+       "veg": false,
+       "allergens": [],
+       "est": 6.15,
+       "imgDesc": "Chicken paella with saffron rice, green beans and red pepper in a wide paella pan",
+       "mainCost": 12.74,
+       "ingredients": [
+        {
+         "item": "Frango aos pedaços",
+         "qty": "900 g",
+         "price": 14.15,
+         "per": "kg",
+         "amount": 0.9,
+         "label": "8,49 € (600 g unidade)",
+         "note": "folheto: Frango Recheado",
+         "promoId": "frango-recheado"
+        },
+        {
+         "item": "Arroz bomba ou redondo",
+         "qty": "350 g"
+        },
+        {
+         "item": "Caldo de galinha",
+         "qty": "1 l"
+        },
+        {
+         "item": "Pimento vermelho",
+         "qty": "1"
+        },
+        {
+         "item": "Feijão-verde",
+         "qty": "200 g"
+        },
+        {
+         "item": "Tomate",
+         "qty": "2"
+        },
+        {
+         "item": "Alho",
+         "qty": "3 dentes"
+        },
+        {
+         "item": "Açafrão ou cúrcuma",
+         "qty": "1 pitada"
+        },
+        {
+         "item": "Paprika doce",
+         "qty": "1 c. chá"
+        },
+        {
+         "item": "Azeite",
+         "qty": "5 c. sopa"
+        },
+        {
+         "item": "Limão",
+         "qty": "1"
+        }
+       ],
+       "steps": [
+        "Doure o frango temperado em azeite numa paellera ou frigideira larga, 10 min; reserve.",
+        "Refogue pimento, feijão-verde, alho e tomate ralado 8 min.",
+        "Junte paprika e arroz; mexa 1 min.",
+        "Adicione o caldo quente com açafrão e regresse o frango.",
+        "Cozinhe 18 min sem mexer, em lume médio.",
+        "Deixe repousar 5 min tapado com pano e sirva com limão.",
+        "Dica do chef: Não mexa depois de juntar o caldo: forma-se o socarrat (crosta) no fundo."
+       ],
+       "imageQuery": "Paella Valenciana Espanhola",
+       "image": "/meals/lib-paella-51ff64b7.webp",
+       "imageCredit": {
+        "name": "Imagem gerada por IA",
+        "url": ""
+       }
+      }
+     ]
+    },
+    {
+     "date": "2026-11-27",
+     "recipes": [
+      {
+       "id": "quesadillas",
+       "slot": 1,
+       "meal": "Almoço",
+       "name": "Quesadillas de Frango e Queijo",
+       "original": "Quesadillas de Pollo",
+       "cuisine": "Mexicana",
+       "description": "Tortilhas recheadas com frango, pimento e queijo derretido, com guacamole.",
+       "servings": "4 pessoas",
+       "time": "30 min",
+       "difficulty": "Fácil",
+       "veg": false,
+       "allergens": [
+        "gluten",
+        "lactose"
+       ],
+       "est": 8.2,
+       "imgDesc": "Chicken and cheese quesadillas cut in triangles with guacamole",
+       "mainCost": 8.49,
+       "ingredients": [
+        {
+         "item": "Peito de frango",
+         "qty": "600 g",
+         "price": 14.15,
+         "per": "kg",
+         "amount": 0.6,
+         "label": "8,49 € (600 g unidade)",
+         "note": "folheto: Frango Recheado",
+         "promoId": "frango-recheado"
+        },
+        {
+         "item": "Tortilhas grandes",
+         "qty": "8"
+        },
+        {
+         "item": "Queijo ralado",
+         "qty": "250 g"
+        },
+        {
+         "item": "Pimento",
+         "qty": "1"
+        },
+        {
+         "item": "Cebola",
+         "qty": "1"
+        },
+        {
+         "item": "Cominhos",
+         "qty": "1 c. chá"
+        },
+        {
+         "item": "Paprika",
+         "qty": "1 c. chá"
+        },
+        {
+         "item": "Abacate",
+         "qty": "2"
+        },
+        {
+         "item": "Lima",
+         "qty": "1"
+        },
+        {
+         "item": "Azeite",
+         "qty": "2 c. sopa"
+        }
+       ],
+       "steps": [
+        "Corte o frango em tiras e tempere com cominhos, paprika e sal.",
+        "Salteie em azeite 6 min com pimento e cebola.",
+        "Esmague o abacate com lima e sal para o guacamole.",
+        "Coloque queijo e recheio em metade da tortilha e dobre.",
+        "Doure em frigideira 2 a 3 min de cada lado.",
+        "Corte em triângulos e sirva com guacamole.",
+        "Dica do chef: Frigideira em lume médio: o queijo derrete sem queimar a tortilha."
+       ],
+       "imageQuery": "Quesadillas de Pollo Mexicana",
+       "image": "/meals/lib-quesadillas-709a566c.webp",
+       "imageCredit": {
+        "name": "Imagem gerada por IA",
+        "url": ""
+       }
+      },
+      {
+       "id": "hamburguer",
+       "slot": 2,
+       "meal": "Jantar",
+       "name": "Hambúrguer Caseiro com Batata Frita",
+       "original": "Classic Cheeseburger",
+       "cuisine": "Americana",
+       "description": "Hambúrguer sumarento com queijo derretido, no pão tostado, com batata frita.",
+       "servings": "4 pessoas",
+       "time": "35 min",
+       "difficulty": "Fácil",
+       "veg": false,
+       "allergens": [
+        "gluten",
+        "lactose",
+        "ovos"
+       ],
+       "est": 5.25,
+       "imgDesc": "Homemade cheeseburger in a toasted bun with lettuce, tomato and pickles, with french fries",
+       "mainCost": 10.46,
+       "ingredients": [
+        {
+         "item": "Carne picada",
+         "qty": "700 g",
+         "price": 14.95,
+         "per": "kg",
+         "amount": 0.7,
+         "label": "2,99 € (200 g pack)",
+         "note": "folheto: Hambúrgueres Vegetarianos",
+         "promoId": "hamburgueres-vegetarianos"
+        },
+        {
+         "item": "Pão de hambúrguer",
+         "qty": "4"
+        },
+        {
+         "item": "Queijo cheddar",
+         "qty": "4 fatias"
+        },
+        {
+         "item": "Alface",
+         "qty": "4 folhas"
+        },
+        {
+         "item": "Tomate",
+         "qty": "1"
+        },
+        {
+         "item": "Cebola",
+         "qty": "1"
+        },
+        {
+         "item": "Pickles",
+         "qty": "8 rodelas"
+        },
+        {
+         "item": "Ketchup e mostarda",
+         "qty": "a gosto"
+        },
+        {
+         "item": "Batata",
+         "qty": "800 g"
+        },
+        {
+         "item": "Óleo para fritar",
+         "qty": "400 ml"
+        }
+       ],
+       "steps": [
+        "Tempere a carne com sal e pimenta e forme 4 hambúrgueres.",
+        "Grelhe em frigideira muito quente 3 a 4 min por lado.",
+        "Coloque queijo no último minuto e tape.",
+        "Toste os pães.",
+        "Frite a batata em palitos.",
+        "Monte com alface, tomate, cebola, pickles e molhos.",
+        "Dica do chef: Não pressione o hambúrguer na frigideira."
+       ],
+       "imageQuery": "Classic Cheeseburger Americana",
+       "image": "/meals/lib-hamburguer-b26ea0f0.webp",
+       "imageCredit": {
+        "name": "Imagem gerada por IA",
+        "url": ""
+       }
+      }
+     ]
+    },
+    {
+     "date": "2026-11-28",
+     "recipes": [
+      {
+       "id": "frango-parmegiana",
+       "slot": 1,
+       "meal": "Almoço",
+       "name": "Frango à Parmegiana com Esparguete",
+       "original": "Pollo alla Parmigiana",
+       "cuisine": "Italiana",
+       "description": "Peito de frango panado, coberto de molho de tomate e queijo derretido.",
+       "servings": "4 pessoas",
+       "time": "50 min",
+       "difficulty": "Fácil",
+       "veg": false,
+       "allergens": [
+        "gluten",
+        "ovos",
+        "lactose"
+       ],
+       "est": 5.1,
+       "imgDesc": "Chicken parmigiana, breaded chicken breast with tomato sauce and melted mozzarella, with spaghetti",
+       "mainCost": 9.9,
+       "ingredients": [
+        {
+         "item": "Peito de frango",
+         "qty": "700 g",
+         "price": 14.15,
+         "per": "kg",
+         "amount": 0.7,
+         "label": "8,49 € (600 g unidade)",
+         "note": "folheto: Frango Recheado",
+         "promoId": "frango-recheado"
+        },
+        {
+         "item": "Esparguete",
+         "qty": "350 g"
+        },
+        {
+         "item": "Pão ralado",
+         "qty": "120 g"
+        },
+        {
+         "item": "Ovos",
+         "qty": "2"
+        },
+        {
+         "item": "Farinha",
+         "qty": "4 c. sopa"
+        },
+        {
+         "item": "Molho de tomate",
+         "qty": "400 g"
+        },
+        {
+         "item": "Mozzarella",
+         "qty": "200 g"
+        },
+        {
+         "item": "Parmesão",
+         "qty": "40 g"
+        },
+        {
+         "item": "Azeite",
+         "qty": "5 c. sopa"
+        },
+        {
+         "item": "Manjericão",
+         "qty": "algumas folhas"
+        }
+       ],
+       "steps": [
+        "Corte o frango em bifes finos e bata levemente com um martelo.",
+        "Passe por farinha, ovo batido e pão ralado com parmesão.",
+        "Frite em azeite 3 min de cada lado, até dourar.",
+        "Pré-aqueça o forno a 200 ºC. Disponha os bifes num tabuleiro, cubra com molho de tomate e mozzarella.",
+        "Gratine 12 a 15 min.",
+        "Cozinhe o esparguete al dente e sirva com o frango e manjericão.",
+        "Dica do chef: Pressione bem o pão ralado para que fique colado."
+       ],
+       "imageQuery": "Pollo alla Parmigiana Italiana",
+       "image": "/meals/lib-frango-parmegiana-cec0b18c.webp",
+       "imageCredit": {
+        "name": "Imagem gerada por IA",
+        "url": ""
+       }
+      },
+      {
+       "id": "pad-thai",
+       "slot": 2,
+       "meal": "Jantar",
+       "name": "Pad Thai de Camarão",
+       "original": "ผัดไทย (Pad Thai)",
+       "cuisine": "Tailandesa",
+       "description": "Noodles de arroz salteados com camarão, ovo, rebentos de soja e amendoim.",
+       "servings": "4 pessoas",
+       "time": "35 min",
+       "difficulty": "Média",
+       "veg": false,
+       "allergens": [
+        "marisco",
+        "ovos",
+        "frutos-secos",
+        "soja",
+        "peixe"
+       ],
+       "est": 4.9,
+       "imgDesc": "Shrimp pad thai with rice noodles, egg, bean sprouts, crushed peanuts and lime",
+       "mainCost": 7.23,
+       "ingredients": [
+        {
+         "item": "Camarão",
+         "qty": "500 g",
+         "price": 14.45,
+         "per": "kg",
+         "amount": 0.5,
+         "label": "2,89 € (200 g embalagem)",
+         "note": "folheto: Miolo de Camarão 20/40",
+         "promoId": "miolo-de-camarao-20-40"
+        },
+        {
+         "item": "Noodles de arroz",
+         "qty": "250 g"
+        },
+        {
+         "item": "Ovos",
+         "qty": "2"
+        },
+        {
+         "item": "Rebentos de soja",
+         "qty": "150 g"
+        },
+        {
+         "item": "Cebolinho",
+         "qty": "4"
+        },
+        {
+         "item": "Alho",
+         "qty": "2 dentes"
+        },
+        {
+         "item": "Molho de peixe",
+         "qty": "2 c. sopa"
+        },
+        {
+         "item": "Molho de soja",
+         "qty": "1 c. sopa"
+        },
+        {
+         "item": "Açúcar",
+         "qty": "1 c. sopa"
+        },
+        {
+         "item": "Tamarindo ou lima",
+         "qty": "2 c. sopa"
+        },
+        {
+         "item": "Amendoim torrado",
+         "qty": "50 g"
+        },
+        {
+         "item": "Óleo",
+         "qty": "3 c. sopa"
+        },
+        {
+         "item": "Lima",
+         "qty": "1"
+        }
+       ],
+       "steps": [
+        "Demolhe os noodles em água morna 20 min e escorra.",
+        "Misture o molho: peixe, soja, açúcar e tamarindo.",
+        "Salteie o alho e os camarões em óleo bem quente 2 min; reserve.",
+        "Junte os noodles e o molho e salteie 3 min.",
+        "Faça um canto, mexa os ovos, misture tudo.",
+        "Junte rebentos, cebolinho e camarão; sirva com amendoim e lima.",
+        "Dica do chef: Frite em lume muito forte e em pequenas quantidades."
+       ],
+       "imageQuery": "ผัดไทย (Pad Thai) Tailandesa",
+       "compare": [
+        {
+         "market": "Pingo Doce",
+         "product": "Camarão vannamei 24/40 pescanova 800g",
+         "price": 13.11,
+         "per": "kg",
+         "total": 6.56,
+         "promoId": "camarao-vannamei-24-40-pescanova-800g"
+        },
+        {
+         "market": "Aldi",
+         "product": "Miolo de Camarão 20/40",
+         "price": 14.45,
+         "per": "kg",
+         "total": 7.23,
+         "promoId": "miolo-de-camarao-20-40"
+        }
+       ],
+       "image": "/meals/lib-pad-thai-072caa11.webp",
+       "imageCredit": {
+        "name": "Imagem gerada por IA",
+        "url": ""
+       }
+      }
+     ]
+    },
+    {
+     "date": "2026-11-29",
+     "recipes": [
+      {
+       "id": "porco-alentejana",
+       "slot": 1,
+       "meal": "Almoço",
+       "name": "Carne de Porco à Alentejana",
+       "original": "Carne de Porco à Alentejana",
+       "cuisine": "Portuguesa",
+       "description": "Cubos de porco marinados com amêijoas, batata frita e coentros: a mais famosa mistura de mar e serra.",
+       "servings": "4 pessoas",
+       "time": "50 min",
+       "difficulty": "Média",
+       "veg": false,
+       "allergens": [
+        "marisco"
+       ],
+       "est": 7.55,
+       "imgDesc": "Carne de porco à alentejana, pork cubes with clams, fried potato cubes and coriander",
+       "mainCost": 2.79,
+       "ingredients": [
+        {
+         "item": "Porco em cubos",
+         "qty": "700 g",
+         "price": 3.99,
+         "per": "kg",
+         "amount": 0.7,
+         "label": "3,99 € (kg)",
+         "note": "folheto: Pá de Porco sem Osso",
+         "promoId": "pa-de-porco-sem-osso"
+        },
+        {
+         "item": "Amêijoas",
+         "qty": "500 g"
+        },
+        {
+         "item": "Batata",
+         "qty": "600 g"
+        },
+        {
+         "item": "Alho",
+         "qty": "4 dentes"
+        },
+        {
+         "item": "Colorau",
+         "qty": "1 c. sopa"
+        },
+        {
+         "item": "Vinho branco",
+         "qty": "1 copo"
+        },
+        {
+         "item": "Louro",
+         "qty": "2 folhas"
+        },
+        {
+         "item": "Coentros",
+         "qty": "1 molho"
+        },
+        {
+         "item": "Limão",
+         "qty": "1"
+        },
+        {
+         "item": "Azeite e óleo",
+         "qty": "a gosto"
+        }
+       ],
+       "steps": [
+        "Marine o porco em cubos com alho, colorau, louro, vinho, sal e pimenta, 3 horas.",
+        "Deixe as amêijoas em água com sal 1 hora para largarem a areia.",
+        "Corte a batata em cubos e frite até dourar.",
+        "Frite o porco escorrido em azeite quente até ficar dourado; reduza o lume e cozinhe 15 min.",
+        "Junte as amêijoas, tape e cozinhe 4 min até abrirem; descarte as que ficarem fechadas.",
+        "Misture a batata, coentros e sirva com limão.",
+        "Dica do chef: Frite o porco em lume forte para selar o sumo."
+       ],
+       "imageQuery": "Carne de Porco à Alentejana Portuguesa",
+       "compare": [
+        {
+         "market": "Aldi",
+         "product": "Pá de Porco sem Osso",
+         "price": 3.99,
+         "per": "kg",
+         "total": 2.79,
+         "promoId": "pa-de-porco-sem-osso"
+        },
+        {
+         "market": "Continente",
+         "product": "Pá de Porco com Osso Continente",
+         "price": 4.49,
+         "per": "kg",
+         "total": 3.14,
+         "promoId": "pa-de-porco-com-osso-continente"
+        }
+       ],
+       "image": "/meals/lib-porco-alentejana-d2352674.webp",
+       "imageCredit": {
+        "name": "Imagem gerada por IA",
+        "url": ""
+       }
+      },
+      {
+       "id": "tagine-frango",
+       "slot": 2,
+       "meal": "Jantar",
+       "name": "Tagine de Frango com Azeitonas e Limão",
+       "original": "Tajine de Poulet aux Olives et Citron Confit",
+       "cuisine": "Marroquina",
+       "description": "Frango estufado com especiarias, azeitonas e limão, servido com cuscuz.",
+       "servings": "4 pessoas",
+       "time": "1h 10min",
+       "difficulty": "Fácil",
+       "veg": false,
+       "allergens": [],
+       "est": 4.05,
+       "imgDesc": "Moroccan chicken tagine with olives and preserved lemon in a tagine pot, with couscous",
+       "mainCost": 16.98,
+       "ingredients": [
+        {
+         "item": "Frango aos pedaços",
+         "qty": "1,2 kg",
+         "price": 14.15,
+         "per": "kg",
+         "amount": 1.2,
+         "label": "8,49 € (600 g unidade)",
+         "note": "folheto: Frango Recheado",
+         "promoId": "frango-recheado"
+        },
+        {
+         "item": "Cuscuz",
+         "qty": "300 g"
+        },
+        {
+         "item": "Cebola",
+         "qty": "2"
+        },
+        {
+         "item": "Alho",
+         "qty": "3 dentes"
+        },
+        {
+         "item": "Gengibre",
+         "qty": "1 c. sopa"
+        },
+        {
+         "item": "Cúrcuma",
+         "qty": "1 c. chá"
+        },
+        {
+         "item": "Cominhos",
+         "qty": "1 c. chá"
+        },
+        {
+         "item": "Canela",
+         "qty": "1/2 c. chá"
+        },
+        {
+         "item": "Azeitonas verdes",
+         "qty": "100 g"
+        },
+        {
+         "item": "Limão",
+         "qty": "1"
+        },
+        {
+         "item": "Coentros",
+         "qty": "1 molho"
+        },
+        {
+         "item": "Azeite",
+         "qty": "4 c. sopa"
+        }
+       ],
+       "steps": [
+        "Tempere o frango com gengibre, cúrcuma, cominhos, canela, sal e pimenta.",
+        "Doure o frango em azeite; reserve.",
+        "Refogue a cebola e o alho 8 min.",
+        "Regresse o frango, junte meia chávena de água, tape e cozinhe 35 min.",
+        "Junte as azeitonas e rodelas de limão; cozinhe 10 min.",
+        "Prepare o cuscuz com água a ferver e azeite; sirva com o frango e coentros.",
+        "Dica do chef: Cozinhe tapado e em lume brando: o frango fica sumarento."
+       ],
+       "imageQuery": "Tajine de Poulet aux Olives et Citron Confit Marroquina",
+       "image": "/meals/lib-tagine-frango-39bdb614.webp",
        "imageCredit": {
         "name": "Imagem gerada por IA",
         "url": ""
@@ -25603,13 +25669,6 @@
     }
    ],
    "hist": [
-    {
-     "date": "2026-11-09",
-     "ids": [
-      "couve-flor-curry",
-      "arroz-pato"
-     ]
-    },
     {
      "date": "2026-11-10",
      "ids": [
@@ -25700,86 +25759,137 @@
       "bulgogi",
       "puttanesca"
      ]
+    },
+    {
+     "date": "2026-11-23",
+     "ids": [
+      "bacalhau-gomes-sa",
+      "katsu-porco"
+     ]
     }
    ],
-   "officialId": "aldi|2026-11-16|2026-11-22",
+   "officialId": "aldi|2026-11-20|2026-11-29",
    "source": "oficial",
    "pool": [
     {
+     "id": "bacalhau-bras",
+     "promos": [
+      "lombo-de-bacalhau"
+     ],
+     "amounts": [
+      0.6
+     ],
+     "cost": 15.37,
+     "est": 4.55
+    },
+    {
+     "id": "bacalhau-natas",
+     "promos": [
+      "lombo-de-bacalhau"
+     ],
+     "amounts": [
+      0.6
+     ],
+     "cost": 15.37,
+     "est": 4.8
+    },
+    {
+     "id": "bacalhau-gomes-sa",
+     "promos": [
+      "lombo-de-bacalhau"
+     ],
+     "amounts": [
+      0.6
+     ],
+     "cost": 15.37,
+     "est": 5.1
+    },
+    {
+     "id": "arroz-marisco",
+     "promos": [
+      "miolo-de-camarao-20-40"
+     ],
+     "amounts": [
+      0.8
+     ],
+     "cost": 11.56,
+     "est": 6.15
+    },
+    {
+     "id": "caldeirada",
+     "promos": [
+      "filetes-de-peixe"
+     ],
+     "amounts": [
+      1
+     ],
+     "cost": 8.29,
+     "est": 5.8
+    },
+    {
      "id": "frango-churrasco",
      "promos": [
-      "pernas-de-frango"
+      "frango-recheado"
      ],
      "amounts": [
       1.6
      ],
-     "cost": 3.97,
+     "cost": 22.64,
      "est": 5.6
     },
     {
      "id": "bifanas",
      "promos": [
-      "costela-de-porco"
+      "pa-de-porco-sem-osso"
      ],
      "amounts": [
       0.7
      ],
-     "cost": 4.54,
+     "cost": 2.79,
      "est": 3.7
     },
     {
      "id": "porco-alentejana",
      "promos": [
-      "pernil-de-porco"
+      "pa-de-porco-sem-osso"
      ],
      "amounts": [
       0.7
      ],
-     "cost": 1.95,
+     "cost": 2.79,
      "est": 7.55
-    },
-    {
-     "id": "entrecosto-forno",
-     "promos": [
-      "entrecosto-para-forno"
-     ],
-     "amounts": [
-      1.2
-     ],
-     "cost": 6.59,
-     "est": 4.3
     },
     {
      "id": "bife-portuguesa",
      "promos": [
-      "bife-do-dianteiro-dos-acores"
+      "novilho-para-assar-estufar"
      ],
      "amounts": [
-      0.6
+      1
      ],
-     "cost": 7.98,
+     "cost": 13.89,
      "est": 3.75
     },
     {
      "id": "estufado-novilho",
      "promos": [
-      "bife-da-vazia-de-novilho-dos-acores"
+      "novilho-para-assar-estufar"
      ],
      "amounts": [
       1
      ],
-     "cost": 19.97,
+     "cost": 13.89,
      "est": 3.35
     },
     {
      "id": "almondegas",
      "promos": [
-      "hamburgueres-de-bovino-com-cebola"
+      "hamburgueres-vegetarianos"
      ],
      "amounts": [
       0.7
      ],
-     "cost": 9.31,
+     "cost": 10.46,
      "est": 3.4
     },
     {
@@ -25790,19 +25900,8 @@
      "amounts": [
       0.6
      ],
-     "cost": 2.75,
+     "cost": 2.38,
      "est": 4.25
-    },
-    {
-     "id": "carbonara",
-     "promos": [
-      "presunto-serrano-espanhol"
-     ],
-     "amounts": [
-      0.2
-     ],
-     "cost": 3.91,
-     "est": 4.45
     },
     {
      "id": "risotto-cogumelos",
@@ -25812,272 +25911,283 @@
      "amounts": [
       0.5
      ],
-     "cost": 2.29,
+     "cost": 1.99,
      "est": 6.1
     },
     {
      "id": "frango-parmegiana",
      "promos": [
-      "pernas-de-frango"
+      "frango-recheado"
      ],
      "amounts": [
       0.7
      ],
-     "cost": 1.74,
+     "cost": 9.9,
      "est": 5.1
     },
     {
      "id": "puttanesca",
      "promos": [
-      "massa-proteica"
+      "massa-de-natal"
      ],
      "amounts": [
       0.4
      ],
-     "cost": 1.79,
+     "cost": 1.43,
      "est": 4.75
     },
     {
      "id": "boeuf-bourguignon",
      "promos": [
-      "bife-da-vazia-de-novilho-dos-acores"
+      "novilho-para-assar-estufar"
      ],
      "amounts": [
       1
      ],
-     "cost": 19.97,
+     "cost": 13.89,
      "est": 7.8
     },
     {
      "id": "coq-au-vin",
      "promos": [
-      "pernas-de-frango"
+      "frango-recheado"
      ],
      "amounts": [
       1.2
      ],
-     "cost": 2.98,
+     "cost": 16.98,
      "est": 7.55
-    },
-    {
-     "id": "ratatouille",
-     "promos": [
-      "curgete"
-     ],
-     "amounts": [
-      1.2
-     ],
-     "cost": 1.43,
-     "est": 4.35
     },
     {
      "id": "paella",
      "promos": [
-      "pernas-de-frango"
+      "frango-recheado"
      ],
      "amounts": [
       0.9
      ],
-     "cost": 2.23,
+     "cost": 12.74,
      "est": 6.15
     },
     {
-     "id": "souvlaki",
+     "id": "gambas-ajillo",
      "promos": [
-      "pernas-de-frango"
+      "miolo-de-camarao-20-40"
      ],
      "amounts": [
       0.7
      ],
-     "cost": 1.74,
+     "cost": 10.11,
+     "est": 4
+    },
+    {
+     "id": "souvlaki",
+     "promos": [
+      "frango-recheado"
+     ],
+     "amounts": [
+      0.7
+     ],
+     "cost": 9.9,
      "est": 5
     },
     {
      "id": "gyros-porco",
      "promos": [
-      "costela-de-porco"
+      "pa-de-porco-sem-osso"
      ],
      "amounts": [
       0.7
      ],
-     "cost": 4.54,
+     "cost": 2.79,
      "est": 5.55
     },
     {
      "id": "tagine-frango",
      "promos": [
-      "pernas-de-frango"
+      "frango-recheado"
      ],
      "amounts": [
       1.2
      ],
-     "cost": 2.98,
+     "cost": 16.98,
      "est": 4.05
     },
     {
      "id": "tacos-porco",
      "promos": [
-      "pernil-de-porco"
+      "pa-de-porco-sem-osso"
      ],
      "amounts": [
       0.8
      ],
-     "cost": 2.23,
+     "cost": 3.19,
      "est": 8
     },
     {
      "id": "quesadillas",
      "promos": [
-      "pernas-de-frango"
+      "frango-recheado"
      ],
      "amounts": [
       0.6
      ],
-     "cost": 1.49,
+     "cost": 8.49,
      "est": 8.2
+    },
+    {
+     "id": "moqueca",
+     "promos": [
+      "filetes-de-peixe"
+     ],
+     "amounts": [
+      0.8
+     ],
+     "cost": 6.63,
+     "est": 5.15
     },
     {
      "id": "strogonoff",
      "promos": [
-      "pernas-de-frango"
+      "frango-recheado"
      ],
      "amounts": [
       0.7
      ],
-     "cost": 1.74,
+     "cost": 9.9,
      "est": 3.6
     },
     {
      "id": "tikka-masala",
      "promos": [
-      "pernas-de-frango"
+      "frango-recheado"
      ],
      "amounts": [
       0.8
      ],
-     "cost": 1.98,
+     "cost": 11.32,
      "est": 5.15
+    },
+    {
+     "id": "pad-thai",
+     "promos": [
+      "miolo-de-camarao-20-40"
+     ],
+     "amounts": [
+      0.5
+     ],
+     "cost": 7.23,
+     "est": 4.9
     },
     {
      "id": "curry-verde",
      "promos": [
-      "pernas-de-frango"
+      "frango-recheado"
      ],
      "amounts": [
       0.7
      ],
-     "cost": 1.74,
+     "cost": 9.9,
      "est": 5.9
     },
     {
      "id": "frango-agridoce",
      "promos": [
-      "pernas-de-frango"
+      "frango-recheado"
      ],
      "amounts": [
       0.7
      ],
-     "cost": 1.74,
+     "cost": 9.9,
      "est": 3.8
     },
     {
      "id": "vaca-brocolos",
      "promos": [
-      "bife-do-dianteiro-dos-acores"
+      "novilho-para-assar-estufar"
      ],
      "amounts": [
-      0.6
+      1
      ],
-     "cost": 7.98,
+     "cost": 13.89,
      "est": 2.85
     },
     {
      "id": "katsu-porco",
      "promos": [
-      "costela-de-porco"
+      "pa-de-porco-sem-osso"
      ],
      "amounts": [
       0.6
      ],
-     "cost": 3.89,
+     "cost": 2.39,
      "est": 3.55
     },
     {
      "id": "bulgogi",
      "promos": [
-      "costela-de-porco"
+      "pa-de-porco-sem-osso"
      ],
      "amounts": [
       0.6
      ],
-     "cost": 3.89,
+     "cost": 2.39,
      "est": 3.2
     },
     {
      "id": "bo-kho",
      "promos": [
-      "bife-da-vazia-de-novilho-dos-acores"
+      "novilho-para-assar-estufar"
      ],
      "amounts": [
       1
      ],
-     "cost": 19.97,
+     "cost": 13.89,
      "est": 3.65
     },
     {
      "id": "kebab-frango",
      "promos": [
-      "pernas-de-frango"
+      "frango-recheado"
      ],
      "amounts": [
       0.7
      ],
-     "cost": 1.74,
+     "cost": 9.9,
      "est": 4
     },
     {
      "id": "hamburguer",
      "promos": [
-      "hamburgueres-de-bovino-com-cebola"
+      "hamburgueres-vegetarianos"
      ],
      "amounts": [
       0.7
      ],
-     "cost": 9.31,
+     "cost": 10.46,
      "est": 5.25
     },
     {
      "id": "frango-frito",
      "promos": [
-      "pernas-de-frango"
+      "frango-recheado"
      ],
      "amounts": [
       1.2
      ],
-     "cost": 2.98,
+     "cost": 16.98,
      "est": 3.95
     },
     {
-     "id": "mac-cheese",
+     "id": "couve-flor-curry",
      "promos": [
-      "queijo-amanteigado-em-fatias"
+      "brocolos"
      ],
      "amounts": [
-      0.3
+      1
      ],
-     "cost": 2,
-     "est": 2.85
-    },
-    {
-     "id": "pasta-atum",
-     "promos": [
-      "atum-em-oleo"
-     ],
-     "amounts": [
-      0.4
-     ],
-     "cost": 6.1,
-     "est": 3.1
+     "cost": 2.39,
+     "est": 4.6
     }
    ]
   },
@@ -26128,9 +26238,9 @@
     }
    ],
    "check": {
-    "date": "2026-11-22",
+    "date": "2026-11-23",
     "result": "sem-folheto",
-    "note": "candidatos: antevisao-folheto-intermarche-higiene-e-beleza-promocoes-de-19-a-25-novembro-318881 | só 0 produtos legíveis (mínimo 2)"
+    "note": "candidatos: antevisao-folheto-intermarche-super-promocoes-de-26-novembro-a-2-dezembro-318928 | antevisao-folheto-intermarche-contact-promocoes-de-26-novembro-a-2-dezembro-318934 | antevisao-folheto-intermarche-black-week-promocoes-de-26-novembro-a-2-dezembro-318935 | sem imagens do folheto"
    },
    "plan": [],
    "hist": [
@@ -26435,6 +26545,135 @@
    }
   },
   {
+   "id": "gyros-porco",
+   "name": "Gyros de Porco no Pão Pita",
+   "cuisine": "Grega",
+   "original": "Γύρος (Gyros)",
+   "rows": [
+    {
+     "market": "Continente",
+     "product": "Rojões de Porco Continente",
+     "price": 4.99,
+     "per": "kg",
+     "total": 3.49,
+     "promoId": "rojoes-de-porco-continente"
+    },
+    {
+     "market": "Pingo Doce",
+     "product": "Porções pescada do cabo pescanova 700g",
+     "price": 12.13,
+     "per": "kg",
+     "total": 8.49,
+     "promoId": "porcoes-pescada-do-cabo-pescanova-700g"
+    }
+   ],
+   "market": "Continente",
+   "recipe": {
+    "id": "gyros-porco",
+    "slot": 2,
+    "meal": "Jantar",
+    "name": "Gyros de Porco no Pão Pita",
+    "original": "Γύρος (Gyros)",
+    "cuisine": "Grega",
+    "description": "Tiras de porco temperadas e salteadas em pita com tzatziki, tomate e batata frita.",
+    "servings": "4 pessoas",
+    "time": "40 min",
+    "difficulty": "Fácil",
+    "veg": false,
+    "allergens": [
+     "lactose",
+     "gluten"
+    ],
+    "est": 5.55,
+    "imgDesc": "Pork gyros in pita bread with tzatziki, tomato, red onion and french fries",
+    "mainCost": 3.49,
+    "ingredients": [
+     {
+      "item": "Porco em tiras",
+      "qty": "700 g",
+      "price": 4.99,
+      "per": "kg",
+      "amount": 0.7,
+      "note": "folheto: Rojões de Porco Continente",
+      "promoId": "rojoes-de-porco-continente"
+     },
+     {
+      "item": "Pães pita",
+      "qty": "4"
+     },
+     {
+      "item": "Iogurte grego",
+      "qty": "250 g"
+     },
+     {
+      "item": "Pepino",
+      "qty": "1/2"
+     },
+     {
+      "item": "Alho",
+      "qty": "3 dentes"
+     },
+     {
+      "item": "Orégãos",
+      "qty": "1 c. sopa"
+     },
+     {
+      "item": "Paprika",
+      "qty": "1 c. chá"
+     },
+     {
+      "item": "Tomate",
+      "qty": "2"
+     },
+     {
+      "item": "Cebola roxa",
+      "qty": "1"
+     },
+     {
+      "item": "Batata frita",
+      "qty": "500 g"
+     },
+     {
+      "item": "Azeite",
+      "qty": "3 c. sopa"
+     }
+    ],
+    "steps": [
+     "Corte o porco em tiras finas e tempere com orégãos, paprika, alho, sal e azeite, 30 min.",
+     "Faça um molho de iogurte com pepino e alho.",
+     "Salteie o porco em frigideira muito quente, em duas vezes, 6 min.",
+     "Aqueça as pitas.",
+     "Recheie com porco, tomate, cebola, batata frita e molho.",
+     "Sirva de imediato.",
+     "Dica do chef: Frigideira muito quente: a carne deve dourar, não cozer."
+    ],
+    "imageQuery": "Γύρος (Gyros) Grega",
+    "compare": [
+     {
+      "market": "Continente",
+      "product": "Rojões de Porco Continente",
+      "price": 4.99,
+      "per": "kg",
+      "total": 3.49,
+      "promoId": "rojoes-de-porco-continente"
+     },
+     {
+      "market": "Pingo Doce",
+      "product": "Porções pescada do cabo pescanova 700g",
+      "price": 12.13,
+      "per": "kg",
+      "total": 8.49,
+      "promoId": "porcoes-pescada-do-cabo-pescanova-700g"
+     }
+    ],
+    "image": "/meals/lib-gyros-porco-886aaec4.webp",
+    "imageCredit": {
+     "name": "Imagem gerada por IA",
+     "url": ""
+    }
+   }
+  },
+  {
    "id": "bifanas",
    "name": "Bifanas no Pão com Batata Frita",
    "cuisine": "Portuguesa",
@@ -26555,134 +26794,10 @@
    }
   },
   {
-   "id": "porco-alentejana",
-   "name": "Carne de Porco à Alentejana",
-   "cuisine": "Portuguesa",
-   "original": "Carne de Porco à Alentejana",
-   "rows": [
-    {
-     "market": "Continente",
-     "product": "Rojões de Porco Continente",
-     "price": 4.99,
-     "per": "kg",
-     "total": 3.49,
-     "promoId": "rojoes-de-porco-continente"
-    },
-    {
-     "market": "Pingo Doce",
-     "product": "Porções pescada do cabo pescanova 700g",
-     "price": 12.13,
-     "per": "kg",
-     "total": 8.49,
-     "promoId": "porcoes-pescada-do-cabo-pescanova-700g"
-    }
-   ],
-   "market": "Continente",
-   "recipe": {
-    "id": "porco-alentejana",
-    "slot": 2,
-    "meal": "Jantar",
-    "name": "Carne de Porco à Alentejana",
-    "original": "Carne de Porco à Alentejana",
-    "cuisine": "Portuguesa",
-    "description": "Cubos de porco marinados com amêijoas, batata frita e coentros: a mais famosa mistura de mar e serra.",
-    "servings": "4 pessoas",
-    "time": "50 min",
-    "difficulty": "Média",
-    "veg": false,
-    "allergens": [
-     "marisco"
-    ],
-    "est": 7.55,
-    "imgDesc": "Carne de porco à alentejana, pork cubes with clams, fried potato cubes and coriander",
-    "mainCost": 3.49,
-    "ingredients": [
-     {
-      "item": "Porco em cubos",
-      "qty": "700 g",
-      "price": 4.99,
-      "per": "kg",
-      "amount": 0.7,
-      "note": "folheto: Rojões de Porco Continente",
-      "promoId": "rojoes-de-porco-continente"
-     },
-     {
-      "item": "Amêijoas",
-      "qty": "500 g"
-     },
-     {
-      "item": "Batata",
-      "qty": "600 g"
-     },
-     {
-      "item": "Alho",
-      "qty": "4 dentes"
-     },
-     {
-      "item": "Colorau",
-      "qty": "1 c. sopa"
-     },
-     {
-      "item": "Vinho branco",
-      "qty": "1 copo"
-     },
-     {
-      "item": "Louro",
-      "qty": "2 folhas"
-     },
-     {
-      "item": "Coentros",
-      "qty": "1 molho"
-     },
-     {
-      "item": "Limão",
-      "qty": "1"
-     },
-     {
-      "item": "Azeite e óleo",
-      "qty": "a gosto"
-     }
-    ],
-    "steps": [
-     "Marine o porco em cubos com alho, colorau, louro, vinho, sal e pimenta, 3 horas.",
-     "Deixe as amêijoas em água com sal 1 hora para largarem a areia.",
-     "Corte a batata em cubos e frite até dourar.",
-     "Frite o porco escorrido em azeite quente até ficar dourado; reduza o lume e cozinhe 15 min.",
-     "Junte as amêijoas, tape e cozinhe 4 min até abrirem; descarte as que ficarem fechadas.",
-     "Misture a batata, coentros e sirva com limão.",
-     "Dica do chef: Frite o porco em lume forte para selar o sumo."
-    ],
-    "imageQuery": "Carne de Porco à Alentejana Portuguesa",
-    "compare": [
-     {
-      "market": "Continente",
-      "product": "Rojões de Porco Continente",
-      "price": 4.99,
-      "per": "kg",
-      "total": 3.49,
-      "promoId": "rojoes-de-porco-continente"
-     },
-     {
-      "market": "Pingo Doce",
-      "product": "Porções pescada do cabo pescanova 700g",
-      "price": 12.13,
-      "per": "kg",
-      "total": 8.49,
-      "promoId": "porcoes-pescada-do-cabo-pescanova-700g"
-     }
-    ],
-    "image": "/meals/lib-porco-alentejana-d2352674.webp",
-    "imageCredit": {
-     "name": "Imagem gerada por IA",
-     "url": ""
-    }
-   }
-  },
-  {
-   "id": "katsu-porco",
-   "name": "Tonkatsu com Arroz e Repolho",
-   "cuisine": "Japonesa",
-   "original": "とんかつ (Tonkatsu)",
+   "id": "bulgogi",
+   "name": "Bulgogi com Arroz e Pickles",
+   "cuisine": "Coreana",
+   "original": "불고기 (Bulgogi)",
    "rows": [
     {
      "market": "Continente",
@@ -26703,28 +26818,27 @@
    ],
    "market": "Continente",
    "recipe": {
-    "id": "katsu-porco",
+    "id": "bulgogi",
     "slot": 2,
     "meal": "Jantar",
-    "name": "Tonkatsu com Arroz e Repolho",
-    "original": "とんかつ (Tonkatsu)",
-    "cuisine": "Japonesa",
-    "description": "Costeleta de porco panada com panko, servida com repolho e molho tonkatsu.",
+    "name": "Bulgogi com Arroz e Pickles",
+    "original": "불고기 (Bulgogi)",
+    "cuisine": "Coreana",
+    "description": "Carne em fatias finas marinada em soja, pera e alho, salteada e servida com arroz.",
     "servings": "4 pessoas",
-    "time": "35 min",
-    "difficulty": "Média",
+    "time": "40 min",
+    "difficulty": "Fácil",
     "veg": false,
     "allergens": [
-     "gluten",
-     "ovos",
-     "soja"
+     "soja",
+     "frutos-secos"
     ],
-    "est": 3.55,
-    "imgDesc": "Tonkatsu breaded pork cutlet sliced with shredded cabbage, rice and tonkatsu sauce",
+    "est": 3.2,
+    "imgDesc": "Korean bulgogi beef with steamed rice, cucumber pickles and lettuce leaves",
     "mainCost": 2.99,
     "ingredients": [
      {
-      "item": "Lombo ou costeletas de porco",
+      "item": "Carne em fatias finas",
       "qty": "600 g",
       "price": 4.99,
       "per": "kg",
@@ -26733,52 +26847,60 @@
       "promoId": "rojoes-de-porco-continente"
      },
      {
-      "item": "Arroz de sushi",
+      "item": "Arroz",
       "qty": "300 g"
      },
      {
-      "item": "Panko ou pão ralado",
-      "qty": "120 g"
-     },
-     {
-      "item": "Ovos",
-      "qty": "2"
-     },
-     {
-      "item": "Farinha",
-      "qty": "4 c. sopa"
-     },
-     {
-      "item": "Repolho",
-      "qty": "1/4"
-     },
-     {
-      "item": "Ketchup",
-      "qty": "2 c. sopa"
-     },
-     {
-      "item": "Molho Worcestershire",
-      "qty": "2 c. sopa"
-     },
-     {
       "item": "Molho de soja",
+      "qty": "5 c. sopa"
+     },
+     {
+      "item": "Açúcar",
+      "qty": "2 c. sopa"
+     },
+     {
+      "item": "Alho",
+      "qty": "4 dentes"
+     },
+     {
+      "item": "Pera",
+      "qty": "1/2"
+     },
+     {
+      "item": "Óleo de sésamo",
       "qty": "1 c. sopa"
      },
      {
-      "item": "Óleo para fritar",
-      "qty": "400 ml"
+      "item": "Cebolinho",
+      "qty": "4"
+     },
+     {
+      "item": "Sementes de sésamo",
+      "qty": "1 c. sopa"
+     },
+     {
+      "item": "Pepino",
+      "qty": "1"
+     },
+     {
+      "item": "Vinagre",
+      "qty": "2 c. sopa"
+     },
+     {
+      "item": "Alface",
+      "qty": "8 folhas"
      }
     ],
     "steps": [
-     "Bata as costeletas até 1,5 cm e tempere.",
-     "Passe por farinha, ovo e panko.",
-     "Frite em óleo a 170 ºC 4 a 5 min de cada lado.",
-     "Misture ketchup, Worcestershire e soja para o molho.",
-     "Corte o repolho em tiras finíssimas.",
-     "Corte o tonkatsu em tiras e sirva com arroz, repolho e molho.",
-     "Dica do chef: O repolho cru fresco equilibra a fritura."
+     "Triture a pera com alho, soja, açúcar e óleo de sésamo para a marinada.",
+     "Marine as fatias finas de carne 1 hora (ou mais).",
+     "Prepare pickles: pepino em rodelas com vinagre, açúcar e sal.",
+     "Cozinhe o arroz.",
+     "Salteie a carne em frigideira muito quente, em duas vezes, 3 min.",
+     "Sirva com arroz, pickles, alface (para enrolar) e sésamo.",
+     "Dica do chef: A pera amacia a carne e equilibra o sabor."
     ],
-    "imageQuery": "とんかつ (Tonkatsu) Japonesa",
+    "imageQuery": "불고기 (Bulgogi) Coreana",
     "compare": [
      {
       "market": "Continente",
@@ -26797,7 +26919,7 @@
       "promoId": "porcoes-pescada-do-cabo-pescanova-700g"
      }
     ],
-    "image": "/meals/lib-katsu-porco-32b62c63.webp",
+    "image": "/meals/lib-bulgogi-31bfb9d6.webp",
     "imageCredit": {
      "name": "Imagem gerada por IA",
      "url": ""
